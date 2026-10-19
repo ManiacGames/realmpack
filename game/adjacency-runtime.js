@@ -16,4 +16,18 @@ function adjacencyConnections(i){if(!s.items.includes(i))return [];const d=defs[
 function adjacencyStat(i,stat){return adjacencyConnections(i).filter(c=>c.rule.stat===stat).reduce((n,c)=>n+c.rule.value,0)}
 function adjacencyPrimary(i,amount){return amount*(1+Math.min(.35,adjacencyStat(i,'primary')))}
 function adjacencyOnActivation(i){const block=adjacencyStat(i,'block'),mana=adjacencyStat(i,'mana'),status=adjacencyStat(i,'status');if(block)gainBlock(block);if(mana)s.mana=Math.min(50,s.mana+mana);if(status)apply(defs[i.type].effect,status)}
-function adjacencyGuide(d){const rules=ADJACENCY_RULES.filter(r=>r.target(d));return rules.length?`<div class="adjacency-guide"><b>Adjacency bonuses</b>${rules.map(r=>`<p>${esc(r.name)}: ${esc(r.text)}.</p>`).join('')}<small>Edge contact only. Each neighboring item counts once, regardless of stack size. Primary adjacency bonuses have a combined +35% cap.</small></div>`:''}
+const ADJACENCY_COPY={
+ 'Runic edge':['+10% damage','per adjacent ring · max +20%'],
+ 'Guarded strike':['+2 block on activation','per adjacent armor · max 4'],
+ 'Battle casting':['+10% damage','per adjacent weapon · max +20%'],
+ 'Arcane circuit':['+8% recharge rate','per adjacent mana item · max +16%'],
+ 'Layered guard':['+10% block','per adjacent armor · max +20%'],
+ 'Sheltered recovery':['+10% healing','per adjacent armor · max +20%'],
+ 'Mana reservoir':['+1 mana on activation','per adjacent ability · max 2'],
+ 'Affliction pairing':['+1 affliction on activation','per neighbor with the same affliction · max 2'],
+ 'Charmed supplies':['+10% primary amount','per adjacent ring · max +20%'],
+ 'Protected supplies':['+2 block on use','per adjacent armor · max 4']
+};
+function adjacencyCopy(rule){const [bonus,neighbor]=ADJACENCY_COPY[rule.name]||[rule.name,rule.text];return {bonus,neighbor}}
+function adjacencyLinkLabel(rule){return rule.name+': '+adjacencyCopy(rule).bonus}
+function adjacencyGuide(d){const rules=ADJACENCY_RULES.filter(r=>r.target(d));return rules.length?`<section class="adjacency-guide" aria-label="Adjacency bonuses"><b>Adjacency bonuses</b><ul>${rules.map(r=>{const copy=adjacencyCopy(r);return `<li title="${esc(r.name+': '+r.text)}"><strong>${esc(copy.bonus)}</strong><span>${esc(copy.neighbor)}</span></li>`}).join('')}</ul><details class="adjacency-rules"><summary>Placement rules</summary><p>Items must share an edge. Each neighbor counts once, regardless of stack size. Combined primary bonuses cap at +35%.</p></details></section>`:''}

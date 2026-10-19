@@ -1,5 +1,13 @@
 # RealmPack changelog
 
+## 0.18.1 — 2026-10-20
+
+- Replaced oversized shop item panels with compact offers and separate Inspect/Buy actions. Full item details appear only when requested.
+- Widened the desktop shop, added responsive offer columns and compacted its header art and footer.
+- Enlarged adjacency text to 16–18px, shortened bonus descriptions and moved common placement rules into an expandable section.
+- Shortened active connection labels and tightened inspection spacing; collapsed stack rules and hid the split button for single copies.
+- Validation: JavaScript syntax, shop inspection/purchase guards, stack/adjacency behavior, event artwork and changelog checks. Browser layout was not visually verified.
+
 ## 0.18.0 — 2026-10-20
 
 - Added distinct pixel scenes for all 25 noncombat events, plus rest stops and shops. Scenes use themed native characters, props and scenery instead of emoji artwork.

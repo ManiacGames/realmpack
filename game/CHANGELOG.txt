@@ -1,3 +1,8 @@
+RealmPack 0.18.1
+- Compact shop offers with separate Inspect and Buy controls; full descriptions appear on request.
+- Larger, shorter adjacency bonus text and expandable placement rules.
+- Cleaner active connection labels and inspection spacing.
+
 RealmPack 0.18.0
 - Added themed pixel scenes for all 25 events, plus rest and shop encounters.
 - Corrected 78 inappropriate combat encounter identities and sprites, with combat tuning unchanged.
