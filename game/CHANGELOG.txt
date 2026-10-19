@@ -1,3 +1,9 @@
+RealmPack 0.18.0
+- Added themed pixel scenes for all 25 events, plus rest and shop encounters.
+- Corrected 78 inappropriate combat encounter identities and sprites, with combat tuning unchanged.
+- Updated saved-route presentation and dungeon portals.
+- Future game changes include release notes in root CHANGELOG.md; CI checks for the entry.
+
 RealmPack 0.17.1
 - Removed the two nested sidebar map scroll areas; all ten floors now use the available page height.
 - Map width adapts to the sidebar, removing horizontal scrolling.

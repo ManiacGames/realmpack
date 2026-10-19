@@ -1,0 +1,392 @@
+[
+  {
+    "id": "enc_0_9",
+    "before": "Dreadstump Cannon",
+    "after": "Dreadstump the Pirate King"
+  },
+  {
+    "id": "enc_1_0",
+    "before": "Limoz the Plague Bearer",
+    "after": "Retro Forest Goblin"
+  },
+  {
+    "id": "enc_1_3",
+    "before": "Ancient Kaiju",
+    "after": "Ent Sapling"
+  },
+  {
+    "id": "enc_1_4",
+    "before": "Emergent Sapphire Bat",
+    "after": "Forest Nymph"
+  },
+  {
+    "id": "enc_1_6",
+    "before": "Body Segment I",
+    "after": "Adolescent Green Beehemoth"
+  },
+  {
+    "id": "enc_1_7",
+    "before": "MotMG St Patricks Event Piece 4",
+    "after": "Forest Goblin Necromancer"
+  },
+  {
+    "id": "enc_1_8",
+    "before": "Body Segment Tail",
+    "after": "Forest Goblin Necromancer"
+  },
+  {
+    "id": "enc_3_0",
+    "before": "LNY White Snake Invasion II Completion Anchor",
+    "after": "Snake"
+  },
+  {
+    "id": "enc_3_2",
+    "before": "Baneserpent Impact",
+    "after": "Fire Python"
+  },
+  {
+    "id": "enc_3_5",
+    "before": "Baneserpent Head Anchor 1",
+    "after": "Primal Snake"
+  },
+  {
+    "id": "enc_5_2",
+    "before": "EH Event Hive Summoner",
+    "after": "Enraged Blue Killer Bee"
+  },
+  {
+    "id": "enc_5_5",
+    "before": "New Beer God Anchor W",
+    "after": "Small Worker Bee"
+  },
+  {
+    "id": "enc_5_7",
+    "before": "Beer Barrel",
+    "after": "Blue Larva"
+  },
+  {
+    "id": "enc_6_3",
+    "before": "Lil' Ghost Pirate",
+    "after": "Lair Ghost Paladin"
+  },
+  {
+    "id": "enc_6_4",
+    "before": "School of Ghostfish",
+    "after": "Ghost Mage of Septavius"
+  },
+  {
+    "id": "enc_6_9",
+    "before": "Septavius Summoner",
+    "after": "Ghost Mage of Septavius"
+  },
+  {
+    "id": "enc_7_9",
+    "before": "Limon GroundShot",
+    "after": "Native Sprite God"
+  },
+  {
+    "id": "enc_8_1",
+    "before": "Leprechaun Coin Reward",
+    "after": "Purple Leprechaun"
+  },
+  {
+    "id": "enc_8_2",
+    "before": "Fountain Placer Center Snowy",
+    "after": "Fountain Spirit"
+  },
+  {
+    "id": "enc_9_1",
+    "before": "Disturbing Mind Fog Demon Drizzle",
+    "after": "Demon Mage Brawler"
+  },
+  {
+    "id": "enc_9_7",
+    "before": "mgm2 Malphas Missile",
+    "after": "Demon Warrior of the Abyss"
+  },
+  {
+    "id": "enc_10_8",
+    "before": "Dark Nexus Shadow Bat",
+    "after": "Flying Vampire"
+  },
+  {
+    "id": "enc_11_8",
+    "before": "SpecPen TortureBranch Slime Dispenser Yellow",
+    "after": "Emergent Emerald Slime"
+  },
+  {
+    "id": "enc_12_1",
+    "before": "Valentine's Candy Heart",
+    "after": "Candy Gnome"
+  },
+  {
+    "id": "enc_12_4",
+    "before": "Halloween Candy",
+    "after": "New Candy Gnome"
+  },
+  {
+    "id": "enc_13_8",
+    "before": "Haunted Cemetery Gates Small White Ghost",
+    "after": "Ghost King"
+  },
+  {
+    "id": "enc_14_0",
+    "before": "Green Nutcracker",
+    "after": "Mummy"
+  },
+  {
+    "id": "enc_14_5",
+    "before": "Blue Nutcracker",
+    "after": "Retro Lair Mummy King"
+  },
+  {
+    "id": "enc_14_8",
+    "before": "Aspirant's Robes Dropper",
+    "after": "Withered Sphinx"
+  },
+  {
+    "id": "enc_14_9",
+    "before": "Bird Tribesman",
+    "after": "Heroic Lair Mummy King"
+  },
+  {
+    "id": "enc_15_0",
+    "before": "Fishing Ripple 4",
+    "after": "Fishman"
+  },
+  {
+    "id": "enc_15_1",
+    "before": "Fishing Reward Normal 7",
+    "after": "Aquatic Primal Snake"
+  },
+  {
+    "id": "enc_15_2",
+    "before": "MV Fishing Minigame",
+    "after": "Smelly Octopus"
+  },
+  {
+    "id": "enc_15_3",
+    "before": "Fishing Ripple 3",
+    "after": "School of Ghostfish"
+  },
+  {
+    "id": "enc_15_4",
+    "before": "Fishing Ripple 2",
+    "after": "Aquatic Primal Snake"
+  },
+  {
+    "id": "enc_15_5",
+    "before": "Fishing Reward Hard 1",
+    "after": "Fishman"
+  },
+  {
+    "id": "enc_15_6",
+    "before": "Sea Dragon Anchor",
+    "after": "Smelly Octopus"
+  },
+  {
+    "id": "enc_17_0",
+    "before": "Cavecrawler Webslinger",
+    "after": "Pirate Sharpshooter"
+  },
+  {
+    "id": "enc_17_2",
+    "before": "{cave.Treasure_Pot}",
+    "after": "Cave Pirate Veteran"
+  },
+  {
+    "id": "enc_17_3",
+    "before": "{cave.Treasure_Oryx_Defender}",
+    "after": "Pirate Commander"
+  },
+  {
+    "id": "enc_17_6",
+    "before": "{cave.Golden_Oryx_Effigy}",
+    "after": "Pirate Lieutenant"
+  },
+  {
+    "id": "enc_17_8",
+    "before": "{cave.Treasure_Rat}",
+    "after": "Ghost Pirate Sr"
+  },
+  {
+    "id": "enc_18_1",
+    "before": "Eggs Golem",
+    "after": "Forest Nymph"
+  },
+  {
+    "id": "enc_19_2",
+    "before": "Retro Epic Spider Summoner",
+    "after": "Crawling Hunter Spider"
+  },
+  {
+    "id": "enc_20_0",
+    "before": "Fountain Placer Center Snowy",
+    "after": "Frosted Howler"
+  },
+  {
+    "id": "enc_20_3",
+    "before": "Dicey Square",
+    "after": "Minion Bat"
+  },
+  {
+    "id": "enc_20_4",
+    "before": "Legion Novice Mage",
+    "after": "Frosted Ogre"
+  },
+  {
+    "id": "enc_22_2",
+    "before": "NM Black Dragon Dead",
+    "after": "Drake Baby"
+  },
+  {
+    "id": "enc_22_4",
+    "before": "Blue Dragon Orb",
+    "after": "Limoz the Viridian Dragon"
+  },
+  {
+    "id": "enc_24_8",
+    "before": "Reconstruction Leprechaun",
+    "after": "Escaped Experiment"
+  },
+  {
+    "id": "enc_24_9",
+    "before": "Retro Lair Construct Titan",
+    "after": "Abomination of Oryx"
+  },
+  {
+    "id": "enc_25_2",
+    "before": "Jester Stick",
+    "after": "Minion Puppet"
+  },
+  {
+    "id": "enc_26_5",
+    "before": "Mini Larva Deux",
+    "after": "Blue Larva"
+  },
+  {
+    "id": "enc_26_6",
+    "before": "EH Fake Event Hive",
+    "after": "Red Nest Colony Guardian"
+  },
+  {
+    "id": "enc_27_7",
+    "before": "AI Katalund Wormhole Generator",
+    "after": "Mushroom Sorcerer"
+  },
+  {
+    "id": "enc_28_2",
+    "before": "Mysterious Crystal",
+    "after": "Emergent Crystallised Charger"
+  },
+  {
+    "id": "enc_28_3",
+    "before": "CC Crystal",
+    "after": "Emergent Crystallised Watcher"
+  },
+  {
+    "id": "enc_28_5",
+    "before": "Protection Crystal",
+    "after": "Crystal Prisoner Clone"
+  },
+  {
+    "id": "enc_28_8",
+    "before": "Crystal Seed",
+    "after": "Crystal Worm Child"
+  },
+  {
+    "id": "enc_29_0",
+    "before": "SpecPen TortureBranch Slime Dispenser Purple",
+    "after": "Crusader Skeleton"
+  },
+  {
+    "id": "enc_29_3",
+    "before": "Paper Golem",
+    "after": "Steel Construct"
+  },
+  {
+    "id": "enc_29_6",
+    "before": "Retro Crawling Grey Spotted Spider",
+    "after": "Skeleton Brawler"
+  },
+  {
+    "id": "enc_31_1",
+    "before": "Void Prison",
+    "after": "Void Archer"
+  },
+  {
+    "id": "enc_31_2",
+    "before": "Dark Nexus Shadow Phoenix",
+    "after": "Shadow Lurker"
+  },
+  {
+    "id": "enc_31_8",
+    "before": "EH Big S Shade Chooser",
+    "after": "Void Emperor"
+  },
+  {
+    "id": "enc_32_0",
+    "before": "Shatters Dining Table Silver Bottom",
+    "after": "Shade of the King"
+  },
+  {
+    "id": "enc_32_4",
+    "before": "Lich King Grave",
+    "after": "Heroic Lair Skeleton King"
+  },
+  {
+    "id": "enc_32_7",
+    "before": "Dreadstump the Pirate King",
+    "after": "Undead Dwarf King"
+  },
+  {
+    "id": "enc_32_8",
+    "before": "Mushroom Sentinel",
+    "after": "Shade of the King"
+  },
+  {
+    "id": "enc_33_1",
+    "before": "Oryxmas Snowman Tier 3",
+    "after": "Commander of Oryx"
+  },
+  {
+    "id": "enc_33_2",
+    "before": "Oryxmas Wizard",
+    "after": "Oryx Judge"
+  },
+  {
+    "id": "enc_33_3",
+    "before": "Oryxmas Reindeer",
+    "after": "Champion of Oryx"
+  },
+  {
+    "id": "enc_33_6",
+    "before": "Oryxmas Susuwatari",
+    "after": "Monstrosity of Oryx"
+  },
+  {
+    "id": "enc_34_0",
+    "before": "Gumball Machine",
+    "after": "Kogbold Tinkerer"
+  },
+  {
+    "id": "enc_34_1",
+    "before": "Steam Vent",
+    "after": "Kogbold Steamwalker"
+  },
+  {
+    "id": "enc_34_3",
+    "before": "Steamworks Corner Shooter 4",
+    "after": "Kogbold Overseer"
+  },
+  {
+    "id": "enc_34_4",
+    "before": "Cog Artifact2 L",
+    "after": "Kogbold Tinkerer"
+  },
+  {
+    "id": "enc_34_6",
+    "before": "Infested Cog Artifact2 L",
+    "after": "Kogbold Supervisor"
+  }
+]

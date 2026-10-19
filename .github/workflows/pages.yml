@@ -18,13 +18,20 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Check release notes
+        env:
+          GITHUB_EVENT_BEFORE: ${{ github.event.before }}
+        run: node scripts/check-changelog.cjs
       - name: Check JavaScript and game behavior
         run: |
           for file in game/*.js; do node --check "$file"; done
           node game/tests/test-stacks-adjacency.cjs
+          node game/tests/test-event-art.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
