@@ -1,3 +1,9 @@
+RealmPack 0.20.0
+- Added five explicit dungeon difficulty tiers with HP, damage, attack-rate and gold scaling.
+- Added skull/text markers to dungeon choices, the current dungeon, the map and bestiary.
+- Revised portal risk choices; updated existing saves and future branch previews.
+- Tiers are RealmPack adaptations of RotMG progression, not official /10 ratings.
+
 RealmPack 0.19.0
 - Added Runeforge sacrifice-to-upgrade event with previews, rarity-scaled bonuses and caps.
 - Added merchant selling event for packed or stashed items, with single-copy and stack sales.

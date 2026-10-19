@@ -1,10 +1,14 @@
 # RealmPack — The Shattered Vault
 
-A Realm-inspired inventory auto-battler. Browser release 0.19.0: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
+A Realm-inspired inventory auto-battler. Browser release 0.20.0: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
 
 ## Play
 
 https://maniacgames.github.io/realmpack/
+
+## Dungeon difficulty
+
+All 35 dungeons use a custom five-tier difficulty scale with skull markers. See [dungeon balance](docs/dungeon-balance.md) for the tiers, scaling, research references, saved-run migration and validation limits.
 
 ## Release notes
 

@@ -1,5 +1,15 @@
 # RealmPack changelog
 
+## 0.20.0 — 2026-10-20
+
+- Added explicit difficulty scaling for all 35 dungeons: Beginner, Standard, Advanced, Exaltation and Apex Exalt. Previously dungeon identity did not affect base stats.
+- Dungeon tier now scales enemy health, attack damage, attack rate and gold in addition to depth, run mode and encounter type. Cult/Nest/Fungal are lower-end exalt choices; Shatters/Oryx are apex choices.
+- Removed unrelated secondary mechanics from Beginner bosses, gave key exalt bosses thematic second phases, and prevented rapid Hexer attacks from maintaining near-permanent silence.
+- Added readable skull markers with text labels to portal choices, the current dungeon, the route map, path selection and the bestiary. This custom /5 scale is not DECA's official /10 rating.
+- Portal offers now include clear risk choices: two Beginner and one Standard in Act 1, Standard/Advanced choices in Act 2, and Advanced/Exaltation/Apex choices in Act 3.
+- Existing saves upgrade current/future rooms and all future branch previews to the new tuning without changing encounter IDs, selected paths or item progress.
+- Validation: full dungeon coverage, matched-depth comparisons, reward scaling, portal bands, all run modes, saved branches, playable openings and upgraded-build simulations, plus existing mechanics/event tests. Browser layout was not visually verified.
+
 ## 0.19.0 — 2026-10-20
 
 - Added the Runeforge Altar: sacrifice one copy of an item to improve a different piece of equipment for the current run. Choose primary infusion or cooldown tempering, with an exact preview before committing.
