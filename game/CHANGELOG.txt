@@ -1,0 +1,15 @@
+RealmPack 0.17.1
+- Removed the two nested sidebar map scroll areas; all ten floors now use the available page height.
+- Map width adapts to the sidebar, removing horizontal scrolling.
+- Clearer two-column legend and space for depth numbers.
+- The full-map dialog uses a single scroll area when the screen is too short.
+
+RealmPack 0.17.0
+- Added ten adjacency rules, with shared combat and inspection descriptions. Edge contact only; each neighbor counts once; primary bonuses cap at +35%.
+- Single-use items stack up to five identical copies; new loot, shop purchases, event rewards and Sandbox additions merge automatically.
+- Drag matching stacks together to merge; split one copy into the stash from inspection. Different variants and upgrades stay separate.
+- Each copy supplies one activation per battle, using the normal cooldown between uses. Copies refresh next battle, preserving existing consumable behavior.
+- Count badges, remaining-use indicators, and saved stack quantities. Existing saves remain compatible.
+- Retains the compact loot grid and separate Inspect view.
+
+Manual GitHub update: upload this archive as realmpack-web.zip at the root of ManiacGames/realmpack on main, replacing the old archive. Do not extract it before uploading. Commit and wait for Deploy RealmPack in Actions to succeed.

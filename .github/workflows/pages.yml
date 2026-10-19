@@ -18,12 +18,17 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - name: Extract browser release
-        run: unzip -q realmpack-web.zip -d dist
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check JavaScript and game behavior
+        run: |
+          for file in game/*.js; do node --check "$file"; done
+          node game/tests/test-stacks-adjacency.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: game
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4

@@ -1,12 +1,35 @@
 # RealmPack — The Shattered Vault
 
-A Realm-inspired inventory auto-battler. Browser release 0.15.0: 19 classes, dungeon progression, branching maps, enchantments and item synergies.
+A Realm-inspired inventory auto-battler. Browser release 0.17.1: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
 
 ## Play
 
-GitHub Pages hosts this release. The repository Actions workflow extracts `realmpack-web.zip` into `dist` and publishes it, with no package installation, backend, or credentials required. To update, replace the archive with a newer browser build; every push to `main` redeploys it. The archive includes the full HTML/JS source, local font and sprites. Download and extract it to inspect or edit the source.
+https://maniacgames.github.io/realmpack/
 
-Progress saves in the browser on this site's origin. Saves from another host do not automatically migrate. Desktop saves are separate.
+## Source and deployment
+
+The editable HTML, JavaScript, CSS, item catalogue, sprite sheets and font are in `game/`. Edit the relevant files there, commit and push to `main`. GitHub Actions checks JavaScript and the stack/adjacency behavior, then publishes `game/` directly to GitHub Pages.
+
+No ZIP upload or package installation is required. Update the version query strings in `game/index.html` after changing browser scripts or styles to refresh cached files. Check **Actions → Deploy RealmPack** for the result.
+
+The root `realmpack-web.zip` is a retained 0.17.1 backup and is no longer used for deployment. Its original individual sprite PNGs remain available there; the live game renders the three shared sheets in `game/assets/sheets/`. Paths stored in the sprite registry and catalogue identify sprites within those sheets.
+
+## Local preview and checks
+
+From the repository root, run:
+
+```sh
+python -m http.server 8000 --directory game
+```
+
+Open http://localhost:8000. With Node.js 24, run:
+
+```sh
+node --check game/game.js
+node game/tests/test-stacks-adjacency.cjs
+```
+
+Progress is stored in the browser on the game's origin. This migration keeps the existing Pages URL and save key. Saves from other hosts do not automatically migrate; desktop saves are separate.
 
 ## Credits
 

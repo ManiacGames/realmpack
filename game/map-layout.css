@@ -1,0 +1,13 @@
+/* Let the route use page space; avoid scroll areas nested inside the sidebar. */
+.left .route{height:auto;max-height:none;overflow:visible;min-width:0}
+.left .map-scroll.map-compact,
+#overlay .map-scroll.map-full{height:auto;max-height:none;overflow:visible;box-sizing:border-box;width:100%;padding:12px 6px 12px 24px}
+.map-scroll .map-canvas{width:100%;min-width:0;box-sizing:border-box}
+.map-scroll .map-node{width:44%;max-width:84px;min-width:0}
+.map-scroll .map-node small{box-sizing:border-box;max-width:100%;white-space:normal;overflow-wrap:break-word;text-align:center}
+.map-scroll .map-depth{left:-19px;max-width:20px;font-size:13px}
+.left .map-legend{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 8px;font-size:14px;line-height:1.4}
+.left .map-legend span{min-width:0;overflow-wrap:break-word}
+.left .map-legend b{font-size:17px}
+.left .map-caption{font-size:14px;line-height:1.5}
+/* A tall map dialog uses the existing modal scroll, with no inner map scroll. */

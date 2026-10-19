@@ -1,0 +1,16 @@
+/* Single-use copies share space and recharge one use at a time. */
+'use strict';
+const STACK_LIMIT=5;
+function stackCount(i){return defs[i.type]?.once?Math.max(1,Math.min(STACK_LIMIT,Math.floor(Number(i.quantity)||1))):1}
+function stackRemaining(i){return Math.max(0,stackCount(i)-(i.usesSpent||0))}
+function stackCompatible(a,b){return a.id!==b.id&&a.type===b.type&&!!defs[a.type]?.once&&(a.eventHaste||0)===(b.eventHaste||0)&&JSON.stringify(itemEnchants(a))===JSON.stringify(itemEnchants(b))}
+function stackCanReceive(type){const item={id:-1,type};return [...s.items,...s.stash].some(j=>stackCompatible(j,item)&&stackCount(j)<STACK_LIMIT)}
+function receiveItem(i,includePacked=true){if(defs[i.type].once){i.quantity=stackCount(i);for(const target of [...(includePacked?s.items:[]),...s.stash]){if(!stackCompatible(target,i)||stackCount(target)>=STACK_LIMIT)continue;const n=Math.min(STACK_LIMIT-stackCount(target),i.quantity);target.quantity=stackCount(target)+n;i.quantity-=n;if(!i.quantity)return target}}Object.assign(i,{x:null,y:null});s.stash.push(i);return i}
+function mergeStacks(source,target){if(s.phase!=='prep'||!source||!target||!stackCompatible(source,target))return false;const n=Math.min(STACK_LIMIT-stackCount(target),stackCount(source));if(!n)return false;target.quantity=stackCount(target)+n;source.quantity=stackCount(source)-n;if(!source.quantity){s.items=s.items.filter(j=>j.id!==source.id);s.stash=s.stash.filter(j=>j.id!==source.id)}inventoryIntent=null;selected=target.id;render();save();return true}
+function stackAtCell(i,x,y){return s.items.find(j=>j.id!==i.id&&occupied(j).some(([a,b])=>a===x&&b===y)&&stackCompatible(i,j))}
+function splitSelectedStack(){if(s.phase!=='prep')return;const i=findSelected();if(!i||!defs[i.type].once||stackCount(i)<2)return;const copy={...i,id:++uid,x:null,y:null,quantity:1,charge:0,activations:0,used:false,usesSpent:0};i.quantity=stackCount(i)-1;s.stash.push(copy);inventoryIntent=null;selected=copy.id;render();save()}
+function consumeStackUse(i){if(!defs[i.type].once)return;i.usesSpent=(i.usesSpent||0)+1;i.used=stackRemaining(i)===0}
+function refillStackUse(i){i.usesSpent=Math.max(0,(i.usesSpent??stackCount(i))-1);i.used=false;i.charge=0}
+function stackLabel(i){return defs[i.type].once?`×${stackCount(i)}${s.phase==='fight'?' · '+stackRemaining(i)+' left':''}`:''}
+function updateStackBadge(el,i){if(!defs[i.type].once)return;let badge=el.querySelector('.stack-count');if(!badge){badge=document.createElement('span');badge.className='stack-count';el.appendChild(badge)}badge.textContent=stackLabel(i);badge.title=`${stackCount(i)}/5 copies · one activation per copy each battle`}
+function stackDetail(i){return defs[i.type].once?`<p class="synergy">Stack: ${stackCount(i)} / 5 · <span id="stackUses">${s.phase==='fight'?stackRemaining(i):stackCount(i)}</span> uses ${s.phase==='fight'?'remaining':'per battle'}. Each use waits for its own cooldown; copies refresh next battle.</p><button onclick="splitSelectedStack()" ${s.phase!=='prep'||stackCount(i)<2?'disabled':''}>Split one into stash</button>`:''}
