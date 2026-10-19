@@ -1,6 +1,8 @@
 /* Native sprite compositions for noncombat encounters; no random fallback art. */
 'use strict';
 const EVENT_ART={
+ runeforge:{scene:'forge',actor:'mystic',props:['Blacksmith Hammer','Necrotic Skull','Ring of Magic'],title:'A mystic consumes an offering to empower another relic'},
+ merchant:{scene:'market',actor:'rogue',props:['Iron Shield','Ring of Attack','Magic Potion'],title:'A salvage merchant buys unwanted equipment'},
  enchanter:{scene:'arcane',actor:'mystic',props:['Stasis Orb','Ring of Magic'],title:'A mystic enchants a glowing relic'},
  blood:{scene:'altar',props:['Necrotic Skull','Health Potion'],title:'A blood-red altar and a skull offering'},
  healer:{scene:'forest',actor:'priest',props:['Healing Tome','Health Potion'],title:'A travelling priest with a healing tome'},

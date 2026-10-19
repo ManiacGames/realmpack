@@ -9,6 +9,7 @@ Repository: ManiacGames/realmpack. Production is GitHub Pages at https://maniacg
 - Increment the experimental build version and script/style cache query strings in `game/index.html`. Keep `game/CHANGELOG.txt` consistent with the current release notes.
 - Run JavaScript syntax checks and `node game/tests/test-stacks-adjacency.cjs`. For artwork, events, or encounter changes, also run `node game/tests/test-event-art.cjs`.
 - For shop, reward, or item inspection UI changes, run `node game/tests/test-shop-layout.cjs`.
+- For event costs, trading, sacrifices, item upgrades or selling, run `node game/tests/test-event-trades.cjs`.
 - Preserve encounter IDs, combat tuning, save compatibility, existing pixel art, and the ChronoType font unless the task specifically changes them. Prefer actual matching sprites over controllers, helper objects, scenery, or an unrelated fallback.
 - Push authorized updates through the connected GitHub app and verify the matching `Deploy RealmPack` run. Report deployment failures clearly.
 

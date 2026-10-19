@@ -1,5 +1,13 @@
 # RealmPack changelog
 
+## 0.19.0 — 2026-10-20
+
+- Added the Runeforge Altar: sacrifice one copy of an item to improve a different piece of equipment for the current run. Choose primary infusion or cooldown tempering, with an exact preview before committing.
+- Donation rarity grants +8/10/12/15% primary effect (30% cap) or +4/5/6/8% cooldown reduction (shared 20% tempering cap). One sacrifice per visit.
+- Added the Salvage Merchant: sell packed or stashed items, one copy or a full consumable stack, at visible prices. Multiple sales are allowed per visit.
+- Both events protect the last damage source, preserve existing saves, and reject stale or repeated actions. Added themed pixel scenes and visible recipient infusion notes.
+- Validation: trade accounting, caps, stack handling, preview/commit guards, save recovery, primary combat effects, existing events, artwork coverage and JavaScript syntax. Browser layout was not visually verified.
+
 ## 0.18.1 — 2026-10-20
 
 - Replaced oversized shop item panels with compact offers and separate Inspect/Buy actions. Full item details appear only when requested.

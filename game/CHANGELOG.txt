@@ -1,3 +1,8 @@
+RealmPack 0.19.0
+- Added Runeforge sacrifice-to-upgrade event with previews, rarity-scaled bonuses and caps.
+- Added merchant selling event for packed or stashed items, with single-copy and stack sales.
+- Last-damage-source protection, saved transactions and visible permanent-for-run infusion bonuses.
+
 RealmPack 0.18.1
 - Compact shop offers with separate Inspect and Buy controls; full descriptions appear on request.
 - Larger, shorter adjacency bonus text and expandable placement rules.
