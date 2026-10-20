@@ -1,6 +1,6 @@
 # RealmPack — The Shattered Vault
 
-A Realm-inspired inventory auto-battler. Browser release 0.22.1: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
+A Realm-inspired inventory auto-battler. Browser release 0.22.2: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
 
 ## Play
 
@@ -12,7 +12,7 @@ The Supply Caravan lets you buy one or two exact copies for an owned consumable 
 
 ## The Dagger Update
 
-All 55 supplied dagger requests are implemented, including upgraded Shiny versions, initial enchantments, temporary exclusions and save-safe duplicate removal. See [the complete recipes, interpretations and measured balance feedback](docs/dagger-update.md) and [before/after results](docs/dagger-balance-results.json). Requested values are preserved; the report flags large strength differences for follow-up.
+All 55 supplied dagger requests are implemented, including upgraded Shiny versions, initial enchantments, temporary exclusions and save-safe duplicate removal. See [the complete recipes, interpretations and measured balance feedback](docs/dagger-update.md) and [before/after results](docs/dagger-balance-results.json). Approved follow-ups nerf Evergreen, Toxic Toad and Chain Dagger; the report distinguishes historical measurements from the current recipes.
 
 ## UT and ST identities
 

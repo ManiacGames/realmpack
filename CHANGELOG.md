@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.22.2 — 2026-10-20
+
+- Chain Dagger retains 10 base damage and 2 bleed per use, but can only build enemy bleed up to six stacks. Its upgraded Shiny counterpart has an eight-stack ceiling.
+- Higher bleed from other sources is preserved; Chain does not refresh that higher bleed when it cannot add stacks. Other bleed weapons and the global 24-stack cap remain unchanged.
+- Validation: regular/Shiny ceilings, partial applications, preservation/expiry of other sources, seeded output checks, syntax and the full game regression suite.
+
 ## 0.22.1 — 2026-10-20
 
 - Raised Evergreen Dagger’s final cooldown floor from 0.5s to 0.8s; the Shiny floor rises proportionally from 0.45s to 0.72s. Haste and upgrades cannot bypass these floors.

@@ -1,4 +1,6 @@
-# The Dagger Update — 0.22.1
+# The Dagger Update — 0.22.2
+
+**0.22.2 follow-up:** Chain Dagger now builds bleed to a maximum of 6 stacks (Shiny 8), retaining its 10 base damage and 2-stack application. Higher bleed from other sources is left untouched, including its expiry timer.
 
 **0.22.1 follow-up:** Evergreen now has a 0.8s minimum cooldown (Shiny 0.72s), and Toxic Toad applies 6 poison every 2s with no direct damage. Existing ramp steps, starting cooldowns and poison limits are preserved.
 
@@ -33,7 +35,7 @@ The supplied spelling “Archangel's Judgememt” maps to **Archangel's Judgemen
 | Bone Dagger | 10 damage + 1 bleed |
 | Boomerang Blades; Hatchling Blades | 26 damage / 2.46s |
 | Bounty Hunter's Dagger | 3 × 2 damage per activation |
-| Chain Dagger | 10 damage + 2 bleed |
+| Chain Dagger | 10 damage + 2 bleed, building up to 6 total stacks (Shiny 8) |
 | Chicken Leg of Doom | 1 damage; +5 max HP per defeated wave |
 | Corruption Cutter | 6 total damage, existing fast twin-cut cadence |
 | Crescent Dagger | T13 dagger combat stats |
@@ -130,4 +132,6 @@ Using the same 20 seeded 60-second output trials and 15 boss trials per item:
 
 These include the Rogue passive, as in the original fixture. Evergreen's raised floor reduced sustained output by about 37%. Toxic Toad's lower application slows its build-up, but still reaches the existing 24-stack poison cap; the long-fight output change is consequently much smaller than the 40% reduction in poison per use. No additional poison-rule changes were applied.
 
-A separate **Chain Dagger proposal, not applied** retained 10 damage and 2 bleed per hit but allowed it to add bleed only while total enemy bleed was below 6, stopping at 6. It never removed or reduced higher bleed from other sources. Twenty seeded output trials averaged 15.82 rather than 26.67 (about 41% less), retaining a bleed specialization without independently filling the global 24-stack cap. An 8-stack ceiling would be a possible Shiny counterpart; that Shiny proposal has not been benchmarked.
+The **Chain Dagger ceiling adopted in 0.22.2** retained 10 damage and 2 bleed per hit but allowed it to add bleed only while total enemy bleed was below 6, stopping at 6. It never removed or reduced higher bleed from other sources. Twenty seeded output trials averaged 15.82 rather than 26.67 (about 41% less), retaining a bleed specialization without independently filling the global 24-stack cap. The Shiny counterpart adopts an 8-stack ceiling and is covered by ceiling/preservation tests.
+
+The implemented 0.22.2 ceiling was rechecked with 20 seeded output trials per variant: regular Chain averaged 15.82 damage/second and Shiny averaged 19.00, including the Rogue passive. Full regression tests passed, including partial stack additions and preserving both higher bleed and its expiry from other sources.
