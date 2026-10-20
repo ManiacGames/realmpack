@@ -1,3 +1,7 @@
+RealmPack 0.20.2
+- Placing onto another packed item cancels selection instead of selecting that item.
+- Works for packed and stashed sources; compatible stacks still merge.
+
 RealmPack 0.20.1
 - Repeat clicks reliably deselect backpack and stash items.
 - Hover or focus items to inspect without selecting; details stay visible after hover.

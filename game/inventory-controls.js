@@ -19,5 +19,5 @@ function bindInventoryControls(){if(inventoryBound||window.__TEST__)return;inven
  document.getElementById('grid').addEventListener?.('pointerleave',()=>{if(!inventoryDrag)inventoryClearPreview()});
 }
 
-function inventoryClick(i){if(inventorySuppressClick)return;const source=findSelected();if(source&&source.id!==i.id&&mergeStacks(source,i)){inspectItem(i.id);return}selectItem(i.id)}
+function inventoryClick(i){if(inventorySuppressClick)return;const source=findSelected();if(source&&source.id!==i.id){if(mergeStacks(source,i)){inspectItem(i.id);return}if(s.phase==='prep'&&s.items.includes(i)){inventoryCancel();selected=null;render();return}}selectItem(i.id)}
 function inspectItem(id){if(!s||![...s.items,...s.stash].some(i=>i.id===id))return;inspected=id;effectHover=id;renderDetail();updateItemEffects()}

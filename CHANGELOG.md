@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.20.2 — 2026-10-20
+
+- Clicking another packed item while an item is selected now cancels the current selection instead of selecting the item underneath. Neither item moves; this also applies when placing from the stash.
+- Compatible consumable stacks still merge. Clicking gear with nothing held still selects it; hover inspection remains available.
+- Validation: automated pointer interaction checks for occupied targets, unchanged item positions, stash-to-pack cancellation and stack merging; JavaScript syntax and stack/adjacency and shop regression checks. Browser layout was not visually verified.
+
 ## 0.20.1 — 2026-10-20
 
 - Fixed repeat clicks failing to deselect backpack and stash items. Click selection now runs once; dragging starts only after the pointer moves past the drag threshold.
