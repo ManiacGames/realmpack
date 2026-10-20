@@ -1,0 +1,119 @@
+/* Researched RotMG identities adapted to one enemy and a 6×5 backpack.
+   Numerical values are RealmPack budgets, not copied RotMG damage values.
+   Sources and limitations: docs/ut-st-identities.md. */
+'use strict';
+(()=>{
+ const data=window.REALM_DATA,round=n=>Math.round(n*100)/100;
+ const weapons={dagger:[6,1.4],sword:[17,2.8],bow:[28,2.8],staff:[13,2],wand:[9,2],katana:[11,1.9]};
+ const shot=(title,text,cadence=1,power=1,extra={})=>({key:'realmshot',title,text,cadence,power,...extra});
+ const ability=(title,text,effect,amount,cd,mana,extra={})=>({key:'realmability',title,text,effect,amount,cd,mana,...extra});
+ const profiles={
+  'Doom Bow':shot('Doom arrow','A single heavy piercing arrow. Very slow, powerful shots; no three-shot charge cycle.',2.2,1.04),
+  'Leaf Bow':shot('Lightweight leaves','Rapid, smaller leaf arrows. Every fourth activation grants one dodge charge, at most once every 8s.',.65,.94,{evadeEvery:4,evadeLock:8}),
+  'Coral Bow':shot('Twin coral arrows','Two piercing arrows share the displayed damage. Faster shots; no poison consumption.',.8,1,{shots:2}),
+  'Staff of Extreme Prejudice':shot('Point-blank barrage','Ten pellets share the displayed damage. In the top backpack row: 125% primary damage; elsewhere: 65%. Slow, close-range specialization.',1.8,1,{shots:10,close:true}),
+  'Staff of the Crystal Serpent':shot('Intertwined serpent bolts','Two weaving bolts share the displayed damage. Steady long-range fire; no cycling elemental ailments.',.9,.98,{shots:2}),
+  'Dirk of Cronus':shot('Rainbow dirk','A heavy single dagger strike. Every fourth activation restores one mana, reflecting its wisdom bonus.',1.05,1.04,{manaEvery:4}),
+  'Demon Blade':shot('Twin demon blades','Two blades share the displayed damage. Top backpack row: 125% primary damage; elsewhere: 65%. No self-damage.',.9,1,{shots:2,close:true}),
+  'Avarice':shot('Gilded reach','Reliable long-range dagger shots from any backpack row. No isolation requirement or mana drain.',.95,1.04),
+  'Lumiaire':shot('Light and dark','Two bolts share the displayed damage, landing together after 0.6s. Rapid fire; no additional mana cost.',.67,1.05,{shots:2,travel:.6}),
+  'Superior':shot('Fourfold grandeur','Four bolts share the displayed damage. Each volley counts as one weapon activation, with no ability-charge requirement.',1,1.08,{shots:4}),
+  'Bow of the Void':shot('Void arrow','A single piercing arrow. Fast, consistent shots from any row; no wave-opening damage cycle.',.95,1.04),
+  'Sword of the Colossus':shot('Colossus edge','Heavy, consistent sword strikes. Does not consume your block to deal damage.',1.1,1.06),
+  'Corruption Cutter':shot('Crossing cuts','Two fast, weaving cuts share the displayed damage. No poison consumption.',.83,1.01,{shots:2}),
+  'Divinity':shot('Exalted beam','Each attack splits its displayed damage into a 60% sword hit and a 40% instant beam. The beam bypasses ward. No bombs or mana cost.',1.4,1.08,{key:'realmbeam',beam:.4}),
+  'Cloak of the Planewalker':ability('Plane shift','Gain one dodge charge, then advance one adjacent weapon by 20% of its cooldown. Teleport/invisibility become evasion and repositioning; no cleanse.', 'dodge',1,8,2,{key:'realmshift',relay:.2}),
+  'Tome of Purification':ability('Purifying prayer','Healing plus a complete cleanse of venom, silence and slow. Can activate while silenced.','heal',24,5.5,3,{key:'realmcleanse',cleanse:true}),
+  'Tome of Holy Protection':ability('Holy armor','Gain block and 3s of Armored (20% less incoming damage; refreshes, never stacks). No instant heal.','block',20,7,4,{key:'realmguard',armored:3}),
+  'Crystal Shield':ability('Crystal mantle','Gain block and 3s of Armored (20% less damage). While active, taking health damage fires an 8-damage shard and heals 3; at most once per second.','block',16,8,4,{key:'realmcrystal',armored:3,retaliate:8,retaliateHeal:3}),
+  'Quiver of Thunder':ability('Thunder daze','Deal damage and chill for 3s, translating Dazed into slower enemy attacks. Applies on every activation.','damage',20,5,2,{key:'realmthunder',status:'chill',duration:3}),
+  'Orb of Conflict':ability('Hex and soulshard','Other weapon activations build Hex (max 6). Consume it: +3 damage per Hex and summon one 2-damage soulshard for 6s if any Hex was consumed. No stasis.','damage',14,7,4,{key:'realmhex'}),
+  'Helm of the Juggernaut':ability('Juggernaut armor','Grant adjacent items haste and gain 2.5s of Armored (20% less damage). Haste excludes self and does not stack.','haste',2.5,7,3,{key:'realmguard',armored:2.5}),
+  'Seal of Blasphemous Prayer':ability('Borrowed divinity','Heal and prevent the next direct enemy attack within 1.5s. A shared 8s lock prevents chained immunity from multiple copies.','heal',12,9,4,{key:'realmdivine',divine:1.5}),
+  'Necronomicon':ability('Forbidden curse','An offensive tome: deal damage and expose for 3s. Trades ordinary tome healing for a curse; never consumes summons.','damage',25,6,3,{key:'realmcurse',status:'vulnerable',duration:3}),
+  'Tome of the Mushroom Tribes':ability('Healing mushroom','Plant a healing mushroom: distribute the displayed healing evenly over 6s instead of healing instantly. Only the strongest mushroom heals; refreshes do not stack.','heal',36,7,4,{key:'realmmushroom',regen:6})
+ };
+ const sets={
+  skuld:{name:'Skuld 2 The ReGhostening',pieces:['Etherite Dagger','Ghastly Drape','Mantle of Skuld','Spectral Ring of Horrors'],full:'Ghastly Drape adds an 8-damage nova and delays the next enemy attack by 0.4s.'},
+  swoll:{name:'Swoll Paladin',pieces:['Pixie-Enchanted Sword','Seal of the Enchanted Forest','Fairy Plate','Ring of Pure Wishes'],full:'The forest seal grants 8 additional block and heals 4 additional health.'},
+  geb:{name:'Priest of Geb',pieces:['Wand of Geb','Book of Geb','Shendyt of Geb',"Geb's Ring of Wisdom"],full:'Book of Geb restores one additional mana and heals 4 additional health.'},
+  pirate:{name:'Pirate King Warrior',pieces:["Swashbuckler's Sickle",'Tricorne of the High Seas','Naval Uniform',"First Mate's Hook"],full:'The Tricorne fires an additional 12-damage cannonball.'},
+  oryx:{name:'Oryx Awesome',pieces:['Sword of the Mad God','Onyx Shield of the Mad God','Almandine Armor of Anger','Almandine Ring of Wrath'],full:'The Onyx Shield grants 10 additional block and delays the enemy attack by 0.4s.'},
+  phylactery:{name:'Phylactery Mystic',pieces:['The Phylactery','Soul of the Bearer','Soulless Robe','Ring of the Covetous Heart'],full:'Soul of the Bearer summons one 3-damage spirit for 6s.'}
+ };
+ Object.assign(profiles,{
+  'Etherite Dagger':shot('Etherite flurry','Fast spirit-metal slashes, trading hit size for cadence.',.8,1),
+  'Ghastly Drape':ability('Ghastly nova','Gain one dodge charge and fire a 10-damage nova. Full Skuld set strengthens the nova and adds a brief attack delay.','dodge',1,8,3,{extraDamage:10}),
+  'Mantle of Skuld':ability('Spirit-channel mantle','Generate mana and 3 block, adapting the mantle’s MP and wisdom focus.','mana',1,5,0,{extraBlock:3}),
+  'Spectral Ring of Horrors':ability('Soul reservoir','Generate mana and heal 2 health. Set progress counts distinct packed pieces.','mana',1,6,0,{extraHeal:2}),
+  'Pixie-Enchanted Sword':shot('Four fae blades','Four blades share the displayed damage. Top backpack row: 125% primary damage; elsewhere: 65%.',1,1,{shots:4,close:true}),
+  'Seal of the Enchanted Forest':ability('Forest blessing','Heal, grant 8 block and haste adjacent items for 2s.','heal',12,6,3,{extraBlock:8,localHaste:2}),
+  'Fairy Plate':ability('Enchanted plate','A defensive fae plate. Completing its distinct four-piece set strengthens the forest seal.','block',18,4.5,0),
+  'Ring of Pure Wishes':ability('Fae vitality','Gain block. If healed in the last 3s, also deal 8 damage, adapting its Healing-to-Attack proc.','block',6,5,0,{healingStrike:8}),
+  'Wand of Geb':shot('Geb’s judgement','Steady wand fire. Every 5s, a slowing nova deals 5 damage and chills for 2s: top row only, or any row with the full Geb set.',1.05,.95,{novaDamage:5,novaChill:2,novaLock:5}),
+  'Book of Geb':ability('Desert pilgrimage','Heal, deal 8 nova damage and grant adjacent items 2s of haste, adapting Speedy into local tempo.','heal',18,6,3,{extraDamage:8,localHaste:2}),
+  'Shendyt of Geb':ability('Priestly linen','Generate mana and 3 block.','mana',2,5,0,{extraBlock:3}),
+  "Geb's Ring of Wisdom":ability('Wisdom of Geb','Generate mana and heal 3 health.','mana',1,6,0,{extraHeal:3}),
+  "Swashbuckler's Sickle":shot('Boarding blade','Reliable pirate sword strikes. Pair with its own Tricorne, uniform and hook for cannon support.',1.25,1.02),
+  'Tricorne of the High Seas':ability('Cannon cluster','Fire a cannonball and grant adjacent items 2s of haste. Taking health damage also fires an 8-damage cannonball, at most once every 3s.','damage',18,7,3,{key:'realmcannon',localHaste:2,retaliate:8,retaliateLock:3}),
+  'Naval Uniform':ability('Boarding uniform','A balanced defensive uniform for the Pirate King set.','block',14,3.8,0),
+  "First Mate's Hook":ability('Hook strike','A small offensive strike, completing the Pirate King’s four distinct pieces.','damage',8,5,0),
+  'Sword of the Mad God':shot('Mad God’s blade','Heavy sword strikes supported by the Oryx Awesome set.',1.1,1.02),
+  'Onyx Shield of the Mad God':ability('Onyx stun','Gain block, deal 10 damage and delay the enemy attack by 0.5s. Shared attack-delay limits apply.','block',15,6,3,{extraDamage:10,delay:.5}),
+  'Almandine Armor of Anger':ability('Almandine bulwark','Heavy block for the Oryx Awesome set.','block',18,4.5,0),
+  'Almandine Ring of Wrath':ability('Almandine resolve','A smaller defensive pulse for the Oryx Awesome set.','block',8,5,0),
+  'The Phylactery':shot('Phylactery bolts','Rapid single soul-orb shots, matching its unusual one-shot staff pattern.',.8,1),
+  'Soul of the Bearer':ability('Bearer’s stasis','Chill and delay the enemy attack by 0.5s; grant adjacent items 2s of haste. Full set calls a spirit.','chill',2.5,7,3,{delay:.5,localHaste:2}),
+  'Soulless Robe':ability('Soulless channel','Generate mana and 3 block.','mana',2,5,0,{extraBlock:3}),
+  'Ring of the Covetous Heart':ability('Covetous reservoir','Generate mana to sustain the Phylactery Mystic set.','mana',2,6,0)
+ });
+ const byName=Object.fromEntries(Object.entries(sets).flatMap(([key,set])=>set.pieces.map((name,slot)=>[name,{key,slot}])));
+ function configure(d,p){
+  const recipe=weapons[d.kind];
+  if(recipe){const rank=d.progressionRank;d.effect='damage';d.amount=Math.max(1,Math.round(recipe[0]*(1+.09*rank)*(p.cadence||1)*(p.power||1)));d.cd=round(recipe[1]*(1-.01*rank)*(p.cadence||1));d.mana=0}
+  else {d.effect=p.effect;d.amount=p.amount;d.cd=p.cd;d.mana=p.mana}
+  d.affix=null;d.affixAmount=0;d.condition='none';d.bonus=0;
+  const member=byName[d.name];if(member){d.realmSet=member.key;d.realmSlot=member.slot}
+  d.mechanic={...p,n:0,keepAffix:false,keepCondition:false};
+  d.balanceNote='RotMG-inspired '+d.tier+' identity; RealmPack values and timing.';
+  d.realmIdentity=true;
+ }
+ for(const d of data.items)if(!d.isShiny&&profiles[d.name])configure(d,profiles[d.name]);
+ const byId=Object.fromEntries(data.items.map(d=>[d.id,d]));
+ for(const d of data.items.filter(d=>d.isShiny)){
+  const base=byId[d.baseId];if(!base?.realmIdentity)continue;
+  for(const key of ['effect','mana','affix','affixAmount','condition','bonus','balanceNote','realmIdentity','realmSet','realmSlot'])if(base[key]!==undefined)d[key]=base[key];
+  d.mechanic={...base.mechanic};d.amount=['haste','chill'].includes(base.effect)?round(base.amount*1.05):Math.max(base.amount,Math.round(base.amount*1.05));d.cd=round(base.cd*.95);
+ }
+ window.REALM_SPECIALS={profiles,sets};
+ data.stats.realmIdentities=data.items.filter(d=>d.realmIdentity).length;
+ data.stats.signatureItems=data.items.filter(d=>d.mechanic).length;
+ data.stats.mechanicTypes=new Set(data.items.filter(d=>d.mechanic).map(d=>d.mechanic.key)).size;
+ data.stats.uniqueSignatures=new Set(data.items.map(d=>JSON.stringify([d.kind,d.tier,d.effect,d.amount,d.cd,d.mana,d.affix,d.affixAmount,d.mechanic,d.realmSet]))).size;
+})();
+
+function realmSetCount(key){return new Set((s?.items||[]).filter(i=>defs[i.type].realmSet===key).map(i=>defs[i.type].realmSlot)).size}
+function realmSetRate(i){const key=defs[i.type].realmSet;return key&&realmSetCount(key)>=3?.08:0}
+function realmSetMarkup(d){const set=window.REALM_SPECIALS.sets[d.realmSet];if(!set)return '';const count=realmSetCount(d.realmSet);return `<div class="mechanic-note"><b>ST · ${esc(set.name)} · ${count}/4 packed</b><p>${count>=2?'●':'○'} 2 pieces: +8% primary effect for this set.<br>${count>=3?'●':'○'} 3 pieces: +8% recharge for this set.<br>${count>=4?'●':'○'} 4 pieces: ${esc(set.full)}</p><details><summary>Matching set pieces</summary><small>${set.pieces.map((name,slot)=>`${(s?.items||[]).some(i=>defs[i.type].realmSet===d.realmSet&&defs[i.type].realmSlot===slot)?'✓':'○'} ${esc(name)}`).join('<br>')}</small></details><small>Distinct packed pieces only; duplicates, legacy versions and stash do not count. Full-set proc: one designated ability, at most once every 4s.</small></div>`}
+function realmPrimaryAmount(i,amount){const d=defs[i.type],m=d.mechanic;if(m.close)amount*=i.y===0?1.25:.65;if(d.realmSet&&realmSetCount(d.realmSet)>=2)amount*=1.08;if(m.key==='realmhex'){const state=specialState(i);if(state.hexWave!==s.enemy.wave){state.counter=0;state.hexWave=s.enemy.wave}amount+=state.counter*3}return amount}
+// Split the total budget rather than multiplying flat power or activation procs per pellet.
+function realmDamageParts(i,total){const d=defs[i.type],m=d.mechanic,e=s.enemy,damage=Math.max(0,Math.round(total+s.power)),pierce=m.beam||m.pierce||0,bypass=Math.round(damage*pierce),ordinary=damage-bypass;let dealt=0;const count=m.beam?1:(m.shots||1);for(let n=0;n<count;n++){const part=Math.floor(ordinary*(n+1)/count)-Math.floor(ordinary*n/count);if(part)dealt+=hit(part)}if(bypass){const ward=e.ward;e.ward=0;dealt+=hit(bypass);e.ward=ward}if(m.beam){itemFxPulse(i,'damage','✦');log('✦ '+d.name+' · Exalted beam')}return dealt}
+function realmApplyPrimary(i,amount){const d=defs[i.type],m=d.mechanic;if(d.effect==='damage'){if(m.travel){const queue=s.realmProjectiles||(s.realmProjectiles=[]);if(queue.length<24)queue.push({time:m.travel,damage:amount+s.power,wave:s.enemy.wave,name:d.name});return}return realmDamageParts(i,amount)}if(m.regen){const current=s.realmMushroom,rate=amount/m.regen;if(!current||rate>=current.total/current.duration)s.realmMushroom={total:amount,duration:m.regen,elapsed:0,pulses:0};return}apply(d.effect,amount,i)}
+function realmAfterActivation(i){const d=defs[i.type],m=d.mechanic,state=specialState(i),ordinal=i.activations;
+ if(m.healingStrike&&s.time-(s.realmLastHeal??-1000)<=3)hit(m.healingStrike);if(m.novaDamage&&(i.y===0||d.realmSet&&realmSetCount(d.realmSet)===4)&&s.time>=(state.nextNova||0)){hit(m.novaDamage);apply('chill',m.novaChill,i);state.nextNova=s.time+m.novaLock}if(m.extraDamage)hit(m.extraDamage);if(m.extraBlock)gainBlock(m.extraBlock);if(m.extraHeal)restore(m.extraHeal);if(m.localHaste)grantItemHaste(i,m.localHaste);
+ if(m.cleanse){s.venom=0;s.venomTime=0;s.silence=0;s.slow=0}
+ if(m.status)apply(m.status,m.duration,i);if(m.delay)delayEnemyAttack(m.delay);
+ if(m.armored){s.realmArmoredUntil=Math.max(s.realmArmoredUntil||0,s.time+m.armored);if(m.key==='realmcrystal')state.armoredUntil=s.time+m.armored}
+ if(m.relay){const target=nearbyItems(i).filter(j=>defs[j.type].group==='weapon').sort((a,b)=>a.charge/cooldown(a)-b.charge/cooldown(b))[0];if(target)rechargeItem(target,m.relay,i)}
+ if(m.manaEvery&&ordinal%m.manaEvery===0)s.mana=Math.min(50,s.mana+1);
+ if(m.evadeEvery&&ordinal%m.evadeEvery===0&&s.time>=(state.nextEvade||0)){s.dodge=Math.min(3,s.dodge+1);state.nextEvade=s.time+m.evadeLock}
+ if(m.divine&&s.time>=(s.realmDivineReady||0)){s.realmDivineUntil=s.time+m.divine;s.realmDivineReady=s.time+8}
+ if(m.key==='realmhex'){if(state.counter>0)summon(2,6);state.counter=0}
+ realmFullSetProc(i);
+}
+function realmFullSetProc(i){const d=defs[i.type],key=d.realmSet;if(!key||d.realmSlot!==1||realmSetCount(key)<4||s.items.find(j=>defs[j.type].realmSet===key&&defs[j.type].realmSlot===1)?.id!==i.id)return;const ready=s.realmSetReady||(s.realmSetReady={});if(s.time<(ready[key]||0))return;ready[key]=s.time+4;switch(key){case'skuld':hit(8);delayEnemyAttack(.4);break;case'swoll':gainBlock(8);restore(4);break;case'geb':restore(4);s.mana=Math.min(50,s.mana+1);break;case'pirate':hit(12);break;case'oryx':gainBlock(10);delayEnemyAttack(.4);break;case'phylactery':summon(3,6);break}itemFxPulse(i,'utility','ST');log('✦ '+window.REALM_SPECIALS.sets[key].name+' full-set effect')}
+function realmOnHurt(amount){if(amount<=0||s.hp<=0)return;for(const i of s.items){const m=defs[i.type].mechanic;if(!m?.retaliate)continue;const state=specialState(i);if(m.key==='realmcrystal'&&s.time>=(state.armoredUntil||0)||s.time<(state.nextRetaliation||0))continue;state.nextRetaliation=s.time+(m.retaliateLock||1);hit(m.retaliate);if(m.retaliateHeal)restore(m.retaliateHeal);itemFxPulse(i,'damage','↗')}}
+function resetRealmSpecials(){s.realmLastHeal=-1000;s.realmArmoredUntil=0;s.realmDivineUntil=0;s.realmDivineReady=0;s.realmMushroom=null;s.realmProjectiles=[];s.realmSetReady={}}
+function tickRealmSpecials(dt){const queue=s.realmProjectiles||[];for(const p of queue){p.time-=dt;if(p.time<=0&&p.wave===s.enemy.wave){hit(p.damage);log('✦ '+p.name+' bolts arrive.')}}s.realmProjectiles=queue.filter(p=>p.time>0&&p.wave===s.enemy.wave);const shroom=s.realmMushroom;if(shroom){shroom.elapsed=Math.min(shroom.duration,shroom.elapsed+dt);while(shroom.pulses+1<=shroom.elapsed+1e-8&&shroom.pulses<shroom.duration){const before=Math.floor(shroom.total*shroom.pulses/shroom.duration);shroom.pulses++;restore(Math.floor(shroom.total*shroom.pulses/shroom.duration)-before)}if(shroom.elapsed>=shroom.duration)s.realmMushroom=null}}
+
+function realmStateText(i){const d=defs[i.type],m=d.mechanic,state=specialState(i),parts=['Activations: '+i.activations];if(m.key==='realmhex')parts.push('Hex: '+(state.hexWave===s.enemy.wave?state.counter:0)+'/6');if(m.close)parts.push(i.y===0?'Point-blank: 125%':'Out of close range: 65%');if(d.realmSet)parts.push('ST: '+realmSetCount(d.realmSet)+'/4 packed');if(m.regen)parts.push(s.realmMushroom?'Mushroom: '+Math.ceil(s.realmMushroom.duration-s.realmMushroom.elapsed)+'s':'Mushroom ready');return parts.join(' · ')}

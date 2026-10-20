@@ -41,6 +41,7 @@ jobs:
           node game/tests/test-class-reworks.cjs
           node game/tests/test-event-trades.cjs
           node game/tests/test-provisions.cjs
+          node game/tests/test-ut-st-identities.cjs
           node game/tests/test-dungeon-difficulty.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

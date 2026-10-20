@@ -2,6 +2,8 @@
 
 This pass replaces incidental item-ID variation with explicit family recipes. `game/catalogue.js` remains the imported identity catalogue; `game/item-balance.js` is the canonical gameplay layer loaded immediately afterward. Tests, offline benchmarks and the browser load the same rules. Names, object IDs, sprites, shapes, class restrictions and save references remain stable.
 
+For the later researched UT/ST identity layer and set mechanics, see [UT/ST identities — 0.21.5](ut-st-identities.md). The ordinary tiered rules below remain unchanged.
+
 ## Item progression
 
 Numbered tiers keep their family's primary role and mana cost. Most primary amounts grow from a family baseline by 9% of that baseline per tier, rounded to an integer; cooldown decreases by 1% of the baseline per tier. Mana and dodge have discrete amounts and instead improve cooldown by 2.5% of baseline per tier. Haste and chill durations grow by 5.5% of baseline per tier. Consequently a higher numbered tier always improves primary output or efficiency, even at steps where integer amounts stay unchanged. The progression test checks all 310 tier transitions across 33 families, including separate ring roles.

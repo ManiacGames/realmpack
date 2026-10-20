@@ -1,19 +1,19 @@
 'use strict';
-function grantsItemHaste(d){return d.effect==='haste'||d.affix==='haste'&&(!d.mechanic||d.mechanic.keepAffix)}
+function grantsItemHaste(d){return d.effect==='haste'||!!d.mechanic?.localHaste||d.affix==='haste'&&(!d.mechanic||d.mechanic.keepAffix)}
 function itemHasHaste(i){return s.haste>0||(i.hasteRemaining||0)>0}
 function grantItemHaste(source,duration){if(!source||!s.items.includes(source)||s.phase!=='fight')return;const seconds=Math.max(0,Math.min(15,Number(duration)||0));if(!seconds)return;for(const target of nearbyItems(source)){target.hasteRemaining=Math.max(target.hasteRemaining||0,seconds);itemFxPulse(target,'cooldown','↑')}}
 
-function resetItemMechanics(){s.itemBombs=[];s.lastItemEffect=null;for(const i of s.items)i.special={counter:0,stored:0,wave:0,rescued:false,refilled:false,relayWindow:0,relayTotal:0};}
+function resetItemMechanics(){s.itemBombs=[];s.lastItemEffect=null;resetRealmSpecials();for(const i of s.items)i.special={counter:0,stored:0,wave:0,rescued:false,refilled:false,relayWindow:0,relayTotal:0};}
 function specialState(i){return i.special||(i.special={counter:0,stored:0,wave:0,rescued:false,refilled:false,relayWindow:0,relayTotal:0})}
 function nearbyItems(i){return s.items.filter(j=>j.id!==i.id&&adjacent(i,j))}
 function rechargeItem(i,fraction,source=null){const state=specialState(i),window=Math.floor(s.time);if(state.relayWindow!==window){state.relayWindow=window;state.relayTotal=0}const allowed=Math.max(0,Math.min(fraction,.35-state.relayTotal));state.relayTotal+=allowed;if(allowed>0){itemFxPulse(i,'cooldown','↻');if(source)itemFxPulse(source,'cooldown','↗')}i.charge=Math.min(cooldown(i),i.charge+cooldown(i)*allowed);}
-function itemEvent(event,amount,source=null){if(s.phase!=='fight'||amount<=0)return;for(const i of s.items){const m=defs[i.type].mechanic;if(!m||source?.id===i.id)continue;const state=specialState(i);if((event==='block'&&['barrier','guardlink'].includes(m.key))||(event==='heal'&&m.key==='healecho')||(event==='hurt'&&m.key==='reprisal'))state.stored=Math.min(m.n*3,state.stored+amount);if(event==='weapon'&&m.key==='combination'||event==='ability'&&m.key==='spellchain')state.counter=Math.min(3,state.counter+amount);}}
-function tickItemMechanics(dt){if(s.phase!=='fight')return;const pending=s.itemBombs||[];for(const bomb of pending){bomb.time-=dt;if(bomb.time<=0){hit(bomb.damage);log('✦ '+bomb.name+' delayed blast: '+bomb.damage+' damage.')}}s.itemBombs=pending.filter(b=>b.time>0)}
+function itemEvent(event,amount,source=null){if(s.phase!=='fight'||amount<=0)return;if(event==='hurt')realmOnHurt(amount);for(const i of s.items){const m=defs[i.type].mechanic;if(!m||source?.id===i.id)continue;const state=specialState(i);if(event==='weapon'&&m.key==='realmhex'){if(state.hexWave!==s.enemy.wave){state.counter=0;state.hexWave=s.enemy.wave}state.counter=Math.min(6,state.counter+amount)}if((event==='block'&&['barrier','guardlink'].includes(m.key))||(event==='heal'&&m.key==='healecho')||(event==='hurt'&&m.key==='reprisal'))state.stored=Math.min(m.n*3,state.stored+amount);if(event==='weapon'&&m.key==='combination'||event==='ability'&&m.key==='spellchain')state.counter=Math.min(3,state.counter+amount);}}
+function tickItemMechanics(dt){if(s.phase!=='fight')return;tickRealmSpecials(dt);const pending=s.itemBombs||[];for(const bomb of pending){bomb.time-=dt;if(bomb.time<=0){hit(bomb.damage);log('✦ '+bomb.name+' delayed blast: '+bomb.damage+' damage.')}}s.itemBombs=pending.filter(b=>b.time>0)}
 function tryItemRescue(){if(s.hp>0||s.time>=150)return false;const item=s.items.find(i=>defs[i.type].mechanic?.key==='phoenix'&&!specialState(i).rescued);if(!item)return false;specialState(item).rescued=true;item.used=true;restore(Math.max(1,Math.round(s.max*.18)),false);log('✦ '+defs[item.type].name+' prevents death!');flash('item'+item.id);return s.hp>0}
-function mechanicCard(d){return d.mechanic?`<div class="mechanic-note"><b>◆ ${esc(d.mechanic.title)}</b><p>${esc(d.mechanic.text)}</p></div>`:''}
+function mechanicCard(d){return d.mechanic?`<div class="mechanic-note"><b>◆ ${esc(d.mechanic.title)}</b><p>${esc(d.mechanic.text)}</p></div>${realmSetMarkup(d)}`:''}
 function activateSignature(i){if(!healingConsumableReady(i))return false;const d=defs[i.type],m=d.mechanic,state=specialState(i),n=m.n,e=s.enemy;const manaCost=itemManaCost(d,i);if(i.used||manaCost>s.mana)return false;const ordinal=i.activations+1,near=nearbyItems(i),previous=s.lastItemEffect;const boosted=m.keepCondition&&conditionActive(i);let amount=d.amount;
  switch(m.key){case'charge':amount*=ordinal%3===0?1.8:.65;break;case'double':amount*=.8;break;case'ambush':amount*=ordinal===1?1.7:.9;break;case'execute':amount*=e.hp<e.max*.25?2:.85;break;case'isolation':amount*=near.length?.85:1.25;break;case'corner':{const [w,h]=dims(i);amount*=((i.x===0||i.x+w===6)&&(i.y===0||i.y+h===5))?1.2:.9;break}case'row':{const [w,h]=dims(i);const weapons=s.items.filter(j=>j.id!==i.id&&defs[j.type].group==='weapon'&&j.y<i.y+h&&j.y+dims(j)[1]>i.y).length;amount*=Math.min(1.2,.9+.06*weapons);break}case'ramp':amount*=Math.min(1.25,.85+i.activations*.04);break;case'wave':amount*=state.wave!==e.wave?1.45:.85;state.wave=e.wave;break;}
- amount=classPrimaryAmount(i,enchantPrimary(i,Math.max(1,Math.round(amount))));s.mana-=manaCost;passive('mana',manaCost);i.activations++;i.charge=0;consumeStackUse(i);apply(d.effect,amount,i);
+ if(d.realmIdentity)amount=realmPrimaryAmount(i,amount);amount=classPrimaryAmount(i,enchantPrimary(i,Math.max(1,Math.round(amount))));s.mana-=manaCost;passive('mana',manaCost);i.activations++;i.charge=0;consumeStackUse(i);if(d.realmIdentity)realmApplyPrimary(i,amount);else apply(d.effect,amount,i);
  switch(m.key){
  case'double':if(ordinal%2===0)apply(d.effect,Math.max(1,Math.round(d.amount*.35)),i);break;
  case'blood':s.hp=Math.max(1,s.hp-Math.max(1,Math.round(s.max*.02)));hit(n);restore(Math.floor(n/2));break;
@@ -41,8 +41,9 @@ function activateSignature(i){if(!healingConsumableReady(i))return false;const d
  case'prism':apply(['burn','poison','bleed'][(ordinal-1)%3],2);break;
  case'manasave':if(ordinal%4===0)s.mana=Math.min(50,s.mana+Math.min(3,d.mana));break;
  }
- // Thirty curated iconic items can retain a named, explicitly described core effect.
+ if(d.realmIdentity)realmAfterActivation(i);
+ // Legacy signatures retain their named core effect.
  if(m.keepAffix&&d.affix)apply(d.affix,d.affixAmount,i);if(boosted){if(['damage','drain','block','heal'].includes(d.effect))apply(d.effect,d.bonus,i);else hit(d.bonus)}
  if(d.group==='weapon'){passive('attack',1);itemEvent('weapon',1,i)}else if(d.group==='ability')itemEvent('ability',1,i);
- triggerEnchantments(i);classActivation(i,amount);itemFxActivation(i,boosted);s.lastItemEffect={itemId:i.id,effect:d.effect,amount};log(d.name+' · '+m.title+': '+effectText(d.effect,amount)+'.');flash('item'+i.id);return true;
+ triggerEnchantments(i);classActivation(i,amount);itemFxActivation(i,boosted);if(d.realmIdentity&&m.shots>1)itemFxPulse(i,'damage','×'+m.shots);s.lastItemEffect={itemId:i.id,effect:d.effect,amount};log(d.name+' · '+m.title+': '+effectText(d.effect,amount)+'.');flash('item'+i.id);return true;
 }

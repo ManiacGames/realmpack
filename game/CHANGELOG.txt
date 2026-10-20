@@ -1,3 +1,11 @@
+RealmPack 0.21.5
+- Reworked 24 UT identities with recognizable shots, beams, armor, Hex, cleansing and mushroom healing.
+- Added six four-piece ST sets (24 pieces), distinct-piece bonuses and visible set progress.
+- Close-range weapons favor the top backpack row; volleys share one damage budget.
+- Temporary defenses, regeneration and full-set procs have explicit repeat/stacking limits.
+- IDs, art, saves, footprints and ordinary tiered progression are preserved.
+- Remaining UT/ST entries keep existing family rules; research/scope: docs/ut-st-identities.md.
+
 RealmPack 0.21.4
 - Supply Caravan sells one or two matching consumable copies for an owned stack, up to five.
 - One purchase per visit; 60% of item price per copy, rounded up, minimum eight gold.

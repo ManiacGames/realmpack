@@ -1,5 +1,13 @@
 # RealmPack changelog
 
+## 0.21.5 — 2026-10-20
+
+- Reworked 24 UT identities around researched RotMG behavior, covering 54 entries with imported duplicate versions and Shiny counterparts. Divinity now beams, EP specializes in point-blank barrages, Planewalker evades/repositions, Crystal Shield armors/retaliates, Conflict consumes Hex for soulshards, and Mushroom Tome heals over time.
+- Added 24 individually adapted ST pieces across six sets: Skuld, Swoll Paladin, Priest of Geb, Pirate King Warrior, Oryx Awesome and Phylactery Mystic. Two/three distinct packed pieces improve the set; four unlock a themed effect. Duplicates, stash and Legacy pieces do not fill missing slots.
+- Added visible set progress, piece lists and explicit signature tradeoffs. Close-range weapons favor the top backpack row. Volleys share one damage budget; temporary armor, regeneration, protection and set procs have stacking or repeat limits.
+- Preserved item IDs, art, footprints, native classes, saved upgrades and tiered progression. Other imported UT/ST items retain their existing family rules. These mechanics use RealmPack values rather than exact RotMG numbers; references and scope are documented in docs/ut-st-identities.md.
+- Validation: signature/defense/resource tests, all six legal set layouts, threshold/proc guards and 18 actual set-combat simulations, full regression suite and syntax checks. All 1,995 tiered-build class benchmark records matched the preceding release.
+
 ## 0.21.4 — 2026-10-20
 
 - Added the Supply Caravan: choose an owned consumable stack and buy one or two exact matching copies, capped at five. One purchase per visit; each copy costs 60% of its item price, rounded up, with an eight-gold minimum.
