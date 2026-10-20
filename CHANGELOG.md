@@ -1,5 +1,13 @@
 # RealmPack changelog
 
+## 0.20.3 — 2026-10-20
+
+- Healing consumables now wait until health is at or below 50% before activating, including signature consumables and consumables with an active healing affix. Repeating healing equipment and non-healing consumables keep their existing behavior.
+- Waiting preserves a ready cooldown, mana and stack uses. Every copy rechecks health, so a heal that raises health above the threshold pauses the next copy until needed.
+- Added the activation rule to item descriptions, including catalogue and inspection text. Kept healing amounts, cooldowns, stack limits and per-battle refresh unchanged.
+- Balance rationale: 50% is an initial safety threshold; a strict 25% trigger may be too late for small heals against burst damage. Further balance tuning requires playtesting.
+- Validation: automated full-health and exact-boundary checks, ordinary/signature/affix paths, resource preservation, stacked copies, real battle ticks, battle refresh and existing regression checks. Browser layout was not visually verified.
+
 ## 0.20.2 — 2026-10-20
 
 - Clicking another packed item while an item is selected now cancels the current selection instead of selecting the item underneath. Neither item moves; this also applies when placing from the stash.

@@ -1,6 +1,10 @@
 /* Single-use copies share space and recharge one use at a time. */
 'use strict';
 const STACK_LIMIT=5;
+const HEALING_CONSUMABLE_THRESHOLD=.5;
+function isHealingConsumable(d){return !!d.once&&(d.effect==='heal'||d.affix==='heal'&&(!d.mechanic||d.mechanic.keepAffix))}
+function healingConsumableReady(i){return !isHealingConsumable(defs[i.type])||s.hp<=s.max*HEALING_CONSUMABLE_THRESHOLD}
+function healingConsumableNote(d){return isHealingConsumable(d)?' Activates only at 50% health or lower; holds its ready cooldown while waiting.':''}
 function stackCount(i){return defs[i.type]?.once?Math.max(1,Math.min(STACK_LIMIT,Math.floor(Number(i.quantity)||1))):1}
 function stackRemaining(i){return Math.max(0,stackCount(i)-(i.usesSpent||0))}
 function stackCompatible(a,b){return a.id!==b.id&&a.type===b.type&&!!defs[a.type]?.once&&(a.eventHaste||0)===(b.eventHaste||0)&&JSON.stringify(itemEnchants(a))===JSON.stringify(itemEnchants(b))}

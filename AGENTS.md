@@ -8,6 +8,7 @@ Repository: ManiacGames/realmpack. Production is GitHub Pages at https://maniacg
 - In the same commit as every change to `game/`, update root `CHANGELOG.md` with the release version, Europe/Helsinki date, and concise user-facing changes. Keep the newest release first. Record validation and material limitations accurately. Do not claim browser verification if only automated checks ran.
 - Increment the experimental build version and script/style cache query strings in `game/index.html`. Keep `game/CHANGELOG.txt` consistent with the current release notes.
 - Run JavaScript syntax checks and `node game/tests/test-stacks-adjacency.cjs`. For artwork, events, or encounter changes, also run `node game/tests/test-event-art.cjs`.
+- For healing or consumable activation changes, also run `node game/tests/test-healing-consumables.cjs`.
 - For item selection, dragging, hovering or inspection controls, also run `node game/tests/test-inventory-interaction.cjs`.
 - For shop, reward, or item inspection UI changes, run `node game/tests/test-shop-layout.cjs`.
 - For event costs, trading, sacrifices, item upgrades or selling, run `node game/tests/test-event-trades.cjs`.
