@@ -1,5 +1,7 @@
 # UT and ST identities — 0.21.5
 
+The later [Dagger Update — 0.22.0](dagger-update.md) takes precedence for its named dagger recipes, including Corruption Cutter and Cronus. The source references below document the preceding identity pass.
+
 This release adds researched profiles for **24 UT names and 24 pieces across six ST sets**. Including imported duplicate versions and Shiny counterparts, 78 catalogue entries use these profiles. The remaining imported UT/ST entries retain the existing family rules; this is not a claim that the entire catalogue has been individually recreated.
 
 `game/realm-specials.js` is the canonical identity layer, loaded after `item-balance.js`. Names, IDs, sprites, footprints, native classes and saved item upgrades remain intact. Base and Shiny variants share mechanics. Existing Shiny bonuses remain a RealmPack rule.

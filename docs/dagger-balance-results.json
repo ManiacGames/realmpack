@@ -1,0 +1,1444 @@
+{
+  "beforeVersion": "0.21.5",
+  "beforeCommit": "f08d2881988d8a155a1380e8e32b874d9d502c57",
+  "afterVersion": "0.22.0",
+  "assumptions": "Rogue with standardized 270 maximum HP and 5 starting mana; one tested dagger, T12 leather, T6 cloak, Healing Tome, Ring of Magic and three Health Potions; no other upgrades. Bosses at depth20 in first dungeon of tiers1/4/5; five seeds each. Output starts at 500/1000 HP and zero mana; it is a 60s actual-tick single-item target with no enemy attacks; 20 seeds. No sidearm partner rings or Vitality rings in baseline.",
+  "counts": {
+    "bossFightsPerVersion": 825,
+    "outputTrialsPerVersion": 1100,
+    "tieredFightsPerVersion": 1995,
+    "tieredRecordsIdentical": true
+  },
+  "items": [
+    {
+      "name": "An Icicle",
+      "before": {
+        "name": "An Icicle",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "An Icicle",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 35.25,
+        "hp": 49.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.0
+    },
+    {
+      "name": "Ashen Talon",
+      "before": {
+        "name": "Ashen Talon",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Ashen Talon",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.0
+    },
+    {
+      "name": "Queen's Stinger",
+      "before": {
+        "name": "Queen's Stinger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Queen's Stinger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.0
+    },
+    {
+      "name": "Archangel's Judgement",
+      "before": {
+        "name": "Archangel's Judgement",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Archangel's Judgement",
+        "dps": 12,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 33.23,
+        "hp": 32,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.938
+    },
+    {
+      "name": "Blade of Fates",
+      "before": {
+        "name": "Blade of Fates",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Blade of Fates",
+        "dps": 10.8,
+        "uses": 24,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 34.97,
+        "hp": 1.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.844
+    },
+    {
+      "name": "Bone Dagger",
+      "before": {
+        "name": "Bone Dagger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Bone Dagger",
+        "dps": 11.18,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 35.28,
+        "hp": 15.7,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.873
+    },
+    {
+      "name": "Boomerang Blades",
+      "before": {
+        "name": "Boomerang Blades",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Boomerang Blades",
+        "dps": 11.6,
+        "uses": 24,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.95,
+        "hp": 9,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.906
+    },
+    {
+      "name": "Bounty Hunter's Dagger",
+      "before": {
+        "name": "Bounty Hunter's Dagger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Bounty Hunter's Dagger",
+        "dps": 7.2,
+        "uses": 48,
+        "wins": 0,
+        "fights": 15,
+        "seconds": 40.45,
+        "hp": 0,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.562
+    },
+    {
+      "name": "Chain Dagger",
+      "before": {
+        "name": "Chain Dagger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Chain Dagger",
+        "dps": 26.67,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 29.07,
+        "hp": 47.7,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 2.084
+    },
+    {
+      "name": "Chicken Leg of Doom",
+      "before": {
+        "name": "Chicken Leg of Doom",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Chicken Leg of Doom",
+        "dps": 3.2,
+        "uses": 48,
+        "wins": 0,
+        "fights": 15,
+        "seconds": 40.12,
+        "hp": 0,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.25
+    },
+    {
+      "name": "Corruption Cutter",
+      "before": {
+        "name": "Corruption Cutter",
+        "dps": 12.3,
+        "uses": 57,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 34.4,
+        "hp": 45.7,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Corruption Cutter",
+        "dps": 8.5,
+        "uses": 57,
+        "wins": 0,
+        "fights": 15,
+        "seconds": 40.45,
+        "hp": 0,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.691
+    },
+    {
+      "name": "Crescent Dagger",
+      "before": {
+        "name": "Crescent Dagger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Crescent Dagger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.0
+    },
+    {
+      "name": "Dagger of Eternal Chaos",
+      "before": {
+        "name": "Dagger of Eternal Chaos",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Dagger of Eternal Chaos",
+        "dps": 13.43,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.049
+    },
+    {
+      "name": "Dagger of the Amethyst Prism",
+      "before": {
+        "name": "Dagger of the Amethyst Prism",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Dagger of the Amethyst Prism",
+        "dps": 12,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 33.23,
+        "hp": 32,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.938
+    },
+    {
+      "name": "Dagger of the Hasteful Rabbit",
+      "before": {
+        "name": "Dagger of the Hasteful Rabbit",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Dagger of the Hasteful Rabbit",
+        "dps": 12,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 34.03,
+        "hp": 38,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.938
+    },
+    {
+      "name": "Dagger of the Terrible Talon",
+      "before": {
+        "name": "Dagger of the Terrible Talon",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Dagger of the Terrible Talon",
+        "dps": 12.75,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.996
+    },
+    {
+      "name": "Dirk of Cronus",
+      "before": {
+        "name": "Dirk of Cronus",
+        "dps": 12.93,
+        "uses": 46,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.93,
+        "hp": 31.7,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Dirk of Cronus",
+        "dps": 12.93,
+        "uses": 46,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.93,
+        "hp": 31.7,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.0
+    },
+    {
+      "name": "Dual Pops",
+      "before": {
+        "name": "Dual Pops",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Dual Pops",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.0
+    },
+    {
+      "name": "Dueling Daggers",
+      "before": {
+        "name": "Dueling Daggers",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Dueling Daggers",
+        "dps": 9.53,
+        "uses": 57,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 38.85,
+        "hp": 10.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.745
+    },
+    {
+      "name": "Evergreen Dagger",
+      "before": {
+        "name": "Evergreen Dagger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Evergreen Dagger",
+        "dps": 27.95,
+        "uses": 105,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 27.55,
+        "hp": 64.7,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 2.184
+    },
+    {
+      "name": "Fractal Blades",
+      "before": {
+        "name": "Fractal Blades",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Fractal Blades",
+        "dps": 12.49,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.81,
+        "hp": 36.7,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.976
+    },
+    {
+      "name": "Groovy Mango",
+      "before": {
+        "name": "Groovy Mango",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Groovy Mango",
+        "dps": 9.6,
+        "uses": 48,
+        "wins": 0,
+        "fights": 15,
+        "seconds": 37.95,
+        "hp": 0,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.75
+    },
+    {
+      "name": "Hatchling Blades",
+      "before": {
+        "name": "Hatchling Blades",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Hatchling Blades",
+        "dps": 11.6,
+        "uses": 24,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.95,
+        "hp": 9,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.906
+    },
+    {
+      "name": "Heart Jewel Blades",
+      "before": {
+        "name": "Heart Jewel Blades",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Heart Jewel Blades",
+        "dps": 12,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 37,
+        "hp": 46.7,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.938
+    },
+    {
+      "name": "Heartfind Dagger",
+      "before": {
+        "name": "Heartfind Dagger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Heartfind Dagger",
+        "dps": 12,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 37,
+        "hp": 46.7,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.938
+    },
+    {
+      "name": "Hero's Blades",
+      "before": {
+        "name": "Hero's Blades",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Hero's Blades",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": false
+      },
+      "damageRatio": 1.0
+    },
+    {
+      "name": "Hero's Dagger",
+      "before": {
+        "name": "Hero's Dagger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Hero's Dagger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": false
+      },
+      "damageRatio": 1.0
+    },
+    {
+      "name": "Legacy Etherite Dagger",
+      "before": {
+        "name": "Legacy Etherite Dagger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Legacy Etherite Dagger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": false
+      },
+      "damageRatio": 1.0
+    },
+    {
+      "name": "Legion Elite Dagger",
+      "before": {
+        "name": "Legion Elite Dagger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Legion Elite Dagger",
+        "dps": 13.39,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.32,
+        "hp": 39.8,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.046
+    },
+    {
+      "name": "Marionette Ravager",
+      "before": {
+        "name": "Marionette Ravager",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Marionette Ravager",
+        "dps": 13.4,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.047
+    },
+    {
+      "name": "Mischief",
+      "before": {
+        "name": "Mischief",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Mischief",
+        "dps": 14.4,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 31.15,
+        "hp": 38.7,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.125
+    },
+    {
+      "name": "Mister Mango",
+      "before": {
+        "name": "Mister Mango",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Mister Mango",
+        "dps": 10.4,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 36.53,
+        "hp": 13.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.812
+    },
+    {
+      "name": "Needlessly Large Spoon",
+      "before": {
+        "name": "Needlessly Large Spoon",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Needlessly Large Spoon",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 33.2,
+        "hp": 41,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.0
+    },
+    {
+      "name": "Neo Corrosion Cutter",
+      "before": {
+        "name": "Neo Corrosion Cutter",
+        "dps": 12.78,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Neo Corrosion Cutter",
+        "dps": 13.58,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.063
+    },
+    {
+      "name": "Neo Dueling Daggers",
+      "before": {
+        "name": "Neo Dueling Daggers",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Neo Dueling Daggers",
+        "dps": 11.6,
+        "uses": 57,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 35.7,
+        "hp": 32.7,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.906
+    },
+    {
+      "name": "Phantasm Dirk",
+      "before": {
+        "name": "Phantasm Dirk",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Phantasm Dirk",
+        "dps": 12.93,
+        "uses": 46,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 33.73,
+        "hp": 42,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.01
+    },
+    {
+      "name": "Phantom Sickle",
+      "before": {
+        "name": "Phantom Sickle",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Phantom Sickle",
+        "dps": 13.2,
+        "uses": 24,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 31.28,
+        "hp": 28.7,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.031
+    },
+    {
+      "name": "Pirate's Sidearms",
+      "before": {
+        "name": "Pirate's Sidearms",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Pirate's Sidearms",
+        "dps": 12,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 33.23,
+        "hp": 32,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.938
+    },
+    {
+      "name": "Poison Fang Dagger",
+      "before": {
+        "name": "Poison Fang Dagger",
+        "dps": 12.78,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Poison Fang Dagger",
+        "dps": 12.78,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.0
+    },
+    {
+      "name": "Prismatic Slasher",
+      "before": {
+        "name": "Prismatic Slasher",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Prismatic Slasher",
+        "dps": 10,
+        "uses": 120,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 42.18,
+        "hp": 38,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.781
+    },
+    {
+      "name": "Reliable Pugio",
+      "before": {
+        "name": "Reliable Pugio",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Reliable Pugio",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.0
+    },
+    {
+      "name": "Retrowinds Dagger",
+      "before": {
+        "name": "Retrowinds Dagger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Retrowinds Dagger",
+        "dps": 13.54,
+        "uses": 49.5,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.55,
+        "hp": 39.5,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.058
+    },
+    {
+      "name": "Rosebite Dagger",
+      "before": {
+        "name": "Rosebite Dagger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Rosebite Dagger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.0
+    },
+    {
+      "name": "Seeker's Chisel",
+      "before": {
+        "name": "Seeker's Chisel",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Seeker's Chisel",
+        "dps": 13.85,
+        "uses": 49.5,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 31.97,
+        "hp": 41.4,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.082
+    },
+    {
+      "name": "Spatula Dagger",
+      "before": {
+        "name": "Spatula Dagger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Spatula Dagger",
+        "dps": 12,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 33.23,
+        "hp": 32,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.938
+    },
+    {
+      "name": "Sunshine Shiv",
+      "before": {
+        "name": "Sunshine Shiv",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Sunshine Shiv",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 31.68,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.0
+    },
+    {
+      "name": "Sweettreats Dagger",
+      "before": {
+        "name": "Sweettreats Dagger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Sweettreats Dagger",
+        "dps": 8.5,
+        "uses": 57,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 42.83,
+        "hp": 4.7,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.664
+    },
+    {
+      "name": "Symbiotic Ripper",
+      "before": {
+        "name": "Symbiotic Ripper",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Symbiotic Ripper",
+        "dps": 12.78,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.998
+    },
+    {
+      "name": "The Right Hook",
+      "before": {
+        "name": "The Right Hook",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "The Right Hook",
+        "dps": 12,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 33.23,
+        "hp": 32,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.938
+    },
+    {
+      "name": "Throwing Knives",
+      "before": {
+        "name": "Throwing Knives",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Throwing Knives",
+        "dps": 13,
+        "uses": 60,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 34.07,
+        "hp": 47.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.016
+    },
+    {
+      "name": "Toxic Toad",
+      "before": {
+        "name": "Toxic Toad",
+        "dps": 12.78,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Toxic Toad",
+        "dps": 23.32,
+        "uses": 30,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 27.97,
+        "hp": 37,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.825
+    },
+    {
+      "name": "Toxin Tooth",
+      "before": {
+        "name": "Toxin Tooth",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Toxin Tooth",
+        "dps": 11.18,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 35.28,
+        "hp": 15.7,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.873
+    },
+    {
+      "name": "Toy Knife",
+      "before": {
+        "name": "Toy Knife",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Toy Knife",
+        "dps": 3.98,
+        "uses": 48,
+        "wins": 0,
+        "fights": 15,
+        "seconds": 50.17,
+        "hp": 0,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 0.311
+    },
+    {
+      "name": "Venerable Spirit Dagger",
+      "before": {
+        "name": "Venerable Spirit Dagger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Venerable Spirit Dagger",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": false
+      },
+      "damageRatio": 1.0
+    },
+    {
+      "name": "Void Blades",
+      "before": {
+        "name": "Void Blades",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "after": {
+        "name": "Void Blades",
+        "dps": 12.8,
+        "uses": 48,
+        "wins": 5,
+        "fights": 15,
+        "seconds": 32.4,
+        "hp": 38.3,
+        "maxGain": 0,
+        "available": true
+      },
+      "damageRatio": 1.0
+    }
+  ]
+}

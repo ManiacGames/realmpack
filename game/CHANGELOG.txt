@@ -1,3 +1,11 @@
+RealmPack 0.22.0 — The Dagger Update
+- Applied all 55 requested entries, including upgraded Shiny versions and save-safe exclusions.
+- New shot patterns, miss/crit rolls, statuses, ward bypass, ramps, summons and immunity windows.
+- Added packed-item/dungeon bonuses, Chicken Leg health growth and Rosebite encounter rewards.
+- Retrowinds/Seeker's Chisel start with persistent random enchantments; Amethyst sells for 190g.
+- Preserved requested values; see docs/dagger-update.md in the repository for measured balance feedback.
+- Tested 1,650 boss fights, 2,200 output trials and unchanged ordinary tiered benchmarks.
+
 RealmPack 0.21.5
 - Reworked 24 UT identities with recognizable shots, beams, armor, Hex, cleansing and mushroom healing.
 - Added six four-piece ST sets (24 pieces), distinct-piece bonuses and visible set progress.

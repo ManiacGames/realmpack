@@ -1,5 +1,14 @@
 # RealmPack changelog
 
+## 0.22.0 — 2026-10-20
+
+- Implemented all 55 entries from The Dagger Update: 50 explicit dagger recipes, ten upgraded Shiny counterparts, four temporarily unobtainable items and removal of the redundant Poison Fang catalogue entry. Existing disabled-item saves remain usable; duplicate Fang saves migrate without losing upgrades.
+- Added per-projectile miss/critical rolls, ward bypass, status riders, use counters, cooldown ramps, stronger haste response, direct-attack immunity windows, summons and packed-item/dungeon synergies. Multi-shot attacks share one flat-power and activation budget.
+- Added Chicken Leg maximum-health rewards per defeated wave, once-per-room Rosebite noncombat rewards, and one-time initial enchantments for Retrowinds/Seeker's Chisel. Preserved saves, tiered progression, classes, footprints and art.
+- Set Amethyst Prism's sale value to ten times the ordinary T12 offer, with a correspondingly higher purchase price. Updated inspection links/text, Shiny effect values and unavailable-item notices.
+- Kept the requested values; documented interpretations and balance feedback in docs/dagger-update.md. Evergreen/Chain roughly doubled sustained output; Bounty/Cutter/Toy lost substantial primary-weapon output in the fixed Rogue fixture. These are diagnosed tradeoffs, not a claim of complete balance.
+- Validation: full regression/syntax checks; all 55 requested entries and 10,000-trial miss/crit checks; 1,650 before/after boss simulations plus 2,200 output trials. All 1,995 ordinary tiered-build records matched before/after. Saved rolls, exclusions, duplicate migration, reward replay limits, cooldown floors and actual multi-room utility were checked.
+
 ## 0.21.5 — 2026-10-20
 
 - Reworked 24 UT identities around researched RotMG behavior, covering 54 entries with imported duplicate versions and Shiny counterparts. Divinity now beams, EP specializes in point-blank barrages, Planewalker evades/repositions, Crystal Shield armors/retaliates, Conflict consumes Hex for soulshards, and Mushroom Tome heals over time.
