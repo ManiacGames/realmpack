@@ -1,4 +1,4 @@
-# Specialist shops — 0.23.0
+# Specialist shops — 0.23.1
 
 RealmPack has 30 merchants, covering every imported item family: six weapon, 19 ability, three armor, one ring and one consumable specialist. A merchant stocks **only its own type**, with five distinct name/tier offers. Regular stock excludes Shiny, disabled and hidden entries. Cosmetics with the same displayed name/tier cannot crowd out all five offers.
 
@@ -31,12 +31,12 @@ Merchants have individual names and matching class/item sprite compositions. New
 
 ## Saves and repeated visits
 
-The route stores a shop's family. On first entry, the save records that visit's specialty alongside its existing stock and healing-purchase state. Reopening the modal, returning from inspection or reloading preserves the merchant, remaining offers and healing limit. Re-entering an active shop cannot restock it or claim Rosebite again.
+The route stores a shop's family. On first entry, the save records that visit's specialty alongside its existing stock and healing-purchase state. Reopening the modal, returning from inspection or reloading preserves the merchant, remaining offers and healing limit. Re-entering an active shop cannot restock it or claim Rosebite again. Each visit has one explicit **Refresh stock · Free (1)** button, which rolls five offers of the same specialty, even after all offers are purchased. Some offers can reappear. Refreshing costs no gold, preserves inventory and healing limits, and cannot grant another visit bonus. The used button remains disabled after reopening or reloading; the next shop gets a new refresh.
 
-Old saves already inside a mixed-stock shop keep their offers and purchases. They are labelled “Saved mixed stock”; their next new shop uses the specialist system. Future untyped shop rooms in old saves receive a specialty when first entered, without changing completed routes or rerolling an active shop.
+Old saves already inside a mixed-stock shop keep their offers and purchases. They are labelled “Saved mixed stock”; their next new shop uses the specialist system. Explicitly refreshing a mixed shop converts it to one weighted specialist and consumes that visit’s refresh. Future untyped shop rooms in old saves receive a specialty when first entered, without changing completed routes or rerolling an active shop.
 
 ## Validation
 
-`node game/tests/test-shop-specialists.cjs` checks all 30 families for every class across all three acts: 1,710 five-offer stock rolls, family purity, unique offers, exclusions, matching artwork, purchases, save/load/reopen stability and legacy stock. It also performs 190,000 seeded shop selections (10,000 per class), verifying native/shared/off-class bucket reachability and distribution. The fixed seeded trials yielded 69.69% native, 24.95% shared and 5.36% off-class selections for each class. Those observed figures are sampling results; the configured chances remain exactly 70/25/5.
+`node game/tests/test-shop-specialists.cjs` checks all 30 families for every class across all three acts: 1,710 five-offer stock rolls, family purity, unique offers, exclusions, matching artwork, purchases, save/load/reopen stability, once-per-visit refresh guards, later visits, sold-out restocking and legacy stock. It also performs 190,000 seeded shop selections (10,000 per class), verifying native/shared/off-class bucket reachability and distribution. The fixed seeded trials yielded 69.69% native, 24.95% shared and 5.36% off-class selections for each class. Those observed figures are sampling results; the configured chances remain exactly 70/25/5.
 
 A 2,000-roll consumable comparison found the selected existing consumable 21 times without an owned stack and 116 times with one, consistent with the intended weighting. Basic potions, full-stash purchase safety and ordinary shop/reward inspection are also covered by the regression suite. Existing encounter/art, inventory, event, class, item progression, stacking and dagger checks remain required.

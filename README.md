@@ -1,6 +1,6 @@
 # RealmPack — The Shattered Vault
 
-A Realm-inspired inventory auto-battler. Browser release 0.23.0: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
+A Realm-inspired inventory auto-battler. Browser release 0.23.1: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
 
 ## Play
 
@@ -12,7 +12,7 @@ The Supply Caravan lets you buy one or two exact copies for an owned consumable 
 
 ## Specialist shops
 
-Thirty named merchants cover every weapon, ability and armor family, plus rings and consumables. Shop selection favors native equipment (70%) and shared items (25%), with 5% off-class specialties. Each shop stocks only its specialty; Alchemists include health/mana potions and favor eligible owned consumables. See [shop rules, save behavior and validation](docs/specialist-shops.md).
+Thirty named merchants cover every weapon, ability and armor family, plus rings and consumables. Shop selection favors native equipment (70%) and shared items (25%), with 5% off-class specialties. Each shop stocks only its specialty; Alchemists include health/mana potions and favor eligible owned consumables. Each visit includes one free stock refresh, keeping the same specialty; its used limit survives reloading. See [shop rules, save behavior and validation](docs/specialist-shops.md).
 
 ## The Dagger Update
 

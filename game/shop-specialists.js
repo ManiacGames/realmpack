@@ -26,4 +26,15 @@ function rollSpecialistStock(n,kind){const eligible=specialistItems(kind),chosen
 function currentShopSpecialist(){return s.shopState?.depth===s.room?specialistByKind[s.shopState.kind]||null:null}
 function shopSpecialistNote(m){if(!m)return 'Saved mixed stock · future shops use item specialists.';return m.label+' specialist · '+({native:'For your class',shared:'Shared equipment',offClass:'Off-class specialty; inspect item compatibility'})[shopRelation(m.kind)]}
 function specialistShopScene(room=ROOMS[s.room],mode='card'){const m=specialistByKind[room?.shopKind];if(!m)return eventScene('shop',mode);const pool=specialistItems(m.kind),props=pool.slice(0,3).map(d=>d.id);return eventScene('shop',mode,{scene:'market',actor:m.actor,props,name:m.name,title:m.label+' specialist displaying only '+m.label.toLowerCase()+' stock'})}
-function enterSpecialistShop(){if(s.phase==='shop'){showShop();return}if(s.phase!=='prep')return;daggerNoncombatBonus();const room=decorateShopRoom(ROOMS[s.room]);s.shopState={kind:room.shopKind,depth:s.room};s.shopHeals=0;s.phase='shop';stock=rollSpecialistStock(5,room.shopKind);save();showShop()}
+function enterSpecialistShop(){if(s.phase==='shop'){showShop();return}if(s.phase!=='prep')return;daggerNoncombatBonus();const room=decorateShopRoom(ROOMS[s.room]);s.shopState={kind:room.shopKind,depth:s.room,refreshUsed:false};s.shopHeals=0;s.phase='shop';stock=rollSpecialistStock(5,room.shopKind);save();showShop()}
+
+function shopRefreshUsed(){return s.shopState?.depth===s.room&&!!s.shopState.refreshUsed}
+function refreshShop(){
+ if(s.phase!=='shop'||shopRefreshUsed())return;
+ // Old saves retain their mixed stock until the player explicitly refreshes.
+ const current=currentShopSpecialist(),room=ROOMS[s.room];
+ if(current)room.shopKind=current.kind;
+ decorateShopRoom(room);const kind=room.shopKind;
+ s.shopState={kind,depth:s.room,refreshUsed:true};
+ stock=rollSpecialistStock(5,kind);save();showShop()
+}

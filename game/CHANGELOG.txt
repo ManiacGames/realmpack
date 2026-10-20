@@ -1,3 +1,9 @@
+RealmPack 0.23.1
+- One free stock refresh per shop visit, keeping the same specialty.
+- Refresh use survives reopening/reloading; later shops receive a new refresh.
+- Works on sold-out shops without resetting healing limits or granting visit bonuses.
+- Saved mixed shops become specialists only when explicitly refreshed.
+
 RealmPack 0.23.0
 - Added 30 specialist shops covering all weapon, ability, armor, ring and consumable types.
 - New shop selection: 70% native equipment, 25% shared items, 5% off-class equipment.

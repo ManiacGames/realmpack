@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.23.1 — 2026-10-20
+
+- Added one free stock refresh per shop visit, including sold-out shops. Refresh keeps the merchant's specialty and rolls five offers; some items may appear again.
+- The used refresh persists through reopening and reloading. A later shop gets a new refresh; purchases, healing limits and visit bonuses stay intact.
+- Existing mixed-stock saves keep their offers until explicitly refreshed, then switch to a specialist.
+- Validation: refresh availability/disabled UI, specialty and resource preservation, repeat-click and wrong-phase guards, save/load limits, later visits, sold-out shops, legacy saves, JavaScript syntax and the game regression suite.
+
 ## 0.23.0 — 2026-10-20
 
 - Replaced mixed random shop stock with 30 specialist merchants: every weapon, ability and armor family, plus separate ring and consumable shops. Each stocks only its own type with distinct offers and matching native sprites.
