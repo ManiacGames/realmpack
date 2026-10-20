@@ -1,5 +1,16 @@
 # RealmPack changelog
 
+## 0.21.0 — 2026-10-20
+
+- Replaced item-ID-derived stat variation with consistent recipes for 33 equipment families. Every numbered tier improves output or efficiency; ordinary tiered gear keeps its family role instead of gaining unrelated random mechanics.
+- Rebalanced weapon output around attack cadence and backpack footprint. Larger bows hit harder; small weapons retain speed and flexibility. Reduced excessive dodge frequency on starter leather armor.
+- Special equipment uses a family baseline with themed bonuses or curated iconic signatures. Preserved names, IDs, sprites, shapes and shiny relationships; shiny upgrades inherit their base item's revised role. Tier labels are visible in inspection and offers.
+- Reworked Bard into capped Rhythm rewards from hasted activations; Wizard now stores a scaling spell echo; Samurai builds Focus for wakizashi strikes; Warrior gains capped temporary percentage Fury; Archer gains bow/quiver precision shots. Druid sigils now heal and summon, supporting the class's healing passive from the starting kit.
+- Reduced Knight's block-to-counterattack feedback and Kensei's counterattack payout, improved Sorcerer's proc cadence and added block to Summoner's class summon. Mystic and item attack delays now share one bounded delay budget.
+- Poison and bleed now lose one stack per second and cap at 24 stacks, reducing sustained runaway stacking. Existing consumable health thresholds, stack limits and adjacent-haste rules remain.
+- Added progression/class regression checks and a reproducible 19-class benchmark. Corrected the earlier audit's broad rarity-based ability selection to use each family's actual tier range and legal upgrades. Updated endgame reachability tests to use native, fully tiered builds with valid enchantments.
+- Validation: tier progression, family roles, shiny inheritance, saved equipment/upgrades, class resource caps and activation hooks, healing/haste/stack/event regressions, 19 class openings, difficulty hierarchy and legal apex clears. Comparative benchmark details and limitations are in docs/class-item-balance.md. This is an initial balance pass; full-run playtesting should guide further tuning.
+
 ## 0.20.4 — 2026-10-20
 
 - Item-granted haste now affects only packed items sharing an edge with the source. It excludes the source itself, diagonal neighbors and stashed gear; large items use their actual occupied edges.

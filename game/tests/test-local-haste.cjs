@@ -1,6 +1,6 @@
 'use strict';
 const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');const root=path.resolve(__dirname,'..');const ctx={window:{__TEST__:true},console,Date,setInterval(){return 1},clearInterval(){},setTimeout(){},clearTimeout(){},localStorage:{setItem(){},getItem(){return null}}};vm.createContext(ctx);
-for(const f of ['sprites.js','sprites-runtime.js','catalogue.js','encounters.js','mechanics-runtime.js','enchantments-runtime.js','events-runtime.js','map-runtime.js','inventory-controls.js','item-effects.js','adjacency-runtime.js','stacks-runtime.js','event-art.js','event-trades.js','dungeon-difficulty.js','game.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx);
+for(const f of ['sprites.js','sprites-runtime.js','catalogue.js','item-balance.js','encounters.js','mechanics-runtime.js','enchantments-runtime.js','events-runtime.js','map-runtime.js','inventory-controls.js','item-effects.js','adjacency-runtime.js','stacks-runtime.js','event-art.js','event-trades.js','dungeon-difficulty.js','class-runtime.js','game.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx);
 console.log(vm.runInContext(`(()=>{
 const check=(v,m)=>{if(!v)throw Error(m)},close=(a,b)=>Math.abs(a-b)<1e-8;
 freshRun('knight',true);selectPortal(s.portalChoices[0]);s.phase='fight';s.max=200;s.hp=100;s.mana=50;s.time=0;s.relicHaste=0;s.haste=0;
@@ -32,8 +32,8 @@ source.x=0;source.y=0;defs.speed.w=2;defs.speed.h=2;target.x=2;target.y=1;diagon
 // Tick timers and legacy items without a timer; no source in the pack cannot grant haste.
 s.items=[target,far];s.stash=[source];target.hasteRemaining=.05;delete far.hasteRemaining;target.charge=0;far.charge=0;s.enemy.hp=s.enemy.max=100000;s.enemy.cd=1000;s.enemy.charge=0;
 grantItemHaste(source,5);check(target.hasteRemaining===.05,'Stashed source granted haste');tick(.1);check(target.hasteRemaining===0&&far.hasteRemaining===0&&close(cooldown(target),baseline),'Timer expiration or legacy default failed');
-s.classId='warrior';s.progress=0;passive('attack',4);check(s.haste===4&&close(cooldown(far),baseline/1.25),'Warrior changed');
-s.classId='bard';s.progress=0;s.haste=0;passive('time',5);check(s.haste===3,'Bard changed');
+s.classId='warrior';s.progress=0;passive('attack',3);check(s.haste===0&&s.fury===1,'Warrior Fury should not grant global haste');
+s.classId='bard';s.progress=0;s.haste=0;passive('rhythm',4);check(s.haste===0,'Bard Rhythm should not grant global haste');
 setEnemy();check(target.hasteRemaining===0&&s.haste===0,'Battle reset retained haste');
 check(effectText('haste',3).includes('adjacent')&&effectText('haste',3).includes('excludes self'),'Missing description');
 return 'PASS: ordinary/signature/affix haste locality, self/diagonal/stash exclusion, multi-cell edges, no duration or speed stacking, overlap with class haste, source links/notes, ticking/legacy defaults, class passives and battle reset';

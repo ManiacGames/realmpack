@@ -13,7 +13,7 @@ function tryItemRescue(){if(s.hp>0||s.time>=150)return false;const item=s.items.
 function mechanicCard(d){return d.mechanic?`<div class="mechanic-note"><b>◆ ${esc(d.mechanic.title)}</b><p>${esc(d.mechanic.text)}</p></div>`:''}
 function activateSignature(i){if(!healingConsumableReady(i))return false;const d=defs[i.type],m=d.mechanic,state=specialState(i),n=m.n,e=s.enemy;const manaCost=itemManaCost(d,i);if(i.used||manaCost>s.mana)return false;const ordinal=i.activations+1,near=nearbyItems(i),previous=s.lastItemEffect;const boosted=m.keepCondition&&conditionActive(i);let amount=d.amount;
  switch(m.key){case'charge':amount*=ordinal%3===0?1.8:.65;break;case'double':amount*=.8;break;case'ambush':amount*=ordinal===1?1.7:.9;break;case'execute':amount*=e.hp<e.max*.25?2:.85;break;case'isolation':amount*=near.length?.85:1.25;break;case'corner':{const [w,h]=dims(i);amount*=((i.x===0||i.x+w===6)&&(i.y===0||i.y+h===5))?1.2:.9;break}case'row':{const [w,h]=dims(i);const weapons=s.items.filter(j=>j.id!==i.id&&defs[j.type].group==='weapon'&&j.y<i.y+h&&j.y+dims(j)[1]>i.y).length;amount*=Math.min(1.2,.9+.06*weapons);break}case'ramp':amount*=Math.min(1.25,.85+i.activations*.04);break;case'wave':amount*=state.wave!==e.wave?1.45:.85;state.wave=e.wave;break;}
- amount=enchantPrimary(i,Math.max(1,Math.round(amount)));s.mana-=manaCost;passive('mana',manaCost);i.activations++;i.charge=0;consumeStackUse(i);apply(d.effect,amount,i);
+ amount=classPrimaryAmount(i,enchantPrimary(i,Math.max(1,Math.round(amount))));s.mana-=manaCost;passive('mana',manaCost);i.activations++;i.charge=0;consumeStackUse(i);apply(d.effect,amount,i);
  switch(m.key){
  case'double':if(ordinal%2===0)apply(d.effect,Math.max(1,Math.round(d.amount*.35)),i);break;
  case'blood':s.hp=Math.max(1,s.hp-Math.max(1,Math.round(s.max*.02)));hit(n);restore(Math.floor(n/2));break;
@@ -25,7 +25,7 @@ function activateSignature(i){if(!healingConsumableReady(i))return false;const d
  case'mirror':if(previous&&near.some(j=>j.id===previous.itemId)&&['damage','drain','block','heal','mana'].includes(previous.effect)){const echo=Math.max(1,Math.round(previous.amount*.25));if(previous.effect==='damage'||previous.effect==='drain')hit(echo);else if(previous.effect==='block')gainBlock(echo);else if(previous.effect==='heal')restore(echo);else s.mana=Math.min(50,s.mana+echo)}break;
  case'poisonburst':case'fireburst':case'bleedburst':{const field=m.key==='poisonburst'?'poison':m.key==='fireburst'?'burn':'bleed',stacks=Math.min(n,e[field]);e[field]-=stacks;hit(stacks*3);break}
  case'purify':{const had=s.venom>0||s.silence>0;s.venom=Math.max(0,s.venom-n);s.silence=Math.max(0,s.silence-1);if(had)s.mana=Math.min(50,s.mana+1);break}
- case'stasis':if(ordinal%3===0){const window=Math.floor(s.time/5);if(e.delayWindow!==window){e.delayWindow=window;e.delaySpent=0}const delay=Math.min(.8,2-(e.delaySpent||0));e.delaySpent=(e.delaySpent||0)+delay;e.charge=Math.max(-1.5,e.charge-delay)}break;
+ case'stasis':if(ordinal%3===0)delayEnemyAttack(.8);break;
  case'barrier':hit(state.stored);state.stored=0;break;
  case'healecho':if(state.stored>=n*3){const target=near.find(j=>defs[j.type].group==='weapon');if(target){rechargeItem(target,.25,i);state.stored=0}}break;
  case'guardlink':if(state.stored>=n*3){s.mana=Math.min(50,s.mana+n);state.stored=0}break;
@@ -44,5 +44,5 @@ function activateSignature(i){if(!healingConsumableReady(i))return false;const d
  // Thirty curated iconic items can retain a named, explicitly described core effect.
  if(m.keepAffix&&d.affix)apply(d.affix,d.affixAmount,i);if(boosted){if(['damage','drain','block','heal'].includes(d.effect))apply(d.effect,d.bonus,i);else hit(d.bonus)}
  if(d.group==='weapon'){passive('attack',1);itemEvent('weapon',1,i)}else if(d.group==='ability')itemEvent('ability',1,i);
- triggerEnchantments(i);itemFxActivation(i,boosted);s.lastItemEffect={itemId:i.id,effect:d.effect,amount};log(d.name+' · '+m.title+': '+effectText(d.effect,amount)+'.');flash('item'+i.id);return true;
+ triggerEnchantments(i);classActivation(i,amount);itemFxActivation(i,boosted);s.lastItemEffect={itemId:i.id,effect:d.effect,amount};log(d.name+' · '+m.title+': '+effectText(d.effect,amount)+'.');flash('item'+i.id);return true;
 }

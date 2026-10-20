@@ -1,3 +1,10 @@
+RealmPack 0.21.0
+- Consistent family/tier item progression replaces arbitrary stat and mechanic variation.
+- Rebalanced weapon size/output, leather dodge, poison/bleed and special equipment.
+- Reworked Bard, Wizard, Samurai, Warrior and Archer; Druid sigils now support healing.
+- Tuned Knight, Kensei, Sorcerer and Summoner; shared caps on attack delays.
+- Preserved item identities and saved upgrades; added progression/class tests and benchmarks.
+
 RealmPack 0.20.4
 - Item haste grants +25% recharge only to edge-sharing neighbors, excluding itself.
 - Buffs refresh duration instead of adding it; overlapping haste does not stack speed.

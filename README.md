@@ -1,10 +1,14 @@
 # RealmPack — The Shattered Vault
 
-A Realm-inspired inventory auto-battler. Browser release 0.20.4: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
+A Realm-inspired inventory auto-battler. Browser release 0.21.0: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
 
 ## Play
 
 https://maniacgames.github.io/realmpack/
+
+## Class and item balance
+
+Tiered equipment now follows consistent family progression, and class passives have clearer roles and limits. See [balance rules and benchmark results](docs/class-item-balance.md). The canonical item rules are in `game/item-balance.js`; `game/catalogue.js` preserves imported identities. Run `node scripts/benchmark-balance.cjs` to compare all 19 classes with legal tiered builds.
 
 ## Dungeon difficulty
 
