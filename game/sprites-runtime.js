@@ -54,6 +54,7 @@ function renderBackpack(){
   el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();if(!e.repeat)inventoryClick(i)}};
   el.onpointerenter=()=>{inspectItem(i.id)};el.onpointerleave=()=>{effectHover=null;updateItemEffects()};el.onfocus=()=>{inspectItem(i.id)};el.onblur=()=>{effectHover=null;updateItemEffects()};el.onpointerdown=e=>inventoryPointerDown(e,i);el.ondragstart=e=>e.preventDefault();
  }
+ const count=document.getElementById('stashCount');if(count){count.textContent=s.stash.length+' slot'+(s.stash.length===1?'':'s');count.title=s.practice?'Sandbox catalogue additions stop at 80 stash slots. Other transfers can exceed this.':'No stash capacity limit in normal runs.'}
  const stash=document.getElementById('stash'),stashIds=new Set(s.stash.map(i=>String(i.id)));
  for(const el of stash.querySelectorAll('[data-item-id]'))if(!stashIds.has(el.dataset.itemId))el.remove();
  const empty=stash.querySelector('small');if(empty)empty.remove();

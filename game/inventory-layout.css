@@ -1,0 +1,27 @@
+/* Inventory panels stay together; container sizing follows available main-column space. */
+.inventory{container-type:inline-size}
+.inventory-workspace{display:grid;grid-template-columns:minmax(0,1fr) clamp(160px,30cqw,240px);align-items:stretch}
+.pack-pane,.stash-pane{min-width:0}
+.inventory-workspace .panelhead{padding:14px 12px;align-items:flex-start;flex-wrap:wrap;gap:4px 10px}
+.inventory-workspace .panelhead h2{font-size:22px;line-height:1.25;margin:0}
+.inventory-workspace .panelhead h2::before{display:none}
+.inventory-workspace .panelhead .label{max-width:none;font-size:16px;white-space:nowrap}
+.pack-pane .gridwrap{display:flex;justify-content:center;padding:18px 12px}
+.pack-pane .grid{--cell:clamp(38px,calc((100cqw - clamp(160px,30cqw,240px) - 49px)/6),64px);flex:none}
+.pack-pane .invfoot{padding:12px;gap:8px}
+.pack-pane .invfoot>span{font-size:15px;line-height:1.4}
+.pack-pane .invfoot>div{display:flex;gap:6px;flex-wrap:wrap}
+.stash-pane{display:flex;flex-direction:column;border-left:2px solid #a39877;background:#1b2920}
+.stash-pane .panelhead{background:#26332a}
+.stash-pane .stash{display:grid;grid-template-columns:repeat(auto-fill,minmax(48px,1fr));gap:8px;padding:14px 12px;align-content:start;align-items:start;min-height:160px;flex:1}
+.stash-pane .stash button{min-width:0;width:100%;height:52px;min-height:48px;padding:5px;position:relative}
+.stash-pane .stash button .sprite-art{--sprite-size:32px}
+.stash-pane .stash>small{grid-column:1/-1;font-size:16px;line-height:1.4}
+.stash-pane .help{padding:12px;font-size:16px;line-height:1.45;border-top:1px solid var(--line)}
+.inventory>.effect-legend{border-top:1px solid var(--line)}
+@container (max-width:500px){
+ .inventory-workspace{grid-template-columns:minmax(0,1fr)}
+ .stash-pane{border-left:0;border-top:2px solid #a39877}
+ .pack-pane .grid{--cell:clamp(32px,calc((100cqw - 49px)/6),64px)}
+ .stash-pane .stash{min-height:100px}
+}

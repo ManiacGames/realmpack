@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.21.1 — 2026-10-20
+
+- Moved Travel stash beside Your backpack inside one inventory workspace, with a clear vertical divider and aligned headings. Narrow layouts place the stash immediately below the backpack with a horizontal divider.
+- Added a visible stash slot count and expanded the drag-to-stash target to the whole stash pane. Preserved drag/drop, hover inspection, selection and stack merging.
+- Stash contents expand naturally without a new internal scrollbar. Existing capacity rules remain: normal runs have no enforced stash cap; Sandbox catalogue additions stop at 80 stash slots, while other transfers may exceed that. Stacks hold up to five copies per slot.
+- Validation: unique DOM IDs and inventory placement, bidirectional drag/drop, slot counts, existing selection/hover/rotation interactions, stack/adjacency behavior, shop UI and JavaScript syntax.
+
 ## 0.21.0 — 2026-10-20
 
 - Replaced item-ID-derived stat variation with consistent recipes for 33 equipment families. Every numbered tier improves output or efficiency; ordinary tiered gear keeps its family role instead of gaining unrelated random mechanics.

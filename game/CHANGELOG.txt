@@ -1,3 +1,8 @@
+RealmPack 0.21.1
+- Travel stash now sits beside the backpack with a clear divider; narrow layouts stack them.
+- Added stash slot counts and made the entire stash pane a drag target.
+- Preserved existing stash capacity rules, stacking and hover inspection.
+
 RealmPack 0.21.0
 - Consistent family/tier item progression replaces arbitrary stat and mechanic variation.
 - Rebalanced weapon size/output, leather dodge, poison/bleed and special equipment.
