@@ -1,3 +1,8 @@
+RealmPack 0.20.4
+- Item haste grants +25% recharge only to edge-sharing neighbors, excluding itself.
+- Buffs refresh duration instead of adding it; overlapping haste does not stack speed.
+- Added haste connections and local/class status descriptions; class haste remains global.
+
 RealmPack 0.20.3
 - Healing consumables activate only at 50% health or lower.
 - Waiting preserves ready cooldowns, mana and uses; each stacked copy rechecks health.

@@ -1,5 +1,13 @@
 # RealmPack changelog
 
+## 0.20.4 — 2026-10-20
+
+- Item-granted haste now affects only packed items sharing an edge with the source. It excludes the source itself, diagonal neighbors and stashed gear; large items use their actual occupied edges.
+- Kept the +25% recharge bonus. Repeated haste refreshes the recipient timer without adding duration; overlapping item/class haste does not multiply or add speed. The existing 15-second duration cap remains.
+- Bard and Warrior class haste remains backpack-wide. Permanent recharge blessings, quivers, adjacency bonuses, enchantments and tempering keep their existing rules.
+- Updated item descriptions, connection lines, recipient inspection notes, class descriptions and battle status to distinguish adjacent haste from class haste.
+- Validation: automated ordinary/signature/affix activation checks, recipient geometry, no self/diagonal/stash benefits, overlapping sources/class haste, refresh/caps, expiration, legacy timer defaults, battle reset and existing game regression checks. Further balance tuning requires playtesting.
+
 ## 0.20.3 — 2026-10-20
 
 - Healing consumables now wait until health is at or below 50% before activating, including signature consumables and consumables with an active healing affix. Repeating healing equipment and non-healing consumables keep their existing behavior.

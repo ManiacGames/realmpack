@@ -35,6 +35,7 @@ jobs:
           node game/tests/test-shop-layout.cjs
           node game/tests/test-inventory-interaction.cjs
           node game/tests/test-healing-consumables.cjs
+          node game/tests/test-local-haste.cjs
           node game/tests/test-event-trades.cjs
           node game/tests/test-dungeon-difficulty.cjs
       - uses: actions/configure-pages@v5

@@ -1,4 +1,8 @@
 'use strict';
+function grantsItemHaste(d){return d.effect==='haste'||d.affix==='haste'&&(!d.mechanic||d.mechanic.keepAffix)}
+function itemHasHaste(i){return s.haste>0||(i.hasteRemaining||0)>0}
+function grantItemHaste(source,duration){if(!source||!s.items.includes(source)||s.phase!=='fight')return;const seconds=Math.max(0,Math.min(15,Number(duration)||0));if(!seconds)return;for(const target of nearbyItems(source)){target.hasteRemaining=Math.max(target.hasteRemaining||0,seconds);itemFxPulse(target,'cooldown','↑')}}
+
 function resetItemMechanics(){s.itemBombs=[];s.lastItemEffect=null;for(const i of s.items)i.special={counter:0,stored:0,wave:0,rescued:false,refilled:false,relayWindow:0,relayTotal:0};}
 function specialState(i){return i.special||(i.special={counter:0,stored:0,wave:0,rescued:false,refilled:false,relayWindow:0,relayTotal:0})}
 function nearbyItems(i){return s.items.filter(j=>j.id!==i.id&&adjacent(i,j))}
@@ -9,9 +13,9 @@ function tryItemRescue(){if(s.hp>0||s.time>=150)return false;const item=s.items.
 function mechanicCard(d){return d.mechanic?`<div class="mechanic-note"><b>◆ ${esc(d.mechanic.title)}</b><p>${esc(d.mechanic.text)}</p></div>`:''}
 function activateSignature(i){if(!healingConsumableReady(i))return false;const d=defs[i.type],m=d.mechanic,state=specialState(i),n=m.n,e=s.enemy;const manaCost=itemManaCost(d,i);if(i.used||manaCost>s.mana)return false;const ordinal=i.activations+1,near=nearbyItems(i),previous=s.lastItemEffect;const boosted=m.keepCondition&&conditionActive(i);let amount=d.amount;
  switch(m.key){case'charge':amount*=ordinal%3===0?1.8:.65;break;case'double':amount*=.8;break;case'ambush':amount*=ordinal===1?1.7:.9;break;case'execute':amount*=e.hp<e.max*.25?2:.85;break;case'isolation':amount*=near.length?.85:1.25;break;case'corner':{const [w,h]=dims(i);amount*=((i.x===0||i.x+w===6)&&(i.y===0||i.y+h===5))?1.2:.9;break}case'row':{const [w,h]=dims(i);const weapons=s.items.filter(j=>j.id!==i.id&&defs[j.type].group==='weapon'&&j.y<i.y+h&&j.y+dims(j)[1]>i.y).length;amount*=Math.min(1.2,.9+.06*weapons);break}case'ramp':amount*=Math.min(1.25,.85+i.activations*.04);break;case'wave':amount*=state.wave!==e.wave?1.45:.85;state.wave=e.wave;break;}
- amount=enchantPrimary(i,Math.max(1,Math.round(amount)));s.mana-=manaCost;passive('mana',manaCost);i.activations++;i.charge=0;consumeStackUse(i);apply(d.effect,amount);
+ amount=enchantPrimary(i,Math.max(1,Math.round(amount)));s.mana-=manaCost;passive('mana',manaCost);i.activations++;i.charge=0;consumeStackUse(i);apply(d.effect,amount,i);
  switch(m.key){
- case'double':if(ordinal%2===0)apply(d.effect,Math.max(1,Math.round(d.amount*.35)));break;
+ case'double':if(ordinal%2===0)apply(d.effect,Math.max(1,Math.round(d.amount*.35)),i);break;
  case'blood':s.hp=Math.max(1,s.hp-Math.max(1,Math.round(s.max*.02)));hit(n);restore(Math.floor(n/2));break;
  case'shieldbash':{const spent=Math.min(s.block,n*3);s.block-=spent;hit(spent);break}
  case'overdrive':{const spent=Math.min(3,s.mana);s.mana-=spent;passive('mana',spent);hit(n*spent);break}
@@ -38,7 +42,7 @@ function activateSignature(i){if(!healingConsumableReady(i))return false;const d
  case'manasave':if(ordinal%4===0)s.mana=Math.min(50,s.mana+Math.min(3,d.mana));break;
  }
  // Thirty curated iconic items can retain a named, explicitly described core effect.
- if(m.keepAffix&&d.affix)apply(d.affix,d.affixAmount);if(boosted){if(['damage','drain','block','heal'].includes(d.effect))apply(d.effect,d.bonus);else hit(d.bonus)}
+ if(m.keepAffix&&d.affix)apply(d.affix,d.affixAmount,i);if(boosted){if(['damage','drain','block','heal'].includes(d.effect))apply(d.effect,d.bonus,i);else hit(d.bonus)}
  if(d.group==='weapon'){passive('attack',1);itemEvent('weapon',1,i)}else if(d.group==='ability')itemEvent('ability',1,i);
  triggerEnchantments(i);itemFxActivation(i,boosted);s.lastItemEffect={itemId:i.id,effect:d.effect,amount};log(d.name+' · '+m.title+': '+effectText(d.effect,amount)+'.');flash('item'+i.id);return true;
 }
