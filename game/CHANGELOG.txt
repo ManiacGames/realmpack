@@ -1,3 +1,10 @@
+RealmPack 0.23.0
+- Added 30 specialist shops covering all weapon, ability, armor, ring and consumable types.
+- New shop selection: 70% native equipment, 25% shared items, 5% off-class equipment.
+- Each merchant stocks only its specialty; Alchemist offers health/mana potions and favors owned consumables.
+- Shop identity, remaining stock and healing limits survive reopening and reloads.
+- Existing mixed-stock saves are preserved; new merchants use matching native sprites.
+
 RealmPack 0.22.2
 - Chain Dagger now builds bleed only to 6 stacks; Shiny builds to 8.
 - Keeps its damage and bleed application; does not reduce or refresh higher bleed from other sources.

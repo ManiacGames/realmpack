@@ -1,5 +1,13 @@
 # RealmPack changelog
 
+## 0.23.0 — 2026-10-20
+
+- Replaced mixed random shop stock with 30 specialist merchants: every weapon, ability and armor family, plus separate ring and consumable shops. Each stocks only its own type with distinct offers and matching native sprites.
+- Weighted new shops toward native weapon/ability/armor families (70%) and shared ring/consumable shops (25%), with a 5% chance of an off-class specialist. Shop chances are independent of catalogue size; stock retains class compatibility and act-based rarity weighting.
+- Added reliable health/mana potion offers at The Alchemist and extra weight for eligible consumables already owned in partial stacks. Existing purchase, merge and stash caps remain enforced.
+- Showed merchant identity in newly generated routes and the shop header. Preserved remaining stock and healing limits through reopening/reloading; old mixed-stock shops remain intact until the next shop.
+- Validation: all 30 families across all 19 classes/three acts, 1,710 stock rolls, 190,000 seeded selection trials, consumable weighting, native art, purchases, legacy saves, repeat-entry guards, syntax and the existing regression suite. Details: docs/specialist-shops.md.
+
 ## 0.22.2 — 2026-10-20
 
 - Chain Dagger retains 10 base damage and 2 bleed per use, but can only build enemy bleed up to six stacks. Its upgraded Shiny counterpart has an eight-stack ceiling.

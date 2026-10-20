@@ -1,6 +1,6 @@
 # RealmPack — The Shattered Vault
 
-A Realm-inspired inventory auto-battler. Browser release 0.22.2: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
+A Realm-inspired inventory auto-battler. Browser release 0.23.0: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
 
 ## Play
 
@@ -9,6 +9,10 @@ https://maniacgames.github.io/realmpack/
 The stash holds nine slots in all modes; consumable stacks hold up to five copies per slot. Existing saves above the limit retain their items but must reduce the stash before the next battle.
 
 The Supply Caravan lets you buy one or two exact copies for an owned consumable stack, up to five. One purchase per visit; depth 3 of new runs guarantees a visit. Each copy costs 60% of its item price, rounded up, with an eight-gold minimum.
+
+## Specialist shops
+
+Thirty named merchants cover every weapon, ability and armor family, plus rings and consumables. Shop selection favors native equipment (70%) and shared items (25%), with 5% off-class specialties. Each shop stocks only its specialty; Alchemists include health/mana potions and favor eligible owned consumables. See [shop rules, save behavior and validation](docs/specialist-shops.md).
 
 ## The Dagger Update
 

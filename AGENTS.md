@@ -15,7 +15,7 @@ Repository: ManiacGames/realmpack. Production is GitHub Pages at https://maniacg
 - For healing or consumable activation changes, also run `node game/tests/test-healing-consumables.cjs`.
 - For stash capacity or item acquisition changes, also run `node game/tests/test-stash-capacity.cjs` and `node game/tests/test-provisions.cjs`.
 - For item selection, dragging, hovering or inspection controls, also run `node game/tests/test-inventory-interaction.cjs`.
-- For shop, reward, or item inspection UI changes, run `node game/tests/test-shop-layout.cjs`.
+- For shop, reward, or item inspection UI changes, run `node game/tests/test-shop-layout.cjs` and `node game/tests/test-shop-specialists.cjs`.
 - For event costs, trading, sacrifices, item upgrades or selling, run `node game/tests/test-event-trades.cjs`.
 - For dungeon tuning, portal selection, enemy profiles or saved-route migration, run `node game/tests/test-dungeon-difficulty.cjs` and review `docs/dungeon-balance.md`.
 - Preserve encounter IDs, combat tuning, save compatibility, existing pixel art, and the ChronoType font unless the task specifically changes them. Prefer actual matching sprites over controllers, helper objects, scenery, or an unrelated fallback.
