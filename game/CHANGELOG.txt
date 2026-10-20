@@ -1,3 +1,7 @@
+RealmPack 0.22.1
+- Evergreen minimum cooldown: 0.8s; Shiny minimum: 0.72s.
+- Toxic Toad: 6 poison every 2s, with no direct damage.
+
 RealmPack 0.22.0 — The Dagger Update
 - Applied all 55 requested entries, including upgraded Shiny versions and save-safe exclusions.
 - New shot patterns, miss/crit rolls, statuses, ward bypass, ramps, summons and immunity windows.

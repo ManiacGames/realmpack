@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.22.1 — 2026-10-20
+
+- Raised Evergreen Dagger’s final cooldown floor from 0.5s to 0.8s; the Shiny floor rises proportionally from 0.45s to 0.72s. Haste and upgrades cannot bypass these floors.
+- Reduced Toxic Toad from 10 to 6 poison per activation, keeping its two-second cooldown, no direct damage, and existing poison cap/decay.
+- Validation: cooldown ramp/reset/floor and Shiny checks, exact poison output, targeted seeded comparisons, JavaScript syntax and the game regression suite.
+
 ## 0.22.0 — 2026-10-20
 
 - Implemented all 55 entries from The Dagger Update: 50 explicit dagger recipes, ten upgraded Shiny counterparts, four temporarily unobtainable items and removal of the redundant Poison Fang catalogue entry. Existing disabled-item saves remain usable; duplicate Fang saves migrate without losing upgrades.

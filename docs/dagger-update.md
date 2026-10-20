@@ -1,4 +1,6 @@
-# The Dagger Update — 0.22.0
+# The Dagger Update — 0.22.1
+
+**0.22.1 follow-up:** Evergreen now has a 0.8s minimum cooldown (Shiny 0.72s), and Toxic Toad applies 6 poison every 2s with no direct damage. Existing ramp steps, starting cooldowns and poison limits are preserved.
 
 Implemented all **55 requested entries** from the supplied “The Dagger Update.md”. Fifty named recipes are explicitly tuned, ten matching Shiny definitions inherit upgraded versions, four named items are temporarily unobtainable, and one duplicate Poison Fang definition is removed from new acquisition and catalogue results. Original IDs remain defined for save compatibility.
 
@@ -9,7 +11,7 @@ The authoritative override is `game/dagger-update.js`, loaded after the general 
 - “100% slower” and “2× slower” mean double the base cooldown. Blade of Fates therefore uses 24 damage / 2.46s after rounding 13 × 1.85; Boomerang/Hatchling use 26 / 2.46s.
 - Archangel's Judgement fires 3 × 4 damage; Bounty Hunter's Dagger fires 3 × 2. Fractal fires two full-damage 13-point shots, each with an independent 50% miss chance. Other crossing-cut descriptions retain their previous shared-total behavior: Corruption Cutter is six total damage split across two cuts, as are Dueling, Neo Dueling and Sweettreats.
 - Low and medium bleed are 1 and 2 stacks per use. The existing 24-stack cap and one-stack-per-second decay remain. Very-low and medium companions have power 1 and 3 respectively, last six seconds, and use the existing eight-companion cap.
-- Eternal Chaos gains its +2 once, beginning with activation six; it is not an indefinitely stacking bonus. Evergreen’s ramp resets per battle and has a final 0.5s floor after modifiers. Its Shiny floor is 0.45s.
+- Eternal Chaos gains its +2 once, beginning with activation six; it is not an indefinitely stacking bonus. Evergreen’s ramp resets per battle and has a final 0.8s floor after modifiers. Its Shiny floor is 0.72s.
 - Chicken Leg grants +5 maximum health per defeated enemy wave while packed, without healing. Each copy contributes, once per wave. Maximum health persists for the run. Stashed copies do not count.
 - Heartguard protects against all direct attacks during its one-second window, with ordinary damage-over-time still applying. Copies refresh expiration rather than adding duration. This is separate from the older one-attack protection on Seal of Blasphemous Prayer.
 - Rosebite grants +2 gold and heals 2 on entering a rest, shop or event room while packed. The reward is saved once per room and does not stack across copies. Reopening or reloading an event does not repeat it.
@@ -42,7 +44,7 @@ The supplied spelling “Archangel's Judgememt” maps to **Archangel's Judgemen
 | Dirk of Cronus | Existing combat stats; +1 mana every use |
 | Dual Pops | T13 Moonstone Blades stats |
 | Dueling Daggers | Updated Cutter stats; power-1 summon every fifth use |
-| Evergreen Dagger | 3s initial cooldown, −0.5s per use, 0.5s floor |
+| Evergreen Dagger | 3s initial cooldown, −0.5s per use, 0.8s floor |
 | Fractal Blades | Two full-damage shots; independent 50% misses |
 | Groovy Mango; Mister Mango | 9/10 damage; haste gives +50% recharge |
 | Heart Jewel Blades; Heartfind Dagger | T11 reference stats; 1s direct immunity every tenth use |
@@ -68,7 +70,7 @@ The supplied spelling “Archangel's Judgememt” maps to **Archangel's Judgemen
 | Symbiotic Ripper | T11 stats + 1 bleed |
 | The Right Hook | 12 damage +1 per packed Vitality-named item |
 | Throwing Knives | 10 damage / 1s |
-| Toxic Toad | 10 poison / 2s, no direct damage |
+| Toxic Toad | 6 poison / 2s, no direct damage |
 | Toxin Tooth | 10 damage + 1 poison |
 | Toy Knife | 1 damage, block, healing, mana, dodge and bleed per use |
 | Void Blades | Double damage in The Void |
@@ -83,7 +85,7 @@ Run `node scripts/benchmark-daggers.cjs --output /tmp/dagger-results.json` to re
 
 The unchanged 19-class tiered benchmark also runs before/after: `node scripts/benchmark-balance.cjs`. Results for that fixture must remain separate from the dagger-specific balance findings.
 
-### Measured findings
+### Historical measured findings — 0.22.0
 
 The before/after run includes **825 boss fights and 1,100 output trials per version** (1,650 boss fights and 2,200 output trials combined). All 1,995 ordinary tiered-build records matched exactly between versions. Machine-readable summaries for all 55 entries are in [dagger-balance-results.json](dagger-balance-results.json). Disabled items are simulated for historical comparison but remain unavailable to players.
 
@@ -104,7 +106,7 @@ The 15 boss trials are five seeds against each of three deliberately different d
 
 **Recommendations, not additional changes:**
 
-- **Evergreen is a strong long-fight weapon.** Its output rose about 118%; in the benchmark it averaged 105 uses instead of 48. A future floor of 0.8–1.0 seconds would soften the late-fight advantage while preserving the ramp. The requested 0.5-second floor remains in this release.
+- **Evergreen is a strong long-fight weapon.** Its output rose about 118%; in the benchmark it averaged 105 uses instead of 48. A future floor of 0.8–1.0 seconds would soften the late-fight advantage while preserving the ramp. This describes 0.22.0; the 0.22.1 follow-up adopts the requested 0.8-second floor.
 - **Chain Dagger’s “medium” bleed is more than a small damage rider.** Applying two stacks per use outpaces the one-stack-per-second decay, building toward the 24-stack cap. Its 60-second output rose about 108%. Applying two bleed every other use is a possible conservative follow-up, rather than treating two bleed as two immediate damage.
 - **Toxic Toad is now a powerful sustained poison source**, about 82% more output in this fixture despite removing direct damage. It reaches the existing poison cap rapidly. Its actual damage remains subject to status decay and boss/elite resistance.
 - **Bounty Hunter and Corruption Cutter are substantially weaker as primary weapons**: roughly −44% and −31% output, both going from five clears to zero in this fixed loadout. If those are meant to remain main weapons, consider Bounty at 3 per projectile and Cutter at 8 total damage. Dueling/Neo/Sweettreats partially compensate for their shared low primary damage with summons/healing.
@@ -116,3 +118,16 @@ The 15 boss trials are five seeds against each of three deliberately different d
 Requested values were kept rather than silently tuning them to equal clear counts. All mechanical assertions, independent miss/crit probability checks and existing regression tests passed. This fixture does not establish complete class/build parity, full-run economy balance or optimal use of the new synergies.
 
 A separate three-room actual-tick support check packed a T13 dagger, Chicken Leg, Toy Knife, Ring of Magic and Healing Tome. It won all three Pirate Cave fights, gained 15 maximum HP without the Chicken reward healing, and retained the growth between rooms. This confirms the utility role works alongside a main weapon; it is not a general full-expedition balance result.
+
+### 0.22.1 follow-up checks
+
+Using the same 20 seeded 60-second output trials and 15 boss trials per item:
+
+| Item | 0.22.0 output | 0.22.1 output | Boss wins /15 |
+| --- | ---: | ---: | ---: |
+| Evergreen Dagger | 27.95 | 17.72 | 5 → 5 |
+| Toxic Toad | 23.32 | 22.37 | 5 → 5 |
+
+These include the Rogue passive, as in the original fixture. Evergreen's raised floor reduced sustained output by about 37%. Toxic Toad's lower application slows its build-up, but still reaches the existing 24-stack poison cap; the long-fight output change is consequently much smaller than the 40% reduction in poison per use. No additional poison-rule changes were applied.
+
+A separate **Chain Dagger proposal, not applied** retained 10 damage and 2 bleed per hit but allowed it to add bleed only while total enemy bleed was below 6, stopping at 6. It never removed or reduced higher bleed from other sources. Twenty seeded output trials averaged 15.82 rather than 26.67 (about 41% less), retaining a bleed specialization without independently filling the global 24-stack cap. An 8-stack ceiling would be a possible Shiny counterpart; that Shiny proposal has not been benchmarked.

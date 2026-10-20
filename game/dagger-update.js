@@ -32,7 +32,7 @@
  tune('Dirk of Cronus',{}, {extraMana:1},'Gain 1 mana on every use, replacing the former every-fourth-use mana proc.');
  tune('Dual Pops',{ref:'Moonstone Blades'},{},'Same damage and cooldown as T13 Moonstone Blades.');
  tune('Dueling Daggers',{amount:6,cd:snap('Corruption Cutter').cd},{shots:2,summonEvery:5,summonPower:1,summonDuration:6},'Two weaving cuts share 6 total damage. Every fifth use summons a 1-damage companion for 6s (existing eight-summon cap).');
- tune('Evergreen Dagger',{cd:3},{rampStep:.5,rampFloor:.5},'Starts at 3s cooldown; each use reduces its base cooldown by 0.5s, to a final minimum of 0.5s even with haste/upgrades. Resets each battle.');
+ tune('Evergreen Dagger',{cd:3},{rampStep:.5,rampFloor:.8},'Starts at 3s cooldown; each use reduces its base cooldown by 0.5s, to a final minimum of 0.8s even with haste/upgrades. Resets each battle.');
  tune('Fractal Blades',{}, {shots:2,perShot:true,missChance:.5},'Fire two full-damage shots; each independently has a 50% chance to miss. Flat power is split across the two shots.');
  tune('Groovy Mango',{amount:9},{hasteRate:.5},'Haste grants this item +50% recharge instead of +25%. Does not stack with class haste.');
  tune('Hatchling Blades',{ref:'Boomerang Blades',amount:snap('Boomerang Blades').amount*2,cd:snap('Boomerang Blades').cd*2},{},'Same damage and cooldown as the updated Boomerang Blades.');
@@ -63,7 +63,7 @@
  tune('Symbiotic Ripper',{ref:11},{bleed:1},'T11 dagger stats plus 1 bleed per use.');
  tune('The Right Hook',{amount:12},{vitalityBonus:1},'Gain +1 primary damage for each packed item whose name contains Vitality. Stashed items do not count.');
  tune('Throwing Knives',{amount:10,cd:1},{},'10 base damage every 1s.');
- tune('Toxic Toad',{effect:'poison',amount:10,cd:2},{},'Apply 10 poison every 2s; no direct damage. Existing poison cap and decay apply.');
+ tune('Toxic Toad',{effect:'poison',amount:6,cd:2},{},'Apply 6 poison every 2s; no direct damage. Existing poison cap and decay apply.');
  tune('Toxin Tooth',{amount:10},{poison:1},'10 base damage plus 1 poison per use.');
  tune('Toy Knife',{amount:1},{extraBlock:1,extraHeal:1,extraMana:1,extraDodge:1,bleed:1},'Each use: 1 damage, 1 block, 1 healing, 1 mana, 1 dodge charge and 1 bleed. Existing dodge cap/no-consecutive-dodge rule applies.');
  tune('Void Blades',{}, {dungeonName:'The Void',dungeonMultiplier:2},'Double primary damage against every enemy in The Void.');
@@ -76,7 +76,7 @@
   for(const key of ['bleed','poison','extraMana','extraHeal','extraBlock','bonusHit','summonPower','ringBonus','vitalityBonus','afterBonus','killMax'])if(m[key])m[key]=Math.ceil(m[key]*1.1);
   for(const key of ['duration','localHaste','invulnDuration'])if(m[key])m[key]=round(m[key]*1.2);
   if(m.pierce)m.pierce=Math.min(1,round(m.pierce+.1));if(m.missChance)m.missChance=Math.max(0,m.missChance-.05);if(m.hasteRate)m.hasteRate=.55;
-  if(m.rampStep){m.rampStep=.55;m.rampFloor=.45}if(m.merchantValue)m.merchantValue=Math.ceil(m.merchantValue*1.1);
+  if(m.rampStep){m.rampStep=.55;m.rampFloor=.72}if(m.merchantValue)m.merchantValue=Math.ceil(m.merchantValue*1.1);
   m.text=daggerRuleText(d);
  }
  for(const d of items.filter(d=>d.daggerUpdate&&!d.isShiny))d.mechanic.text=daggerRuleText(d);
