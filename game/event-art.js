@@ -1,6 +1,7 @@
 /* Native sprite compositions for noncombat encounters; no random fallback art. */
 'use strict';
 const EVENT_ART={
+ provisioner:{scene:'market',actor:'priest',props:['Health Potion','Magic Potion'],title:'A provisioner stocks matching potions for adventurers'},
  runeforge:{scene:'forge',actor:'mystic',props:['Blacksmith Hammer','Necrotic Skull','Ring of Magic'],title:'A mystic consumes an offering to empower another relic'},
  merchant:{scene:'market',actor:'rogue',props:['Iron Shield','Ring of Attack','Magic Potion'],title:'A salvage merchant buys unwanted equipment'},
  enchanter:{scene:'arcane',actor:'mystic',props:['Stasis Orb','Ring of Magic'],title:'A mystic enchants a glowing relic'},

@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.21.4 — 2026-10-20
+
+- Added the Supply Caravan: choose an owned consumable stack and buy one or two exact matching copies, capped at five. One purchase per visit; each copy costs 60% of its item price, rounded up, with an eight-gold minimum.
+- Guaranteed a Supply Caravan at depth 3 of newly generated first acts; it can also appear among random events. Existing generated routes remain intact.
+- Restocking preserves upgrades, works on packed or stashed stacks even with all nine stash slots occupied, and previews counts and costs before purchase.
+- Validation: restock accounting, exact variants, stack/stash limits, invalid/stale/repeated orders, event art, route generation and existing game regression checks.
+
 ## 0.21.3 — 2026-10-20
 
 - Kept noncombat rooms accessible for saved stashes above the new nine-slot limit, allowing excess gear to be sold. Only starting combat requires the stash to be reduced to nine slots.

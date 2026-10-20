@@ -1,3 +1,9 @@
+RealmPack 0.21.4
+- Supply Caravan sells one or two matching consumable copies for an owned stack, up to five.
+- One purchase per visit; 60% of item price per copy, rounded up, minimum eight gold.
+- Guaranteed at depth 3 of new runs; also available as a random event.
+- Preserves upgrades and needs no extra stash slot, including at nine-slot capacity.
+
 RealmPack 0.21.3
 - Older stashes above nine slots can still visit merchants to sell excess items.
 - Combat requires nine or fewer stash slots; no saved items are deleted.
