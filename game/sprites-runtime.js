@@ -50,9 +50,9 @@ function renderBackpack(){
   updateStackBadge(el,i);el.classList.toggle('selected',selected===i.id);el.classList.toggle('shiny',!!d.isShiny);el.classList.toggle('offclass-item',isOffClass(d));el.dataset.enchanted=String(itemEnchants(i).length);
   el.style.cssText=`left:calc(${i.x} * (var(--cell) + 5px));top:calc(${i.y} * (var(--cell) + 5px));width:calc(${w} * var(--cell) + ${(w-1)*5}px);height:calc(${h} * var(--cell) + ${(h-1)*5}px);--ic:${d.color}`;
   el.title=(itemEnchants(i).length?enchantGrade(i)+' enchanted · ':'')+(isOffClass(d)?'OFF-CLASS: +50% cooldown'+(d.group==='ability'?', +1 mana':'')+' · ':'')+d.name+(d.once?' · '+stackCount(i)+'/5 copies':'')+' — '+describe(d)+(d.mechanic?' · '+d.mechanic.title+': '+d.mechanic.text:'');el.draggable=false;
-  el.onclick=e=>{e.stopPropagation();if(!inventorySuppressClick){const source=findSelected();if(source&&source.id!==i.id&&mergeStacks(source,i))return;if(!inventoryIntent||inventoryIntent.id!==i.id)inventoryPick(i);selectItem(i.id)}};
-  el.onkeydown=e=>{if(e.key==='Enter')selectItem(i.id)};
-  el.onpointerenter=()=>{effectHover=i.id;updateItemEffects()};el.onpointerleave=()=>{effectHover=null;updateItemEffects()};el.onfocus=()=>{effectHover=i.id;updateItemEffects()};el.onblur=()=>{effectHover=null;updateItemEffects()};el.onpointerdown=e=>inventoryPointerDown(e,i);el.ondragstart=e=>e.preventDefault();
+  el.onclick=e=>{e.stopPropagation();inventoryClick(i)};
+  el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();if(!e.repeat)inventoryClick(i)}};
+  el.onpointerenter=()=>{inspectItem(i.id)};el.onpointerleave=()=>{effectHover=null;updateItemEffects()};el.onfocus=()=>{inspectItem(i.id)};el.onblur=()=>{effectHover=null;updateItemEffects()};el.onpointerdown=e=>inventoryPointerDown(e,i);el.ondragstart=e=>e.preventDefault();
  }
  const stash=document.getElementById('stash'),stashIds=new Set(s.stash.map(i=>String(i.id)));
  for(const el of stash.querySelectorAll('[data-item-id]'))if(!stashIds.has(el.dataset.itemId))el.remove();
@@ -62,7 +62,7 @@ function renderBackpack(){
   if(!button){button=document.createElement('button');button.dataset.itemId=String(i.id);stash.appendChild(button)}
   if(button.dataset.type!==i.type){button.innerHTML=art(i.type);button.dataset.type=i.type}
   updateStackBadge(button,i);button.classList.toggle('shiny',!!defs[i.type].isShiny);button.classList.toggle('offclass-item',isOffClass(defs[i.type]));button.title=defs[i.type].name+(defs[i.type].once?' · '+stackCount(i)+'/5 copies':'')+(itemEnchants(i).length?' · '+enchantGrade(i)+' enchantment':'');button.draggable=false;button.style.borderColor=selected===i.id?'#edc77b':defs[i.type].color;
-  button.onclick=()=>{if(!inventorySuppressClick){const source=findSelected();if(source&&source.id!==i.id&&mergeStacks(source,i))return;if(!inventoryIntent||inventoryIntent.id!==i.id)inventoryPick(i);selectItem(i.id)}};button.onpointerdown=e=>inventoryPointerDown(e,i,true);button.ondragstart=e=>e.preventDefault();
+  button.onclick=()=>{inventoryClick(i)};button.onpointerenter=()=>inspectItem(i.id);button.onfocus=()=>inspectItem(i.id);button.onpointerleave=()=>{effectHover=null;updateItemEffects()};button.onblur=()=>{effectHover=null;updateItemEffects()};button.onpointerdown=e=>inventoryPointerDown(e,i,true);button.ondragstart=e=>e.preventDefault();
  }
  if(!s.stash.length)stash.innerHTML='<small>Your stash is empty.</small>';
 }

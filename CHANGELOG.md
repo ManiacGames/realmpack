@@ -1,5 +1,13 @@
 # RealmPack changelog
 
+## 0.20.1 — 2026-10-20
+
+- Fixed repeat clicks failing to deselect backpack and stash items. Click selection now runs once; dragging starts only after the pointer moves past the drag threshold.
+- Hovering or focusing packed and stashed items now updates Item inspection without selecting or moving them. Details remain visible when moving into the inspection panel.
+- Discard and split actions target the item displayed in inspection, even when a different item is selected for placement. Live stack and signature counters follow the inspected item.
+- Preserved drag rotation, anchored placement, drop-to-release selection and stack merging. Added Space-key selection alongside Enter.
+- Validation: automated DOM interaction checks for mouse/touch/keyboard toggles, hover/focus, inspection actions, drag/rotation/release and Escape; JavaScript syntax and existing game regression checks. Browser layout was not visually verified.
+
 ## 0.20.0 — 2026-10-20
 
 - Added explicit difficulty scaling for all 35 dungeons: Beginner, Standard, Advanced, Exaltation and Apex Exalt. Previously dungeon identity did not affect base stats.

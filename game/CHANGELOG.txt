@@ -1,3 +1,9 @@
+RealmPack 0.20.1
+- Repeat clicks reliably deselect backpack and stash items.
+- Hover or focus items to inspect without selecting; details stay visible after hover.
+- Inspection actions and live counters use the displayed item.
+- Preserved drag/drop/rotation and stack merging; added Space-key selection.
+
 RealmPack 0.20.0
 - Added five explicit dungeon difficulty tiers with HP, damage, attack-rate and gold scaling.
 - Added skull/text markers to dungeon choices, the current dungeon, the map and bestiary.

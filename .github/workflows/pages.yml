@@ -33,6 +33,7 @@ jobs:
           node game/tests/test-stacks-adjacency.cjs
           node game/tests/test-event-art.cjs
           node game/tests/test-shop-layout.cjs
+          node game/tests/test-inventory-interaction.cjs
           node game/tests/test-event-trades.cjs
           node game/tests/test-dungeon-difficulty.cjs
       - uses: actions/configure-pages@v5
