@@ -1,3 +1,7 @@
+RealmPack 0.21.3
+- Older stashes above nine slots can still visit merchants to sell excess items.
+- Combat requires nine or fewer stash slots; no saved items are deleted.
+
 RealmPack 0.21.2
 - Stash capacity is now nine slots in all modes; consumable stacks count as one slot.
 - Added a 3×3 slot display and used/9 counter.

@@ -1,5 +1,10 @@
 # RealmPack changelog
 
+## 0.21.3 — 2026-10-20
+
+- Kept noncombat rooms accessible for saved stashes above the new nine-slot limit, allowing excess gear to be sold. Only starting combat requires the stash to be reduced to nine slots.
+- Validation: over-cap shop entry, normal full-stash guards, preserved legacy items and legal battle entry.
+
 ## 0.21.2 — 2026-10-20
 
 - Limited Travel stash to nine item slots in both normal runs and Sandbox. A consumable stack still holds up to five copies in one slot. Added nine visible slots and a used/9 counter.
