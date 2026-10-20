@@ -34,6 +34,7 @@ jobs:
           node game/tests/test-event-art.cjs
           node game/tests/test-shop-layout.cjs
           node game/tests/test-inventory-interaction.cjs
+          node game/tests/test-stash-capacity.cjs
           node game/tests/test-healing-consumables.cjs
           node game/tests/test-local-haste.cjs
           node game/tests/test-item-progression.cjs

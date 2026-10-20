@@ -59,5 +59,5 @@ assert(evaluate('s.stash.includes(dragItem)&&!s.items.includes(dragItem)&&select
 const returnedButton=doc.getElementById('stash').querySelector('[data-item-id="'+evaluate('dragItem.id')+'"]');
 returnedButton.onpointerdown(event(650,60));handlers.pointermove(event(90,90));handlers.pointerup(event(90,90));
 assert(evaluate('s.items.includes(dragItem)&&!s.stash.includes(dragItem)&&selected===null&&inventoryIntent===null'),'Stash-to-backpack drop failed');
-assert(doc.getElementById('stashCount').textContent===evaluate("s.stash.length+' slot'+(s.stash.length===1?'':'s')"),'Stash slot count differs from inventory');
+assert(doc.getElementById('stashCount').textContent===evaluate("s.stash.length+' / '+STASH_LIMIT"),'Stash slot count differs from inventory');
 console.log('PASS: occupied-pack cancellation for packed/stashed sources, click/touch/keyboard toggle, packed/stash hover and focus, explicit inspection actions, pointer handlers, threshold preview, R while dragging, anchored release, Escape cleanup, bidirectional stash drops and slot counts');

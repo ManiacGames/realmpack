@@ -1,3 +1,9 @@
+RealmPack 0.21.2
+- Stash capacity is now nine slots in all modes; consumable stacks count as one slot.
+- Added a 3×3 slot display and used/9 counter.
+- Full-stash actions preserve items, gold and event costs; compatible stacks can still merge.
+- Existing excess items are preserved, but must be reduced before the next battle.
+
 RealmPack 0.21.1
 - Travel stash now sits beside the backpack with a clear divider; narrow layouts stack them.
 - Added stash slot counts and made the entire stash pane a drag target.

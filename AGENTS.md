@@ -11,6 +11,7 @@ Repository: ManiacGames/realmpack. Production is GitHub Pages at https://maniacg
 - For item recipes, tier progression or class passives, also run `node game/tests/test-item-progression.cjs` and `node game/tests/test-class-reworks.cjs`. Use `node scripts/benchmark-balance.cjs` to compare all 19 classes with legal tiered builds before major tuning; preserve its build assumptions when comparing releases.
 - For haste, cooldown or speed-effect changes, also run `node game/tests/test-local-haste.cjs`.
 - For healing or consumable activation changes, also run `node game/tests/test-healing-consumables.cjs`.
+- For stash capacity or item acquisition changes, also run `node game/tests/test-stash-capacity.cjs`.
 - For item selection, dragging, hovering or inspection controls, also run `node game/tests/test-inventory-interaction.cjs`.
 - For shop, reward, or item inspection UI changes, run `node game/tests/test-shop-layout.cjs`.
 - For event costs, trading, sacrifices, item upgrades or selling, run `node game/tests/test-event-trades.cjs`.

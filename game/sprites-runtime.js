@@ -54,9 +54,10 @@ function renderBackpack(){
   el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();if(!e.repeat)inventoryClick(i)}};
   el.onpointerenter=()=>{inspectItem(i.id)};el.onpointerleave=()=>{effectHover=null;updateItemEffects()};el.onfocus=()=>{inspectItem(i.id)};el.onblur=()=>{effectHover=null;updateItemEffects()};el.onpointerdown=e=>inventoryPointerDown(e,i);el.ondragstart=e=>e.preventDefault();
  }
- const count=document.getElementById('stashCount');if(count){count.textContent=s.stash.length+' slot'+(s.stash.length===1?'':'s');count.title=s.practice?'Sandbox catalogue additions stop at 80 stash slots. Other transfers can exceed this.':'No stash capacity limit in normal runs.'}
+ const count=document.getElementById('stashCount');if(count){count.textContent=s.stash.length+' / '+STASH_LIMIT;count.title=s.stash.length>STASH_LIMIT?'Equip, sell or discard excess saved items before battle.':'Nine stash slots; up to five copies per consumable stack.'}
  const stash=document.getElementById('stash'),stashIds=new Set(s.stash.map(i=>String(i.id)));
  for(const el of stash.querySelectorAll('[data-item-id]'))if(!stashIds.has(el.dataset.itemId))el.remove();
+ for(const el of stash.querySelectorAll('.stash-empty-slot'))el.remove();
  const empty=stash.querySelector('small');if(empty)empty.remove();
  for(const i of s.stash){
   let button=stash.querySelector(`[data-item-id="${i.id}"]`);
@@ -65,5 +66,5 @@ function renderBackpack(){
   updateStackBadge(button,i);button.classList.toggle('shiny',!!defs[i.type].isShiny);button.classList.toggle('offclass-item',isOffClass(defs[i.type]));button.title=defs[i.type].name+(defs[i.type].once?' · '+stackCount(i)+'/5 copies':'')+(itemEnchants(i).length?' · '+enchantGrade(i)+' enchantment':'');button.draggable=false;button.style.borderColor=selected===i.id?'#edc77b':defs[i.type].color;
   button.onclick=()=>{inventoryClick(i)};button.onpointerenter=()=>inspectItem(i.id);button.onfocus=()=>inspectItem(i.id);button.onpointerleave=()=>{effectHover=null;updateItemEffects()};button.onblur=()=>{effectHover=null;updateItemEffects()};button.onpointerdown=e=>inventoryPointerDown(e,i,true);button.ondragstart=e=>e.preventDefault();
  }
- if(!s.stash.length)stash.innerHTML='<small>Your stash is empty.</small>';
+ for(let n=s.stash.length;n<STASH_LIMIT;n++){const slot=document.createElement('span');slot.className='stash-empty-slot';slot.setAttribute('aria-hidden','true');stash.appendChild(slot)}
 }

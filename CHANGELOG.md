@@ -1,5 +1,14 @@
 # RealmPack changelog
 
+## 0.21.2 — 2026-10-20
+
+- Limited Travel stash to nine item slots in both normal runs and Sandbox. A consumable stack still holds up to five copies in one slot. Added nine visible slots and a used/9 counter.
+- Applied the cap to purchases, rewards, event grants/clones/exchanges, Sandbox additions, splitting and backpack transfers. Compatible stacks can merge at capacity, with failed partial merges leaving both quantities unchanged.
+- Blocked purchases and paid event choices before charging costs when their item cannot fit. Blocked loot choices remain available until another reward or the health alternative is chosen. Lottery capacity checks do not expose their predetermined result.
+- Preserved existing saves above the cap without deleting items. Those stashes must be reduced to nine or fewer slots before battle; they cannot add new slots while over capacity.
+- Corrected stack compatibility to distinguish primary infusions, and configured cloned upgrades before considering stack merges.
+- Validation: nine-slot boundary, atomic merges, upgrade variants, transfers, split guards, purchase/reward accounting, event costs and freed slots, lottery guards, Sandbox, legacy over-cap handling and existing regression checks.
+
 ## 0.21.1 — 2026-10-20
 
 - Moved Travel stash beside Your backpack inside one inventory workspace, with a clear vertical divider and aligned headings. Narrow layouts place the stash immediately below the backpack with a horizontal divider.
