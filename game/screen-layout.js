@@ -6,7 +6,7 @@ function screenView(view){hideSpriteDetails();document.documentElement.dataset.p
 function screenTab(tab){document.querySelectorAll('[data-info-tab]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.infoTab===tab)));document.querySelectorAll('[data-info-pane]').forEach(p=>{p.hidden=p.dataset.infoPane!==tab});screenReflow()}
 function screenFocus(){const el=document.activeElement;return el&&el!==document.body?{el,start:el.selectionStart,end:el.selectionEnd}:null}
 function screenRestoreFocus(f){if(!f?.el.isConnected||!f.el.getClientRects().length)return;f.el.focus({preventScroll:true});if(typeof f.start==='number'&&f.el.setSelectionRange)f.el.setSelectionRange(f.start,f.end)}
-function screenReflow(all=true){if(all)for(const pager of screenPagers)pager.dirty=true;cancelAnimationFrame(screenPagerFrame);screenPagerFrame=requestAnimationFrame(()=>{const focus=screenFocus();for(const pager of screenPagers){if(!pager.host.isConnected){screenPagers.delete(pager);continue}if(pager.dirty&&pager.host.getBoundingClientRect().height){screenPaginate(pager);pager.dirty=false}}screenRestoreFocus(focus)})}
+function screenReflow(all=true){if(all)for(const pager of screenPagers)pager.dirty=true;cancelAnimationFrame(screenPagerFrame);screenPagerFrame=requestAnimationFrame(()=>{const focus=screenFocus(),reference=document.querySelector('.reference-modal');if(reference)sizeReferenceBrowser(reference);for(const pager of screenPagers){if(!pager.host.isConnected){screenPagers.delete(pager);continue}if(pager.dirty&&pager.host.getBoundingClientRect().height){screenPaginate(pager);pager.dirty=false}}screenRestoreFocus(focus)})}
 function screenPager(host){
  if(!host||host.dataset.screenPaged)return;
  for(const old of screenPagers)if(old.host===host)screenPagers.delete(old);
@@ -35,6 +35,7 @@ function screenPaginate(p){
 function screenShowPage(p){const visible=new Set(p.pages[p.page]||[]);for(const n of p.nodes){if(visible.has(n))n.removeAttribute('data-screen-hidden');else n.setAttribute('data-screen-hidden','')}p.label.textContent=(p.page+1)+' / '+p.pages.length;p.prev.disabled=p.page===0;p.next.disabled=p.page>=p.pages.length-1;p.nav.classList.toggle('single-page',p.pages.length===1)}
 function screenFitModal(){
  const focus=screenFocus(),modal=document.querySelector('#overlay .modal');if(!modal||modal.dataset.screenFit)return;modal.dataset.screenFit='true';modal.classList.add('screen-modal');
+ if(modal.querySelector('.reference-grid')){fitReferenceBrowser(modal);return}
  if(modalKind==='runmap'){fitSingleRunMap(modal);return}
  if(modal.classList.contains('classes-modal')){modal.classList.add('screen-class-modal');return}
  for(const node of modal.querySelectorAll('.map-node,.map-depth')){const y=parseFloat(node.style.top);node.style.top=(y/860*100)+'%'}
@@ -45,6 +46,15 @@ function screenFitModal(){
  const footer=last&&(last.matches('button,.shop-footer,.loot-footer,.loot-inspect-footer,.pagination,.catalogue-note')||last.querySelector('button')&&last.children.length<4&&!last.matches('.choices,.class-grid,.shop-offers,.loot-grid'))?last:null;
  const description=nodes[start-1];if(description?.tagName==='P'&&description.getBoundingClientRect().height>52)body.append(description);
  for(const node of rest)if(node!==footer)body.append(node);modal.insertBefore(body,footer);screenPager(body);screenRestoreFocus(focus);
+}
+function fitReferenceBrowser(modal){
+ modal.classList.add('reference-modal');document.getElementById('toast').style.display='none';const heading=document.createElement('div');heading.className='reference-heading';for(const node of [...modal.children].slice(0,3))heading.append(node);modal.prepend(heading);sizeReferenceBrowser(modal)
+}
+function sizeReferenceBrowser(modal){
+ const grid=modal.querySelector('.reference-grid');if(!grid)return;const kind=grid.dataset.reference,r=grid.getBoundingClientRect();if(r.height<40||r.width<40)return;
+ const columns=Math.max(1,Math.min(5,Math.floor((r.width+10)/270))),rows=Math.max(1,Math.floor((r.height+10)/(document.documentElement.dataset.largeText==='true'?188:154))),size=columns*rows;
+ grid.style.setProperty('--reference-cols',columns);grid.style.setProperty('--reference-rows',rows);
+ if(referenceSizes[kind]!==size){const oldSize=referenceSizes[kind],page=kind==='catalogue'?catalogueState.page:bestiaryPage;referenceSizes[kind]=size;const next=Math.floor(page*oldSize/size);if(kind==='catalogue'){catalogueState.page=next;drawCatalogue()}else{bestiaryPage=next;drawBestiary()}}
 }
 function fitSingleRunMap(modal){
  modal.classList.add('run-map-modal');
@@ -113,6 +123,8 @@ function initScreenLayout(){
  const hints=document.createElement('button');hints.textContent='Controls & synergies';hints.onclick=showHelp;document.querySelector('.pack-pane .invfoot>div').append(hints);
  const detail=document.getElementById('detail'),log=document.getElementById('log');
  const watch=host=>{let observer;const refresh=()=>{observer.disconnect();delete host.dataset.screenPaged;screenPager(host);observer.observe(host,{childList:true});};observer=new MutationObserver(refresh);refresh()};watch(detail);watch(log);
+ document.addEventListener('pointerdown',e=>{const filters=document.getElementById('referenceFilters'),toggle=document.getElementById('referenceFilterToggle');if(referenceFiltersOpen&&innerWidth<=700&&filters&&!filters.contains(e.target)&&!toggle.contains(e.target))toggleReferenceFilters()});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&(modalKind==='catalogueinspect'||modalKind==='bestiaryinspect')){e.preventDefault();e.stopImmediatePropagation();returnReference(modalKind==='catalogueinspect'?'catalogue':'bestiary');return}if(e.key==='Escape'&&referenceFiltersOpen&&innerWidth<=700&&document.querySelector('.reference-modal')){e.preventDefault();e.stopImmediatePropagation();toggleReferenceFilters();document.getElementById('referenceFilterToggle')?.focus()}},true);
  document.addEventListener('toggle',()=>screenReflow(),true);
  new MutationObserver(()=>{if(document.querySelector('#overlay .modal'))hideSpriteDetails();screenFitModal();screenReflow(false)}).observe(document.getElementById('overlay'),{childList:true});
  new ResizeObserver(screenReflow).observe(document.documentElement);window.addEventListener('resize',screenReflow);

@@ -1,3 +1,10 @@
+RealmPack 0.25.0
+- Rebuilt compendium/bestiary with one pager, direct page jumps and visible result ranges.
+- Dense responsive cards; search and filters stay available.
+- Added bestiary dungeon/role filters and clear reset/empty states.
+- Inspect shows full details and returns to the same result page.
+- Sandbox feedback stays inline without covering page controls.
+
 RealmPack 0.24.5
 - Run Map shows the whole act on one sheet, without pages or scrolling.
 - Weathered parchment, worn edges, fold marks, faded contours and ink routes.

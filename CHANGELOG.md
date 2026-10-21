@@ -1,5 +1,13 @@
 # RealmPack changelog
 
+## 0.25.0 — 2026-10-21
+
+- Rebuilt the item compendium and realm bestiary as dedicated result browsers, removing the extra screen pager. Each has one Previous/Next control, a direct page-number field and an exact visible-result range.
+- Results use a dense grid sized to the viewport and text setting. Search and filters stay outside the grid; phone filters open in a compact panel with Done/Escape/outside dismissal.
+- Added dungeon and role filters to the bestiary, clear empty states and filter resets. Item and encounter cards offer Inspect for full details; Back or Escape preserves the search, filters, result page and card focus.
+- Kept Sandbox add/practice actions and acquisition guards; browser feedback appears inline instead of covering the pager.
+- Validation: both browsers at seven viewport sizes/two text modes, single-pager and card bounds, Next/Previous/jump, search focus, filters/reset/empty states, Inspect return, full ordered item/encounter traversal, Sandbox feedback/capacity/combat guards, practice action, workspace browser checks, syntax and game regressions.
+
 ## 0.24.5 — 2026-10-21
 
 - Made Run Map a single sheet: the act route, difficulty, legend and Return button are visible together without Previous/Next pages.

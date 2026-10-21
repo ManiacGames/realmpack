@@ -1,4 +1,4 @@
-# Viewport workspace — 0.24.5
+# Viewport workspace — 0.25.0
 
 The main playfield uses the viewport height, with a compact header/footer. Desktop keeps combat above the backpack, with the nine-slot stash adjacent and a tabbed information panel. Below 901px, Battle / Pack & stash / Details tabs share the available screen. On phones the stash is a single nine-slot row below the backpack. The mobile Menu retains catalogue, bestiary, guide, larger-text and restart access.
 
@@ -43,3 +43,11 @@ Run Map bypasses the content pager. Its title, difficulty, legend, complete act 
 The map uses CSS parchment tones, stained edges, a fold crease and faint contour lines with dark ink markers/routes. Current, visited, skipped and available nodes remain distinct by fill, border, opacity and state annotations. Available nodes retain keyboard focus and route selection.
 
 `node scripts/check-run-map.cjs` uses the optional browser setup to check eight viewport sizes at both text settings, every depth/node, absence of pagination or clipping, unchanged route/RNG, selection from the map, return behavior and the unrevealed-portal hint.
+
+## Dedicated compendium and bestiary
+
+These browsers bypass the generic screen pager. Each has one result pager with Previous, Next and a direct page-number field, plus an exact record range. Page size adapts to available grid width/height and text mode; ordinary 1366×768 windows display 12 cards, while roomy 1080p windows can display 25. Resizing keeps the previous starting record within the nearest new page.
+
+Search stays visible and preserves focus/caret while results rerender. Item type, class, version and signature filters remain available; the bestiary adds dungeon and role filters. On phones Filters opens a panel with Done, Escape and outside dismissal. Empty states offer reset. Compact cards show key summaries; Inspect retains the full item/encounter information, and Back or Escape restores the browser page, filters and card focus. Sandbox add/practice controls keep their existing guards; feedback is inline in the result summary.
+
+`node scripts/check-reference-browser.cjs` uses the optional browser setup to check both browsers across seven viewports and both text settings, sole pagination, card bounds, page navigation/jumps, typing/focus, filtering/reset/empty states, Inspect return, mobile filters, complete ordered traversal of every matching item/encounter, Sandbox capacity/combat guards, feedback and practice encounter loading.
