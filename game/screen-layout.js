@@ -52,7 +52,7 @@ function screenPaginateInspection(p,height){
 }
 function screenPaginate(p){
  p.nav.hidden=!!p.host.closest('.adaptive-modal')&&!p.host.closest('.adaptive-modal').classList.contains('dialog-paginated');const height=p.content.clientHeight;if(height<30)return;
- if(p.host.id==='detail'&&screenPaginateInspection(p,height))return;
+ if((p.host.id==='detail'||modalKind==='itemdetails')&&screenPaginateInspection(p,height))return;
  const units=[];
  const collect=(node,depth=0,reserve=0)=>{
   if(node.nodeType===3){if(!node.textContent.trim())return;const span=document.createElement('div');span.append(node);node=span}
@@ -86,14 +86,14 @@ function screenFitModal(){
  if(modalKind==='defeat'){modal.classList.add('defeat-modal');modal.setAttribute('role','dialog');modal.setAttribute('aria-modal','true');modal.querySelector('h1').id='defeatTitle';modal.setAttribute('aria-labelledby','defeatTitle');modal.querySelector('p').id='defeatCause';modal.setAttribute('aria-describedby','defeatCause');modal.addEventListener('keydown',e=>{if(e.key==='Tab'){e.preventDefault();modal.querySelector('.defeat-continue').focus()}});modal.querySelector('.defeat-continue')?.focus({preventScroll:true});return}
  if(modalKind==='enchanter'){modal.classList.add('enchanter-modal');return}
  if(modalKind==='help'){modal.classList.add('quick-help-modal');return}
- if(modalKind==='confirm'){modal.classList.add('compact-confirm-modal');modal.setAttribute('role','dialog');modal.setAttribute('aria-modal','true');modal.querySelector('h1').id='restartTitle';modal.setAttribute('aria-labelledby','restartTitle');modal.querySelector('p').id='restartDescription';modal.setAttribute('aria-describedby','restartDescription');modal.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const buttons=[...modal.querySelectorAll('button')],first=buttons[0],last=buttons[buttons.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}});modal.querySelector('#cancelRestart')?.focus({preventScroll:true});return}
+ if(modalKind==='confirm'){modal.classList.add('compact-confirm-modal');modal.setAttribute('role','dialog');modal.setAttribute('aria-modal','true');modal.querySelector('h1').id='restartTitle';modal.setAttribute('aria-labelledby','restartTitle');modal.querySelector('p').id='restartDescription';modal.setAttribute('aria-describedby','restartDescription');modal.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const buttons=[...modal.querySelectorAll('button')],first=buttons[0],last=buttons[buttons.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}});modal.querySelector('#cancelRestart,#cancelDiscard')?.focus({preventScroll:true});return}
  if(modal.querySelector('.reference-grid')){fitReferenceBrowser(modal);return}
  if(modalKind==='runmap'){fitSingleRunMap(modal);return}
  if(modal.classList.contains('classes-modal')){modal.classList.add('screen-class-modal');return}
  for(const node of modal.querySelectorAll('.map-node,.map-depth')){const y=parseFloat(node.style.top);node.style.top=(y/860*100)+'%'}
  for(const line of modal.querySelectorAll('.map-canvas line'))for(const key of ['y1','y2'])line.setAttribute(key,(parseFloat(line.getAttribute(key))/860*100)+'%');
  if(modalKind==='classconfirm'){modal.setAttribute('role','dialog');modal.setAttribute('aria-modal','true');modal.querySelector('h1').id='classStartTitle';modal.setAttribute('aria-labelledby','classStartTitle');modal.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const first=modal.querySelector('#cancelClassStart'),last=modal.querySelector('#confirmClassStart');if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}})}
- modal.classList.add('adaptive-modal');modal.dataset.dialogKind=modalKind;
+ modal.classList.add('adaptive-modal');if(modalKind==='itemdetails'){modal.classList.add('item-details-modal');modal.setAttribute('role','dialog');modal.setAttribute('aria-modal','true');modal.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();e.stopPropagation();closeItemDetails()}if(e.key==='Tab'){const buttons=[...modal.querySelectorAll('button,a[href]')].filter(b=>!b.disabled&&b.getClientRects().length),first=buttons[0],last=buttons[buttons.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}})}modal.dataset.dialogKind=modalKind;
  const nodes=[...modal.children],body=document.createElement('div');body.className='screen-modal-body';
  // Keep title, description and the final action/footer reachable on every page.
  const start=nodes.findIndex(n=>n.tagName==='H1')+2;const rest=nodes.slice(start),last=rest[rest.length-1];
@@ -102,7 +102,7 @@ function screenFitModal(){
  const actions=rest.filter(n=>n.tagName==='BUTTON'&&!(modalKind==='path'&&n.getAttribute('onclick')==='showRunMap()'));
  if(actions.length){const bar=document.createElement('div');bar.className='dialog-actions';for(const action of actions)bar.append(action);modal.append(bar);footer=bar}
  const description=nodes[start-1];if(description?.tagName==='P'&&description.getBoundingClientRect().height>52)body.append(description);
- for(const node of rest)if(node!==footer&&!actions.includes(node))body.append(node);modal.insertBefore(body,footer);screenPager(body);screenRestoreFocus(focus);if(modalKind==='classconfirm')modal.querySelector('#cancelClassStart')?.focus({preventScroll:true});
+ for(const node of rest)if(node!==footer&&!actions.includes(node))body.append(node);modal.insertBefore(body,footer);screenPager(body);screenRestoreFocus(focus);if(modalKind==='itemdetails')modal.querySelector('button.gold')?.focus({preventScroll:true});if(modalKind==='classconfirm')modal.querySelector('#cancelClassStart')?.focus({preventScroll:true});
 }
 // Measure all content before pagination so small dialogs never inherit an empty viewport.
 function sizeAdaptiveModal(p){
@@ -231,7 +231,7 @@ function initScreenLayout(){
  // Long explanations remain available in the guide, instead of occupying the playfield.
  const hints=document.createElement('button');hints.textContent='How to play';hints.onclick=showHelp;document.querySelector('.pack-pane .invfoot>div').append(hints);
  const detail=document.getElementById('detail'),log=document.getElementById('log');
- const watch=host=>{let observer;const refresh=()=>{observer.disconnect();delete host.dataset.screenPaged;screenPager(host);observer.observe(host,{childList:true});};observer=new MutationObserver(refresh);refresh()};watch(detail);watch(log);
+ const watch=host=>{let observer;const refresh=()=>{observer.disconnect();delete host.dataset.screenPaged;screenPager(host);observer.observe(host,{childList:true});};observer=new MutationObserver(refresh);refresh()};detail.classList.add('inspection-overview');watch(log);
  document.addEventListener('pointerdown',e=>{const filters=document.getElementById('referenceFilters'),toggle=document.getElementById('referenceFilterToggle');if(referenceFiltersOpen&&innerWidth<=700&&filters&&!filters.contains(e.target)&&!toggle.contains(e.target))toggleReferenceFilters()});
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&(modalKind==='catalogueinspect'||modalKind==='bestiaryinspect')){e.preventDefault();e.stopImmediatePropagation();returnReference(modalKind==='catalogueinspect'?'catalogue':'bestiary');return}if(e.key==='Escape'&&referenceFiltersOpen&&innerWidth<=700&&document.querySelector('.reference-modal')){e.preventDefault();e.stopImmediatePropagation();toggleReferenceFilters();document.getElementById('referenceFilterToggle')?.focus()}},true);
  document.addEventListener('toggle',()=>screenReflow(),true);

@@ -1,0 +1,34 @@
+/* A single, readable overview; long explanations open in Full details. */
+#detail.inspection-overview{container:inspection / size;display:flex;flex-direction:column;gap:10px}
+.inspection-overview>*{flex:none;min-width:0}
+.inspection-heading .detailtitle{margin:8px 0;align-items:center}
+.inspection-heading h2{margin:0;font-size:23px;line-height:1.1}
+.inspection-heading .stats{gap:12px;flex-wrap:wrap;margin:0}
+body .right .inspection-overview p{margin:0;font-size:17px;line-height:1.25}
+.inspection-description{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.inspection-affinity{color:#edc68c;background:#3a3022;padding:7px;border-left:2px solid #c49f69}
+.inspection-extras{display:flex;flex-direction:column;gap:8px;min-height:0;overflow:hidden}
+.inspection-adjacency{padding:8px;background:#1b2b2d;border-left:2px solid #819e9b}
+.inspection-adjacency>b{font-size:17px}
+body .right .inspection-adjacency p{margin-top:5px;font-size:16px}
+body #detail.inspection-overview .enchant-info{margin:0;padding:8px;font-size:17px}
+body #detail.inspection-overview .enchant-info b{font-size:17px}
+body #detail.inspection-overview .enchant-info p{margin:4px 0 0;font-size:17px!important;line-height:1.2!important}
+.inspection-signature{color:#d6b9f2}
+.inspection-stack{font-size:16px;line-height:1.2}.inspection-stack button{display:block;margin-top:5px;font-size:15px;padding:4px 8px}
+#detail #signatureMeter:empty{display:none}
+.inspection-actions{display:flex;gap:8px;margin-top:auto;padding-top:8px;border-top:1px solid #52614f}
+.inspection-actions button{font-size:17px;padding:5px 9px;min-height:32px}
+@container inspection (max-height:500px){.inspection-adjacency{display:none}}
+@container inspection (max-height:380px){.inspection-extras{display:none}.inspection-heading .detailtitle{margin:4px 0}.inspection-heading h2{font-size:21px}.inspection-heading .sprite-art{--sprite-size:32px}.inspection-actions{padding-top:5px}}
+@container inspection (max-height:260px){.inspection-affinity,#signatureMeter{display:none}.inspection-description{-webkit-line-clamp:2}.inspection-heading .detailtitle{margin:2px 0}.inspection-heading .sprite-art{--sprite-size:26px}.inspection-stack button{display:inline-block;margin:2px 0 0 8px}.inspection-actions button{font-size:16px;min-height:28px;padding:3px 7px}}
+/* The expanded inspection retains complete text, wiki links and connection rules. */
+.item-details-modal .screen-page-content{display:flex;flex-direction:column}
+.item-details-modal .screen-page-content>*{flex-shrink:0}
+.item-details-modal .detailtitle h2{font-size:24px;margin:4px 0}
+.item-details-modal .detailtitle .sprite-art{--sprite-size:40px}
+/* A deliberately small drop target, outside both item placement areas. */
+body .pack-pane .invfoot .inventory-trash{display:grid;place-items:center;flex:none;align-self:flex-end;width:34px;height:32px;padding:4px!important;color:#d8b2a4;border-color:#8e7063}
+.inventory-trash svg{pointer-events:none}
+body .pack-pane .invfoot .inventory-trash.trash-hover{color:#fff1e8;background:#873c30;border-color:#ffc6a8;outline:2px solid #ffc6a8;outline-offset:2px}
+.inventory-trash:disabled{opacity:.35}

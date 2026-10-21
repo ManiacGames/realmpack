@@ -1,3 +1,9 @@
+## 0.30.8 — 2026-10-22
+
+- Replaced the item inspector's page navigation with a compact, single-page overview. Full details opens complete effect descriptions, enchantments, placement rules and connections; smaller screens keep the overview focused on essential item stats.
+- Added a small trashcan beside the backpack controls. Drag packed or stashed items onto it to open the discard confirmation; canceling keeps the item or whole consumable stack intact. Discarding is blocked during combat.
+- Validation: 72 inspection views across six sizes and larger text, complete expanded inspection text and page fit, 102 general viewport checks, discard/dialog checks, drag performance checks, JavaScript syntax and all 17 game regressions.
+
 ## 0.30.7 — 2026-10-22
 
 - Fixed combat stutters when hovering over items. Inspection pagination now measures blocks together instead of repeatedly changing and measuring the layout for every block.
