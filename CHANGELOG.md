@@ -1,5 +1,10 @@
 # RealmPack changelog
 
+## 0.30.9 — 2026-10-22
+
+- Moved the trashcan inside the travel stash, below its nine item slots, and added a visible Discard label. Stash sizing reserves room for the control on shorter screens.
+- Validation: packed/stashed discard, whole-stack confirmation/cancellation and combat guards; nine-slot layout checks at five sizes; 102 general viewport checks; inventory/stack regressions and JavaScript syntax.
+
 ## 0.30.8 — 2026-10-22
 
 - Replaced the item inspector's page navigation with a compact, single-page overview. Full details opens complete effect descriptions, enchantments, placement rules and connections; smaller screens keep the overview focused on essential item stats.

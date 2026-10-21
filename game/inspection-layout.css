@@ -27,8 +27,11 @@ body #detail.inspection-overview .enchant-info p{margin:4px 0 0;font-size:17px!i
 .item-details-modal .screen-page-content>*{flex-shrink:0}
 .item-details-modal .detailtitle h2{font-size:24px;margin:4px 0}
 .item-details-modal .detailtitle .sprite-art{--sprite-size:40px}
-/* A deliberately small drop target, outside both item placement areas. */
-body .pack-pane .invfoot .inventory-trash{display:grid;place-items:center;flex:none;align-self:flex-end;width:34px;height:32px;padding:4px!important;color:#d8b2a4;border-color:#8e7063}
+/* Keep the discard target visible inside the stash, below its nine item slots. */
+body .stash-pane .inventory-trash{display:inline-flex;align-items:center;gap:6px;flex:none;min-height:32px;padding:4px 9px!important;font-size:16px;color:#d8b2a4;border-color:#8e7063}
 .inventory-trash svg{pointer-events:none}
-body .pack-pane .invfoot .inventory-trash.trash-hover{color:#fff1e8;background:#873c30;border-color:#ffc6a8;outline:2px solid #ffc6a8;outline-offset:2px}
+body .stash-pane .inventory-trash.trash-hover{color:#fff1e8;background:#873c30;border-color:#ffc6a8;outline:2px solid #ffc6a8;outline-offset:2px}
 .inventory-trash:disabled{opacity:.35}
+
+.stash-trashbar{display:flex;justify-content:flex-end;flex:none;padding:6px 12px;border-top:1px solid #52614f;background:#223026}
+@media(min-width:551px){.stash-pane .stash{--stash-cell:max(24px,min(104px,calc((100cqw - 40px)/3),calc((100cqh - 140px)/3)))}}
