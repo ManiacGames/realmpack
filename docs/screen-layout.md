@@ -1,4 +1,4 @@
-# Viewport workspace — 0.25.0
+# Viewport workspace — 0.25.1
 
 The main playfield uses the viewport height, with a compact header/footer. Desktop keeps combat above the backpack, with the nine-slot stash adjacent and a tabbed information panel. Below 901px, Battle / Pack & stash / Details tabs share the available screen. On phones the stash is a single nine-slot row below the backpack. The mobile Menu retains catalogue, bestiary, guide, larger-text and restart access.
 
@@ -51,3 +51,9 @@ These browsers bypass the generic screen pager. Each has one result pager with P
 Search stays visible and preserves focus/caret while results rerender. Item type, class, version and signature filters remain available; the bestiary adds dungeon and role filters. On phones Filters opens a panel with Done, Escape and outside dismissal. Empty states offer reset. Compact cards show key summaries; Inspect retains the full item/encounter information, and Back or Escape restores the browser page, filters and card focus. Sandbox add/practice controls keep their existing guards; feedback is inline in the result summary.
 
 `node scripts/check-reference-browser.cjs` uses the optional browser setup to check both browsers across seven viewports and both text settings, sole pagination, card bounds, page navigation/jumps, typing/focus, filtering/reset/empty states, Inspect return, mobile filters, complete ordered traversal of every matching item/encounter, Sandbox capacity/combat guards, feedback and practice encounter loading.
+
+## Restart confirmation
+
+Restart uses a content-height dialog capped at 480 pixels wide. Both actions remain adjacent on phones and desktops; the dialog bypasses generic modal paging. Keep playing receives initial focus, Tab stays within the two actions, and Escape restores the run or its pending room dialog. Character selection only replaces the run after Start.
+
+Browser check: `REALMPACK_CHROME=/path/to/chrome node scripts/check-restart-dialog.cjs` covers seven sizes and both text modes.

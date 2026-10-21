@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.25.1 — 2026-10-21
+
+- Replaced the oversized restart screen with a compact, centered confirmation. Keep playing and Choose character sit together, with no paging or scrolling.
+- Clarified that the current run is only replaced when Start is pressed in character selection. Keyboard focus starts on Keep playing, stays inside the dialog, and Escape cancels.
+- Validation: 14 desktop/phone layouts across seven viewport sizes and both text modes; action visibility, keyboard focus, cancellation, safe character selection and combat guard; JavaScript syntax and game regression checks.
+
 ## 0.25.0 — 2026-10-21
 
 - Rebuilt the item compendium and realm bestiary as dedicated result browsers, removing the extra screen pager. Each has one Previous/Next control, a direct page-number field and an exact visible-result range.
