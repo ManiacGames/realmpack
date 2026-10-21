@@ -10,9 +10,10 @@ const assert=require('node:assert/strict'),path=require('node:path'),{pathToFile
   await page.evaluate(()=>{freshRun('knight',true);selectPortal(s.portalChoices[0]);closeModal(true);render()});
   for(const state of ['pack','battle','details','class','encounter','journal','help','shop','classes','map','catalogue','bestiary','rewards','inspection','menu','event','trade']){
    await page.evaluate(state=>{
-    closeModal(true);catalogueOpen=false;bestiaryOpen=false;
+    closeModal(true);hideEnemyDetails();catalogueOpen=false;bestiaryOpen=false;
     if(['pack','battle','details'].includes(state))screenView(state);
-    else if(['class','encounter','journal'].includes(state)){screenView('details');screenTab(state);if(state==='journal')for(let n=0;n<30;n++)log('Journal entry '+n)}
+    else if(state==='encounter'){screenView('battle');showEnemyDetails()}
+    else if(['class','journal'].includes(state)){screenView('details');screenTab(state);if(state==='journal')for(let n=0;n<30;n++)log('Journal entry '+n)}
     else if(state==='help')showHelp();
     else if(state==='shop'){s.phase='prep';ROOMS[s.room].shopKind='shield';enterShop()}
     else if(state==='classes')chooseClass();else if(state==='map')showRunMap();else if(state==='catalogue')openCatalogue();else if(state==='bestiary')openBestiary();
@@ -25,7 +26,7 @@ const assert=require('node:assert/strict'),path=require('node:path'),{pathToFile
    await page.waitForTimeout(50);
    const result=await page.evaluate(()=>{
     const issues=[];let count=0;for(const p of screenPagers){if(!p.host.isConnected||!p.host.getBoundingClientRect().height)continue;const old=p.page;for(let n=0;n<p.pages.length;n++){p.page=n;screenShowPage(p);count++;if(p.content.scrollHeight>p.content.clientHeight+3)issues.push('Clipped page: '+p.host.className+' '+n+' '+p.content.scrollHeight+'/'+p.content.clientHeight)}p.page=old;screenShowPage(p)}
-    for(const e of document.querySelectorAll('.layout .grid,.layout .invfoot,#fight,.play-tabs,.topright,.screen-modal')){if(!e.getBoundingClientRect().height)continue;const r=e.getBoundingClientRect();if(r.bottom>innerHeight+1||r.right>innerWidth+1||r.top<0)issues.push('Outside viewport: '+(e.id||e.className))}
+    for(const e of document.querySelectorAll('.layout .grid,.layout .invfoot,#fight,.play-tabs,.topright,.screen-modal,#enemyDetails')){if(!e.getBoundingClientRect().height)continue;const r=e.getBoundingClientRect();if(r.bottom>innerHeight+1||r.right>innerWidth+1||r.top<0)issues.push('Outside viewport: '+(e.id||e.className))}
     if(document.documentElement.scrollHeight>innerHeight+1||document.documentElement.scrollWidth>innerWidth+1)issues.push('Document overflow');
     if(!document.querySelector('.classbox')||!document.getElementById('encounterInfo'))issues.push('Lost live information node');return {issues,count}
    });assert.deepEqual(result.issues,[],width+'×'+height+' '+state);views++;pages+=result.count;

@@ -1,3 +1,8 @@
+RealmPack 0.24.2
+- Hover or focus the enemy sprite for encounter mechanics and dungeon difficulty.
+- Click/tap to pin details; Escape, Close or an outside click dismisses them.
+- Removed the Encounter sidebar tab; combat continues while inspecting.
+
 RealmPack 0.24.1
 - All 19 classes share one compact selection roster, with no class pages.
 - Hover, focus or tap to preview stats, description, starting gear and passive rules.

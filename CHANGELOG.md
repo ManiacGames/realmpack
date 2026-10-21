@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.24.2 — 2026-10-21
+
+- Moved encounter mechanics and dungeon difficulty out of the sidebar into an enemy-sprite details panel. Hover or keyboard-focus the enemy to inspect it; click/tap pins the panel.
+- The panel stays open while reading or using its pages, fits around the enemy, and closes with Escape, its close button, an outside click, or a view/dialog change. Combat continues while inspecting.
+- Removed the Encounter sidebar tab; Item, Class and Journal remain.
+- Validation: enemy hover/focus/tap at six viewport sizes, live details, pointer access, bounds/paging, dismissal/focus, modal/view cleanup, uninterrupted combat, workspace browser regression, JavaScript syntax and game regression checks.
+
 ## 0.24.1 — 2026-10-21
 
 - Put all 19 classes on one compact selection screen, showing their portraits and names without paging.

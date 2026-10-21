@@ -1,0 +1,20 @@
+'use strict';
+const assert=require('node:assert/strict'),path=require('node:path'),{pathToFileURL}=require('node:url'),{chromium}=require('playwright');
+(async()=>{
+ const browser=await chromium.launch({executablePath:process.env.REALMPACK_CHROME||undefined,args:['--no-sandbox','--no-zygote','--single-process','--allow-file-access-from-files']});
+ const page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto(process.env.REALMPACK_URL||pathToFileURL(path.resolve(__dirname,'../game/index.html')).href);let views=0;
+ for(const [width,height] of [[1920,1080],[1366,768],[1280,720],[1024,768],[390,844],[360,640]]){
+  await page.setViewportSize({width,height});await page.evaluate(()=>{freshRun('knight',true);selectPortal(s.portalChoices[0]);closeModal(true);screenView('battle');render()});await page.waitForTimeout(40);
+  assert.equal(await page.locator('[data-info-tab="encounter"]').count(),0,'Encounter sidebar tab remains');
+  const trigger=page.locator('#enemySprite'),popup=page.locator('#enemyDetails');await trigger.hover();await page.waitForTimeout(30);assert(await popup.isVisible(),'Hover failed');assert.equal(await trigger.getAttribute('aria-expanded'),'true');
+  assert(await page.evaluate(()=>document.getElementById('enemyDetails').contains(document.getElementById('encounterInfo'))&&document.getElementById('enemyDetails').contains(document.getElementById('dungeonDifficulty'))),'Live encounter nodes missing');
+  await popup.hover();await page.waitForTimeout(200);assert(await popup.isVisible(),'Cannot move pointer into popup');
+  const issues=await page.evaluate(()=>{const panel=document.getElementById('enemyDetails'),r=panel.getBoundingClientRect(),issues=[];if(r.left<0||r.top<0||r.right>innerWidth||r.bottom>innerHeight)issues.push('Popover outside viewport');for(const p of screenPagers){if(p.host.id!=='enemyDetailsBody')continue;const old=p.page;for(let n=0;n<p.pages.length;n++){p.page=n;screenShowPage(p);if(p.content.scrollHeight>p.content.clientHeight+3)issues.push('Clipped encounter page')}p.page=old;screenShowPage(p)}return issues});assert.deepEqual(issues,[],width+'×'+height);
+  await page.mouse.move(1,height-1);await page.waitForTimeout(200);assert(!(await popup.isVisible()),'Pointer leave failed');await trigger.focus();assert(await popup.isVisible(),'Keyboard focus failed');await page.keyboard.press('Escape');assert(!(await popup.isVisible()),'Escape failed');assert(await trigger.evaluate(el=>document.activeElement===el),'Escape lost focus');
+  await trigger.click();assert(await popup.isVisible(),'Click/tap failed');await page.locator('.brand').click();assert(!(await popup.isVisible()),'Outside click failed');views++
+ }
+ await page.evaluate(()=>{showEnemyDetails(true);document.getElementById('ename').textContent='Updated enemy';document.getElementById('encounterInfo').innerHTML='<p>Updated encounter mechanics</p>'});await page.waitForTimeout(40);assert.equal(await page.locator('#enemyDetailsName').innerText(),'Updated enemy');assert((await page.locator('#enemyDetailsBody').innerText()).includes('Updated encounter mechanics'));
+ await page.evaluate(()=>showHelp());await page.waitForTimeout(20);assert(!(await page.locator('#enemyDetails').isVisible()),'Popup overlaps modal');
+ await page.evaluate(()=>{closeModal(true);freshRun('knight',true);selectPortal(s.portalChoices[0]);closeModal(true);screenView('battle');primary();showEnemyDetails()});const time=await page.evaluate(()=>s.time);await page.waitForTimeout(200);assert(await page.evaluate(t=>s.time>t,time),'Hover paused combat');
+ await page.evaluate(()=>{hideEnemyDetails();showEnemyDetails(true);screenView('pack')});assert(!(await page.locator('#enemyDetails').isVisible()),'View switch left popup open');assert.deepEqual(errors,[]);console.log(`PASS: enemy hover/focus/tap across ${views} viewports, no Encounter tab, live details, pointer access, bounds/paging, Escape/outside dismissal, modal/view cleanup and uninterrupted combat`);await browser.close()
+})().catch(e=>{console.error(e);process.exit(1)});
