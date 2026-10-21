@@ -1,0 +1,254 @@
+{
+  "baselineVersion": "0.30.4",
+  "optimizedVersion": "0.30.5",
+  "before": [
+    {
+      "speed": 1,
+      "elapsedMs": 3212.2000000001863,
+      "meanTickMs": 4.649166666685293,
+      "p95TickMs": 8.800000000745058,
+      "activations": 53,
+      "functions": {
+        "runMapMarkup": {
+          "calls": 120,
+          "ms": 7.300000004470348
+        },
+        "updateExpeditionUI": {
+          "calls": 120,
+          "ms": 70.50000000093132
+        },
+        "itemLinks": {
+          "calls": 120,
+          "ms": 123.7000000057742
+        },
+        "updateItemEffects": {
+          "calls": 120,
+          "ms": 164.39999999850988
+        },
+        "tick": {
+          "calls": 120,
+          "ms": 557.4000000031665
+        },
+        "log": {
+          "calls": 59,
+          "ms": 3.299999998882413
+        },
+        "itemFxPulse": {
+          "calls": 75,
+          "ms": 63.90000000130385
+        }
+      },
+      "browser": {
+        "LayoutCount": 195,
+        "RecalcStyleCount": 1218,
+        "ScriptDuration": 0.035767,
+        "TaskDuration": 2.981025
+      }
+    },
+    {
+      "speed": 2,
+      "elapsedMs": 3549.5,
+      "meanTickMs": 4.643333333319363,
+      "p95TickMs": 13.299999999813735,
+      "activations": 113,
+      "functions": {
+        "runMapMarkup": {
+          "calls": 120,
+          "ms": 7.900000000372529
+        },
+        "updateExpeditionUI": {
+          "calls": 120,
+          "ms": 67.10000000242144
+        },
+        "itemLinks": {
+          "calls": 120,
+          "ms": 113.59999999776483
+        },
+        "updateItemEffects": {
+          "calls": 120,
+          "ms": 154.79999999981374
+        },
+        "tick": {
+          "calls": 120,
+          "ms": 556.5999999959022
+        },
+        "log": {
+          "calls": 127,
+          "ms": 7.999999998137355
+        },
+        "itemFxPulse": {
+          "calls": 179,
+          "ms": 89.80000000167638
+        }
+      },
+      "browser": {
+        "LayoutCount": 300,
+        "RecalcStyleCount": 1523,
+        "ScriptDuration": 0.025187000000000008,
+        "TaskDuration": 3.33478
+      }
+    },
+    {
+      "speed": 4,
+      "elapsedMs": 3770.2999999998137,
+      "meanTickMs": 6.119999999979822,
+      "p95TickMs": 18.5,
+      "activations": 226,
+      "functions": {
+        "runMapMarkup": {
+          "calls": 120,
+          "ms": 6.700000003911555
+        },
+        "updateExpeditionUI": {
+          "calls": 120,
+          "ms": 73.49999999720603
+        },
+        "itemLinks": {
+          "calls": 120,
+          "ms": 119.50000000279397
+        },
+        "updateItemEffects": {
+          "calls": 120,
+          "ms": 161.60000000149012
+        },
+        "tick": {
+          "calls": 120,
+          "ms": 733.999999997206
+        },
+        "log": {
+          "calls": 244,
+          "ms": 13.800000002607703
+        },
+        "itemFxPulse": {
+          "calls": 358,
+          "ms": 222.19999999646097
+        }
+      },
+      "browser": {
+        "LayoutCount": 479,
+        "RecalcStyleCount": 1960,
+        "ScriptDuration": 0.03951099999999999,
+        "TaskDuration": 3.6055459999999995
+      }
+    }
+  ],
+  "after": [
+    {
+      "speed": 1,
+      "elapsedMs": 3277.2999999998137,
+      "meanTickMs": 2.362500000023283,
+      "p95TickMs": 4.2000000001862645,
+      "activations": 53,
+      "functions": {
+        "updateExpeditionUI": {
+          "calls": 120,
+          "ms": 1.3999999975785613
+        },
+        "itemLinks": {
+          "calls": 120,
+          "ms": 3.9999999990686774
+        },
+        "updateItemEffects": {
+          "calls": 120,
+          "ms": 29.799999998882413
+        },
+        "tick": {
+          "calls": 120,
+          "ms": 282.80000000074506
+        },
+        "log": {
+          "calls": 59,
+          "ms": 0.2999999998137355
+        },
+        "itemFxPulse": {
+          "calls": 75,
+          "ms": 1.1000000014901161
+        }
+      },
+      "browser": {
+        "LayoutCount": 131,
+        "RecalcStyleCount": 1106,
+        "ScriptDuration": 0.025492,
+        "TaskDuration": 2.8648550000000004
+      }
+    },
+    {
+      "speed": 2,
+      "elapsedMs": 3339,
+      "meanTickMs": 2.3441666666495924,
+      "p95TickMs": 4,
+      "activations": 113,
+      "functions": {
+        "updateExpeditionUI": {
+          "calls": 120,
+          "ms": 1
+        },
+        "itemLinks": {
+          "calls": 120,
+          "ms": 2.5999999959021807
+        },
+        "updateItemEffects": {
+          "calls": 120,
+          "ms": 31.299999995157123
+        },
+        "tick": {
+          "calls": 120,
+          "ms": 280.8999999985099
+        },
+        "log": {
+          "calls": 127,
+          "ms": 1.299999998882413
+        },
+        "itemFxPulse": {
+          "calls": 179,
+          "ms": 0.2999999988824129
+        }
+      },
+      "browser": {
+        "LayoutCount": 135,
+        "RecalcStyleCount": 1165,
+        "ScriptDuration": 0.036556,
+        "TaskDuration": 2.9291899999999997
+      }
+    },
+    {
+      "speed": 4,
+      "elapsedMs": 3519.2999999998137,
+      "meanTickMs": 2.4549999999580905,
+      "p95TickMs": 4.2999999998137355,
+      "activations": 226,
+      "functions": {
+        "updateExpeditionUI": {
+          "calls": 120,
+          "ms": 1.5
+        },
+        "itemLinks": {
+          "calls": 120,
+          "ms": 1.5000000027939677
+        },
+        "updateItemEffects": {
+          "calls": 120,
+          "ms": 29.799999995157123
+        },
+        "tick": {
+          "calls": 120,
+          "ms": 294.39999999385327
+        },
+        "log": {
+          "calls": 244,
+          "ms": 1.0999999986961484
+        },
+        "itemFxPulse": {
+          "calls": 358,
+          "ms": 0.5000000009313226
+        }
+      },
+      "browser": {
+        "LayoutCount": 156,
+        "RecalcStyleCount": 1272,
+        "ScriptDuration": 0.032494999999999996,
+        "TaskDuration": 3.2405429999999997
+      }
+    }
+  ]
+}

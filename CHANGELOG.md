@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.30.5 — 2026-10-22
+
+- Reduced combat rendering work in crowded backpacks, especially at 2× and 4× speed. Simultaneous effects on each item now share one visual update, with reusable animated overlays replacing forced layout reads.
+- Cached stable combat connections and room/map presentation. Batched journal updates and deferred hidden journal rendering until it is opened; gameplay still records the latest 70 messages.
+- Kept the existing simulation tick, speed multipliers, item activations, damage and effect rules. Combat timing is independent of visual batching. The matched 30-item stress test measured about 60% less CPU time inside 4× ticks; hardware and browser results vary.
+- Validation: matched crowded-pack profiles at 1×/2×/4×, original-versus-optimized simulation comparisons, effect/cache/journal browser checks, JavaScript syntax and game regressions.
+
 ## 0.30.4 — 2026-10-22
 
 - Updated Dev notes: "-Items and consumables still need major overhaul".

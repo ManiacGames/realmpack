@@ -1,0 +1,5 @@
+/* Trigger animations use reusable overlays and compositor-friendly opacity/transform. */
+body .item.effect-trigger,body .item.effect-trigger .effect-pop{animation:none}
+.effect-flare{position:absolute;inset:1px;border:2px solid var(--fx);opacity:0;pointer-events:none;z-index:4}
+body .item .effect-pop{opacity:0;pointer-events:none;z-index:5}
+@media(prefers-reduced-motion:reduce){body .item.effect-trigger{outline:none}}

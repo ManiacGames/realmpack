@@ -1,6 +1,6 @@
 # RealmPack — The Shattered Vault
 
-A Realm-inspired inventory auto-battler. Browser release 0.30.4: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
+A Realm-inspired inventory auto-battler. Browser release 0.30.5: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
 
 ## Play
 
@@ -74,3 +74,5 @@ Unofficial fan project. The header/browser icon uses the [Vault Chest Unlocker s
 Enchanter rules, dust costs and save compatibility: [enchantment guide](docs/enchantments.md).
 
 The Dev notes button reads the plain text in `game/dev-notes.js`. Separate paragraphs with a blank line; the game escapes text before display.
+
+Combat rendering changes and matched measurements: [performance report](docs/combat-performance.md).
