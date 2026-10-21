@@ -35,6 +35,7 @@ function screenPaginate(p){
 function screenShowPage(p){const visible=new Set(p.pages[p.page]||[]);for(const n of p.nodes){if(visible.has(n))n.removeAttribute('data-screen-hidden');else n.setAttribute('data-screen-hidden','')}p.label.textContent=(p.page+1)+' / '+p.pages.length;p.prev.disabled=p.page===0;p.next.disabled=p.page>=p.pages.length-1;p.nav.classList.toggle('single-page',p.pages.length===1)}
 function screenFitModal(){
  const focus=screenFocus(),modal=document.querySelector('#overlay .modal');if(!modal||modal.dataset.screenFit)return;modal.dataset.screenFit='true';modal.classList.add('screen-modal');
+ if(modalKind==='help'){modal.classList.add('quick-help-modal');return}
  if(modalKind==='confirm'){modal.classList.add('compact-confirm-modal');modal.setAttribute('role','dialog');modal.setAttribute('aria-modal','true');modal.querySelector('h1').id='restartTitle';modal.setAttribute('aria-labelledby','restartTitle');modal.querySelector('p').id='restartDescription';modal.setAttribute('aria-describedby','restartDescription');modal.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const buttons=[...modal.querySelectorAll('button')],first=buttons[0],last=buttons[buttons.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}});modal.querySelector('#cancelRestart')?.focus({preventScroll:true});return}
  if(modal.querySelector('.reference-grid')){fitReferenceBrowser(modal);return}
  if(modalKind==='runmap'){fitSingleRunMap(modal);return}
@@ -66,7 +67,7 @@ function fitSingleRunMap(modal){
  for(const node of modal.querySelectorAll('.map-node,.map-depth'))node.style.top=(parseFloat(node.style.top)/860*100)+'%';
  for(const line of modal.querySelectorAll('.map-canvas line'))for(const key of ['y1','y2'])line.setAttribute(key,(parseFloat(line.getAttribute(key))/860*100)+'%')
 }
-function screenMenu(){modal('Run menu','Reference, settings and run controls.',`<div class="screen-menu"><button onclick="openCatalogue()">Item catalogue</button><button onclick="openBestiary()">Encounter bestiary</button><button onclick="showHelp()">Controls & synergies</button><button onclick="toggleLargeText();screenReflow()">Toggle larger text</button><button onclick="confirmRestart()">Start a new run</button></div><button onclick="closeModal()">Return to run</button>`,'menu')}
+function screenMenu(){modal('Run menu','Reference, settings and run controls.',`<div class="screen-menu"><button onclick="openCatalogue()">Item catalogue</button><button onclick="openBestiary()">Encounter bestiary</button><button onclick="showHelp()">Controls & synergies</button><button onclick="toggleLargeText();screenReflow()">Toggle larger text</button><button data-hints-toggle onclick="toggleGameplayHints()">Gameplay tips</button><button onclick="confirmRestart()">Start a new run</button></div><button onclick="closeModal()">Return to run</button>`,'menu')}
 const spriteDetailsPanels={};
 function positionSpriteDetails(key){
  const p=spriteDetailsPanels[key];if(!p||p.panel.hidden)return;const {trigger,panel}=p,r=trigger.getBoundingClientRect();if(!r.height){hideSpriteDetails(key);return}const width=panel.offsetWidth;
@@ -121,7 +122,7 @@ function initScreenLayout(){
  initSpriteDetails({key:'enemy',triggerId:'enemySprite',nameId:'ename',label:'Encounter details',selectors:['#encounterInfo','#dungeonDifficulty']});
  initSpriteDetails({key:'class',triggerId:'playerSprite',nameId:'playerName',label:'Class information',selectors:['.classbox'],sourcePager:true});
  // Long explanations remain available in the guide, instead of occupying the playfield.
- const hints=document.createElement('button');hints.textContent='Controls & synergies';hints.onclick=showHelp;document.querySelector('.pack-pane .invfoot>div').append(hints);
+ const hints=document.createElement('button');hints.textContent='How to play';hints.onclick=showHelp;document.querySelector('.pack-pane .invfoot>div').append(hints);
  const detail=document.getElementById('detail'),log=document.getElementById('log');
  const watch=host=>{let observer;const refresh=()=>{observer.disconnect();delete host.dataset.screenPaged;screenPager(host);observer.observe(host,{childList:true});};observer=new MutationObserver(refresh);refresh()};watch(detail);watch(log);
  document.addEventListener('pointerdown',e=>{const filters=document.getElementById('referenceFilters'),toggle=document.getElementById('referenceFilterToggle');if(referenceFiltersOpen&&innerWidth<=700&&filters&&!filters.contains(e.target)&&!toggle.contains(e.target))toggleReferenceFilters()});

@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.26.0 — 2026-10-21
+
+- Rewrote How to Play as four short steps and a few controls, all on one screen.
+- Added optional, contextual gameplay tips for packing, combat, mana, healing, loot, merchants, events and more. One tip appears at a time in its own space; Got it dismisses it, with a pause before the next tip.
+- Added Gameplay tips On/Off in the guide and run menu, Tips off on each hint, and Show tips again to restart them. Preferences and seen tips survive reloads without changing run saves.
+- Validation: 14 guide/tip layouts across seven desktop/phone sizes and both text modes; context rules, dismiss/toggle/reset, reload persistence, unchanged run state, JavaScript syntax and game regression checks.
+
 ## 0.25.1 — 2026-10-21
 
 - Replaced the oversized restart screen with a compact, centered confirmation. Keep playing and Choose character sit together, with no paging or scrolling.

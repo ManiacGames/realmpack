@@ -1,4 +1,4 @@
-# Viewport workspace — 0.25.1
+# Viewport workspace — 0.26.0
 
 The main playfield uses the viewport height, with a compact header/footer. Desktop keeps combat above the backpack, with the nine-slot stash adjacent and a tabbed information panel. Below 901px, Battle / Pack & stash / Details tabs share the available screen. On phones the stash is a single nine-slot row below the backpack. The mobile Menu retains catalogue, bestiary, guide, larger-text and restart access.
 
@@ -57,3 +57,11 @@ Search stays visible and preserves focus/caret while results rerender. Item type
 Restart uses a content-height dialog capped at 480 pixels wide. Both actions remain adjacent on phones and desktops; the dialog bypasses generic modal paging. Keep playing receives initial focus, Tab stays within the two actions, and Escape restores the run or its pending room dialog. Character selection only replaces the run after Start.
 
 Browser check: `REALMPACK_CHROME=/path/to/chrome node scripts/check-restart-dialog.cjs` covers seven sizes and both text modes.
+
+## Quick guide and gameplay tips — 0.26.0
+
+How to Play is a single compact sheet with four steps and the main controls. Gameplay tips are enabled by default; turn them off in the guide, run menu, or any tip. Show tips again clears their history and enables tips. Preferences and seen topics use `realmpack-gameplay-tips-v1`, separately from run saves, with in-memory fallback when storage is unavailable.
+
+One short tip appears for its current context. The tip uses its own row beneath the playfield or inside the portal, loot, shop or event dialog; it never captures focus or pauses combat. Got it waits 15 seconds before another tip. Tips leave when their context changes and each topic is shown once until reset. Topics cover packing, stash, adjacency, class inspection, consumable stacks, automatic combat, mana, healing consumables, long fights, dungeon markers, loot, merchants and event costs.
+
+Run `REALMPACK_CHROME=/path/to/chrome node scripts/check-gameplay-hints.cjs` for desktop/phone layouts, both text modes, contextual rules, controls, saved preferences and run preservation.
