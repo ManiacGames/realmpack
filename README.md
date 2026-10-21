@@ -1,6 +1,6 @@
 # RealmPack — The Shattered Vault
 
-A Realm-inspired inventory auto-battler. Browser release 0.29.0: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
+A Realm-inspired inventory auto-battler. Browser release 0.30.0: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
 
 ## Play
 
@@ -70,3 +70,5 @@ Progress is stored in the browser on the game's origin. This migration keeps the
 ## Credits
 
 Unofficial fan project. The header/browser icon uses the [Vault Chest Unlocker sprite](https://realm.wiki/item?id=811), saved as `game/assets/vault-chest-unlocker.png`. Names and sprites originate from realm.wiki / Realm of the Mad God. ChronoType was supplied by the project owner. Gameplay effects and balance are custom adaptations. This repository does not grant additional rights in third-party assets.
+
+Enchanter rules, dust costs and save compatibility: [enchantment guide](docs/enchantments.md).

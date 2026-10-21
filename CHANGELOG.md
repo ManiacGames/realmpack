@@ -1,5 +1,13 @@
 # RealmPack changelog
 
+## 0.30.0 — 2026-10-21
+
+- Rebuilt the Enchanter around fixed gear rarity: Uncommon has one slot, Rare two, Legendary three and Divine four. Shiny gear has at least two. Existing modifiers remain intact.
+- Added green, red and purple dust from combat victories, plus a starter supply. Attune empty slots or reroll every unlocked modifier; locking each modifier doubles the dust cost. Preview and keep either roll after paying once.
+- Weighted modifiers respect equipment type and avoid competing categories. Existing modifier strengths and rank chances remain unchanged. New gear is attuned at an Enchanter, a RealmPack adaptation of RotMG’s rarity/dust system.
+- Removed class compatibility from the Enchanter, enlarged enchantment text, and replaced the oversized event window with compact modifier cards and a comparison view.
+- Validation: enchantment economy, locks, save migration and stale-click guards; responsive Enchanter layouts; JavaScript syntax and game regression checks.
+
 ## 0.29.0 — 2026-10-21
 
 - Balanced the shared desktop layout so combat takes roughly 40% of the main area and the backpack remains slightly larger. Character/enemy sprites scale with the arena; shorter windows use a compact arrangement without page scrolling.

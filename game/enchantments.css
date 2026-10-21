@@ -1,0 +1,22 @@
+/* Readable enchantment cards, without the generic event pager. */
+body #overlay .enchanter-modal{width:min(880px,100%);height:auto;max-height:calc(100dvh - 24px)!important;gap:10px;padding:20px}
+body #overlay .enchanter-modal select{width:100%;min-width:0;font-size:18px;padding:8px}
+.enchanter-modal .dust-wallet{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:18px;padding:8px 0;border-bottom:1px solid #647357}
+.dust-green{color:#b8dc99}.dust-red{color:#f1a295}.dust-purple{color:#d1b5f7}
+.enchanter-modal .enchant-heading{display:flex;align-items:center;gap:15px;margin:3px 0}
+.enchanter-modal .enchant-heading h2{font-size:25px;margin:0 0 4px}.enchant-heading span{font-size:18px;color:#d1b5f7}
+.enchanter-modal .enchant-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.enchanter-modal .enchant-card{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#242735;border:1px solid #666586;padding:12px;min-height:84px;font-size:19px;line-height:1.25}
+.enchanter-modal .enchant-card.is-locked{border-color:#c1ac78;background:#34332d}
+.enchanter-modal button{font-size:18px;padding:7px 12px;min-height:34px}.enchant-card button{flex:none}
+.enchanter-modal .enchant-footer{display:flex;justify-content:space-between;gap:8px;margin-top:2px}
+body #overlay .enchanter-modal .enchant-note{font-size:17px!important;line-height:1.25;margin:2px 0;color:#c4c7b8}
+.enchant-comparison{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.enchant-comparison section{border:1px solid #777494;background:#242735;padding:12px}.enchant-comparison h3{font-size:22px;margin:0 0 8px;color:#d1b5f7}
+body #overlay .enchant-comparison p{font-size:19px!important;line-height:1.25;margin:8px 0!important}
+body #detail .enchant-info,body #detail .enchant-info b{font-size:18px}body #detail .enchant-info p{font-size:18px!important;line-height:1.35!important}
+@media(max-width:600px){body #overlay .enchanter-modal{padding:12px;gap:8px}.enchanter-modal .enchant-card-grid{grid-template-columns:1fr}.enchanter-modal .enchant-card{min-height:64px;padding:8px;font-size:18px}.enchanter-modal .enchant-heading h2{font-size:22px}.enchanter-modal .dust-wallet{font-size:17px;gap:6px 12px}.enchanter-modal button{padding:7px 8px;font-size:17px}.enchant-comparison{gap:6px}.enchant-comparison section{padding:7px}body #overlay .enchant-comparison p{font-size:17px!important}.enchant-heading span{font-size:17px}}
+@media(max-height:500px){body #overlay .enchanter-modal{padding:10px;gap:5px}.enchanter-modal>.eyebrow,.enchanter-modal>h1+p,.enchanter-modal .enchant-heading{display:none}.enchanter-modal .enchant-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.enchanter-modal .enchant-card{min-height:65px;padding:7px;font-size:17px}.enchanter-modal .dust-wallet{padding:2px 0}.enchanter-modal select{padding:4px!important}.enchant-comparison section{padding:6px}.enchant-comparison h3{font-size:18px;margin:0}.enchant-comparison p{margin:4px 0!important}body #overlay .enchant-comparison p{font-size:17px!important}.enchanter-modal .enchant-note{font-size:16px!important}}
+body #overlay .enchanter-modal{max-width:880px!important}
+@media(max-height:700px){body #overlay .enchanter-modal{padding:12px;gap:6px}.enchanter-modal>.eyebrow{display:none}.enchanter-modal .enchant-heading{margin:0}.enchanter-modal .enchant-card{padding:8px;min-height:68px}.enchanter-modal .dust-wallet{padding:4px 0}.enchanter-modal .enchant-heading h2{font-size:22px}.enchanter-modal .enchant-heading .sprite-art{--sprite-size:30px}.enchanter-modal .enchant-card-grid{gap:6px}}
+.enchanter-modal:has(.enchant-comparison) .dust-wallet,.enchanter-modal:has(.enchant-comparison)>select{display:none}
+@media(max-width:600px) and (max-height:700px){.enchanter-modal>h1+p{display:none}.enchanter-modal .enchant-card{font-size:17px;line-height:1.2;min-height:57px}.enchanter-modal .enchant-heading h2{font-size:20px}.enchanter-modal .enchant-heading span{font-size:16px}.enchanter-modal .enchant-heading{gap:8px}.enchanter-modal .enchant-note{font-size:16px!important}.enchanter-modal button{min-height:30px;padding:5px 7px}}

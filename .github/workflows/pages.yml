@@ -41,6 +41,7 @@ jobs:
           node game/tests/test-item-progression.cjs
           node game/tests/test-class-reworks.cjs
           node game/tests/test-event-trades.cjs
+          node game/tests/test-enchantments.cjs
           node game/tests/test-provisions.cjs
           node game/tests/test-ut-st-identities.cjs
           node game/tests/test-dagger-update.cjs
