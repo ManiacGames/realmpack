@@ -1,6 +1,6 @@
 # RealmPack — The Shattered Vault
 
-A Realm-inspired inventory auto-battler. Browser release 0.23.1: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
+A Realm-inspired inventory auto-battler. Browser release 0.24.0: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
 
 ## Play
 
@@ -9,6 +9,12 @@ https://maniacgames.github.io/realmpack/
 The stash holds nine slots in all modes; consumable stacks hold up to five copies per slot. Existing saves above the limit retain their items but must reduce the stash before the next battle.
 
 The Supply Caravan lets you buy one or two exact copies for an owned consumable stack, up to five. One purchase per visit; depth 3 of new runs guarantees a visit. Each copy costs 60% of its item price, rounded up, with an eight-gold minimum.
+
+## Playfield and controls
+
+The playfield fits the viewport. Desktop shows combat, backpack and stash together, with Item / Encounter / Class / Journal tabs on the right. Smaller screens use Battle / Pack & stash / Details tabs, and a Menu for reference/settings. Long content uses Previous/Next pages instead of scrolling. See [layout and browser validation](docs/screen-layout.md).
+
+Hover a backpack item and press **S** to stash it; with nothing hovered, S uses the selected backpack item. This only works during preparation, respects the nine-slot stash and stack limit, and never equips an item from the stash. R rotates selected gear. Drag and drop still works in both directions.
 
 ## Specialist shops
 

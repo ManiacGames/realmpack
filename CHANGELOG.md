@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.24.0 — 2026-10-21
+
+- Rebuilt the playfield around the viewport. Desktop keeps compact combat above the backpack and adjacent stash; smaller screens use Battle, Pack & stash, and Details tabs.
+- Moved item inspection, encounter details, class information and the battle journal into a tabbed side panel. Secondary descriptions and dialogs use Previous/Next pages; a small-screen Menu keeps reference and settings buttons available.
+- Added S to stash a hovered backpack item, falling back to the selected item. It only works from backpack to stash during preparation; respects capacity/stacking and ignores combat, dialogs, typing, held-key repeats and modified shortcuts.
+- Validation: headless Chromium viewport, dialog paging and keyboard interaction checks, JavaScript syntax, inventory controls, shop/reward behavior and the full game regression suite.
+
 ## 0.23.1 — 2026-10-20
 
 - Added one free stock refresh per shop visit, including sold-out shops. Refresh keeps the merchant's specialty and rolls five offers; some items may appear again.

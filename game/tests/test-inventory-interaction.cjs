@@ -61,3 +61,16 @@ returnedButton.onpointerdown(event(650,60));handlers.pointermove(event(90,90));h
 assert(evaluate('s.items.includes(dragItem)&&!s.stash.includes(dragItem)&&selected===null&&inventoryIntent===null'),'Stash-to-backpack drop failed');
 assert(doc.getElementById('stashCount').textContent===evaluate("s.stash.length+' / '+STASH_LIMIT"),'Stash slot count differs from inventory');
 console.log('PASS: occupied-pack cancellation for packed/stashed sources, click/touch/keyboard toggle, packed/stash hover and focus, explicit inspection actions, pointer handlers, threshold preview, R while dragging, anchored release, Escape cleanup, bidirectional stash drops and slot counts');
+// S is deliberately one-way, uses hover before selection, and leaves blocked items intact.
+evaluate('inventoryCancel();selected=null;effectHover=dragItem.id;s.phase="prep";modalKind=null');
+handlers.keydown({...event(20,20),key:'s'});
+assert(evaluate('s.stash.includes(dragItem)&&!s.items.includes(dragItem)&&selected===null&&inventoryIntent===null'),'S should stash hovered packed gear and release selection');
+evaluate('effectHover=dragItem.id');const stashed=evaluate('JSON.stringify(s.items)+JSON.stringify(s.stash)');handlers.keydown({...event(20,20),key:'s'});assert.equal(evaluate('JSON.stringify(s.items)+JSON.stringify(s.stash)'),stashed,'S must not equip from stash');
+evaluate('effectHover=null;const hotkeyItem=makeItem(classes.knight.startingIds[0]);Object.assign(hotkeyItem,{x:0,y:0});s.items.push(hotkeyItem);selected=hotkeyItem.id;');
+for(const options of [{repeat:true},{ctrlKey:true},{metaKey:true},{altKey:true},{target:{matches(){return true}}},{target:{closest(){return true},matches(){return false}}}]){handlers.keydown({...event(20,20),key:'s',...options});assert(evaluate('s.items.includes(hotkeyItem)'),'Ignored hotkey changed inventory')}
+for(const phase of ['fight','reward','shop']){evaluate('s.phase="'+phase+'"');handlers.keydown({...event(20,20),key:'s'});assert(evaluate('s.items.includes(hotkeyItem)'),'S allowed outside preparation')}
+evaluate('s.phase="prep";modalKind="help"');handlers.keydown({...event(20,20),key:'s'});assert(evaluate('s.items.includes(hotkeyItem)'),'S allowed behind dialog');
+evaluate('modalKind=null;while(s.stash.length<STASH_LIMIT)s.stash.push(makeItem(classes.knight.startingIds[0]));');handlers.keydown({...event(20,20),key:'s'});assert(evaluate('s.items.includes(hotkeyItem)&&s.stash.length===STASH_LIMIT'),'Full stash lost item or exceeded limit');
+evaluate('s.stash.pop();effectHover=dragItem.id');handlers.keydown({...event(20,20),key:'s'});assert(evaluate('s.items.includes(hotkeyItem)'),'Stash hover must not stash a different selected item');
+evaluate('effectHover=null');handlers.keydown({...event(20,20),key:'S'});assert(evaluate('s.stash.includes(hotkeyItem)&&selected===null'),'Uppercase S should stash selection');
+console.log('PASS: S hover/selection, one-way stash, nine-slot capacity, uppercase, repeat/modifier/text-field/dialog/combat guards');

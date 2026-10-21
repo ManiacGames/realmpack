@@ -1,3 +1,10 @@
+RealmPack 0.24.0
+- Screen-sized playfield with compact combat and adjacent backpack/stash.
+- Small screens use Battle, Pack & stash and Details tabs; Menu opens references/settings.
+- Item, Encounter, Class and Journal tabs replace stacked side panels.
+- Long descriptions and dialogs use Previous/Next pages.
+- S stashes hovered or selected backpack gear during preparation; never equips from stash.
+
 RealmPack 0.23.1
 - One free stock refresh per shop visit, keeping the same specialty.
 - Refresh use survives reopening/reloading; later shops receive a new refresh.
