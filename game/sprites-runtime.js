@@ -52,7 +52,7 @@ function renderBackpack(){
   el.title=(itemEnchants(i).length?enchantGrade(i)+' enchanted · ':'')+(isOffClass(d)?'OFF-CLASS: +50% cooldown'+(d.group==='ability'?', +1 mana':'')+' · ':'')+d.name+(d.once?' · '+stackCount(i)+'/5 copies':'')+' — '+describe(d)+(d.mechanic?' · '+d.mechanic.title+': '+d.mechanic.text:'');el.draggable=false;
   el.onclick=e=>{e.stopPropagation();inventoryClick(i)};
   el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();if(!e.repeat)inventoryClick(i)}};
-  el.onpointerenter=()=>{inspectItem(i.id)};el.onpointerleave=()=>{effectHover=null;updateItemEffects()};el.onfocus=()=>{inspectItem(i.id)};el.onblur=()=>{effectHover=null;updateItemEffects()};el.onpointerdown=e=>inventoryPointerDown(e,i);el.ondragstart=e=>e.preventDefault();
+  el.onpointerenter=()=>{inspectItem(i.id)};el.onpointerleave=()=>{if(inventoryDrag)return;effectHover=null;updateItemEffects()};el.onfocus=()=>{inspectItem(i.id)};el.onblur=()=>{effectHover=null;updateItemEffects()};el.onpointerdown=e=>inventoryPointerDown(e,i);el.ondragstart=e=>e.preventDefault();
  }
  const count=document.getElementById('stashCount');if(count){count.textContent=s.stash.length+' / '+STASH_LIMIT;count.title=s.stash.length>STASH_LIMIT?'Equip, sell or discard excess saved items before battle.':'Nine stash slots; up to five copies per consumable stack.'}
  const stash=document.getElementById('stash'),stashIds=new Set(s.stash.map(i=>String(i.id)));
@@ -64,7 +64,7 @@ function renderBackpack(){
   if(!button){button=document.createElement('button');button.dataset.itemId=String(i.id);stash.appendChild(button)}
   if(button.dataset.type!==i.type){button.innerHTML=art(i.type);button.dataset.type=i.type}
   updateStackBadge(button,i);button.classList.toggle('shiny',!!defs[i.type].isShiny);button.classList.toggle('offclass-item',isOffClass(defs[i.type]));button.title=defs[i.type].name+(defs[i.type].once?' · '+stackCount(i)+'/5 copies':'')+(itemEnchants(i).length?' · '+enchantGrade(i)+' enchantment':'');button.draggable=false;button.style.borderColor=selected===i.id?'#edc77b':defs[i.type].color;
-  button.onclick=()=>{inventoryClick(i)};button.onpointerenter=()=>inspectItem(i.id);button.onfocus=()=>inspectItem(i.id);button.onpointerleave=()=>{effectHover=null;updateItemEffects()};button.onblur=()=>{effectHover=null;updateItemEffects()};button.onpointerdown=e=>inventoryPointerDown(e,i,true);button.ondragstart=e=>e.preventDefault();
+  button.onclick=()=>{inventoryClick(i)};button.onpointerenter=()=>inspectItem(i.id);button.onfocus=()=>inspectItem(i.id);button.onpointerleave=()=>{if(inventoryDrag)return;effectHover=null;updateItemEffects()};button.onblur=()=>{effectHover=null;updateItemEffects()};button.onpointerdown=e=>inventoryPointerDown(e,i,true);button.ondragstart=e=>e.preventDefault();
  }
  for(let n=s.stash.length;n<STASH_LIMIT;n++){const slot=document.createElement('span');slot.className='stash-empty-slot';slot.setAttribute('aria-hidden','true');stash.appendChild(slot)}
 }

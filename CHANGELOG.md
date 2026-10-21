@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.27.1 — 2026-10-21
+
+- Smoothed inventory dragging by keeping inspection on the held item instead of rebuilding the panel and its pages as the cursor crosses other gear.
+- Placement previews now reuse their sprite, skip unchanged destinations and combine rapid pointer events into one update per animation frame. Preview movement uses an isolated transform layer.
+- Deferred inspection pagination until the drag ends. Rotation, stack merging, stash transfers, blocked drops and click-to-place controls retain their existing rules; cancellation clears pending preview updates.
+- Validation: crowded-backpack profiling, high-rate pointer input, stable preview/inspection nodes, no pagination during drag, rotation/drop/cancellation, browser layout and inventory checks, JavaScript syntax and game regression checks.
+
 ## 0.27.0 — 2026-10-21
 
 - Rebuilt the defeat screen around the reference: a black backdrop, red pixel frame, Dead! heading, enemy attribution, centered class sprite and red character-selection button.

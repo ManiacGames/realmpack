@@ -27,3 +27,9 @@
 }
 
 .stash-empty-slot{height:52px;border:1px dashed #52654e;background:#16251c;pointer-events:none}
+
+/* Keep placement-preview movement isolated from the inventory layout. */
+.inventory-preview{contain:layout paint;will-change:transform}
+
+/* Inspection pagination need not lay out the backpack and combat panels. */
+#detail .screen-page-content{contain:layout style}
