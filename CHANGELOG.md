@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.30.2 — 2026-10-21
+
+- Clicking, tapping or keyboard-activating a class now opens a compact confirmation for that class. Confirm to begin; Back or Escape returns to the roster without changing your current run.
+- Removed the corner Start button. Hover and focus still preview class information; the confirmation keeps the clicked class, mode and difficulty fixed.
+- Validation: all 19 class previews and confirmations, desktop/phone layouts, keyboard focus and cancellation, mode/difficulty selection, duplicate-click guards, dialog audit, JavaScript syntax and game regressions.
+
 ## 0.30.1 — 2026-10-21
 
 - Fixed oversized event-result dialogs, including leaving without a trade: the message and Continue action now share a compact window.

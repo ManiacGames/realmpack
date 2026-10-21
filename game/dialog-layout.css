@@ -22,3 +22,5 @@ body #overlay .adaptive-modal.dialog-choice-stack .choices{grid-template-columns
 body #overlay .adaptive-modal.dialog-choice-stack .choices{grid-template-columns:1fr!important}
 .adaptive-modal .event-scene,.adaptive-modal .event-scene *{pointer-events:none}
 @media(max-height:500px){body #overlay .adaptive-modal .shop-inspect-sections{grid-template-columns:1fr}body #overlay .adaptive-modal .choice{padding:6px}body #overlay .adaptive-modal .choice p{margin:4px 0}.adaptive-modal .choice .portalpixel{--sprite-size:36px!important}}
+
+body #overlay .adaptive-modal[data-dialog-kind=classconfirm]{max-width:560px}.roster-click-hint{font-size:16px;color:#c1cbb6}

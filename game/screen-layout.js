@@ -57,6 +57,7 @@ function screenFitModal(){
  if(modal.classList.contains('classes-modal')){modal.classList.add('screen-class-modal');return}
  for(const node of modal.querySelectorAll('.map-node,.map-depth')){const y=parseFloat(node.style.top);node.style.top=(y/860*100)+'%'}
  for(const line of modal.querySelectorAll('.map-canvas line'))for(const key of ['y1','y2'])line.setAttribute(key,(parseFloat(line.getAttribute(key))/860*100)+'%');
+ if(modalKind==='classconfirm'){modal.setAttribute('role','dialog');modal.setAttribute('aria-modal','true');modal.querySelector('h1').id='classStartTitle';modal.setAttribute('aria-labelledby','classStartTitle');modal.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const first=modal.querySelector('#cancelClassStart'),last=modal.querySelector('#confirmClassStart');if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}})}
  modal.classList.add('adaptive-modal');modal.dataset.dialogKind=modalKind;
  const nodes=[...modal.children],body=document.createElement('div');body.className='screen-modal-body';
  // Keep title, description and the final action/footer reachable on every page.
@@ -66,7 +67,7 @@ function screenFitModal(){
  const actions=rest.filter(n=>n.tagName==='BUTTON'&&!(modalKind==='path'&&n.getAttribute('onclick')==='showRunMap()'));
  if(actions.length){const bar=document.createElement('div');bar.className='dialog-actions';for(const action of actions)bar.append(action);modal.append(bar);footer=bar}
  const description=nodes[start-1];if(description?.tagName==='P'&&description.getBoundingClientRect().height>52)body.append(description);
- for(const node of rest)if(node!==footer&&!actions.includes(node))body.append(node);modal.insertBefore(body,footer);screenPager(body);screenRestoreFocus(focus);
+ for(const node of rest)if(node!==footer&&!actions.includes(node))body.append(node);modal.insertBefore(body,footer);screenPager(body);screenRestoreFocus(focus);if(modalKind==='classconfirm')modal.querySelector('#cancelClassStart')?.focus({preventScroll:true});
 }
 // Measure all content before pagination so small dialogs never inherit an empty viewport.
 function sizeAdaptiveModal(p){
