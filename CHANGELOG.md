@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.30.3 — 2026-10-22
+
+- Added a Dev notes button to the top bar and run menu. Notes open in a readable, content-sized window; long messages use the shared pager.
+- Kept the button visible on phones, with Run map also available in the menu. Opening notes pauses combat like the other reference windows.
+- Added a separate editable notes text in game/dev-notes.js, currently showing a placeholder until the developer supplies the message.
+- Validation: header and notes layouts at desktop/phone sizes, long-message paging, text escaping, combat pause/resume, dialog audit, JavaScript syntax and game regressions.
+
 ## 0.30.2 — 2026-10-21
 
 - Clicking, tapping or keyboard-activating a class now opens a compact confirmation for that class. Confirm to begin; Back or Escape returns to the roster without changing your current run.
