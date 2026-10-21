@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.26.1 — 2026-10-21
+
+- Gameplay tips now point to the relevant item, stat or control with a gold arrow and outline. Adjacency tips highlight a pair of neighboring items.
+- On small screens, tips point to the tab that reveals a hidden target and briefly tell you which tab to open. The pointer follows the target as the view changes.
+- Arrows never block clicks, hovering or dragging, and disappear when a tip is dismissed, disabled or no longer relevant.
+- Validation: hint target geometry, visible highlights, click-through, tab switching and cleanup across seven viewport sizes and both text modes; guide/tip layout checks, JavaScript syntax and game regression checks.
+
 ## 0.26.0 — 2026-10-21
 
 - Rewrote How to Play as four short steps and a few controls, all on one screen.

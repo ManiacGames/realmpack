@@ -1,4 +1,4 @@
-# Viewport workspace — 0.26.0
+# Viewport workspace — 0.26.1
 
 The main playfield uses the viewport height, with a compact header/footer. Desktop keeps combat above the backpack, with the nine-slot stash adjacent and a tabbed information panel. Below 901px, Battle / Pack & stash / Details tabs share the available screen. On phones the stash is a single nine-slot row below the backpack. The mobile Menu retains catalogue, bestiary, guide, larger-text and restart access.
 
@@ -58,10 +58,16 @@ Restart uses a content-height dialog capped at 480 pixels wide. Both actions rem
 
 Browser check: `REALMPACK_CHROME=/path/to/chrome node scripts/check-restart-dialog.cjs` covers seven sizes and both text modes.
 
-## Quick guide and gameplay tips — 0.26.0
+## Quick guide and gameplay tips — 0.26.1
 
 How to Play is a single compact sheet with four steps and the main controls. Gameplay tips are enabled by default; turn them off in the guide, run menu, or any tip. Show tips again clears their history and enables tips. Preferences and seen topics use `realmpack-gameplay-tips-v1`, separately from run saves, with in-memory fallback when storage is unavailable.
 
 One short tip appears for its current context. The tip uses its own row beneath the playfield or inside the portal, loot, shop or event dialog; it never captures focus or pauses combat. Got it waits 15 seconds before another tip. Tips leave when their context changes and each topic is shown once until reset. Topics cover packing, stash, adjacency, class inspection, consumable stacks, automatic combat, mana, healing consumables, long fights, dungeon markers, loot, merchants and event costs.
 
 Run `REALMPACK_CHROME=/path/to/chrome node scripts/check-gameplay-hints.cjs` for desktop/phone layouts, both text modes, contextual rules, controls, saved preferences and run preservation.
+
+## Tip pointers — 0.26.1
+
+A non-interactive SVG draws a static gold outline and an arrow from the current tip to its live target. Targets are resolved from the current DOM, including item instances and current room offers. Neighboring items are outlined together for adjacency tips. Hidden targets on narrow screens fall back to the Pack & stash or Battle tab with a short instruction; opening the tab retargets the pointer. Hidden, clipped, removed and paged-out elements are excluded. Dragging temporarily hides pointers. No focus, scroll, selection, or run state is changed by pointers.
+
+Run `REALMPACK_CHROME=/path/to/chrome node scripts/check-hint-pointers.cjs` to check all tip targets, geometry, pointer transparency, tab transitions and cleanup across seven sizes and both text modes.
