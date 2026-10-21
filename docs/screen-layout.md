@@ -1,4 +1,4 @@
-# Viewport workspace — 0.26.1
+# Viewport workspace — 0.27.0
 
 The main playfield uses the viewport height, with a compact header/footer. Desktop keeps combat above the backpack, with the nine-slot stash adjacent and a tabbed information panel. Below 901px, Battle / Pack & stash / Details tabs share the available screen. On phones the stash is a single nine-slot row below the backpack. The mobile Menu retains catalogue, bestiary, guide, larger-text and restart access.
 
@@ -58,7 +58,7 @@ Restart uses a content-height dialog capped at 480 pixels wide. Both actions rem
 
 Browser check: `REALMPACK_CHROME=/path/to/chrome node scripts/check-restart-dialog.cjs` covers seven sizes and both text modes.
 
-## Quick guide and gameplay tips — 0.26.1
+## Quick guide and gameplay tips — 0.27.0
 
 How to Play is a single compact sheet with four steps and the main controls. Gameplay tips are enabled by default; turn them off in the guide, run menu, or any tip. Show tips again clears their history and enables tips. Preferences and seen topics use `realmpack-gameplay-tips-v1`, separately from run saves, with in-memory fallback when storage is unavailable.
 
@@ -66,8 +66,14 @@ One short tip appears for its current context. The tip uses its own row beneath 
 
 Run `REALMPACK_CHROME=/path/to/chrome node scripts/check-gameplay-hints.cjs` for desktop/phone layouts, both text modes, contextual rules, controls, saved preferences and run preservation.
 
-## Tip pointers — 0.26.1
+## Tip pointers — 0.27.0
 
 A non-interactive SVG draws a static gold outline and an arrow from the current tip to its live target. Targets are resolved from the current DOM, including item instances and current room offers. Neighboring items are outlined together for adjacency tips. Hidden targets on narrow screens fall back to the Pack & stash or Battle tab with a short instruction; opening the tab retargets the pointer. Hidden, clipped, removed and paged-out elements are excluded. Dragging temporarily hides pointers. No focus, scroll, selection, or run state is changed by pointers.
 
 Run `REALMPACK_CHROME=/path/to/chrome node scripts/check-hint-pointers.cjs` to check all tip targets, geometry, pointer transparency, tab transitions and cleanup across seven sizes and both text modes.
+
+## Defeat screen — 0.27.0
+
+The defeat summary bypasses generic modal paging. A red/black frame surrounds the enemy attribution, class sprite, depth banner and six run stats. Character selection preserves the completed run until Start. New losses record `endedAt`; older saves omit the date. A surviving character at the 150-second limit receives a timeout message. The victory and endless-run flow is unchanged.
+
+Run `REALMPACK_CHROME=/path/to/chrome node scripts/check-defeat-screen.cjs` for viewport/text-mode checks, all class portraits, statistics, loss persistence and navigation.

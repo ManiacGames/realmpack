@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.27.0 — 2026-10-21
+
+- Rebuilt the defeat screen around the reference: a black backdrop, red pixel frame, Dead! heading, enemy attribution, centered class sprite and red character-selection button.
+- Replaced the name/fame area with depth reached, act and room, plus class, mode, victories, bosses, blessings and remaining gold. The summary fits a single screen without paging.
+- New defeats save their date so it stays accurate after reloading; existing saves remain compatible. Timeouts have their own message. Opening character selection preserves the finished run until Start.
+- Validation: desktop/phone defeat layouts in both text sizes, all 19 class portraits, run statistics, loss/save/reload, legacy saves, timeout, character selection, victory flow, JavaScript syntax and game regression checks.
+
 ## 0.26.1 — 2026-10-21
 
 - Gameplay tips now point to the relevant item, stat or control with a gold arrow and outline. Adjacency tips highlight a pair of neighboring items.
