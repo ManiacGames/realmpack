@@ -1,4 +1,4 @@
-# Viewport workspace — 0.24.4
+# Viewport workspace — 0.24.5
 
 The main playfield uses the viewport height, with a compact header/footer. Desktop keeps combat above the backpack, with the nine-slot stash adjacent and a tabbed information panel. Below 901px, Battle / Pack & stash / Details tabs share the available screen. On phones the stash is a single nine-slot row below the backpack. The mobile Menu retains catalogue, bestiary, guide, larger-text and restart access.
 
@@ -35,3 +35,11 @@ All 19 class portrait/name buttons remain visible together, without roster pagin
 The backpack measures its available grid area in both dimensions, keeping square cells and the existing five-pixel gaps. Cells grow up to 112px; item sprites and names scale with them. On adjacent layouts the stash column grows between 208px and 330px, with square slots constrained by both column width and available height. Phone layouts retain their nine-slot row. These changes do not add cells, stash slots or stack capacity.
 
 `node scripts/check-inventory-sizing.cjs` uses the optional browser setup to verify 12 viewport sizes, every backpack cell and all nine filled stash slots, square cells and clipping bounds, unchanged capacity, logo load, and actual S/drag transfers at two desktop sizes. The header and favicon use the original 40×40 [Vault Chest Unlocker sprite](https://realm.wiki/item?id=811).
+
+## Single-sheet Run Map
+
+Run Map bypasses the content pager. Its title, difficulty, legend, complete act route and Return action share one viewport-sized sheet. The route area takes the remaining height and its existing node/edge coordinates scale proportionally; map choices, IDs, routes and RNG behavior are unchanged. Compact maps use the legend and accessible marker labels instead of repeating text under every marker.
+
+The map uses CSS parchment tones, stained edges, a fold crease and faint contour lines with dark ink markers/routes. Current, visited, skipped and available nodes remain distinct by fill, border, opacity and state annotations. Available nodes retain keyboard focus and route selection.
+
+`node scripts/check-run-map.cjs` uses the optional browser setup to check eight viewport sizes at both text settings, every depth/node, absence of pagination or clipping, unchanged route/RNG, selection from the map, return behavior and the unrevealed-portal hint.

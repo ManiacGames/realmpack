@@ -1,3 +1,9 @@
+RealmPack 0.24.5
+- Run Map shows the whole act on one sheet, without pages or scrolling.
+- Weathered parchment, worn edges, fold marks, faded contours and ink routes.
+- Legend, dungeon difficulty and Return stay on the same screen.
+- Available route nodes remain selectable; existing routes are preserved.
+
 RealmPack 0.24.4
 - Larger backpack cells, item sprites and labels use available space.
 - Wider stash with larger square slots; capacities remain 30 cells and 9 stash slots.

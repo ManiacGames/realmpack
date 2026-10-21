@@ -35,6 +35,7 @@ function screenPaginate(p){
 function screenShowPage(p){const visible=new Set(p.pages[p.page]||[]);for(const n of p.nodes){if(visible.has(n))n.removeAttribute('data-screen-hidden');else n.setAttribute('data-screen-hidden','')}p.label.textContent=(p.page+1)+' / '+p.pages.length;p.prev.disabled=p.page===0;p.next.disabled=p.page>=p.pages.length-1;p.nav.classList.toggle('single-page',p.pages.length===1)}
 function screenFitModal(){
  const focus=screenFocus(),modal=document.querySelector('#overlay .modal');if(!modal||modal.dataset.screenFit)return;modal.dataset.screenFit='true';modal.classList.add('screen-modal');
+ if(modalKind==='runmap'){fitSingleRunMap(modal);return}
  if(modal.classList.contains('classes-modal')){modal.classList.add('screen-class-modal');return}
  for(const node of modal.querySelectorAll('.map-node,.map-depth')){const y=parseFloat(node.style.top);node.style.top=(y/860*100)+'%'}
  for(const line of modal.querySelectorAll('.map-canvas line'))for(const key of ['y1','y2'])line.setAttribute(key,(parseFloat(line.getAttribute(key))/860*100)+'%');
@@ -44,6 +45,15 @@ function screenFitModal(){
  const footer=last&&(last.matches('button,.shop-footer,.loot-footer,.loot-inspect-footer,.pagination,.catalogue-note')||last.querySelector('button')&&last.children.length<4&&!last.matches('.choices,.class-grid,.shop-offers,.loot-grid'))?last:null;
  const description=nodes[start-1];if(description?.tagName==='P'&&description.getBoundingClientRect().height>52)body.append(description);
  for(const node of rest)if(node!==footer)body.append(node);modal.insertBefore(body,footer);screenPager(body);screenRestoreFocus(focus);
+}
+function fitSingleRunMap(modal){
+ modal.classList.add('run-map-modal');
+ const heading=document.createElement('header');heading.className='run-map-heading';for(const node of [...modal.children].slice(0,3))heading.append(node);
+ const toolbar=document.createElement('div');toolbar.className='run-map-toolbar';for(const selector of ['.map-dungeon-rating','.map-legend']){const node=modal.querySelector(selector);if(node)toolbar.append(node)}
+ const footer=document.createElement('footer');footer.className='run-map-footer';const caption=modal.querySelector('.map-caption'),back=modal.querySelector('button.gold');if(caption)footer.append(caption);if(back)footer.append(back);
+ modal.prepend(heading,toolbar);modal.append(footer);
+ for(const node of modal.querySelectorAll('.map-node,.map-depth'))node.style.top=(parseFloat(node.style.top)/860*100)+'%';
+ for(const line of modal.querySelectorAll('.map-canvas line'))for(const key of ['y1','y2'])line.setAttribute(key,(parseFloat(line.getAttribute(key))/860*100)+'%')
 }
 function screenMenu(){modal('Run menu','Reference, settings and run controls.',`<div class="screen-menu"><button onclick="openCatalogue()">Item catalogue</button><button onclick="openBestiary()">Encounter bestiary</button><button onclick="showHelp()">Controls & synergies</button><button onclick="toggleLargeText();screenReflow()">Toggle larger text</button><button onclick="confirmRestart()">Start a new run</button></div><button onclick="closeModal()">Return to run</button>`,'menu')}
 const spriteDetailsPanels={};

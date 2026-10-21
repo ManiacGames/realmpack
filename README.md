@@ -1,6 +1,6 @@
 # RealmPack — The Shattered Vault
 
-A Realm-inspired inventory auto-battler. Browser release 0.24.4: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
+A Realm-inspired inventory auto-battler. Browser release 0.24.5: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
 
 ## Play
 
@@ -14,7 +14,7 @@ The Supply Caravan lets you buy one or two exact copies for an owned consumable 
 
 All 19 classes appear together in a compact roster. Hover, focus or tap one to preview its health, description, equipment and passive, then press Start.
 
-The playfield fits the viewport. Backpack cells and stash slots grow to use available space, with larger sprites, while keeping 30 backpack cells and nine stash slots. Desktop shows combat, backpack and stash together, with Item / Journal tabs on the right. Smaller screens use Battle / Pack & stash / Details tabs, and a Menu for reference/settings. Hover or focus your character sprite for class description and passive rules, or the enemy sprite for encounter mechanics and dungeon difficulty; click/tap pins either panel. Long content uses Previous/Next pages instead of scrolling. See [layout and browser validation](docs/screen-layout.md).
+The playfield fits the viewport. Backpack cells and stash slots grow to use available space, with larger sprites, while keeping 30 backpack cells and nine stash slots. Desktop shows combat, backpack and stash together, with Item / Journal tabs on the right. Smaller screens use Battle / Pack & stash / Details tabs, and a Menu for reference/settings. Hover or focus your character sprite for class description and passive rules, or the enemy sprite for encounter mechanics and dungeon difficulty; click/tap pins either panel. Long content uses Previous/Next pages instead of scrolling. Run Map is a single weathered parchment sheet with its entire act route, legend, difficulty and Return control visible together. See [layout and browser validation](docs/screen-layout.md).
 
 Hover a backpack item and press **S** to stash it; with nothing hovered, S uses the selected backpack item. This only works during preparation, respects the nine-slot stash and stack limit, and never equips an item from the stash. R rotates selected gear. Drag and drop still works in both directions.
 

@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.24.5 — 2026-10-21
+
+- Made Run Map a single sheet: the act route, difficulty, legend and Return button are visible together without Previous/Next pages.
+- Replaced the flat map background with weathered parchment, worn edges, a fold line, faded contours and dark ink routes/markers. Current, travelled, skipped and available routes retain distinct states.
+- The sheet fits desktop and phone viewports without scrolling; compact maps use the legend and marker tooltips for labels. Existing route selection and saved routes are preserved.
+- Validation: eight viewport sizes and both text modes, every depth/route node, no paging/clipping/scroll, route/RNG preservation, branch selection, Return and portal state, workspace browser checks, syntax and game regression checks.
+
 ## 0.24.4 — 2026-10-21
 
 - Enlarged backpack cells to use available panel space instead of staying capped at 64 pixels. Roomy screens can reach 112-pixel cells; item sprites and labels scale with them.
