@@ -1,0 +1,144 @@
+{
+  "baselineVersion": "0.30.6",
+  "optimizedVersion": "0.30.7",
+  "baseline": {
+    "elapsedMs": 19720.5,
+    "functions": {
+      "prepareCombatGeometry": {
+        "calls": 5951,
+        "ms": 5.900000000372529
+      },
+      "itemLinks": {
+        "calls": 90,
+        "ms": 2.4999999995343387
+      },
+      "renderDetail": {
+        "calls": 30,
+        "ms": 16.99999999976717
+      },
+      "updateItemEffects": {
+        "calls": 60,
+        "ms": 25.799999999580905
+      },
+      "inspectItem": {
+        "calls": 30,
+        "ms": 36.299999999813735
+      },
+      "screenPaginate": {
+        "calls": 30,
+        "ms": 18349.999999999767
+      }
+    },
+    "detailSize": {
+      "x": 1013,
+      "y": 142.390625,
+      "width": 338,
+      "height": 588.609375,
+      "top": 142.390625,
+      "right": 1351,
+      "bottom": 731,
+      "left": 1013
+    },
+    "pagers": [
+      {
+        "id": "enemyDetailsBody",
+        "dirty": true,
+        "connected": true
+      },
+      {
+        "id": "log",
+        "dirty": true,
+        "connected": true
+      },
+      {
+        "id": "",
+        "dirty": true,
+        "connected": true
+      },
+      {
+        "id": "detail",
+        "dirty": false,
+        "connected": true
+      }
+    ],
+    "animations": 1,
+    "browser": {
+      "LayoutCount": 1093,
+      "RecalcStyleCount": 8757,
+      "ScriptDuration": 0.442626,
+      "TaskDuration": 19.664762
+    },
+    "meanCycleMs": 657.3333333333488,
+    "p95CycleMs": 2779.899999999907
+  },
+  "optimized": {
+    "elapsedMs": 2103.3000000000466,
+    "functions": {
+      "prepareCombatGeometry": {
+        "calls": 5951,
+        "ms": 3.799999999348074
+      },
+      "itemLinks": {
+        "calls": 90,
+        "ms": 0.9000000006053597
+      },
+      "renderDetail": {
+        "calls": 30,
+        "ms": 14.499999999534339
+      },
+      "updateItemEffects": {
+        "calls": 60,
+        "ms": 18.99999999953434
+      },
+      "inspectItem": {
+        "calls": 30,
+        "ms": 28.399999999208376
+      },
+      "screenPaginate": {
+        "calls": 30,
+        "ms": 631.100000000326
+      }
+    },
+    "detailSize": {
+      "x": 1013,
+      "y": 142.390625,
+      "width": 338,
+      "height": 588.609375,
+      "top": 142.390625,
+      "right": 1351,
+      "bottom": 731,
+      "left": 1013
+    },
+    "pagers": [
+      {
+        "id": "enemyDetailsBody",
+        "dirty": true,
+        "connected": true
+      },
+      {
+        "id": "log",
+        "dirty": true,
+        "connected": true
+      },
+      {
+        "id": "",
+        "dirty": true,
+        "connected": true
+      },
+      {
+        "id": "detail",
+        "dirty": false,
+        "connected": true
+      }
+    ],
+    "animations": 48,
+    "browser": {
+      "LayoutCount": 101,
+      "RecalcStyleCount": 830,
+      "ScriptDuration": 0.080071,
+      "TaskDuration": 2.063273
+    },
+    "meanCycleMs": 70.10333333332868,
+    "p95CycleMs": 104.69999999995343
+  }
+}

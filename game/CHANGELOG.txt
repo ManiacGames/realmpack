@@ -1,3 +1,9 @@
+## 0.30.7 — 2026-10-22
+
+- Fixed combat stutters when hovering over items. Inspection pagination now measures blocks together instead of repeatedly changing and measuring the layout for every block.
+- Kept all inspection text, connection highlights, live counters and page controls, with word-level pagination retained for very short screens.
+- Validation: 60 inspection views and 290 pages across desktop, phone, short landscape and larger text; 102 general viewport checks; drag regression checks; exact combat state/log parity at 1×/2×/4×; JavaScript syntax and 17 game regressions. The 30-item combat hover test reduced inspector pagination time by about 97% versus 0.30.6.
+
 ## 0.30.6 — 2026-10-22
 
 - Replaced repeated cell-array adjacency checks with rectangle-edge checks, preserving legacy behavior for unplaced or overlapping items.

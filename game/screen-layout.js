@@ -16,8 +16,43 @@ function screenPager(host){
  const pager={host,content,nav,prev,label,next,nodes,page:0,pages:[],dirty:true};screenPagers.add(pager);
  const turn=delta=>{pager.page=Math.max(0,Math.min(pager.pages.length-1,pager.page+delta));screenShowPage(pager);(delta>0?next:prev).focus()};prev.onclick=()=>turn(-1);next.onclick=()=>turn(1);screenReflow(false)
 }
+// Inspection changes frequently during combat. Measure all blocks together instead
+// of forcing layout after inserting each block and each candidate page.
+function screenPaginateInspection(p,height){
+ const parts=node=>{
+  if(node.nodeType!==1||node.id||node.matches('button,select,svg,.detailtitle,.stats'))return null;
+  const children=[...node.childNodes].filter(n=>n.nodeType!==3||n.textContent.trim());
+  if(children.length>1)return children.map(child=>{const shell=node.cloneNode(false);shell.append(child.cloneNode(true));return shell});
+  const nested=children.length===1?parts(children[0]):null;
+  return nested?.map(child=>{const shell=node.cloneNode(false);shell.append(child);return shell})||null
+ };
+ let units=p.nodes;
+ for(let pass=0;pass<8;pass++){
+  for(const node of units)node.removeAttribute('data-screen-hidden');
+  p.content.replaceChildren(...units);
+  // No DOM writes between these reads: the browser needs only one layout.
+  const sizes=units.map(node=>{const style=getComputedStyle(node);return node.getBoundingClientRect().height+(parseFloat(style.marginTop)||0)+(parseFloat(style.marginBottom)||0)});
+  let split=false,unsupported=false;
+  const next=[];
+  for(let n=0;n<units.length;n++){
+   if(sizes[n]>height+1){const pieces=parts(units[n]);if(pieces){next.push(...pieces);split=true;continue}unsupported=true}
+   next.push(units[n])
+  }
+  if(unsupported)return false; // Retain word-level splitting on very short screens.
+  if(split){units=next;continue}
+  p.nodes=units;p.pages=[];let page=[],used=0;
+  for(let n=0;n<units.length;n++){
+   if(page.length&&used+sizes[n]>height+1){p.pages.push(page);page=[];used=0}
+   page.push(units[n]);used+=sizes[n]
+  }
+  if(page.length)p.pages.push(page);if(!p.pages.length)p.pages=[[]];
+  p.page=Math.min(p.page,p.pages.length-1);screenShowPage(p);return true
+ }
+ return false
+}
 function screenPaginate(p){
  p.nav.hidden=!!p.host.closest('.adaptive-modal')&&!p.host.closest('.adaptive-modal').classList.contains('dialog-paginated');const height=p.content.clientHeight;if(height<30)return;
+ if(p.host.id==='detail'&&screenPaginateInspection(p,height))return;
  const units=[];
  const collect=(node,depth=0,reserve=0)=>{
   if(node.nodeType===3){if(!node.textContent.trim())return;const span=document.createElement('div');span.append(node);node=span}

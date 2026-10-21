@@ -8,3 +8,7 @@ html[data-effects-quality=reduced] #effectLinks path,html[data-effects-quality=o
 html[data-effects-quality=off] .effect-flare,html[data-effects-quality=off] .effect-pop{display:none!important}
 .effects-quality-control{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:17px;border:1px solid #64745a;padding:6px 10px;min-width:0}
 .effects-quality-control select{min-width:0;font:inherit;color:inherit;background:#263326;border:1px solid #64745a;padding:4px}
+
+/* Predictable block measurements allow inspection pages to be packed in one pass. */
+#detail>.screen-page-content{display:flex;flex-direction:column}
+#detail>.screen-page-content>*{flex-shrink:0}
