@@ -2,7 +2,7 @@
 'use strict';
 const screenPagers=new Set();
 let screenPagerFrame=0;
-function screenView(view){hideEnemyDetails();document.documentElement.dataset.playView=view;document.querySelectorAll('[data-play-view]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.playView===view)));screenReflow()}
+function screenView(view){hideSpriteDetails();document.documentElement.dataset.playView=view;document.querySelectorAll('[data-play-view]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.playView===view)));screenReflow()}
 function screenTab(tab){document.querySelectorAll('[data-info-tab]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.infoTab===tab)));document.querySelectorAll('[data-info-pane]').forEach(p=>{p.hidden=p.dataset.infoPane!==tab});screenReflow()}
 function screenFocus(){const el=document.activeElement;return el&&el!==document.body?{el,start:el.selectionStart,end:el.selectionEnd}:null}
 function screenRestoreFocus(f){if(!f?.el.isConnected||!f.el.getClientRects().length)return;f.el.focus({preventScroll:true});if(typeof f.start==='number'&&f.el.setSelectionRange)f.el.setSelectionRange(f.start,f.end)}
@@ -46,62 +46,65 @@ function screenFitModal(){
  for(const node of rest)if(node!==footer)body.append(node);modal.insertBefore(body,footer);screenPager(body);screenRestoreFocus(focus);
 }
 function screenMenu(){modal('Run menu','Reference, settings and run controls.',`<div class="screen-menu"><button onclick="openCatalogue()">Item catalogue</button><button onclick="openBestiary()">Encounter bestiary</button><button onclick="showHelp()">Controls & synergies</button><button onclick="toggleLargeText();screenReflow()">Toggle larger text</button><button onclick="confirmRestart()">Start a new run</button></div><button onclick="closeModal()">Return to run</button>`,'menu')}
-let enemyDetailsPinned=false,enemyDetailsTimer=0,enemyDetailsSuppressFocus=false;
-function positionEnemyDetails(){
- const trigger=document.getElementById('enemySprite'),panel=document.getElementById('enemyDetails');if(!trigger||!panel||panel.hidden)return;
- const r=trigger.getBoundingClientRect();if(!r.height){hideEnemyDetails();return}const width=panel.offsetWidth;
+const spriteDetailsPanels={};
+function positionSpriteDetails(key){
+ const p=spriteDetailsPanels[key];if(!p||p.panel.hidden)return;const {trigger,panel}=p,r=trigger.getBoundingClientRect();if(!r.height){hideSpriteDetails(key);return}const width=panel.offsetWidth;
  let left,top,height=Math.min(Number(panel.dataset.fittedHeight)||360,innerHeight-16);
  if(r.left>=width+16){left=r.left-width-8;top=Math.max(8,Math.min(innerHeight-height-8,r.top))}
  else if(innerWidth-r.right>=width+16){left=r.right+8;top=Math.max(8,Math.min(innerHeight-height-8,r.top))}
  else {const below=innerHeight-r.bottom-16,above=r.top-16,useBelow=below>=above;height=Math.min(height,Math.max(120,useBelow?below:above));left=Math.max(8,Math.min(innerWidth-width-8,r.right-width));top=useBelow?r.bottom+8:r.top-height-8}
  panel.style.height=height+'px';panel.style.left=left+'px';panel.style.top=Math.max(8,top)+'px'
 }
-function showEnemyDetails(pin=false){
- const panel=document.getElementById('enemyDetails'),trigger=document.getElementById('enemySprite');if(!panel||modalKind)return;
- clearTimeout(enemyDetailsTimer);if(pin)enemyDetailsPinned=true;delete panel.dataset.fittedHeight;panel.hidden=false;trigger.setAttribute('aria-expanded','true');
- document.getElementById('enemyDetailsName').textContent=document.getElementById('ename').textContent||'Encounter details';positionEnemyDetails();
- for(const p of screenPagers)if(p.host===document.getElementById('enemyDetailsBody'))p.dirty=true;screenReflow(false);requestAnimationFrame(()=>{
-  if(panel.hidden)return;const p=[...screenPagers].find(p=>p.host.id==='enemyDetailsBody');if(!p||p.pages.length!==1)return;
-  const top=p.content.getBoundingClientRect().top,bottom=Math.max(top,...[...p.content.children].filter(n=>!n.hasAttribute('data-screen-hidden')).map(n=>n.getBoundingClientRect().bottom));
-  panel.dataset.fittedHeight=String(Math.ceil(bottom-top+panel.firstElementChild.offsetHeight+20+p.nav.offsetHeight+18));positionEnemyDetails();p.dirty=true;screenReflow(false)
+function showSpriteDetails(key,pin=false){
+ const p=spriteDetailsPanels[key];if(!p||modalKind)return;
+ for(const other of Object.keys(spriteDetailsPanels))if(other!==key)hideSpriteDetails(other);
+ const {panel,trigger,host,title,nameId}=p;clearTimeout(p.timer);if(pin)p.pinned=true;delete panel.dataset.fittedHeight;panel.hidden=false;trigger.setAttribute('aria-expanded','true');title.textContent=document.getElementById(nameId).textContent;positionSpriteDetails(key);
+ for(const pager of screenPagers)if(pager.host===host)pager.dirty=true;screenReflow(false);requestAnimationFrame(()=>{
+  if(panel.hidden)return;const pager=[...screenPagers].find(pager=>pager.host===host);if(!pager||pager.pages.length!==1)return;
+  const top=pager.content.getBoundingClientRect().top,bottom=Math.max(top,...[...pager.content.children].filter(n=>!n.hasAttribute('data-screen-hidden')).map(n=>n.getBoundingClientRect().bottom));
+  panel.dataset.fittedHeight=String(Math.ceil(bottom-top+panel.firstElementChild.offsetHeight+20+pager.nav.offsetHeight+18));positionSpriteDetails(key);pager.dirty=true;screenReflow(false)
  })
 }
-function hideEnemyDetails(restoreFocus=false){
- clearTimeout(enemyDetailsTimer);enemyDetailsPinned=false;const panel=document.getElementById('enemyDetails'),trigger=document.getElementById('enemySprite');if(!panel)return;panel.hidden=true;trigger.setAttribute('aria-expanded','false');
- if(restoreFocus){enemyDetailsSuppressFocus=true;trigger.focus({preventScroll:true});enemyDetailsSuppressFocus=false}
+function hideSpriteDetails(key,restoreFocus=false){
+ if(!key){for(const id of Object.keys(spriteDetailsPanels))hideSpriteDetails(id);return}
+ const p=spriteDetailsPanels[key];if(!p)return;clearTimeout(p.timer);p.pinned=false;p.panel.hidden=true;p.trigger.setAttribute('aria-expanded','false');
+ if(restoreFocus){p.suppressFocus=true;p.trigger.focus({preventScroll:true});p.suppressFocus=false}
 }
-function scheduleEnemyDetailsHide(){clearTimeout(enemyDetailsTimer);enemyDetailsTimer=setTimeout(()=>{const panel=document.getElementById('enemyDetails'),trigger=document.getElementById('enemySprite');if(!enemyDetailsPinned&&!panel.matches(':hover')&&!trigger.matches(':hover')&&!panel.contains(document.activeElement)&&!trigger.contains(document.activeElement))hideEnemyDetails()},150)}
-function initEnemyDetails(){
- const trigger=document.getElementById('enemySprite');if(!trigger)return;
- const panel=document.createElement('section');panel.id='enemyDetails';panel.className='panel enemy-details';panel.hidden=true;panel.setAttribute('role','dialog');panel.setAttribute('aria-labelledby','enemyDetailsName');
- panel.innerHTML='<div class="panelhead"><h2 id="enemyDetailsName">Encounter details</h2><button aria-label="Close encounter details" onclick="hideEnemyDetails(true)">✕</button></div><div id="enemyDetailsBody"></div>';
- for(const id of ['encounterInfo','dungeonDifficulty'])panel.lastChild.append(document.getElementById(id));document.body.append(panel);screenPager(panel.lastChild);
- trigger.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch')showEnemyDetails()});trigger.addEventListener('pointerleave',scheduleEnemyDetailsHide);
- trigger.addEventListener('focus',()=>{if(!enemyDetailsSuppressFocus)showEnemyDetails()});trigger.addEventListener('blur',scheduleEnemyDetailsHide);
- trigger.addEventListener('click',()=>{if(enemyDetailsPinned)hideEnemyDetails();else showEnemyDetails(true)});
- panel.addEventListener('pointerenter',()=>clearTimeout(enemyDetailsTimer));panel.addEventListener('pointerleave',scheduleEnemyDetailsHide);panel.addEventListener('focusout',scheduleEnemyDetailsHide);
- document.addEventListener('pointerdown',e=>{if(!panel.contains(e.target)&&!trigger.contains(e.target))hideEnemyDetails()});
- document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden){e.preventDefault();e.stopImmediatePropagation();hideEnemyDetails(true)}},true);
- new MutationObserver(()=>{if(!panel.hidden){document.getElementById('enemyDetailsName').textContent=document.getElementById('ename').textContent;for(const p of screenPagers)if(p.host===document.getElementById('enemyDetailsBody'))p.dirty=true;screenReflow(false)}}).observe(document.getElementById('encounterInfo'),{childList:true,subtree:true});
- window.addEventListener('resize',positionEnemyDetails);document.fonts?.ready.then(positionEnemyDetails)
+function scheduleSpriteDetailsHide(key){const p=spriteDetailsPanels[key];clearTimeout(p.timer);p.timer=setTimeout(()=>{if(!p.pinned&&!p.panel.matches(':hover')&&!p.trigger.matches(':hover')&&!p.panel.contains(document.activeElement)&&!p.trigger.contains(document.activeElement))hideSpriteDetails(key)},150)}
+function initSpriteDetails({key,triggerId,nameId,label,selectors,sourcePager=false}){
+ const trigger=document.getElementById(triggerId);if(!trigger)return;const panel=document.createElement('section');panel.id=key+'Details';panel.className='panel enemy-details '+key+'-details';panel.hidden=true;panel.setAttribute('role','dialog');panel.setAttribute('aria-labelledby',key+'DetailsName');
+ panel.innerHTML=`<div class="panelhead"><h2 id="${key}DetailsName">${label}</h2><button aria-label="Close ${label.toLowerCase()}" onclick="hideSpriteDetails('${key}',true)">✕</button></div><div id="${key}DetailsBody"></div>`;
+ const sources=selectors.map(selector=>document.querySelector(selector));for(const node of sources)panel.lastChild.append(node);document.body.append(panel);
+ const host=sourcePager?sources[0]:panel.lastChild;const p={panel,trigger,nameId,title:panel.firstElementChild.firstElementChild,host,pinned:false,timer:0,suppressFocus:false};spriteDetailsPanels[key]=p;screenPager(host);
+ trigger.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch')showSpriteDetails(key)});trigger.addEventListener('pointerleave',()=>scheduleSpriteDetailsHide(key));
+ trigger.addEventListener('focus',()=>{if(!p.suppressFocus)showSpriteDetails(key)});trigger.addEventListener('blur',()=>scheduleSpriteDetailsHide(key));trigger.addEventListener('click',()=>{if(p.pinned)hideSpriteDetails(key);else showSpriteDetails(key,true)});
+ panel.addEventListener('pointerenter',()=>clearTimeout(p.timer));panel.addEventListener('pointerleave',()=>scheduleSpriteDetailsHide(key));panel.addEventListener('focusout',()=>scheduleSpriteDetailsHide(key));
+ document.addEventListener('pointerdown',e=>{if(!panel.contains(e.target)&&!trigger.contains(e.target))hideSpriteDetails(key)});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden){e.preventDefault();e.stopImmediatePropagation();hideSpriteDetails(key,true)}},true);
+ const observer=new MutationObserver(()=>{
+  if(sourcePager){observer.disconnect();delete host.dataset.screenPaged;screenPager(host);observer.observe(host,{childList:true})}
+  if(!panel.hidden){p.title.textContent=document.getElementById(nameId).textContent;for(const pager of screenPagers)if(pager.host===host)pager.dirty=true;screenReflow(false)}
+ });for(const node of sources)observer.observe(node,{childList:true,subtree:!sourcePager});
+ window.addEventListener('resize',()=>positionSpriteDetails(key));document.fonts?.ready.then(()=>positionSpriteDetails(key))
 }
+function showEnemyDetails(pin=false){showSpriteDetails('enemy',pin)}
+function hideEnemyDetails(restoreFocus=false){hideSpriteDetails('enemy',restoreFocus)}
+function showClassDetails(pin=false){showSpriteDetails('class',pin)}
+function hideClassDetails(restoreFocus=false){hideSpriteDetails('class',restoreFocus)}
 function initScreenLayout(){
  const layout=document.querySelector('.layout'),right=document.querySelector('.right');if(!layout||!right)return;
  const menu=document.createElement('button');menu.className='screen-menu-button';menu.textContent='Menu';menu.onclick=screenMenu;document.querySelector('.topright').append(menu);
  const nav=document.createElement('nav');nav.className='play-tabs';nav.setAttribute('role','tablist');nav.setAttribute('aria-label','Play view');nav.innerHTML=['battle','pack','details'].map((v,n)=>`<button role="tab" data-play-view="${v}" aria-selected="${n===1}" onclick="screenView('${v}')">${['Battle','Pack & stash','Details'][n]}</button>`).join('');layout.before(nav);
  const inspector=right.children[0],journal=right.children[1];inspector.dataset.infoPane='item';journal.dataset.infoPane='journal';journal.hidden=true;
- const tabbar=document.createElement('nav');tabbar.className='info-tabs';tabbar.setAttribute('role','tablist');tabbar.setAttribute('aria-label','Run information');tabbar.innerHTML=[['item','Item'],['class','Class'],['journal','Journal']].map(([id,name])=>`<button role="tab" data-info-tab="${id}" aria-selected="${id==='item'}" onclick="screenTab('${id}')">${name}</button>`).join('');right.prepend(tabbar);
- for(const [id,title,selectors] of [['class','Your class',['.classbox']]]){
-  const pane=document.createElement('section');pane.className='panel screen-info-panel';pane.dataset.infoPane=id;pane.hidden=true;pane.innerHTML=`<div class="panelhead"><h2>${title}</h2></div><div class="screen-info-body"></div>`;
-  for(const selector of selectors){const el=document.querySelector(selector);if(el)pane.lastChild.append(el)}right.append(pane);screenPager(pane.lastChild)
- }
- initEnemyDetails();
+ const tabbar=document.createElement('nav');tabbar.className='info-tabs';tabbar.setAttribute('role','tablist');tabbar.setAttribute('aria-label','Run information');tabbar.innerHTML=[['item','Item'],['journal','Journal']].map(([id,name])=>`<button role="tab" data-info-tab="${id}" aria-selected="${id==='item'}" onclick="screenTab('${id}')">${name}</button>`).join('');right.prepend(tabbar);
+ initSpriteDetails({key:'enemy',triggerId:'enemySprite',nameId:'ename',label:'Encounter details',selectors:['#encounterInfo','#dungeonDifficulty']});
+ initSpriteDetails({key:'class',triggerId:'playerSprite',nameId:'playerName',label:'Class information',selectors:['.classbox'],sourcePager:true});
  // Long explanations remain available in the guide, instead of occupying the playfield.
  const hints=document.createElement('button');hints.textContent='Controls & synergies';hints.onclick=showHelp;document.querySelector('.pack-pane .invfoot>div').append(hints);
  const detail=document.getElementById('detail'),log=document.getElementById('log');
  const watch=host=>{let observer;const refresh=()=>{observer.disconnect();delete host.dataset.screenPaged;screenPager(host);observer.observe(host,{childList:true});};observer=new MutationObserver(refresh);refresh()};watch(detail);watch(log);
  document.addEventListener('toggle',()=>screenReflow(),true);
- new MutationObserver(()=>{if(document.querySelector('#overlay .modal'))hideEnemyDetails();screenFitModal();screenReflow(false)}).observe(document.getElementById('overlay'),{childList:true});
+ new MutationObserver(()=>{if(document.querySelector('#overlay .modal'))hideSpriteDetails();screenFitModal();screenReflow(false)}).observe(document.getElementById('overlay'),{childList:true});
  new ResizeObserver(screenReflow).observe(document.documentElement);window.addEventListener('resize',screenReflow);
  document.fonts?.ready.then(()=>screenReflow());
  document.documentElement.dataset.playView='pack';screenFitModal();screenReflow()

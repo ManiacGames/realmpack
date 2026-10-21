@@ -1,3 +1,9 @@
+RealmPack 0.24.3
+- Hover or focus your character sprite for class description and passive rules.
+- Click/tap to pin, or dismiss with Escape, Close or an outside click.
+- Removed the Class sidebar tab; character/enemy panels close each other.
+- Inspection keeps combat running.
+
 RealmPack 0.24.2
 - Hover or focus the enemy sprite for encounter mechanics and dungeon difficulty.
 - Click/tap to pin details; Escape, Close or an outside click dismisses them.

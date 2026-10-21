@@ -1,8 +1,8 @@
-# Viewport workspace — 0.24.2
+# Viewport workspace — 0.24.3
 
 The main playfield uses the viewport height, with a compact header/footer. Desktop keeps combat above the backpack, with the nine-slot stash adjacent and a tabbed information panel. Below 901px, Battle / Pack & stash / Details tabs share the available screen. On phones the stash is a single nine-slot row below the backpack. The mobile Menu retains catalogue, bestiary, guide, larger-text and restart access.
 
-Item / Class / Journal tabs expose secondary information. Hovering or keyboard-focusing the enemy sprite opens encounter mechanics and dungeon difficulty in a nearby panel; click/tap pins it. Moving into the panel keeps it available for reading and paging. Escape, Close, an outside click, switching play views or opening a dialog dismisses it. Combat continues while inspecting. Long content and dialogs use Previous / Next pages, with main modal actions kept outside the paged area. Catalogue offers are compact; Inspect opens their full rules. The route map uses the available dialog height. Combat pauses while the menu is open, as it does for the guide and map.
+Item / Journal tabs expose secondary information. Hovering or keyboard-focusing your character sprite opens its class description and passive rules nearby; click/tap pins that panel. Character and enemy panels close each other and share paging/dismissal behavior. Hovering or keyboard-focusing the enemy sprite opens encounter mechanics and dungeon difficulty in a nearby panel; click/tap pins it. Moving into the panel keeps it available for reading and paging. Escape, Close, an outside click, switching play views or opening a dialog dismisses it. Combat continues while inspecting. Long content and dialogs use Previous / Next pages, with main modal actions kept outside the paged area. Catalogue offers are compact; Inspect opens their full rules. The route map uses the available dialog height. Combat pauses while the menu is open, as it does for the guide and map.
 
 The pager measures content at the current viewport and text size. It keeps original live DOM nodes mounted across pages so encounter updates, form values and handlers remain valid. It preserves focused search inputs/caret positions, reflows on resize and expanded details, and only repaginates changed panels during journal updates.
 
@@ -25,3 +25,7 @@ All 19 class portrait/name buttons remain visible together, without roster pagin
 ## Enemy details verification
 
 `node scripts/check-enemy-details.cjs` uses the same optional browser setup to test hover, keyboard focus, click/tap pinning, pointer transfer into the panel, page bounds, Escape/focus return, outside dismissal, live information, view/modal cleanup and uninterrupted combat at six viewport sizes. The live encounter/difficulty nodes remain mounted when hidden so encounter updates stay intact.
+
+## Character details verification
+
+`node scripts/check-class-details.cjs` checks all 19 live class panels across the six viewport sizes, including description/passive fidelity and every content page. It also checks hover/focus/tap, pointer transfer, run preservation, Escape/focus return, outside dismissal, mutual exclusion with enemy details, view/modal cleanup and uninterrupted combat. The class box stays mounted and retains its live class-update behavior while hidden.

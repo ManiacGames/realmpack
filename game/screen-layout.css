@@ -36,3 +36,8 @@ body .arena .enemy-inspect-trigger:focus-visible{outline:2px solid #c6cfae;outli
 .enemy-details{position:fixed;z-index:50;width:min(410px,calc(100vw - 16px));height:min(360px,calc(100dvh - 16px));display:flex;flex-direction:column;box-shadow:0 6px 22px #0009}
 .enemy-details[hidden]{display:none!important}.enemy-details>.panelhead{justify-content:space-between;align-items:center;gap:10px;padding:8px 12px}.enemy-details h2{font-size:20px}.enemy-details>.panelhead button{min-height:28px;font-size:14px;padding:3px 7px}
 #enemyDetailsBody{flex:1;min-height:0;padding:10px}.enemy-details .encounter-info{padding:0 0 8px;font-size:17px;line-height:1.4;background:transparent}.enemy-details .encounter-meta{font-size:15px;line-height:1.45;margin-top:10px}.enemy-details .encounter-difficulty{padding:10px 0;background:transparent}.enemy-details .dungeon-difficulty-badge{white-space:normal}
+/* Character information uses the same inspect interaction as the enemy. */
+body .arena .player-inspect-trigger,body .arena .player-inspect-trigger:hover{background:transparent;border:0;box-shadow:none;padding:0;color:inherit;cursor:help}
+body .arena .player-inspect-trigger:focus-visible{outline:2px solid #c6cfae;outline-offset:4px}
+#classDetailsBody{flex:1;min-height:0;padding:10px}.class-details .classbox{height:100%;padding:0;border:0;background:transparent}.class-details .classbox>.screen-page-content>.sprite-art{display:none!important}.class-details .classbox h3{font-size:21px;margin:0 0 8px}.class-details .classbox p{font-size:17px;line-height:1.4;margin:8px 0}.class-details .classbox strong{font-size:18px}.class-details .classbox button{font-size:16px;min-height:32px;padding:5px 9px}
+.class-details .classbox h3{display:none}

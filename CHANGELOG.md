@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.24.3 — 2026-10-21
+
+- Moved class description and passive information from the sidebar to the character sprite. Hover or keyboard-focus your character to inspect it; click/tap pins the panel.
+- Removed the Class sidebar tab. Character and enemy panels share reading/paging, Escape, Close, outside-click and view/dialog dismissal; opening one closes the other. Combat continues while inspecting.
+- Validation: all 19 live class previews at six viewport sizes, complete descriptions/passive rules and page bounds, hover/focus/tap, active-run preservation, dismissal/focus, panel switching, modal/view cleanup, uninterrupted combat, enemy/workspace browser regressions, syntax and game regression checks.
+
 ## 0.24.2 — 2026-10-21
 
 - Moved encounter mechanics and dungeon difficulty out of the sidebar into an enemy-sprite details panel. Hover or keyboard-focus the enemy to inspect it; click/tap pins the panel.
