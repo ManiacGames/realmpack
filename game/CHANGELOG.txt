@@ -4,6 +4,7 @@
 
 - Replaced the oversized restart screen with a compact, centered confirmation. Keep playing and Choose character sit together, with no paging or scrolling.
 - Clarified that the current run is only replaced when Start is pressed in character selection. Keyboard focus starts on Keep playing, stays inside the dialog, and Escape cancels.
+- Isolated item identity checks from randomly selected enemy passives so vampire healing cannot cause intermittent deployment failures.
 - Validation: 14 desktop/phone layouts across seven viewport sizes and both text modes; action visibility, keyboard focus, cancellation, safe character selection and combat guard; JavaScript syntax and game regression checks.
 
 ## 0.25.0 — 2026-10-21

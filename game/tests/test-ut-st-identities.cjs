@@ -3,6 +3,7 @@ const {ctx,vm}=require('./load-game.cjs');
 console.log(vm.runInContext(`(()=>{
 const check=(v,m)=>{if(!v)throw Error(m)},near=(a,b)=>Math.abs(a-b)<1e-8;
 const normalPassive=passive;passive=()=>{}; // Isolate item mechanics from class proc damage.
+enemyProfiles=()=>[]; // Random vampire encounters must not heal away measured retaliation damage.
 const type=name=>DATA.items.find(d=>d.name===name&&!d.isShiny).id;
 function setup(name){freshRun('wizard',true);selectPortal(s.portalChoices[0]);s.items=[];s.stash=[];const i=Object.assign(makeItem(type(name)),{x:0,y:0});s.items=[i];s.phase='prep';setEnemy();s.phase='fight';s.enemy.hp=s.enemy.max=100000;s.enemy.ward=0;s.enemy.veil=0;s.enemy.vulnerable=0;s.hp=s.max=1000;s.mana=50;s.power=0;s.silence=0;return i}
 const loss=()=>100000-s.enemy.hp;
