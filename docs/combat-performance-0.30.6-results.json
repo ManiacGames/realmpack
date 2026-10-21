@@ -1,0 +1,249 @@
+{
+  "baselineVersion": "0.30.5",
+  "optimizedVersion": "0.30.6",
+  "before": [
+    {
+      "speed": 1,
+      "elapsedMs": 2892.4000000000233,
+      "meanTickMs": 2.1116666666649206,
+      "p95TickMs": 3.299999999930151,
+      "activations": 53,
+      "functions": {
+        "updateExpeditionUI": {
+          "calls": 120,
+          "ms": 0.9000000000232831
+        },
+        "itemLinks": {
+          "calls": 120,
+          "ms": 2.1999999997206032
+        },
+        "updateItemEffects": {
+          "calls": 120,
+          "ms": 26.799999999115244
+        },
+        "tick": {
+          "calls": 120,
+          "ms": 253.09999999951106
+        },
+        "log": {
+          "calls": 59,
+          "ms": 0.19999999995343387
+        },
+        "itemFxPulse": {
+          "calls": 75,
+          "ms": 0.3000000002793968
+        }
+      },
+      "browser": {
+        "LayoutCount": 133,
+        "RecalcStyleCount": 1115,
+        "ScriptDuration": 0.026738,
+        "TaskDuration": 2.517964
+      }
+    },
+    {
+      "speed": 2,
+      "elapsedMs": 3053.5,
+      "meanTickMs": 2.1624999999990298,
+      "p95TickMs": 3.699999999953434,
+      "activations": 113,
+      "functions": {
+        "updateExpeditionUI": {
+          "calls": 120,
+          "ms": 1.0000000002328306
+        },
+        "itemLinks": {
+          "calls": 120,
+          "ms": 2.5999999997438863
+        },
+        "updateItemEffects": {
+          "calls": 120,
+          "ms": 27.999999999068677
+        },
+        "tick": {
+          "calls": 120,
+          "ms": 258.9999999998836
+        },
+        "log": {
+          "calls": 127,
+          "ms": 0.39999999990686774
+        },
+        "itemFxPulse": {
+          "calls": 179,
+          "ms": 0.2999999999301508
+        }
+      },
+      "browser": {
+        "LayoutCount": 136,
+        "RecalcStyleCount": 1145,
+        "ScriptDuration": 0.029037999999999994,
+        "TaskDuration": 2.7149179999999995
+      }
+    },
+    {
+      "speed": 4,
+      "elapsedMs": 3321.20000000007,
+      "meanTickMs": 2.23833333333605,
+      "p95TickMs": 4.099999999976717,
+      "activations": 226,
+      "functions": {
+        "updateExpeditionUI": {
+          "calls": 120,
+          "ms": 1.900000000023283
+        },
+        "itemLinks": {
+          "calls": 120,
+          "ms": 2.0999999998603016
+        },
+        "updateItemEffects": {
+          "calls": 120,
+          "ms": 26.200000001350418
+        },
+        "tick": {
+          "calls": 120,
+          "ms": 268.40000000037253
+        },
+        "log": {
+          "calls": 244,
+          "ms": 0.40000000002328306
+        },
+        "itemFxPulse": {
+          "calls": 358,
+          "ms": 1.099999999976717
+        }
+      },
+      "browser": {
+        "LayoutCount": 145,
+        "RecalcStyleCount": 1214,
+        "ScriptDuration": 0.04024899999999999,
+        "TaskDuration": 3.007503
+      }
+    }
+  ],
+  "after": [
+    {
+      "speed": 1,
+      "elapsedMs": 2410.3000000000466,
+      "meanTickMs": 0.6591666666664726,
+      "p95TickMs": 1.099999999976717,
+      "activations": 53,
+      "functions": {
+        "updateExpeditionUI": {
+          "calls": 120,
+          "ms": 1.1999999998370185
+        },
+        "itemLinks": {
+          "calls": 120,
+          "ms": 1.5999999997438863
+        },
+        "updateItemEffects": {
+          "calls": 120,
+          "ms": 27.599999999976717
+        },
+        "tick": {
+          "calls": 120,
+          "ms": 79
+        },
+        "log": {
+          "calls": 59,
+          "ms": 0.39999999990686774
+        },
+        "itemFxPulse": {
+          "calls": 75,
+          "ms": 0.2000000000698492
+        }
+      },
+      "browser": {
+        "LayoutCount": 131,
+        "RecalcStyleCount": 402,
+        "ScriptDuration": 0.013711,
+        "TaskDuration": 1.005954
+      }
+    },
+    {
+      "speed": 2,
+      "elapsedMs": 2674.79999999993,
+      "meanTickMs": 0.6833333333372138,
+      "p95TickMs": 1.1000000000931323,
+      "activations": 113,
+      "functions": {
+        "updateExpeditionUI": {
+          "calls": 120,
+          "ms": 1.400000000023283
+        },
+        "itemLinks": {
+          "calls": 120,
+          "ms": 2.3999999997904524
+        },
+        "updateItemEffects": {
+          "calls": 120,
+          "ms": 29.399999999557622
+        },
+        "tick": {
+          "calls": 120,
+          "ms": 81.60000000044238
+        },
+        "log": {
+          "calls": 127,
+          "ms": 0.09999999997671694
+        },
+        "itemFxPulse": {
+          "calls": 179,
+          "ms": 0.6000000000931323
+        }
+      },
+      "browser": {
+        "LayoutCount": 141,
+        "RecalcStyleCount": 609,
+        "ScriptDuration": 0.010535999999999997,
+        "TaskDuration": 1.531715
+      }
+    },
+    {
+      "speed": 4,
+      "elapsedMs": 3478.9000000000233,
+      "meanTickMs": 0.9108333333346915,
+      "p95TickMs": 2.3999999999068677,
+      "activations": 226,
+      "functions": {
+        "updateExpeditionUI": {
+          "calls": 120,
+          "ms": 5.100000000442378
+        },
+        "itemLinks": {
+          "calls": 120,
+          "ms": 6.599999999860302
+        },
+        "updateItemEffects": {
+          "calls": 120,
+          "ms": 46.299999999348074
+        },
+        "tick": {
+          "calls": 120,
+          "ms": 107.9000000001397
+        },
+        "log": {
+          "calls": 244,
+          "ms": 1.1000000002095476
+        },
+        "itemFxPulse": {
+          "calls": 358,
+          "ms": 0.5999999999767169
+        }
+      },
+      "browser": {
+        "LayoutCount": 142,
+        "RecalcStyleCount": 847,
+        "ScriptDuration": 0.038669,
+        "TaskDuration": 2.730404
+      }
+    }
+  ],
+  "balanceComparison": {
+    "classes": 19,
+    "dungeons": 35,
+    "buildVariants": 3,
+    "fights": 1995,
+    "differentRows": 0
+  }
+}

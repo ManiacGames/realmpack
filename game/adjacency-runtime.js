@@ -12,8 +12,8 @@ const ADJACENCY_RULES=[
  {name:'Charmed supplies',kind:'utility',target:d=>!!d.once&&['damage','drain','heal','block','mana'].includes(d.effect),source:d=>d.group==='ring',stat:'primary',value:.10,text:'+10% primary amount per adjacent ring (max +20%)'},
  {name:'Protected supplies',kind:'defense',target:d=>!!d.once,source:d=>d.group==='armor',stat:'block',value:2,text:'Gain 2 block per adjacent armor on use (max 4)'}
 ];
-function adjacencyConnections(i){if(!s.items.includes(i))return [];const d=defs[i.type],near=nearbyItems(i);return ADJACENCY_RULES.filter(r=>r.target(d)).flatMap(rule=>near.filter(j=>rule.source(defs[j.type],d)).slice(0,2).map(source=>({rule,source})))}
-function adjacencyStat(i,stat){return adjacencyConnections(i).filter(c=>c.rule.stat===stat).reduce((n,c)=>n+c.rule.value,0)}
+function adjacencyConnections(i){if(!s.items.includes(i))return [];const cache=prepareCombatGeometry();if(cache?.connections.has(i))return cache.connections.get(i);const d=defs[i.type],near=nearbyItems(i),connections=ADJACENCY_RULES.filter(r=>r.target(d)).flatMap(rule=>near.filter(j=>rule.source(defs[j.type],d)).slice(0,2).map(source=>({rule,source})));if(cache){cache.connections.set(i,connections);const stats={};for(const {rule} of connections)stats[rule.stat]=(stats[rule.stat]||0)+rule.value;cache.stats.set(i,stats)}return connections}
+function adjacencyStat(i,stat){const cache=prepareCombatGeometry();if(cache?.neighbors.has(i)){adjacencyConnections(i);return cache.stats.get(i)?.[stat]||0}return adjacencyConnections(i).filter(c=>c.rule.stat===stat).reduce((n,c)=>n+c.rule.value,0)}
 function adjacencyPrimary(i,amount){return amount*(1+Math.min(.35,adjacencyStat(i,'primary')))}
 function adjacencyOnActivation(i){const block=adjacencyStat(i,'block'),mana=adjacencyStat(i,'mana'),status=adjacencyStat(i,'status');if(block)gainBlock(block);if(mana)s.mana=Math.min(50,s.mana+mana);if(status)apply(defs[i.type].effect,status)}
 const ADJACENCY_COPY={

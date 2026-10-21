@@ -14,13 +14,13 @@ function positionEnemyStatus(){const tip=document.getElementById('enemyStatusToo
 function showEnemyStatus(key,pin=false){const button=document.querySelector('#enemyDebuffs [data-status="'+key+'"]'),tip=document.getElementById('enemyStatusTooltip');if(!button||button.hidden)return;if(typeof hideSpriteDetails==='function')hideSpriteDetails();if(pin&&enemyStatusActive===key&&enemyStatusPinned){hideEnemyStatus();return}enemyStatusActive=key;enemyStatusPinned=pin;tip.hidden=false;tip.querySelector('strong').textContent=ENEMY_STATUS_ICONS[key].name;tip.querySelector('p').textContent=button.dataset.description;document.querySelectorAll('#enemyDebuffs [aria-describedby]').forEach(b=>b.removeAttribute('aria-describedby'));button.setAttribute('aria-describedby','enemyStatusTooltip');positionEnemyStatus()}
 function updateEnemyDebuffs(){
  const bar=document.getElementById('enemyDebuffs');if(!bar)return;const e=s?.enemy,alive=e?.hp>0&&e?.max>0;let active=0,tipChanged=false;
- for(const [key,def] of Object.entries(ENEMY_STATUS_ICONS)){const button=bar.querySelector('[data-status="'+key+'"]'),value=alive?Math.max(0,Math.ceil(e[key]||0)):0;button.hidden=!value;if(!value){if(enemyStatusActive===key)hideEnemyStatus();continue}active++;
+ for(const [key,def] of Object.entries(ENEMY_STATUS_ICONS)){const button=bar.querySelector('[data-status="'+key+'"]'),value=alive?Math.max(0,Math.ceil(e[key]||0)):0;if(button.hidden!==!value)button.hidden=!value;if(!value){if(enemyStatusActive===key)hideEnemyStatus();continue}active++;
   const count=def.stacks?String(value):value+'s',description=(def.stacks?value+' stacks. ':value+' seconds remaining. ')+def.description;
   if(button.lastElementChild.textContent!==count)button.lastElementChild.textContent=count;
   if(button.dataset.description!==description){button.dataset.description=description;button.setAttribute('aria-label',def.name+': '+count)}
   if(enemyStatusActive===key){const text=document.querySelector('#enemyStatusTooltip p');if(text.textContent!==description){text.textContent=description;tipChanged=true}}
  }
- bar.hidden=!active;if(enemyStatusActive&&tipChanged)positionEnemyStatus()
+ if(bar.hidden!==!active)bar.hidden=!active;if(enemyStatusActive&&tipChanged)positionEnemyStatus()
 }
 function initEnemyStatuses(){
  const bar=document.createElement('div');bar.id='enemyDebuffs';bar.className='enemy-debuffs';bar.hidden=true;bar.setAttribute('role','group');bar.setAttribute('aria-label','Enemy debuffs');

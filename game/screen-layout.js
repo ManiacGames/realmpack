@@ -2,7 +2,7 @@
 'use strict';
 const screenPagers=new Set();
 let screenPagerFrame=0;
-function screenView(view){hideSpriteDetails();document.documentElement.dataset.playView=view;document.querySelectorAll('[data-play-view]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.playView===view)));screenReflow();if(typeof flushJournal==='function')flushJournal()}
+function screenView(view){hideSpriteDetails();document.documentElement.dataset.playView=view;document.querySelectorAll('[data-play-view]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.playView===view)));screenReflow();if(typeof stopItemPulses==='function'&&!visualPackVisible())stopItemPulses();if(typeof updateStats==='function')updateStats();if(typeof flushJournal==='function')flushJournal()}
 function screenTab(tab){document.querySelectorAll('[data-info-tab]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.infoTab===tab)));document.querySelectorAll('[data-info-pane]').forEach(p=>{p.hidden=p.dataset.infoPane!==tab});screenReflow();if(typeof flushJournal==='function')flushJournal()}
 function screenFocus(){const el=document.activeElement;return el&&el!==document.body?{el,start:el.selectionStart,end:el.selectionEnd}:null}
 function screenRestoreFocus(f){if(!f?.el.isConnected||!f.el.getClientRects().length)return;f.el.focus({preventScroll:true});if(typeof f.start==='number'&&f.el.setSelectionRange)f.el.setSelectionRange(f.start,f.end)}
@@ -139,7 +139,7 @@ function fitSingleRunMap(modal){
  for(const node of modal.querySelectorAll('.map-node,.map-depth'))node.style.top=(parseFloat(node.style.top)/860*100)+'%';
  for(const line of modal.querySelectorAll('.map-canvas line'))for(const key of ['y1','y2'])line.setAttribute(key,(parseFloat(line.getAttribute(key))/860*100)+'%')
 }
-function screenMenu(){modal('Run menu','Reference, settings and run controls.',`<div class="screen-menu"><button onclick="showRunMap()">Run map</button><button onclick="showDevNotes()">Dev notes</button><button onclick="openCatalogue()">Item catalogue</button><button onclick="openBestiary()">Encounter bestiary</button><button onclick="showHelp()">Controls & synergies</button><button onclick="toggleLargeText();screenReflow()">Toggle larger text</button><button data-hints-toggle onclick="toggleGameplayHints()">Gameplay tips</button><button onclick="confirmRestart()">Start a new run</button></div><button onclick="closeModal()">Return to run</button>`,'menu')}
+function screenMenu(){modal('Run menu','Reference, settings and run controls.',`<div class="screen-menu"><button onclick="showRunMap()">Run map</button><button onclick="showDevNotes()">Dev notes</button><button onclick="openCatalogue()">Item catalogue</button><button onclick="openBestiary()">Encounter bestiary</button><button onclick="showHelp()">Controls & synergies</button><button onclick="toggleLargeText();screenReflow()">Toggle larger text</button><label class="effects-quality-control">Effects quality<select aria-label="Effects quality" onchange="setEffectsQuality(this.value)">${effectsQualityOptions()}</select></label><button data-hints-toggle onclick="toggleGameplayHints()">Gameplay tips</button><button onclick="confirmRestart()">Start a new run</button></div><button onclick="closeModal()">Return to run</button>`,'menu')}
 const spriteDetailsPanels={};
 function positionSpriteDetails(key){
  const p=spriteDetailsPanels[key];if(!p||p.panel.hidden)return;const {trigger,panel}=p,r=trigger.getBoundingClientRect();if(!r.height){hideSpriteDetails(key);return}const width=panel.offsetWidth;

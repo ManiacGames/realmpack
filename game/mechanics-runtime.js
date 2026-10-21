@@ -5,7 +5,17 @@ function grantItemHaste(source,duration){if(!source||!s.items.includes(source)||
 
 function resetItemMechanics(){s.itemBombs=[];s.lastItemEffect=null;resetRealmSpecials();for(const i of s.items)i.special={counter:0,stored:0,wave:0,rescued:false,refilled:false,relayWindow:0,relayTotal:0};}
 function specialState(i){return i.special||(i.special={counter:0,stored:0,wave:0,rescued:false,refilled:false,relayWindow:0,relayTotal:0})}
-function nearbyItems(i){return s.items.filter(j=>j.id!==i.id&&adjacent(i,j))}
+// One validation per simulation tick; calls outside a tick revalidate direct edits too.
+let combatGeometryCache=null,combatGeometryTick=false;
+function prepareCombatGeometry(){
+ if(!s||s.phase!=='fight'){combatGeometryCache=null;return null}
+ if(combatGeometryTick&&combatGeometryCache?.state===s)return combatGeometryCache;
+ const key=s.items.map(i=>{const d=defs[i.type];return [i.id,i.type,i.x,i.y,i.rot,d.w,d.h,d.group,d.effect,!!d.once,typeof d.realmSet+':'+d.realmSet,d.realmSlot].join(':')}).join('|')+';'+ADJACENCY_RULES.map(r=>r.stat+':'+r.value).join(',');
+ if(combatGeometryCache?.state===s&&combatGeometryCache.key===key&&combatGeometryCache.items.length===s.items.length&&combatGeometryCache.items.every((i,n)=>i===s.items[n]))return combatGeometryCache;
+ const neighbors=new Map(),sets=new Map();for(const i of s.items){neighbors.set(i,s.items.filter(j=>j.id!==i.id&&adjacent(i,j)));const d=defs[i.type];{if(!sets.has(d.realmSet))sets.set(d.realmSet,new Set());sets.get(d.realmSet).add(d.realmSlot)}}
+ combatGeometryCache={state:s,key,items:s.items.slice(),neighbors,connections:new Map(),stats:new Map(),sets};return combatGeometryCache
+}
+function nearbyItems(i){const cache=prepareCombatGeometry();return cache?.neighbors.get(i)||s.items.filter(j=>j.id!==i.id&&adjacent(i,j))}
 function rechargeItem(i,fraction,source=null){const state=specialState(i),window=Math.floor(s.time);if(state.relayWindow!==window){state.relayWindow=window;state.relayTotal=0}const allowed=Math.max(0,Math.min(fraction,.35-state.relayTotal));state.relayTotal+=allowed;if(allowed>0){itemFxPulse(i,'cooldown','↻');if(source)itemFxPulse(source,'cooldown','↗')}i.charge=Math.min(cooldown(i),i.charge+cooldown(i)*allowed);}
 function itemEvent(event,amount,source=null){if(s.phase!=='fight'||amount<=0)return;if(event==='hurt')realmOnHurt(amount);for(const i of s.items){const m=defs[i.type].mechanic;if(!m||source?.id===i.id)continue;const state=specialState(i);if(event==='weapon'&&m.key==='realmhex'){if(state.hexWave!==s.enemy.wave){state.counter=0;state.hexWave=s.enemy.wave}state.counter=Math.min(6,state.counter+amount)}if((event==='block'&&['barrier','guardlink'].includes(m.key))||(event==='heal'&&m.key==='healecho')||(event==='hurt'&&m.key==='reprisal'))state.stored=Math.min(m.n*3,state.stored+amount);if(event==='weapon'&&m.key==='combination'||event==='ability'&&m.key==='spellchain')state.counter=Math.min(3,state.counter+amount);}}
 function tickItemMechanics(dt){if(s.phase!=='fight')return;tickRealmSpecials(dt);const pending=s.itemBombs||[];for(const bomb of pending){bomb.time-=dt;if(bomb.time<=0){hit(bomb.damage);log('✦ '+bomb.name+' delayed blast: '+bomb.damage+' damage.')}}s.itemBombs=pending.filter(b=>b.time>0)}

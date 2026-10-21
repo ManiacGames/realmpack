@@ -31,6 +31,7 @@ jobs:
         run: |
           for file in game/*.js; do node --check "$file"; done
           node game/tests/test-stacks-adjacency.cjs
+          node game/tests/test-combat-geometry.cjs
           node game/tests/test-event-art.cjs
           node game/tests/test-shop-layout.cjs
           node game/tests/test-shop-specialists.cjs

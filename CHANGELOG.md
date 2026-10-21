@@ -1,5 +1,13 @@
 # RealmPack changelog
 
+## 0.30.6 — 2026-10-22
+
+- Replaced repeated cell-array adjacency checks with rectangle-edge checks, preserving legacy behavior for unplaced or overlapping items.
+- Cached combat neighbours, adjacency bonuses and set-piece counts. Layout and definition changes invalidate the cache; live combat effects retain their existing rules.
+- Updated labels, bars and badges only when their displayed values change. Hidden backpack work is deferred and refreshed when the player returns.
+- Added saved Full, Reduced and Off effects settings in the run menu. Reduced uses short border indicators and static connection lines; Off disables decorative pulses while retaining gameplay indicators.
+- Validation: 20,000 geometry comparisons, 1,995 identical benchmark fights across all 19 classes, original-build state/log parity at every speed, visibility/quality persistence, dialog checks and 17 game regressions. The matched stress test reduced mean 4× tick time by about 59% versus 0.30.5.
+
 ## 0.30.5 — 2026-10-22
 
 - Reduced combat rendering work in crowded backpacks, especially at 2× and 4× speed. Simultaneous effects on each item now share one visual update, with reusable animated overlays replacing forced layout reads.
