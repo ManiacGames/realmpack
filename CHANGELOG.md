@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.29.0 — 2026-10-21
+
+- Balanced the shared desktop layout so combat takes roughly 40% of the main area and the backpack remains slightly larger. Character/enemy sprites scale with the arena; shorter windows use a compact arrangement without page scrolling.
+- Added pixel icons beneath the enemy for burning, poison, bleeding, chill, weakened and exposed. Damage effects show stack counts; timed effects show seconds remaining.
+- Hover, keyboard-focus or tap an icon for its explanation. Icons update as effects change and disappear when they expire or the enemy dies; player effects remain in their own summary row.
+- Validation: combat/backpack geometry, full stash, all six debuffs and tooltips, effect expiry/reset, unchanged run state, browser layout and drag checks, JavaScript syntax and game regression checks.
+
 ## 0.28.0 — 2026-10-21
 
 - Loot and shop windows now fit their offers instead of filling the screen. Smaller shops narrow as items sell out, with the actions directly below the cards.

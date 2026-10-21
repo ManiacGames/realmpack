@@ -1,0 +1,52 @@
+/* Give combat and inventory comparable room on shared desktop layouts. */
+@media(min-width:901px){
+ .layout>main>.battle-panel{display:flex;flex-direction:column;flex:0 1 42%;min-height:222px}
+ body .battle-panel .arena{flex:1;height:auto;min-height:0}
+ body .arena .fighter{grid-template-columns:clamp(64px,6vw,96px) minmax(0,1fr);grid-template-rows:26px 16px 24px;width:44%;max-width:360px;column-gap:12px;align-content:center}
+ body .arena .fighter .sprite{width:clamp(64px,6vw,96px);height:96px}
+ body .arena .fighter .sprite>.sprite-art{--sprite-size:clamp(62px,6vw,90px)!important}
+ body .arena .fighter b{font-size:20px}body .arena .fighter small{font-size:15px}
+ body .inventory{flex:1;min-height:0}
+ .arena .fighter .event-scene{width:100%;max-width:100%;height:86px;min-height:0;margin:0}.arena .fighter .event-scene .sprite-art{--sprite-size:30px!important}.arena .fighter .event-scene .event-prop{--sprite-size:22px!important}
+}
+.enemy-debuffs{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:flex-start;gap:5px;margin-top:10px;min-width:0}
+.enemy-debuffs[hidden],.enemy-debuff[hidden],.enemy-status-tooltip[hidden]{display:none!important}
+body .arena .enemy-debuff{position:relative;width:38px;height:38px;min-height:38px;flex:none;padding:4px;margin:0;background:#18251d;border:1px solid var(--status-color);color:var(--status-color);box-shadow:none;line-height:1;cursor:help}
+.enemy-debuff svg{width:23px;height:23px;fill:currentColor;display:block;shape-rendering:crispEdges}.enemy-debuff>span{position:absolute;right:1px;bottom:1px;font-size:13px;line-height:1;background:#142018;color:#f3eddc;padding:1px 2px}
+body .arena .enemy-debuff:hover{background:#344433}body .arena .enemy-debuff:focus-visible{outline:2px solid #eee0b8;outline-offset:2px}
+.enemy-status-tooltip{position:fixed;z-index:60;width:min(280px,calc(100vw - 16px));padding:11px 13px;background:#1e2b22;border:1px solid #b2b794;box-shadow:0 4px 12px #0007;text-align:left;pointer-events:none}.enemy-status-tooltip strong{font-size:19px;color:#ebdbb7}.enemy-status-tooltip p{font-size:17px;line-height:1.35;margin:6px 0 0;color:#d0d8c7}
+@media(max-width:1100px) and (min-width:901px){body .arena .fighter{grid-template-columns:54px minmax(0,1fr);gap:0 7px}body .arena .fighter .sprite{width:54px;height:72px}body .arena .fighter .sprite>.sprite-art{--sprite-size:58px!important}body .arena .fighter b{font-size:18px}body .arena .fighter small{font-size:13px}.enemy-debuffs{gap:4px}body .arena .enemy-debuff{width:30px;height:32px;min-height:32px;padding:2px}.enemy-debuff svg{width:20px;height:20px}.enemy-debuff>span{font-size:11px}}
+@media(max-width:900px){.enemy-debuffs{justify-content:center;gap:4px;max-width:100%}body .arena .enemy-debuff{width:32px;height:34px;min-height:34px;padding:3px}.enemy-debuff svg{width:21px;height:21px}.enemy-debuff>span{font-size:12px}}
+@media(min-width:901px) and (max-height:650px){
+ .layout>main>.battle-panel{min-height:200px}
+ body .arena .fighter{grid-template-rows:20px 12px 18px}body .arena .fighter .sprite{height:54px}body .arena .fighter .sprite>.sprite-art{--sprite-size:52px!important}body .arena .fighter b{font-size:18px}body .arena .fighter small{line-height:1.15}
+ .enemy-debuffs{margin-top:6px}body .arena .enemy-debuff{height:30px;min-height:30px}
+ .pack-pane .grid{--cell:max(12px,min(112px,calc((100cqw - 25px)/6),calc((100cqh - 20px)/5)))}
+}
+@media(max-width:900px) and (max-height:500px){
+ .battle-panel .panelhead{min-height:28px;padding:4px 10px}.battle-panel .panelhead h2{font-size:18px}
+ body .battle-panel .arena .fighter{grid-template-columns:40px minmax(0,1fr);grid-template-rows:18px 10px 16px;gap:0 8px;align-content:center;width:44%;text-align:left;justify-items:stretch}
+ body .battle-panel .arena .fighter .sprite{grid-row:1/4;width:40px;height:44px}body .battle-panel .arena .fighter .sprite>.sprite-art{--sprite-size:40px!important}
+ body .battle-panel .fighter b{font-size:16px}body .battle-panel .fighter small{font-size:13px;line-height:1.1}
+ .battle-panel .enemy-debuffs{margin-top:4px;justify-content:flex-start;gap:4px}body .battle-panel .arena .enemy-debuff{width:26px;height:26px;min-height:26px;padding:2px}.battle-panel .enemy-debuff svg{width:18px;height:18px}.battle-panel .enemy-debuff>span{font-size:10px;padding:0 1px}
+ body .battle-panel .combat-effects{min-height:20px;padding:2px 10px;font-size:13px}.battle-panel .battlefoot{min-height:38px;padding:4px 10px}.battle-panel .battlefoot button{min-height:28px;font-size:15px;padding:3px 8px}.battle-panel .battlefoot .stats{font-size:14px}
+}
+@media(min-width:551px) and (max-width:900px) and (max-height:500px){
+ .inventory-workspace .panelhead{min-height:28px;padding:4px 8px}.inventory-workspace .panelhead h2{font-size:17px}.inventory-workspace .panelhead .label{font-size:12px}
+ .pack-pane .invfoot{min-height:30px;padding:3px 6px}.pack-pane .invfoot button{min-height:24px;font-size:13px;padding:3px 6px!important}
+ .pack-pane .grid{--cell:max(12px,min(112px,calc((100cqw - 25px)/6),calc((100cqh - 20px)/5)))}
+}
+@media(max-width:900px){
+ body .arena .fighter{grid-template-columns:minmax(0,1fr);min-width:0}
+ body .arena .fighter small{min-width:0;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+ .enemy-debuffs{width:100%;box-sizing:border-box}
+}
+@media(max-width:900px) and (max-height:700px) and (min-height:501px){
+ body .arena .fighter{row-gap:5px}body .arena .fighter .sprite{width:72px;height:72px}body .arena .fighter .sprite>.sprite-art{--sprite-size:70px!important}.enemy-debuffs{margin-top:6px}
+}
+/* Keep the compact horizontal formation on landscape phones. */
+@media(max-width:900px) and (max-height:500px){body .battle-panel .arena .fighter{grid-template-columns:40px minmax(0,1fr)}}
+@media(max-width:550px) and (max-height:700px){
+ body .arena .fighter{row-gap:4px}body .arena .fighter .sprite{width:64px;height:64px}body .arena .fighter .sprite>.sprite-art{--sprite-size:62px!important}
+ .enemy-debuffs{margin-top:4px}body .arena .enemy-debuff{width:28px;height:28px;min-height:28px;padding:2px}.enemy-debuff svg{width:19px;height:19px}.enemy-debuff>span{font-size:11px}
+}
