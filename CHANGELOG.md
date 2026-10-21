@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.24.1 — 2026-10-21
+
+- Put all 19 classes on one compact selection screen, showing their portraits and names without paging.
+- Hovering, keyboard focus or tapping updates a shared panel with health, description, starting equipment and passive rules. Small screens split the preview into Overview/Passive tabs.
+- Added an explicit Start button so previewing never starts or replaces a run. Dungeon run/Sandbox and starting difficulty remain selectable.
+- Validation: every class preview across seven viewport sizes, hover/focus/tap, visible roster and detail bounds, mode/difficulty start behavior, combat guard, browser workspace regression, JavaScript syntax and game regression checks.
+
 ## 0.24.0 — 2026-10-21
 
 - Rebuilt the playfield around the viewport. Desktop keeps compact combat above the backpack and adjacent stash; smaller screens use Battle, Pack & stash, and Details tabs.

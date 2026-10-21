@@ -1,6 +1,6 @@
 # RealmPack — The Shattered Vault
 
-A Realm-inspired inventory auto-battler. Browser release 0.24.0: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
+A Realm-inspired inventory auto-battler. Browser release 0.24.1: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
 
 ## Play
 
@@ -11,6 +11,8 @@ The stash holds nine slots in all modes; consumable stacks hold up to five copie
 The Supply Caravan lets you buy one or two exact copies for an owned consumable stack, up to five. One purchase per visit; depth 3 of new runs guarantees a visit. Each copy costs 60% of its item price, rounded up, with an eight-gold minimum.
 
 ## Playfield and controls
+
+All 19 classes appear together in a compact roster. Hover, focus or tap one to preview its health, description, equipment and passive, then press Start.
 
 The playfield fits the viewport. Desktop shows combat, backpack and stash together, with Item / Encounter / Class / Journal tabs on the right. Smaller screens use Battle / Pack & stash / Details tabs, and a Menu for reference/settings. Long content uses Previous/Next pages instead of scrolling. See [layout and browser validation](docs/screen-layout.md).
 

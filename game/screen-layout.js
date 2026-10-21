@@ -35,6 +35,7 @@ function screenPaginate(p){
 function screenShowPage(p){const visible=new Set(p.pages[p.page]||[]);for(const n of p.nodes){if(visible.has(n))n.removeAttribute('data-screen-hidden');else n.setAttribute('data-screen-hidden','')}p.label.textContent=(p.page+1)+' / '+p.pages.length;p.prev.disabled=p.page===0;p.next.disabled=p.page>=p.pages.length-1;p.nav.classList.toggle('single-page',p.pages.length===1)}
 function screenFitModal(){
  const focus=screenFocus(),modal=document.querySelector('#overlay .modal');if(!modal||modal.dataset.screenFit)return;modal.dataset.screenFit='true';modal.classList.add('screen-modal');
+ if(modal.classList.contains('classes-modal')){modal.classList.add('screen-class-modal');return}
  for(const node of modal.querySelectorAll('.map-node,.map-depth')){const y=parseFloat(node.style.top);node.style.top=(y/860*100)+'%'}
  for(const line of modal.querySelectorAll('.map-canvas line'))for(const key of ['y1','y2'])line.setAttribute(key,(parseFloat(line.getAttribute(key))/860*100)+'%');
  const nodes=[...modal.children],body=document.createElement('div');body.className='screen-modal-body';

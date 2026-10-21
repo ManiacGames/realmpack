@@ -1,4 +1,4 @@
-# Viewport workspace — 0.24.0
+# Viewport workspace — 0.24.1
 
 The main playfield uses the viewport height, with a compact header/footer. Desktop keeps combat above the backpack, with the nine-slot stash adjacent and a tabbed information panel. Below 901px, Battle / Pack & stash / Details tabs share the available screen. On phones the stash is a single nine-slot row below the backpack. The mobile Menu retains catalogue, bestiary, guide, larger-text and restart access.
 
@@ -15,3 +15,9 @@ During preparation, S stashes the currently hovered/focused backpack item, falli
 The optional `scripts/check-viewport.cjs` requires Playwright and Chromium. Set `REALMPACK_CHROME` to an existing Chromium executable if needed; it opens the local game by default, or `REALMPACK_URL` if provided. Run it with `node scripts/check-viewport.cjs`.
 
 It exercises 102 views across 1920×1080, 1366×768, 1280×720, 1024×768, 390×844 and 360×640, visits every generated content page, checks viewport bounds and clipping, preserves live information nodes, types into the catalogue search, tests the real S key and larger text, and checks menu pause/resume. It includes shops, rewards, item inspection, class selection, map, guide, catalogue, bestiary, supply events and item trading. The regular inventory regression separately tests full-capacity safety, one-way behavior and ignored key contexts.
+
+## Class selection
+
+All 19 class portrait/name buttons remain visible together, without roster pagination. Hover, keyboard focus or tap updates one shared details panel. Desktop displays health, description, starting equipment and passive together; narrow layouts use Overview/Passive tabs within that panel. The Start button confirms the current preview using the chosen Dungeon run/Sandbox mode and difficulty. Previewing leaves the active run untouched.
+
+`node scripts/check-class-roster.cjs` uses the same optional Playwright/Chromium setup. It checks every class across seven sizes (the six above plus 700×600), both detail sections, hover/focus/tap, active-run preservation, starting mode/difficulty, and the combat guard.
