@@ -1,4 +1,4 @@
-# Viewport workspace — 0.24.3
+# Viewport workspace — 0.24.4
 
 The main playfield uses the viewport height, with a compact header/footer. Desktop keeps combat above the backpack, with the nine-slot stash adjacent and a tabbed information panel. Below 901px, Battle / Pack & stash / Details tabs share the available screen. On phones the stash is a single nine-slot row below the backpack. The mobile Menu retains catalogue, bestiary, guide, larger-text and restart access.
 
@@ -29,3 +29,9 @@ All 19 class portrait/name buttons remain visible together, without roster pagin
 ## Character details verification
 
 `node scripts/check-class-details.cjs` checks all 19 live class panels across the six viewport sizes, including description/passive fidelity and every content page. It also checks hover/focus/tap, pointer transfer, run preservation, Escape/focus return, outside dismissal, mutual exclusion with enemy details, view/modal cleanup and uninterrupted combat. The class box stays mounted and retains its live class-update behavior while hidden.
+
+## Inventory sizing and logo
+
+The backpack measures its available grid area in both dimensions, keeping square cells and the existing five-pixel gaps. Cells grow up to 112px; item sprites and names scale with them. On adjacent layouts the stash column grows between 208px and 330px, with square slots constrained by both column width and available height. Phone layouts retain their nine-slot row. These changes do not add cells, stash slots or stack capacity.
+
+`node scripts/check-inventory-sizing.cjs` uses the optional browser setup to verify 12 viewport sizes, every backpack cell and all nine filled stash slots, square cells and clipping bounds, unchanged capacity, logo load, and actual S/drag transfers at two desktop sizes. The header and favicon use the original 40×40 [Vault Chest Unlocker sprite](https://realm.wiki/item?id=811).

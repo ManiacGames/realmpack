@@ -1,3 +1,8 @@
+RealmPack 0.24.4
+- Larger backpack cells, item sprites and labels use available space.
+- Wider stash with larger square slots; capacities remain 30 cells and 9 stash slots.
+- RealmPack now uses the Vault Chest Unlocker sprite in its header and browser icon.
+
 RealmPack 0.24.3
 - Hover or focus your character sprite for class description and passive rules.
 - Click/tap to pin, or dismiss with Escape, Close or an outside click.

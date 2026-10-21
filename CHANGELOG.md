@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.24.4 — 2026-10-21
+
+- Enlarged backpack cells to use available panel space instead of staying capped at 64 pixels. Roomy screens can reach 112-pixel cells; item sprites and labels scale with them.
+- Widened the adjacent stash and enlarged its square slots and item sprites, while preserving the 30-cell backpack, nine stash slots and five-copy consumable limit. Small screens still fit without page scrolling.
+- Replaced the header star and browser icon with the Vault Chest Unlocker sprite from realm.wiki.
+- Validation: inventory geometry and full-stash clipping at 12 viewport sizes, logo loading, live S/drag transfers, workspace browser checks, syntax, inventory controls, stacking/stash and game regression checks.
+
 ## 0.24.3 — 2026-10-21
 
 - Moved class description and passive information from the sidebar to the character sprite. Hover or keyboard-focus your character to inspect it; click/tap pins the panel.

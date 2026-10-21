@@ -41,3 +41,18 @@ body .arena .player-inspect-trigger,body .arena .player-inspect-trigger:hover{ba
 body .arena .player-inspect-trigger:focus-visible{outline:2px solid #c6cfae;outline-offset:4px}
 #classDetailsBody{flex:1;min-height:0;padding:10px}.class-details .classbox{height:100%;padding:0;border:0;background:transparent}.class-details .classbox>.screen-page-content>.sprite-art{display:none!important}.class-details .classbox h3{font-size:21px;margin:0 0 8px}.class-details .classbox p{font-size:17px;line-height:1.4;margin:8px 0}.class-details .classbox strong{font-size:18px}.class-details .classbox button{font-size:16px;min-height:32px;padding:5px 9px}
 .class-details .classbox h3{display:none}
+/* Grow inventory visuals to the actual space left after combat and controls. */
+.pack-pane .gridwrap{container-type:size}
+.pack-pane .grid{--cell:max(20px,min(112px,calc((100cqw - 25px)/6),calc((100cqh - 20px)/5)))}
+.pack-pane .item .icon .sprite-art{--sprite-size:clamp(28px,calc(var(--cell)*.58),64px)}
+.pack-pane .item .iname{font-size:clamp(10px,calc(var(--cell)*.17),16px);max-height:2.4em}
+@media(min-width:551px){
+ .inventory-workspace{grid-template-columns:minmax(0,1fr) clamp(208px,25cqw,330px)}
+ .stash-pane{container-type:size}
+ .stash-pane .stash{--stash-cell:max(24px,min(104px,calc((100cqw - 40px)/3),calc((100cqh - 88px)/3)));grid-template-columns:repeat(3,var(--stash-cell));gap:8px;padding:12px;align-content:center;justify-content:center}
+ .stash-pane .stash button,.stash-pane .stash-empty-slot{height:var(--stash-cell);min-height:0;aspect-ratio:1}
+ .stash-pane .stash button .sprite-art{--sprite-size:clamp(28px,calc(var(--stash-cell)*.6),60px)}
+}
+@media(min-width:551px){.stash-pane .stash{height:auto;max-height:none;overflow:visible}}
+.brand{display:inline-flex;align-items:center}.brand-icon{width:36px;height:36px;object-fit:contain;image-rendering:pixelated;margin-right:8px;flex:none}
+@media(max-width:900px){.brand-icon{width:28px;height:28px;margin-right:6px}}
