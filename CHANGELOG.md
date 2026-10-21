@@ -1,5 +1,10 @@
 # RealmPack changelog
 
+## 0.30.4 — 2026-10-22
+
+- Updated Dev notes: "-Items and consumables still need major overhaul".
+- Validation: JavaScript syntax and stack/adjacency regression checks.
+
 ## 0.30.3 — 2026-10-22
 
 - Added a Dev notes button to the top bar and run menu. Notes open in a readable, content-sized window; long messages use the shared pager.
