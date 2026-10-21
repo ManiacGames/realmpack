@@ -6,7 +6,7 @@ function screenView(view){hideSpriteDetails();document.documentElement.dataset.p
 function screenTab(tab){document.querySelectorAll('[data-info-tab]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.infoTab===tab)));document.querySelectorAll('[data-info-pane]').forEach(p=>{p.hidden=p.dataset.infoPane!==tab});screenReflow()}
 function screenFocus(){const el=document.activeElement;return el&&el!==document.body?{el,start:el.selectionStart,end:el.selectionEnd}:null}
 function screenRestoreFocus(f){if(!f?.el.isConnected||!f.el.getClientRects().length)return;f.el.focus({preventScroll:true});if(typeof f.start==='number'&&f.el.setSelectionRange)f.el.setSelectionRange(f.start,f.end)}
-function screenReflow(all=true){if(all)for(const pager of screenPagers)pager.dirty=true;cancelAnimationFrame(screenPagerFrame);screenPagerFrame=requestAnimationFrame(()=>{if(inventoryDrag?.active)return;const focus=screenFocus(),reference=document.querySelector('.reference-modal');if(reference)sizeReferenceBrowser(reference);for(const pager of screenPagers){if(!pager.host.isConnected){screenPagers.delete(pager);continue}if(pager.dirty&&pager.host.getBoundingClientRect().height){screenPaginate(pager);pager.dirty=false}}screenRestoreFocus(focus)})}
+function screenReflow(all=true){if(all)for(const pager of screenPagers)pager.dirty=true;cancelAnimationFrame(screenPagerFrame);screenPagerFrame=requestAnimationFrame(()=>{if(inventoryDrag?.active)return;const focus=screenFocus(),reference=document.querySelector('.reference-modal');if(reference)sizeReferenceBrowser(reference);const offers=document.querySelector('.offer-modal');if(offers)sizeOfferModal(offers);for(const pager of screenPagers){if(!pager.host.isConnected){screenPagers.delete(pager);continue}if(pager.dirty&&pager.host.getBoundingClientRect().height){screenPaginate(pager);pager.dirty=false}}screenRestoreFocus(focus)})}
 function screenPager(host){
  if(!host||host.dataset.screenPaged)return;
  for(const old of screenPagers)if(old.host===host)screenPagers.delete(old);
@@ -35,6 +35,7 @@ function screenPaginate(p){
 function screenShowPage(p){const visible=new Set(p.pages[p.page]||[]);for(const n of p.nodes){if(visible.has(n))n.removeAttribute('data-screen-hidden');else n.setAttribute('data-screen-hidden','')}p.label.textContent=(p.page+1)+' / '+p.pages.length;p.prev.disabled=p.page===0;p.next.disabled=p.page>=p.pages.length-1;p.nav.classList.toggle('single-page',p.pages.length===1)}
 function screenFitModal(){
  const focus=screenFocus(),modal=document.querySelector('#overlay .modal');if(!modal||modal.dataset.screenFit)return;modal.dataset.screenFit='true';modal.classList.add('screen-modal');
+ if(modalKind==='reward'||modalKind==='shop'){fitOfferModal(modal);return}
  if(modalKind==='defeat'){modal.classList.add('defeat-modal');modal.setAttribute('role','dialog');modal.setAttribute('aria-modal','true');modal.querySelector('h1').id='defeatTitle';modal.setAttribute('aria-labelledby','defeatTitle');modal.querySelector('p').id='defeatCause';modal.setAttribute('aria-describedby','defeatCause');modal.addEventListener('keydown',e=>{if(e.key==='Tab'){e.preventDefault();modal.querySelector('.defeat-continue').focus()}});modal.querySelector('.defeat-continue')?.focus({preventScroll:true});return}
  if(modalKind==='help'){modal.classList.add('quick-help-modal');return}
  if(modalKind==='confirm'){modal.classList.add('compact-confirm-modal');modal.setAttribute('role','dialog');modal.setAttribute('aria-modal','true');modal.querySelector('h1').id='restartTitle';modal.setAttribute('aria-labelledby','restartTitle');modal.querySelector('p').id='restartDescription';modal.setAttribute('aria-describedby','restartDescription');modal.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const buttons=[...modal.querySelectorAll('button')],first=buttons[0],last=buttons[buttons.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}});modal.querySelector('#cancelRestart')?.focus({preventScroll:true});return}
@@ -49,6 +50,35 @@ function screenFitModal(){
  const footer=last&&(last.matches('button,.shop-footer,.loot-footer,.loot-inspect-footer,.pagination,.catalogue-note')||last.querySelector('button')&&last.children.length<4&&!last.matches('.choices,.class-grid,.shop-offers,.loot-grid'))?last:null;
  const description=nodes[start-1];if(description?.tagName==='P'&&description.getBoundingClientRect().height>52)body.append(description);
  for(const node of rest)if(node!==footer)body.append(node);modal.insertBefore(body,footer);screenPager(body);screenRestoreFocus(focus);
+}
+const offerLayouts=new WeakMap();
+function fitOfferModal(modal){
+ modal.classList.add('offer-modal');document.getElementById('toast').style.display='none';
+ const grid=modal.querySelector('.loot-grid,.shop-offers'),nav=document.createElement('nav'),prev=document.createElement('button'),label=document.createElement('span'),next=document.createElement('button');
+ nav.className='offer-pages';nav.setAttribute('aria-label','Offer pages');prev.textContent='← Previous';next.textContent='Next →';label.setAttribute('aria-live','polite');nav.append(prev,label,next);grid.after(nav);
+ const state={grid,cards:[...grid.querySelectorAll('.loot-card')],nav,prev,label,next,page:0,size:1};offerLayouts.set(modal,state);
+ const turn=delta=>{state.page=Math.max(0,Math.min(Math.ceil(state.cards.length/state.size)-1,state.page+delta));showOfferPage(state);const button=delta>0?next:prev;(button.disabled?(delta>0?prev:next):button).focus({preventScroll:true});if(typeof positionGameplayHintPointer==='function')requestAnimationFrame(positionGameplayHintPointer)};prev.onclick=()=>turn(-1);next.onclick=()=>turn(1);
+ sizeOfferModal(modal)
+}
+function showOfferPage(state){
+ const pages=Math.max(1,Math.ceil(state.cards.length/state.size));state.page=Math.min(state.page,pages-1);
+ state.cards.forEach((card,n)=>{card.hidden=n<state.page*state.size||n>=(state.page+1)*state.size});state.nav.hidden=pages===1;state.prev.disabled=state.page===0;state.next.disabled=state.page===pages-1;state.label.textContent=(state.page+1)+' / '+pages;
+}
+function sizeOfferModal(modal){
+ const state=offerLayouts.get(modal);if(!state)return;
+ const count=state.cards.length,columns=innerHeight<500&&innerWidth>550?1:Math.max(1,Math.min(count||1,modal.classList.contains('shop-modal')?5:4,Math.floor((innerWidth-44)/260)));
+ modal.style.setProperty('--offer-columns',columns);modal.style.width=Math.min(innerWidth-24,1340,Math.max(400,columns*290+(columns-1)*12+32))+'px';
+ // Measure the natural card grid before choosing how many rows fit. This runs on
+ // opening, resize or hint changes, not on pointer movement or combat ticks.
+ state.cards.forEach(card=>{card.hidden=false});state.nav.hidden=true;modal.style.setProperty('max-height','none','important');
+ const natural=modal.getBoundingClientRect().height,gridHeight=state.grid.getBoundingClientRect().height,limit=innerHeight-24,gap=12;
+ if(natural<=limit+1){state.size=Math.max(1,count);state.page=0}else{
+  state.nav.hidden=false;
+  const overhead=modal.getBoundingClientRect().height-state.grid.getBoundingClientRect().height;
+  const height=Math.max(1,...state.cards.map(card=>card.getBoundingClientRect().height));
+  state.size=columns*Math.max(1,Math.floor((limit-overhead+gap)/(height+gap)));
+ }
+ modal.style.removeProperty('max-height');showOfferPage(state)
 }
 function fitReferenceBrowser(modal){
  modal.classList.add('reference-modal');document.getElementById('toast').style.display='none';const heading=document.createElement('div');heading.className='reference-heading';for(const node of [...modal.children].slice(0,3))heading.append(node);modal.prepend(heading);sizeReferenceBrowser(modal)

@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.28.0 — 2026-10-21
+
+- Loot and shop windows now fit their offers instead of filling the screen. Smaller shops narrow as items sell out, with the actions directly below the cards.
+- Added one offer pager only when all cards cannot fit. Desktop layouts use available columns; phone layouts show readable cards with Inspect, Take/Buy and room actions kept visible.
+- Kept gameplay hints and their pointers within the compact layout. Short landscape screens use horizontal cards.
+- Validation: stock counts, long item names, desktop/phone layouts, both text modes, hints on/off, every offer reachable, inspection return, purchases, JavaScript syntax, shop and game regression checks.
+
 ## 0.27.1 — 2026-10-21
 
 - Smoothed inventory dragging by keeping inspection on the held item instead of rebuilding the panel and its pages as the cursor crosses other gear.
