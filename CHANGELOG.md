@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.30.1 — 2026-10-21
+
+- Fixed oversized event-result dialogs, including leaving without a trade: the message and Continue action now share a compact window.
+- Replaced the shared full-height dialog rule with content-based sizing for events, rest stops, blessings, route choices, the run menu, confirmations, endings and item/enemy inspection. Containers and individual pages shrink around their content, with paging controls shown only when needed.
+- Tightened choice-card spacing and empty fields. Keep, Leave and Continue actions stay outside paged content; short landscape screens stack inspection sections without clipping. Dialogs remeasure on resize, text-size changes and gameplay hints.
+- Validation: 410 dialog layouts and 1,342 content pages across five viewports and both text modes, button hit testing, 16 game regressions, existing browser layout and hint-pointer checks.
+
 ## 0.30.0 — 2026-10-21
 
 - Rebuilt the Enchanter around fixed gear rarity: Uncommon has one slot, Rare two, Legendary three and Divine four. Shiny gear has at least two. Existing modifiers remain intact.

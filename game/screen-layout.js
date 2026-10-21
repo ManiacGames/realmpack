@@ -6,7 +6,7 @@ function screenView(view){hideSpriteDetails();document.documentElement.dataset.p
 function screenTab(tab){document.querySelectorAll('[data-info-tab]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.infoTab===tab)));document.querySelectorAll('[data-info-pane]').forEach(p=>{p.hidden=p.dataset.infoPane!==tab});screenReflow()}
 function screenFocus(){const el=document.activeElement;return el&&el!==document.body?{el,start:el.selectionStart,end:el.selectionEnd}:null}
 function screenRestoreFocus(f){if(!f?.el.isConnected||!f.el.getClientRects().length)return;f.el.focus({preventScroll:true});if(typeof f.start==='number'&&f.el.setSelectionRange)f.el.setSelectionRange(f.start,f.end)}
-function screenReflow(all=true){if(all)for(const pager of screenPagers)pager.dirty=true;cancelAnimationFrame(screenPagerFrame);screenPagerFrame=requestAnimationFrame(()=>{if(inventoryDrag?.active)return;const focus=screenFocus(),reference=document.querySelector('.reference-modal');if(reference)sizeReferenceBrowser(reference);const offers=document.querySelector('.offer-modal');if(offers)sizeOfferModal(offers);for(const pager of screenPagers){if(!pager.host.isConnected){screenPagers.delete(pager);continue}if(pager.dirty&&pager.host.getBoundingClientRect().height){screenPaginate(pager);pager.dirty=false}}screenRestoreFocus(focus)})}
+function screenReflow(all=true){if(all)for(const pager of screenPagers)pager.dirty=true;cancelAnimationFrame(screenPagerFrame);screenPagerFrame=requestAnimationFrame(()=>{if(inventoryDrag?.active)return;const focus=screenFocus(),reference=document.querySelector('.reference-modal');if(reference)sizeReferenceBrowser(reference);const offers=document.querySelector('.offer-modal');if(offers)sizeOfferModal(offers);for(const pager of screenPagers){if(!pager.host.isConnected){screenPagers.delete(pager);continue}if(pager.dirty&&pager.host.getBoundingClientRect().height){if(pager.host.closest('.adaptive-modal'))sizeAdaptiveModal(pager);screenPaginate(pager);pager.dirty=false}}screenRestoreFocus(focus)})}
 function screenPager(host){
  if(!host||host.dataset.screenPaged)return;
  for(const old of screenPagers)if(old.host===host)screenPagers.delete(old);
@@ -17,22 +17,34 @@ function screenPager(host){
  const turn=delta=>{pager.page=Math.max(0,Math.min(pager.pages.length-1,pager.page+delta));screenShowPage(pager);(delta>0?next:prev).focus()};prev.onclick=()=>turn(-1);next.onclick=()=>turn(1);screenReflow(false)
 }
 function screenPaginate(p){
- p.nav.hidden=false;const height=p.content.clientHeight;if(height<30)return;
+ p.nav.hidden=!!p.host.closest('.adaptive-modal')&&!p.host.closest('.adaptive-modal').classList.contains('dialog-paginated');const height=p.content.clientHeight;if(height<30)return;
  const units=[];
- for(let node of p.nodes){
-  if(node.nodeType===3){if(!node.textContent.trim())continue;const span=document.createElement('div');span.append(node);node=span}
+ const collect=(node,depth=0,reserve=0)=>{
+  if(node.nodeType===3){if(!node.textContent.trim())return;const span=document.createElement('div');span.append(node);node=span}
   node.removeAttribute('data-screen-hidden');p.content.replaceChildren(node);
-  if(p.content.scrollHeight>height+2&&!node.id&&node.children.length>1&&!node.matches('.classbox,button,select,svg,.loot-card,.class-card,.choice,.codex-card,.event-scene')){
-   const children=[...node.childNodes].filter(n=>n.nodeType!==3||n.textContent.trim()),columns=getComputedStyle(node).display==='grid'?getComputedStyle(node).gridTemplateColumns.split(' ').length:1;
-   for(let n=0;n<children.length;n+=columns){const wrap=node.cloneNode(false);wrap.append(...children.slice(n,n+columns));units.push(wrap)}
-  }else units.push(node)
- }
+  const oversized=p.content.scrollHeight>height-reserve+2;
+  if(oversized&&!node.id&&depth<8&&!node.matches('.classbox,button,select,svg,.loot-card,.class-card,.codex-card,.event-scene')){
+   const children=[...node.childNodes].filter(n=>n.nodeType!==3||n.textContent.trim());const style=getComputedStyle(node),inset=['paddingTop','paddingBottom','borderTopWidth','borderBottomWidth','marginTop','marginBottom'].reduce((sum,key)=>sum+(parseFloat(style[key])||0),0);
+   if(node.children.length){
+    const columns=getComputedStyle(node).display==='grid'?getComputedStyle(node).gridTemplateColumns.split(' ').length:1;
+    if(columns>1){for(let n=0;n<children.length;n+=columns){const row=node.cloneNode(false);row.append(...children.slice(n,n+columns));units.push(row)}return}
+    for(const child of children){const before=units.length;collect(child,depth+1,reserve+inset);const parts=units.splice(before);for(const part of parts){const shell=node.cloneNode(false);shell.append(part);units.push(shell)}}return
+   }
+   if(node.tagName==='P'&&node.textContent.trim()){
+    const words=node.textContent.trim().split(/\s+/);let part=node.cloneNode(false);
+    for(const word of words){const before=part.textContent;part.textContent+=(before?' ':'')+word;p.content.replaceChildren(part);if(p.content.scrollHeight>height-reserve+2&&before){part.textContent=before;units.push(part);part=node.cloneNode(false);part.textContent=word}}
+    if(part.textContent)units.push(part);return
+   }
+  }
+  units.push(node)
+ };
+ for(const node of p.nodes)collect(node);
  p.nodes=units;p.content.replaceChildren(...units);for(const n of units)n.setAttribute('data-screen-hidden','');
  let page=[];p.pages=[];
  for(const node of units){node.removeAttribute('data-screen-hidden');if(p.content.scrollHeight>height+2&&page.length){p.pages.push(page);for(const n of page)n.setAttribute('data-screen-hidden','');page=[]}page.push(node)}
  if(page.length)p.pages.push(page);if(!p.pages.length)p.pages=[[]];p.page=Math.min(p.page,p.pages.length-1);screenShowPage(p)
 }
-function screenShowPage(p){const visible=new Set(p.pages[p.page]||[]);for(const n of p.nodes){if(visible.has(n))n.removeAttribute('data-screen-hidden');else n.setAttribute('data-screen-hidden','')}p.label.textContent=(p.page+1)+' / '+p.pages.length;p.prev.disabled=p.page===0;p.next.disabled=p.page>=p.pages.length-1;p.nav.classList.toggle('single-page',p.pages.length===1)}
+function screenShowPage(p){const visible=new Set(p.pages[p.page]||[]);for(const n of p.nodes){if(visible.has(n))n.removeAttribute('data-screen-hidden');else n.setAttribute('data-screen-hidden','')}p.label.textContent=(p.page+1)+' / '+p.pages.length;p.prev.disabled=p.page===0;p.next.disabled=p.page>=p.pages.length-1;p.nav.classList.toggle('single-page',p.pages.length===1);if(p.host.closest('.adaptive-modal'))shrinkDialogPage(p)}
 function screenFitModal(){
  const focus=screenFocus(),modal=document.querySelector('#overlay .modal');if(!modal||modal.dataset.screenFit)return;modal.dataset.screenFit='true';modal.classList.add('screen-modal');
  if(modalKind==='reward'||modalKind==='shop'){fitOfferModal(modal);return}
@@ -45,12 +57,39 @@ function screenFitModal(){
  if(modal.classList.contains('classes-modal')){modal.classList.add('screen-class-modal');return}
  for(const node of modal.querySelectorAll('.map-node,.map-depth')){const y=parseFloat(node.style.top);node.style.top=(y/860*100)+'%'}
  for(const line of modal.querySelectorAll('.map-canvas line'))for(const key of ['y1','y2'])line.setAttribute(key,(parseFloat(line.getAttribute(key))/860*100)+'%');
+ modal.classList.add('adaptive-modal');modal.dataset.dialogKind=modalKind;
  const nodes=[...modal.children],body=document.createElement('div');body.className='screen-modal-body';
  // Keep title, description and the final action/footer reachable on every page.
  const start=nodes.findIndex(n=>n.tagName==='H1')+2;const rest=nodes.slice(start),last=rest[rest.length-1];
- const footer=last&&(last.matches('button,.shop-footer,.loot-footer,.loot-inspect-footer,.pagination,.catalogue-note')||last.querySelector('button')&&last.children.length<4&&!last.matches('.choices,.class-grid,.shop-offers,.loot-grid'))?last:null;
+ let footer=last&&(last.matches('button,.shop-footer,.loot-footer,.loot-inspect-footer,.pagination,.catalogue-note')||last.querySelector('button')&&last.children.length<4&&!last.matches('.choices,.class-grid,.shop-offers,.loot-grid'))?last:null;
+ // Keep direct dialog actions together, rather than paging a Leave/Keep button away.
+ const actions=rest.filter(n=>n.tagName==='BUTTON'&&!(modalKind==='path'&&n.getAttribute('onclick')==='showRunMap()'));
+ if(actions.length){const bar=document.createElement('div');bar.className='dialog-actions';for(const action of actions)bar.append(action);modal.append(bar);footer=bar}
  const description=nodes[start-1];if(description?.tagName==='P'&&description.getBoundingClientRect().height>52)body.append(description);
- for(const node of rest)if(node!==footer)body.append(node);modal.insertBefore(body,footer);screenPager(body);screenRestoreFocus(focus);
+ for(const node of rest)if(node!==footer&&!actions.includes(node))body.append(node);modal.insertBefore(body,footer);screenPager(body);screenRestoreFocus(focus);
+}
+// Measure all content before pagination so small dialogs never inherit an empty viewport.
+function sizeAdaptiveModal(p){
+ const modal=p.host.closest('.adaptive-modal');if(!modal)return;
+ for(const node of p.nodes)node.removeAttribute('data-screen-hidden');
+ p.content.replaceChildren(...p.nodes);p.nav.hidden=true;p.nav.classList.remove('single-page');
+ p.host.style.height='auto';p.content.style.flex='none';modal.style.height='auto';modal.style.setProperty('max-height','none','important');
+ const choices=modal.querySelector('.choices'),count=choices?.children.length||0;modal.classList.remove('dialog-choice-stack');
+ modal.style.width=Math.min(innerWidth-24,count>2?1040:modalKind==='trade'?840:760)+'px';
+ let natural=p.content.getBoundingClientRect().height;const overhead=modal.getBoundingClientRect().height-p.host.getBoundingClientRect().height,available=Math.max(40,innerHeight-24-overhead);
+ if(choices&&[...choices.children].some(card=>card.getBoundingClientRect().height>available-45)){modal.classList.add('dialog-choice-stack');natural=p.content.getBoundingClientRect().height}
+ modal.style.removeProperty('max-height');const needsPages=natural>available+1;
+ p.nav.hidden=!needsPages;
+ // Reserve navigation only when needed, and preserve the current page on resize.
+ const nav=needsPages?p.nav.getBoundingClientRect().height+8:0;
+ p.adaptiveLimit=available;p.host.style.height=Math.min(natural+nav,available)+'px';p.content.style.flex='';
+ modal.classList.toggle('dialog-paginated',needsPages);
+}
+function shrinkDialogPage(p){
+ // Page capacity uses the viewport, while the visible window fits this page's content.
+ p.host.style.height='auto';p.content.style.flex='none';
+ const natural=p.content.getBoundingClientRect().height,nav=p.nav.getBoundingClientRect().height;
+ p.host.style.height=Math.min(p.adaptiveLimit||innerHeight,natural+(nav?nav+8:0))+'px';p.content.style.flex='';
 }
 const offerLayouts=new WeakMap();
 function fitOfferModal(modal){

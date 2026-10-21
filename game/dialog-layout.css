@@ -1,0 +1,24 @@
+/* Shared content-sized dialogs; large reference/map/roster views keep their own layouts. */
+body #overlay .adaptive-modal{height:auto;max-height:calc(100dvh - 24px)!important;max-width:1040px;width:min(760px,100%);padding:18px;gap:10px}
+body #overlay .adaptive-modal>.screen-modal-body{flex:none;min-height:0}
+.adaptive-modal .screen-page-nav.single-page,.adaptive-modal .screen-page-nav[hidden]{display:none!important}
+.adaptive-modal .screen-page-content{flex:1;min-height:0}
+body #overlay .adaptive-modal .choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:6px 0;align-items:start}
+body #overlay .adaptive-modal .choices:has(>.choice:nth-child(2):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}
+body #overlay .adaptive-modal .choice{height:auto;min-height:0;width:100%;margin:0;padding:12px;box-sizing:border-box}
+.adaptive-modal .choice .ico{float:none}.adaptive-modal .event-choice>p{flex:none}.adaptive-modal .event-choice>small:empty{display:none}
+body #overlay .adaptive-modal .event-footnote{margin:6px 0;font-size:16px!important;line-height:1.3}
+body #overlay .adaptive-modal .event-scene{margin:0 0 8px;height:60px;max-height:60px}
+body #overlay .adaptive-modal .event-wallet{margin:4px 0;padding:5px 10px}
+.adaptive-modal .screen-menu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+body #overlay .adaptive-modal[data-dialog-kind=eventResult],body #overlay .adaptive-modal[data-dialog-kind=normal],body #overlay .adaptive-modal[data-dialog-kind=menu],body #overlay .adaptive-modal[data-dialog-kind=won]{max-width:660px}
+.adaptive-modal[data-dialog-kind=eventResult]>.screen-modal-body:has(.screen-page-content:empty){display:none!important}
+.adaptive-modal .screen-page-content>button{margin:4px}.adaptive-modal>.gold{margin-top:2px}
+@media(max-width:700px){body #overlay .adaptive-modal{padding:12px;gap:8px}body #overlay .adaptive-modal .choices,body #overlay .adaptive-modal .choices:has(>.choice:nth-child(2):last-child){grid-template-columns:1fr}body #overlay .adaptive-modal .choice{padding:10px}.adaptive-modal .screen-menu{grid-template-columns:1fr}}
+@media(max-height:500px){body #overlay .adaptive-modal{padding:10px;gap:6px}.adaptive-modal>.eyebrow{display:none}body #overlay .adaptive-modal>h1{font-size:23px}body #overlay .adaptive-modal>p{font-size:16px;margin:0}.adaptive-modal .event-scene{display:none}body #overlay .adaptive-modal .choice p{font-size:16px;line-height:1.25;margin:6px 0}body #overlay .adaptive-modal .choice{padding:8px}.adaptive-modal .choice .portalpixel{--sprite-size:40px!important}.adaptive-modal .screen-menu{grid-template-columns:repeat(2,minmax(0,1fr))}}
+body #overlay .adaptive-modal.dialog-choice-stack .choices{grid-template-columns:1fr}
+.adaptive-modal>.dialog-actions{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:8px;flex:none;padding-top:2px}.adaptive-modal>.dialog-actions button{margin:0;font-size:17px;min-height:36px;padding:7px 12px}
+@media(max-height:500px){.adaptive-modal>.dialog-actions button{font-size:16px;min-height:30px;padding:5px 9px}}
+body #overlay .adaptive-modal.dialog-choice-stack .choices{grid-template-columns:1fr!important}
+.adaptive-modal .event-scene,.adaptive-modal .event-scene *{pointer-events:none}
+@media(max-height:500px){body #overlay .adaptive-modal .shop-inspect-sections{grid-template-columns:1fr}body #overlay .adaptive-modal .choice{padding:6px}body #overlay .adaptive-modal .choice p{margin:4px 0}.adaptive-modal .choice .portalpixel{--sprite-size:36px!important}}
