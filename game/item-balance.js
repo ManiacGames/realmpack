@@ -78,6 +78,15 @@
   if(base.mechanic)d.mechanic={...base.mechanic};else delete d.mechanic;
   d.price=base.price*3;d.cd=round(base.cd*.95);d.amount=['haste','chill'].includes(base.effect)?round(base.amount*1.05):Math.max(base.amount,Math.round(base.amount*1.05));
  }
+ // Tiered attribute rings have distinct jobs; curated UT/ST identities remain intact.
+ for(const d of data.items){
+  const tier=/^T(\d+)$/.exec(d.tier),attribute=/^Ring of (?:Minor |Greater |Superior |Paramount |Exalted |Unbound |Transcendent )?(Attack|Defense|Dexterity|Speed|Wisdom|Vitality|Health|Magic)$/.exec(d.name);
+  if(d.group!=='ring'||!tier||!attribute)continue;
+  const rank=+tier[1],key=attribute[1].toLowerCase();d.ringAttribute=key;d.balanceFamily='ring:'+key;
+  if(['dexterity','vitality'].includes(key))continue;
+  d.effect='support';d.amount=({attack:6+2*rank,defense:10+3*rank,speed:3+rank,wisdom:6+2*rank,health:8+4*rank,magic:3+2*rank})[key];
+  d.balanceNote='Attribute ring: passive while packed; higher tiers improve its bonus.';
+ }
  data.stats.signatureItems=data.items.filter(d=>d.mechanic).length;
  data.stats.mechanicTypes=new Set(data.items.filter(d=>d.mechanic).map(d=>d.mechanic.key)).size;
  data.stats.uniqueSignatures=new Set(data.items.map(d=>JSON.stringify([d.kind,d.tier,d.effect,d.amount,d.cd,d.mana,d.affix,d.affixAmount,d.mechanic?.key]))).size;

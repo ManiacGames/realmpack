@@ -1,0 +1,391 @@
+{
+  "version": "0.30.14",
+  "date": "2026-10-22",
+  "fixture": "scripts/benchmark-balance.cjs: identical legal tiered builds, normal difficulty, depth 20, all 35 dungeon bosses, three variants per class",
+  "limitation": "This fixed fixture always carries Ring of Magic and does not optimize placement or substitute the other seven ring attributes. Results measure the removal of its mana generation and generic ring adjacency, not overall ring or class balance. These are loadout clear counts, not player win rates.",
+  "fightsPerBuild": 1995,
+  "before": [
+    {
+      "classId": "rogue",
+      "wins": 85,
+      "fights": 105,
+      "variants": [
+        27,
+        28,
+        30
+      ]
+    },
+    {
+      "classId": "archer",
+      "wins": 94,
+      "fights": 105,
+      "variants": [
+        28,
+        33,
+        33
+      ]
+    },
+    {
+      "classId": "wizard",
+      "wins": 78,
+      "fights": 105,
+      "variants": [
+        24,
+        27,
+        27
+      ]
+    },
+    {
+      "classId": "priest",
+      "wins": 92,
+      "fights": 105,
+      "variants": [
+        30,
+        31,
+        31
+      ]
+    },
+    {
+      "classId": "warrior",
+      "wins": 87,
+      "fights": 105,
+      "variants": [
+        27,
+        30,
+        30
+      ]
+    },
+    {
+      "classId": "knight",
+      "wins": 97,
+      "fights": 105,
+      "variants": [
+        31,
+        33,
+        33
+      ]
+    },
+    {
+      "classId": "paladin",
+      "wins": 90,
+      "fights": 105,
+      "variants": [
+        29,
+        31,
+        30
+      ]
+    },
+    {
+      "classId": "assassin",
+      "wins": 83,
+      "fights": 105,
+      "variants": [
+        27,
+        28,
+        28
+      ]
+    },
+    {
+      "classId": "necromancer",
+      "wins": 87,
+      "fights": 105,
+      "variants": [
+        29,
+        29,
+        29
+      ]
+    },
+    {
+      "classId": "huntress",
+      "wins": 96,
+      "fights": 105,
+      "variants": [
+        30,
+        33,
+        33
+      ]
+    },
+    {
+      "classId": "mystic",
+      "wins": 84,
+      "fights": 105,
+      "variants": [
+        26,
+        28,
+        30
+      ]
+    },
+    {
+      "classId": "trickster",
+      "wins": 79,
+      "fights": 105,
+      "variants": [
+        26,
+        26,
+        27
+      ]
+    },
+    {
+      "classId": "sorcerer",
+      "wins": 71,
+      "fights": 105,
+      "variants": [
+        20,
+        26,
+        25
+      ]
+    },
+    {
+      "classId": "ninja",
+      "wins": 81,
+      "fights": 105,
+      "variants": [
+        27,
+        27,
+        27
+      ]
+    },
+    {
+      "classId": "samurai",
+      "wins": 86,
+      "fights": 105,
+      "variants": [
+        29,
+        29,
+        28
+      ]
+    },
+    {
+      "classId": "bard",
+      "wins": 80,
+      "fights": 105,
+      "variants": [
+        26,
+        27,
+        27
+      ]
+    },
+    {
+      "classId": "summoner",
+      "wins": 72,
+      "fights": 105,
+      "variants": [
+        20,
+        25,
+        27
+      ]
+    },
+    {
+      "classId": "kensei",
+      "wins": 97,
+      "fights": 105,
+      "variants": [
+        32,
+        32,
+        33
+      ]
+    },
+    {
+      "classId": "druid",
+      "wins": 96,
+      "fights": 105,
+      "variants": [
+        32,
+        32,
+        32
+      ]
+    }
+  ],
+  "after": [
+    {
+      "classId": "rogue",
+      "wins": 81,
+      "fights": 105,
+      "variants": [
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "classId": "archer",
+      "wins": 94,
+      "fights": 105,
+      "variants": [
+        28,
+        33,
+        33
+      ]
+    },
+    {
+      "classId": "wizard",
+      "wins": 73,
+      "fights": 105,
+      "variants": [
+        21,
+        25,
+        27
+      ]
+    },
+    {
+      "classId": "priest",
+      "wins": 90,
+      "fights": 105,
+      "variants": [
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "classId": "warrior",
+      "wins": 85,
+      "fights": 105,
+      "variants": [
+        26,
+        29,
+        30
+      ]
+    },
+    {
+      "classId": "knight",
+      "wins": 94,
+      "fights": 105,
+      "variants": [
+        30,
+        32,
+        32
+      ]
+    },
+    {
+      "classId": "paladin",
+      "wins": 89,
+      "fights": 105,
+      "variants": [
+        29,
+        30,
+        30
+      ]
+    },
+    {
+      "classId": "assassin",
+      "wins": 83,
+      "fights": 105,
+      "variants": [
+        27,
+        28,
+        28
+      ]
+    },
+    {
+      "classId": "necromancer",
+      "wins": 84,
+      "fights": 105,
+      "variants": [
+        27,
+        29,
+        28
+      ]
+    },
+    {
+      "classId": "huntress",
+      "wins": 94,
+      "fights": 105,
+      "variants": [
+        30,
+        32,
+        32
+      ]
+    },
+    {
+      "classId": "mystic",
+      "wins": 82,
+      "fights": 105,
+      "variants": [
+        25,
+        28,
+        29
+      ]
+    },
+    {
+      "classId": "trickster",
+      "wins": 79,
+      "fights": 105,
+      "variants": [
+        26,
+        26,
+        27
+      ]
+    },
+    {
+      "classId": "sorcerer",
+      "wins": 66,
+      "fights": 105,
+      "variants": [
+        19,
+        24,
+        23
+      ]
+    },
+    {
+      "classId": "ninja",
+      "wins": 80,
+      "fights": 105,
+      "variants": [
+        26,
+        27,
+        27
+      ]
+    },
+    {
+      "classId": "samurai",
+      "wins": 85,
+      "fights": 105,
+      "variants": [
+        27,
+        29,
+        29
+      ]
+    },
+    {
+      "classId": "bard",
+      "wins": 79,
+      "fights": 105,
+      "variants": [
+        25,
+        27,
+        27
+      ]
+    },
+    {
+      "classId": "summoner",
+      "wins": 71,
+      "fights": 105,
+      "variants": [
+        21,
+        25,
+        25
+      ]
+    },
+    {
+      "classId": "kensei",
+      "wins": 95,
+      "fights": 105,
+      "variants": [
+        30,
+        32,
+        33
+      ]
+    },
+    {
+      "classId": "druid",
+      "wins": 96,
+      "fights": 105,
+      "variants": [
+        32,
+        32,
+        32
+      ]
+    }
+  ]
+}

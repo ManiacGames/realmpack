@@ -21,7 +21,7 @@ body #detail.inspection-overview .enchant-info p{margin:4px 0 0;font-size:17px!i
 .inspection-actions button{font-size:17px;padding:5px 9px;min-height:32px}
 @container inspection (max-height:500px){.inspection-adjacency{display:none}}
 @container inspection (max-height:380px){.inspection-extras{display:none}.inspection-heading .detailtitle{margin:4px 0}.inspection-heading h2{font-size:21px}.inspection-heading .sprite-art{--sprite-size:32px}.inspection-actions{padding-top:5px}}
-@container inspection (max-height:260px){.inspection-affinity,#signatureMeter{display:none}.inspection-description{-webkit-line-clamp:2}.inspection-heading .detailtitle{margin:2px 0}.inspection-heading .sprite-art{--sprite-size:26px}.inspection-stack button{display:inline-block;margin:2px 0 0 8px}.inspection-actions button{font-size:16px;min-height:28px;padding:3px 7px}}
+@container inspection (max-height:260px){.inspection-affinity,#signatureMeter{display:none}.inspection-description{-webkit-line-clamp:1}.inspection-heading .detailtitle{margin:2px 0}.inspection-heading .sprite-art{--sprite-size:26px}.inspection-stack button{display:inline-block;margin:2px 0 0 8px}.inspection-actions button{font-size:16px;min-height:28px;padding:3px 7px}}
 /* The expanded inspection retains complete text, wiki links and connection rules. */
 .item-details-modal .screen-page-content{display:flex;flex-direction:column}
 .item-details-modal .screen-page-content>*{flex-shrink:0}
@@ -50,3 +50,5 @@ body #overlay .item-details-modal{max-width:1200px}
 body #overlay .item-details-modal .enchant-info,body #overlay .item-details-modal .enchant-info b{font-size:18px}
 body #overlay .item-details-modal .enchant-info p{font-size:18px!important;line-height:1.35!important;margin:6px 0}
 .item-details-modal .screen-page-content>small{font-size:16px;line-height:1.35}
+/* Keep inspection actions reachable as attribute rings add more connection hints. */
+.inspection-overview>.inspection-extras{flex-shrink:1}

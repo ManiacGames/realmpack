@@ -10,7 +10,7 @@ let combatGeometryCache=null,combatGeometryTick=false;
 function prepareCombatGeometry(){
  if(!s||s.phase!=='fight'){combatGeometryCache=null;return null}
  if(combatGeometryTick&&combatGeometryCache?.state===s)return combatGeometryCache;
- const key=s.items.map(i=>{const d=defs[i.type];return [i.id,i.type,i.x,i.y,i.rot,d.w,d.h,d.group,d.effect,!!d.once,typeof d.realmSet+':'+d.realmSet,d.realmSlot].join(':')}).join('|')+';'+ADJACENCY_RULES.map(r=>r.stat+':'+r.value).join(',');
+ const key=s.items.map(i=>{const d=defs[i.type];return [i.id,i.type,i.x,i.y,i.rot,d.w,d.h,d.group,d.effect,d.ringAttribute,d.amount,i.eventInfusion,!!d.once,typeof d.realmSet+':'+d.realmSet,d.realmSlot].join(':')}).join('|')+';'+ADJACENCY_RULES.map(r=>r.stat+':'+r.value).join(',');
  if(combatGeometryCache?.state===s&&combatGeometryCache.key===key&&combatGeometryCache.items.length===s.items.length&&combatGeometryCache.items.every((i,n)=>i===s.items[n]))return combatGeometryCache;
  const neighbors=new Map(),sets=new Map();for(const i of s.items){neighbors.set(i,s.items.filter(j=>j.id!==i.id&&adjacent(i,j)));const d=defs[i.type];{if(!sets.has(d.realmSet))sets.set(d.realmSet,new Set());sets.get(d.realmSet).add(d.realmSlot)}}
  combatGeometryCache={state:s,key,items:s.items.slice(),neighbors,connections:new Map(),stats:new Map(),sets};return combatGeometryCache
@@ -30,26 +30,26 @@ function activateSignature(i){if(!healingConsumableReady(i))return false;const d
  case'shieldbash':{const spent=Math.min(s.block,n*3);s.block-=spent;hit(spent);break}
  case'overdrive':{const spent=Math.min(3,s.mana);s.mana-=spent;passive('mana',spent);hit(n*spent);break}
  case'relay':{const target=near.filter(j=>defs[j.type].group==='weapon').sort((a,b)=>a.charge/cooldown(a)-b.charge/cooldown(b))[0];if(target)rechargeItem(target,.18,i);break}
- case'conduit':s.mana=Math.min(50,Math.max(0,s.mana+(near.some(j=>defs[j.type].group==='ability')?1:-1)));break;
- case'capacitor':if(ordinal%3===0){s.mana=Math.min(50,s.mana+2);near.filter(j=>defs[j.type].group==='ability').forEach(j=>rechargeItem(j,.1,i))}break;
- case'mirror':if(previous&&near.some(j=>j.id===previous.itemId)&&['damage','drain','block','heal','mana'].includes(previous.effect)){const echo=Math.max(1,Math.round(previous.amount*.25));if(previous.effect==='damage'||previous.effect==='drain')hit(echo);else if(previous.effect==='block')gainBlock(echo);else if(previous.effect==='heal')restore(echo);else s.mana=Math.min(50,s.mana+echo)}break;
+ case'conduit':s.mana=Math.min(manaCapacity(),Math.max(0,s.mana+(near.some(j=>defs[j.type].group==='ability')?1:-1)));break;
+ case'capacitor':if(ordinal%3===0){s.mana=Math.min(manaCapacity(),s.mana+2);near.filter(j=>defs[j.type].group==='ability').forEach(j=>rechargeItem(j,.1,i))}break;
+ case'mirror':if(previous&&near.some(j=>j.id===previous.itemId)&&['damage','drain','block','heal','mana'].includes(previous.effect)){const echo=Math.max(1,Math.round(previous.amount*.25));if(previous.effect==='damage'||previous.effect==='drain')hit(echo);else if(previous.effect==='block')gainBlock(echo,i);else if(previous.effect==='heal')restore(echo);else s.mana=Math.min(manaCapacity(),s.mana+echo)}break;
  case'poisonburst':case'fireburst':case'bleedburst':{const field=m.key==='poisonburst'?'poison':m.key==='fireburst'?'burn':'bleed',stacks=Math.min(n,e[field]);e[field]-=stacks;hit(stacks*3);break}
- case'purify':{const had=s.venom>0||s.silence>0;s.venom=Math.max(0,s.venom-n);s.silence=Math.max(0,s.silence-1);if(had)s.mana=Math.min(50,s.mana+1);break}
+ case'purify':{const had=s.venom>0||s.silence>0;s.venom=Math.max(0,s.venom-n);s.silence=Math.max(0,s.silence-1);if(had)s.mana=Math.min(manaCapacity(),s.mana+1);break}
  case'stasis':if(ordinal%3===0)delayEnemyAttack(.8);break;
  case'barrier':hit(state.stored);state.stored=0;break;
  case'healecho':if(state.stored>=n*3){const target=near.find(j=>defs[j.type].group==='weapon');if(target){rechargeItem(target,.25,i);state.stored=0}}break;
- case'guardlink':if(state.stored>=n*3){s.mana=Math.min(50,s.mana+n);state.stored=0}break;
+ case'guardlink':if(state.stored>=n*3){s.mana=Math.min(manaCapacity(),s.mana+n);state.stored=0}break;
  case'companion':if(s.summons.length){s.summons[0].duration=Math.min(12,s.summons[0].duration+2);restore(n)}break;
- case'sacrifice':if(s.summons.length){const pet=s.summons.shift();hit(pet.power*3);gainBlock(n)}break;
- case'laststand':if(s.hp<s.max*.35){gainBlock(n);s.mana=Math.min(50,s.mana+1)}break;
+ case'sacrifice':if(s.summons.length){const pet=s.summons.shift();hit(pet.power*3);gainBlock(n,i)}break;
+ case'laststand':if(s.hp<s.max*.35){gainBlock(n,i);s.mana=Math.min(manaCapacity(),s.mana+1)}break;
  case'combination':if(state.counter>=3){hit(n*2);state.counter=0}break;
- case'spellchain':if(state.counter>=2){s.mana=Math.min(50,s.mana+2);hit(n);state.counter=0}break;
+ case'spellchain':if(state.counter>=2){s.mana=Math.min(manaCapacity(),s.mana+2);hit(n);state.counter=0}break;
  case'reprisal':if(state.stored>=n*3){restore(n);apply('weaken',2);state.stored=0}break;
  case'fuse':if(ordinal%3===0&&(s.itemBombs||[]).length<12)(s.itemBombs||(s.itemBombs=[])).push({time:3,damage:n*3,name:d.name});break;
  case'wardbreak':{const removed=Math.min(e.ward||0,n*2);e.ward=Math.max(0,e.ward-removed);if(removed)e.vulnerable=Math.max(1,e.vulnerable);break}
  case'potionbelt':if(s.hp<s.max*.35&&!state.refilled){const potion=near.find(j=>defs[j.type].once&&j.used);if(potion){refillStackUse(potion);state.refilled=true;log('✦ Emergency refill: '+defs[potion.type].name)}}break;
  case'prism':apply(['burn','poison','bleed'][(ordinal-1)%3],2);break;
- case'manasave':if(ordinal%4===0)s.mana=Math.min(50,s.mana+Math.min(3,d.mana));break;
+ case'manasave':if(ordinal%4===0)s.mana=Math.min(manaCapacity(),s.mana+Math.min(3,d.mana));break;
  }
  if(d.realmIdentity)realmAfterActivation(i);
  // Legacy signatures retain their named core effect.

@@ -8,7 +8,7 @@ const fixture=(id,group,effect,once=false)=>defs[id]={id,name:id,group,kind:grou
 const pack=(type,x,y)=>Object.assign(makeItem(type),{x,y});
 fixture('weapon','weapon','damage');fixture('ring','ring','damage');fixture('armor','armor','block');fixture('ability','ability','damage');fixture('mana','ring','mana');fixture('heal','ring','heal');fixture('poison','weapon','poison');fixture('potion','consumable','heal',true);
 const setups=[['weapon','ring'],['weapon','armor'],['ability','weapon'],['ability','mana'],['armor','armor'],['heal','armor'],['mana','ability'],['poison','poison'],['potion','ring'],['potion','armor']];
-for(let n=0;n<ADJACENCY_RULES.length;n++){
+for(let n=0;n<setups.length;n++){
  const rule=ADJACENCY_RULES[n],[a,b]=setups[n],i=pack(a,0,0),j=pack(b,1,0);s.items=[i,j];s.stash=[];s.phase='fight';s.hp=20;s.max=1000;s.mana=20;s.block=0;s.enemy.hp=s.enemy.max=100000;
  check(adjacencyConnections(i).some(c=>c.rule===rule),'Missing '+rule.name);check(itemLinks().some(l=>l.source===j.id&&l.target===i.id&&l.label.startsWith(rule.name)), 'Missing displayed link '+rule.name);
  if(rule.stat==='primary')check(enchantPrimary(i,100)===110,'Primary '+rule.name);

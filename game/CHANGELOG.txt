@@ -1,3 +1,10 @@
+## 0.30.14 — 2026-10-22
+
+- Reworked all 57 tiered attribute rings: Attack boosts adjacent weapon damage, Defense boosts adjacent item block gain, Wisdom boosts adjacent ability output, and Speed continuously reduces adjacent cooldowns. Dexterity grants temporary adjacent haste; Vitality heals. Wisdom improves dodge-ability recharge instead of adding dodge charges.
+- Health rings add maximum health while packed; Magic rings add maximum mana instead of generating it. The HUD now shows current / maximum mana. Equipping capacity rings does not refill resources; removing them clamps resources to the lower cap. Existing saves retain their gear and upgrades without repeatedly granting maximum health.
+- Higher tiers improve each role. Adjacency auras use the strongest two matching neighbors: shared primary bonus cap +35%, Defense +50%, Speed 20% cooldown reduction. Health-ring capacity caps at +100 HP and Magic-ring capacity at +40 mana. UT/ST ring identities are retained. Passive auras retain separate activation cycles for existing enchantments.
+- Validation: all 20 game regressions, including eight ring identities, caps, adjacency, save migration and infusion/enchantment compatibility; JavaScript syntax and browser inspection/dialog checks. A fixed 1,995-fight class benchmark cleared 1,600 encounters versus 1,635 previously; its unchanged builds always carry Magic rings, so this mainly measures losing their old mana generation, not optimized ring balance. See docs/attribute-rings.md for values and limitations.
+
 ## 0.30.13 — 2026-10-22
 
 - Removed the extra Healing Tome granted to every class at the start of a run. Class starting equipment, Ring of Magic and Health Potion are retained; Priest still starts with its own tome. Existing runs keep their items.
