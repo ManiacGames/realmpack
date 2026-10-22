@@ -35,5 +35,28 @@ console.log(vm.runInContext(`(()=>{
  s.items=[...Array.from({length:4},(_,n)=>pack(ring('health',7).id,n,0)),...Array.from({length:4},(_,n)=>pack(ring('magic',7).id,n,1))];syncRingVitals();check(s.max===230&&manaCapacity()===90,'Capacity caps');s.mana=89;apply('mana',10);check(s.mana===90,'Mana effect ignores capacity');
  s.phase='fight';s.mana=89;const reserve=s.items[4];reserve.enchantments=[{key:'reservoir',rank:3,value:3}];startEnchantments();check(s.mana===90,'Reservoir ignores capacity');
  [i,r]=begin('ringTestWeapon','attack');r.enchantments=[{key:'barrier',rank:3,value:3}];check(activate(r)&&s.block===3&&s.enemy.hp===100000,'Passive ring lost legacy activation enchantments');check(enchantMarkup(r).includes('Enchantment cycle'),'Missing passive enchantment timing');
- return 'PASS: all 57 tiered rings, eight identities, caps, strongest neighbors, real damage/heal/block/haste/cooldown effects, links, stash/diagonal exclusion, UT/ST preservation, capacity movement/save migration and legacy enchantments';
+ // Fractional Wisdom is per item, activation-only and resets at the next battle.
+ [i,r]=begin('ringTestAbility','wisdom',7);defs.ringTestAbility.effect='mana';defs.ringTestAbility.amount=2;
+ const generated=[];for(let n=0;n<5;n++){s.mana=0;activate(i);generated.push(s.mana)}
+ check(generated.join() === '2,2,3,2,3','Wisdom fractional mana distribution');check(Math.abs(i.wisdomCarry)<1e-8,'Wisdom carry did not conserve output');
+ // A pre-existing adjacency bonus uses its share of the cap first.
+ i.wisdomCarry=0;const weaponNeighbor=pack('ringTestWeapon',3,2),secondWisdom=pack(ring('wisdom',7).id,2,1);s.items.push(weaponNeighbor,secondWisdom);defs.ringTestAbility.effect='damage';
+ let total=0;for(let n=0;n<4;n++){const before=s.enemy.hp;activate(i);total+=before-s.enemy.hp}check(total===10,'Wisdom bypassed shared primary cap or rounded other adjacency differently');
+ s.items=[i,r];defs.ringTestAbility.effect='mana';i.wisdomCarry=0;
+ const copy=pack('ringTestAbility',1,1);s.items.push(copy);s.mana=0;activate(copy);check(s.mana===2&&near(copy.wisdomCarry,.4),'Wisdom carries leak between items');
+ const stored=i.wisdomCarry;for(let n=0;n<10;n++)enchantPrimary(i,2);check(i.wisdomCarry===stored,'Inspection/preview consumed Wisdom carry');
+ defs.ringTestAbility.mana=3;s.mana=0;check(!activate(i)&&i.wisdomCarry===stored,'Failed activation consumed Wisdom carry');defs.ringTestAbility.mana=0;
+ // Signature abilities follow the same carry path; healing applies after that output.
+ defs.ringTestAbility.effect='heal';defs.ringTestAbility.mechanic={key:'purify',n:1,title:'Test',text:'Test'};i.wisdomCarry=0;s.hp=100;
+ for(let n=0;n<5;n++)activate(i);check(s.hp===112,'Signature ability fractional output');delete defs.ringTestAbility.mechanic;
+ setEnemy();check(i.wisdomCarry===0&&copy.wisdomCarry===0,'Wisdom carry survived a new battle');defs.ringTestAbility.effect='damage';defs.ringTestAbility.amount=100;
+ // Battle-start mana is separate from capacity and cannot be farmed by moving rings.
+ s.phase='prep';s.items=[];s.stash=[];s.ringHealthBonus=0;s.max=s.hp=130;s.mana=5;
+ const magicRings=[1,4,7].map((tier,n)=>pack(ring('magic',tier).id,n,0));check(magicRings.map(i=>magicRingBattleMana(defs[i.type])).join()==='1,2,3','Magic tier start bonus');
+ s.items=[magicRings[0]];syncRingVitals();check(s.mana===5,'Equip refilled mana');s.magicRingManaGranted=false;check(startRingBattle()===1&&s.mana===6,'T1 battle mana');check(startRingBattle()===0&&s.mana===6,'Repeated battle-start mana');
+ s.items=magicRings;s.magicRingManaGranted=false;s.mana=5;startRingBattle();check(s.mana===11,'Magic start total cap');
+ s.magicRingManaGranted=false;s.mana=manaCapacity()-1;check(startRingBattle()===1&&s.mana===manaCapacity(),'Magic start ignores capacity');
+ const weapon=pack('ringTestWeapon',2,2);s.items=[weapon,magicRings[2]];s.phase='prep';s.mana=0;ROOMS[s.room].type='combat';startFight();check(s.phase==='fight'&&s.mana===8,'StartFight did not apply T7 start mana');
+ s.mana=0;setupWave();check(startRingBattle()===0&&s.mana===0,'New wave repeated start mana');
+ return 'PASS: all 57 tiered rings, eight identities, caps, strongest neighbors, real damage/heal/block/haste/cooldown effects, links, stash/diagonal exclusion, UT/ST preservation, capacity movement/save migration, legacy enchantments, fractional Wisdom and once-per-battle Magic mana';
 })()`,ctx));

@@ -13,7 +13,7 @@ const ADJACENCY_RULES=[
  {name:'Protected supplies',kind:'defense',target:d=>!!d.once,source:d=>d.group==='armor',stat:'block',value:2,text:'Gain 2 block per adjacent armor on use (max 4)'},
  {name:'Attack ring',kind:'damage',target:d=>d.group==='weapon'&&['damage','drain'].includes(d.effect),source:d=>d.ringAttribute==='attack',stat:'primary',value:(d,i)=>ringStrength(i)/100,text:'Adjacent Attack rings increase weapon primary damage; strongest two, shared +35% primary cap'},
  {name:'Defense ring',kind:'defense',target:d=>true,source:d=>d.ringAttribute==='defense',stat:'ringBlock',value:(d,i)=>ringStrength(i)/100,text:'Adjacent Defense rings increase item-sourced block gain; strongest two, max +50%'},
- {name:'Wisdom ring',kind:'utility',target:d=>d.group==='ability',source:d=>d.ringAttribute==='wisdom',stat:'primary',value:(d,i)=>ringStrength(i)/100,text:'Adjacent Wisdom rings increase ability primary output (rounded), or recharge rate for dodge abilities; strongest two, shared +35% primary cap'},
+ {name:'Wisdom ring',kind:'utility',target:d=>d.group==='ability',source:d=>d.ringAttribute==='wisdom',stat:'primary',value:(d,i)=>ringStrength(i)/100,text:'Adjacent Wisdom rings increase ability primary output (fractional Wisdom bonuses carry across activations), or recharge rate for dodge abilities; strongest two, shared +35% primary cap'},
  {name:'Speed ring',kind:'cooldown',target:d=>true,source:d=>d.ringAttribute==='speed',stat:'ringSpeed',value:(d,i)=>ringStrength(i)/100,text:'Adjacent Speed rings reduce cooldown continuously; strongest two, max 20% reduction'}
 ];
 function adjacencyConnections(i){if(!s.items.includes(i))return [];const cache=prepareCombatGeometry();if(cache?.connections.has(i))return cache.connections.get(i);const d=defs[i.type],near=nearbyItems(i),connections=ADJACENCY_RULES.filter(r=>r.target(d)).flatMap(rule=>near.filter(j=>rule.source(defs[j.type],d)).sort((a,b)=>typeof rule.value==='function'?rule.value(defs[b.type],b)-rule.value(defs[a.type],a):0).slice(0,2).map(source=>({rule,source})));if(cache){cache.connections.set(i,connections);const stats={};for(const c of connections)stats[c.rule.stat]=(stats[c.rule.stat]||0)+adjacencyValue(c);cache.stats.set(i,stats)}return connections}
@@ -54,6 +54,20 @@ function passiveRing(d){return d.group==='ring'&&d.effect==='support'&&!!d.ringA
 function ringCanActivate(i){return itemEnchants(i).some(e=>['barrier','siphon','relay'].includes(e.key))}
 function ringDescription(d){
  const n=d.amount;
- return ({attack:`Adjacent weapons gain +${n}% primary damage. Strongest two rings; shared +35% primary cap.`,defense:`Adjacent items gain +${n}% block from their effects and enchantments. Strongest two rings; +50% cap.`,wisdom:`Adjacent abilities gain +${n}% primary output, rounded to whole units. Dodge abilities gain recharge rate instead. Strongest two rings; shared +35% primary cap.`,speed:`Adjacent items have ${n}% shorter cooldowns while packed. Strongest two rings; 20% cap. Stacks with temporary haste.`,health:`While packed: +${n} maximum health (ring cap +100). Does not heal; removing it lowers the cap.`,magic:`While packed: +${n} maximum mana (base 50; ring cap +40). Does not generate mana.`})[d.ringAttribute]||''
+ return ({attack:`Adjacent weapons gain +${n}% primary damage. Strongest two rings; shared +35% primary cap.`,defense:`Adjacent items gain +${n}% block from their effects and enchantments. Strongest two rings; +50% cap.`,wisdom:`Adjacent abilities gain +${n}% primary output. Fractional Wisdom bonuses accumulate into whole extra points over successive activations. Dodge abilities gain recharge rate instead. Strongest two rings; shared +35% primary cap.`,speed:`Adjacent items have ${n}% shorter cooldowns while packed. Strongest two rings; 20% cap. Stacks with temporary haste.`,health:`While packed: +${n} maximum health (ring cap +100). Does not heal; removing it lowers the cap.`,magic:`While packed: +${n} maximum mana (base 50; ring cap +40). Gain ${magicRingBattleMana(d)} mana at battle start (ring total capped at 6). Equipping does not refill mana.`})[d.ringAttribute]||''
 }
 function itemTiming(d,i=null){return passiveRing(d)?'Passive':(i?cooldown(i):affinityCooldown(d)).toFixed(2)+'s'}
+
+function magicRingBattleMana(d){return d.ringAttribute==='magic'?Math.min(3,1+Math.floor((d.progressionRank||0)/3)):0}
+function startRingBattle(){
+ if(s.magicRingManaGranted)return 0;s.magicRingManaGranted=true;
+ const bonus=Math.min(6,s.items.reduce((n,i)=>n+magicRingBattleMana(defs[i.type]),0)),actual=Math.max(0,Math.min(bonus,manaCapacity()-s.mana));s.mana+=actual;if(actual)log('Magic rings: +'+actual+' mana at battle start.');return actual
+}
+// Preserve existing rounding for all other modifiers; only Wisdom's marginal
+// contribution is carried, and only a successful activation consumes it.
+function wisdomPrimary(i,amount,factor){
+ const d=defs[i.type],wisdom=adjacencyConnections(i).filter(c=>c.rule.name==='Wisdom ring').reduce((n,c)=>n+adjacencyValue(c),0);
+ if(d.group!=='ability'||d.effect==='dodge'||!wisdom)return null;
+ const total=adjacencyStat(i,'primary'),without=Math.min(.35,Math.max(0,total-wisdom)),withWisdom=Math.min(.35,total),base=Math.max(1,Math.round(amount*(1+without)*factor));
+ const accrued=(i.wisdomCarry||0)+Math.max(0,withWisdom-without)*amount*factor,whole=Math.floor(accrued+1e-9);i.wisdomCarry=Math.max(0,accrued-whole);return base+whole
+}

@@ -1,0 +1,4407 @@
+{
+  "version": "0.30.15",
+  "date": "2026-10-22",
+  "totalFights": 35910,
+  "controlAggregatesIdentical": [
+    "none",
+    "attack",
+    "defense",
+    "dexterity",
+    "speed",
+    "vitality",
+    "health"
+  ],
+  "magicManaStarvationReductionPercent": 65.61,
+  "before": {
+    "version": "0.30.14",
+    "date": "2026-10-22",
+    "classes": 19,
+    "dungeons": 35,
+    "depth": 20,
+    "fights": 17955,
+    "fixture": "Fixed native tiered builds plus duplicate weapon, three Health Potions and an off-class Healing Tome. One unenchanted attribute ring at T1/T4/T7 matched to the three gear variants; none baseline leaves that cell empty. Same gear positions across attributes; deterministic placement maximizes eligible adjacent items, then native items, without inspecting battle outcomes. Full base HP and five mana before ring bonuses; Normal difficulty.",
+    "limitations": "Results compare these builds and placements, not every build, starting condition, dungeon depth or ring combination. Clear counts are not player win probabilities. Amounts differ by archetype and mana cost affects usefulness. No ring stacking is simulated.",
+    "byAttribute": {
+      "none": {
+        "fights": 1995,
+        "clears": 1591,
+        "meanSeconds": 16.89,
+        "meanPeakMana": 16.49,
+        "manaCappedSeconds": 35.2,
+        "abilityStarvedSeconds": 316.05,
+        "meanEligibleNeighbors": 0,
+        "fightsUsingHealthBonus": 0
+      },
+      "attack": {
+        "fights": 1995,
+        "clears": 1604,
+        "meanSeconds": 16.23,
+        "meanPeakMana": 16.14,
+        "manaCappedSeconds": 22.85,
+        "abilityStarvedSeconds": 271.3,
+        "meanEligibleNeighbors": 1.05,
+        "fightsUsingHealthBonus": 0
+      },
+      "defense": {
+        "fights": 1995,
+        "clears": 1611,
+        "meanSeconds": 16.99,
+        "meanPeakMana": 16.53,
+        "manaCappedSeconds": 38.35,
+        "abilityStarvedSeconds": 321.55,
+        "meanEligibleNeighbors": 0.74,
+        "fightsUsingHealthBonus": 0
+      },
+      "dexterity": {
+        "fights": 1995,
+        "clears": 1625,
+        "meanSeconds": 16.83,
+        "meanPeakMana": 16.05,
+        "manaCappedSeconds": 29.75,
+        "abilityStarvedSeconds": 537.4,
+        "meanEligibleNeighbors": 2.47,
+        "fightsUsingHealthBonus": 0
+      },
+      "speed": {
+        "fights": 1995,
+        "clears": 1627,
+        "meanSeconds": 16.79,
+        "meanPeakMana": 16.47,
+        "manaCappedSeconds": 43.2,
+        "abilityStarvedSeconds": 475.45,
+        "meanEligibleNeighbors": 2.47,
+        "fightsUsingHealthBonus": 0
+      },
+      "wisdom": {
+        "fights": 1995,
+        "clears": 1607,
+        "meanSeconds": 16.94,
+        "meanPeakMana": 16.48,
+        "manaCappedSeconds": 38.2,
+        "abilityStarvedSeconds": 318.9,
+        "meanEligibleNeighbors": 1.16,
+        "fightsUsingHealthBonus": 0
+      },
+      "vitality": {
+        "fights": 1995,
+        "clears": 1678,
+        "meanSeconds": 17.39,
+        "meanPeakMana": 16.76,
+        "manaCappedSeconds": 41.65,
+        "abilityStarvedSeconds": 346.05,
+        "meanEligibleNeighbors": 1,
+        "fightsUsingHealthBonus": 0
+      },
+      "health": {
+        "fights": 1995,
+        "clears": 1592,
+        "meanSeconds": 16.89,
+        "meanPeakMana": 16.51,
+        "manaCappedSeconds": 34.45,
+        "abilityStarvedSeconds": 292.25,
+        "meanEligibleNeighbors": 0,
+        "fightsUsingHealthBonus": 638
+      },
+      "magic": {
+        "fights": 1995,
+        "clears": 1591,
+        "meanSeconds": 16.89,
+        "meanPeakMana": 16.52,
+        "manaCappedSeconds": 10,
+        "abilityStarvedSeconds": 316.05,
+        "meanEligibleNeighbors": 0,
+        "fightsUsingHealthBonus": 0
+      }
+    },
+    "byClass": [
+      {
+        "classId": "rogue",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 22.29,
+            "meanPeakMana": 12.85,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 21.85,
+            "meanPeakMana": 12.84,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 22.29,
+            "meanPeakMana": 12.85,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 82,
+            "meanSeconds": 22.3,
+            "meanPeakMana": 12.08,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 4.85,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 82,
+            "meanSeconds": 22.26,
+            "meanPeakMana": 12.1,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.8,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 82,
+            "meanSeconds": 22.52,
+            "meanPeakMana": 12.91,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 90,
+            "meanSeconds": 23.28,
+            "meanPeakMana": 13.11,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 22.29,
+            "meanPeakMana": 12.85,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 22
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 22.29,
+            "meanPeakMana": 12.85,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "archer",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 9.96,
+            "meanPeakMana": 11.34,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 96,
+            "meanSeconds": 9.13,
+            "meanPeakMana": 10.9,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 9.96,
+            "meanPeakMana": 11.34,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 9.57,
+            "meanPeakMana": 11.14,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 9.36,
+            "meanPeakMana": 11.11,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 9.96,
+            "meanPeakMana": 11.34,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 96,
+            "meanSeconds": 10.04,
+            "meanPeakMana": 11.38,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 9.96,
+            "meanPeakMana": 11.34,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 5
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 9.96,
+            "meanPeakMana": 11.34,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "wizard",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 73,
+            "meanSeconds": 11.88,
+            "meanPeakMana": 20.5,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 76,
+            "meanSeconds": 11.62,
+            "meanPeakMana": 20.04,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 73,
+            "meanSeconds": 12.11,
+            "meanPeakMana": 20.69,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 77,
+            "meanSeconds": 11.73,
+            "meanPeakMana": 20.41,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 77,
+            "meanSeconds": 11.73,
+            "meanPeakMana": 20.98,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 73,
+            "meanSeconds": 12.09,
+            "meanPeakMana": 20.66,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 12.62,
+            "meanPeakMana": 21.28,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 73,
+            "meanSeconds": 12.06,
+            "meanPeakMana": 20.68,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 10
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 73,
+            "meanSeconds": 11.88,
+            "meanPeakMana": 20.5,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "priest",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 90,
+            "meanSeconds": 23.7,
+            "meanPeakMana": 27.89,
+            "manaCappedSeconds": 2.3,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 90,
+            "meanSeconds": 22.71,
+            "meanPeakMana": 27.16,
+            "manaCappedSeconds": 1.25,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 90,
+            "meanSeconds": 23.92,
+            "meanPeakMana": 28.09,
+            "manaCappedSeconds": 2.3,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 91,
+            "meanSeconds": 23.67,
+            "meanPeakMana": 27.78,
+            "manaCappedSeconds": 3,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 91,
+            "meanSeconds": 23.9,
+            "meanPeakMana": 28.97,
+            "manaCappedSeconds": 6.4,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 90,
+            "meanSeconds": 23.75,
+            "meanPeakMana": 27.99,
+            "manaCappedSeconds": 1.55,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 93,
+            "meanSeconds": 23.87,
+            "meanPeakMana": 28.1,
+            "manaCappedSeconds": 1.55,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 90,
+            "meanSeconds": 23.49,
+            "meanPeakMana": 27.6,
+            "manaCappedSeconds": 1.55,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 103
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 90,
+            "meanSeconds": 23.7,
+            "meanPeakMana": 27.93,
+            "manaCappedSeconds": 0.55,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "warrior",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 84,
+            "meanSeconds": 17.28,
+            "meanPeakMana": 11.44,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 16.57,
+            "meanPeakMana": 11.29,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 17.8,
+            "meanPeakMana": 11.54,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 84,
+            "meanSeconds": 17.28,
+            "meanPeakMana": 11.44,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 86,
+            "meanSeconds": 17.61,
+            "meanPeakMana": 11.25,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 84,
+            "meanSeconds": 17.27,
+            "meanPeakMana": 11.44,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 88,
+            "meanSeconds": 17.94,
+            "meanPeakMana": 11.56,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 84,
+            "meanSeconds": 17.32,
+            "meanPeakMana": 11.45,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 41
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 84,
+            "meanSeconds": 17.28,
+            "meanPeakMana": 11.44,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "knight",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 93,
+            "meanSeconds": 19.47,
+            "meanPeakMana": 15.05,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 93,
+            "meanSeconds": 18.63,
+            "meanPeakMana": 14.7,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 97,
+            "meanSeconds": 19.16,
+            "meanPeakMana": 14.92,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 97,
+            "meanSeconds": 19.54,
+            "meanPeakMana": 15.13,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 97,
+            "meanSeconds": 19.5,
+            "meanPeakMana": 15.11,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 96,
+            "meanSeconds": 19.42,
+            "meanPeakMana": 15.04,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 97,
+            "meanSeconds": 19.45,
+            "meanPeakMana": 15.04,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 93,
+            "meanSeconds": 19.47,
+            "meanPeakMana": 15.05,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 63
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 93,
+            "meanSeconds": 19.47,
+            "meanPeakMana": 15.05,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "paladin",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 23.25,
+            "meanPeakMana": 9.64,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 39.7,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 21.81,
+            "meanPeakMana": 9.58,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 23.9,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 23.52,
+            "meanPeakMana": 9.66,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 40.5,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 23.31,
+            "meanPeakMana": 8.51,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 100.2,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 23.25,
+            "meanPeakMana": 8.69,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 91.6,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 23.34,
+            "meanPeakMana": 9.65,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 40.5,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 23.59,
+            "meanPeakMana": 9.67,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 41.7,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 23.31,
+            "meanPeakMana": 9.64,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 39.7,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 95
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 23.25,
+            "meanPeakMana": 9.64,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 39.7,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "assassin",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 83,
+            "meanSeconds": 14.39,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 71.55,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 82,
+            "meanSeconds": 14.22,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 68.8,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 83,
+            "meanSeconds": 14.45,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 76.25,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 14.8,
+            "meanPeakMana": 7.7,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 117.05,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 14.68,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 101.5,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 83,
+            "meanSeconds": 14.39,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 71.55,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 14.72,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 87.65,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 83,
+            "meanSeconds": 14.37,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 71.55,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 2
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 83,
+            "meanSeconds": 14.39,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 71.55,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "necromancer",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 84,
+            "meanSeconds": 14.03,
+            "meanPeakMana": 19.92,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 13.49,
+            "meanPeakMana": 19.45,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 86,
+            "meanSeconds": 14.12,
+            "meanPeakMana": 19.94,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 13.63,
+            "meanPeakMana": 19.71,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 87,
+            "meanSeconds": 13.67,
+            "meanPeakMana": 20.36,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 14.11,
+            "meanPeakMana": 19.96,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 14.27,
+            "meanPeakMana": 19.99,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 84,
+            "meanSeconds": 14.03,
+            "meanPeakMana": 19.92,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 57
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 84,
+            "meanSeconds": 14.03,
+            "meanPeakMana": 19.92,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "huntress",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 13.31,
+            "meanPeakMana": 9.76,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 12.54,
+            "meanPeakMana": 9.68,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 13.37,
+            "meanPeakMana": 9.77,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 96,
+            "meanSeconds": 13.46,
+            "meanPeakMana": 9.78,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 13.32,
+            "meanPeakMana": 9.76,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 13.31,
+            "meanPeakMana": 9.76,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 98,
+            "meanSeconds": 13.75,
+            "meanPeakMana": 9.83,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 13.32,
+            "meanPeakMana": 9.76,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 13.31,
+            "meanPeakMana": 9.76,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "mystic",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 82,
+            "meanSeconds": 18.25,
+            "meanPeakMana": 34.67,
+            "manaCappedSeconds": 32.9,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 82,
+            "meanSeconds": 17.28,
+            "meanPeakMana": 33.37,
+            "manaCappedSeconds": 21.6,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 18.33,
+            "meanPeakMana": 34.75,
+            "manaCappedSeconds": 36.05,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 83,
+            "meanSeconds": 17.68,
+            "meanPeakMana": 33.98,
+            "manaCappedSeconds": 26.75,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 86,
+            "meanSeconds": 17.68,
+            "meanPeakMana": 35.1,
+            "manaCappedSeconds": 36.8,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 18.32,
+            "meanPeakMana": 34.7,
+            "manaCappedSeconds": 36.65,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 88,
+            "meanSeconds": 18.8,
+            "meanPeakMana": 35.35,
+            "manaCappedSeconds": 40.1,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 82,
+            "meanSeconds": 18.38,
+            "meanPeakMana": 34.87,
+            "manaCappedSeconds": 32.9,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 19
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 82,
+            "meanSeconds": 18.25,
+            "meanPeakMana": 35.2,
+            "manaCappedSeconds": 9.45,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "trickster",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 77,
+            "meanSeconds": 22.46,
+            "meanPeakMana": 13.03,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 21.95,
+            "meanPeakMana": 12.9,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 77,
+            "meanSeconds": 22.46,
+            "meanPeakMana": 13.03,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 22.06,
+            "meanPeakMana": 12.19,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.9,
+            "meanEligibleNeighbors": 4,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 22.08,
+            "meanPeakMana": 11.98,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 6.85,
+            "meanEligibleNeighbors": 4,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 22.95,
+            "meanPeakMana": 12.69,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 84,
+            "meanSeconds": 24.22,
+            "meanPeakMana": 13.44,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 77,
+            "meanSeconds": 22.46,
+            "meanPeakMana": 13.03,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 11
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 77,
+            "meanSeconds": 22.46,
+            "meanPeakMana": 13.03,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "sorcerer",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 66,
+            "meanSeconds": 13.27,
+            "meanPeakMana": 18.65,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 67,
+            "meanSeconds": 12.94,
+            "meanPeakMana": 18.43,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 68,
+            "meanSeconds": 13.39,
+            "meanPeakMana": 18.73,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 67,
+            "meanSeconds": 13.25,
+            "meanPeakMana": 17.96,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 67,
+            "meanSeconds": 13.15,
+            "meanPeakMana": 19.06,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 69,
+            "meanSeconds": 13.3,
+            "meanPeakMana": 18.68,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 75,
+            "meanSeconds": 13.83,
+            "meanPeakMana": 19.1,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 66,
+            "meanSeconds": 13.33,
+            "meanPeakMana": 18.7,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 66,
+            "meanSeconds": 13.27,
+            "meanPeakMana": 18.65,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "ninja",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 14.12,
+            "meanPeakMana": 22.04,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 13.62,
+            "meanPeakMana": 21.44,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 14.12,
+            "meanPeakMana": 22.04,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 14.13,
+            "meanPeakMana": 21.13,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 14.06,
+            "meanPeakMana": 21.42,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 14.02,
+            "meanPeakMana": 21.83,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 83,
+            "meanSeconds": 14.71,
+            "meanPeakMana": 22.66,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 14.17,
+            "meanPeakMana": 22.09,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 1
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 14.12,
+            "meanPeakMana": 22.04,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "samurai",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 14.62,
+            "meanPeakMana": 10.22,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 86,
+            "meanSeconds": 14.06,
+            "meanPeakMana": 10.15,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 90,
+            "meanSeconds": 14.78,
+            "meanPeakMana": 10.24,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 87,
+            "meanSeconds": 14.11,
+            "meanPeakMana": 9.7,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 4,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 86,
+            "meanSeconds": 14.05,
+            "meanPeakMana": 9.76,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 4,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 14.38,
+            "meanPeakMana": 10.2,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 91,
+            "meanSeconds": 14.98,
+            "meanPeakMana": 10.28,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 14.73,
+            "meanPeakMana": 10.23,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 33
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 14.62,
+            "meanPeakMana": 10.22,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "bard",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 10.93,
+            "meanPeakMana": 23.91,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 81,
+            "meanSeconds": 10.42,
+            "meanPeakMana": 22.98,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 10.95,
+            "meanPeakMana": 23.93,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 10.94,
+            "meanPeakMana": 23.98,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 10.9,
+            "meanPeakMana": 24.88,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 10.93,
+            "meanPeakMana": 23.91,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 83,
+            "meanSeconds": 11.33,
+            "meanPeakMana": 24.73,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 10.99,
+            "meanPeakMana": 24.04,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 7
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 10.93,
+            "meanPeakMana": 23.91,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "summoner",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 68,
+            "meanSeconds": 15.24,
+            "meanPeakMana": 20.07,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 69,
+            "meanSeconds": 15.05,
+            "meanPeakMana": 19.82,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 68,
+            "meanSeconds": 15.31,
+            "meanPeakMana": 20.12,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 73,
+            "meanSeconds": 15.5,
+            "meanPeakMana": 19.49,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 72,
+            "meanSeconds": 15.39,
+            "meanPeakMana": 20.83,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 68,
+            "meanSeconds": 15.26,
+            "meanPeakMana": 20.09,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 78,
+            "meanSeconds": 15.87,
+            "meanPeakMana": 20.49,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 68,
+            "meanSeconds": 15.31,
+            "meanPeakMana": 20.1,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 1
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 68,
+            "meanSeconds": 15.24,
+            "meanPeakMana": 20.07,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "kensei",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 22.65,
+            "meanPeakMana": 16.31,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 21.44,
+            "meanPeakMana": 15.89,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 97,
+            "meanSeconds": 23.05,
+            "meanPeakMana": 16.44,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 98,
+            "meanSeconds": 22.29,
+            "meanPeakMana": 15.14,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 4,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 97,
+            "meanSeconds": 22.17,
+            "meanPeakMana": 15.48,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 4,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 96,
+            "meanSeconds": 22.75,
+            "meanPeakMana": 16.32,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 97,
+            "meanSeconds": 23.03,
+            "meanPeakMana": 16.42,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 22.69,
+            "meanPeakMana": 16.32,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 76
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 22.65,
+            "meanPeakMana": 16.31,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "druid",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 19.78,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 197.5,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 18.96,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 178.6,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 19.78,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 197.5,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 97,
+            "meanSeconds": 20.49,
+            "meanPeakMana": 7.67,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 311.4,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 97,
+            "meanSeconds": 20.25,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 271.7,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 96,
+            "meanSeconds": 19.78,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 199.55,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 20.22,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 209.4,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 19.2,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 173.7,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 92
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 19.78,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 197.5,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      }
+    ],
+    "byTier": [
+      {
+        "tier": 1,
+        "attributes": {
+          "none": {
+            "fights": 665,
+            "clears": 504,
+            "meanSeconds": 17.98,
+            "meanPeakMana": 16.7,
+            "manaCappedSeconds": 18.35,
+            "abilityStarvedSeconds": 122.65,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 665,
+            "clears": 513,
+            "meanSeconds": 17.6,
+            "meanPeakMana": 16.57,
+            "manaCappedSeconds": 13.35,
+            "abilityStarvedSeconds": 112.25,
+            "meanEligibleNeighbors": 1.05,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 665,
+            "clears": 509,
+            "meanSeconds": 18.05,
+            "meanPeakMana": 16.73,
+            "manaCappedSeconds": 18.55,
+            "abilityStarvedSeconds": 123.45,
+            "meanEligibleNeighbors": 0.74,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 665,
+            "clears": 513,
+            "meanSeconds": 17.98,
+            "meanPeakMana": 16.43,
+            "manaCappedSeconds": 16.75,
+            "abilityStarvedSeconds": 185,
+            "meanEligibleNeighbors": 2.47,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 665,
+            "clears": 514,
+            "meanSeconds": 17.9,
+            "meanPeakMana": 16.76,
+            "manaCappedSeconds": 18.35,
+            "abilityStarvedSeconds": 168.25,
+            "meanEligibleNeighbors": 2.47,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 665,
+            "clears": 509,
+            "meanSeconds": 17.98,
+            "meanPeakMana": 16.68,
+            "manaCappedSeconds": 17.8,
+            "abilityStarvedSeconds": 123.45,
+            "meanEligibleNeighbors": 1.16,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 665,
+            "clears": 535,
+            "meanSeconds": 18.52,
+            "meanPeakMana": 16.96,
+            "manaCappedSeconds": 18.25,
+            "abilityStarvedSeconds": 134,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 665,
+            "clears": 505,
+            "meanSeconds": 17.99,
+            "meanPeakMana": 16.71,
+            "manaCappedSeconds": 17.6,
+            "abilityStarvedSeconds": 115.15,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 197
+          },
+          "magic": {
+            "fights": 665,
+            "clears": 504,
+            "meanSeconds": 17.98,
+            "meanPeakMana": 16.73,
+            "manaCappedSeconds": 9.2,
+            "abilityStarvedSeconds": 122.65,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "tier": 4,
+        "attributes": {
+          "none": {
+            "fights": 665,
+            "clears": 539,
+            "meanSeconds": 16.66,
+            "meanPeakMana": 16.48,
+            "manaCappedSeconds": 5.65,
+            "abilityStarvedSeconds": 103.9,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 665,
+            "clears": 541,
+            "meanSeconds": 16.01,
+            "meanPeakMana": 16.12,
+            "manaCappedSeconds": 3.8,
+            "abilityStarvedSeconds": 83.5,
+            "meanEligibleNeighbors": 1.05,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 665,
+            "clears": 545,
+            "meanSeconds": 16.75,
+            "meanPeakMana": 16.5,
+            "manaCappedSeconds": 6.05,
+            "abilityStarvedSeconds": 103.9,
+            "meanEligibleNeighbors": 0.74,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 665,
+            "clears": 551,
+            "meanSeconds": 16.58,
+            "meanPeakMana": 15.75,
+            "manaCappedSeconds": 2.55,
+            "abilityStarvedSeconds": 175.25,
+            "meanEligibleNeighbors": 2.47,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 665,
+            "clears": 550,
+            "meanSeconds": 16.55,
+            "meanPeakMana": 16.39,
+            "manaCappedSeconds": 8.55,
+            "abilityStarvedSeconds": 152.75,
+            "meanEligibleNeighbors": 2.47,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 665,
+            "clears": 544,
+            "meanSeconds": 16.71,
+            "meanPeakMana": 16.48,
+            "manaCappedSeconds": 6.05,
+            "abilityStarvedSeconds": 103.5,
+            "meanEligibleNeighbors": 1.16,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 665,
+            "clears": 566,
+            "meanSeconds": 17.12,
+            "meanPeakMana": 16.74,
+            "manaCappedSeconds": 6.05,
+            "abilityStarvedSeconds": 109.8,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 665,
+            "clears": 539,
+            "meanSeconds": 16.67,
+            "meanPeakMana": 16.5,
+            "manaCappedSeconds": 5.65,
+            "abilityStarvedSeconds": 98.25,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 217
+          },
+          "magic": {
+            "fights": 665,
+            "clears": 539,
+            "meanSeconds": 16.66,
+            "meanPeakMana": 16.5,
+            "manaCappedSeconds": 0.8,
+            "abilityStarvedSeconds": 103.9,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "tier": 7,
+        "attributes": {
+          "none": {
+            "fights": 665,
+            "clears": 548,
+            "meanSeconds": 16.03,
+            "meanPeakMana": 16.29,
+            "manaCappedSeconds": 11.2,
+            "abilityStarvedSeconds": 89.5,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 665,
+            "clears": 550,
+            "meanSeconds": 15.07,
+            "meanPeakMana": 15.72,
+            "manaCappedSeconds": 5.7,
+            "abilityStarvedSeconds": 75.55,
+            "meanEligibleNeighbors": 1.05,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 665,
+            "clears": 557,
+            "meanSeconds": 16.19,
+            "meanPeakMana": 16.36,
+            "manaCappedSeconds": 13.75,
+            "abilityStarvedSeconds": 94.2,
+            "meanEligibleNeighbors": 0.74,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 665,
+            "clears": 561,
+            "meanSeconds": 15.93,
+            "meanPeakMana": 15.96,
+            "manaCappedSeconds": 10.45,
+            "abilityStarvedSeconds": 177.15,
+            "meanEligibleNeighbors": 2.47,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 665,
+            "clears": 563,
+            "meanSeconds": 15.92,
+            "meanPeakMana": 16.24,
+            "manaCappedSeconds": 16.3,
+            "abilityStarvedSeconds": 154.45,
+            "meanEligibleNeighbors": 2.47,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 665,
+            "clears": 554,
+            "meanSeconds": 16.13,
+            "meanPeakMana": 16.29,
+            "manaCappedSeconds": 14.35,
+            "abilityStarvedSeconds": 91.95,
+            "meanEligibleNeighbors": 1.16,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 665,
+            "clears": 577,
+            "meanSeconds": 16.55,
+            "meanPeakMana": 16.58,
+            "manaCappedSeconds": 17.35,
+            "abilityStarvedSeconds": 102.25,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 665,
+            "clears": 548,
+            "meanSeconds": 16.01,
+            "meanPeakMana": 16.32,
+            "manaCappedSeconds": 11.2,
+            "abilityStarvedSeconds": 78.85,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 224
+          },
+          "magic": {
+            "fights": 665,
+            "clears": 548,
+            "meanSeconds": 16.03,
+            "meanPeakMana": 16.33,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 89.5,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      }
+    ]
+  },
+  "after": {
+    "version": "0.30.15",
+    "date": "2026-10-22",
+    "classes": 19,
+    "dungeons": 35,
+    "depth": 20,
+    "fights": 17955,
+    "fixture": "Fixed native tiered builds plus duplicate weapon, three Health Potions and an off-class Healing Tome. One unenchanted attribute ring at T1/T4/T7 matched to the three gear variants; none baseline leaves that cell empty. Same gear positions across attributes; deterministic placement maximizes eligible adjacent items, then native items, without inspecting battle outcomes. Full base HP and five mana before ring bonuses; Normal difficulty.",
+    "limitations": "Results compare these builds and placements, not every build, starting condition, dungeon depth or ring combination. Clear counts are not player win probabilities. Amounts differ by archetype and mana cost affects usefulness. No ring stacking is simulated.",
+    "byAttribute": {
+      "none": {
+        "fights": 1995,
+        "clears": 1591,
+        "meanSeconds": 16.89,
+        "meanPeakMana": 16.49,
+        "manaCappedSeconds": 35.2,
+        "abilityStarvedSeconds": 316.05,
+        "meanEligibleNeighbors": 0,
+        "fightsUsingHealthBonus": 0
+      },
+      "attack": {
+        "fights": 1995,
+        "clears": 1604,
+        "meanSeconds": 16.23,
+        "meanPeakMana": 16.14,
+        "manaCappedSeconds": 22.85,
+        "abilityStarvedSeconds": 271.3,
+        "meanEligibleNeighbors": 1.05,
+        "fightsUsingHealthBonus": 0
+      },
+      "defense": {
+        "fights": 1995,
+        "clears": 1611,
+        "meanSeconds": 16.99,
+        "meanPeakMana": 16.53,
+        "manaCappedSeconds": 38.35,
+        "abilityStarvedSeconds": 321.55,
+        "meanEligibleNeighbors": 0.74,
+        "fightsUsingHealthBonus": 0
+      },
+      "dexterity": {
+        "fights": 1995,
+        "clears": 1625,
+        "meanSeconds": 16.83,
+        "meanPeakMana": 16.05,
+        "manaCappedSeconds": 29.75,
+        "abilityStarvedSeconds": 537.4,
+        "meanEligibleNeighbors": 2.47,
+        "fightsUsingHealthBonus": 0
+      },
+      "speed": {
+        "fights": 1995,
+        "clears": 1627,
+        "meanSeconds": 16.79,
+        "meanPeakMana": 16.47,
+        "manaCappedSeconds": 43.2,
+        "abilityStarvedSeconds": 475.45,
+        "meanEligibleNeighbors": 2.47,
+        "fightsUsingHealthBonus": 0
+      },
+      "wisdom": {
+        "fights": 1995,
+        "clears": 1607,
+        "meanSeconds": 16.94,
+        "meanPeakMana": 16.48,
+        "manaCappedSeconds": 38.2,
+        "abilityStarvedSeconds": 318.9,
+        "meanEligibleNeighbors": 1.16,
+        "fightsUsingHealthBonus": 0
+      },
+      "vitality": {
+        "fights": 1995,
+        "clears": 1678,
+        "meanSeconds": 17.39,
+        "meanPeakMana": 16.76,
+        "manaCappedSeconds": 41.65,
+        "abilityStarvedSeconds": 346.05,
+        "meanEligibleNeighbors": 1,
+        "fightsUsingHealthBonus": 0
+      },
+      "health": {
+        "fights": 1995,
+        "clears": 1592,
+        "meanSeconds": 16.89,
+        "meanPeakMana": 16.51,
+        "manaCappedSeconds": 34.45,
+        "abilityStarvedSeconds": 292.25,
+        "meanEligibleNeighbors": 0,
+        "fightsUsingHealthBonus": 638
+      },
+      "magic": {
+        "fights": 1995,
+        "clears": 1591,
+        "meanSeconds": 16.89,
+        "meanPeakMana": 18.52,
+        "manaCappedSeconds": 10,
+        "abilityStarvedSeconds": 108.7,
+        "meanEligibleNeighbors": 0,
+        "fightsUsingHealthBonus": 0
+      }
+    },
+    "byClass": [
+      {
+        "classId": "rogue",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 22.29,
+            "meanPeakMana": 12.85,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 21.85,
+            "meanPeakMana": 12.84,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 22.29,
+            "meanPeakMana": 12.85,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 82,
+            "meanSeconds": 22.3,
+            "meanPeakMana": 12.08,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 4.85,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 82,
+            "meanSeconds": 22.26,
+            "meanPeakMana": 12.1,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.8,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 82,
+            "meanSeconds": 22.53,
+            "meanPeakMana": 12.91,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 90,
+            "meanSeconds": 23.28,
+            "meanPeakMana": 13.11,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 22.29,
+            "meanPeakMana": 12.85,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 22
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 22.29,
+            "meanPeakMana": 14.85,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "archer",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 9.96,
+            "meanPeakMana": 11.34,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 96,
+            "meanSeconds": 9.13,
+            "meanPeakMana": 10.9,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 9.96,
+            "meanPeakMana": 11.34,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 9.57,
+            "meanPeakMana": 11.14,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 9.36,
+            "meanPeakMana": 11.11,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 9.96,
+            "meanPeakMana": 11.34,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 96,
+            "meanSeconds": 10.04,
+            "meanPeakMana": 11.38,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 9.96,
+            "meanPeakMana": 11.34,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 5
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 9.96,
+            "meanPeakMana": 13.34,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "wizard",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 73,
+            "meanSeconds": 11.88,
+            "meanPeakMana": 20.5,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 76,
+            "meanSeconds": 11.62,
+            "meanPeakMana": 20.04,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 73,
+            "meanSeconds": 12.11,
+            "meanPeakMana": 20.69,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 77,
+            "meanSeconds": 11.73,
+            "meanPeakMana": 20.41,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 77,
+            "meanSeconds": 11.73,
+            "meanPeakMana": 20.98,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 73,
+            "meanSeconds": 12.02,
+            "meanPeakMana": 20.61,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 12.62,
+            "meanPeakMana": 21.28,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 73,
+            "meanSeconds": 12.06,
+            "meanPeakMana": 20.68,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 10
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 73,
+            "meanSeconds": 11.88,
+            "meanPeakMana": 22.5,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "priest",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 90,
+            "meanSeconds": 23.7,
+            "meanPeakMana": 27.89,
+            "manaCappedSeconds": 2.3,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 90,
+            "meanSeconds": 22.71,
+            "meanPeakMana": 27.16,
+            "manaCappedSeconds": 1.25,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 90,
+            "meanSeconds": 23.92,
+            "meanPeakMana": 28.09,
+            "manaCappedSeconds": 2.3,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 91,
+            "meanSeconds": 23.67,
+            "meanPeakMana": 27.78,
+            "manaCappedSeconds": 3,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 91,
+            "meanSeconds": 23.9,
+            "meanPeakMana": 28.97,
+            "manaCappedSeconds": 6.4,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 90,
+            "meanSeconds": 23.83,
+            "meanPeakMana": 28.04,
+            "manaCappedSeconds": 1.55,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 93,
+            "meanSeconds": 23.87,
+            "meanPeakMana": 28.1,
+            "manaCappedSeconds": 1.55,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 90,
+            "meanSeconds": 23.49,
+            "meanPeakMana": 27.6,
+            "manaCappedSeconds": 1.55,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 103
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 90,
+            "meanSeconds": 23.7,
+            "meanPeakMana": 29.92,
+            "manaCappedSeconds": 0.55,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "warrior",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 84,
+            "meanSeconds": 17.28,
+            "meanPeakMana": 11.44,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 16.57,
+            "meanPeakMana": 11.29,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 17.8,
+            "meanPeakMana": 11.54,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 84,
+            "meanSeconds": 17.28,
+            "meanPeakMana": 11.44,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 86,
+            "meanSeconds": 17.61,
+            "meanPeakMana": 11.25,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 84,
+            "meanSeconds": 17.27,
+            "meanPeakMana": 11.44,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 88,
+            "meanSeconds": 17.94,
+            "meanPeakMana": 11.56,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 84,
+            "meanSeconds": 17.32,
+            "meanPeakMana": 11.45,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 41
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 84,
+            "meanSeconds": 17.28,
+            "meanPeakMana": 13.44,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "knight",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 93,
+            "meanSeconds": 19.47,
+            "meanPeakMana": 15.05,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 93,
+            "meanSeconds": 18.63,
+            "meanPeakMana": 14.7,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 97,
+            "meanSeconds": 19.16,
+            "meanPeakMana": 14.92,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 97,
+            "meanSeconds": 19.54,
+            "meanPeakMana": 15.13,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 97,
+            "meanSeconds": 19.5,
+            "meanPeakMana": 15.11,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 96,
+            "meanSeconds": 19.42,
+            "meanPeakMana": 15.04,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 97,
+            "meanSeconds": 19.45,
+            "meanPeakMana": 15.04,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 93,
+            "meanSeconds": 19.47,
+            "meanPeakMana": 15.05,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 63
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 93,
+            "meanSeconds": 19.47,
+            "meanPeakMana": 17.05,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "paladin",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 23.25,
+            "meanPeakMana": 9.64,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 39.7,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 21.81,
+            "meanPeakMana": 9.58,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 23.9,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 23.52,
+            "meanPeakMana": 9.66,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 40.5,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 23.31,
+            "meanPeakMana": 8.51,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 100.2,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 23.25,
+            "meanPeakMana": 8.69,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 91.6,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 23.33,
+            "meanPeakMana": 9.64,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 40.5,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 23.59,
+            "meanPeakMana": 9.67,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 41.7,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 23.31,
+            "meanPeakMana": 9.64,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 39.7,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 95
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 23.25,
+            "meanPeakMana": 11.64,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 23.45,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "assassin",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 83,
+            "meanSeconds": 14.39,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 71.55,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 82,
+            "meanSeconds": 14.22,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 68.8,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 83,
+            "meanSeconds": 14.45,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 76.25,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 14.8,
+            "meanPeakMana": 7.7,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 117.05,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 14.68,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 101.5,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 83,
+            "meanSeconds": 14.39,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 71.55,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 14.72,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 87.65,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 83,
+            "meanSeconds": 14.37,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 71.55,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 2
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 83,
+            "meanSeconds": 14.39,
+            "meanPeakMana": 10,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 11.7,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "necromancer",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 84,
+            "meanSeconds": 14.03,
+            "meanPeakMana": 19.92,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 13.49,
+            "meanPeakMana": 19.45,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 86,
+            "meanSeconds": 14.12,
+            "meanPeakMana": 19.94,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 13.63,
+            "meanPeakMana": 19.71,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 87,
+            "meanSeconds": 13.67,
+            "meanPeakMana": 20.36,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 14.09,
+            "meanPeakMana": 19.95,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 89,
+            "meanSeconds": 14.27,
+            "meanPeakMana": 19.99,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 84,
+            "meanSeconds": 14.03,
+            "meanPeakMana": 19.92,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 57
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 84,
+            "meanSeconds": 14.03,
+            "meanPeakMana": 21.92,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "huntress",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 13.31,
+            "meanPeakMana": 9.76,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 12.54,
+            "meanPeakMana": 9.68,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 13.37,
+            "meanPeakMana": 9.77,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 96,
+            "meanSeconds": 13.46,
+            "meanPeakMana": 9.78,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 13.32,
+            "meanPeakMana": 9.76,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 13.31,
+            "meanPeakMana": 9.76,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 98,
+            "meanSeconds": 13.75,
+            "meanPeakMana": 9.83,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 13.32,
+            "meanPeakMana": 9.76,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 13.31,
+            "meanPeakMana": 11.76,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "mystic",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 82,
+            "meanSeconds": 18.25,
+            "meanPeakMana": 34.67,
+            "manaCappedSeconds": 32.9,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 82,
+            "meanSeconds": 17.28,
+            "meanPeakMana": 33.37,
+            "manaCappedSeconds": 21.6,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 18.33,
+            "meanPeakMana": 34.75,
+            "manaCappedSeconds": 36.05,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 83,
+            "meanSeconds": 17.68,
+            "meanPeakMana": 33.98,
+            "manaCappedSeconds": 26.75,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 86,
+            "meanSeconds": 17.68,
+            "meanPeakMana": 35.1,
+            "manaCappedSeconds": 36.8,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 18.29,
+            "meanPeakMana": 34.67,
+            "manaCappedSeconds": 36.65,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 88,
+            "meanSeconds": 18.8,
+            "meanPeakMana": 35.35,
+            "manaCappedSeconds": 40.1,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 82,
+            "meanSeconds": 18.38,
+            "meanPeakMana": 34.87,
+            "manaCappedSeconds": 32.9,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 19
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 82,
+            "meanSeconds": 18.25,
+            "meanPeakMana": 37.15,
+            "manaCappedSeconds": 9.45,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "trickster",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 77,
+            "meanSeconds": 22.46,
+            "meanPeakMana": 13.03,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 21.95,
+            "meanPeakMana": 12.9,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 77,
+            "meanSeconds": 22.46,
+            "meanPeakMana": 13.03,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 22.06,
+            "meanPeakMana": 12.19,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.9,
+            "meanEligibleNeighbors": 4,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 22.08,
+            "meanPeakMana": 11.98,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 6.85,
+            "meanEligibleNeighbors": 4,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 22.95,
+            "meanPeakMana": 12.69,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 84,
+            "meanSeconds": 24.22,
+            "meanPeakMana": 13.44,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 77,
+            "meanSeconds": 22.46,
+            "meanPeakMana": 13.03,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 3.65,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 11
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 77,
+            "meanSeconds": 22.46,
+            "meanPeakMana": 15.03,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "sorcerer",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 66,
+            "meanSeconds": 13.27,
+            "meanPeakMana": 18.65,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 67,
+            "meanSeconds": 12.94,
+            "meanPeakMana": 18.43,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 68,
+            "meanSeconds": 13.39,
+            "meanPeakMana": 18.73,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 67,
+            "meanSeconds": 13.25,
+            "meanPeakMana": 17.96,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 67,
+            "meanSeconds": 13.15,
+            "meanPeakMana": 19.06,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 68,
+            "meanSeconds": 13.3,
+            "meanPeakMana": 18.68,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 75,
+            "meanSeconds": 13.83,
+            "meanPeakMana": 19.1,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 66,
+            "meanSeconds": 13.33,
+            "meanPeakMana": 18.7,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 66,
+            "meanSeconds": 13.27,
+            "meanPeakMana": 20.65,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "ninja",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 14.12,
+            "meanPeakMana": 22.04,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 13.62,
+            "meanPeakMana": 21.44,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 14.12,
+            "meanPeakMana": 22.04,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 14.13,
+            "meanPeakMana": 21.13,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 14.06,
+            "meanPeakMana": 21.42,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 3,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 14.02,
+            "meanPeakMana": 21.84,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 83,
+            "meanSeconds": 14.71,
+            "meanPeakMana": 22.66,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 14.17,
+            "meanPeakMana": 22.09,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 1
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 14.12,
+            "meanPeakMana": 24.04,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "samurai",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 14.62,
+            "meanPeakMana": 10.22,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 86,
+            "meanSeconds": 14.06,
+            "meanPeakMana": 10.15,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 90,
+            "meanSeconds": 14.78,
+            "meanPeakMana": 10.24,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 87,
+            "meanSeconds": 14.11,
+            "meanPeakMana": 9.7,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 4,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 86,
+            "meanSeconds": 14.05,
+            "meanPeakMana": 9.76,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 4,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 86,
+            "meanSeconds": 14.51,
+            "meanPeakMana": 10.2,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 91,
+            "meanSeconds": 14.98,
+            "meanPeakMana": 10.28,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 14.73,
+            "meanPeakMana": 10.23,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 33
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 85,
+            "meanSeconds": 14.62,
+            "meanPeakMana": 12.22,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "bard",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 10.93,
+            "meanPeakMana": 23.91,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 81,
+            "meanSeconds": 10.42,
+            "meanPeakMana": 22.98,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 80,
+            "meanSeconds": 10.95,
+            "meanPeakMana": 23.93,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 10.94,
+            "meanPeakMana": 23.98,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 10.9,
+            "meanPeakMana": 24.88,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 10.93,
+            "meanPeakMana": 23.91,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 83,
+            "meanSeconds": 11.33,
+            "meanPeakMana": 24.73,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 10.99,
+            "meanPeakMana": 24.04,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 7
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 79,
+            "meanSeconds": 10.93,
+            "meanPeakMana": 25.91,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "summoner",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 68,
+            "meanSeconds": 15.24,
+            "meanPeakMana": 20.07,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 69,
+            "meanSeconds": 15.05,
+            "meanPeakMana": 19.82,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 68,
+            "meanSeconds": 15.31,
+            "meanPeakMana": 20.12,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 73,
+            "meanSeconds": 15.5,
+            "meanPeakMana": 19.49,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 72,
+            "meanSeconds": 15.39,
+            "meanPeakMana": 20.83,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 68,
+            "meanSeconds": 15.26,
+            "meanPeakMana": 20.09,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 78,
+            "meanSeconds": 15.87,
+            "meanPeakMana": 20.49,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 68,
+            "meanSeconds": 15.31,
+            "meanPeakMana": 20.1,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 1
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 68,
+            "meanSeconds": 15.24,
+            "meanPeakMana": 22.07,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "kensei",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 22.65,
+            "meanPeakMana": 16.31,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 21.44,
+            "meanPeakMana": 15.89,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 97,
+            "meanSeconds": 23.05,
+            "meanPeakMana": 16.44,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 98,
+            "meanSeconds": 22.29,
+            "meanPeakMana": 15.14,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 4,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 97,
+            "meanSeconds": 22.17,
+            "meanPeakMana": 15.48,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 4,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 96,
+            "meanSeconds": 22.75,
+            "meanPeakMana": 16.32,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 97,
+            "meanSeconds": 23.03,
+            "meanPeakMana": 16.42,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 22.69,
+            "meanPeakMana": 16.32,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 76
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 22.65,
+            "meanPeakMana": 18.31,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 0,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "classId": "druid",
+        "attributes": {
+          "none": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 19.78,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 197.5,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 105,
+            "clears": 94,
+            "meanSeconds": 18.96,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 178.6,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 19.78,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 197.5,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 105,
+            "clears": 97,
+            "meanSeconds": 20.49,
+            "meanPeakMana": 7.67,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 311.4,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 105,
+            "clears": 97,
+            "meanSeconds": 20.25,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 271.7,
+            "meanEligibleNeighbors": 2,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 105,
+            "clears": 96,
+            "meanSeconds": 19.78,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 199.55,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 20.22,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 209.4,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 19.2,
+            "meanPeakMana": 8,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 173.7,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 92
+          },
+          "magic": {
+            "fights": 105,
+            "clears": 95,
+            "meanSeconds": 19.81,
+            "meanPeakMana": 10,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 73.55,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      }
+    ],
+    "byTier": [
+      {
+        "tier": 1,
+        "attributes": {
+          "none": {
+            "fights": 665,
+            "clears": 504,
+            "meanSeconds": 17.98,
+            "meanPeakMana": 16.7,
+            "manaCappedSeconds": 18.35,
+            "abilityStarvedSeconds": 122.65,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 665,
+            "clears": 513,
+            "meanSeconds": 17.6,
+            "meanPeakMana": 16.57,
+            "manaCappedSeconds": 13.35,
+            "abilityStarvedSeconds": 112.25,
+            "meanEligibleNeighbors": 1.05,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 665,
+            "clears": 509,
+            "meanSeconds": 18.05,
+            "meanPeakMana": 16.73,
+            "manaCappedSeconds": 18.55,
+            "abilityStarvedSeconds": 123.45,
+            "meanEligibleNeighbors": 0.74,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 665,
+            "clears": 513,
+            "meanSeconds": 17.98,
+            "meanPeakMana": 16.43,
+            "manaCappedSeconds": 16.75,
+            "abilityStarvedSeconds": 185,
+            "meanEligibleNeighbors": 2.47,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 665,
+            "clears": 514,
+            "meanSeconds": 17.9,
+            "meanPeakMana": 16.76,
+            "manaCappedSeconds": 18.35,
+            "abilityStarvedSeconds": 168.25,
+            "meanEligibleNeighbors": 2.47,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 665,
+            "clears": 509,
+            "meanSeconds": 18,
+            "meanPeakMana": 16.68,
+            "manaCappedSeconds": 17.8,
+            "abilityStarvedSeconds": 123.45,
+            "meanEligibleNeighbors": 1.16,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 665,
+            "clears": 535,
+            "meanSeconds": 18.52,
+            "meanPeakMana": 16.96,
+            "manaCappedSeconds": 18.25,
+            "abilityStarvedSeconds": 134,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 665,
+            "clears": 505,
+            "meanSeconds": 17.99,
+            "meanPeakMana": 16.71,
+            "manaCappedSeconds": 17.6,
+            "abilityStarvedSeconds": 115.15,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 197
+          },
+          "magic": {
+            "fights": 665,
+            "clears": 504,
+            "meanSeconds": 17.98,
+            "meanPeakMana": 17.72,
+            "manaCappedSeconds": 9.2,
+            "abilityStarvedSeconds": 66.55,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "tier": 4,
+        "attributes": {
+          "none": {
+            "fights": 665,
+            "clears": 539,
+            "meanSeconds": 16.66,
+            "meanPeakMana": 16.48,
+            "manaCappedSeconds": 5.65,
+            "abilityStarvedSeconds": 103.9,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 665,
+            "clears": 541,
+            "meanSeconds": 16.01,
+            "meanPeakMana": 16.12,
+            "manaCappedSeconds": 3.8,
+            "abilityStarvedSeconds": 83.5,
+            "meanEligibleNeighbors": 1.05,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 665,
+            "clears": 545,
+            "meanSeconds": 16.75,
+            "meanPeakMana": 16.5,
+            "manaCappedSeconds": 6.05,
+            "abilityStarvedSeconds": 103.9,
+            "meanEligibleNeighbors": 0.74,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 665,
+            "clears": 551,
+            "meanSeconds": 16.58,
+            "meanPeakMana": 15.75,
+            "manaCappedSeconds": 2.55,
+            "abilityStarvedSeconds": 175.25,
+            "meanEligibleNeighbors": 2.47,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 665,
+            "clears": 550,
+            "meanSeconds": 16.55,
+            "meanPeakMana": 16.39,
+            "manaCappedSeconds": 8.55,
+            "abilityStarvedSeconds": 152.75,
+            "meanEligibleNeighbors": 2.47,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 665,
+            "clears": 543,
+            "meanSeconds": 16.7,
+            "meanPeakMana": 16.47,
+            "manaCappedSeconds": 6.05,
+            "abilityStarvedSeconds": 103.5,
+            "meanEligibleNeighbors": 1.16,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 665,
+            "clears": 566,
+            "meanSeconds": 17.12,
+            "meanPeakMana": 16.74,
+            "manaCappedSeconds": 6.05,
+            "abilityStarvedSeconds": 109.8,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 665,
+            "clears": 539,
+            "meanSeconds": 16.67,
+            "meanPeakMana": 16.5,
+            "manaCappedSeconds": 5.65,
+            "abilityStarvedSeconds": 98.25,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 217
+          },
+          "magic": {
+            "fights": 665,
+            "clears": 539,
+            "meanSeconds": 16.66,
+            "meanPeakMana": 18.5,
+            "manaCappedSeconds": 0.8,
+            "abilityStarvedSeconds": 31.05,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      },
+      {
+        "tier": 7,
+        "attributes": {
+          "none": {
+            "fights": 665,
+            "clears": 548,
+            "meanSeconds": 16.03,
+            "meanPeakMana": 16.29,
+            "manaCappedSeconds": 11.2,
+            "abilityStarvedSeconds": 89.5,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          },
+          "attack": {
+            "fights": 665,
+            "clears": 550,
+            "meanSeconds": 15.07,
+            "meanPeakMana": 15.72,
+            "manaCappedSeconds": 5.7,
+            "abilityStarvedSeconds": 75.55,
+            "meanEligibleNeighbors": 1.05,
+            "fightsUsingHealthBonus": 0
+          },
+          "defense": {
+            "fights": 665,
+            "clears": 557,
+            "meanSeconds": 16.19,
+            "meanPeakMana": 16.36,
+            "manaCappedSeconds": 13.75,
+            "abilityStarvedSeconds": 94.2,
+            "meanEligibleNeighbors": 0.74,
+            "fightsUsingHealthBonus": 0
+          },
+          "dexterity": {
+            "fights": 665,
+            "clears": 561,
+            "meanSeconds": 15.93,
+            "meanPeakMana": 15.96,
+            "manaCappedSeconds": 10.45,
+            "abilityStarvedSeconds": 177.15,
+            "meanEligibleNeighbors": 2.47,
+            "fightsUsingHealthBonus": 0
+          },
+          "speed": {
+            "fights": 665,
+            "clears": 563,
+            "meanSeconds": 15.92,
+            "meanPeakMana": 16.24,
+            "manaCappedSeconds": 16.3,
+            "abilityStarvedSeconds": 154.45,
+            "meanEligibleNeighbors": 2.47,
+            "fightsUsingHealthBonus": 0
+          },
+          "wisdom": {
+            "fights": 665,
+            "clears": 555,
+            "meanSeconds": 16.13,
+            "meanPeakMana": 16.29,
+            "manaCappedSeconds": 14.35,
+            "abilityStarvedSeconds": 91.95,
+            "meanEligibleNeighbors": 1.16,
+            "fightsUsingHealthBonus": 0
+          },
+          "vitality": {
+            "fights": 665,
+            "clears": 577,
+            "meanSeconds": 16.55,
+            "meanPeakMana": 16.58,
+            "manaCappedSeconds": 17.35,
+            "abilityStarvedSeconds": 102.25,
+            "meanEligibleNeighbors": 1,
+            "fightsUsingHealthBonus": 0
+          },
+          "health": {
+            "fights": 665,
+            "clears": 548,
+            "meanSeconds": 16.01,
+            "meanPeakMana": 16.32,
+            "manaCappedSeconds": 11.2,
+            "abilityStarvedSeconds": 78.85,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 224
+          },
+          "magic": {
+            "fights": 665,
+            "clears": 548,
+            "meanSeconds": 16.03,
+            "meanPeakMana": 19.33,
+            "manaCappedSeconds": 0,
+            "abilityStarvedSeconds": 11.1,
+            "meanEligibleNeighbors": 0,
+            "fightsUsingHealthBonus": 0
+          }
+        }
+      }
+    ]
+  }
+}

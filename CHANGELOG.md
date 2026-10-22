@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.30.15 — 2026-10-22
+
+- Magic rings retain their maximum-mana bonus and now grant 1 / 2 / 3 mana at battle start at T1–2 / T3–5 / T6–7. Packed rings grant at most 6 total; equipping, reopening details and later waves cannot repeat the grant.
+- Wisdom now carries its fractional primary-output bonus between successful activations of each adjacent ability. Small bonuses accumulate into whole extra points instead of disappearing into rounding. Carry resets at the next battle; previews and failed activations do not consume it. Dodge abilities retain their recharge bonus.
+- Added a controlled ring comparison across all 19 classes and 35 dungeon bosses, with T1 / T4 / T7 rings and a no-ring baseline. Each archetype uses the same gear positions and a legal ring placement chosen for its relevant neighbors. See docs/attribute-rings.md for results and limitations.
+- Validation: JavaScript syntax, all 20 game regressions, targeted resource/carry tests, 130 browser inspection views and 35,910 paired archetype fights. Magic reduced measured ability-mana starvation by 65.61% without changing clears; Wisdom's total clears were unchanged. The fixed-build comparison flags Health for further testing and Vitality as its strongest archetype; their values are unchanged.
+
 ## 0.30.14 — 2026-10-22
 
 - Reworked all 57 tiered attribute rings: Attack boosts adjacent weapon damage, Defense boosts adjacent item block gain, Wisdom boosts adjacent ability output, and Speed continuously reduces adjacent cooldowns. Dexterity grants temporary adjacent haste; Vitality heals. Wisdom improves dodge-ability recharge instead of adding dodge charges.
