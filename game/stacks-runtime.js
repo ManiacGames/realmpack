@@ -7,12 +7,24 @@ const HEALING_CONSUMABLE_THRESHOLD=.5;
 function isHealingConsumable(d){return !!d.once&&(d.effect==='heal'||d.affix==='heal'&&(!d.mechanic||d.mechanic.keepAffix))}
 function healingConsumableReady(i){return !isHealingConsumable(defs[i.type])||s.hp<=s.max*HEALING_CONSUMABLE_THRESHOLD}
 function healingConsumableNote(d){return isHealingConsumable(d)?' Activates only at 50% health or lower; holds its ready cooldown while waiting.':''}
+// Explicit quantity suffixes are bundles; percentages and other digits are stats.
+function consumableBundleSize(type){const d=defs[type];return d?.once?Math.max(1,Number(/\s[x×](\d+)$/i.exec(d.name)?.[1])||1):1}
+function incomingStackCount(i){return defs[i.type]?.once?Math.max(1,Math.min(Math.max(STACK_LIMIT,consumableBundleSize(i.type)),Math.floor(Number(i.quantity??(i.id<0?consumableBundleSize(i.type):1))||1))):1}
 function stackCount(i){return defs[i.type]?.once?Math.max(1,Math.min(STACK_LIMIT,Math.floor(Number(i.quantity)||1))):1}
 function stackRemaining(i){return Math.max(0,stackCount(i)-(i.usesSpent||0))}
 function stackCompatible(a,b){return a.id!==b.id&&a.type===b.type&&!!defs[a.type]?.once&&(a.eventHaste||0)===(b.eventHaste||0)&&(a.eventInfusion||0)===(b.eventInfusion||0)&&JSON.stringify(itemEnchants(a))===JSON.stringify(itemEnchants(b))}
 function stackCanReceive(type){const item={id:-1,type};return [...s.items,...s.stash].some(j=>stackCompatible(j,item)&&stackCount(j)<STACK_LIMIT)}
-function stashCanReceive(i,includePacked=true,removed=[]){const stash=s.stash.filter(j=>!removed.includes(j.id));if(stash.some(j=>j.id===i.id))return true;const targets=[...(includePacked?s.items:[]),...stash].filter(j=>j.id!==i.id&&!removed.includes(j.id));const space=defs[i.type]?.once?targets.filter(j=>stackCompatible(j,i)).reduce((n,j)=>n+STACK_LIMIT-stackCount(j),0):0;return space>=stackCount(i)||stash.length<STASH_LIMIT}
-function receiveItem(i,includePacked=true){if(s.stash.includes(i))return i;if(!stashCanReceive(i,includePacked)){toast(STASH_FULL_MESSAGE);return null}if(defs[i.type].once){i.quantity=stackCount(i);for(const target of [...(includePacked?s.items:[]),...s.stash]){if(target.id===i.id||!stackCompatible(target,i)||stackCount(target)>=STACK_LIMIT)continue;const n=Math.min(STACK_LIMIT-stackCount(target),i.quantity);target.quantity=stackCount(target)+n;i.quantity-=n;if(!i.quantity)return target}}Object.assign(i,{x:null,y:null});s.stash.push(i);return i}
+function stashCanReceive(i,includePacked=true,removed=[]){const stash=s.stash.filter(j=>!removed.includes(j.id));if(stash.some(j=>j.id===i.id))return true;const targets=[...(includePacked?s.items:[]),...stash].filter(j=>j.id!==i.id&&!removed.includes(j.id));const space=defs[i.type]?.once?targets.filter(j=>stackCompatible(j,i)).reduce((n,j)=>n+STACK_LIMIT-stackCount(j),0):0;const remaining=Math.max(0,incomingStackCount(i)-space),slots=defs[i.type]?.once?Math.ceil(remaining/STACK_LIMIT):1;return stash.length+slots<=STASH_LIMIT}
+function receiveItem(i,includePacked=true){
+ if(s.stash.includes(i))return i;if(!stashCanReceive(i,includePacked)){toast(STASH_FULL_MESSAGE);return null}
+ if(defs[i.type].once){
+  i.quantity=incomingStackCount(i);
+  for(const target of [...(includePacked?s.items:[]),...s.stash]){if(target.id===i.id||!stackCompatible(target,i)||stackCount(target)>=STACK_LIMIT)continue;const n=Math.min(STACK_LIMIT-stackCount(target),i.quantity);target.quantity=stackCount(target)+n;i.quantity-=n;if(!i.quantity)return target}
+  // Oversized bundles occupy multiple slots, with independent item identities.
+  while(i.quantity>STACK_LIMIT){const part={...i,id:++uid,x:null,y:null,quantity:STACK_LIMIT,enchantments:itemEnchants(i).map(e=>({...e}))};s.stash.push(part);i.quantity-=STACK_LIMIT}
+ }
+ Object.assign(i,{x:null,y:null});s.stash.push(i);return i
+}
 function mergeStacks(source,target){if(s.phase!=='prep'||!source||!target||!stackCompatible(source,target))return false;const n=Math.min(STACK_LIMIT-stackCount(target),stackCount(source));if(!n)return false;target.quantity=stackCount(target)+n;source.quantity=stackCount(source)-n;if(!source.quantity){s.items=s.items.filter(j=>j.id!==source.id);s.stash=s.stash.filter(j=>j.id!==source.id)}inventoryIntent=null;selected=target.id;render();save();return true}
 function stackAtCell(i,x,y){return s.items.find(j=>j.id!==i.id&&occupied(j).some(([a,b])=>a===x&&b===y)&&stackCompatible(i,j))}
 function splitSelectedStack(id=selected){if(s.phase!=='prep')return;const i=[...s.items,...s.stash].find(i=>i.id===id);if(!i||!defs[i.type].once||stackCount(i)<2)return;if(s.stash.length>=STASH_LIMIT)return toast(STASH_FULL_MESSAGE);const copy={...i,id:++uid,x:null,y:null,quantity:1,charge:0,activations:0,used:false,usesSpent:0};i.quantity=stackCount(i)-1;s.stash.push(copy);inventoryIntent=null;selected=copy.id;inspected=copy.id;render();save()}

@@ -1,3 +1,10 @@
+## 0.30.10 — 2026-10-22
+
+- Numbered consumable bundles now grant their stated number of copies: for example, Vamp Steak Flambe’ x4 arrives with four uses per battle. All 26 explicit x1–x6 variants are supported; percentages and unrelated name digits remain unchanged.
+- Bundles larger than five split into separate stacks. Capacity checks reserve space for the whole bundle before spending gold or resolving an event, and matching stacks merge without losing copies.
+- Kept package purchase prices and valued merchant sales per copy using the package size. Clone events still copy one item; existing saved or split stacks retain their actual quantities.
+- Validation: all 18 game regression scripts, JavaScript syntax, bundle acquisition/capacity/overflow/clone/sale tests, per-copy healing, and a browser check of the x4 inspection and stash count.
+
 ## 0.30.9 — 2026-10-22
 
 - Moved the trashcan inside the travel stash, below its nine item slots, and added a visible Discard label. Stash sizing reserves room for the control on shorter screens.
