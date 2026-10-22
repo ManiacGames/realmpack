@@ -3,6 +3,14 @@ const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');cons
 for(const f of ['sprites.js','sprites-runtime.js','catalogue.js','item-balance.js','realm-specials.js','dagger-update.js','encounters.js','mechanics-runtime.js','enchantments-runtime.js','events-runtime.js','map-runtime.js','inventory-controls.js','item-effects.js','adjacency-runtime.js','stacks-runtime.js','event-art.js','event-trades.js','dungeon-difficulty.js','class-runtime.js','shop-specialists.js','game.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx);
 console.log(vm.runInContext(`(()=>{
 const check=(v,m)=>{if(!v)throw Error(m)};
+// New runs grant class gear and shared supplies, with no universal spare tome.
+for(const classId of Object.keys(classes))for(const practice of [false,true]){
+ freshRun(classId,practice);
+ const expected=[...classes[classId].startingIds.slice(0,3),DATA.byName['Ring of Magic'],DATA.byName['Health Potion']].sort();
+ const actual=[...s.items,...s.stash].map(i=>i.type).sort();
+ check(JSON.stringify(actual)===JSON.stringify(expected),'Unexpected starting gear for '+classId);
+ if(classId==='priest')check(actual.includes(DATA.byName['Healing Tome']),'Priest lost its class tome');
+}
 freshRun('knight',true);selectPortal(s.portalChoices[0]);
 const weaponType=classes.knight.startingIds[0],potionType=DATA.byName['Health Potion'],ringType=DATA.byName['Ring of Magic'];
 const fill=n=>{s.stash=Array.from({length:n},()=>makeItem(ringType))};
@@ -29,5 +37,5 @@ s.phase='event';fill(9);const upgraded=makeItem(potionType);upgraded.quantity=2;
 // Both modes use the same receiver; legacy over-cap saves retain items but cannot begin battle.
 s.phase='prep';s.practice=true;fill(9);addSandbox(weaponType);check(s.stash.length===9,'Sandbox bypassed cap');
 s.practice=false;fill(10);const previousType=ROOMS[s.room].type;ROOMS[s.room].type='shop';startFight();check(s.phase==='shop','Over-cap legacy stash cannot enter a merchant');s.phase='prep';ROOMS[s.room].type=previousType;const ids=s.stash.map(i=>i.id).join();startFight();check(s.phase==='prep'&&s.stash.map(i=>i.id).join()===ids,'Legacy over-cap stash lost items or fought');s.stash.pop();startFight();check(s.phase==='fight','Legal stash cannot begin battle');
-return 'PASS: ninth-slot boundary, atomic partial merges, variant safety, packed transfers, splitting, purchases/rewards without loss, event costs and freed slots, clone compatibility, Sandbox and legacy over-cap battle guard';
+return 'PASS: all 19 class starters in normal/Sandbox modes, ninth-slot boundary, atomic partial merges, variant safety, packed transfers, splitting, purchases/rewards without loss, event costs and freed slots, clone compatibility, Sandbox and legacy over-cap battle guard';
 })()`,ctx));

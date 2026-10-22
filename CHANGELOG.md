@@ -1,5 +1,10 @@
 # RealmPack changelog
 
+## 0.30.13 — 2026-10-22
+
+- Removed the extra Healing Tome granted to every class at the start of a run. Class starting equipment, Ring of Magic and Health Potion are retained; Priest still starts with its own tome. Existing runs keep their items.
+- Validation: checked starting inventories for all 19 classes in normal and Sandbox modes; JavaScript syntax, stash capacity, provisions and adjacency regressions.
+
 ## 0.30.12 — 2026-10-22
 
 - Widened Full details to use two readable columns on desktop, bringing item stats, adjacency bonuses and enchantments together on one page. Reduced excess card spacing and enlarged enchantment text.
