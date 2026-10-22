@@ -1,7 +1,33 @@
 /* RealmPack's five tiers adapt RotMG dungeon progression, not DECA's /10 rating. */
 'use strict';
-const DUNGEON_BALANCE_VERSION=3;
+const DUNGEON_BALANCE_VERSION=4;
 function describeHexerTiming(){ENCOUNTERS.profiles.hexer.description='Every third attack, at most once per 7 seconds: remove 3 mana and apply 3 seconds of silence.'}
+// Encounter-specific pressure adjustments, kept separate from dungeon tiers.
+const ENCOUNTER_TUNING={
+ enc_9_9:{damage:.90,warning:'Burst damage · Berserker and arcane pulses'},
+ enc_20_9:{silenceSeconds:2,warning:'Control combo · Frost and silence'},
+ enc_22_9:{damage:.85,heavyStrike:1.30,warning:'Burst damage · Berserker and heavy strikes'},
+ enc_14_9:{wardRecharge:.08},
+ enc_34_9:{artilleryAmount:.65,warning:'Burst damage · Artillery and double strikes'},
+ enc_27_9:{damage:1.10},
+ enc_5_9:{damage:.90},
+ enc_16_3:{warning:'Dangerous encounter · Two waves and hexes'},
+ enc_17_5:{warning:'Dangerous encounter · Heavy strikes'},
+ enc_17_6:{warning:'Dangerous encounter · Two waves and heavy strikes'},
+ enc_22_2:{warning:'Dangerous encounter · Berserker'},
+ enc_22_6:{warning:'Dangerous encounter · Two waves and Berserker'}
+};
+function encounterTuning(room){return ENCOUNTER_TUNING[typeof room==='string'?room:room?.encounterId||room?.id]||{}}
+function encounterDangerText(room){const text=encounterTuning(room).warning||'';return room?.waves===1?text.replace('Two waves and ',''):text}
+function encounterDangerBadge(room){const text=encounterDangerText(room);return text?`<span class="encounter-danger">⚠ ${esc(text)}</span>`:''}
+function encounterProfileDescription(room,key=room.profile){
+ const t=encounterTuning(room);
+ if(key==='suppressor'&&t.silenceSeconds)return `Every 7 seconds: apply ${t.silenceSeconds} seconds of silence, stopping mana regeneration and item activations.`;
+ if(key==='raider'&&t.heavyStrike)return `Every third attack is a heavy strike that deals ${Math.round((t.heavyStrike-1)*100)}% more damage.`;
+ if(key==='bulwark'&&t.wardRecharge)return `Starts with a ward worth 15% maximum health. Gains another ${Math.round(t.wardRecharge*100)}% ward every 10 seconds.`;
+ if(key==='artillerist'&&t.artilleryAmount)return `Every 6 seconds: fire a blockable artillery shell for ${Math.round(t.artilleryAmount*100)}% of attack damage.`;
+ return ENCOUNTERS.profiles[key]?.description||''
+}
 const DUNGEON_TIERS={
  1:{name:'Beginner',color:'#a5bf98',hp:.72,damage:.72,rate:.95,gold:.90},
  2:{name:'Standard',color:'#a6bcc7',hp:.95,damage:.92,rate:1,gold:1},
@@ -20,7 +46,7 @@ function dungeonRating(id){const d=dungeonDefs[id];if(!d) return null;const entr
 function dungeonDifficultyBadge(id){const t=dungeonRating(id);if(!t)return '';const label=`Dungeon tier ${t.level}/5 · ${t.name}`,title=`${label}. RealmPack tier adapted from RotMG progression. At equal depth: ×${t.hp.toFixed(2)} HP, ×${t.damage.toFixed(2)} damage, ×${t.rate.toFixed(2)} attack rate; ×${t.gold.toFixed(2)} gold. Room type, combat mechanics, run mode and your build also affect danger.`;const skull='<svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M2 1h8v1h1v7H9v3H3V9H1V2h1z M3 4v2h2V4z M7 4v2h2V4z"/></svg>';return `<span class="dungeon-difficulty" style="--difficulty-color:${t.color}" title="${esc(title)}" aria-label="${esc(label)}"><span class="difficulty-skulls" aria-hidden="true">${Array.from({length:5},(_,n)=>`<i class="${n<t.level?'filled':'empty'}">${skull}</i>`).join('')}</span><span>${t.level}/5 · ${t.name}</span></span>`}
 const DUNGEON_BOSS_SECONDARIES={'The Nest':'venom','Fungal Cavern':'venom','Crystal Cavern':'arcanist','Lost Halls':'berserker','Cultist Hideout':'vampire','The Void':'bulwark','Kogbold Steamworks':'duelist','Oryx’s Sanctuary':'arcanist','The Shatters':'suppressor'};
 function dungeonBossSecondary(encounter){const t=dungeonRating(encounter.dungeon);if(t.level===1)return null;return DUNGEON_BOSS_SECONDARIES[dungeonDefs[encounter.dungeon].name]||encounter.secondary}
-function dungeonSecondaryText(room){const key=room.role?dungeonBossSecondary(room):room.secondary;return key?ENCOUNTERS.profiles[key].description:'Damage increases in phase II; no additional status mechanic.'}
+function dungeonSecondaryText(room){const key=room.role?dungeonBossSecondary(room):room.secondary;return key?encounterProfileDescription(room,key):'Damage increases in phase II; no additional status mechanic.'}
 function dungeonIdForRoom(room){return room?.encounterId?encounterDefs[room.encounterId]?.dungeon:room?.dungeonId||s.dungeons[actIndex()]}
 function pickDungeonPortals(){const stage=actIndex()%3,bands=stage===0?[[1],[1],[2]]:stage===1?[[2],[3],[3]]:[[3],[4],[5]],chosen=[];for(const band of bands){const pool=ENCOUNTERS.dungeons.filter(d=>band.includes(dungeonRating(d.id).level)&&!chosen.includes(d.id));if(pool.length)chosen.push(pick(pool).id)}return chosen}
 function migrateDungeonBalance(){const update=room=>{if(room?.encounterId&&room.balanceVersion!==DUNGEON_BALANCE_VERSION)Object.assign(room,scaledRoom(room.encounterId,room.depth||s.room+1,room.risk,room.type));return room};for(let i=s.room;i<ROOMS.length;i++)update(ROOMS[i]);s.pathChoices=(s.pathChoices||[]).map(update);for(const [depth,options] of Object.entries(s.mapBranches||{}))if(Number(depth)>=s.room)options.forEach(update);s.route=ROOMS}

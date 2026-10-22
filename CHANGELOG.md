@@ -1,5 +1,13 @@
 # RealmPack changelog
 
+## 0.30.11 — 2026-10-22
+
+- Fixed multi-wave bosses carrying their phase-II damage bonus into the next wave. Each wave now starts at base damage and applies its own phase bonus once.
+- Reduced Malphas's base damage by 10%. Esben's suppression now lasts two seconds. Ivory Wyvern deals 15% less base damage and its heavy strike adds 30% instead of 50%.
+- Reduced the Mummy King's ward refill to 8% of maximum HP and Kogbold's artillery shell to 65% of attack damage. Queen Bee deals 10% less base damage; Crystal Worm Mother deals 10% more, retaining her existing regeneration.
+- Added individual danger warnings to the flagged ordinary encounters and dangerous boss combinations in route previews, map labels and encounter details. Saved current/future encounter stats migrate without changing completed rooms or route choices.
+- Validation: 21,546 paired combat simulations across all 350 encounters and 19 classes, including later-depth and ceiling builds; targeted tuning/migration tests; 40 dialog views, 102 viewport views, JavaScript syntax and all 19 game regressions. The intermediate depth-10 fixture improved from 9/19 to 14/19 clears for Malphas, 2/19 to 5/19 for Esben and 3/19 to 7/19 for Ivory Wyvern; these are tested loadouts, not player win probabilities.
+
 ## 0.30.10 — 2026-10-22
 
 - Numbered consumable bundles now grant their stated number of copies: for example, Vamp Steak Flambe’ x4 arrives with four uses per battle. All 26 explicit x1–x6 variants are supported; percentages and unrelated name digits remain unchanged.
