@@ -54,12 +54,13 @@ function passiveRing(d){return d.group==='ring'&&d.effect==='support'&&!!d.ringA
 function ringCanActivate(i){return itemEnchants(i).some(e=>['barrier','siphon','relay'].includes(e.key))}
 function ringDescription(d){
  const n=d.amount;
- return ({attack:`Adjacent weapons gain +${n}% primary damage. Strongest two rings; shared +35% primary cap.`,defense:`Adjacent items gain +${n}% block from their effects and enchantments. Strongest two rings; +50% cap.`,wisdom:`Adjacent abilities gain +${n}% primary output. Fractional Wisdom bonuses accumulate into whole extra points over successive activations. Dodge abilities gain recharge rate instead. Strongest two rings; shared +35% primary cap.`,speed:`Adjacent items have ${n}% shorter cooldowns while packed. Strongest two rings; 20% cap. Stacks with temporary haste.`,health:`While packed: +${n} maximum health (ring cap +100). Does not heal; removing it lowers the cap.`,magic:`While packed: +${n} maximum mana (base 50; ring cap +40). Gain ${magicRingBattleMana(d)} mana at battle start (ring total capped at 6). Equipping does not refill mana.`})[d.ringAttribute]||''
+ return ({attack:`Adjacent weapons gain +${n}% primary damage. Strongest two rings; shared +35% primary cap.`,defense:`Adjacent items gain +${n}% block from their effects and enchantments. Strongest two rings; +50% cap.`,wisdom:`Adjacent abilities gain +${n}% primary output. Fractional Wisdom bonuses accumulate into whole extra points over successive activations. Dodge abilities gain recharge rate instead. Strongest two rings; shared +35% primary cap.`,speed:`Adjacent items have ${n}% shorter cooldowns while packed. Strongest two rings; 20% cap. Stacks with temporary haste.`,health:`While packed: +${n} maximum health (ring cap +100). Restore ${n} health once at battle start, up to maximum HP (ring healing cap 100). Equipping does not heal; removing it lowers the cap.`,magic:`While packed: +${n} maximum mana (base 50; ring cap +40). Gain ${magicRingBattleMana(d)} mana at battle start (ring total capped at 6). Equipping does not refill mana.`})[d.ringAttribute]||''
 }
 function itemTiming(d,i=null){return passiveRing(d)?'Passive':(i?cooldown(i):affinityCooldown(d)).toFixed(2)+'s'}
 
 function magicRingBattleMana(d){return d.ringAttribute==='magic'?Math.min(3,1+Math.floor((d.progressionRank||0)/3)):0}
 function startRingBattle(){
+ startHealthRingBattle();
  if(s.magicRingManaGranted)return 0;s.magicRingManaGranted=true;
  const bonus=Math.min(6,s.items.reduce((n,i)=>n+magicRingBattleMana(defs[i.type]),0)),actual=Math.max(0,Math.min(bonus,manaCapacity()-s.mana));s.mana+=actual;if(actual)log('Magic rings: +'+actual+' mana at battle start.');return actual
 }
@@ -70,4 +71,9 @@ function wisdomPrimary(i,amount,factor){
  if(d.group!=='ability'||d.effect==='dodge'||!wisdom)return null;
  const total=adjacencyStat(i,'primary'),without=Math.min(.35,Math.max(0,total-wisdom)),withWisdom=Math.min(.35,total),base=Math.max(1,Math.round(amount*(1+without)*factor));
  const accrued=(i.wisdomCarry||0)+Math.max(0,withWisdom-without)*amount*factor,whole=Math.floor(accrued+1e-9);i.wisdomCarry=Math.max(0,accrued-whole);return base+whole
+}
+
+function startHealthRingBattle(){
+ if(s.healthRingHealGranted)return 0;s.healthRingHealGranted=true;
+ const bonus=packedRingBonus('health',100),actual=Math.max(0,Math.min(bonus,s.max-s.hp));s.hp+=actual;if(actual)log('Health rings: restored '+actual+' HP at battle start.');return actual
 }

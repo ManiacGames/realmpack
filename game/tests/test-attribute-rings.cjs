@@ -58,5 +58,18 @@ console.log(vm.runInContext(`(()=>{
  s.magicRingManaGranted=false;s.mana=manaCapacity()-1;check(startRingBattle()===1&&s.mana===manaCapacity(),'Magic start ignores capacity');
  const weapon=pack('ringTestWeapon',2,2);s.items=[weapon,magicRings[2]];s.phase='prep';s.mana=0;ROOMS[s.room].type='combat';startFight();check(s.phase==='fight'&&s.mana===8,'StartFight did not apply T7 start mana');
  s.mana=0;setupWave();check(startRingBattle()===0&&s.mana===0,'New wave repeated start mana');
- return 'PASS: all 57 tiered rings, eight identities, caps, strongest neighbors, real damage/heal/block/haste/cooldown effects, links, stash/diagonal exclusion, UT/ST preservation, capacity movement/save migration, legacy enchantments, fractional Wisdom and once-per-battle Magic mana';
+ // Health fills its added capacity once per battle, never on equip or each wave.
+ s.phase='prep';s.items=[];s.stash=[];syncRingVitals();s.max=130;s.ringHealthBonus=0;s.hp=50;
+ const healthStart=pack(ring('health').id,0,0);s.items=[healthStart];syncRingVitals();check(s.max===142&&s.hp===50,'Health equip healed');s.healthRingHealGranted=false;
+ check(startHealthRingBattle()===12&&s.hp===62,'T1 Health start restoration');check(startHealthRingBattle()===0&&s.hp===62,'Health granted twice');
+ s.items=[];s.stash=[healthStart];syncRingVitals();s.items=[healthStart];s.stash=[];syncRingVitals();render();save();check(s.hp===62&&startHealthRingBattle()===0,'Moving/rendering/saving Health repeated healing');
+ s=JSON.parse(JSON.stringify(s));check(startHealthRingBattle()===0&&s.hp===62,'Saved Health grant replayed');
+ s.items=[];syncRingVitals();s.hp=130;const highHealth=pack(ring('health',7).id,0,0);s.items=[weapon,highHealth];s.phase='prep';startFight();check(s.max===166&&s.hp===166,'T7 Health did not fill added capacity at battle start');
+ s.hp=10;setupWave();startRingBattle();check(s.hp===10,'Health healed again on another wave');
+ s.phase='prep';s.hp=50;s.classId='priest';startFight();check(s.hp===86&&s.progress===0&&s.block===0,'Starting Health healed wrong amount or charged class passive');
+ s.hp=s.max;s.healthRingHealGranted=false;check(startHealthRingBattle()===0&&s.hp===166,'Health overhealed');
+ s.phase='prep';s.items=[];syncRingVitals();s.items=[weapon];s.stash=[highHealth];s.healthRingHealGranted=false;s.hp=50;check(startHealthRingBattle()===0&&s.hp===50,'Stashed Health healed');
+ s.items=[weapon,...Array.from({length:4},(_,n)=>pack(ring('health',7).id,n,0))];s.stash=[];syncRingVitals();s.hp=50;s.healthRingHealGranted=false;check(startHealthRingBattle()===100&&s.hp===150,'Health stacking heal cap');
+ s.items=[];syncRingVitals();highHealth.eventInfusion=.3;s.items=[weapon,highHealth];syncRingVitals();s.hp=50;s.healthRingHealGranted=false;check(startHealthRingBattle()===47&&s.max===177&&s.hp===97,'Health infusion/capacity mismatch');
+ return 'PASS: all 57 tiered rings, eight identities, caps, strongest neighbors, real damage/heal/block/haste/cooldown effects, links, stash/diagonal exclusion, UT/ST preservation, capacity movement/save migration, legacy enchantments, fractional Wisdom and once-per-battle Magic mana and Health restoration';
 })()`,ctx));

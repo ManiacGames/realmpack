@@ -1,4 +1,4 @@
-# Attribute rings — 0.30.15
+# Attribute rings — 0.30.16
 
 All 57 tiered attribute rings retain their IDs, art, names, prices and saved item instances. UT/ST and Shiny special rings retain their curated identities.
 
@@ -10,7 +10,7 @@ All 57 tiered attribute rings retain their IDs, art, names, prices and saved ite
 | Speed | Continuous cooldown reduction for adjacent items | 4% | 10% | Strongest two; 20%; combines multiplicatively with haste/recharge and tempering |
 | Wisdom | Adjacent ability primary output; dodge abilities get recharge rate instead | +8% | +20% | Strongest two; shared +35% primary cap; fractional Wisdom output carries between activations |
 | Vitality | Restore health on activation | 9 / 4.46s | 13 / 4.18s | Existing healing fatigue and maximum health limits |
-| Health | Maximum health while packed | +12 | +36 | Total +100 from rings |
+| Health | Maximum health while packed, plus once-per-battle starting restoration | +12 capacity / restore 12 | +36 capacity / restore 36 | Total +100 capacity and starting restoration; cannot exceed max HP |
 | Magic (mana) | Maximum mana while packed, plus battle-start mana | +5 capacity / +1 start | +17 capacity / +3 start | Total +40 capacity above base 50; total +6 battle-start mana |
 
 T0 Minor Defense gives +10% block gain. Intermediate tiers progress consistently. Runeforge primary infusions improve passive ring strength within the same caps. Class/global block gains are not amplified by Defense rings; item-generated block is rounded after amplification. Wisdom affects the primary ability effect, not every secondary proc or class passive; dodge charges remain integers with unchanged quantity.
@@ -58,3 +58,23 @@ Each cell below counts clears out of 1,995 fights.
 Magic reduced total time below the native ability’s mana cost from 316.05 to 108.70 seconds across its 1,995 fights (65.61% less), while its mean peak mana rose from 16.52 to 18.52. Its clear count did not change. Wisdom stayed at 1,607 total clears; Samurai gained one and Sorcerer lost one, consistent with removing both positive and negative rounding bias. The no-ring control and the six unmodified archetypes have identical before/after aggregates by class and tier.
 
 Vitality gives the largest clear-count improvement in this fixture (+87 over no ring). Health improves only one clear despite reaching HP above the unboosted maximum in 638 fights. These results suggest testing a separate once-per-battle starting-health benefit for Health rings next, while preserving the no-free-healing-on-equip rule. They do not justify an immediate universal Vitality nerf: every fixture starts with full base HP, uses an off-class healing tome and omits other builds and stacking combinations.
+
+## Health and Vitality follow-up — 0.30.16
+
+Health rings now restore their capped maximum-HP bonus once at battle start, before combat begins. The restoration is up to maximum HP, cannot charge healing class passives, and does not repeat on later waves. Moving or equipping rings does not heal. T1 gives 12 HP upfront and T7 gives 36; infusion affects both the maximum-HP bonus and the starting restoration, with a combined cap of 100 from rings. The grant may also restore existing wounds; it is not limited to the added capacity. Removal still lowers maximum HP and clamps current HP.
+
+Vitality's values, cadence and fatigue behavior are unchanged. With no other bonuses, Vitality's second T1 activation exceeds Health's 12 upfront HP at 8.92 seconds, and its third T7 activation exceeds 36 HP at 12.54 seconds. These are nominal comparisons before fatigue, adjacency, enchantments and overhealing.
+
+The follow-up uses the same fixture with `node scripts/benchmark-attribute-rings.cjs --attributes none,health,vitality --output /tmp/health-comparison.json`: 1,995 fights for each of the three choices, or 5,985 total. The prior 0.30.15 data supplies the before baseline; all gear, upgrades, positions, placement scoring, enemies and starting resources are kept identical. This tests only these fixed builds at depth 20, not every loadout or ring combination. Results are in `health-vitality-comparison.json`.
+
+### Health follow-up results
+
+| Choice | 0.30.15 clears | 0.30.16 clears | Change |
+| --- | ---: | ---: | ---: |
+| No ring | 1,591 | 1,591 | 0 |
+| Health | 1,592 | 1,630 | +38 |
+| Vitality | 1,678 | 1,678 | 0 |
+
+Each count is out of 1,995 fights. The Health/Vitality gap narrowed from 86 to 48 clears. Health reached HP above the unboosted maximum in all 1,995 fights because its added capacity starts filled. No-ring and Vitality aggregates are identical before and after by class and tier. Vitality still clears more with 15 classes, ties with three and clears fewer with Druid. Across T1/T4/T7, Health clears 512/552/566 and Vitality clears 535/566/577, each out of 665 fights.
+
+Health is substantially more useful in this fixture, but these results do not establish equal strength or prove the same ordering in other builds. Vitality remains unchanged in this release. A future Vitality tuning test should include short and long fights, different starting wounds and stacking loadouts before reducing its healing globally.

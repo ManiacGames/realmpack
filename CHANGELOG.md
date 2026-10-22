@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.30.16 — 2026-10-22
+
+- Health rings retain their maximum-HP bonus and now restore that amount once at battle start: 12 HP at T1 through 36 HP at T7, capped at maximum HP. Combined ring restoration caps at 100 HP, matching the capacity cap; primary infusions improve both within that cap.
+- Equipping, moving, inspecting or reloading a saved grant cannot repeat the heal. Later waves do not grant it again. This preparation-time restoration does not charge healing class passives. Vitality's periodic healing remains unchanged.
+- Validation: JavaScript syntax, all 20 game regressions, targeted battle-start/movement/save/wave/cap tests, 130 browser inspection views and 5,985 new Health / Vitality / no-ring fights across 19 classes, 35 bosses and three tiers. Health cleared 1,630/1,995 versus 1,592 previously; Vitality stayed at 1,678 and the no-ring control stayed at 1,591. This narrows the gap without establishing equal strength. See docs/attribute-rings.md for results and limits.
+
 ## 0.30.15 — 2026-10-22
 
 - Magic rings retain their maximum-mana bonus and now grant 1 / 2 / 3 mana at battle start at T1–2 / T3–5 / T6–7. Packed rings grant at most 6 total; equipping, reopening details and later waves cannot repeat the grant.

@@ -1,9 +1,12 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),{ctx,vm}=require('../game/tests/load-game.cjs');
 const benchmarkVersion=fs.readFileSync(path.resolve(__dirname,'../game/index.html'),'utf8').match(/EXPERIMENTAL BUILD ([\d.]+)/)[1];
+const attributeOptions=['none','attack','defense','dexterity','speed','wisdom','vitality','health','magic'],attributeArg=process.argv.indexOf('--attributes');
+ctx.ringBenchRequested=attributeArg<0?attributeOptions:process.argv[attributeArg+1]?.split(',');
+if(!ctx.ringBenchRequested?.length||new Set(ctx.ringBenchRequested).size!==ctx.ringBenchRequested.length||ctx.ringBenchRequested.some(a=>!attributeOptions.includes(a)))throw Error('Choose distinct valid ring attributes with --attributes none,health,vitality');
 vm.runInContext(`
 log=()=>{};
-const ringBenchAttributes=['none','attack','defense','dexterity','speed','wisdom','vitality','health','magic'];
+const ringBenchAttributes=ringBenchRequested;
 function ringBenchmark(classId,variant,enemy,attribute){
  selectedDifficulty='normal';freshRun(classId,true);s.seed=123456;s.room=0;s.items=[];s.stash=[];s.max+=60;s.hp=s.max;s.relicPower=4;s.relicHaste=.12;
  const gear=[];
