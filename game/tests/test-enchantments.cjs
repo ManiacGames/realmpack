@@ -3,6 +3,8 @@ const assert=require('node:assert/strict'),{ctx,vm}=require('./load-game.cjs');
 vm.runInContext(`
 render=()=>{};save=()=>{};showEnchanter=()=>{};toast=()=>{};log=()=>{};
 freshRun('knight',true);
+// Supply the alternate gear explicitly instead of relying on starter stash contents.
+s.stash.push(makeItem(classes.knight.startingIds[0]));
 `,ctx);
 const run=code=>vm.runInContext(code,ctx);
 run(`s.phase='event';s.activeEvent={id:'enchanter',enchantRevision:0};const gear=s.items.find(gearEnchantable);gear.enchantSlots=4;gear.enchantments=[];ensureEnchanterState();s.activeEvent.enchantItem=gear.id;s.enchantDust={green:999,red:999,purple:999};`);

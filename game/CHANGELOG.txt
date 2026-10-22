@@ -1,7 +1,7 @@
 ## 0.30.13 — 2026-10-22
 
 - Removed the extra Healing Tome granted to every class at the start of a run. Class starting equipment, Ring of Magic and Health Potion are retained; Priest still starts with its own tome. Existing runs keep their items.
-- Validation: checked starting inventories for all 19 classes in normal and Sandbox modes; JavaScript syntax, stash capacity, provisions and adjacency regressions.
+- Validation: checked starting inventories for all 19 classes in normal and Sandbox modes; JavaScript syntax and all 19 game regressions. Updated the enchantment test to supply its own spare gear.
 
 ## 0.30.12 — 2026-10-22
 
