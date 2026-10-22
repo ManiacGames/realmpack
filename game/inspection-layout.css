@@ -35,3 +35,18 @@ body .stash-pane .inventory-trash.trash-hover{color:#fff1e8;background:#873c30;b
 
 .stash-trashbar{display:flex;justify-content:flex-end;flex:none;padding:6px 12px;border-top:1px solid #52614f;background:#223026}
 @media(min-width:551px){.stash-pane .stash{--stash-cell:max(24px,min(104px,calc((100cqw - 40px)/3),calc((100cqh - 140px)/3)))}}
+
+/* Full details uses the desktop width instead of stacking every card vertically. */
+body #overlay .item-details-modal{max-width:1200px}
+.item-details-modal .screen-page-content>p{margin:8px 0;line-height:1.35}
+.item-details-modal .screen-page-content>:is(.affinity-note,.mechanic-note,.enchant-info,.effect-detail,.adjacency-guide,.shiny-note){margin:8px 0;padding:10px 12px;line-height:1.35}
+.item-details-modal .screen-page-content :is(.affinity-note,.mechanic-note,.shiny-note) p{margin:6px 0;line-height:1.35!important}
+.item-details-modal #detailSignatureMeter:empty{display:none}
+.item-details-columns .screen-page-content{display:block;columns:2;column-gap:28px;column-rule:1px solid #62744d}
+.item-details-columns .screen-page-content>*{break-inside:avoid}
+.item-details-modal>.eyebrow{display:none}
+.item-details-modal>h1{font-size:30px;margin:0}
+.item-details-modal>p{margin:0}
+body #overlay .item-details-modal .enchant-info,body #overlay .item-details-modal .enchant-info b{font-size:18px}
+body #overlay .item-details-modal .enchant-info p{font-size:18px!important;line-height:1.35!important;margin:6px 0}
+.item-details-modal .screen-page-content>small{font-size:16px;line-height:1.35}

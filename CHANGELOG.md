@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.30.12 — 2026-10-22
+
+- Widened Full details to use two readable columns on desktop, bringing item stats, adjacency bonuses and enchantments together on one page. Reduced excess card spacing and enlarged enchantment text.
+- Kept every description, connection rule and action available; phones and unusually long details retain pagination when necessary.
+- Validation: browser checks across seven viewport sizes and both text settings, including a one-page check for Robe of the Neophyte at desktop sizes; dialog layout checks, JavaScript syntax and inspection/inventory/shop regressions.
+
 ## 0.30.11 — 2026-10-22
 
 - Fixed multi-wave bosses carrying their phase-II damage bonus into the next wave. Each wave now starts at base damage and applies its own phase bonus once.

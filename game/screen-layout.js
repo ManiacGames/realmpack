@@ -26,6 +26,10 @@ function screenPaginateInspection(p,height){
   const nested=children.length===1?parts(children[0]):null;
   return nested?.map(child=>{const shell=node.cloneNode(false);shell.append(child);return shell})||null
  };
+ if(p.host.closest('.item-details-columns')){
+  p.content.replaceChildren(...p.nodes);
+  p.pages=[p.nodes];p.page=0;screenShowPage(p);return true
+ }
  let units=p.nodes;
  for(let pass=0;pass<8;pass++){
   for(const node of units)node.removeAttribute('data-screen-hidden');
@@ -111,9 +115,12 @@ function sizeAdaptiveModal(p){
  p.content.replaceChildren(...p.nodes);p.nav.hidden=true;p.nav.classList.remove('single-page');
  p.host.style.height='auto';p.content.style.flex='none';modal.style.height='auto';modal.style.setProperty('max-height','none','important');
  const choices=modal.querySelector('.choices'),count=choices?.children.length||0;modal.classList.remove('dialog-choice-stack');
- modal.style.width=Math.min(innerWidth-24,count>2?1040:modalKind==='trade'?840:760)+'px';
+ modal.style.width=Math.min(innerWidth-24,count>2?1040:modalKind==='itemdetails'?1200:modalKind==='trade'?840:760)+'px';
+ modal.classList.toggle('item-details-columns',modalKind==='itemdetails'&&innerWidth>=900);
  let natural=p.content.getBoundingClientRect().height;const overhead=modal.getBoundingClientRect().height-p.host.getBoundingClientRect().height,available=Math.max(40,innerHeight-24-overhead);
  if(choices&&[...choices.children].some(card=>card.getBoundingClientRect().height>available-45)){modal.classList.add('dialog-choice-stack');natural=p.content.getBoundingClientRect().height}
+ // Keep every rule accessible on short screens; desktop uses both columns.
+ if(modal.classList.contains('item-details-columns')&&natural>available+1){modal.classList.remove('item-details-columns');natural=p.content.getBoundingClientRect().height}
  modal.style.removeProperty('max-height');const needsPages=natural>available+1;
  p.nav.hidden=!needsPages;
  // Reserve navigation only when needed, and preserve the current page on resize.
