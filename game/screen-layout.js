@@ -28,6 +28,7 @@ function screenPaginateInspection(p,height){
  };
  if(p.host.closest('.item-details-columns')){
   p.content.replaceChildren(...p.nodes);
+  if(p.content.scrollWidth>p.content.clientWidth+2){sizeAdaptiveModal(p,false);return screenPaginateInspection(p,p.content.clientHeight)}
   p.pages=[p.nodes];p.page=0;screenShowPage(p);return true
  }
  let units=p.nodes;
@@ -55,8 +56,9 @@ function screenPaginateInspection(p,height){
  return false
 }
 function screenPaginate(p){
- p.nav.hidden=!!p.host.closest('.adaptive-modal')&&!p.host.closest('.adaptive-modal').classList.contains('dialog-paginated');const height=p.content.clientHeight;if(height<30)return;
+ p.nav.hidden=!!p.host.closest('.adaptive-modal')&&!p.host.closest('.adaptive-modal').classList.contains('dialog-paginated');let height=p.content.clientHeight;if(height<30)return;
  if((p.host.id==='detail'||modalKind==='itemdetails')&&screenPaginateInspection(p,height))return;
+ height=p.content.clientHeight;
  const units=[];
  const collect=(node,depth=0,reserve=0)=>{
   if(node.nodeType===3){if(!node.textContent.trim())return;const span=document.createElement('div');span.append(node);node=span}
@@ -109,18 +111,19 @@ function screenFitModal(){
  for(const node of rest)if(node!==footer&&!actions.includes(node))body.append(node);modal.insertBefore(body,footer);screenPager(body);screenRestoreFocus(focus);if(modalKind==='itemdetails')modal.querySelector('button.gold')?.focus({preventScroll:true});if(modalKind==='classconfirm')modal.querySelector('#cancelClassStart')?.focus({preventScroll:true});
 }
 // Measure all content before pagination so small dialogs never inherit an empty viewport.
-function sizeAdaptiveModal(p){
+function sizeAdaptiveModal(p,allowColumns=true){
  const modal=p.host.closest('.adaptive-modal');if(!modal)return;
  for(const node of p.nodes)node.removeAttribute('data-screen-hidden');
  p.content.replaceChildren(...p.nodes);p.nav.hidden=true;p.nav.classList.remove('single-page');
  p.host.style.height='auto';p.content.style.flex='none';modal.style.height='auto';modal.style.setProperty('max-height','none','important');
- const choices=modal.querySelector('.choices'),count=choices?.children.length||0;modal.classList.remove('dialog-choice-stack');
+ const choices=modal.querySelector('.choices'),count=choices?.children.length||0;modal.classList.remove('dialog-choice-stack','dialog-inspect-stack');
  modal.style.width=Math.min(innerWidth-24,count>2?1040:modalKind==='itemdetails'?1200:modalKind==='trade'?840:760)+'px';
- modal.classList.toggle('item-details-columns',modalKind==='itemdetails'&&innerWidth>=900);
+ modal.classList.toggle('item-details-columns',modalKind==='itemdetails'&&innerWidth>=900&&allowColumns);
  let natural=p.content.getBoundingClientRect().height;const overhead=modal.getBoundingClientRect().height-p.host.getBoundingClientRect().height,available=Math.max(40,innerHeight-24-overhead);
  if(choices&&[...choices.children].some(card=>card.getBoundingClientRect().height>available-45)){modal.classList.add('dialog-choice-stack');natural=p.content.getBoundingClientRect().height}
+ const sections=modal.querySelector('.shop-inspect-sections');if(sections&&[...sections.children].some(node=>node.getBoundingClientRect().height>available-45)){modal.classList.add('dialog-inspect-stack');natural=p.content.getBoundingClientRect().height}
  // Keep every rule accessible on short screens; desktop uses both columns.
- if(modal.classList.contains('item-details-columns')&&natural>available+1){modal.classList.remove('item-details-columns');natural=p.content.getBoundingClientRect().height}
+ if(modal.classList.contains('item-details-columns')&&(natural>available+1||p.content.scrollWidth>p.content.clientWidth+2)){modal.classList.remove('item-details-columns');natural=p.content.getBoundingClientRect().height}
  modal.style.removeProperty('max-height');const needsPages=natural>available+1;
  p.nav.hidden=!needsPages;
  // Reserve navigation only when needed, and preserve the current page on resize.

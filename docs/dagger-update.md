@@ -1,5 +1,7 @@
 # The Dagger Update — 0.22.2
 
+**0.32.0 compatibility:** Soulcursed Scythe joins the Vampire Rogue set through membership metadata only. All dagger recipe fields and effects remain unchanged; the full-set rules are documented in [UT/ST identities](ut-st-identities.md).
+
 **0.22.2 follow-up:** Chain Dagger now builds bleed to a maximum of 6 stacks (Shiny 8), retaining its 10 base damage and 2-stack application. Higher bleed from other sources is left untouched, including its expiry timer.
 
 **0.22.1 follow-up:** Evergreen now has a 0.8s minimum cooldown (Shiny 0.72s), and Toxic Toad applies 6 poison every 2s with no direct damage. Existing ramp steps, starting cooldowns and poison limits are preserved.

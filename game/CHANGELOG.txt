@@ -1,5 +1,13 @@
 # RealmPack changelog
 
+## 0.32.0 — 2026-10-24
+
+- Reworked the first ten audited UT/ST items around their RotMG identities: Vesture of Duality, Mechanical Kogbold Limb, Fungal Breastplate, Breastplate of New Life, The Forgotten Crown, Skull of Endless Torment, Socket Blade, Vampiric Cape, Hallowed Hide and Edictum Praetoris.
+- Added the complete Vampire Rogue and Hollow King Necromancer sets, including Ruthven’s Rosary, Memento Mori, Toga Picta and Interregnum. Soulcursed Scythe gains set membership while retaining its existing stats and mechanics. Other daggers retain their current recipes.
+- Added capped equipment capacity bonuses, offensive adjacency auras, bounded raised undead/bats, healing-driven Torment purification, paired emergency healing and nonstacking timed offensive buffs. Equipping capacity gear does not refill resources; removed gear clamps them.
+- Improved long item inspection layouts so shop sections and full-detail columns fall back safely when they would clip actions.
+- Validation: JavaScript syntax and all 24 regression suites; 270 targeted item views, 510 general dialog views and 98 hover views passed. Dagger recipes are unchanged. All 1,995 tiered class fights matched the prior build; a separate 2,800-fight paired item benchmark and its limitations are recorded in docs/ut-st-identities.md. This completes the first audited batch, not the entire UT/ST catalogue.
+
 ## 0.31.4 — 2026-10-24
 
 - Post-combat Health and Magic Potions, including Greater versions, now wait for an explicit loot choice instead of automatically filling inventory stacks or stash slots.

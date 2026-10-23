@@ -1,0 +1,249 @@
+{
+  "version": "0.32.0",
+  "assumptions": "Adventurer, depth 20, all 35 bosses; native tiered gear at 60% and 90% family max, extra native weapon, 3 Health Potions, +50 base HP and full equipped HP, beneficial weapon-adjacent placement for Crown/Hide/Toga when legal, +8% blessing recharge, seed 123456, 0.05s tick. One changed slot or a complete named set; no infused/enhanced gear. Legal packs required. This is a fixed-build comparison, not a full-run economy or optimized build search.",
+  "before": [
+    {
+      "item": "Vesture of Duality",
+      "fights": 70,
+      "wins": 28,
+      "averageSeconds": 15.83
+    },
+    {
+      "item": "Mechanical Kogbold Limb",
+      "fights": 70,
+      "wins": 24,
+      "averageSeconds": 13.25
+    },
+    {
+      "item": "Fungal Breastplate",
+      "fights": 70,
+      "wins": 51,
+      "averageSeconds": 23.98
+    },
+    {
+      "item": "Breastplate of New Life",
+      "fights": 70,
+      "wins": 51,
+      "averageSeconds": 23.98
+    },
+    {
+      "item": "The Forgotten Crown",
+      "fights": 70,
+      "wins": 31,
+      "averageSeconds": 18.49
+    },
+    {
+      "item": "Skull of Endless Torment",
+      "fights": 70,
+      "wins": 31,
+      "averageSeconds": 16.17
+    },
+    {
+      "item": "Socket Blade",
+      "fights": 70,
+      "wins": 29,
+      "averageSeconds": 15.21
+    },
+    {
+      "item": "Vampiric Cape",
+      "fights": 70,
+      "wins": 22,
+      "averageSeconds": 26.05
+    },
+    {
+      "item": "Hallowed Hide",
+      "fights": 70,
+      "wins": 22,
+      "averageSeconds": 26.05
+    },
+    {
+      "item": "Edictum Praetoris",
+      "fights": 70,
+      "wins": 33,
+      "averageSeconds": 15.5
+    },
+    {
+      "item": "Ruthven's Rosary",
+      "fights": 70,
+      "wins": 21,
+      "averageSeconds": 25.55
+    },
+    {
+      "item": "Memento Mori",
+      "fights": 70,
+      "wins": 31,
+      "averageSeconds": 15.99
+    },
+    {
+      "item": "Toga Picta",
+      "fights": 70,
+      "wins": 32,
+      "averageSeconds": 16.79
+    },
+    {
+      "item": "Interregnum",
+      "fights": 70,
+      "wins": 30,
+      "averageSeconds": 15.78
+    },
+    {
+      "item": "Vampire Rogue set",
+      "fights": 70,
+      "wins": 32,
+      "averageSeconds": 25.49
+    },
+    {
+      "item": "Hollow King set",
+      "fights": 70,
+      "wins": 34,
+      "averageSeconds": 15.91
+    },
+    {
+      "item": "Skuld set control",
+      "fights": 70,
+      "wins": 38,
+      "averageSeconds": 24.61
+    },
+    {
+      "item": "Swoll set control",
+      "fights": 70,
+      "wins": 54,
+      "averageSeconds": 22.01
+    },
+    {
+      "item": "Phylactery set control",
+      "fights": 70,
+      "wins": 25,
+      "averageSeconds": 15.67
+    },
+    {
+      "item": "Tiered control",
+      "fights": 70,
+      "wins": 48,
+      "averageSeconds": 23.53
+    }
+  ],
+  "after": [
+    {
+      "item": "Vesture of Duality",
+      "fights": 70,
+      "wins": 21,
+      "averageSeconds": 11.04
+    },
+    {
+      "item": "Mechanical Kogbold Limb",
+      "fights": 70,
+      "wins": 24,
+      "averageSeconds": 13.69
+    },
+    {
+      "item": "Fungal Breastplate",
+      "fights": 70,
+      "wins": 39,
+      "averageSeconds": 23.98
+    },
+    {
+      "item": "Breastplate of New Life",
+      "fights": 70,
+      "wins": 43,
+      "averageSeconds": 23.9
+    },
+    {
+      "item": "The Forgotten Crown",
+      "fights": 70,
+      "wins": 34,
+      "averageSeconds": 19.06
+    },
+    {
+      "item": "Skull of Endless Torment",
+      "fights": 70,
+      "wins": 23,
+      "averageSeconds": 15.41
+    },
+    {
+      "item": "Socket Blade",
+      "fights": 70,
+      "wins": 28,
+      "averageSeconds": 15.87
+    },
+    {
+      "item": "Vampiric Cape",
+      "fights": 70,
+      "wins": 30,
+      "averageSeconds": 27.87
+    },
+    {
+      "item": "Hallowed Hide",
+      "fights": 70,
+      "wins": 31,
+      "averageSeconds": 27.92
+    },
+    {
+      "item": "Edictum Praetoris",
+      "fights": 70,
+      "wins": 30,
+      "averageSeconds": 15.82
+    },
+    {
+      "item": "Ruthven's Rosary",
+      "fights": 70,
+      "wins": 25,
+      "averageSeconds": 27.03
+    },
+    {
+      "item": "Memento Mori",
+      "fights": 70,
+      "wins": 22,
+      "averageSeconds": 14.8
+    },
+    {
+      "item": "Toga Picta",
+      "fights": 70,
+      "wins": 32,
+      "averageSeconds": 16.32
+    },
+    {
+      "item": "Interregnum",
+      "fights": 70,
+      "wins": 33,
+      "averageSeconds": 16.55
+    },
+    {
+      "item": "Vampire Rogue set",
+      "fights": 70,
+      "wins": 51,
+      "averageSeconds": 27.08
+    },
+    {
+      "item": "Hollow King set",
+      "fights": 70,
+      "wins": 34,
+      "averageSeconds": 15.21
+    },
+    {
+      "item": "Skuld set control",
+      "fights": 70,
+      "wins": 38,
+      "averageSeconds": 24.61
+    },
+    {
+      "item": "Swoll set control",
+      "fights": 70,
+      "wins": 54,
+      "averageSeconds": 22.01
+    },
+    {
+      "item": "Phylactery set control",
+      "fights": 70,
+      "wins": 25,
+      "averageSeconds": 15.67
+    },
+    {
+      "item": "Tiered control",
+      "fights": 70,
+      "wins": 48,
+      "averageSeconds": 23.53
+    }
+  ],
+  "changedFights": 1096
+}

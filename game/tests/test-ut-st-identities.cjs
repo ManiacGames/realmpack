@@ -8,7 +8,7 @@ const type=name=>DATA.items.find(d=>d.name===name&&!d.isShiny).id;
 function setup(name){freshRun('wizard',true);selectPortal(s.portalChoices[0]);s.items=[];s.stash=[];const i=Object.assign(makeItem(type(name)),{x:0,y:0});s.items=[i];s.phase='prep';setEnemy();s.phase='fight';s.enemy.hp=s.enemy.max=100000;s.enemy.ward=0;s.enemy.veil=0;s.enemy.vulnerable=0;s.hp=s.max=1000;s.mana=50;s.power=0;s.silence=0;return i}
 const loss=()=>100000-s.enemy.hp;
 // Imported identities, Shiny inheritance and source-backed profile metadata.
-check(Object.keys(window.REALM_SPECIALS.profiles).length===48,'Profile coverage changed');
+check(Object.keys(window.REALM_SPECIALS.profiles).length===62,'Profile coverage changed');
 for(const d of DATA.items.filter(d=>d.realmIdentity)){check(d.mechanic&&d.source&&d.amount>0&&d.cd>0&&Number.isFinite(d.cd),'Invalid profile '+d.name);if(d.isShiny){const b=defs[d.baseId];check(d.mechanic.key===b.mechanic.key&&d.realmSet===b.realmSet&&d.amount>=b.amount&&d.cd<=b.cd,'Shiny identity '+d.name)}}
 // Cadence and layout replace arbitrary name effects, self-harm and resource drains.
 let i=setup('Doom Bow');const doom=defs[i.type];activate(i);const first=loss();s.enemy.hp=100000;activate(i);check(loss()===first&&s.itemBombs.length===0,'Doom still has charge cycle');check(doom.cd>defs[type('Leaf Bow')].cd*2,'Heavy/rapid cadence missing');
@@ -42,6 +42,6 @@ for(const set of Object.values(window.REALM_SPECIALS.sets))for(const level of [1
  const dungeon=ENCOUNTERS.dungeons.find(d=>dungeonRating(d.id).level===level),enemy=ENCOUNTERS.encounters.find(e=>e.dungeon===dungeon.id&&e.role==='boss');ROOMS[0]=scaledRoom(enemy.id,20);s.phase='prep';setEnemy();startFight();for(let n=0;n<3002&&s.phase==='fight';n++)tick(.05);
  check(['reward','lost'].includes(s.phase)&&Number.isFinite(s.hp)&&Number.isFinite(s.enemy.hp),'Combat invalid '+set.name);fights++;
 }
-check(fights===18,'Missing combat coverage');
-return 'PASS: 48 researched profiles, Shiny identities, cadence/layout, pellet budgets, beam, travel/waves, cleanse, plane shift, armor/retaliation, shared immunity lock, Hex, mushroom/fatigue, six legal sets, distinct slots, thresholds, inspection, proc replay limits and 18 full-set combat simulations';
+check(fights===24,'Missing combat coverage');
+return 'PASS: 62 researched profiles, Shiny identities, cadence/layout, pellet budgets, beam, travel/waves, cleanse, plane shift, armor/retaliation, shared immunity lock, Hex, mushroom/fatigue, eight legal sets, distinct slots, thresholds, inspection, proc replay limits and 24 full-set combat simulations';
 })()`,ctx));

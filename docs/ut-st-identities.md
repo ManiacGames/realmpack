@@ -1,4 +1,76 @@
-# UT and ST identities — 0.21.5
+# UT and ST identities — 0.32.0
+
+This second pass implements the first ten audited non-dagger items and four supporting ST pieces. There are now 62 individually researched names across eight complete ST sets; other imported items still use family rules. These are RealmPack adaptations, not literal RotMG damage or stat values. Existing IDs, sprites, footprints and saves remain compatible.
+
+## Second-pass identities
+
+References are the Realm.wiki item data inspected for this pass (2026-10-24). Values below are base profiles before class, upgrades, adjacency, set and Shiny modifiers. Weapon timing is derived from its existing family rank; multi-shot attacks divide one total budget.
+
+| Item / source | RealmPack behavior |
+| --- | --- |
+| [Vesture of Duality](https://realm.wiki/item?id=28837) | 2 mana / 3.5s; +6 max mana. Successful ability use grants +20% weapon damage and +15% incoming direct damage for 3s. No phoenix rescue. |
+| [Mechanical Kogbold Limb](https://realm.wiki/item?id=49469) | Slow twin bolts; 75% of their combined damage bypasses ward. No bombs. |
+| [Fungal Breastplate](https://realm.wiki/item?id=1205) | +24 max HP; heal 12 / 3.5s, replacing the generic block pulse. |
+| [Breastplate of New Life](https://realm.wiki/item?id=597) | +45 max HP; 14 block / 3.6s. |
+| [The Forgotten Crown](https://realm.wiki/item?id=2987) | +18 max HP; adjacent weapons +8% primary damage and +6% recharge rate. Replaces its generic ring aura; generates no mana. |
+| [Skull of Endless Torment](https://realm.wiki/item?id=2321) | 4 mana / 6.5s; raise one 4-damage undead for 7s, healing 1 HP per second. Actual healing charges its own meter to 8; next cast spends 8 on a 20-damage drain and venom/silence/slow cleanse. Never sacrifices companions. |
+| [Socket Blade](https://realm.wiki/item?id=49471) | Very slow heavy strike; top backpack row 125% damage, elsewhere 65%. No automatic ward removal. |
+| [Vampiric Cape](https://realm.wiki/item?id=17881) | 2 mana / 8s; one dodge plus 12 healing over 4s. Scythe enables 2s adjacent haste; Rosary enables three 1-damage bats for 4s. |
+| [Hallowed Hide](https://realm.wiki/item?id=17885) | +10 max HP, adjacent weapon damage +4%; 6 block / 5s. With Rosary, a health hit leaving the player below 50% HP heals 12, with a shared 15s lock. Cannot rescue a lethal hit. |
+| [Edictum Praetoris](https://realm.wiki/item?id=2524) | Three slower spiral projectiles share one damage budget and activation. |
+| [Ruthven's Rosary](https://realm.wiki/item?id=17886) | +12 max HP; heal 3 and restore 1 mana / 6s. Enables Cape bats and Hide emergency healing. |
+| [Memento Mori](https://realm.wiki/item?id=2525) | 4 mana / 6s; one non-healing 6-damage undead for 8s and +10% weapon damage for 3s. Its current source raises undead and grants Damaging; this is deliberately not another healing skull. |
+| [Toga Picta](https://realm.wiki/item?id=2526) | +6 max mana; 8 block / 4.8s. Adjacent weapons gain +8% damage with 5% longer cooldowns, translating offensive stats and negative DEX. |
+| [Interregnum](https://realm.wiki/item?id=2527) | +12 max HP; heal 2 / 6s. Every third successful ability can grant +8% weapon damage for 4s, shared 8s lock. Deterministic translation of the source's chance proc. |
+
+The [retro Torment skull](https://realm.wiki/item?id=53191), ID `wiki_53191`, deliberately retains a different older identity: 20 drain / 6s, 3 mana and represented-debuff cleanse. The current skull is `wiki_2321`; duplicate names must not select the retro entry accidentally during tests.
+
+## New sets and limits
+
+**Vampire Rogue:** Soulcursed Scythe, Vampiric Cape, Hallowed Hide and Ruthven's Rosary. Four distinct packed pieces add one 1-damage royal bat for 4s on Cape use. Scythe receives set membership only; its authored recipe is preserved.
+
+**Hollow King Necromancer:** Edictum Praetoris, Memento Mori, Toga Picta and Interregnum. Four distinct packed pieces add one 2-damage spirit for 6s on Mori use. Toga Picta and Interregnum are the matching armor and ring.
+
+Both use the existing two-piece +8% primary and three-piece +8% recharge thresholds; full-set triggers use the designated first ability and a shared 4s lock. Duplicate slots and stashed pieces do not count. Cape healing uses the strongest active field, with a shared three-bat limit. Only one Torment undead and one Mori undead can exist, and the global eight-companion cap remains. Buffs refresh rather than stack across duplicate copies. Combat resources reset at encounter setup.
+
+Equipment capacities use the strongest copy per base identity, including Shiny variants, with total bonuses capped at +80 HP / +20 mana. Equipping does not refill resources; removing gear clamps current resources to the lower capacity. Offensive gear adjacency uses the strongest two matching auras and the existing shared +35% primary cap. Toga's cooldown penalty caps at 15%. Timed weapon buffs do not improve ability damage.
+
+All dagger definitions match the pre-pass SHA-256 `3e2f0bc02599f9612bbbf53489fd034649907b62b85316ee52681c579788fa49` when set membership fields are excluded. The [Dagger Update](dagger-update.md) remains authoritative for dagger recipes.
+
+## Second-pass validation and balance feedback
+
+The regression suite covers actual versus overhealing Torment charge, purification, companion limits, pair/set rules, capacity save/removal behavior, nonstacking buffs, lethal-hit handling and the unchanged dagger recipes. The item UI audit covers 270 views across full inventory, reward and shop inspection, three viewport sizes and both text modes. Longer shop inspection sections fall back to one column when needed; overflowing full-detail columns fall back to fitted pagination.
+
+The preserved 19-class tiered benchmark has identical fight records before/after across all 1,995 fights (1,600 clears). A separate [paired item report](ut-st-pass-two-benchmark.json), generated by `scripts/benchmark-ut-st-pass-two.cjs`, compares 0.31.4 commit `85eebbbe0a843ba3337bdbe47d0e3309d06c2ae7` against this release: 20 cases × 35 bosses × two gear levels × two versions = 2,800 fights. Each uses a legal native-class fixed build, seed 123456, Adventurer depth 20, 0.05s ticks, +50 base HP, full equipped HP, +8% recharge blessing and three Health Potions. Crown, Hide and Toga receive legal weapon-adjacent placement in both versions.
+
+| Case | Clears before / 70 | Clears after / 70 |
+| --- | ---: | ---: |
+| Vesture of Duality | 28 | 21 |
+| Mechanical Kogbold Limb | 24 | 24 |
+| Fungal Breastplate | 51 | 39 |
+| Breastplate of New Life | 51 | 43 |
+| The Forgotten Crown | 31 | 34 |
+| Skull of Endless Torment | 31 | 23 |
+| Socket Blade | 29 | 28 |
+| Vampiric Cape | 22 | 30 |
+| Hallowed Hide | 22 | 31 |
+| Edictum Praetoris | 33 | 30 |
+| Ruthven's Rosary | 21 | 25 |
+| Memento Mori | 31 | 22 |
+| Toga Picta | 32 | 32 |
+| Interregnum | 30 | 33 |
+| Vampire Rogue set | 32 | 51 |
+| Hollow King set | 34 | 34 |
+| Skuld set control | 38 | 38 |
+| Swoll set control | 54 | 54 |
+| Phylactery set control | 25 | 25 |
+| Tiered control | 48 | 48 |
+
+The Vampire set gains a clear identity and improves substantially; the Hollow King set preserves its overall clear count while moving to summoned damage. Vesture and Mori lose generic healing/rescue protection and need supporting sustain. Fungal healing replaces block and performs worse in the Knight armor fixture, which also rewards block through its class passive. These are useful trade-offs to watch, not evidence that all items or classes are equally strong. The unchanged existing-set and tiered controls help isolate the changes. Different set cases use different native classes, so their clear counts do not establish direct set parity. This is not an optimized-build search, acquisition/economy test or full-run balance verdict.
+
+---
+
+# Previous identity pass — 0.21.5
 
 The later [Dagger Update — 0.22.0](dagger-update.md) takes precedence for its named dagger recipes, including Corruption Cutter and Cronus. The source references below document the preceding identity pass.
 

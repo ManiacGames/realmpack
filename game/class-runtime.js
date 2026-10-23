@@ -2,7 +2,7 @@
 'use strict';
 function resetClassEffects(){s.fury=0;s.furyTime=0;s.focus=0;s.arcaneEchoReady=false;s.precisionReady=false;s.rhythmAt=-1e9}
 function tickClassEffects(dt){s.furyTime=Math.max(0,(s.furyTime||0)-dt);if(!s.furyTime)s.fury=0}
-function classPrimaryAmount(i,amount){const d=defs[i.type];if(s.classId==='warrior'&&d.group==='weapon')amount*=1+.08*(s.fury||0);if(s.classId==='samurai'&&d.kind==='wakizashi'){amount*=1+.4*(s.focus||0);s.focus=0}return Math.max(1,Math.round(amount))}
+function classPrimaryAmount(i,amount){const d=defs[i.type];amount*=realmWeaponMultiplier(i);if(d.realmSet&&!d.realmIdentity&&realmSetCount(d.realmSet)>=2)amount*=1.08;if(s.classId==='warrior'&&d.group==='weapon')amount*=1+.08*(s.fury||0);if(s.classId==='samurai'&&d.kind==='wakizashi'){amount*=1+.4*(s.focus||0);s.focus=0}return Math.max(1,Math.round(amount))}
 function classActivation(i,primary){const d=defs[i.type];
  if(s.classId==='archer'&&d.kind==='bow'){
   passive('bow',1);if(s.precisionReady){s.precisionReady=false;const quiver=nearbyItems(i).some(j=>defs[j.type].kind==='quiver');hit(Math.round(primary*(quiver?.75:.4)));log('✦ Precision shot'+(quiver?' · quiver empowered':'')+'.')}
