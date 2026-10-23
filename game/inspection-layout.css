@@ -52,3 +52,22 @@ body #overlay .item-details-modal .enchant-info p{font-size:18px!important;line-
 .item-details-modal .screen-page-content>small{font-size:16px;line-height:1.35}
 /* Keep inspection actions reachable as attribute rings add more connection hints. */
 .inspection-overview>.inspection-extras{flex-shrink:1}
+
+.consumable-controls{padding:6px 0;font-size:16px;min-width:0}.consumable-controls label{display:block}.consumable-controls select{display:block;width:100%;min-width:0;font:inherit;padding:4px;margin-top:4px}.consumable-controls small{display:block;font-size:15px;line-height:1.25;margin-top:4px}.supply-options p{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.supply-options .sprite-art{--sprite-size:28px}
+@container inspection (max-height:300px){.inspection-overview>.consumable-controls small{display:none}.inspection-overview>.consumable-controls{padding:0;font-size:15px}.inspection-overview>.consumable-controls select{padding:2px;margin:0}}
+@media(max-height:650px){body #overlay .adaptive-modal .shop-inspect-sections{grid-template-columns:1fr}}
+/* Consumable controls must leave room for Full details in short landscape. */
+@container inspection (max-height:260px){
+ .inspection-heading:has(~.inspection-stack) :is(.label,.stats){display:none}
+ .inspection-heading:has(~.inspection-stack) h2{font-size:20px;line-height:1.1;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+ .inspection-heading:has(~.inspection-stack) .detailtitle{margin:0}
+ .inspection-heading:has(~.inspection-stack) .sprite-art{--sprite-size:24px}
+ .inspection-description:has(~.inspection-stack){display:none}
+ .inspection-overview>.consumable-controls{font-size:15px}
+ .inspection-overview>.consumable-controls small{display:none}
+}
+@container inspection (max-height:260px){
+ .inspection-heading:has(~.inspection-stack) .detailtitle>span{font-size:24px;line-height:1}
+ #detail>.consumable-controls label{font-size:15px;line-height:1.1}
+ #detail>.consumable-controls select{min-height:0;height:28px;font-size:15px;line-height:18px;padding:2px;margin:0}
+}

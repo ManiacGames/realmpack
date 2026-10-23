@@ -27,7 +27,7 @@ for(const c of vm.runInContext('Object.keys(classes)',ctx)){
  if(process.stderr.isTTY)process.stderr.write(c+' done\n');
 }
 
-const summary={gameVersion:'0.21.0',runMode:'normal',depth:20,dungeons:35,variants:3,fights:rows.length,results:[...new Set(rows.map(r=>r.classId))].map(classId=>{const group=rows.filter(r=>r.classId===classId);return {classId,wins:group.filter(r=>r.won).length,fights:group.length,variants:[0,1,2].map(v=>group.filter(r=>r.variant===v&&r.won).length)}})};
+const summary={gameVersion:fs.readFileSync(path.join(__dirname,'../game/index.html'),'utf8').match(/0\.\d+\.\d+/)[0],runMode:'normal',depth:20,dungeons:35,variants:3,fights:rows.length,results:[...new Set(rows.map(r=>r.classId))].map(classId=>{const group=rows.filter(r=>r.classId===classId);return {classId,wins:group.filter(r=>r.won).length,fights:group.length,variants:[0,1,2].map(v=>group.filter(r=>r.variant===v&&r.won).length)}})};
 summary.classes=summary.results.length;
 const out=process.argv.indexOf('--output');if(out>=0){if(!process.argv[out+1])throw Error('--output needs a path');fs.writeFileSync(path.resolve(process.argv[out+1]),JSON.stringify({summary,rows},null,2)+'\n')}
 console.log(JSON.stringify(summary,null,2));

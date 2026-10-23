@@ -1,11 +1,11 @@
 'use strict';
 const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');const root=path.resolve(__dirname,'..');const ctx={window:{__TEST__:true},console,Date,setInterval(){return 1},clearInterval(){},setTimeout(){},clearTimeout(){},localStorage:{setItem(){},getItem(){return null}}};vm.createContext(ctx);
-for(const f of ['sprites.js','sprites-runtime.js','catalogue.js','item-balance.js','realm-specials.js','dagger-update.js','encounters.js','mechanics-runtime.js','enchantments-runtime.js','events-runtime.js','map-runtime.js','inventory-controls.js','item-effects.js','adjacency-runtime.js','stacks-runtime.js','event-art.js','event-trades.js','dungeon-difficulty.js','class-runtime.js','shop-specialists.js','game.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx);
+for(const f of ['sprites.js','sprites-runtime.js','catalogue.js','item-balance.js','realm-specials.js','dagger-update.js','encounters.js','mechanics-runtime.js','enchantments-runtime.js','events-runtime.js','map-runtime.js','inventory-controls.js','item-effects.js','adjacency-runtime.js','stacks-runtime.js','consumables-runtime.js','event-art.js','event-trades.js','dungeon-difficulty.js','class-runtime.js','shop-specialists.js','game.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx);
 console.log(vm.runInContext(`(()=>{
 const check=(v,m)=>{if(!v)throw Error(m)},close=(a,b)=>Math.abs(a-b)<1e-8;
 freshRun('knight',true);selectPortal(s.portalChoices[0]);s.phase='fight';s.max=200;s.hp=100;s.mana=50;s.time=0;s.relicHaste=0;s.haste=0;
 const base=defs[DATA.byName['Health Potion']];
-const fixture=(id,extra={})=>defs[id]={...base,id,name:id,group:'ring',kind:'ring',effect:'block',amount:1,mana:0,cd:4,w:1,h:1,once:false,mechanic:null,affix:null,condition:'none',bonus:0,classes:['knight'],...extra};
+const fixture=(id,extra={})=>defs[id]={...base,consumableRework:false,consumable:undefined,id,name:id,group:'ring',kind:'ring',effect:'block',amount:1,mana:0,cd:4,w:1,h:1,once:false,mechanic:null,affix:null,condition:'none',bonus:0,classes:['knight'],...extra};
 fixture('speed',{effect:'haste',amount:3});fixture('target');
 const pack=(type,x,y)=>Object.assign(makeItem(type),{x,y});
 const source=pack('speed',1,1),target=pack('target',2,1),diagonal=pack('target',2,2),far=pack('target',5,4),above=pack('target',1,0),stashed=pack('target',null,null);

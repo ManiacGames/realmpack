@@ -1,3 +1,14 @@
+# RealmPack changelog
+
+## 0.31.0 — 2026-10-23
+
+- Reworked consumables into resources that are permanently spent after use. Stacks still hold five; unused copies survive, and used copies are removed after the whole encounter, including all waves.
+- Added capped permanent stat upgrades to one chosen adjacent item, with target selection in inspection. Attack/Defense retain +1 / +2 upgrades; weapon/armor/ability cooldown potions give 0.10s / 0.20s reductions up to 25% of base cooldown. Vitality improves passive ring strength or active-ring cadence; Mana uses ability-family potency. Life adds +5 / +10 maximum HP, capped at +60 from potions.
+- Added encounter-wide tinctures/effusions, opening Ambrosia heals, Chaos Cake, budgeted Frost Cake freezing, extra enchantment slots, loot modifiers, guaranteed stat drops, a chest Open action and bottom-right same-size transformation. Weaker duplicate temporary effects are kept rather than wasted.
+- Every combat victory also gives Health and Magic supplies, upgraded to Greater versions in Exaltation/Apex Exalt dungeons. These are separate from normal loot; overflow and reward-time inventory management preserve the nine-slot stash limit and require an explicit choice before leaving supplies.
+- Reduced the obtainable consumable pool to the 46 defined items. The other 168 are hidden from new acquisition and the catalogue; existing copies remain usable. Removed Health1–6 variants migrate to Health Potions and the three removed Steamworks-related chests migrate to stat-potion chests without losing stack counts.
+- Validation: JavaScript syntax and all 21 game regression suites; 276 consumable inspection views with complete-text and short-screen action checks, 98 existing hover views and 50 reward/inspection dialog views. Browser clicks cover target selection, chest opening, confirmed reward-time discards and save/reload persistence. The preserved 1,995-fight benchmark cleared 1,600, matching the earlier fixed-build total; it does not establish full-run consumable economy balance. See docs/consumable-rework.md for values and limits.
+
 ## 0.30.16 — 2026-10-22
 
 - Health rings retain their maximum-HP bonus and now restore that amount once at battle start: 12 HP at T1 through 36 HP at T7, capped at maximum HP. Combined ring restoration caps at 100 HP, matching the capacity cap; primary infusions improve both within that cap.
@@ -108,8 +119,6 @@
 - Weighted modifiers respect equipment type and avoid competing categories. Existing modifier strengths and rank chances remain unchanged. New gear is attuned at an Enchanter, a RealmPack adaptation of RotMG’s rarity/dust system.
 - Removed class compatibility from the Enchanter, enlarged enchantment text, and replaced the oversized event window with compact modifier cards and a comparison view.
 - Validation: enchantment economy, locks, save migration and stale-click guards; responsive Enchanter layouts; JavaScript syntax and game regression checks.
-
-# RealmPack changelog
 
 ## 0.29.0 — 2026-10-21
 

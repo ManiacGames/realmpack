@@ -1,6 +1,6 @@
 'use strict';
 const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');const root=path.resolve(__dirname,'..');const ctx={window:{__TEST__:true},console,Date,setInterval(){return 1},clearInterval(){},setTimeout(){},clearTimeout(){},localStorage:{setItem(){},getItem(){return null}}};vm.createContext(ctx);
-for(const f of ['sprites.js','sprites-runtime.js','catalogue.js','item-balance.js','realm-specials.js','dagger-update.js','encounters.js','mechanics-runtime.js','enchantments-runtime.js','events-runtime.js','map-runtime.js','inventory-controls.js','item-effects.js','adjacency-runtime.js','stacks-runtime.js','event-art.js','event-trades.js','dungeon-difficulty.js','class-runtime.js','shop-specialists.js','game.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx);
+for(const f of ['sprites.js','sprites-runtime.js','catalogue.js','item-balance.js','realm-specials.js','dagger-update.js','encounters.js','mechanics-runtime.js','enchantments-runtime.js','events-runtime.js','map-runtime.js','inventory-controls.js','item-effects.js','adjacency-runtime.js','stacks-runtime.js','consumables-runtime.js','event-art.js','event-trades.js','dungeon-difficulty.js','class-runtime.js','shop-specialists.js','game.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx);
 console.log(vm.runInContext(`(()=>{
 const check=(v,m)=>{if(!v)throw Error(m)};
 freshRun('knight',true);selectPortal(s.portalChoices[0]);s.phase='fight';s.items=[];s.stash=[];s.max=200;s.hp=200;s.mana=20;s.time=0;
@@ -15,7 +15,7 @@ potion.charge=cooldown(potion);check(!activate(potion)&&stackRemaining(potion)==
 s.hp=50;check(activate(potion)&&stackRemaining(potion)===1,'Next copy failed below threshold');
 check(describe(defs[potion.type]).includes('50% health'),'Missing displayed rule');
 // Ordinary healing and heal-affix consumables use the same gate; repeating gear and non-healing consumables do not.
-defs.testheal={...defs[potion.type],id:'testheal',mechanic:null,mana:2,affix:null};
+defs.testheal={...defs[potion.type],consumableRework:false,consumable:undefined,id:'testheal',mechanic:null,mana:2,affix:null};
 const normal=makeItem('testheal');normal.charge=cooldown(normal);s.items=[normal];s.hp=s.max;s.mana=20;
 check(!activate(normal)&&s.mana===20&&normal.activations===0,'Normal consumable wasted resources');
 s.hp=100;check(activate(normal)&&s.mana===18&&normal.used,'Normal consumable failed');
@@ -27,6 +27,6 @@ s.items=[potion];potion.used=false;potion.usesSpent=0;potion.activations=0;potio
 tick(.05);check(potion.activations===0&&potion.charge===cooldown(potion),'Tick spent waiting charge');
 s.hp=100;tick(.05);check(potion.activations===1&&potion.charge===0&&stackRemaining(potion)===2,'Ready heal did not trigger immediately');
 potion.charge=cooldown(potion);tick(.05);check(potion.activations===1&&stackRemaining(potion)===2,'Tick wasted next copy');
-setEnemy();check(stackRemaining(potion)===3&&!potion.used,'Battle refresh changed');
-return 'PASS: full-health prevention, exact 50% boundary, ordinary/signature/affix healing, resource preservation, per-copy health checks, ready cooldown tick behavior, unaffected gear/non-healing consumables and battle refresh';
+setEnemy();check(stackRemaining(potion)===2&&!potion.used,'Spent potion returned on the next battle');
+return 'PASS: full-health prevention, exact 50% boundary, ordinary/signature/affix healing, resource preservation, per-copy health checks, ready cooldown tick behavior, unaffected gear/non-healing consumables and permanent consumption';
 })()`,ctx));
