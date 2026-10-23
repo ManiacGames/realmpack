@@ -16,3 +16,10 @@
  #overlay .offer-modal>.shop-footer,#overlay .offer-modal>.loot-footer{padding-top:6px}#overlay .offer-modal>.shop-footer button,#overlay .offer-modal>.loot-footer button{font-size:14px;min-height:30px;padding:4px 7px}.offer-pages{min-height:28px;padding-top:4px}.offer-pages button{min-height:24px;padding:3px 7px;font-size:14px}
  #overlay .offer-modal .gameplay-hint{padding:5px 8px}#overlay .offer-modal .gameplay-hint p{font-size:14px!important;line-height:1.2!important}#overlay .offer-modal .gameplay-hint strong{font-size:15px}
 }
+
+/* Keep the richer consumable copy readable beside tips on small phones. */
+@media(max-width:550px){
+ #overlay .offer-modal .loot-card{padding:10px;gap:6px}
+ #overlay .offer-modal>.loot-footer>span{display:none}
+}
+@media(max-width:550px) and (max-height:700px){#overlay .screen-modal.offer-modal{gap:6px}}

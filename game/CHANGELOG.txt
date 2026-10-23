@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.31.2 — 2026-10-23
+
+- Victory spoils and shop consumable cards now explain their actual effects, amounts, targets and duration instead of displaying the generic word “consumable.” Speed potions describe adjacent armor cooldown upgrades; Dexterity effusions show their opening haste duration and recharge bonus.
+- Consumable cards show “Consumed on use · stacks to 5” in place of the unhelpful class-compatibility line. Full inspection retains the complete caps and targeting rules.
+- Small-phone loot cards use tighter spacing and omit the redundant footer reminder so the fuller descriptions, gameplay tips and action buttons fit together.
+- Validation: all 22 game regression suites and JavaScript syntax checks; descriptions asserted for all 46 obtainable consumables in both reward and shop cards. Browser checks cover 224 offer/layout/text/hint combinations, all 46 consumables in phone reward/shop views with larger text and tips, and 20 reward/shop inspection dialog views.
+
 ## 0.31.1 — 2026-10-23
 
 - Added an Availability filter to the item compendium: Obtainable (default), Unobtainable and All items. Retired consumables, disabled daggers and removed legacy definitions can now be searched and inspected together with the existing type, class, version and signature filters.
