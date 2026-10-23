@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.31.4 — 2026-10-24
+
+- Post-combat Health and Magic Potions, including Greater versions, now wait for an explicit loot choice instead of automatically filling inventory stacks or stash slots.
+- Each encounter supply has Take and Leave actions. Taking merges only the chosen item into compatible stacks; opening rewards, reloading or freeing inventory space leaves the remaining supplies untouched. You can still leave all unclaimed supplies together.
+- Validation: JavaScript syntax and all 23 game regression suites; targeted checks cover unchanged existing stacks, Greater supplies, full stash, manual claims, individual Leave actions, replay guards and reward continuation. Browser clicks cover a real victory, Take/Leave, inventory discards and save/reload; all 10 supply-dialog viewport/text combinations fit without clipping or page scrolling.
+
 ## 0.31.3 — 2026-10-24
 
 - Battle floors now match all 35 dungeons, with original pixel tiles for sandy caves, forests, webs, honeycomb, crypts, lava, ice, wood, coral, runes, crystals and machinery. Material patterns and palettes distinguish each dungeon.

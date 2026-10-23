@@ -11,7 +11,7 @@ Consumables are finite resources. A stack holds five copies; each activated copy
 | Magic Potion | Restore 6 mana | At least 6 mana missing |
 | Greater Magic Potion | Restore 12 mana | At least 12 mana missing |
 
-Every combat victory grants one Health and one Magic Potion separately from the normal loot choice. Difficulty levels 4–5 (Exaltation and Apex Exalt) grant Greater supplies. These merge into compatible stacks where possible. Overflow stays in a saved reward queue. The reward screen lets you discard an item with confirmation, claim supplies, return to normal loot, or explicitly leave supplies behind. Stash capacity remains nine items. A normal loot choice cannot be collected twice.
+Every combat victory grants one Health and one Magic Potion separately from the normal loot choice. Difficulty levels 4–5 (Exaltation and Apex Exalt) grant Greater supplies. Since 0.31.4, every supply waits in a saved reward queue until explicitly taken or left, even when a compatible backpack/stash stack has space. Taking a chosen supply merges it into compatible stacks where possible. Opening rewards, reloading or discarding inventory items never claims supplies automatically. Each supply has Take and Leave actions; the remaining queue can also be left together. The reward screen lets you discard an item with confirmation, claim supplies, return to normal loot, or explicitly leave supplies behind. Stash capacity remains nine items. A normal loot choice cannot be collected twice.
 
 ## Permanent stat potions
 
