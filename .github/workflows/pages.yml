@@ -36,6 +36,7 @@ jobs:
           node game/tests/test-compendium-availability.cjs
           node game/tests/test-combat-geometry.cjs
           node game/tests/test-event-art.cjs
+          node game/tests/test-battle-floors.cjs
           node game/tests/test-shop-layout.cjs
           node game/tests/test-shop-specialists.cjs
           node game/tests/test-inventory-interaction.cjs

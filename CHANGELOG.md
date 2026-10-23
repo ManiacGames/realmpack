@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.31.3 — 2026-10-24
+
+- Battle floors now match all 35 dungeons, with original pixel tiles for sandy caves, forests, webs, honeycomb, crypts, lava, ice, wood, coral, runes, crystals and machinery. Material patterns and palettes distinguish each dungeon.
+- Floors follow the actual encounter’s dungeon, including sandbox encounters, portal transitions and resumed runs. Static cached textures update only when the dungeon changes; neutral shading and text shadows preserve combat readability.
+- Validation: JavaScript syntax and all 23 game regression suites, all 350 encounter mappings and all 35 SVG assets. Browser checks cover 210 battle views across desktop, phone and short landscape sizes with both text modes, plus portal changes, sandbox encounters, save/reload and stable repeated application. See docs/battle-floors.md.
+
 ## 0.31.2 — 2026-10-23
 
 - Victory spoils and shop consumable cards now explain their actual effects, amounts, targets and duration instead of displaying the generic word “consumable.” Speed potions describe adjacent armor cooldown upgrades; Dexterity effusions show their opening haste duration and recharge bonus.

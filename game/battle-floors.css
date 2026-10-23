@@ -1,0 +1,5 @@
+/* No moving backgrounds or extra layers in the combat update loop. */
+body .arena[data-dungeon-floor]{background:linear-gradient(#0a10141c,#0a101438),var(--battle-floor-image) center/192px 128px;image-rendering:pixelated;border-bottom-color:var(--battle-floor-edge)}
+body .arena[data-dungeon-floor]::before{background:linear-gradient(90deg,#0a10148c 0 3%,var(--battle-floor-edge) 3% 3.5%,transparent 3.5% 96.5%,var(--battle-floor-edge) 96.5% 97%,#0a10148c 97%);box-shadow:inset 0 0 22px #080c1099;pointer-events:none}
+body .arena[data-dungeon-floor] .fighter b,body .arena[data-dungeon-floor] .fighter small{color:#e5e7da;text-shadow:1px 1px #090e12,0 0 5px #090e12}
+body .arena[data-dungeon-floor] .vs{color:#d3cab4;text-shadow:1px 1px #090e12}
