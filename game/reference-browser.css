@@ -17,3 +17,9 @@ html[data-large-text=true] .reference-card-heading h3{font-size:21px}html[data-l
 @media(max-width:700px){.reference-summary>span[data-has-message=true]{display:block;overflow:hidden;text-overflow:ellipsis}.reference-summary:has([data-has-message=true])>span:first-child{display:none}}
 
 .reference-card-heading small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+
+/* Acquisition status uses text as well as color. */
+.item-unavailable-badge{display:inline-block;color:#ffe0aa;background:#493a29;border:1px solid #b89a6b;padding:1px 4px;font-size:13px;line-height:1.1;font-weight:bold;flex:none}
+.item-unavailable-note{color:#f3d2a0;border-left:3px solid #b89a6b;background:#362e24;padding:8px 10px;line-height:1.35}
+
+.reference-card-meta>span:first-child{overflow:hidden;text-overflow:ellipsis}

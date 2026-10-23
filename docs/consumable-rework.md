@@ -66,7 +66,7 @@ Loot modifiers and transformation reserve one copy at encounter start and resolv
 
 ## Acquisition and existing saves
 
-The obtainable pool contains 46 consumables: four supplies, sixteen stat potions, sixteen tinctures/effusions and ten special items. The remaining 168 are excluded from new loot, shops, events, sandbox acquisition and the compendium. Existing retired copies retain their legacy effects and become finite resources too.
+The obtainable pool contains 46 consumables: four supplies, sixteen stat potions, sixteen tinctures/effusions and ten special items. The remaining 168 are excluded from new loot, shops, events and sandbox acquisition. Since 0.31.1, they are listed under the compendium’s Unobtainable / All items availability filters, with a clear acquisition warning. Existing retired copies retain their legacy effects and become finite resources too.
 
 Removed Potion of Health1–6 variants migrate to Health Potions. The Steampunk Epic Quest, Steamworks Compensation and Steamworks Engraving chests migrate to Stat Potion Choice Chests. Stack counts are retained. Old saved shop/reward offers are filtered; pending supplies and item upgrades persist.
 

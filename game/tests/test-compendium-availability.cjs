@@ -1,0 +1,20 @@
+'use strict';
+const assert=require('node:assert/strict'),{ctx,vm}=require('./load-game.cjs');
+console.log(vm.runInContext(`(()=>{
+ const check=(v,m)=>{if(!v)throw Error(m)};
+ freshRun('knight',true);selectPortal(s.portalChoices[0]);
+ const available=catalogueMatches();check(available.length>0&&available.every(d=>!itemUnobtainable(d)),'Default includes unavailable gear');
+ catalogueFilter('availability','unobtainable');const retired=catalogueMatches();
+ check(retired.length===173&&retired.every(itemUnobtainable),'Unavailable pool missing retired consumables or daggers');
+ catalogueFilter('availability','all');const all=catalogueMatches();check(all.length===DATA.items.length&&all.length===available.length+retired.length,'All items not a complete partition');
+ catalogueState.page=9;catalogueFilter('availability','unobtainable');check(catalogueState.page===0,'Availability change retains stale page');
+ catalogueFilter('group','consumable');check(catalogueMatches().length===168,'Type filter does not combine with availability');
+ catalogueFilter('search','Potion of Health');check(catalogueMatches().length===6,'Removed health bundles cannot be searched');
+ resetReferenceFilters('catalogue');check(catalogueState.availability==='obtainable'&&catalogueState.search===''&&catalogueState.group==='','Reset does not restore default');
+ const d=retired.find(d=>d.catalogueHidden);let captured=null;modal=(...args)=>captured=args;
+ inspectCatalogueItem(d.id);check(captured&&captured[3]==='catalogueinspect'&&captured[2].includes('Cannot be obtained during gameplay'),'Retired item inspection missing warning');
+ const item=makeItem(d.id);s.stash=[item];check(itemInspectionMarkup(item).includes('Cannot be obtained during gameplay'),'Saved legacy copy missing warning');
+ const before=JSON.stringify(s);addSandbox(d.id);addSandbox('missing-item');check(JSON.stringify(s)===before,'Unavailable/invalid sandbox acquisition changed inventory');
+ check(itemAvailabilityNote(available[0])==='','Available gear mislabeled');
+ return {obtainable:available.length,unobtainable:retired.length,total:all.length,checks:'availability partition, combined filters, reset/page, hidden-item inspection, saved copies and acquisition guard'};
+})()`,ctx));

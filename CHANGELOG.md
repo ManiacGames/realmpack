@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.31.1 — 2026-10-23
+
+- Added an Availability filter to the item compendium: Obtainable (default), Unobtainable and All items. Retired consumables, disabled daggers and removed legacy definitions can now be searched and inspected together with the existing type, class, version and signature filters.
+- Unobtainable cards display an explicit badge; their inspection screens say they cannot be obtained during gameplay. Existing saved copies show the same status in inventory inspection. Sandbox acquisition stays disabled for these entries.
+- Validation: JavaScript syntax and all 22 game regression suites, including availability partitions, combined filters, reset/page behavior, legacy inspection and sandbox guards. Browser checks cover 64 compendium/bestiary views across eight viewport sizes and both text modes, plus 40 inspection dialog views; mobile filters, warnings, pagination and return focus were exercised.
+
 ## 0.31.0 — 2026-10-23
 
 - Reworked consumables into resources that are permanently spent after use. Stacks still hold five; unused copies survive, and used copies are removed after the whole encounter, including all waves.

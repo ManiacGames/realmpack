@@ -4,7 +4,7 @@
 
 **0.22.1 follow-up:** Evergreen now has a 0.8s minimum cooldown (Shiny 0.72s), and Toxic Toad applies 6 poison every 2s with no direct damage. Existing ramp steps, starting cooldowns and poison limits are preserved.
 
-Implemented all **55 requested entries** from the supplied “The Dagger Update.md”. Fifty named recipes are explicitly tuned, ten matching Shiny definitions inherit upgraded versions, four named items are temporarily unobtainable, and one duplicate Poison Fang definition is removed from new acquisition and catalogue results. Original IDs remain defined for save compatibility.
+Implemented all **55 requested entries** from the supplied “The Dagger Update.md”. Fifty named recipes are explicitly tuned, ten matching Shiny definitions inherit upgraded versions, four named items are temporarily unobtainable, and one duplicate Poison Fang definition is removed from new acquisition. Since 0.31.1, unavailable definitions (including that duplicate) can be inspected using the compendium’s Unobtainable / All items availability filters. Original IDs remain defined for save compatibility.
 
 The authoritative override is `game/dagger-update.js`, loaded after the general family and researched UT/ST layers. Tiered gear outside the listed reference matches remains unchanged.
 
