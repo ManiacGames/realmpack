@@ -1,7 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict'),crypto=require('node:crypto'),{ctx,vm}=require('./load-game.cjs');
-const unchanged=vm.runInContext(`JSON.stringify(DATA.items.filter(d=>d.kind!=='sword').map(d=>{if(!d.legacyUnavailable)return d;const {legacyUnavailable,...copy}=d;if(d.name!=='Legacy Etherite Dagger')delete copy.lootExcluded;return copy}))`,ctx);
-assert.equal(crypto.createHash('sha256').update(unchanged).digest('hex'),'ac2b01eb01700aee4be3207a61555d85a004229019ac2476d759c3fdd76f1b0b','Non-sword definitions changed beyond the approved Legacy acquisition flags');
+const unchanged=vm.runInContext(`JSON.stringify(DATA.items.filter(d=>!['dagger','sword'].includes(d.kind)).map(d=>{if(!d.legacyUnavailable)return d;const {legacyUnavailable,...copy}=d;delete copy.lootExcluded;return copy}))`,ctx);
+assert.equal(crypto.createHash('sha256').update(unchanged).digest('hex'),'a83d4adc778fbe3470885f667e926e024b5813af1d1f231ce58240b5181719a2','Unrelated non-weapon definitions changed');
 console.log(vm.runInContext(String.raw`(()=>{
  const check=(v,m)=>{if(!v)throw Error(m)},type=n=>DATA.items.find(d=>d.name===n&&!d.isShiny).id;
  const basePassive=passive;passive=()=>{};enemyProfiles=()=>[];
@@ -37,5 +37,5 @@ console.log(vm.runInContext(String.raw`(()=>{
  // Broad finite-state coverage includes every version/Shiny, all sword classes and legal packs.
  let fights=0;passive=basePassive;
  for(const d of swords.filter(d=>d.swordIdentity))for(const classId of ['warrior','knight','paladin']){freshRun(classId,true);s.seed=123456;selectPortal(s.portalChoices[0]);s.items=[];s.stash=[];for(const type of [d.id,...classes[classId].startingIds.slice(1,3)])check(autoPlace(makeItem(type)),'Illegal '+d.name);s.phase='prep';startFight();for(let n=0;n<600&&s.phase==='fight';n++)tick(.05);check(Number.isFinite(s.hp)&&Number.isFinite(s.enemy.hp)&&s.summons.length<=8&&(s.swordReturns||[]).length<=32,'Invalid combat '+d.name);fights++}
- return 'PASS: all 107 sword entries; 99 weapon profiles, 8 internal helpers; source reskins, returning/beam/piercing budgets, proc/partner locks, thresholds, capacities, reset and '+fights+' legal class/version combat trials; non-sword recipes unchanged outside Legacy acquisition flags';
+ return 'PASS: all 107 sword entries; 99 weapon profiles, 8 internal helpers; source reskins, returning/beam/piercing budgets, proc/partner locks, thresholds, capacities, reset and '+fights+' legal class/version combat trials; non-weapon recipes unchanged outside Legacy acquisition flags';
 })()`,ctx));

@@ -1,4 +1,8 @@
-# The Dagger Update — 0.22.2
+# Dagger identities — current authority: 0.34.0
+
+The [complete researched dagger pass](dagger-identities.md) supersedes the older recipes below following the user’s request to make every UT/ST dagger closer to RotMG. All 81 variants are covered. Chain’s bleed ceiling, Evergreen’s final cooldown floor, Toxic Toad’s six-poison budget, saved upgrades and existing acquisition exclusions are retained; conflicting custom effects are explicitly replaced. The history below records previous releases and is not a claim that their old effects still run.
+
+# Historical custom Dagger Update — 0.22.2
 
 **0.33.2 acquisition follow-up:** All 13 explicitly labelled Legacy versions are now temporarily unobtainable. Legacy Etherite was already excluded; its recipe and all owned copies remain unchanged. Temporary Legacy availability metadata is excluded from the recipe snapshot hash.
 

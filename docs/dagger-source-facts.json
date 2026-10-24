@@ -1,0 +1,2888 @@
+{
+  "inspected": "2026-10-24",
+  "source": "Numerical projectile/subattack/equip facts from Realm.wiki game data.",
+  "items": [
+    {
+      "id": "wiki_9085",
+      "name": "An Icicle",
+      "source": "https://realm.wiki/item?id=9085",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        105,
+        190
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Icicle Shot",
+          "Speed": "140",
+          "MinDamage": "105",
+          "MaxDamage": "190",
+          "LifetimeMS": "200",
+          "ParticleTrail": "0x1ba38f",
+          "Intensity": "0.3"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_17124",
+      "name": "Archangel's Judgement",
+      "source": "https://realm.wiki/item?id=17124",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        60,
+        75
+      ],
+      "rate": 0.85,
+      "shots": 4,
+      "projectiles": [
+        {
+          "ObjectId": "Daeva Feather",
+          "Speed": "150",
+          "MinDamage": "60",
+          "MaxDamage": "75",
+          "LifetimeMS": "1000",
+          "Acceleration": "-1225",
+          "AccelerationDelay": "300",
+          "SpeedClamp": "10"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_7321",
+      "name": "Ashen Talon",
+      "source": "https://realm.wiki/item?id=7321",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        150,
+        170
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Ashen Talon Shot",
+          "Speed": "140",
+          "MinDamage": "150",
+          "MaxDamage": "170",
+          "LifetimeMS": "357.142857",
+          "Size": "100",
+          "MultiHit": true,
+          "ArmorPiercing": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_17709",
+      "name": "Aspirant's Dagger",
+      "source": "https://realm.wiki/item?id=17709",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        0,
+        215
+      ],
+      "rate": 0.95,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Aspirant Dagger Slash",
+          "Speed": "140",
+          "MinDamage": "140",
+          "MaxDamage": "215",
+          "LifetimeMS": "400"
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Aspirant Dagger Slash",
+          "Speed": "0",
+          "MinDamage": "0",
+          "MaxDamage": "0",
+          "LifetimeMS": "0"
+        }
+      ],
+      "subattacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.95"
+        },
+        {
+          "Index": "1",
+          "ProjectileId": "1",
+          "NumProjectiles": "0",
+          "RateOfFire": "0.95"
+        },
+        {
+          "Index": "2",
+          "ProjectileId": "1",
+          "NumProjectiles": "0",
+          "RateOfFire": "0.95"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_28829",
+      "name": "Avarice",
+      "source": "https://realm.wiki/item?id=28829",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        190,
+        215
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Avarice Projectile",
+          "Speed": "133",
+          "MinDamage": "190",
+          "MaxDamage": "215",
+          "LifetimeMS": "450",
+          "Amplitude": "0.55",
+          "Frequency": "0.5",
+          "FaceDir": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_65508",
+      "name": "Shiny Avarice",
+      "source": "https://realm.wiki/item?id=65508",
+      "shiny": true,
+      "baseId": "wiki_28829",
+      "damage": [
+        190,
+        215
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Avarice Projectile Shiny",
+          "Speed": "133",
+          "MinDamage": "190",
+          "MaxDamage": "215",
+          "LifetimeMS": "450",
+          "Amplitude": "0.55",
+          "Frequency": "0.5",
+          "FaceDir": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_22506",
+      "name": "Blade of Fates",
+      "source": "https://realm.wiki/item?id=22506",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        180,
+        500
+      ],
+      "rate": 0.12,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "3TricksterST0 Dagger Projectile",
+          "Size": "110",
+          "MinDamage": "350",
+          "MaxDamage": "500",
+          "Speed": "180",
+          "LifetimeMS": "1100",
+          "Acceleration": "-438",
+          "AccelerationDelay": "100",
+          "SpeedClamp": "0"
+        },
+        {
+          "Id": "1",
+          "ObjectId": "3TricksterST0 Spinner Projectile",
+          "Size": "70",
+          "MinDamage": "180",
+          "MaxDamage": "245",
+          "Speed": "200",
+          "LifetimeMS": "930",
+          "Acceleration": "-500",
+          "AccelerationDelay": "65",
+          "SpeedClamp": "0",
+          "Amplitude": "0.45",
+          "Frequency": "1.0",
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.12"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.72"
+        }
+      ],
+      "equip": [
+        {
+          "Amount": "-8",
+          "Stat": "SPD",
+          "StatRelativeTo": "SPD"
+        }
+      ],
+      "amulets": []
+    },
+    {
+      "id": "wiki_42280",
+      "name": "Blood Coated Dirk",
+      "source": "https://realm.wiki/item?id=42280",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        60,
+        140
+      ],
+      "rate": 1.5,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Blood Dirk Shot",
+          "Speed": "165",
+          "MinDamage": "60",
+          "MaxDamage": "140",
+          "LifetimeMS": "320",
+          "ArmorPiercing": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "Stat": "SPD",
+          "Amount": "4"
+        }
+      ],
+      "amulets": []
+    },
+    {
+      "id": "wiki_3106",
+      "name": "Bone Dagger",
+      "source": "https://realm.wiki/item?id=3106",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        95,
+        170
+      ],
+      "rate": 1.1,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Bone Dagger Shot",
+          "Speed": "150",
+          "MinDamage": "95",
+          "MaxDamage": "170",
+          "LifetimeMS": "335",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.1"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_7377",
+      "name": "Shiny Bone Dagger",
+      "source": "https://realm.wiki/item?id=7377",
+      "shiny": true,
+      "baseId": "wiki_3106",
+      "damage": [
+        95,
+        170
+      ],
+      "rate": 1.1,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Bone Dagger Shot Shiny",
+          "Speed": "150",
+          "MinDamage": "95",
+          "MaxDamage": "170",
+          "LifetimeMS": "335",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.1"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_53801",
+      "name": "Boomerang Blades",
+      "source": "https://realm.wiki/item?id=53801",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        95,
+        160
+      ],
+      "rate": 0.9,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Boomerang Large Blade",
+          "Speed": "120",
+          "MinDamage": "95",
+          "MaxDamage": "125",
+          "LifetimeMS": "400",
+          "PassesCover": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Boomerang Returning Blade",
+          "Speed": "120",
+          "MinDamage": "120",
+          "MaxDamage": "160",
+          "LifetimeMS": "600",
+          "Boomerang": true,
+          "MultiHit": true,
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "0.25,0"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5",
+          "PosOffset": "-0.25,0"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_26098",
+      "name": "Bounty Hunter's Dagger",
+      "source": "https://realm.wiki/item?id=26098",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        75,
+        135
+      ],
+      "rate": 0.65,
+      "shots": 3,
+      "projectiles": [
+        {
+          "ObjectId": "Realm Stab",
+          "Speed": "140",
+          "MinDamage": "75",
+          "MaxDamage": "135",
+          "LifetimeMS": "380",
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_600",
+      "name": "Carved Golem Remains",
+      "source": "https://realm.wiki/item?id=600",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        155,
+        170
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Golem Magic",
+          "Speed": "140",
+          "MinDamage": "155",
+          "MaxDamage": "170",
+          "LifetimeMS": "450"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_49695",
+      "name": "Chain Dagger",
+      "source": "https://realm.wiki/item?id=49695",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        110,
+        130
+      ],
+      "rate": 0.8,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Chain Dagger Projectile",
+          "Speed": "110",
+          "MinDamage": "110",
+          "MaxDamage": "130",
+          "LifetimeMS": "500",
+          "ConditionEffect": "Bleeding",
+          "Duration": "4.5",
+          "Amount": "50"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_5800",
+      "name": "Shiny Chain Dagger",
+      "source": "https://realm.wiki/item?id=5800",
+      "shiny": true,
+      "baseId": "wiki_49695",
+      "damage": [
+        110,
+        130
+      ],
+      "rate": 0.8,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Chain Dagger Projectile Shiny",
+          "Speed": "110",
+          "MinDamage": "110",
+          "MaxDamage": "130",
+          "LifetimeMS": "500",
+          "ConditionEffect": "Bleeding",
+          "Duration": "4.5",
+          "Amount": "50"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_2849",
+      "name": "Chicken Leg of Doom",
+      "source": "https://realm.wiki/item?id=2849",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        65,
+        105
+      ],
+      "rate": 0.95,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Chicken Leg",
+          "Speed": "100",
+          "MinDamage": "65",
+          "MaxDamage": "105",
+          "LifetimeMS": "600",
+          "Size": "80"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_25697",
+      "name": "Corrosion Cutter",
+      "source": "https://realm.wiki/item?id=25697",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        150,
+        170
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Queen Reskin Missile",
+          "Speed": "140",
+          "MinDamage": "150",
+          "MaxDamage": "170",
+          "LifetimeMS": "357.142857",
+          "Size": "100",
+          "MultiHit": true,
+          "ArmorPiercing": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_7493",
+      "name": "Shiny Corrosion Cutter",
+      "source": "https://realm.wiki/item?id=7493",
+      "shiny": true,
+      "baseId": "wiki_25697",
+      "damage": [
+        150,
+        170
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Queen Reskin Missile Shiny",
+          "Speed": "140",
+          "MinDamage": "150",
+          "MaxDamage": "170",
+          "LifetimeMS": "357.142857",
+          "Size": "100",
+          "MultiHit": true,
+          "ArmorPiercing": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_1408",
+      "name": "Corruption Cutter",
+      "source": "https://realm.wiki/item?id=1408",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        85,
+        100
+      ],
+      "rate": 1.2,
+      "shots": 2,
+      "projectiles": [
+        {
+          "ObjectId": "Corruption Cut",
+          "Speed": "140",
+          "MinDamage": "85",
+          "MaxDamage": "100",
+          "LifetimeMS": "400",
+          "Amplitude": "1.5",
+          "Frequency": "0.7",
+          "Size": "80",
+          "Wavy": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_51677",
+      "name": "Shiny Corruption Cutter",
+      "source": "https://realm.wiki/item?id=51677",
+      "shiny": true,
+      "baseId": "wiki_1408",
+      "damage": [
+        85,
+        100
+      ],
+      "rate": 1.2,
+      "shots": 2,
+      "projectiles": [
+        {
+          "ObjectId": "Corruption Cut Shiny",
+          "Speed": "140",
+          "MinDamage": "85",
+          "MaxDamage": "100",
+          "LifetimeMS": "400",
+          "Amplitude": "1.5",
+          "Frequency": "0.7",
+          "Size": "80",
+          "Wavy": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_2006",
+      "name": "Crescent Dagger",
+      "source": "https://realm.wiki/item?id=2006",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        125,
+        220
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "CD Hero Magic",
+          "Speed": "140",
+          "MinDamage": "125",
+          "MaxDamage": "220",
+          "LifetimeMS": "400"
+        }
+      ],
+      "subattacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1.05",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_14491",
+      "name": "Dagger of Eternal Chaos",
+      "source": "https://realm.wiki/item?id=14491",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        115,
+        200
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "MotMG Void Shot",
+          "Speed": "140",
+          "MinDamage": "115",
+          "MaxDamage": "200",
+          "LifetimeMS": "400"
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "Stat": "ATT",
+          "Amount": "2"
+        }
+      ],
+      "amulets": []
+    },
+    {
+      "id": "wiki_9002",
+      "name": "Dagger of the Amethyst Prism",
+      "source": "https://realm.wiki/item?id=9002",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        115,
+        200
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Amethyst Shift",
+          "Speed": "140",
+          "MinDamage": "115",
+          "MaxDamage": "200",
+          "LifetimeMS": "400"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_2201",
+      "name": "Dagger of the Hasteful Rabbit",
+      "source": "https://realm.wiki/item?id=2201",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        115,
+        200
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "BB Bunny Bullet 1",
+          "Speed": "140",
+          "MinDamage": "115",
+          "MaxDamage": "200",
+          "LifetimeMS": "400",
+          "Frequency": "1",
+          "Size": "100"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_3857",
+      "name": "Dagger of the Terrible Talon",
+      "source": "https://realm.wiki/item?id=3857",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        105,
+        190
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Obsidian Vortex",
+          "Speed": "140",
+          "MinDamage": "105",
+          "MaxDamage": "190",
+          "LifetimeMS": "400"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_3082",
+      "name": "Dirk of Cronus",
+      "source": "https://realm.wiki/item?id=3082",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        150,
+        290
+      ],
+      "rate": 0.95,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Rainbow Magic",
+          "Speed": "180",
+          "MinDamage": "150",
+          "MaxDamage": "290",
+          "LifetimeMS": "250"
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "Stat": "WIS",
+          "Amount": "6"
+        }
+      ],
+      "amulets": []
+    },
+    {
+      "id": "wiki_1210",
+      "name": "Shiny Dirk of Cronus",
+      "source": "https://realm.wiki/item?id=1210",
+      "shiny": true,
+      "baseId": "wiki_3082",
+      "damage": [
+        150,
+        290
+      ],
+      "rate": 0.95,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Cdirk Shiny Proj",
+          "Speed": "180",
+          "MinDamage": "150",
+          "MaxDamage": "290",
+          "LifetimeMS": "250"
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "Stat": "WIS",
+          "Amount": "6"
+        }
+      ],
+      "amulets": []
+    },
+    {
+      "id": "wiki_28459",
+      "name": "Dual Pops",
+      "source": "https://realm.wiki/item?id=28459",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        70,
+        130
+      ],
+      "rate": 0.9,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Dual Pops Projectile 1",
+          "Speed": "120",
+          "MinDamage": "95",
+          "MaxDamage": "130",
+          "LifetimeMS": "400",
+          "PassesCover": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Dual Pops Projectile 2",
+          "Speed": "120",
+          "MinDamage": "70",
+          "MaxDamage": "105",
+          "LifetimeMS": "400",
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "0.25,0"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.1",
+          "PosOffset": "-0.25,0"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_25698",
+      "name": "Dueling Daggers",
+      "source": "https://realm.wiki/item?id=25698",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        85,
+        100
+      ],
+      "rate": 1.2,
+      "shots": 2,
+      "projectiles": [
+        {
+          "ObjectId": "Cutter Reskin Missile",
+          "Speed": "140",
+          "MinDamage": "85",
+          "MaxDamage": "100",
+          "LifetimeMS": "400",
+          "Amplitude": "1.5",
+          "Frequency": "0.7",
+          "Size": "80",
+          "Wavy": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_52068",
+      "name": "Shiny Dueling Daggers",
+      "source": "https://realm.wiki/item?id=52068",
+      "shiny": true,
+      "baseId": "wiki_25698",
+      "damage": [
+        85,
+        100
+      ],
+      "rate": 1.2,
+      "shots": 2,
+      "projectiles": [
+        {
+          "ObjectId": "Shiny Dueling Missile",
+          "Speed": "140",
+          "MinDamage": "85",
+          "MaxDamage": "100",
+          "LifetimeMS": "400",
+          "Amplitude": "1.5",
+          "Frequency": "0.7",
+          "Size": "80",
+          "Wavy": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_10064",
+      "name": "Etherite Dagger",
+      "source": "https://realm.wiki/item?id=10064",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        95,
+        195
+      ],
+      "rate": 1.25,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Spooky Sparkle",
+          "Speed": "160",
+          "MinDamage": "95",
+          "MaxDamage": "195",
+          "LifetimeMS": "240",
+          "Amplitude": "0.2",
+          "Frequency": "0.2"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_12160",
+      "name": "Evergreen Dagger",
+      "source": "https://realm.wiki/item?id=12160",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        140,
+        230
+      ],
+      "rate": 1.3,
+      "shots": 2,
+      "projectiles": [
+        {
+          "ObjectId": "Oryxmas Dagger Projectile",
+          "Speed": "50",
+          "MinDamage": "140",
+          "MaxDamage": "230",
+          "Acceleration": "200",
+          "AccelerationDelay": "400",
+          "SpeedClamp": "200",
+          "LifetimeMS": "840"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_1236",
+      "name": "Shiny Evergreen Dagger",
+      "source": "https://realm.wiki/item?id=1236",
+      "shiny": true,
+      "baseId": "wiki_12160",
+      "damage": [
+        140,
+        230
+      ],
+      "rate": 1.3,
+      "shots": 2,
+      "projectiles": [
+        {
+          "ObjectId": "Oryxmas Dagger Projectile Shiny",
+          "Speed": "50",
+          "MinDamage": "140",
+          "MaxDamage": "230",
+          "Acceleration": "200",
+          "AccelerationDelay": "400",
+          "SpeedClamp": "200",
+          "LifetimeMS": "840"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_17560",
+      "name": "Fractal Blades",
+      "source": "https://realm.wiki/item?id=17560",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        55,
+        105
+      ],
+      "rate": 0.9,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Left Fractal Blade",
+          "Speed": "200",
+          "MinDamage": "75",
+          "MaxDamage": "105",
+          "LifetimeMS": "240",
+          "PassesCover": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Right Fractal Blade",
+          "Speed": "200",
+          "MinDamage": "75",
+          "MaxDamage": "105",
+          "LifetimeMS": "240",
+          "PassesCover": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "2",
+          "ObjectId": "Left Fractal Blade",
+          "Speed": "80",
+          "MinDamage": "55",
+          "MaxDamage": "75",
+          "LifetimeMS": "125",
+          "PassesCover": true
+        },
+        {
+          "Id": "3",
+          "ObjectId": "Right Fractal Blade",
+          "Speed": "80",
+          "MinDamage": "55",
+          "MaxDamage": "75",
+          "LifetimeMS": "125",
+          "PassesCover": true
+        },
+        {
+          "Id": "4",
+          "ObjectId": "Left Fractal Blade",
+          "Speed": "80",
+          "MinDamage": "55",
+          "MaxDamage": "75",
+          "LifetimeMS": "125",
+          "PassesCover": true
+        },
+        {
+          "Id": "5",
+          "ObjectId": "Right Fractal Blade",
+          "Speed": "80",
+          "MinDamage": "55",
+          "MaxDamage": "75",
+          "LifetimeMS": "125",
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "0.25,0"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "-0.25,0"
+        },
+        {
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "-0.25,2.4",
+          "DefaultAngle": "-135"
+        },
+        {
+          "ProjectileId": "4",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "-0.25,4.8",
+          "DefaultAngle": "-135"
+        },
+        {
+          "ProjectileId": "3",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "0.25,2.4",
+          "DefaultAngle": "135"
+        },
+        {
+          "ProjectileId": "5",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "0.25,4.8",
+          "DefaultAngle": "135"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_17842",
+      "name": "Shiny Fractal Blades",
+      "source": "https://realm.wiki/item?id=17842",
+      "shiny": true,
+      "baseId": "wiki_17560",
+      "damage": [
+        55,
+        105
+      ],
+      "rate": 0.9,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Left Fractal Blade Shiny",
+          "Speed": "200",
+          "MinDamage": "75",
+          "MaxDamage": "105",
+          "LifetimeMS": "240",
+          "PassesCover": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Right Fractal Blade Shiny",
+          "Speed": "200",
+          "MinDamage": "75",
+          "MaxDamage": "105",
+          "LifetimeMS": "240",
+          "PassesCover": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "2",
+          "ObjectId": "Left Fractal Blade Shiny",
+          "Speed": "80",
+          "MinDamage": "55",
+          "MaxDamage": "75",
+          "LifetimeMS": "125",
+          "PassesCover": true
+        },
+        {
+          "Id": "3",
+          "ObjectId": "Right Fractal Blade Shiny",
+          "Speed": "80",
+          "MinDamage": "55",
+          "MaxDamage": "75",
+          "LifetimeMS": "125",
+          "PassesCover": true
+        },
+        {
+          "Id": "4",
+          "ObjectId": "Left Fractal Blade Shiny",
+          "Speed": "80",
+          "MinDamage": "55",
+          "MaxDamage": "75",
+          "LifetimeMS": "125",
+          "PassesCover": true
+        },
+        {
+          "Id": "5",
+          "ObjectId": "Right Fractal Blade Shiny",
+          "Speed": "80",
+          "MinDamage": "55",
+          "MaxDamage": "75",
+          "LifetimeMS": "125",
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "0.25,0"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "-0.25,0"
+        },
+        {
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "-0.25,2.4",
+          "DefaultAngle": "-135"
+        },
+        {
+          "ProjectileId": "4",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "-0.25,4.8",
+          "DefaultAngle": "-135"
+        },
+        {
+          "ProjectileId": "3",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "0.25,2.4",
+          "DefaultAngle": "135"
+        },
+        {
+          "ProjectileId": "5",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "0.25,4.8",
+          "DefaultAngle": "135"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_6859",
+      "name": "Frost Lich's Finger",
+      "source": "https://realm.wiki/item?id=6859",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        115,
+        200
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "XMAS Dark Blue Magic",
+          "Speed": "140",
+          "MinDamage": "115",
+          "MaxDamage": "200",
+          "LifetimeMS": "400"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_26193",
+      "name": "Frostbite Blades",
+      "source": "https://realm.wiki/item?id=26193",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        65,
+        120
+      ],
+      "rate": 0.9,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Large Frost Blade",
+          "Speed": "120",
+          "MinDamage": "85",
+          "MaxDamage": "120",
+          "LifetimeMS": "400",
+          "PassesCover": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Small Frost Blade",
+          "Speed": "120",
+          "MinDamage": "65",
+          "MaxDamage": "95",
+          "LifetimeMS": "400",
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "0.25,0"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.1",
+          "PosOffset": "-0.25,0"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_37679",
+      "name": "Groovy Mango",
+      "source": "https://realm.wiki/item?id=37679",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        250,
+        300
+      ],
+      "rate": 0.75,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Groovy Mango Shot",
+          "Speed": "75",
+          "MinDamage": "250",
+          "MaxDamage": "300",
+          "LifetimeMS": "800"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_1458",
+      "name": "Hatchling Blades",
+      "source": "https://realm.wiki/item?id=1458",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        95,
+        160
+      ],
+      "rate": 0.9,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Hatchling Chocolate Shot",
+          "Speed": "120",
+          "MinDamage": "95",
+          "MaxDamage": "125",
+          "LifetimeMS": "400",
+          "PassesCover": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Hatchling Returning Wiggler",
+          "Speed": "120",
+          "MinDamage": "120",
+          "MaxDamage": "160",
+          "LifetimeMS": "600",
+          "Boomerang": true,
+          "MultiHit": true,
+          "PassesCover": true,
+          "FaceDir": true
+        }
+      ],
+      "subattacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "0.25,0"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5",
+          "PosOffset": "-0.25,0"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_26745",
+      "name": "Heart Jewel Blades",
+      "source": "https://realm.wiki/item?id=26745",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        60,
+        110
+      ],
+      "rate": 0.9,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Large Heart Slice",
+          "Speed": "120",
+          "MinDamage": "80",
+          "MaxDamage": "110",
+          "LifetimeMS": "400",
+          "PassesCover": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Small Heart Slice",
+          "Speed": "120",
+          "MinDamage": "60",
+          "MaxDamage": "90",
+          "LifetimeMS": "400",
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "0.25,0"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.1",
+          "PosOffset": "-0.25,0"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_8845",
+      "name": "Heartfind Dagger",
+      "source": "https://realm.wiki/item?id=8845",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        105,
+        190
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Heartfinder Slash",
+          "Speed": "140",
+          "MinDamage": "105",
+          "MaxDamage": "190",
+          "LifetimeMS": "400"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_24971",
+      "name": "Hero's Blades",
+      "source": "https://realm.wiki/item?id=24971",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        70,
+        130
+      ],
+      "rate": 0.9,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Large Hero Blade",
+          "Speed": "120",
+          "MinDamage": "95",
+          "MaxDamage": "130",
+          "LifetimeMS": "400",
+          "PassesCover": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Small Hero Blade",
+          "Speed": "120",
+          "MinDamage": "70",
+          "MaxDamage": "105",
+          "LifetimeMS": "400",
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "0.25,0"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.1",
+          "PosOffset": "-0.25,0"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_24965",
+      "name": "Hero's Dagger",
+      "source": "https://realm.wiki/item?id=24965",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        125,
+        220
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Hero Magic",
+          "Speed": "140",
+          "MinDamage": "125",
+          "MaxDamage": "220",
+          "LifetimeMS": "400"
+        }
+      ],
+      "subattacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1.05",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_8608",
+      "name": "Legacy Etherite Dagger",
+      "source": "https://realm.wiki/item?id=8608",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        110,
+        215
+      ],
+      "rate": 1.1,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Spooky Sparkle",
+          "Speed": "160",
+          "MinDamage": "110",
+          "MaxDamage": "215",
+          "LifetimeMS": "240",
+          "Amplitude": "0.2",
+          "Frequency": "0.2"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_41811",
+      "name": "Legion Elite Dagger",
+      "source": "https://realm.wiki/item?id=41811",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        125,
+        220
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Legion Elite Dagger Proj",
+          "Speed": "140",
+          "MinDamage": "125",
+          "MaxDamage": "220",
+          "LifetimeMS": "400"
+        }
+      ],
+      "subattacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1.05",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_25731",
+      "name": "Maize Machete",
+      "source": "https://realm.wiki/item?id=25731",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        155,
+        170
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "HGolem Magic",
+          "Speed": "140",
+          "MinDamage": "155",
+          "MaxDamage": "170",
+          "LifetimeMS": "450"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_41740",
+      "name": "Marionette Ravager",
+      "source": "https://realm.wiki/item?id=41740",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        60,
+        140
+      ],
+      "rate": 1.5,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Marionette Ravager Shot",
+          "Speed": "165",
+          "MinDamage": "60",
+          "MaxDamage": "140",
+          "LifetimeMS": "320",
+          "ArmorPiercing": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "Stat": "SPD",
+          "Amount": "4"
+        }
+      ],
+      "amulets": []
+    },
+    {
+      "id": "wiki_5299",
+      "name": "Shiny Marionette Ravager",
+      "source": "https://realm.wiki/item?id=5299",
+      "shiny": true,
+      "baseId": "wiki_41740",
+      "damage": [
+        60,
+        140
+      ],
+      "rate": 1.5,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Marionette Ravager Shot Shiny",
+          "Speed": "165",
+          "MinDamage": "60",
+          "MaxDamage": "140",
+          "LifetimeMS": "320",
+          "ArmorPiercing": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "Stat": "SPD",
+          "Amount": "4"
+        }
+      ],
+      "amulets": []
+    },
+    {
+      "id": "wiki_20766",
+      "name": "Mischief",
+      "source": "https://realm.wiki/item?id=20766",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        20,
+        300
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "MV Petal Bolt",
+          "Speed": "130",
+          "MinDamage": "70",
+          "MaxDamage": "300",
+          "LifetimeMS": "400",
+          "Amplitude": "0.2",
+          "Frequency": "0.2",
+          "Size": "90"
+        },
+        {
+          "Id": "1",
+          "ObjectId": "MV Large Cherry Petal",
+          "Speed": "110",
+          "MinDamage": "40",
+          "MaxDamage": "100",
+          "LifetimeMS": "472.7",
+          "Size": "80",
+          "Frequency": "1.0",
+          "Amplitude": "0.7",
+          "FaceDir": true,
+          "ArmorPiercing": true
+        },
+        {
+          "Id": "2",
+          "ObjectId": "MV Large Cherry Petal",
+          "Speed": "110",
+          "MinDamage": "20",
+          "MaxDamage": "110",
+          "LifetimeMS": "472.7",
+          "Size": "85",
+          "Frequency": "1.0",
+          "Amplitude": "0.5",
+          "FaceDir": true,
+          "ArmorPiercing": true
+        }
+      ],
+      "subattacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.05"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.13"
+        },
+        {
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.25"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_1396",
+      "name": "Mister Mango",
+      "source": "https://realm.wiki/item?id=1396",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        250,
+        300
+      ],
+      "rate": 0.5,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Mango",
+          "Speed": "75",
+          "MinDamage": "250",
+          "MaxDamage": "300",
+          "LifetimeMS": "800"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_18345",
+      "name": "Needlessly Large Spoon",
+      "source": "https://realm.wiki/item?id=18345",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        60,
+        230
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Spoon",
+          "Speed": "100",
+          "MinDamage": "60",
+          "MaxDamage": "230",
+          "LifetimeMS": "500",
+          "Size": "80",
+          "Wavy": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_56457",
+      "name": "Neo Corrosion Cutter",
+      "source": "https://realm.wiki/item?id=56457",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        250,
+        270
+      ],
+      "rate": 0.7,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Neo Queen Reskin Missile",
+          "Speed": "140",
+          "MinDamage": "250",
+          "MaxDamage": "270",
+          "LifetimeMS": "357.142857",
+          "Size": "100",
+          "MultiHit": true,
+          "ArmorPiercing": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_56458",
+      "name": "Neo Dueling Daggers",
+      "source": "https://realm.wiki/item?id=56458",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        90,
+        105
+      ],
+      "rate": 1.2,
+      "shots": 2,
+      "projectiles": [
+        {
+          "ObjectId": "Neo Cutter Reskin Missile",
+          "Speed": "140",
+          "MinDamage": "90",
+          "MaxDamage": "105",
+          "LifetimeMS": "400",
+          "Amplitude": "1.5",
+          "Frequency": "0.7",
+          "Wavy": true,
+          "PassesCover": true,
+          "Size": "120",
+          "CollisionMult": "1.5"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_25786",
+      "name": "Phantasm Dirk",
+      "source": "https://realm.wiki/item?id=25786",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        150,
+        290
+      ],
+      "rate": 0.95,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Phantasm Magic",
+          "Speed": "180",
+          "MinDamage": "150",
+          "MaxDamage": "290",
+          "LifetimeMS": "250"
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "Stat": "WIS",
+          "Amount": "6"
+        }
+      ],
+      "amulets": []
+    },
+    {
+      "id": "wiki_5357",
+      "name": "Phantom Sickle",
+      "source": "https://realm.wiki/item?id=5357",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        265,
+        345
+      ],
+      "rate": 0.45,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Colorfull Sickle",
+          "Speed": "100",
+          "MinDamage": "265",
+          "MaxDamage": "345",
+          "LifetimeMS": "400",
+          "Amplitude": "-1",
+          "Size": "100"
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Colorfull Sickle",
+          "Speed": "100",
+          "MinDamage": "265",
+          "MaxDamage": "345",
+          "LifetimeMS": "400",
+          "Amplitude": "1",
+          "Size": "100"
+        },
+        {
+          "Id": "2",
+          "ObjectId": "Colorfull Sickle",
+          "Speed": "100",
+          "MinDamage": "265",
+          "MaxDamage": "345",
+          "LifetimeMS": "400",
+          "Size": "100"
+        }
+      ],
+      "subattacks": [
+        {
+          "ProjectileId": "0",
+          "RateOfFire": ".45",
+          "patterns": [
+            {
+              "ProjectileId": "0",
+              "NumProjectiles": "1"
+            },
+            {
+              "ProjectileId": "1",
+              "NumProjectiles": "3"
+            },
+            {
+              "ProjectileId": "2",
+              "NumProjectiles": "5"
+            }
+          ]
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_14453",
+      "name": "Pirate's Sidearms",
+      "source": "https://realm.wiki/item?id=14453",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        70,
+        125
+      ],
+      "rate": 0.9,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Interregnum Large Blade",
+          "Speed": "120",
+          "MinDamage": "90",
+          "MaxDamage": "125",
+          "LifetimeMS": "400",
+          "PassesCover": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Interregnum Small Blade",
+          "Speed": "120",
+          "MinDamage": "70",
+          "MaxDamage": "100",
+          "LifetimeMS": "400",
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "0.25,0"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.1",
+          "PosOffset": "-0.25,0"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_1801",
+      "name": "Poison Fang Dagger",
+      "source": "https://realm.wiki/item?id=1801",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        75,
+        115
+      ],
+      "rate": 1.4,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Poison Fling",
+          "Speed": "140",
+          "MinDamage": "75",
+          "MaxDamage": "115",
+          "LifetimeMS": "400"
+        }
+      ],
+      "subattacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.4"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_38293",
+      "name": "Shiny Poison Fang Dagger",
+      "source": "https://realm.wiki/item?id=38293",
+      "shiny": true,
+      "baseId": "wiki_1801",
+      "damage": [
+        75,
+        115
+      ],
+      "rate": 1.4,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Poison Fling Shiny",
+          "Speed": "140",
+          "MinDamage": "75",
+          "MaxDamage": "115",
+          "LifetimeMS": "400"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_53184",
+      "name": "Poison Fang Dagger",
+      "source": "https://realm.wiki/item?id=53184",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        55,
+        120
+      ],
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Green Bolt",
+          "Speed": "140",
+          "MinDamage": "55",
+          "MaxDamage": "120",
+          "LifetimeMS": "400"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_20983",
+      "name": "Prismatic Slasher",
+      "source": "https://realm.wiki/item?id=20983",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        10,
+        10
+      ],
+      "rate": 1.6,
+      "shots": 2,
+      "projectiles": [
+        {
+          "ObjectId": "Razorlight",
+          "Speed": "100",
+          "MinDamage": "10",
+          "MaxDamage": "10",
+          "LifetimeMS": "400",
+          "Amplitude": "1.5",
+          "Frequency": "0.61",
+          "Size": "100",
+          "MultiHit": true,
+          "ArmorPiercing": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_4255",
+      "name": "Queen's Stinger",
+      "source": "https://realm.wiki/item?id=4255",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        150,
+        170
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "EH Dagger Shot",
+          "Speed": "140",
+          "MinDamage": "150",
+          "MaxDamage": "170",
+          "LifetimeMS": "357.142857",
+          "Size": "100",
+          "MultiHit": true,
+          "ArmorPiercing": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_37520",
+      "name": "Shiny Queen's Stinger",
+      "source": "https://realm.wiki/item?id=37520",
+      "shiny": true,
+      "baseId": "wiki_4255",
+      "damage": [
+        150,
+        170
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "EH Dagger Shot Shiny",
+          "Speed": "140",
+          "MinDamage": "150",
+          "MaxDamage": "170",
+          "LifetimeMS": "357.142857",
+          "Size": "100",
+          "MultiHit": true,
+          "ArmorPiercing": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_3784",
+      "name": "Reliable Pugio",
+      "source": "https://realm.wiki/item?id=3784",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        125,
+        220
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "MotMG 2024 Dagger Projectile",
+          "Speed": "140",
+          "MinDamage": "125",
+          "MaxDamage": "220",
+          "LifetimeMS": "400"
+        }
+      ],
+      "subattacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1.05",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "amulets": [
+        3756,
+        3757,
+        3758,
+        3759,
+        3760,
+        3761,
+        3762,
+        3763,
+        3764,
+        3765,
+        3766,
+        3767,
+        3768,
+        3769,
+        3770,
+        3771,
+        3772,
+        3773,
+        3774,
+        3775,
+        3776,
+        3777,
+        3778,
+        3779,
+        3804,
+        3805,
+        3806,
+        3807,
+        3808,
+        3809
+      ]
+    },
+    {
+      "id": "wiki_63867",
+      "name": "Retrowinds Dagger",
+      "source": "https://realm.wiki/item?id=63867",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        125,
+        220
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "RetroWinds Dagger Projectile",
+          "Speed": "140",
+          "MinDamage": "125",
+          "MaxDamage": "220",
+          "LifetimeMS": "400"
+        }
+      ],
+      "subattacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1.05",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_57117",
+      "name": "Rosebite Dagger",
+      "source": "https://realm.wiki/item?id=57117",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        125,
+        220
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Blooming Dagger Projectile",
+          "Speed": "140",
+          "MinDamage": "125",
+          "MaxDamage": "220",
+          "LifetimeMS": "400"
+        }
+      ],
+      "subattacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1.05",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_42095",
+      "name": "Seeker's Chisel",
+      "source": "https://realm.wiki/item?id=42095",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        125,
+        220
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Mining Dagger Proj",
+          "Speed": "140",
+          "MinDamage": "125",
+          "MaxDamage": "220",
+          "LifetimeMS": "400"
+        }
+      ],
+      "subattacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1.05",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_17868",
+      "name": "Soulcursed Scythe",
+      "source": "https://realm.wiki/item?id=17868",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        345,
+        460
+      ],
+      "rate": 0.4,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Scythe Dagger",
+          "Speed": "100",
+          "MinDamage": "345",
+          "MaxDamage": "460",
+          "LifetimeMS": "400",
+          "Size": "100"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_12068",
+      "name": "Spatula Dagger",
+      "source": "https://realm.wiki/item?id=12068",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        115,
+        200
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Spatula Projectile",
+          "Speed": "140",
+          "MinDamage": "115",
+          "MaxDamage": "200",
+          "LifetimeMS": "400"
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "Amount": "2",
+          "Stat": "VIT"
+        }
+      ],
+      "amulets": []
+    },
+    {
+      "id": "wiki_3113",
+      "name": "Spirit Dagger",
+      "source": "https://realm.wiki/item?id=3113",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        50,
+        280
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Spirit Dagger Slash",
+          "Speed": "130",
+          "MinDamage": "50",
+          "MaxDamage": "280",
+          "LifetimeMS": "400",
+          "Amplitude": "0.2",
+          "Frequency": "0.2"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_5144",
+      "name": "Shiny Spirit Dagger",
+      "source": "https://realm.wiki/item?id=5144",
+      "shiny": true,
+      "baseId": "wiki_3113",
+      "damage": [
+        50,
+        280
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Spirit Dagger Slash Shiny",
+          "Speed": "130",
+          "MinDamage": "50",
+          "MaxDamage": "280",
+          "LifetimeMS": "400",
+          "Amplitude": "0.2",
+          "Frequency": "0.2"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_3309",
+      "name": "Sunshine Shiv",
+      "source": "https://realm.wiki/item?id=3309",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        15,
+        30
+      ],
+      "rate": 0.55,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "happy magic",
+          "Speed": "30",
+          "MinDamage": "15",
+          "MaxDamage": "30",
+          "LifetimeMS": "1500"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_63902",
+      "name": "Sweettreats Dagger",
+      "source": "https://realm.wiki/item?id=63902",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        85,
+        100
+      ],
+      "rate": 1.2,
+      "shots": 2,
+      "projectiles": [
+        {
+          "ObjectId": "Sweettreats Dagger Projectile",
+          "Speed": "140",
+          "MinDamage": "85",
+          "MaxDamage": "100",
+          "LifetimeMS": "400",
+          "Amplitude": "1.5",
+          "Frequency": "0.7",
+          "Size": "80",
+          "Wavy": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_3032",
+      "name": "Symbiotic Ripper",
+      "source": "https://realm.wiki/item?id=3032",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        120,
+        170
+      ],
+      "rate": 1.25,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Parasitic Stab",
+          "Speed": "75",
+          "MinDamage": "120",
+          "MaxDamage": "170",
+          "LifetimeMS": "747"
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "Stat": "VIT",
+          "Amount": "-2"
+        }
+      ],
+      "amulets": []
+    },
+    {
+      "id": "wiki_17856",
+      "name": "The Right Hook",
+      "source": "https://realm.wiki/item?id=17856",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        0,
+        315
+      ],
+      "rate": 0.65,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Right Hook Shot",
+          "Speed": "140",
+          "MinDamage": "215",
+          "MaxDamage": "315",
+          "LifetimeMS": "435",
+          "Amplitude": "-0.75",
+          "Frequency": "0.5"
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Right Hook Shot",
+          "Speed": "0",
+          "MinDamage": "0",
+          "MaxDamage": "0",
+          "LifetimeMS": "0"
+        }
+      ],
+      "subattacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.65"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.65"
+        }
+      ],
+      "equip": [
+        {
+          "Stat": "VIT",
+          "Amount": "6"
+        }
+      ],
+      "amulets": []
+    },
+    {
+      "id": "wiki_3912",
+      "name": "Shiny The Right Hook",
+      "source": "https://realm.wiki/item?id=3912",
+      "shiny": true,
+      "baseId": "wiki_17856",
+      "damage": [
+        0,
+        315
+      ],
+      "rate": 0.65,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Right Hook Shot Shiny",
+          "Speed": "140",
+          "MinDamage": "215",
+          "MaxDamage": "315",
+          "LifetimeMS": "435",
+          "Amplitude": "-0.75",
+          "Frequency": "0.5"
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Right Hook Shot Shiny",
+          "Speed": "0",
+          "MinDamage": "0",
+          "MaxDamage": "0",
+          "LifetimeMS": "0"
+        }
+      ],
+      "subattacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.65"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.65"
+        }
+      ],
+      "equip": [
+        {
+          "Stat": "VIT",
+          "Amount": "6"
+        }
+      ],
+      "amulets": []
+    },
+    {
+      "id": "wiki_52253",
+      "name": "Throwing Knives",
+      "source": "https://realm.wiki/item?id=52253",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        140,
+        220
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Throwing Knifes Shot",
+          "Speed": "140",
+          "MinDamage": "140",
+          "MaxDamage": "220",
+          "LifetimeMS": "400"
+        }
+      ],
+      "subattacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1.05",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [
+        {
+          "Stat": "DEX",
+          "Amount": "3"
+        }
+      ],
+      "amulets": []
+    },
+    {
+      "id": "wiki_8788",
+      "name": "Toxic Toad",
+      "source": "https://realm.wiki/item?id=8788",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        60,
+        100
+      ],
+      "rate": 0.6,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Alchemist Dart Small",
+          "Speed": "130",
+          "MinDamage": "60",
+          "MaxDamage": "100",
+          "LifetimeMS": "350",
+          "MultiHit": true,
+          "ArmorPiercing": true,
+          "Size": "90"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_49160",
+      "name": "Toxin Tooth",
+      "source": "https://realm.wiki/item?id=49160",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        265,
+        320
+      ],
+      "rate": 0.7,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Acid Bubble",
+          "Speed": "100",
+          "MinDamage": "265",
+          "MaxDamage": "320",
+          "LifetimeMS": "350",
+          "Amplitude": "0",
+          "Frequency": "1",
+          "Size": "100"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_9000",
+      "name": "Toy Knife",
+      "source": "https://realm.wiki/item?id=9000",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        50,
+        50
+      ],
+      "rate": 0.8,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Toy Attack",
+          "Speed": "50",
+          "LifetimeMS": "1000",
+          "MinDamage": "50",
+          "MaxDamage": "50"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_38585",
+      "name": "Venerable Spirit Dagger",
+      "source": "https://realm.wiki/item?id=38585",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        50,
+        300
+      ],
+      "rate": 1.05,
+      "shots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Venerable Spirit Dagger Slash",
+          "Speed": "130",
+          "MinDamage": "50",
+          "MaxDamage": "300",
+          "LifetimeMS": "400",
+          "Amplitude": "0.2",
+          "Frequency": "0.2"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "amulets": []
+    },
+    {
+      "id": "wiki_41778",
+      "name": "Void Blades",
+      "source": "https://realm.wiki/item?id=41778",
+      "shiny": false,
+      "baseId": null,
+      "damage": [
+        70,
+        130
+      ],
+      "rate": 0.9,
+      "shots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Void Pink Blade",
+          "Speed": "120",
+          "MinDamage": "95",
+          "MaxDamage": "130",
+          "LifetimeMS": "400",
+          "PassesCover": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Void Purple Blade",
+          "Speed": "120",
+          "MinDamage": "70",
+          "MaxDamage": "105",
+          "LifetimeMS": "400",
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.9",
+          "PosOffset": "0.25,0"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.1",
+          "PosOffset": "-0.25,0"
+        }
+      ],
+      "equip": [
+        {
+          "Stat": "SPD",
+          "Amount": "5"
+        }
+      ],
+      "amulets": []
+    }
+  ]
+}

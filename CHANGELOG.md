@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.34.0 — 2026-10-24
+
+- Reworked every imported UT/ST dagger around inspected RotMG game-data: 66 names across 81 regular, retro and Shiny definitions. Source-backed damage/cadence, piercing, independent blade rhythms, returning blades, four-feather Judgement, Phantom Sickle fans and Fractal’s short-range inner bolts replace generic or conflicting custom recipes.
+- Chain Dagger now revs while firing while retaining its 6-stack bleed ceiling (Shiny 8). Evergreen fires a three-volley cycle with recovery and keeps its 0.8s final cooldown floor (Shiny 0.72s). Toxic Toad combines piercing darts with a shared, bounded 6-poison proc.
+- Added source-backed exposing shots, Spoon food cycles, MotMG/Syndicate pairings and Soulcursed Scythe’s cloak-triggered Lethal Strike adaptation. Removed mismatched summons, heartguard invulnerability, dungeon multipliers, room gold, wave HP farming, novelty resource bundles and guaranteed initial enchants. Existing saved enchantments/upgrades remain; all acquisition exclusions and existing ST memberships remain. Full profiles, comparisons and translation limits are in docs/dagger-identities.md.
+- Validation: JavaScript syntax and all 25 regression suites; 243 legal dagger/class/version combat trials, 660 dagger UI views and 7,166 catalogue views. All 1,995 tiered class fight records match the previous release. A 6,432-fight dagger comparison and 280-fight ST set comparison record gains, losses and limitations; slow Soulcursed/Chain trade-offs and weak novelty profiles remain playtesting watch points.
+
 ## 0.33.2 — 2026-10-24
 
 - Temporarily made all 13 explicitly labelled Legacy item versions unobtainable from loot, shops, events, transformations and Sandbox. Legacy Etherite Dagger was already unavailable; 12 additional versions join it. Legacy’s Pendant remains available because its name is not a Legacy version label.

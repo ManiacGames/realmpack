@@ -1,3 +1,7 @@
+# Dagger follow-up — 0.34.0
+
+The [researched dagger pass](dagger-identities.md) now takes precedence for every UT/ST dagger profile, including Etherite and Soulcursed Scythe. The [sword pass](sword-identities.md) remains authoritative for swords. Existing ST memberships and all non-dagger definitions are preserved. Earlier snapshot statements below describe their release at the time.
+
 # Sword follow-up — 0.33.0
 
 The [complete sword pass](sword-identities.md) now takes precedence for all 99 imported regular/retro/Shiny UT/ST sword weapon definitions. It adds source-backed profiles for the remaining swords, preserves existing ST membership and separates eight internal enchantment objects from new acquisition. Non-sword definitions, including daggers, retain their prior recipes. The sections below document preceding passes.

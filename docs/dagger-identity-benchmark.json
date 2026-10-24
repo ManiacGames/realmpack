@@ -1,0 +1,1622 @@
+{
+  "version": "0.34.0",
+  "baselineCommit": "3e30d5af6c26e953848b44e2dc0003dd77012f69",
+  "assumptions": "All 67 non-Shiny dagger definitions, including retired/retro entries; Rogue/Assassin/Trickster, eight bosses at dungeon indices 0,4,9,14,19,24,29,34; two tiered support levels at 60%/90% family maximum, magic ring T3/T6, extra native tiered dagger, 3 Health Potions, +50 base HP and full equipped HP, +8% relic recharge, seed 123456, Adventurer depth 20, 0.05s tick. Tested dagger packed first in top row; no manually added enhancements, enchantments, infused gear or paired special rings (old guaranteed initial enchants are included where part of an old recipe). Same fixtures in both versions. Fixed-build comparison, not an optimized-build or full-run economy test.",
+  "fightsPerVersion": 3216,
+  "before": [
+    {
+      "id": "wiki_9085",
+      "name": "An Icicle",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 7
+      },
+      "averageSeconds": 22.64
+    },
+    {
+      "id": "wiki_17124",
+      "name": "Archangel's Judgement",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 8,
+        "trickster": 6
+      },
+      "averageSeconds": 21.5
+    },
+    {
+      "id": "wiki_7321",
+      "name": "Ashen Talon",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.24
+    },
+    {
+      "id": "wiki_17709",
+      "name": "Aspirant's Dagger",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.31
+    },
+    {
+      "id": "wiki_28829",
+      "name": "Avarice",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.5
+    },
+    {
+      "id": "wiki_22506",
+      "name": "Blade of Fates",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 7,
+        "trickster": 6
+      },
+      "averageSeconds": 21.83
+    },
+    {
+      "id": "wiki_42280",
+      "name": "Blood Coated Dirk",
+      "fights": 48,
+      "wins": 24,
+      "byClass": {
+        "rogue": 8,
+        "assassin": 10,
+        "trickster": 6
+      },
+      "averageSeconds": 21.72
+    },
+    {
+      "id": "wiki_3106",
+      "name": "Bone Dagger",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "rogue": 5,
+        "assassin": 8,
+        "trickster": 6
+      },
+      "averageSeconds": 21.83
+    },
+    {
+      "id": "wiki_53801",
+      "name": "Boomerang Blades",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 7,
+        "trickster": 6
+      },
+      "averageSeconds": 21.52
+    },
+    {
+      "id": "wiki_26098",
+      "name": "Bounty Hunter's Dagger",
+      "fights": 48,
+      "wins": 14,
+      "byClass": {
+        "rogue": 4,
+        "assassin": 6,
+        "trickster": 4
+      },
+      "averageSeconds": 23.01
+    },
+    {
+      "id": "wiki_600",
+      "name": "Carved Golem Remains",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.31
+    },
+    {
+      "id": "wiki_49695",
+      "name": "Chain Dagger",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "rogue": 8,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.14
+    },
+    {
+      "id": "wiki_2849",
+      "name": "Chicken Leg of Doom",
+      "fights": 48,
+      "wins": 8,
+      "byClass": {
+        "rogue": 2,
+        "assassin": 5,
+        "trickster": 1
+      },
+      "averageSeconds": 25.36
+    },
+    {
+      "id": "wiki_25697",
+      "name": "Corrosion Cutter",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.27
+    },
+    {
+      "id": "wiki_1408",
+      "name": "Corruption Cutter",
+      "fights": 48,
+      "wins": 16,
+      "byClass": {
+        "rogue": 5,
+        "assassin": 6,
+        "trickster": 5
+      },
+      "averageSeconds": 22.98
+    },
+    {
+      "id": "wiki_2006",
+      "name": "Crescent Dagger",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.31
+    },
+    {
+      "id": "wiki_14491",
+      "name": "Dagger of Eternal Chaos",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.13
+    },
+    {
+      "id": "wiki_9002",
+      "name": "Dagger of the Amethyst Prism",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 8,
+        "trickster": 6
+      },
+      "averageSeconds": 21.5
+    },
+    {
+      "id": "wiki_2201",
+      "name": "Dagger of the Hasteful Rabbit",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.49
+    },
+    {
+      "id": "wiki_3857",
+      "name": "Dagger of the Terrible Talon",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.46
+    },
+    {
+      "id": "wiki_3082",
+      "name": "Dirk of Cronus",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 8,
+        "trickster": 6
+      },
+      "averageSeconds": 21.28
+    },
+    {
+      "id": "wiki_28459",
+      "name": "Dual Pops",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.31
+    },
+    {
+      "id": "wiki_25698",
+      "name": "Dueling Daggers",
+      "fights": 48,
+      "wins": 16,
+      "byClass": {
+        "rogue": 5,
+        "assassin": 6,
+        "trickster": 5
+      },
+      "averageSeconds": 22.61
+    },
+    {
+      "id": "wiki_10064",
+      "name": "Etherite Dagger",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.49
+    },
+    {
+      "id": "wiki_12160",
+      "name": "Evergreen Dagger",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 8,
+        "assassin": 8,
+        "trickster": 6
+      },
+      "averageSeconds": 20.68
+    },
+    {
+      "id": "wiki_17560",
+      "name": "Fractal Blades",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 7,
+        "trickster": 6
+      },
+      "averageSeconds": 21.86
+    },
+    {
+      "id": "wiki_6859",
+      "name": "Frost Lich's Finger",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "rogue": 9,
+        "assassin": 11,
+        "trickster": 8
+      },
+      "averageSeconds": 24.13
+    },
+    {
+      "id": "wiki_26193",
+      "name": "Frostbite Blades",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "rogue": 9,
+        "assassin": 11,
+        "trickster": 8
+      },
+      "averageSeconds": 24.13
+    },
+    {
+      "id": "wiki_37679",
+      "name": "Groovy Mango",
+      "fights": 48,
+      "wins": 16,
+      "byClass": {
+        "rogue": 5,
+        "assassin": 6,
+        "trickster": 5
+      },
+      "averageSeconds": 22.59
+    },
+    {
+      "id": "wiki_1458",
+      "name": "Hatchling Blades",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 7,
+        "trickster": 6
+      },
+      "averageSeconds": 21.52
+    },
+    {
+      "id": "wiki_26745",
+      "name": "Heart Jewel Blades",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 8,
+        "trickster": 6
+      },
+      "averageSeconds": 22.14
+    },
+    {
+      "id": "wiki_8845",
+      "name": "Heartfind Dagger",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 8,
+        "trickster": 6
+      },
+      "averageSeconds": 22.14
+    },
+    {
+      "id": "wiki_24971",
+      "name": "Hero's Blades",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.31
+    },
+    {
+      "id": "wiki_24965",
+      "name": "Hero's Dagger",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.31
+    },
+    {
+      "id": "wiki_8608",
+      "name": "Legacy Etherite Dagger",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.31
+    },
+    {
+      "id": "wiki_41811",
+      "name": "Legion Elite Dagger",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 7
+      },
+      "averageSeconds": 21.21
+    },
+    {
+      "id": "wiki_25731",
+      "name": "Maize Machete",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.31
+    },
+    {
+      "id": "wiki_41740",
+      "name": "Marionette Ravager",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "rogue": 8,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 20.24
+    },
+    {
+      "id": "wiki_20766",
+      "name": "Mischief",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 10,
+        "trickster": 6
+      },
+      "averageSeconds": 20.79
+    },
+    {
+      "id": "wiki_1396",
+      "name": "Mister Mango",
+      "fights": 48,
+      "wins": 17,
+      "byClass": {
+        "rogue": 5,
+        "assassin": 6,
+        "trickster": 6
+      },
+      "averageSeconds": 22.15
+    },
+    {
+      "id": "wiki_18345",
+      "name": "Needlessly Large Spoon",
+      "fights": 48,
+      "wins": 24,
+      "byClass": {
+        "rogue": 9,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.98
+    },
+    {
+      "id": "wiki_56457",
+      "name": "Neo Corrosion Cutter",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.22
+    },
+    {
+      "id": "wiki_56458",
+      "name": "Neo Dueling Daggers",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 7,
+        "trickster": 6
+      },
+      "averageSeconds": 21.78
+    },
+    {
+      "id": "wiki_25786",
+      "name": "Phantasm Dirk",
+      "fights": 48,
+      "wins": 24,
+      "byClass": {
+        "rogue": 10,
+        "assassin": 8,
+        "trickster": 6
+      },
+      "averageSeconds": 21.79
+    },
+    {
+      "id": "wiki_5357",
+      "name": "Phantom Sickle",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 7,
+        "trickster": 6
+      },
+      "averageSeconds": 20.99
+    },
+    {
+      "id": "wiki_14453",
+      "name": "Pirate's Sidearms",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 8,
+        "trickster": 6
+      },
+      "averageSeconds": 21.5
+    },
+    {
+      "id": "wiki_1801",
+      "name": "Poison Fang Dagger",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.27
+    },
+    {
+      "id": "wiki_53184",
+      "name": "Poison Fang Dagger",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.27
+    },
+    {
+      "id": "wiki_20983",
+      "name": "Prismatic Slasher",
+      "fights": 48,
+      "wins": 15,
+      "byClass": {
+        "rogue": 5,
+        "assassin": 6,
+        "trickster": 4
+      },
+      "averageSeconds": 23.1
+    },
+    {
+      "id": "wiki_4255",
+      "name": "Queen's Stinger",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.24
+    },
+    {
+      "id": "wiki_3784",
+      "name": "Reliable Pugio",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.31
+    },
+    {
+      "id": "wiki_63867",
+      "name": "Retrowinds Dagger",
+      "fights": 48,
+      "wins": 24,
+      "byClass": {
+        "rogue": 8,
+        "assassin": 10,
+        "trickster": 6
+      },
+      "averageSeconds": 21.72
+    },
+    {
+      "id": "wiki_57117",
+      "name": "Rosebite Dagger",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.31
+    },
+    {
+      "id": "wiki_42095",
+      "name": "Seeker's Chisel",
+      "fights": 48,
+      "wins": 24,
+      "byClass": {
+        "rogue": 8,
+        "assassin": 10,
+        "trickster": 6
+      },
+      "averageSeconds": 21.72
+    },
+    {
+      "id": "wiki_17868",
+      "name": "Soulcursed Scythe",
+      "fights": 48,
+      "wins": 24,
+      "byClass": {
+        "rogue": 8,
+        "assassin": 10,
+        "trickster": 6
+      },
+      "averageSeconds": 21.72
+    },
+    {
+      "id": "wiki_12068",
+      "name": "Spatula Dagger",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 8,
+        "trickster": 6
+      },
+      "averageSeconds": 21.72
+    },
+    {
+      "id": "wiki_3113",
+      "name": "Spirit Dagger",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.31
+    },
+    {
+      "id": "wiki_3309",
+      "name": "Sunshine Shiv",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.31
+    },
+    {
+      "id": "wiki_63902",
+      "name": "Sweettreats Dagger",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 8,
+        "trickster": 5
+      },
+      "averageSeconds": 24.32
+    },
+    {
+      "id": "wiki_3032",
+      "name": "Symbiotic Ripper",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.4
+    },
+    {
+      "id": "wiki_17856",
+      "name": "The Right Hook",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 8,
+        "trickster": 6
+      },
+      "averageSeconds": 21.5
+    },
+    {
+      "id": "wiki_52253",
+      "name": "Throwing Knives",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.49
+    },
+    {
+      "id": "wiki_8788",
+      "name": "Toxic Toad",
+      "fights": 48,
+      "wins": 17,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 5,
+        "trickster": 6
+      },
+      "averageSeconds": 21.74
+    },
+    {
+      "id": "wiki_49160",
+      "name": "Toxin Tooth",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "rogue": 5,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.88
+    },
+    {
+      "id": "wiki_9000",
+      "name": "Toy Knife",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "rogue": 5,
+        "assassin": 10,
+        "trickster": 4
+      },
+      "averageSeconds": 28.78
+    },
+    {
+      "id": "wiki_38585",
+      "name": "Venerable Spirit Dagger",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.31
+    },
+    {
+      "id": "wiki_41778",
+      "name": "Void Blades",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.31
+    }
+  ],
+  "after": [
+    {
+      "id": "wiki_9085",
+      "name": "An Icicle",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 8,
+        "trickster": 6
+      },
+      "averageSeconds": 21.5
+    },
+    {
+      "id": "wiki_17124",
+      "name": "Archangel's Judgement",
+      "fights": 48,
+      "wins": 24,
+      "byClass": {
+        "rogue": 8,
+        "assassin": 10,
+        "trickster": 6
+      },
+      "averageSeconds": 19.14
+    },
+    {
+      "id": "wiki_7321",
+      "name": "Ashen Talon",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.3
+    },
+    {
+      "id": "wiki_17709",
+      "name": "Aspirant's Dagger",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.36
+    },
+    {
+      "id": "wiki_28829",
+      "name": "Avarice",
+      "fights": 48,
+      "wins": 25,
+      "byClass": {
+        "rogue": 9,
+        "assassin": 10,
+        "trickster": 6
+      },
+      "averageSeconds": 19.79
+    },
+    {
+      "id": "wiki_22506",
+      "name": "Blade of Fates",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 19.42
+    },
+    {
+      "id": "wiki_42280",
+      "name": "Blood Coated Dirk",
+      "fights": 48,
+      "wins": 25,
+      "byClass": {
+        "rogue": 10,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 19.18
+    },
+    {
+      "id": "wiki_3106",
+      "name": "Bone Dagger",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 8,
+        "trickster": 6
+      },
+      "averageSeconds": 21.65
+    },
+    {
+      "id": "wiki_53801",
+      "name": "Boomerang Blades",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.44
+    },
+    {
+      "id": "wiki_26098",
+      "name": "Bounty Hunter's Dagger",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 8,
+        "trickster": 6
+      },
+      "averageSeconds": 19.93
+    },
+    {
+      "id": "wiki_600",
+      "name": "Carved Golem Remains",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.17
+    },
+    {
+      "id": "wiki_49695",
+      "name": "Chain Dagger",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 8,
+        "trickster": 6
+      },
+      "averageSeconds": 21.48
+    },
+    {
+      "id": "wiki_2849",
+      "name": "Chicken Leg of Doom",
+      "fights": 48,
+      "wins": 15,
+      "byClass": {
+        "rogue": 5,
+        "assassin": 6,
+        "trickster": 4
+      },
+      "averageSeconds": 23.26
+    },
+    {
+      "id": "wiki_25697",
+      "name": "Corrosion Cutter",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.3
+    },
+    {
+      "id": "wiki_1408",
+      "name": "Corruption Cutter",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "rogue": 8,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 19.6
+    },
+    {
+      "id": "wiki_2006",
+      "name": "Crescent Dagger",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.17
+    },
+    {
+      "id": "wiki_14491",
+      "name": "Dagger of Eternal Chaos",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.17
+    },
+    {
+      "id": "wiki_9002",
+      "name": "Dagger of the Amethyst Prism",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.31
+    },
+    {
+      "id": "wiki_2201",
+      "name": "Dagger of the Hasteful Rabbit",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.31
+    },
+    {
+      "id": "wiki_3857",
+      "name": "Dagger of the Terrible Talon",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 8,
+        "trickster": 6
+      },
+      "averageSeconds": 21.5
+    },
+    {
+      "id": "wiki_3082",
+      "name": "Dirk of Cronus",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 10,
+        "trickster": 6
+      },
+      "averageSeconds": 20.02
+    },
+    {
+      "id": "wiki_28459",
+      "name": "Dual Pops",
+      "fights": 48,
+      "wins": 25,
+      "byClass": {
+        "rogue": 9,
+        "assassin": 9,
+        "trickster": 7
+      },
+      "averageSeconds": 19.37
+    },
+    {
+      "id": "wiki_25698",
+      "name": "Dueling Daggers",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "rogue": 8,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 19.6
+    },
+    {
+      "id": "wiki_10064",
+      "name": "Etherite Dagger",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 20.91
+    },
+    {
+      "id": "wiki_12160",
+      "name": "Evergreen Dagger",
+      "fights": 48,
+      "wins": 26,
+      "byClass": {
+        "rogue": 9,
+        "assassin": 10,
+        "trickster": 7
+      },
+      "averageSeconds": 18.86
+    },
+    {
+      "id": "wiki_17560",
+      "name": "Fractal Blades",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "rogue": 10,
+        "assassin": 10,
+        "trickster": 8
+      },
+      "averageSeconds": 17.46
+    },
+    {
+      "id": "wiki_6859",
+      "name": "Frost Lich's Finger",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.31
+    },
+    {
+      "id": "wiki_26193",
+      "name": "Frostbite Blades",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 7
+      },
+      "averageSeconds": 20.73
+    },
+    {
+      "id": "wiki_37679",
+      "name": "Groovy Mango",
+      "fights": 48,
+      "wins": 24,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 10,
+        "trickster": 7
+      },
+      "averageSeconds": 19.75
+    },
+    {
+      "id": "wiki_1458",
+      "name": "Hatchling Blades",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.44
+    },
+    {
+      "id": "wiki_26745",
+      "name": "Heart Jewel Blades",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.28
+    },
+    {
+      "id": "wiki_8845",
+      "name": "Heartfind Dagger",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 8,
+        "trickster": 6
+      },
+      "averageSeconds": 21.5
+    },
+    {
+      "id": "wiki_24971",
+      "name": "Hero's Blades",
+      "fights": 48,
+      "wins": 24,
+      "byClass": {
+        "rogue": 8,
+        "assassin": 10,
+        "trickster": 6
+      },
+      "averageSeconds": 20.41
+    },
+    {
+      "id": "wiki_24965",
+      "name": "Hero's Dagger",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.17
+    },
+    {
+      "id": "wiki_8608",
+      "name": "Legacy Etherite Dagger",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 7
+      },
+      "averageSeconds": 20.77
+    },
+    {
+      "id": "wiki_41811",
+      "name": "Legion Elite Dagger",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.17
+    },
+    {
+      "id": "wiki_25731",
+      "name": "Maize Machete",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.17
+    },
+    {
+      "id": "wiki_41740",
+      "name": "Marionette Ravager",
+      "fights": 48,
+      "wins": 25,
+      "byClass": {
+        "rogue": 10,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 19.18
+    },
+    {
+      "id": "wiki_20766",
+      "name": "Mischief",
+      "fights": 48,
+      "wins": 25,
+      "byClass": {
+        "rogue": 8,
+        "assassin": 10,
+        "trickster": 7
+      },
+      "averageSeconds": 19.75
+    },
+    {
+      "id": "wiki_1396",
+      "name": "Mister Mango",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 6,
+        "trickster": 6
+      },
+      "averageSeconds": 22.41
+    },
+    {
+      "id": "wiki_18345",
+      "name": "Needlessly Large Spoon",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 8,
+        "trickster": 6
+      },
+      "averageSeconds": 22.16
+    },
+    {
+      "id": "wiki_56457",
+      "name": "Neo Corrosion Cutter",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 20.82
+    },
+    {
+      "id": "wiki_56458",
+      "name": "Neo Dueling Daggers",
+      "fights": 48,
+      "wins": 25,
+      "byClass": {
+        "rogue": 9,
+        "assassin": 10,
+        "trickster": 6
+      },
+      "averageSeconds": 19.29
+    },
+    {
+      "id": "wiki_25786",
+      "name": "Phantasm Dirk",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 10,
+        "trickster": 6
+      },
+      "averageSeconds": 20.02
+    },
+    {
+      "id": "wiki_5357",
+      "name": "Phantom Sickle",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.98
+    },
+    {
+      "id": "wiki_14453",
+      "name": "Pirate's Sidearms",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 7
+      },
+      "averageSeconds": 20.73
+    },
+    {
+      "id": "wiki_1801",
+      "name": "Poison Fang Dagger",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "rogue": 5,
+        "assassin": 8,
+        "trickster": 6
+      },
+      "averageSeconds": 21.96
+    },
+    {
+      "id": "wiki_53184",
+      "name": "Poison Fang Dagger",
+      "fights": 48,
+      "wins": 16,
+      "byClass": {
+        "rogue": 5,
+        "assassin": 6,
+        "trickster": 5
+      },
+      "averageSeconds": 23.16
+    },
+    {
+      "id": "wiki_20983",
+      "name": "Prismatic Slasher",
+      "fights": 48,
+      "wins": 12,
+      "byClass": {
+        "rogue": 4,
+        "assassin": 6,
+        "trickster": 2
+      },
+      "averageSeconds": 24.24
+    },
+    {
+      "id": "wiki_4255",
+      "name": "Queen's Stinger",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.3
+    },
+    {
+      "id": "wiki_3784",
+      "name": "Reliable Pugio",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.17
+    },
+    {
+      "id": "wiki_63867",
+      "name": "Retrowinds Dagger",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.17
+    },
+    {
+      "id": "wiki_57117",
+      "name": "Rosebite Dagger",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.17
+    },
+    {
+      "id": "wiki_42095",
+      "name": "Seeker's Chisel",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.17
+    },
+    {
+      "id": "wiki_17868",
+      "name": "Soulcursed Scythe",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 7,
+        "trickster": 6
+      },
+      "averageSeconds": 21.61
+    },
+    {
+      "id": "wiki_12068",
+      "name": "Spatula Dagger",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "rogue": 8,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.79
+    },
+    {
+      "id": "wiki_3113",
+      "name": "Spirit Dagger",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.17
+    },
+    {
+      "id": "wiki_3309",
+      "name": "Sunshine Shiv",
+      "fights": 48,
+      "wins": 7,
+      "byClass": {
+        "rogue": 2,
+        "assassin": 4,
+        "trickster": 1
+      },
+      "averageSeconds": 25.5
+    },
+    {
+      "id": "wiki_63902",
+      "name": "Sweettreats Dagger",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "rogue": 8,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 19.6
+    },
+    {
+      "id": "wiki_3032",
+      "name": "Symbiotic Ripper",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "rogue": 6,
+        "assassin": 7,
+        "trickster": 5
+      },
+      "averageSeconds": 20.24
+    },
+    {
+      "id": "wiki_17856",
+      "name": "The Right Hook",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 21.54
+    },
+    {
+      "id": "wiki_52253",
+      "name": "Throwing Knives",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 20.39
+    },
+    {
+      "id": "wiki_8788",
+      "name": "Toxic Toad",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 6,
+        "trickster": 6
+      },
+      "averageSeconds": 21.62
+    },
+    {
+      "id": "wiki_49160",
+      "name": "Toxin Tooth",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 9,
+        "trickster": 6
+      },
+      "averageSeconds": 20.26
+    },
+    {
+      "id": "wiki_9000",
+      "name": "Toy Knife",
+      "fights": 48,
+      "wins": 11,
+      "byClass": {
+        "rogue": 4,
+        "assassin": 5,
+        "trickster": 2
+      },
+      "averageSeconds": 24.67
+    },
+    {
+      "id": "wiki_38585",
+      "name": "Venerable Spirit Dagger",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "rogue": 7,
+        "assassin": 10,
+        "trickster": 6
+      },
+      "averageSeconds": 20.79
+    },
+    {
+      "id": "wiki_41778",
+      "name": "Void Blades",
+      "fights": 48,
+      "wins": 24,
+      "byClass": {
+        "rogue": 8,
+        "assassin": 10,
+        "trickster": 6
+      },
+      "averageSeconds": 20.41
+    }
+  ],
+  "totalWins": {
+    "before": 1396,
+    "after": 1423
+  }
+}

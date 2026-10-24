@@ -1,0 +1,33 @@
+{
+  "version": "0.34.0",
+  "assumptions": "Adventurer, depth 20, all 35 bosses; native tiered gear at 60% and 90% family max, extra native weapon, 3 Health Potions, +50 base HP and full equipped HP, beneficial weapon-adjacent placement for Crown/Hide/Toga when legal, +8% blessing recharge, seed 123456, 0.05s tick. One changed slot or a complete named set; no infused/enhanced gear. Legal packs required. This is a fixed-build comparison, not a full-run economy or optimized build search.",
+  "before": [
+    {
+      "item": "Vampire Rogue set",
+      "fights": 70,
+      "wins": 51,
+      "averageSeconds": 27.08
+    },
+    {
+      "item": "Skuld set",
+      "fights": 70,
+      "wins": 38,
+      "averageSeconds": 24.61
+    }
+  ],
+  "after": [
+    {
+      "item": "Vampire Rogue set",
+      "fights": 70,
+      "wins": 48,
+      "averageSeconds": 26.71
+    },
+    {
+      "item": "Skuld set",
+      "fights": 70,
+      "wins": 40,
+      "averageSeconds": 23.73
+    }
+  ],
+  "changedFights": 139
+}
