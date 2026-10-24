@@ -1,5 +1,10 @@
 # RealmPack changelog
 
+## 0.38.1 — 2026-10-24
+
+- Clarified Amulet of Desecration: its curse affects the player, prevents healing for the rest of combat and provides no stat bonuses. Simplified its description and active status.
+- Validation: JavaScript syntax, ring mechanics, stack/adjacency behavior and shop inspection checks.
+
 ## 0.38.0 — 2026-10-24
 
 - Reworked all 314 UT/ST ring variants around their RotMG stats, conditional effects, companions and equipment synergies.
