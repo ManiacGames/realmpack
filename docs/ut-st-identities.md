@@ -147,3 +147,7 @@ Individual ST adaptations include Etherite's rapid cadence, Ghastly Drape's nova
 `node game/tests/test-ut-st-identities.cjs` checks profile coverage, Shiny inheritance, shot budgets, positioning, beams, travel/waves, silence/cleanse, plane shift, armor expiry/retaliation, shared immunity lock, Hex, regeneration/fatigue, all six legal four-piece layouts, threshold/duplicate/stash/Legacy rules, set inspection and proc limits. Eighteen additional simulations run all six complete sets through actual boss combat across three dungeon tiers, with native class procs enabled. The existing regression suite remains required.
 
 The unchanged class benchmark (`node scripts/benchmark-balance.cjs`) was run before and after the identity layer, using the same legal tiered builds and actual game tick. All 1,995 fight records were identical. This verifies that ordinary tier/class outcomes were preserved in that fixture; it does not establish parity across UT/ST combinations. Signature budgets deliberately redistribute damage, timing, resources and utility rather than stacking unrestricted benefits on the old generic premium.
+
+## Complete staff pass — 0.35.0
+
+All 98 UT/ST staff entries now use [source-backed staff profiles](staff-identities.md), including mixed projectile rates/piercing, slow-start delivery, burst recovery, Esben manifestation and Vigor Festival Spirit. These profiles supersede the staff recipes listed earlier in this document. Existing Hollow King and Phylactery memberships and designated full-set ability procs remain.

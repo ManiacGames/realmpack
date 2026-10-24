@@ -1,0 +1,1959 @@
+{
+  "version": "0.35.0",
+  "baselineCommit": "b90209d1bd1582bb33fff06c167a258e8e8da50e",
+  "assumptions": "All 81 non-Shiny staff definitions, including historical duplicates and unavailable Legacy versions; Wizard/Necromancer/Mystic, eight bosses at dungeon indices 0,4,9,14,19,24,29,34; two tiered support levels at 60%/90% family maximum, magic ring T3/T6, extra native tiered staff, 3 Health Potions, +50 base HP and full equipped HP, +8% relic recharge, seed 123456, Adventurer depth 20, 0.05s tick. Tested staff packed first in top row; no enhancements, enchantments, infused gear or paired special rings. Same fixtures in both versions. Fixed-build comparison, not an optimized-build or full-run economy test.",
+  "fightsPerVersion": 3888,
+  "before": [
+    {
+      "id": "wiki_3108",
+      "name": "Anatis Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_17710",
+      "name": "Aspirant's Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_8998",
+      "name": "Barely Attuned Magic Thingy",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_28458",
+      "name": "Beach Shovel",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_42302",
+      "name": "Bloody Pitch Fork Staff",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "wizard": 7,
+        "necromancer": 10,
+        "mystic": 6
+      },
+      "averageSeconds": 15.55
+    },
+    {
+      "id": "wiki_7319",
+      "name": "Bloom-Fire Scepter",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 4
+      },
+      "averageSeconds": 15.22
+    },
+    {
+      "id": "wiki_57113",
+      "name": "Blooming Bouquet Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_16929",
+      "name": "Bogwood Crook",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_1459",
+      "name": "Caramel Spellblade",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_25690",
+      "name": "Comet of Calamity",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_8691",
+      "name": "Corruption Tether",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_55383",
+      "name": "Crystallized Worm Spellblade",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_1907",
+      "name": "Cursed Harpoon",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_3786",
+      "name": "Deathmask Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_52256",
+      "name": "Dreamcaster",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_2524",
+      "name": "Edictum Praetoris",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 7,
+        "mystic": 5
+      },
+      "averageSeconds": 15.65
+    },
+    {
+      "id": "wiki_41749",
+      "name": "Elder Heartwood Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_42093",
+      "name": "Explorer's Shovel",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_38943",
+      "name": "Ferryman's Scythe",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_38944",
+      "name": "Ferryman's Scythe",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_25688",
+      "name": "Foramite Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_42356",
+      "name": "Frostfall Rod",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "wizard": 8,
+        "necromancer": 9,
+        "mystic": 6
+      },
+      "averageSeconds": 16.67
+    },
+    {
+      "id": "wiki_6860",
+      "name": "Frosty's Walking Stick",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "wizard": 8,
+        "necromancer": 9,
+        "mystic": 6
+      },
+      "averageSeconds": 16.67
+    },
+    {
+      "id": "wiki_7329",
+      "name": "Gloves of Love",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_32484",
+      "name": "Gravekeeper's Scythe",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_24973",
+      "name": "Hero's Spellblade",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_24967",
+      "name": "Hero's Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_53818",
+      "name": "Hovering Spellblade",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_23794",
+      "name": "Jailer's Scythe",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_1394",
+      "name": "K.I.D.D. Force",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_37677",
+      "name": "K.I.D.D. Force 2.0",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_3306",
+      "name": "KoalaPOW",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_8615",
+      "name": "Legacy Sentient Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_41816",
+      "name": "Legion Elite Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_26747",
+      "name": "Love Heart Spellblade",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_49469",
+      "name": "Mechanical Kogbold Limb",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 4
+      },
+      "averageSeconds": 15.91
+    },
+    {
+      "id": "wiki_43381",
+      "name": "Monochrome Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_22521",
+      "name": "Nebular Rod",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_56452",
+      "name": "Neo Comet of Calamity",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_56451",
+      "name": "Neo Foramite Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_26099",
+      "name": "Oppressor's Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_63869",
+      "name": "Retrowinds Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_50817",
+      "name": "Rocket Launcher",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_14449",
+      "name": "Royal Sekhem",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_15758",
+      "name": "S.T.A.F.F.",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 4
+      },
+      "averageSeconds": 15.28
+    },
+    {
+      "id": "wiki_12069",
+      "name": "Screwdriver Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_8784",
+      "name": "Shaman's Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_12161",
+      "name": "Sleigh Bell Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_41654",
+      "name": "Snow Branch",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "wizard": 8,
+        "necromancer": 9,
+        "mystic": 6
+      },
+      "averageSeconds": 16.67
+    },
+    {
+      "id": "wiki_26224",
+      "name": "Snowblind Spellblade",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "wizard": 8,
+        "necromancer": 9,
+        "mystic": 6
+      },
+      "averageSeconds": 16.67
+    },
+    {
+      "id": "wiki_41781",
+      "name": "Spellblade of the Void",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_2112",
+      "name": "Spirit Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_7354",
+      "name": "Spring Rose",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_16963",
+      "name": "Squaroid Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_8843",
+      "name": "Staff of Adoration",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_19266",
+      "name": "Staff of Eruption",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_5271",
+      "name": "Staff of Esben",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_1894",
+      "name": "Staff of Esben Legacy",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_3075",
+      "name": "Staff of Extreme Prejudice",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_53186",
+      "name": "Staff of Extreme Prejudice",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_3859",
+      "name": "Staff of Horrific Knowledge",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_5847",
+      "name": "Staff of Iceblast",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "wizard": 8,
+        "necromancer": 9,
+        "mystic": 6
+      },
+      "averageSeconds": 16.67
+    },
+    {
+      "id": "wiki_65056",
+      "name": "Staff of Rich History",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_14493",
+      "name": "Staff of Silver Wings",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_3093",
+      "name": "Staff of the Crystal Serpent",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.38
+    },
+    {
+      "id": "wiki_2008",
+      "name": "Staff of the Eclipse",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_8857",
+      "name": "Staff of the Rising Sun",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_20977",
+      "name": "Staff of the Saint",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_580",
+      "name": "Staff of Unholy Sacrifice",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "wizard": 8,
+        "necromancer": 9,
+        "mystic": 6
+      },
+      "averageSeconds": 16.67
+    },
+    {
+      "id": "wiki_9086",
+      "name": "Staff of Yuletide Carols",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_17501",
+      "name": "Steam Pipe",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_25751",
+      "name": "Stygian Torch",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_28839",
+      "name": "Superior",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 4
+      },
+      "averageSeconds": 15.22
+    },
+    {
+      "id": "wiki_25759",
+      "name": "Supernatural Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_63772",
+      "name": "Sweettreats Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_13986",
+      "name": "Tezcacoatl's Tail",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_9059",
+      "name": "The Phylactery",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 5
+      },
+      "averageSeconds": 15.48
+    },
+    {
+      "id": "wiki_20302",
+      "name": "Tideturner Trident",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_20903",
+      "name": "Torrential Staff",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_38584",
+      "name": "Venerable Staff of the Crystal Serpent",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    },
+    {
+      "id": "wiki_20746",
+      "name": "Vigor",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.06
+    }
+  ],
+  "after": [
+    {
+      "id": "wiki_3108",
+      "name": "Anatis Staff",
+      "fights": 48,
+      "wins": 11,
+      "byClass": {
+        "wizard": 4,
+        "necromancer": 5,
+        "mystic": 2
+      },
+      "averageSeconds": 18.13
+    },
+    {
+      "id": "wiki_17710",
+      "name": "Aspirant's Staff",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 4
+      },
+      "averageSeconds": 15.29
+    },
+    {
+      "id": "wiki_8998",
+      "name": "Barely Attuned Magic Thingy",
+      "fights": 48,
+      "wins": 11,
+      "byClass": {
+        "wizard": 4,
+        "necromancer": 5,
+        "mystic": 2
+      },
+      "averageSeconds": 17.91
+    },
+    {
+      "id": "wiki_28458",
+      "name": "Beach Shovel",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 14.54
+    },
+    {
+      "id": "wiki_42302",
+      "name": "Bloody Pitch Fork Staff",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 5
+      },
+      "averageSeconds": 15.26
+    },
+    {
+      "id": "wiki_7319",
+      "name": "Bloom-Fire Scepter",
+      "fights": 48,
+      "wins": 24,
+      "byClass": {
+        "wizard": 8,
+        "necromancer": 10,
+        "mystic": 6
+      },
+      "averageSeconds": 14.69
+    },
+    {
+      "id": "wiki_57113",
+      "name": "Blooming Bouquet Staff",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 4
+      },
+      "averageSeconds": 15.22
+    },
+    {
+      "id": "wiki_16929",
+      "name": "Bogwood Crook",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 14.68
+    },
+    {
+      "id": "wiki_1459",
+      "name": "Caramel Spellblade",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 4
+      },
+      "averageSeconds": 15.44
+    },
+    {
+      "id": "wiki_25690",
+      "name": "Comet of Calamity",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 16.22
+    },
+    {
+      "id": "wiki_8691",
+      "name": "Corruption Tether",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 4
+      },
+      "averageSeconds": 15.29
+    },
+    {
+      "id": "wiki_55383",
+      "name": "Crystallized Worm Spellblade",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "wizard": 7,
+        "necromancer": 9,
+        "mystic": 6
+      },
+      "averageSeconds": 14.67
+    },
+    {
+      "id": "wiki_1907",
+      "name": "Cursed Harpoon",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 5
+      },
+      "averageSeconds": 14.8
+    },
+    {
+      "id": "wiki_3786",
+      "name": "Deathmask Staff",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 4
+      },
+      "averageSeconds": 15.22
+    },
+    {
+      "id": "wiki_52256",
+      "name": "Dreamcaster",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 14.46
+    },
+    {
+      "id": "wiki_2524",
+      "name": "Edictum Praetoris",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 5
+      },
+      "averageSeconds": 15.36
+    },
+    {
+      "id": "wiki_41749",
+      "name": "Elder Heartwood Staff",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "wizard": 8,
+        "necromancer": 9,
+        "mystic": 6
+      },
+      "averageSeconds": 13.77
+    },
+    {
+      "id": "wiki_42093",
+      "name": "Explorer's Shovel",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 4
+      },
+      "averageSeconds": 15.22
+    },
+    {
+      "id": "wiki_38943",
+      "name": "Ferryman's Scythe",
+      "fights": 48,
+      "wins": 26,
+      "byClass": {
+        "wizard": 8,
+        "necromancer": 10,
+        "mystic": 8
+      },
+      "averageSeconds": 13.12
+    },
+    {
+      "id": "wiki_38944",
+      "name": "Ferryman's Scythe",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 7,
+        "necromancer": 9,
+        "mystic": 5
+      },
+      "averageSeconds": 13.8
+    },
+    {
+      "id": "wiki_25688",
+      "name": "Foramite Staff",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.46
+    },
+    {
+      "id": "wiki_42356",
+      "name": "Frostfall Rod",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "wizard": 8,
+        "necromancer": 9,
+        "mystic": 6
+      },
+      "averageSeconds": 13.5
+    },
+    {
+      "id": "wiki_6860",
+      "name": "Frosty's Walking Stick",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.62
+    },
+    {
+      "id": "wiki_7329",
+      "name": "Gloves of Love",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 5
+      },
+      "averageSeconds": 15.27
+    },
+    {
+      "id": "wiki_32484",
+      "name": "Gravekeeper's Scythe",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 5
+      },
+      "averageSeconds": 15.36
+    },
+    {
+      "id": "wiki_24973",
+      "name": "Hero's Spellblade",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.62
+    },
+    {
+      "id": "wiki_24967",
+      "name": "Hero's Staff",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 4
+      },
+      "averageSeconds": 15.22
+    },
+    {
+      "id": "wiki_53818",
+      "name": "Hovering Spellblade",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.68
+    },
+    {
+      "id": "wiki_23794",
+      "name": "Jailer's Scythe",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 6
+      },
+      "averageSeconds": 14.95
+    },
+    {
+      "id": "wiki_1394",
+      "name": "K.I.D.D. Force",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.64
+    },
+    {
+      "id": "wiki_37677",
+      "name": "K.I.D.D. Force 2.0",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 16.01
+    },
+    {
+      "id": "wiki_3306",
+      "name": "KoalaPOW",
+      "fights": 48,
+      "wins": 17,
+      "byClass": {
+        "wizard": 5,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 17.09
+    },
+    {
+      "id": "wiki_8615",
+      "name": "Legacy Sentient Staff",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.78
+    },
+    {
+      "id": "wiki_41816",
+      "name": "Legion Elite Staff",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 4
+      },
+      "averageSeconds": 15.22
+    },
+    {
+      "id": "wiki_26747",
+      "name": "Love Heart Spellblade",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.6
+    },
+    {
+      "id": "wiki_49469",
+      "name": "Mechanical Kogbold Limb",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.9
+    },
+    {
+      "id": "wiki_43381",
+      "name": "Monochrome Staff",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 5,
+        "necromancer": 8,
+        "mystic": 5
+      },
+      "averageSeconds": 15.16
+    },
+    {
+      "id": "wiki_22521",
+      "name": "Nebular Rod",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 5,
+        "necromancer": 8,
+        "mystic": 5
+      },
+      "averageSeconds": 15.16
+    },
+    {
+      "id": "wiki_56452",
+      "name": "Neo Comet of Calamity",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 16.01
+    },
+    {
+      "id": "wiki_56451",
+      "name": "Neo Foramite Staff",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 4
+      },
+      "averageSeconds": 15.75
+    },
+    {
+      "id": "wiki_26099",
+      "name": "Oppressor's Staff",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 5
+      },
+      "averageSeconds": 15.41
+    },
+    {
+      "id": "wiki_63869",
+      "name": "Retrowinds Staff",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 4
+      },
+      "averageSeconds": 15.22
+    },
+    {
+      "id": "wiki_50817",
+      "name": "Rocket Launcher",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.86
+    },
+    {
+      "id": "wiki_14449",
+      "name": "Royal Sekhem",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.71
+    },
+    {
+      "id": "wiki_15758",
+      "name": "S.T.A.F.F.",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "wizard": 7,
+        "necromancer": 10,
+        "mystic": 6
+      },
+      "averageSeconds": 13.63
+    },
+    {
+      "id": "wiki_12069",
+      "name": "Screwdriver Staff",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.64
+    },
+    {
+      "id": "wiki_8784",
+      "name": "Shaman's Staff",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 5
+      },
+      "averageSeconds": 15.27
+    },
+    {
+      "id": "wiki_12161",
+      "name": "Sleigh Bell Staff",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "wizard": 7,
+        "necromancer": 9,
+        "mystic": 7
+      },
+      "averageSeconds": 12.74
+    },
+    {
+      "id": "wiki_41654",
+      "name": "Snow Branch",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "wizard": 8,
+        "necromancer": 9,
+        "mystic": 6
+      },
+      "averageSeconds": 13.77
+    },
+    {
+      "id": "wiki_26224",
+      "name": "Snowblind Spellblade",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.62
+    },
+    {
+      "id": "wiki_41781",
+      "name": "Spellblade of the Void",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 4
+      },
+      "averageSeconds": 15.22
+    },
+    {
+      "id": "wiki_2112",
+      "name": "Spirit Staff",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.46
+    },
+    {
+      "id": "wiki_7354",
+      "name": "Spring Rose",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "wizard": 7,
+        "necromancer": 10,
+        "mystic": 6
+      },
+      "averageSeconds": 13.63
+    },
+    {
+      "id": "wiki_16963",
+      "name": "Squaroid Staff",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 5
+      },
+      "averageSeconds": 15.26
+    },
+    {
+      "id": "wiki_8843",
+      "name": "Staff of Adoration",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.6
+    },
+    {
+      "id": "wiki_19266",
+      "name": "Staff of Eruption",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.03
+    },
+    {
+      "id": "wiki_5271",
+      "name": "Staff of Esben",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 5
+      },
+      "averageSeconds": 15.76
+    },
+    {
+      "id": "wiki_1894",
+      "name": "Staff of Esben Legacy",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.47
+    },
+    {
+      "id": "wiki_3075",
+      "name": "Staff of Extreme Prejudice",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 5
+      },
+      "averageSeconds": 15.2
+    },
+    {
+      "id": "wiki_53186",
+      "name": "Staff of Extreme Prejudice",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.62
+    },
+    {
+      "id": "wiki_3859",
+      "name": "Staff of Horrific Knowledge",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.71
+    },
+    {
+      "id": "wiki_5847",
+      "name": "Staff of Iceblast",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 5
+      },
+      "averageSeconds": 15.2
+    },
+    {
+      "id": "wiki_65056",
+      "name": "Staff of Rich History",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "wizard": 8,
+        "necromancer": 9,
+        "mystic": 6
+      },
+      "averageSeconds": 13.77
+    },
+    {
+      "id": "wiki_14493",
+      "name": "Staff of Silver Wings",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 4
+      },
+      "averageSeconds": 15.29
+    },
+    {
+      "id": "wiki_3093",
+      "name": "Staff of the Crystal Serpent",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.67
+    },
+    {
+      "id": "wiki_2008",
+      "name": "Staff of the Eclipse",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 4
+      },
+      "averageSeconds": 15.22
+    },
+    {
+      "id": "wiki_8857",
+      "name": "Staff of the Rising Sun",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.62
+    },
+    {
+      "id": "wiki_20977",
+      "name": "Staff of the Saint",
+      "fights": 48,
+      "wins": 10,
+      "byClass": {
+        "wizard": 3,
+        "necromancer": 5,
+        "mystic": 2
+      },
+      "averageSeconds": 18.39
+    },
+    {
+      "id": "wiki_580",
+      "name": "Staff of Unholy Sacrifice",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 5
+      },
+      "averageSeconds": 15.02
+    },
+    {
+      "id": "wiki_9086",
+      "name": "Staff of Yuletide Carols",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 15.71
+    },
+    {
+      "id": "wiki_17501",
+      "name": "Steam Pipe",
+      "fights": 48,
+      "wins": 23,
+      "byClass": {
+        "wizard": 8,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 13.64
+    },
+    {
+      "id": "wiki_25751",
+      "name": "Stygian Torch",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 5
+      },
+      "averageSeconds": 15.48
+    },
+    {
+      "id": "wiki_28839",
+      "name": "Superior",
+      "fights": 48,
+      "wins": 24,
+      "byClass": {
+        "wizard": 8,
+        "necromancer": 10,
+        "mystic": 6
+      },
+      "averageSeconds": 13.96
+    },
+    {
+      "id": "wiki_25759",
+      "name": "Supernatural Staff",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 4
+      },
+      "averageSeconds": 15.29
+    },
+    {
+      "id": "wiki_63772",
+      "name": "Sweettreats Staff",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 5
+      },
+      "averageSeconds": 15.76
+    },
+    {
+      "id": "wiki_13986",
+      "name": "Tezcacoatl's Tail",
+      "fights": 48,
+      "wins": 18,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 4
+      },
+      "averageSeconds": 16.22
+    },
+    {
+      "id": "wiki_9059",
+      "name": "The Phylactery",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 8,
+        "mystic": 5
+      },
+      "averageSeconds": 15.48
+    },
+    {
+      "id": "wiki_20302",
+      "name": "Tideturner Trident",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 5
+      },
+      "averageSeconds": 14.8
+    },
+    {
+      "id": "wiki_20903",
+      "name": "Torrential Staff",
+      "fights": 48,
+      "wins": 24,
+      "byClass": {
+        "wizard": 8,
+        "necromancer": 10,
+        "mystic": 6
+      },
+      "averageSeconds": 14.69
+    },
+    {
+      "id": "wiki_38584",
+      "name": "Venerable Staff of the Crystal Serpent",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 10,
+        "mystic": 5
+      },
+      "averageSeconds": 15.04
+    },
+    {
+      "id": "wiki_20746",
+      "name": "Vigor",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "wizard": 6,
+        "necromancer": 9,
+        "mystic": 6
+      },
+      "averageSeconds": 14.41
+    }
+  ],
+  "changedFights": 3485,
+  "totalWins": {
+    "before": 1697,
+    "after": 1568
+  }
+}

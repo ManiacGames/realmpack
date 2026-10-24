@@ -1,0 +1,33 @@
+{
+  "version": "0.35.0",
+  "assumptions": "Adventurer, depth 20, all 35 bosses; native tiered gear at 60% and 90% family max, extra native weapon, 3 Health Potions, +50 base HP and full equipped HP, beneficial weapon-adjacent placement for Crown/Hide/Toga when legal, +8% blessing recharge, seed 123456, 0.05s tick. One changed slot or a complete named set; no infused/enhanced gear. Legal packs required. This is a fixed-build comparison, not a full-run economy or optimized build search.",
+  "before": [
+    {
+      "item": "Hollow King set",
+      "fights": 70,
+      "wins": 34,
+      "averageSeconds": 15.21
+    },
+    {
+      "item": "Phylactery set",
+      "fights": 70,
+      "wins": 25,
+      "averageSeconds": 15.67
+    }
+  ],
+  "after": [
+    {
+      "item": "Hollow King set",
+      "fights": 70,
+      "wins": 34,
+      "averageSeconds": 15.04
+    },
+    {
+      "item": "Phylactery set",
+      "fights": 70,
+      "wins": 25,
+      "averageSeconds": 15.67
+    }
+  ],
+  "changedFights": 58
+}

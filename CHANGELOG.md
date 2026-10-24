@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.35.0 — 2026-10-24
+
+- Reworked all 98 imported UT/ST staff entries (81 regular/historical definitions and 17 Shiny variants) from inspected RotMG game data. Distinct firing rhythms, mixed piercing spellblades, delayed accelerating shots, radial volleys and short scythe chains replace generic recipes. Reskins share their underlying weapon behavior; historical versions remain distinct.
+- Added Esben’s charged, block-scaled manifestation; Vigor’s bounded Festival Spirit; burst/recovery cycles for S.T.A.F.F., Spring Rose, Sleigh Bell and Frostfall. Recovery minimums apply only between bursts. Broad volleys use reduced total damage budgets, and extra projectiles never multiply flat power or activation procs.
+- Updated item explanations and live charge/burst indicators. Preserved existing ST memberships, saved upgrades, artwork, footprints and acquisition exclusions, including unobtainable Legacy staves. Full per-item profiles, source facts and translation limits: docs/staff-identities.md.
+- Validation: JavaScript syntax and all 26 regression suites; 294 legal staff/class/version combat trials, 796 staff UI views, 7,176 catalogue views and a 4× mixed-staff browser combat smoke check. All 1,995 tiered class fight records match the previous release. The 7,776-fight staff comparison records gains and losses (1,697→1,568 wins per 3,888 fixtures); the 280-fight ST set comparison preserves both sets’ win counts. Novelty staves remain weak; Esben’s long charge and slow piercing staves remain playtesting watch points.
+
 ## 0.34.0 — 2026-10-24
 
 - Reworked every imported UT/ST dagger around inspected RotMG game-data: 66 names across 81 regular, retro and Shiny definitions. Source-backed damage/cadence, piercing, independent blade rhythms, returning blades, four-feather Judgement, Phantom Sickle fans and Fractal’s short-range inner bolts replace generic or conflicting custom recipes.
