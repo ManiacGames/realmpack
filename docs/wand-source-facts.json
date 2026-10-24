@@ -1,0 +1,5002 @@
+{
+  "inspected": "2026-10-24",
+  "source": "Realm.wiki rendered game data; numerical facts and identifiers, not flavor descriptions.",
+  "items": [
+    {
+      "id": "wiki_3004",
+      "name": "Abomination's Wrath",
+      "source": "https://realm.wiki/item?id=3004",
+      "shiny": false,
+      "rate": 0.55,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Horrific Proj",
+          "Speed": "110",
+          "MinDamage": "300",
+          "MaxDamage": "335",
+          "LifetimeMS": "818"
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "SPD",
+          "Amount": "4"
+        }
+      ],
+      "onShoot": [
+        {
+          "value": "Magic",
+          "Cooldown": "0.2",
+          "Proc": "0.05",
+          "Amount": "30"
+        },
+        {
+          "value": "Magic",
+          "Cooldown": "0.2",
+          "RequiredConditions": "Dazed",
+          "Proc": "1",
+          "Amount": "30"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_53821",
+      "name": "Acidic Aspergillum",
+      "source": "https://realm.wiki/item?id=53821",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Acid Aspergillum Shot",
+          "Speed": "160",
+          "MinDamage": "75",
+          "MaxDamage": "105",
+          "LifetimeMS": "400",
+          "Size": "80"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.35",
+          "DefaultAngle": "07.20"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.45",
+          "DefaultAngle": "03.60"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.60",
+          "DefaultAngle": "00.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.45",
+          "DefaultAngle": "-3.60"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.35",
+          "DefaultAngle": "-7.20"
+        }
+      ],
+      "equip": [],
+      "onShoot": [
+        {
+          "value": "ObjectToss",
+          "TargetMouseRange": "4",
+          "ThrowTime": "0.4",
+          "ObjectId": "Acid Puddle",
+          "TargetMouse": "true",
+          "Proc": "1",
+          "Color": "-1",
+          "Cooldown": "2.0",
+          "CenterObject": "false"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_63884",
+      "name": "Aeonic Talon",
+      "source": "https://realm.wiki/item?id=63884",
+      "shiny": false,
+      "rate": 1.1,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "HDruid ST Weapon Projectile",
+          "Speed": "100",
+          "MinDamage": "80",
+          "MaxDamage": "110",
+          "LifetimeMS": "890",
+          "Amplitude": "0",
+          "Frequency": "0"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.20",
+          "DefaultAngle": "-7.5"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.55",
+          "DefaultAngle": "-3.75"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.1"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.55",
+          "DefaultAngle": "3.75"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.20",
+          "DefaultAngle": "7.5"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "ATT",
+          "Amount": "4"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "DEX",
+          "Amount": "4"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_17708",
+      "name": "Aspirant's Wand",
+      "source": "https://realm.wiki/item?id=17708",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Aspirant Wand Magic",
+          "Speed": "180",
+          "LifetimeMS": "500",
+          "MinDamage": "175",
+          "MaxDamage": "215",
+          "MultiHit": true
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Aspirant Wand Magic",
+          "Speed": "0",
+          "LifetimeMS": "0",
+          "MinDamage": "0",
+          "MaxDamage": "0",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "0.8",
+          "NumProjectiles": "1"
+        },
+        {
+          "value": "",
+          "Index": "1",
+          "ProjectileId": "1",
+          "RateOfFire": "0.8",
+          "NumProjectiles": "0"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_55381",
+      "name": "Beekeeper's Flamethrower",
+      "source": "https://realm.wiki/item?id=55381",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Fire Morning Star",
+          "Speed": "80",
+          "MinDamage": "85",
+          "MaxDamage": "125",
+          "LifetimeMS": "900",
+          "ArmorPiercing": true,
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.55",
+          "DefaultAngle": "08.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.75",
+          "DefaultAngle": "00.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.65",
+          "DefaultAngle": "-8.00"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_17700",
+      "name": "Shiny Beekeeper's Flamethrower",
+      "source": "https://realm.wiki/item?id=17700",
+      "shiny": true,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Fire Morning Star Shiny",
+          "Speed": "80",
+          "MinDamage": "85",
+          "MaxDamage": "125",
+          "LifetimeMS": "900",
+          "ArmorPiercing": true,
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.55",
+          "DefaultAngle": "08.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.75",
+          "DefaultAngle": "00.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.65",
+          "DefaultAngle": "-8.00"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_12162",
+      "name": "Brass Chamberstick",
+      "source": "https://realm.wiki/item?id=12162",
+      "shiny": false,
+      "rate": 1.5,
+      "shots": 2,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Oryxmas Wand Projectile",
+          "Speed": "140",
+          "LifetimeMS": "1400",
+          "MinDamage": "95",
+          "MaxDamage": "125",
+          "Acceleration": "-300",
+          "AccelerationDelay": "500",
+          "SpeedClamp": "10",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "BurstCount": 2.0,
+      "BurstDelay": 0.8,
+      "BurstMinDelay": 0.4,
+      "tooltipShots": 2
+    },
+    {
+      "id": "wiki_1239",
+      "name": "Shiny Brass Chamberstick",
+      "source": "https://realm.wiki/item?id=1239",
+      "shiny": true,
+      "rate": 1.5,
+      "shots": 2,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Oryxmas Wand Projectile Shiny",
+          "Speed": "140",
+          "LifetimeMS": "1400",
+          "MinDamage": "95",
+          "MaxDamage": "125",
+          "Acceleration": "-300",
+          "AccelerationDelay": "500",
+          "SpeedClamp": "10",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "BurstCount": 2.0,
+      "BurstDelay": 0.8,
+      "BurstMinDelay": 0.4,
+      "tooltipShots": 2
+    },
+    {
+      "id": "wiki_14226",
+      "name": "C.L.A.W.",
+      "source": "https://realm.wiki/item?id=14226",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 3,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Summoner ST Mini Projectile",
+          "Speed": "180",
+          "MinDamage": "80",
+          "MaxDamage": "110",
+          "LifetimeMS": "500",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "BurstCount": 5.0,
+      "BurstDelay": 2.0,
+      "BurstMinDelay": 1.0,
+      "tooltipShots": 3
+    },
+    {
+      "id": "wiki_1398",
+      "name": "Caduceus of Current Craziness",
+      "source": "https://realm.wiki/item?id=1398",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 2,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Indecisive Missile",
+          "Speed": "170",
+          "LifetimeMS": "500",
+          "MinDamage": "65",
+          "MaxDamage": "90",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 2
+    },
+    {
+      "id": "wiki_37681",
+      "name": "Caduceus Of Enlightened Chaos",
+      "source": "https://realm.wiki/item?id=37681",
+      "shiny": false,
+      "rate": 0.8,
+      "shots": 2,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Lazy Coasting Missile",
+          "Speed": "170",
+          "LifetimeMS": "500",
+          "MinDamage": "100",
+          "MaxDamage": "125",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 2
+    },
+    {
+      "id": "wiki_26733",
+      "name": "Cane of Caduceus",
+      "source": "https://realm.wiki/item?id=26733",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Plague Orb Small",
+          "Speed": "140",
+          "MinDamage": "50",
+          "MaxDamage": "85",
+          "LifetimeMS": "500",
+          "Amplitude": "0.9",
+          "Frequency": "2.7",
+          "Size": "70",
+          "MultiHit": true
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Plague Snake Large",
+          "Speed": "120",
+          "MinDamage": "115",
+          "MaxDamage": "155",
+          "LifetimeMS": "583",
+          "Size": "70",
+          "ArmorPiercing": true
+        },
+        {
+          "value": "",
+          "Id": "2",
+          "ObjectId": "Plague Snake Large",
+          "Speed": "120",
+          "MinDamage": "0",
+          "MaxDamage": "0",
+          "LifetimeMS": "0",
+          "Size": "0"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "2",
+          "RateOfFire": "1.0",
+          "ArcGap": "10"
+        },
+        {
+          "value": "",
+          "Index": "1",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.4",
+          "ArcGap": "0"
+        },
+        {
+          "value": "",
+          "Index": "2",
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.4",
+          "ArcGap": "0"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 2
+    },
+    {
+      "id": "wiki_54797",
+      "name": "Cane of the Void",
+      "source": "https://realm.wiki/item?id=54797",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Void Orb Small",
+          "Speed": "140",
+          "MinDamage": "50",
+          "MaxDamage": "85",
+          "LifetimeMS": "500",
+          "Amplitude": "0.9",
+          "Frequency": "2.7",
+          "Size": "70",
+          "MultiHit": true
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Void Snake Large",
+          "Speed": "120",
+          "MinDamage": "115",
+          "MaxDamage": "155",
+          "LifetimeMS": "583",
+          "Size": "70",
+          "ArmorPiercing": true
+        },
+        {
+          "value": "",
+          "Id": "2",
+          "ObjectId": "Void Snake Large",
+          "Speed": "120",
+          "MinDamage": "0",
+          "MaxDamage": "0",
+          "LifetimeMS": "0",
+          "Size": "0"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "2",
+          "RateOfFire": "1.0",
+          "ArcGap": "10"
+        },
+        {
+          "value": "",
+          "Index": "1",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.4",
+          "ArcGap": "0"
+        },
+        {
+          "value": "",
+          "Index": "2",
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.4",
+          "ArcGap": "0"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 2
+    },
+    {
+      "id": "wiki_52258",
+      "name": "Carnival's Conjurer",
+      "source": "https://realm.wiki/item?id=52258",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Carnival's Conjurer Shot",
+          "Speed": "180",
+          "LifetimeMS": "500",
+          "MinDamage": "160",
+          "MaxDamage": "180",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "VIT",
+          "Amount": "5"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_42282",
+      "name": "Ceremonial Wand",
+      "source": "https://realm.wiki/item?id=42282",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Ceremonial Wand Shot",
+          "Speed": "140",
+          "MinDamage": "200",
+          "MaxDamage": "250",
+          "LifetimeMS": "600",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "WIS",
+          "Amount": "4"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "SPD",
+          "Amount": "3"
+        }
+      ],
+      "onShoot": [
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "RequiredConditions": "Curse",
+          "Cooldown": "0",
+          "MinDistance": "4.6",
+          "MaxDistance": "4.6",
+          "OffsetAngle": "9",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0xA54B"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "RequiredConditions": "Curse",
+          "Cooldown": "0",
+          "MinDistance": "4.6",
+          "MaxDistance": "4.6",
+          "OffsetAngle": "-9",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0xA54B"
+        }
+      ],
+      "onAbility": [
+        {
+          "value": "ConditionEffectSelf",
+          "Cooldown": "5",
+          "Duration": "4",
+          "Effect": "Curse",
+          "Proc": "0.4"
+        }
+      ],
+      "onHit": [],
+      "meters": [],
+      "BurstCount": 5.0,
+      "BurstDelay": 1.8,
+      "BurstMinDelay": 1.0,
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_1462",
+      "name": "Chocolate Ovipositor",
+      "source": "https://realm.wiki/item?id=1462",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Chocolate Ovipositor Shots",
+          "Speed": "160",
+          "MinDamage": "75",
+          "MaxDamage": "105",
+          "LifetimeMS": "400",
+          "Size": "80"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.35",
+          "DefaultAngle": "07.20"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.45",
+          "DefaultAngle": "03.60"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.60",
+          "DefaultAngle": "00.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.45",
+          "DefaultAngle": "-3.60"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.35",
+          "DefaultAngle": "-7.20"
+        }
+      ],
+      "equip": [],
+      "onShoot": [
+        {
+          "value": "ObjectToss",
+          "TargetMouseRange": "4",
+          "ThrowTime": "0.4",
+          "ObjectId": "Chocolate Puddle",
+          "TargetMouse": "true",
+          "Proc": "1",
+          "Color": "-1",
+          "Cooldown": "2.0",
+          "CenterObject": "false"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_3123",
+      "name": "Conducting Wand",
+      "source": "https://realm.wiki/item?id=3123",
+      "shiny": false,
+      "rate": 1.25,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Directed Explosion",
+          "Speed": "170",
+          "Size": "50",
+          "MinDamage": "100",
+          "MaxDamage": "175",
+          "LifetimeMS": "471"
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEX",
+          "Amount": "4"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "WIS",
+          "Amount": "4"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_5573",
+      "name": "Shiny Conducting Wand",
+      "source": "https://realm.wiki/item?id=5573",
+      "shiny": true,
+      "rate": 1.25,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Directed Explosion Shiny",
+          "Speed": "170",
+          "Size": "50",
+          "MinDamage": "100",
+          "MaxDamage": "175",
+          "LifetimeMS": "471"
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEX",
+          "Amount": "4"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "WIS",
+          "Amount": "4"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_2879",
+      "name": "Crystal Wand",
+      "source": "https://realm.wiki/item?id=2879",
+      "shiny": false,
+      "rate": 1.1,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Crystal Pierce",
+          "Speed": "150",
+          "LifetimeMS": "600",
+          "MinDamage": "105",
+          "MaxDamage": "150",
+          "ArmorPiercing": true,
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_7459",
+      "name": "Shiny Crystal Wand",
+      "source": "https://realm.wiki/item?id=7459",
+      "shiny": true,
+      "rate": 1.1,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Crystal Pierce Shiny",
+          "Speed": "150",
+          "LifetimeMS": "600",
+          "MinDamage": "105",
+          "MaxDamage": "150",
+          "ArmorPiercing": true,
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_23627",
+      "name": "Deliverance",
+      "source": "https://realm.wiki/item?id=23627",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Deliverance Projectile",
+          "Speed": "200",
+          "MinDamage": "115",
+          "MaxDamage": "165",
+          "LifetimeMS": "450",
+          "Amplitude": "0.6",
+          "Frequency": "2",
+          "Size": "100",
+          "MultiHit": true,
+          "FaceDir": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Amount": "6",
+          "Stat": "WIS"
+        }
+      ],
+      "onShoot": [
+        {
+          "value": "Pet",
+          "Cooldown": "0.6",
+          "ObjectId": "Deliverance Soul",
+          "Proc": "0.15"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_5334",
+      "name": "Shiny Deliverance",
+      "source": "https://realm.wiki/item?id=5334",
+      "shiny": true,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Deliverance Projectile Shiny",
+          "Speed": "200",
+          "MinDamage": "115",
+          "MaxDamage": "165",
+          "LifetimeMS": "450",
+          "Amplitude": "0.6",
+          "Frequency": "2",
+          "Size": "100",
+          "MultiHit": true,
+          "FaceDir": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Amount": "6",
+          "Stat": "WIS"
+        }
+      ],
+      "onShoot": [
+        {
+          "value": "Pet",
+          "Cooldown": "0.6",
+          "ObjectId": "Deliverance Soul Shiny",
+          "Proc": "0.15"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_48830",
+      "name": "Dimensional Union",
+      "source": "https://realm.wiki/item?id=48830",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Square Shot",
+          "Speed": "200",
+          "LifetimeMS": "450",
+          "MinDamage": "55",
+          "MaxDamage": "95",
+          "Amplitude": "0.2",
+          "Frequency": "1.5",
+          "CollisionMult": "1.2",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Amount": "5",
+          "Stat": "ATT"
+        }
+      ],
+      "onShoot": [
+        {
+          "value": "ObjectToss",
+          "TargetMouse": "true",
+          "TargetMouseRange": "1",
+          "CenterObject": "false",
+          "Color": "-1",
+          "Cooldown": "1",
+          "ObjectId": "Homing Square",
+          "Proc": "1",
+          "ThrowTime": "0"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_14465",
+      "name": "Dusky Catalyst",
+      "source": "https://realm.wiki/item?id=14465",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Shatters Wand Projectile",
+          "Size": "90",
+          "Speed": "200",
+          "LifetimeMS": "400",
+          "Wavy": true,
+          "MinDamage": "100",
+          "MaxDamage": "186",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1.5",
+          "NumProjectiles": "1",
+          "ArcGap": "0"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "WIS",
+          "Amount": "5"
+        },
+        {
+          "value": "AbilityUseDiscount",
+          "Multiplier": "0.95"
+        }
+      ],
+      "onShoot": [
+        {
+          "value": "StatBoostSelf",
+          "Cooldown": "0.0",
+          "Proc": "1",
+          "Amount": "-10",
+          "Duration": "1",
+          "Stat": "WIS",
+          "RequiredConditions": "In Combat",
+          "Channel": "noStackItm"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_5579",
+      "name": "Shiny Dusky Catalyst",
+      "source": "https://realm.wiki/item?id=5579",
+      "shiny": true,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Shatters Wand Projectile Shiny",
+          "Size": "90",
+          "Speed": "200",
+          "LifetimeMS": "400",
+          "Wavy": true,
+          "MinDamage": "100",
+          "MaxDamage": "186",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1.5",
+          "NumProjectiles": "1",
+          "ArcGap": "0"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "WIS",
+          "Amount": "5"
+        },
+        {
+          "value": "AbilityUseDiscount",
+          "Multiplier": "0.95"
+        }
+      ],
+      "onShoot": [
+        {
+          "value": "StatBoostSelf",
+          "Cooldown": "0.0",
+          "Proc": "1",
+          "Amount": "-10",
+          "Duration": "1",
+          "Stat": "WIS",
+          "RequiredConditions": "In Combat",
+          "Channel": "noStackItm"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_14218",
+      "name": "Earthen Ward",
+      "source": "https://realm.wiki/item?id=14218",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 3,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "2Summoner ST Mini Projectile",
+          "Speed": "180",
+          "MinDamage": "125",
+          "MaxDamage": "145",
+          "LifetimeMS": "1030",
+          "CircleTurnAngle": "90",
+          "CircleTurnDelay": "333",
+          "MultiHit": true,
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 3
+    },
+    {
+      "id": "wiki_65441",
+      "name": "Eggstatic Conductor",
+      "source": "https://realm.wiki/item?id=65441",
+      "shiny": false,
+      "rate": 1.25,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Egg Bullet",
+          "Speed": "170",
+          "Size": "50",
+          "MinDamage": "100",
+          "MaxDamage": "175",
+          "LifetimeMS": "471"
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEX",
+          "Amount": "4"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "WIS",
+          "Amount": "4"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_57114",
+      "name": "Eternal Bloom Wand",
+      "source": "https://realm.wiki/item?id=57114",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Blooming Flower Projectile",
+          "Speed": "180",
+          "LifetimeMS": "500",
+          "MinDamage": "150",
+          "MaxDamage": "190",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_5848",
+      "name": "Eternal Snowflake Wand",
+      "source": "https://realm.wiki/item?id=5848",
+      "shiny": false,
+      "rate": 0.33,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Eternal Snowflake Shot",
+          "Speed": "3",
+          "MinDamage": "500",
+          "MaxDamage": "600",
+          "LifetimeMS": "10000",
+          "Parametric": true,
+          "PassesCover": true,
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_28462",
+      "name": "Flip-Flops",
+      "source": "https://realm.wiki/item?id=28462",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Invisible",
+          "Speed": "0",
+          "MinDamage": "0",
+          "MaxDamage": "0",
+          "LifetimeMS": "0"
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Flip-Flops Projectile",
+          "Speed": "160",
+          "MinDamage": "85",
+          "MaxDamage": "120",
+          "LifetimeMS": "400",
+          "Size": "80"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "3",
+          "DefaultAngle": "0"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.15",
+          "DefaultAngle": "08.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.50",
+          "DefaultAngle": "04.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.90",
+          "DefaultAngle": "00.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.50",
+          "DefaultAngle": "-4.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.15",
+          "DefaultAngle": "-8.00"
+        }
+      ],
+      "equip": [],
+      "onShoot": [
+        {
+          "value": "ObjectToss",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "TargetMouseRange": "5",
+          "ObjectId": "Wood Totems Equipment Helper Object",
+          "Color": "18a6ed",
+          "Cooldown": "3",
+          "ThrowTime": "1"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_20745",
+      "name": "Fortitude",
+      "source": "https://realm.wiki/item?id=20745",
+      "shiny": false,
+      "rate": 0.33,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "MV Water Spinner",
+          "Speed": "3",
+          "MinDamage": "600",
+          "MaxDamage": "700",
+          "LifetimeMS": "10000",
+          "Parametric": true,
+          "PassesCover": true,
+          "MultiHit": true,
+          "FaceDir": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [
+        {
+          "value": "SpawnCreep",
+          "Cooldown": "15",
+          "MaxSpawnDistance": "0",
+          "ObjectId": "MV Fortitude Summon",
+          "SummonCost": "0.0",
+          "LifeTime": "0.0",
+          "Proc": "1"
+        }
+      ],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_5138",
+      "name": "Frozen Wand",
+      "source": "https://realm.wiki/item?id=5138",
+      "shiny": false,
+      "rate": 1.1,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Frozen Wand Icicle",
+          "Speed": "150",
+          "LifetimeMS": "600",
+          "MinDamage": "105",
+          "MaxDamage": "150",
+          "ArmorPiercing": true,
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_29897",
+      "name": "Gearhawk Morning Star",
+      "source": "https://realm.wiki/item?id=29897",
+      "shiny": false,
+      "rate": 1.1,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Druid ST Weapon Projectile",
+          "Speed": "100",
+          "MinDamage": "80",
+          "MaxDamage": "110",
+          "LifetimeMS": "890",
+          "Amplitude": "0",
+          "Frequency": "0"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.20",
+          "DefaultAngle": "-7.5"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.55",
+          "DefaultAngle": "-3.75"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.1"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.55",
+          "DefaultAngle": "3.75"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.20",
+          "DefaultAngle": "7.5"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "ATT",
+          "Amount": "4"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "DEX",
+          "Amount": "4"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_42103",
+      "name": "Glowing Torch",
+      "source": "https://realm.wiki/item?id=42103",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Mining Wand Proj",
+          "Speed": "180",
+          "LifetimeMS": "500",
+          "MinDamage": "150",
+          "MaxDamage": "190",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_1220",
+      "name": "Heartbreaker Wand",
+      "source": "https://realm.wiki/item?id=1220",
+      "shiny": false,
+      "rate": 1.5,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Incubus Hearts Small",
+          "Speed": "240",
+          "LifetimeMS": "600",
+          "MinDamage": "65",
+          "MaxDamage": "165",
+          "MultiHit": true,
+          "PassesCover": true,
+          "Boomerang": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_24968",
+      "name": "Hero's Wand",
+      "source": "https://realm.wiki/item?id=24968",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Hero Magic Shot",
+          "Speed": "180",
+          "LifetimeMS": "500",
+          "MinDamage": "150",
+          "MaxDamage": "190",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_14784",
+      "name": "Holy Artifact",
+      "source": "https://realm.wiki/item?id=14784",
+      "shiny": false,
+      "rate": 0.75,
+      "shots": 2,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Zealot Missile",
+          "Speed": "200",
+          "LifetimeMS": "375",
+          "MinDamage": "125",
+          "MaxDamage": "135",
+          "Amplitude": "0.1",
+          "Frequency": "0.1",
+          "Wavy": true,
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 2
+    },
+    {
+      "id": "wiki_49696",
+      "name": "Laser Pointer",
+      "source": "https://realm.wiki/item?id=49696",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Laser Pointer Main",
+          "Speed": "220",
+          "LifetimeMS": "312",
+          "MinDamage": "95",
+          "MaxDamage": "130",
+          "ArmorPiercing": true,
+          "Size": "100"
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Laser Pointer Sub",
+          "Speed": "100",
+          "LifetimeMS": "718",
+          "MinDamage": "50",
+          "MaxDamage": "75",
+          "MultiHit": true,
+          "Size": "60",
+          "Amplitude": "0.5",
+          "Frequency": "2"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.5"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_65511",
+      "name": "Shiny Laser Pointer",
+      "source": "https://realm.wiki/item?id=65511",
+      "shiny": true,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Laser Pointer Main Shiny",
+          "Speed": "220",
+          "LifetimeMS": "312",
+          "MinDamage": "95",
+          "MaxDamage": "130",
+          "ArmorPiercing": true,
+          "Size": "100"
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Laser Pointer Sub Shiny",
+          "Speed": "100",
+          "LifetimeMS": "718",
+          "MinDamage": "50",
+          "MaxDamage": "75",
+          "MultiHit": true,
+          "Size": "60",
+          "Amplitude": "0.5",
+          "Frequency": "2"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.5"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_41818",
+      "name": "Legion Elite Wand",
+      "source": "https://realm.wiki/item?id=41818",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Legion Elite Magic",
+          "Speed": "180",
+          "LifetimeMS": "500",
+          "MinDamage": "150",
+          "MaxDamage": "190",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_8999",
+      "name": "Lethargic Sentience",
+      "source": "https://realm.wiki/item?id=8999",
+      "shiny": false,
+      "rate": 0.25,
+      "shots": 4,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Fruitpocalypse",
+          "Speed": "12.5",
+          "LifetimeMS": "3000",
+          "MinDamage": "20",
+          "MaxDamage": "40",
+          "Parametric": true,
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 4
+    },
+    {
+      "id": "wiki_65287",
+      "name": "Lightning Wand",
+      "source": "https://realm.wiki/item?id=65287",
+      "shiny": false,
+      "rate": 0.6,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Storm Shaman Bolt Blue",
+          "Speed": "50",
+          "LifetimeMS": "900",
+          "MinDamage": "44",
+          "MaxDamage": "444",
+          "Acceleration": "300",
+          "AccelerationDelay": "100",
+          "SpeedClamp": "400",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_28834",
+      "name": "Lumiaire",
+      "source": "https://realm.wiki/item?id=28834",
+      "shiny": false,
+      "rate": 1.5,
+      "shots": 2,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Lumiaire Projectile",
+          "Speed": "50",
+          "MinDamage": "80",
+          "MaxDamage": "100",
+          "LifetimeMS": "1800",
+          "Amplitude": "0.5",
+          "Frequency": "1.5",
+          "Size": "80"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 2
+    },
+    {
+      "id": "wiki_65505",
+      "name": "Shiny Lumiaire",
+      "source": "https://realm.wiki/item?id=65505",
+      "shiny": true,
+      "rate": 1.5,
+      "shots": 2,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Lumiaire Projectile Shiny",
+          "Speed": "50",
+          "MinDamage": "80",
+          "MaxDamage": "100",
+          "LifetimeMS": "1800",
+          "Amplitude": "0.5",
+          "Frequency": "1.5",
+          "Size": "80"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 2
+    },
+    {
+      "id": "wiki_19366",
+      "name": "Magic Wand",
+      "source": "https://realm.wiki/item?id=19366",
+      "shiny": false,
+      "rate": 1.5,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Magic Wand Cards Small",
+          "Speed": "240",
+          "LifetimeMS": "600",
+          "MinDamage": "65",
+          "MaxDamage": "165",
+          "MultiHit": true,
+          "PassesCover": true,
+          "Boomerang": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_12070",
+      "name": "Measuring Wand",
+      "source": "https://realm.wiki/item?id=12070",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Measuring Wand Projectile",
+          "Speed": "180",
+          "LifetimeMS": "500",
+          "MinDamage": "135",
+          "MaxDamage": "175",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Amount": "2",
+          "Stat": "VIT"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_44913",
+      "name": "Morning Square",
+      "source": "https://realm.wiki/item?id=44913",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Morning Square 1",
+          "MinDamage": "45",
+          "MaxDamage": "60",
+          "MultiHit": true,
+          "PassesCover": true,
+          "ArmorPiercing": true,
+          "CollisionMult": "1.5",
+          "LifetimeMS": "800",
+          "Speed": "100",
+          "Frequency": "1"
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Morning Square 2",
+          "MinDamage": "45",
+          "MaxDamage": "60",
+          "MultiHit": true,
+          "PassesCover": true,
+          "CollisionMult": "1.5",
+          "LifetimeMS": "800",
+          "Speed": "108",
+          "Frequency": "1",
+          "TurnRate": "46",
+          "TurnRateDelay": "200",
+          "TurnStopTime": "201"
+        },
+        {
+          "value": "",
+          "Id": "2",
+          "ObjectId": "Morning Square 2",
+          "MinDamage": "45",
+          "MaxDamage": "60",
+          "MultiHit": true,
+          "PassesCover": true,
+          "CollisionMult": "1.5",
+          "LifetimeMS": "800",
+          "Speed": "141",
+          "Frequency": "1",
+          "TurnRate": "255",
+          "TurnRateDelay": "200",
+          "TurnStopTime": "201"
+        },
+        {
+          "value": "",
+          "Id": "3",
+          "ObjectId": "Morning Square 2",
+          "MinDamage": "45",
+          "MaxDamage": "60",
+          "MultiHit": true,
+          "PassesCover": true,
+          "CollisionMult": "1.5",
+          "LifetimeMS": "800",
+          "Speed": "108",
+          "Frequency": "1",
+          "TurnRate": "-46",
+          "TurnRateDelay": "200",
+          "TurnStopTime": "201"
+        },
+        {
+          "value": "",
+          "Id": "4",
+          "ObjectId": "Morning Square 2",
+          "MinDamage": "45",
+          "MaxDamage": "60",
+          "MultiHit": true,
+          "PassesCover": true,
+          "CollisionMult": "1.5",
+          "LifetimeMS": "800",
+          "Speed": "141",
+          "Frequency": "1",
+          "TurnRate": "-255",
+          "TurnRateDelay": "200",
+          "TurnStopTime": "201"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "RateOfFire": "1"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "RateOfFire": "0.65",
+          "DefaultAngle": "-22.5"
+        },
+        {
+          "value": "",
+          "ProjectileId": "2",
+          "RateOfFire": "0.45",
+          "DefaultAngle": "-45"
+        },
+        {
+          "value": "",
+          "ProjectileId": "3",
+          "RateOfFire": "0.7",
+          "DefaultAngle": "22.5"
+        },
+        {
+          "value": "",
+          "ProjectileId": "4",
+          "RateOfFire": "0.4",
+          "DefaultAngle": "45"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Amount": "5",
+          "Stat": "WIS"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_26748",
+      "name": "Morning Star Of Sweet Miracles",
+      "source": "https://realm.wiki/item?id=26748",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Miracle Sweet Star",
+          "Speed": "160",
+          "MinDamage": "80",
+          "MaxDamage": "110",
+          "LifetimeMS": "400",
+          "Size": "80"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.15",
+          "DefaultAngle": "08.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.50",
+          "DefaultAngle": "04.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.90",
+          "DefaultAngle": "00.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.50",
+          "DefaultAngle": "-4.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.15",
+          "DefaultAngle": "-8.00"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_24974",
+      "name": "Morning Star of the Hero",
+      "source": "https://realm.wiki/item?id=24974",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Hero Morning Star",
+          "Speed": "160",
+          "MinDamage": "85",
+          "MaxDamage": "120",
+          "LifetimeMS": "400",
+          "Size": "80"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.15",
+          "DefaultAngle": "08.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.50",
+          "DefaultAngle": "04.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.90",
+          "DefaultAngle": "00.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.50",
+          "DefaultAngle": "-4.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.15",
+          "DefaultAngle": "-8.00"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_41784",
+      "name": "Morning Star of the Void",
+      "source": "https://realm.wiki/item?id=41784",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Void Morning Star",
+          "Speed": "160",
+          "MinDamage": "85",
+          "MaxDamage": "120",
+          "LifetimeMS": "400",
+          "Size": "80"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.15",
+          "DefaultAngle": "08.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.50",
+          "DefaultAngle": "04.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.90",
+          "DefaultAngle": "00.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.50",
+          "DefaultAngle": "-4.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.15",
+          "DefaultAngle": "-8.00"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "WIS",
+          "Amount": "5"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_56460",
+      "name": "Neo Snowblind Wand",
+      "source": "https://realm.wiki/item?id=56460",
+      "shiny": false,
+      "rate": 0.85,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Neo Fallen Reskin Missile",
+          "Speed": "144",
+          "MinDamage": "230",
+          "MaxDamage": "260",
+          "LifetimeMS": "458",
+          "PassesCover": true,
+          "Size": "150",
+          "CollisionMult": "2.0",
+          "ParticleTrail": {
+            "value": "0xDEFFF7",
+            "Intensity": "0.05",
+            "LifetimeMS": "75"
+          }
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_56459",
+      "name": "Neo Warlord Wand",
+      "source": "https://realm.wiki/item?id=56459",
+      "shiny": false,
+      "rate": 1.1,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Neo Crystal Reskin Missile",
+          "Speed": "150",
+          "LifetimeMS": "600",
+          "MinDamage": "105",
+          "MaxDamage": "150",
+          "ArmorPiercing": true,
+          "MultiHit": true,
+          "ConditionEffect": {
+            "value": "Bleeding",
+            "Duration": "4",
+            "Amount": "65"
+          }
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_14450",
+      "name": "Obsidian Macuahuitl",
+      "source": "https://realm.wiki/item?id=14450",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Black Ball",
+          "Size": "0",
+          "Speed": "0",
+          "LifetimeMS": "0",
+          "MinDamage": "0",
+          "MaxDamage": "0",
+          "MultiHit": true,
+          "ArmorPiercing": true
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Interregnum Star",
+          "Speed": "160",
+          "MinDamage": "96",
+          "MaxDamage": "100",
+          "LifetimeMS": "400",
+          "Size": "80"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.15",
+          "DefaultAngle": "00.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.50",
+          "DefaultAngle": "00.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.90",
+          "DefaultAngle": "00.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.15",
+          "DefaultAngle": "08.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.50",
+          "DefaultAngle": "04.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.90",
+          "DefaultAngle": "00.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.50",
+          "DefaultAngle": "-4.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.15",
+          "DefaultAngle": "-8.00"
+        }
+      ],
+      "equip": [],
+      "onShoot": [
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "Cooldown": "0.4",
+          "MinDistance": "-7.5",
+          "MaxDistance": "-7.5",
+          "OffsetAngle": "0",
+          "NumShots": "2",
+          "GapAngle": "270",
+          "GapTiles": "0.5",
+          "ArcGap": "0",
+          "Type": "0x3884",
+          "MustNotWearOR": "0x385b;0x38A7",
+          "MustWear": "0x3878"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "Cooldown": "0.4",
+          "MinDistance": "6.8",
+          "MaxDistance": "6.8",
+          "OffsetAngle": "6.088528154195175",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x3885",
+          "MustNotWearOR": "0x385b;0x38A7",
+          "MustWear": "0x3879"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "Cooldown": "0.4",
+          "MinDistance": "6.8",
+          "MaxDistance": "6.8",
+          "OffsetAngle": "-6.088528154195175",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x3885",
+          "MustNotWearOR": "0x385b;0x38A7",
+          "MustWear": "0x3879"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "Cooldown": "1.0",
+          "MinDistance": "4.0",
+          "MaxDistance": "4.0",
+          "OffsetAngle": "120",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x3780",
+          "MustNotWearOR": "0x385b;0x38A7",
+          "MustWear": "0x387a"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "Cooldown": "1.0",
+          "MinDistance": "4.0",
+          "MaxDistance": "4.0",
+          "OffsetAngle": "60",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x3780",
+          "MustNotWearOR": "0x385b;0x38A7",
+          "MustWear": "0x387a"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "Cooldown": "1.0",
+          "MinDistance": "4.0",
+          "MaxDistance": "4.0",
+          "OffsetAngle": "0",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x3780",
+          "MustNotWearOR": "0x385b;0x38A7",
+          "MustWear": "0x387a"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "Cooldown": "1.0",
+          "MinDistance": "4.0",
+          "MaxDistance": "4.0",
+          "OffsetAngle": "180",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x3780",
+          "MustNotWearOR": "0x385b;0x38A7",
+          "MustWear": "0x387a"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "Cooldown": "1.0",
+          "MinDistance": "4.0",
+          "MaxDistance": "4.0",
+          "OffsetAngle": "-120",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x3780",
+          "MustNotWearOR": "0x385b;0x38A7",
+          "MustWear": "0x387a"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "Cooldown": "1.0",
+          "MinDistance": "4.0",
+          "MaxDistance": "4.0",
+          "OffsetAngle": "-60",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x3780",
+          "MustNotWearOR": "0x385b;0x38A7",
+          "MustWear": "0x387a"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_9084",
+      "name": "Present Dispensing Wand",
+      "source": "https://realm.wiki/item?id=9084",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Gift Parade",
+          "Speed": "180",
+          "LifetimeMS": "500",
+          "MinDamage": "130",
+          "MaxDamage": "170",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_48198",
+      "name": "Pulsating Wand",
+      "source": "https://realm.wiki/item?id=48198",
+      "shiny": false,
+      "rate": 1.5,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Swamp Shot",
+          "Speed": "150",
+          "MinDamage": "65",
+          "MaxDamage": "95",
+          "LifetimeMS": "600",
+          "Size": "50",
+          "CollisionMult": "0.75",
+          "ConditionEffect": {
+            "value": "Bleeding",
+            "Amount": "40",
+            "Duration": "2"
+          },
+          "MultiHit": true,
+          "PassesCover": true
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "IgnoreOnTooltip": "true",
+          "ObjectId": "Swamp Shot",
+          "Speed": "150",
+          "MinDamage": "65",
+          "MaxDamage": "95",
+          "LifetimeMS": "600",
+          "Size": "75",
+          "CollisionMult": "1.00",
+          "ConditionEffect": {
+            "value": "Bleeding",
+            "Amount": "40",
+            "Duration": "2"
+          },
+          "MultiHit": true,
+          "PassesCover": true
+        },
+        {
+          "value": "",
+          "Id": "2",
+          "IgnoreOnTooltip": "true",
+          "ObjectId": "Swamp Shot",
+          "Speed": "150",
+          "MinDamage": "65",
+          "MaxDamage": "95",
+          "LifetimeMS": "600",
+          "Size": "100",
+          "CollisionMult": "1.25",
+          "ConditionEffect": {
+            "value": "Bleeding",
+            "Amount": "40",
+            "Duration": "2"
+          },
+          "MultiHit": true,
+          "PassesCover": true
+        },
+        {
+          "value": "",
+          "Id": "3",
+          "IgnoreOnTooltip": "true",
+          "ObjectId": "Swamp Shot",
+          "Speed": "150",
+          "MinDamage": "65",
+          "MaxDamage": "95",
+          "LifetimeMS": "600",
+          "Size": "125",
+          "CollisionMult": "1.50",
+          "ConditionEffect": {
+            "value": "Bleeding",
+            "Amount": "40",
+            "Duration": "2"
+          },
+          "MultiHit": true,
+          "PassesCover": true
+        },
+        {
+          "value": "",
+          "Id": "4",
+          "IgnoreOnTooltip": "true",
+          "ObjectId": "Swamp Shot",
+          "Speed": "150",
+          "MinDamage": "65",
+          "MaxDamage": "95",
+          "LifetimeMS": "600",
+          "Size": "150",
+          "CollisionMult": "1.75",
+          "ConditionEffect": {
+            "value": "Bleeding",
+            "Amount": "40",
+            "Duration": "2"
+          },
+          "MultiHit": true,
+          "PassesCover": true
+        },
+        {
+          "value": "",
+          "Id": "5",
+          "IgnoreOnTooltip": "true",
+          "ObjectId": "Swamp Shot",
+          "Speed": "150",
+          "MinDamage": "65",
+          "MaxDamage": "95",
+          "LifetimeMS": "600",
+          "Size": "175",
+          "CollisionMult": "2.00",
+          "ConditionEffect": {
+            "value": "Bleeding",
+            "Amount": "40",
+            "Duration": "2"
+          },
+          "MultiHit": true,
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "RateOfFire": "1.5",
+          "ProjectilePattern": [
+            {
+              "value": "",
+              "ProjectileId": "0",
+              "NumProjectiles": "1"
+            },
+            {
+              "value": "",
+              "ProjectileId": "1",
+              "NumProjectiles": "1"
+            },
+            {
+              "value": "",
+              "ProjectileId": "2",
+              "NumProjectiles": "1"
+            },
+            {
+              "value": "",
+              "ProjectileId": "3",
+              "NumProjectiles": "1"
+            },
+            {
+              "value": "",
+              "ProjectileId": "4",
+              "NumProjectiles": "1"
+            },
+            {
+              "value": "",
+              "ProjectileId": "5",
+              "NumProjectiles": "1"
+            },
+            {
+              "value": "",
+              "ProjectileId": "4",
+              "NumProjectiles": "1"
+            },
+            {
+              "value": "",
+              "ProjectileId": "3",
+              "NumProjectiles": "1"
+            },
+            {
+              "value": "",
+              "ProjectileId": "2",
+              "NumProjectiles": "1"
+            },
+            {
+              "value": "",
+              "ProjectileId": "1",
+              "NumProjectiles": "1"
+            }
+          ]
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Amount": "6",
+          "Stat": "DEX"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_19324",
+      "name": "Rainbow Rod",
+      "source": "https://realm.wiki/item?id=19324",
+      "shiny": false,
+      "rate": 1.5,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Rainbow Rod Beam",
+          "Speed": "65",
+          "MinDamage": "20",
+          "MaxDamage": "30",
+          "LifetimeMS": "1500",
+          "Size": "100",
+          "MultiHit": true,
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_47907",
+      "name": "Ravenous Wand",
+      "source": "https://realm.wiki/item?id=47907",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Ravenous Spinner",
+          "Speed": "40",
+          "SpeedClamp": "0",
+          "Acceleration": "-10000000",
+          "AccelerationDelay": "375",
+          "CollisionMult": "1.5",
+          "MinDamage": "110",
+          "MaxDamage": "150",
+          "LifetimeMS": "3000",
+          "MultiHit": true,
+          "PassesCover": true,
+          "Amplitude": "0.2",
+          "Frequency": "1.5",
+          "ProtectFromSink": true,
+          "ConditionEffect": {
+            "value": "Bleeding",
+            "Amount": "30",
+            "Duration": "5"
+          }
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Ravenous Spinner",
+          "Speed": "80",
+          "SpeedClamp": "0",
+          "Acceleration": "-10000000",
+          "AccelerationDelay": "375",
+          "CollisionMult": "1.5",
+          "MinDamage": "110",
+          "MaxDamage": "150",
+          "LifetimeMS": "3000",
+          "MultiHit": true,
+          "PassesCover": true,
+          "Amplitude": "0.4",
+          "Frequency": "1.8",
+          "ProtectFromSink": true,
+          "ConditionEffect": {
+            "value": "Bleeding",
+            "Amount": "30",
+            "Duration": "5"
+          }
+        },
+        {
+          "value": "",
+          "Id": "2",
+          "ObjectId": "Ravenous Spinner",
+          "Speed": "120",
+          "SpeedClamp": "0",
+          "Acceleration": "-10000000",
+          "AccelerationDelay": "375",
+          "CollisionMult": "1.5",
+          "MinDamage": "110",
+          "MaxDamage": "150",
+          "LifetimeMS": "3000",
+          "MultiHit": true,
+          "PassesCover": true,
+          "Amplitude": "0.6",
+          "Frequency": "2.1",
+          "ProtectFromSink": true,
+          "ConditionEffect": {
+            "value": "Bleeding",
+            "Amount": "30",
+            "Duration": "5"
+          }
+        },
+        {
+          "value": "",
+          "Id": "3",
+          "ObjectId": "Ravenous Spinner",
+          "Speed": "160",
+          "SpeedClamp": "0",
+          "Acceleration": "-10000000",
+          "AccelerationDelay": "375",
+          "CollisionMult": "1.5",
+          "MinDamage": "110",
+          "MaxDamage": "150",
+          "LifetimeMS": "3000",
+          "MultiHit": true,
+          "PassesCover": true,
+          "Amplitude": "0.8",
+          "Frequency": "2.4",
+          "ProtectFromSink": true,
+          "ConditionEffect": {
+            "value": "Bleeding",
+            "Amount": "30",
+            "Duration": "5"
+          }
+        },
+        {
+          "value": "",
+          "Id": "4",
+          "ObjectId": "Ravenous Spinner",
+          "Speed": "200",
+          "SpeedClamp": "0",
+          "Acceleration": "-10000000",
+          "AccelerationDelay": "375",
+          "CollisionMult": "1.5",
+          "MinDamage": "110",
+          "MaxDamage": "150",
+          "LifetimeMS": "3000",
+          "MultiHit": true,
+          "PassesCover": true,
+          "Amplitude": "1",
+          "Frequency": "2.7",
+          "ProtectFromSink": true,
+          "ConditionEffect": {
+            "value": "Bleeding",
+            "Amount": "30",
+            "Duration": "5"
+          }
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.35"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.35"
+        },
+        {
+          "value": "",
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.35"
+        },
+        {
+          "value": "",
+          "ProjectileId": "3",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.35"
+        },
+        {
+          "value": "",
+          "ProjectileId": "4",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.35"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Amount": "55",
+          "Stat": "MAXHP"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [
+        {
+          "value": "ConditionEffectSelf",
+          "IgnoreOnTooltip": "true",
+          "Cooldown": "0.2",
+          "Duration": "2",
+          "Effect": "Berserk",
+          "Proc": "0.03"
+        }
+      ],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_42013",
+      "name": "Razorthorn Branch",
+      "source": "https://realm.wiki/item?id=42013",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "3SummonerST Thorn",
+          "Speed": "140",
+          "MinDamage": "80",
+          "MaxDamage": "120",
+          "LifetimeMS": "600",
+          "ConditionEffect": {
+            "value": "Bleeding",
+            "Duration": "5",
+            "Amount": "30"
+          },
+          "MultiHit": true,
+          "PassesCover": true
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "3SummonerST Thorn",
+          "Speed": "0",
+          "MinDamage": "0",
+          "MaxDamage": "0",
+          "LifetimeMS": "0",
+          "MultiHit": true,
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "RateOfFire": "0.8",
+          "ProjectilePattern": [
+            {
+              "value": "",
+              "ProjectileId": "0",
+              "NumProjectiles": "1"
+            },
+            {
+              "value": "",
+              "ProjectileId": "0",
+              "NumProjectiles": "2",
+              "ArcGap": "10"
+            },
+            {
+              "value": "",
+              "ProjectileId": "0",
+              "NumProjectiles": "1"
+            },
+            {
+              "value": "",
+              "ProjectileId": "0",
+              "NumProjectiles": "2",
+              "ArcGap": "10"
+            },
+            {
+              "value": "",
+              "ProjectileId": "0",
+              "NumProjectiles": "1"
+            },
+            {
+              "value": "",
+              "ProjectileId": "0",
+              "NumProjectiles": "2",
+              "ArcGap": "10"
+            },
+            {
+              "value": "",
+              "ProjectileId": "0",
+              "NumProjectiles": "5",
+              "ArcGap": "8"
+            },
+            {
+              "value": "",
+              "ProjectileId": "1",
+              "NumProjectiles": "1"
+            }
+          ]
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "WIS",
+          "Amount": "4"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_63870",
+      "name": "Retrowinds Wand",
+      "source": "https://realm.wiki/item?id=63870",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "RetroWinds Wand Projectile",
+          "Speed": "180",
+          "LifetimeMS": "500",
+          "MinDamage": "150",
+          "MaxDamage": "190",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_2009",
+      "name": "Rod of Radiance",
+      "source": "https://realm.wiki/item?id=2009",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "RoR Hero Magic Shot",
+          "Speed": "180",
+          "LifetimeMS": "500",
+          "MinDamage": "150",
+          "MaxDamage": "190",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_42292",
+      "name": "Scarlet Etched Branch",
+      "source": "https://realm.wiki/item?id=42292",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Blood Soul Shot",
+          "Speed": "200",
+          "MinDamage": "115",
+          "MaxDamage": "165",
+          "LifetimeMS": "450",
+          "Amplitude": "0.7",
+          "Frequency": "2",
+          "Size": "70",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [
+        {
+          "value": "Pet",
+          "Cooldown": "0.4",
+          "ObjectId": "Guided Blood Soul",
+          "Proc": "0.15"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_25700",
+      "name": "Snowblind Wand",
+      "source": "https://realm.wiki/item?id=25700",
+      "shiny": false,
+      "rate": 0.85,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Fallen Reskin Missile",
+          "Speed": "144",
+          "MinDamage": "205",
+          "MaxDamage": "240",
+          "LifetimeMS": "458",
+          "Size": "100",
+          "ParticleTrail": {
+            "value": "0xDEFFF7",
+            "Intensity": "0.05",
+            "LifetimeMS": "75"
+          }
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_7495",
+      "name": "Shiny Snowblind Wand",
+      "source": "https://realm.wiki/item?id=7495",
+      "shiny": true,
+      "rate": 0.85,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Fallen Reskin Missile Shiny",
+          "Speed": "144",
+          "MinDamage": "205",
+          "MaxDamage": "240",
+          "LifetimeMS": "458",
+          "Size": "100",
+          "ParticleTrail": {
+            "value": "0x76578C",
+            "Intensity": "0.05",
+            "LifetimeMS": "75"
+          }
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_7315",
+      "name": "Solar Flare Igniter",
+      "source": "https://realm.wiki/item?id=7315",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Solar Flair Main",
+          "Speed": "220",
+          "LifetimeMS": "312",
+          "MinDamage": "95",
+          "MaxDamage": "130",
+          "ArmorPiercing": true,
+          "Size": "100"
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Solar Flair Sub",
+          "Speed": "100",
+          "LifetimeMS": "718",
+          "MinDamage": "50",
+          "MaxDamage": "75",
+          "MultiHit": true,
+          "Size": "60",
+          "Amplitude": "0.5",
+          "Frequency": "2"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.5"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_24834",
+      "name": "Soul's Guidance",
+      "source": "https://realm.wiki/item?id=24834",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Shrieking Skull",
+          "Speed": "200",
+          "MinDamage": "115",
+          "MaxDamage": "165",
+          "LifetimeMS": "450",
+          "Amplitude": "0.7",
+          "Frequency": "2",
+          "Size": "70",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [
+        {
+          "value": "Pet",
+          "Cooldown": "0.4",
+          "ObjectId": "Guided Forgotten Soul",
+          "Proc": "0.15"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_3046",
+      "name": "Shiny Soul's Guidance",
+      "source": "https://realm.wiki/item?id=3046",
+      "shiny": true,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Shrieking Skull Shiny",
+          "Speed": "200",
+          "MinDamage": "115",
+          "MaxDamage": "165",
+          "LifetimeMS": "450",
+          "Amplitude": "0.7",
+          "Frequency": "2",
+          "Size": "70",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [
+        {
+          "value": "Pet",
+          "Cooldown": "0.4",
+          "ObjectId": "Guided Forgotten Soul Shiny",
+          "Proc": "0.15"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_3307",
+      "name": "Spicy Wand of Spice",
+      "source": "https://realm.wiki/item?id=3307",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "hawt sawce",
+          "Speed": "130",
+          "MinDamage": "30",
+          "MaxDamage": "50",
+          "LifetimeMS": "770",
+          "Wavy": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_2635",
+      "name": "Sprite Wand",
+      "source": "https://realm.wiki/item?id=2635",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Colorful Sprite Bolt",
+          "Speed": "180",
+          "LifetimeMS": "500",
+          "MinDamage": "10",
+          "MaxDamage": "290",
+          "Amplitude": "0.8",
+          "Frequency": "1.5"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_5310",
+      "name": "Shiny Sprite Wand",
+      "source": "https://realm.wiki/item?id=5310",
+      "shiny": true,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Colorful Sprite Bolt Shiny",
+          "Speed": "180",
+          "LifetimeMS": "500",
+          "MinDamage": "10",
+          "MaxDamage": "290",
+          "Amplitude": "0.8",
+          "Frequency": "1.5"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_3101",
+      "name": "St. Abraham's Wand",
+      "source": "https://realm.wiki/item?id=3101",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Cross Bullet",
+          "Size": "130",
+          "CollisionMult": "1.2",
+          "Speed": "250",
+          "LifetimeMS": "667",
+          "Acceleration": "-305",
+          "AccelerationDelay": "4",
+          "SpeedClamp": "60",
+          "MinDamage": "155",
+          "MaxDamage": "180",
+          "MultiHit": true,
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "0.9",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "VIT",
+          "Amount": "5"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "WIS",
+          "Amount": "5"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_38551",
+      "name": "Shiny St. Abraham's Wand",
+      "source": "https://realm.wiki/item?id=38551",
+      "shiny": true,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Cross Bullet Shiny",
+          "Size": "130",
+          "CollisionMult": "1.2",
+          "Speed": "250",
+          "LifetimeMS": "667",
+          "Acceleration": "-305",
+          "AccelerationDelay": "4",
+          "SpeedClamp": "60",
+          "MinDamage": "155",
+          "MaxDamage": "180",
+          "MultiHit": true,
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "0.9",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "VIT",
+          "Amount": "5"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "WIS",
+          "Amount": "5"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_41763",
+      "name": "Sweet Desire Wand",
+      "source": "https://realm.wiki/item?id=41763",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 3,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Chocolate Bunny Mini Projectile",
+          "Speed": "180",
+          "MinDamage": "125",
+          "MaxDamage": "145",
+          "LifetimeMS": "1030",
+          "CircleTurnAngle": "90",
+          "CircleTurnDelay": "333",
+          "MultiHit": true,
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 3
+    },
+    {
+      "id": "wiki_63774",
+      "name": "Sweettreats Wand",
+      "source": "https://realm.wiki/item?id=63774",
+      "shiny": false,
+      "rate": 0.85,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Sweettreats Wand Projectile",
+          "Speed": "144",
+          "MinDamage": "205",
+          "MaxDamage": "240",
+          "LifetimeMS": "458",
+          "Size": "100",
+          "ParticleTrail": {
+            "value": "0xFABFE2",
+            "Intensity": "0.05",
+            "LifetimeMS": "75"
+          }
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_3783",
+      "name": "Temporal Wand",
+      "source": "https://realm.wiki/item?id=3783",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "MotMG 2024 Wand Projectile",
+          "Speed": "180",
+          "LifetimeMS": "500",
+          "MinDamage": "150",
+          "MaxDamage": "190",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "onShoot": [
+        {
+          "value": "BulletCreate",
+          "Type": "0xED3",
+          "MustWear": "0xEDC",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED3",
+          "MustWear": "0xEDD",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED3",
+          "MustWear": "0xEDE",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED3",
+          "MustWear": "0xEAC",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED3",
+          "MustWear": "0xEAD",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED3",
+          "MustWear": "0xEAE",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED3",
+          "MustWear": "0xEB2",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED3",
+          "MustWear": "0xEB3",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED3",
+          "MustWear": "0xEB4",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED3",
+          "MustWear": "0xEB8",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED3",
+          "MustWear": "0xEB9",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED3",
+          "MustWear": "0xEBA",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED3",
+          "MustWear": "0xEBE",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED3",
+          "MustWear": "0xEBF",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED3",
+          "MustWear": "0xEC0",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED4",
+          "MustWear": "0xEDF",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED4",
+          "MustWear": "0xEE0",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED4",
+          "MustWear": "0xEE1",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED4",
+          "MustWear": "0xEAF",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED4",
+          "MustWear": "0xEB0",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED4",
+          "MustWear": "0xEB1",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED4",
+          "MustWear": "0xEB5",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED4",
+          "MustWear": "0xEB6",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED4",
+          "MustWear": "0xEB7",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED4",
+          "MustWear": "0xEBB",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED4",
+          "MustWear": "0xEBC",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED4",
+          "MustWear": "0xEBD",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED4",
+          "MustWear": "0xEC1",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED4",
+          "MustWear": "0xEC2",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED4",
+          "MustWear": "0xEC3",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "4.5",
+          "MaxDistance": "4.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_26227",
+      "name": "The North Star",
+      "source": "https://realm.wiki/item?id=26227",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Frozen Morning Star",
+          "Speed": "160",
+          "MinDamage": "80",
+          "MaxDamage": "115",
+          "LifetimeMS": "400",
+          "Size": "80"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.15",
+          "DefaultAngle": "08.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.50",
+          "DefaultAngle": "04.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.90",
+          "DefaultAngle": "00.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.50",
+          "DefaultAngle": "-4.00"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.15",
+          "DefaultAngle": "-8.00"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_8204",
+      "name": "Theurgy Wand",
+      "source": "https://realm.wiki/item?id=8204",
+      "shiny": false,
+      "rate": 0.75,
+      "shots": 2,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Mad God Missile",
+          "Speed": "200",
+          "LifetimeMS": "375",
+          "MinDamage": "125",
+          "MaxDamage": "135",
+          "Amplitude": "0.1",
+          "Frequency": "0.1",
+          "Wavy": true,
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 2
+    },
+    {
+      "id": "wiki_14779",
+      "name": "Tormented Shriek",
+      "source": "https://realm.wiki/item?id=14779",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 3,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Banshee Scream",
+          "Speed": "180",
+          "MinDamage": "80",
+          "MaxDamage": "110",
+          "LifetimeMS": "500",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "BurstCount": 5.0,
+      "BurstDelay": 2.0,
+      "BurstMinDelay": 1.0,
+      "tooltipShots": 3
+    },
+    {
+      "id": "wiki_26096",
+      "name": "Tyrant's Wand",
+      "source": "https://realm.wiki/item?id=26096",
+      "shiny": false,
+      "rate": 0.7,
+      "shots": 3,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Realm Magic",
+          "Speed": "90",
+          "LifetimeMS": "700",
+          "MinDamage": "70",
+          "MaxDamage": "100",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 3
+    },
+    {
+      "id": "wiki_38586",
+      "name": "Venerable Crystal Wand",
+      "source": "https://realm.wiki/item?id=38586",
+      "shiny": false,
+      "rate": 1.4,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Venerable Crystal Pierce",
+          "Speed": "150",
+          "LifetimeMS": "600",
+          "MinDamage": "105",
+          "MaxDamage": "150",
+          "ArmorPiercing": true,
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_3856",
+      "name": "Wand of Ancient Terror",
+      "source": "https://realm.wiki/item?id=3856",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Terror Orb",
+          "Speed": "180",
+          "LifetimeMS": "500",
+          "MinDamage": "130",
+          "MaxDamage": "170",
+          "MultiHit": true,
+          "ParticleTrail": "0x000000"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_8844",
+      "name": "Wand of Budding Romance",
+      "source": "https://realm.wiki/item?id=8844",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Rose Shot",
+          "Speed": "180",
+          "LifetimeMS": "500",
+          "MinDamage": "130",
+          "MaxDamage": "170",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_8854",
+      "name": "Wand of Egg-cellence",
+      "source": "https://realm.wiki/item?id=8854",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Dyed Eggs",
+          "Speed": "180",
+          "LifetimeMS": "500",
+          "MinDamage": "130",
+          "MaxDamage": "170",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_9055",
+      "name": "Wand of Geb",
+      "source": "https://realm.wiki/item?id=9055",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Geb Shot",
+          "Speed": "140",
+          "MinDamage": "150",
+          "MaxDamage": "170",
+          "LifetimeMS": "500",
+          "Size": "120",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [
+        {
+          "value": "BulletCreate",
+          "Type": "0xb4e2",
+          "MustWear": "0x235f;0x235e;0x235d;0x235c",
+          "ArcGap": "22.5",
+          "MinDistance": "6",
+          "MaxDistance": "6",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "16",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "5",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xb4e1",
+          "MustNotWear": "0x235f;0x235e;0x235d;0x235c",
+          "ArcGap": "22.5",
+          "MinDistance": "3.6",
+          "MaxDistance": "3.6",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "16",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "5",
+          "IgnoreOnTooltip": "true"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_41751",
+      "name": "Wand of Hidden Knowledge",
+      "source": "https://realm.wiki/item?id=41751",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Hidden Knowledge Shot",
+          "Speed": "140",
+          "MinDamage": "200",
+          "MaxDamage": "250",
+          "LifetimeMS": "600",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "WIS",
+          "Amount": "4"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "SPD",
+          "Amount": "3"
+        }
+      ],
+      "onShoot": [
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "RequiredConditions": "Curse",
+          "Cooldown": "0",
+          "MinDistance": "4.6",
+          "MaxDistance": "4.6",
+          "OffsetAngle": "9",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0xA319"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "RequiredConditions": "Curse",
+          "Cooldown": "0",
+          "MinDistance": "4.6",
+          "MaxDistance": "4.6",
+          "OffsetAngle": "-9",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0xA319"
+        }
+      ],
+      "onAbility": [
+        {
+          "value": "ConditionEffectSelf",
+          "Cooldown": "5",
+          "Duration": "4",
+          "Effect": "Curse",
+          "Proc": "0.4"
+        }
+      ],
+      "onHit": [],
+      "meters": [],
+      "BurstCount": 5.0,
+      "BurstDelay": 1.8,
+      "BurstMinDelay": 1.0,
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_7396",
+      "name": "Shiny Wand of Hidden Knowledge",
+      "source": "https://realm.wiki/item?id=7396",
+      "shiny": true,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Hidden Knowledge Shot Shiny",
+          "Speed": "140",
+          "MinDamage": "200",
+          "MaxDamage": "250",
+          "LifetimeMS": "600",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "WIS",
+          "Amount": "4"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "SPD",
+          "Amount": "3"
+        }
+      ],
+      "onShoot": [
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "RequiredConditions": "Curse",
+          "Cooldown": "0",
+          "MinDistance": "4.6",
+          "MaxDistance": "4.6",
+          "OffsetAngle": "9",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x1CE3"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "RequiredConditions": "Curse",
+          "Cooldown": "0",
+          "MinDistance": "4.6",
+          "MaxDistance": "4.6",
+          "OffsetAngle": "-9",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x1CE3"
+        }
+      ],
+      "onAbility": [
+        {
+          "value": "ConditionEffectSelf",
+          "Cooldown": "5",
+          "Duration": "4",
+          "Effect": "Curse",
+          "Proc": "0.4"
+        }
+      ],
+      "onHit": [],
+      "meters": [],
+      "BurstCount": 5.0,
+      "BurstDelay": 1.8,
+      "BurstMinDelay": 1.0,
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_3076",
+      "name": "Wand of the Bulwark",
+      "source": "https://realm.wiki/item?id=3076",
+      "shiny": false,
+      "rate": 0.33,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Rimmed Mystic Shot",
+          "Speed": "3",
+          "MinDamage": "500",
+          "MaxDamage": "600",
+          "LifetimeMS": "10000",
+          "Parametric": true,
+          "PassesCover": true,
+          "MultiHit": true,
+          "FaceDir": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_38522",
+      "name": "Shiny Wand of the Bulwark",
+      "source": "https://realm.wiki/item?id=38522",
+      "shiny": true,
+      "rate": 0.33,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Rimmed Mystic Shot Shiny",
+          "Speed": "3",
+          "MinDamage": "500",
+          "MaxDamage": "600",
+          "LifetimeMS": "10000",
+          "Parametric": true,
+          "PassesCover": true,
+          "MultiHit": true,
+          "FaceDir": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_6203",
+      "name": "Wand of the Fallen",
+      "source": "https://realm.wiki/item?id=6203",
+      "shiny": false,
+      "rate": 0.85,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Elemental missiles",
+          "Speed": "144",
+          "MinDamage": "205",
+          "MaxDamage": "240",
+          "LifetimeMS": "458",
+          "Size": "100",
+          "ParticleTrail": {
+            "value": "0xFABFE2",
+            "Intensity": "0.05",
+            "LifetimeMS": "75"
+          }
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_1274",
+      "name": "Shiny Wand of the Fallen",
+      "source": "https://realm.wiki/item?id=1274",
+      "shiny": true,
+      "rate": 0.85,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Elemental missiles Shiny",
+          "Speed": "144",
+          "MinDamage": "205",
+          "MaxDamage": "240",
+          "LifetimeMS": "458",
+          "Size": "100",
+          "ParticleTrail": {
+            "value": "0xA1D643",
+            "Intensity": "0.05",
+            "LifetimeMS": "75"
+          }
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_14494",
+      "name": "Wand of the Summoned One",
+      "source": "https://realm.wiki/item?id=14494",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "MotMG Void Magic",
+          "Speed": "180",
+          "LifetimeMS": "500",
+          "MinDamage": "135",
+          "MaxDamage": "175",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "ATT",
+          "Amount": "2"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_25699",
+      "name": "Warlord Wand",
+      "source": "https://realm.wiki/item?id=25699",
+      "shiny": false,
+      "rate": 1.1,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Crystal Reskin Missile",
+          "Speed": "150",
+          "LifetimeMS": "600",
+          "MinDamage": "105",
+          "MaxDamage": "150",
+          "ArmorPiercing": true,
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_7494",
+      "name": "Shiny Warlord Wand",
+      "source": "https://realm.wiki/item?id=7494",
+      "shiny": true,
+      "rate": 1.1,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Crystal Reskin Missile Shiny",
+          "Speed": "150",
+          "LifetimeMS": "600",
+          "MinDamage": "105",
+          "MaxDamage": "150",
+          "ArmorPiercing": true,
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_6861",
+      "name": "Winter's Breath Wand",
+      "source": "https://realm.wiki/item?id=6861",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "XMAS Sparkling Bolt",
+          "Speed": "180",
+          "LifetimeMS": "500",
+          "MinDamage": "135",
+          "MaxDamage": "175",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    }
+  ]
+}

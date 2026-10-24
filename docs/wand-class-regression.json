@@ -1,0 +1,208 @@
+{
+  "version": "0.36.0",
+  "baselineCommit": "c41201840c9feb9b6482dad33691928058ab6c75",
+  "assumptions": "Unmodified scripts/benchmark-balance.cjs legal tiered fixtures; 19 classes, all 35 bosses, three support variants, seed 123456, Adventurer depth 20.",
+  "fightsPerVersion": 1995,
+  "changedRecords": 0,
+  "afterSummary": {
+    "gameVersion": "0.36.0",
+    "runMode": "normal",
+    "depth": 20,
+    "dungeons": 35,
+    "variants": 3,
+    "fights": 1995,
+    "results": [
+      {
+        "classId": "rogue",
+        "wins": 81,
+        "fights": 105,
+        "variants": [
+          26,
+          27,
+          28
+        ]
+      },
+      {
+        "classId": "archer",
+        "wins": 94,
+        "fights": 105,
+        "variants": [
+          28,
+          33,
+          33
+        ]
+      },
+      {
+        "classId": "wizard",
+        "wins": 73,
+        "fights": 105,
+        "variants": [
+          21,
+          25,
+          27
+        ]
+      },
+      {
+        "classId": "priest",
+        "wins": 90,
+        "fights": 105,
+        "variants": [
+          29,
+          30,
+          31
+        ]
+      },
+      {
+        "classId": "warrior",
+        "wins": 85,
+        "fights": 105,
+        "variants": [
+          26,
+          29,
+          30
+        ]
+      },
+      {
+        "classId": "knight",
+        "wins": 94,
+        "fights": 105,
+        "variants": [
+          30,
+          32,
+          32
+        ]
+      },
+      {
+        "classId": "paladin",
+        "wins": 89,
+        "fights": 105,
+        "variants": [
+          29,
+          30,
+          30
+        ]
+      },
+      {
+        "classId": "assassin",
+        "wins": 83,
+        "fights": 105,
+        "variants": [
+          27,
+          28,
+          28
+        ]
+      },
+      {
+        "classId": "necromancer",
+        "wins": 84,
+        "fights": 105,
+        "variants": [
+          27,
+          29,
+          28
+        ]
+      },
+      {
+        "classId": "huntress",
+        "wins": 94,
+        "fights": 105,
+        "variants": [
+          30,
+          32,
+          32
+        ]
+      },
+      {
+        "classId": "mystic",
+        "wins": 82,
+        "fights": 105,
+        "variants": [
+          25,
+          28,
+          29
+        ]
+      },
+      {
+        "classId": "trickster",
+        "wins": 79,
+        "fights": 105,
+        "variants": [
+          26,
+          26,
+          27
+        ]
+      },
+      {
+        "classId": "sorcerer",
+        "wins": 66,
+        "fights": 105,
+        "variants": [
+          19,
+          24,
+          23
+        ]
+      },
+      {
+        "classId": "ninja",
+        "wins": 80,
+        "fights": 105,
+        "variants": [
+          26,
+          27,
+          27
+        ]
+      },
+      {
+        "classId": "samurai",
+        "wins": 85,
+        "fights": 105,
+        "variants": [
+          27,
+          29,
+          29
+        ]
+      },
+      {
+        "classId": "bard",
+        "wins": 79,
+        "fights": 105,
+        "variants": [
+          25,
+          27,
+          27
+        ]
+      },
+      {
+        "classId": "summoner",
+        "wins": 71,
+        "fights": 105,
+        "variants": [
+          21,
+          25,
+          25
+        ]
+      },
+      {
+        "classId": "kensei",
+        "wins": 95,
+        "fights": 105,
+        "variants": [
+          30,
+          32,
+          33
+        ]
+      },
+      {
+        "classId": "druid",
+        "wins": 96,
+        "fights": 105,
+        "variants": [
+          32,
+          32,
+          32
+        ]
+      }
+    ],
+    "classes": 19
+  }
+}

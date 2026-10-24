@@ -1,7 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict'),crypto=require('node:crypto'),{ctx,vm}=require('./load-game.cjs');
 const hash=source=>crypto.createHash('sha256').update(vm.runInContext(source,ctx)).digest('hex');
-assert.equal(hash(`JSON.stringify(DATA.items.filter(d=>!['dagger','staff'].includes(d.kind)))`),'ffc1d4a917525464b024be32f2ba782a52629629552a0732f7b4b5aa6fc4b50d','Non-dagger/non-staff definitions changed');
+assert.equal(hash(`JSON.stringify(DATA.items.filter(d=>!['dagger','staff','wand'].includes(d.kind)))`),'64c7d0b89a1f2bd64faa9740c1cb8cdcc4ab4160c5d43d4c4d24eeb96a745c5d','Definitions outside dagger/staff/wand passes changed');
 assert.equal(hash(`JSON.stringify(DATA.items.filter(d=>d.kind==='dagger'&&/^T[0-9]+$/.test(d.tier)))`),'11eb19e749d35d6d131bf3cbe3f7c958fc883801fc9c1fa79688be1905e883e2','Tiered daggers changed');
 console.log(vm.runInContext(String.raw`(()=>{
 const check=(v,m)=>{if(!v)throw Error(m)},near=(a,b)=>Math.abs(a-b)<1e-7,type=n=>DATA.items.find(d=>d.name===n&&!d.isShiny).id,oldPassive=passive,oldClass=classActivation;

@@ -151,3 +151,7 @@ The unchanged class benchmark (`node scripts/benchmark-balance.cjs`) was run bef
 ## Complete staff pass — 0.35.0
 
 All 98 UT/ST staff entries now use [source-backed staff profiles](staff-identities.md), including mixed projectile rates/piercing, slow-start delivery, burst recovery, Esben manifestation and Vigor Festival Spirit. These profiles supersede the staff recipes listed earlier in this document. Existing Hollow King and Phylactery memberships and designated full-set ability procs remain.
+
+## Complete wand pass — 0.36.0
+
+All 93 UT/ST wand entries now use [inspected wand profiles](wand-identities.md), including morning-star rhythms, mixed piercing, returning/slow shots, burst cycles, soul summons, fields, self-curse and ability-triggered effects. These recipes supersede earlier wand profiles above. Existing Geb memberships and designated full-set ability bonuses remain.

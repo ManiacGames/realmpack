@@ -1,7 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict'),crypto=require('node:crypto'),{ctx,vm}=require('./load-game.cjs');
-const otherItems=vm.runInContext('JSON.stringify(DATA.items.filter(d=>!["dagger","staff"].includes(d.kind)))',ctx);
-assert.equal(crypto.createHash('sha256').update(otherItems).digest('hex'),'ffc1d4a917525464b024be32f2ba782a52629629552a0732f7b4b5aa6fc4b50d','Definitions outside the dagger/staff passes changed');
+const otherItems=vm.runInContext('JSON.stringify(DATA.items.filter(d=>!["dagger","staff","wand"].includes(d.kind)))',ctx);
+assert.equal(crypto.createHash('sha256').update(otherItems).digest('hex'),'64c7d0b89a1f2bd64faa9740c1cb8cdcc4ab4160c5d43d4c4d24eeb96a745c5d','Definitions outside the dagger/staff passes changed');
 console.log(vm.runInContext(`(()=>{
  const check=(v,m)=>{if(!v)throw Error(m)},near=(a,b)=>Math.abs(a-b)<1e-7,type=name=>DATA.items.find(d=>d.name===name&&!d.isShiny).id;
  passive=()=>{};enemyProfiles=()=>[];log=()=>{};
@@ -19,5 +19,5 @@ console.log(vm.runInContext(`(()=>{
  i=reset('Memento Mori');activate(i);check(s.hp===100&&s.summons[0].realmKind==='mori'&&!s.summons[0].realmHeal,'Mori incorrectly heals');s.items.push(gear('Short Sword',3,0));check(classPrimaryAmount(s.items[1],100)===110,'Mori weapon buff');
  i=reset('Interregnum');const ability=gear('Iron Shield',3,0);s.items.push(ability);for(let n=0;n<2;n++)itemEvent('ability',1,ability);check(!s.realmInterregnumUntil,'Interregnum early proc');itemEvent('ability',1,ability);check(s.realmInterregnumUntil===4&&s.realmInterregnumReady===8,'Interregnum third ability');s.time=4.1;for(let n=0;n<3;n++)itemEvent('ability',1,ability);check(s.realmInterregnumUntil===4,'Interregnum lock');
  for(const key of ['vampire','hollow']){i=reset(window.REALM_SPECIALS.sets[key].pieces[0]);s.items=[];for(const name of window.REALM_SPECIALS.sets[key].pieces)check(autoPlace(gear(name)),'Set layout '+key);check(realmSetCount(key)===4,'Set count '+key);s.stash=s.items.slice(1);s.items=s.items.slice(0,1);check(realmSetCount(key)===1,'Stash set count '+key);s.items.push(gear(window.REALM_SPECIALS.sets[key].pieces[0],3,0));check(realmSetCount(key)===1,'Duplicate slot '+key)}
- return 'PASS: capacities/removal/save/duplicates, Crown aura/potions, Duality proc/expiry/risk, limb/Socket shots and ward budgets, Torment meter/cleanse/overheal, cape/hide partner locks, Mori, Interregnum and legal ST sets; non-dagger/non-staff recipe hash unchanged';
+ return 'PASS: capacities/removal/save/duplicates, Crown aura/potions, Duality proc/expiry/risk, limb/Socket shots and ward budgets, Torment meter/cleanse/overheal, cape/hide partner locks, Mori, Interregnum and legal ST sets; recipe hash outside dagger/staff/wand passes unchanged';
 })()`,ctx));

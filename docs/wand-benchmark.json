@@ -1,0 +1,2025 @@
+{
+  "version": "0.36.0",
+  "baselineCommit": "c41201840c9feb9b6482dad33691928058ab6c75",
+  "assumptions": "All 77 non-Shiny wand definitions, including morning-star subtypes and reskins; Priest/Sorcerer/Summoner/Druid, eight bosses at dungeon indices 0,4,9,14,19,24,29,34; two tiered support levels at 60%/90% family maximum, magic ring T3/T6, extra native tiered wand, 3 Health Potions, +50 base HP and full equipped HP, +8% relic recharge, seed 123456, Adventurer depth 20, 0.05s tick. Tested wand packed first in top row; no enhancements, enchantments, infused gear or paired special rings. Same fixtures in both versions. Fixed-build comparison, not an optimized-build or full-run economy test.",
+  "fightsPerVersion": 4928,
+  "before": [
+    {
+      "id": "wiki_3004",
+      "name": "Abomination's Wrath",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_53821",
+      "name": "Acidic Aspergillum",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_63884",
+      "name": "Aeonic Talon",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_17708",
+      "name": "Aspirant's Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_55381",
+      "name": "Beekeeper's Flamethrower",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.13
+    },
+    {
+      "id": "wiki_12162",
+      "name": "Brass Chamberstick",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_14226",
+      "name": "C.L.A.W.",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_1398",
+      "name": "Caduceus of Current Craziness",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_37681",
+      "name": "Caduceus Of Enlightened Chaos",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_26733",
+      "name": "Cane of Caduceus",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_54797",
+      "name": "Cane of the Void",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_52258",
+      "name": "Carnival's Conjurer",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_42282",
+      "name": "Ceremonial Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_1462",
+      "name": "Chocolate Ovipositor",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_3123",
+      "name": "Conducting Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_2879",
+      "name": "Crystal Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_23627",
+      "name": "Deliverance",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_48830",
+      "name": "Dimensional Union",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_14465",
+      "name": "Dusky Catalyst",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_14218",
+      "name": "Earthen Ward",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_65441",
+      "name": "Eggstatic Conductor",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_57114",
+      "name": "Eternal Bloom Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_5848",
+      "name": "Eternal Snowflake Wand",
+      "fights": 64,
+      "wins": 34,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 6,
+        "summoner": 6,
+        "druid": 12
+      },
+      "averageSeconds": 20.85
+    },
+    {
+      "id": "wiki_28462",
+      "name": "Flip-Flops",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_20745",
+      "name": "Fortitude",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_5138",
+      "name": "Frozen Wand",
+      "fights": 64,
+      "wins": 34,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 6,
+        "summoner": 6,
+        "druid": 12
+      },
+      "averageSeconds": 20.85
+    },
+    {
+      "id": "wiki_29897",
+      "name": "Gearhawk Morning Star",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_42103",
+      "name": "Glowing Torch",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_1220",
+      "name": "Heartbreaker Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_24968",
+      "name": "Hero's Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_14784",
+      "name": "Holy Artifact",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_49696",
+      "name": "Laser Pointer",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_41818",
+      "name": "Legion Elite Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_8999",
+      "name": "Lethargic Sentience",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_65287",
+      "name": "Lightning Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_28834",
+      "name": "Lumiaire",
+      "fights": 64,
+      "wins": 29,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 4,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.8
+    },
+    {
+      "id": "wiki_19366",
+      "name": "Magic Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_12070",
+      "name": "Measuring Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_44913",
+      "name": "Morning Square",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_26748",
+      "name": "Morning Star Of Sweet Miracles",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_24974",
+      "name": "Morning Star of the Hero",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_41784",
+      "name": "Morning Star of the Void",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_56460",
+      "name": "Neo Snowblind Wand",
+      "fights": 64,
+      "wins": 34,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 6,
+        "summoner": 6,
+        "druid": 12
+      },
+      "averageSeconds": 20.85
+    },
+    {
+      "id": "wiki_56459",
+      "name": "Neo Warlord Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_14450",
+      "name": "Obsidian Macuahuitl",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_9084",
+      "name": "Present Dispensing Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_48198",
+      "name": "Pulsating Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_19324",
+      "name": "Rainbow Rod",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_47907",
+      "name": "Ravenous Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_42013",
+      "name": "Razorthorn Branch",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.13
+    },
+    {
+      "id": "wiki_63870",
+      "name": "Retrowinds Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_2009",
+      "name": "Rod of Radiance",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_42292",
+      "name": "Scarlet Etched Branch",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_25700",
+      "name": "Snowblind Wand",
+      "fights": 64,
+      "wins": 34,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 6,
+        "summoner": 6,
+        "druid": 12
+      },
+      "averageSeconds": 20.85
+    },
+    {
+      "id": "wiki_7315",
+      "name": "Solar Flare Igniter",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_24834",
+      "name": "Soul's Guidance",
+      "fights": 64,
+      "wins": 33,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 6,
+        "druid": 12
+      },
+      "averageSeconds": 19.34
+    },
+    {
+      "id": "wiki_3307",
+      "name": "Spicy Wand of Spice",
+      "fights": 64,
+      "wins": 34,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 6,
+        "summoner": 6,
+        "druid": 12
+      },
+      "averageSeconds": 20.85
+    },
+    {
+      "id": "wiki_2635",
+      "name": "Sprite Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_3101",
+      "name": "St. Abraham's Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_41763",
+      "name": "Sweet Desire Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_63774",
+      "name": "Sweettreats Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_3783",
+      "name": "Temporal Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_26227",
+      "name": "The North Star",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_8204",
+      "name": "Theurgy Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_14779",
+      "name": "Tormented Shriek",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_26096",
+      "name": "Tyrant's Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_38586",
+      "name": "Venerable Crystal Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_3856",
+      "name": "Wand of Ancient Terror",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_8844",
+      "name": "Wand of Budding Romance",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_8854",
+      "name": "Wand of Egg-cellence",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_9055",
+      "name": "Wand of Geb",
+      "fights": 64,
+      "wins": 32,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 5,
+        "druid": 12
+      },
+      "averageSeconds": 20.14
+    },
+    {
+      "id": "wiki_41751",
+      "name": "Wand of Hidden Knowledge",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_3076",
+      "name": "Wand of the Bulwark",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_6203",
+      "name": "Wand of the Fallen",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_14494",
+      "name": "Wand of the Summoned One",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_25699",
+      "name": "Warlord Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    },
+    {
+      "id": "wiki_6861",
+      "name": "Winter's Breath Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.09
+    }
+  ],
+  "after": [
+    {
+      "id": "wiki_3004",
+      "name": "Abomination's Wrath",
+      "fights": 64,
+      "wins": 31,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 12
+      },
+      "averageSeconds": 19.23
+    },
+    {
+      "id": "wiki_53821",
+      "name": "Acidic Aspergillum",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.88
+    },
+    {
+      "id": "wiki_63884",
+      "name": "Aeonic Talon",
+      "fights": 64,
+      "wins": 33,
+      "byClass": {
+        "priest": 11,
+        "sorcerer": 5,
+        "summoner": 6,
+        "druid": 11
+      },
+      "averageSeconds": 16.66
+    },
+    {
+      "id": "wiki_17708",
+      "name": "Aspirant's Wand",
+      "fights": 64,
+      "wins": 28,
+      "byClass": {
+        "priest": 9,
+        "sorcerer": 4,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.88
+    },
+    {
+      "id": "wiki_55381",
+      "name": "Beekeeper's Flamethrower",
+      "fights": 64,
+      "wins": 31,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 12
+      },
+      "averageSeconds": 18.75
+    },
+    {
+      "id": "wiki_12162",
+      "name": "Brass Chamberstick",
+      "fights": 64,
+      "wins": 31,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 5,
+        "druid": 11
+      },
+      "averageSeconds": 17.99
+    },
+    {
+      "id": "wiki_14226",
+      "name": "C.L.A.W.",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 18.29
+    },
+    {
+      "id": "wiki_1398",
+      "name": "Caduceus of Current Craziness",
+      "fights": 64,
+      "wins": 29,
+      "byClass": {
+        "priest": 9,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.89
+    },
+    {
+      "id": "wiki_37681",
+      "name": "Caduceus Of Enlightened Chaos",
+      "fights": 64,
+      "wins": 29,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 4,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.37
+    },
+    {
+      "id": "wiki_26733",
+      "name": "Cane of Caduceus",
+      "fights": 64,
+      "wins": 31,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 12
+      },
+      "averageSeconds": 18.71
+    },
+    {
+      "id": "wiki_54797",
+      "name": "Cane of the Void",
+      "fights": 64,
+      "wins": 31,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 12
+      },
+      "averageSeconds": 18.71
+    },
+    {
+      "id": "wiki_52258",
+      "name": "Carnival's Conjurer",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.54
+    },
+    {
+      "id": "wiki_42282",
+      "name": "Ceremonial Wand",
+      "fights": 64,
+      "wins": 32,
+      "byClass": {
+        "priest": 11,
+        "sorcerer": 5,
+        "summoner": 5,
+        "druid": 11
+      },
+      "averageSeconds": 16.92
+    },
+    {
+      "id": "wiki_1462",
+      "name": "Chocolate Ovipositor",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.88
+    },
+    {
+      "id": "wiki_3123",
+      "name": "Conducting Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.2
+    },
+    {
+      "id": "wiki_2879",
+      "name": "Crystal Wand",
+      "fights": 64,
+      "wins": 29,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 4,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 20.22
+    },
+    {
+      "id": "wiki_23627",
+      "name": "Deliverance",
+      "fights": 64,
+      "wins": 29,
+      "byClass": {
+        "priest": 9,
+        "sorcerer": 4,
+        "summoner": 5,
+        "druid": 11
+      },
+      "averageSeconds": 19.99
+    },
+    {
+      "id": "wiki_48830",
+      "name": "Dimensional Union",
+      "fights": 64,
+      "wins": 32,
+      "byClass": {
+        "priest": 11,
+        "sorcerer": 5,
+        "summoner": 5,
+        "druid": 11
+      },
+      "averageSeconds": 18.11
+    },
+    {
+      "id": "wiki_14465",
+      "name": "Dusky Catalyst",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 18.05
+    },
+    {
+      "id": "wiki_14218",
+      "name": "Earthen Ward",
+      "fights": 64,
+      "wins": 33,
+      "byClass": {
+        "priest": 11,
+        "sorcerer": 6,
+        "summoner": 5,
+        "druid": 11
+      },
+      "averageSeconds": 17.08
+    },
+    {
+      "id": "wiki_65441",
+      "name": "Eggstatic Conductor",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.2
+    },
+    {
+      "id": "wiki_57114",
+      "name": "Eternal Bloom Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.45
+    },
+    {
+      "id": "wiki_5848",
+      "name": "Eternal Snowflake Wand",
+      "fights": 64,
+      "wins": 29,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 4,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.66
+    },
+    {
+      "id": "wiki_28462",
+      "name": "Flip-Flops",
+      "fights": 64,
+      "wins": 32,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 6,
+        "summoner": 5,
+        "druid": 11
+      },
+      "averageSeconds": 17.65
+    },
+    {
+      "id": "wiki_20745",
+      "name": "Fortitude",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 4,
+        "summoner": 4,
+        "druid": 12
+      },
+      "averageSeconds": 18.64
+    },
+    {
+      "id": "wiki_5138",
+      "name": "Frozen Wand",
+      "fights": 64,
+      "wins": 29,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 4,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 20.22
+    },
+    {
+      "id": "wiki_29897",
+      "name": "Gearhawk Morning Star",
+      "fights": 64,
+      "wins": 33,
+      "byClass": {
+        "priest": 11,
+        "sorcerer": 5,
+        "summoner": 6,
+        "druid": 11
+      },
+      "averageSeconds": 16.66
+    },
+    {
+      "id": "wiki_42103",
+      "name": "Glowing Torch",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.45
+    },
+    {
+      "id": "wiki_1220",
+      "name": "Heartbreaker Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.18
+    },
+    {
+      "id": "wiki_24968",
+      "name": "Hero's Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.45
+    },
+    {
+      "id": "wiki_14784",
+      "name": "Holy Artifact",
+      "fights": 64,
+      "wins": 31,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 12
+      },
+      "averageSeconds": 18.74
+    },
+    {
+      "id": "wiki_49696",
+      "name": "Laser Pointer",
+      "fights": 64,
+      "wins": 31,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 12
+      },
+      "averageSeconds": 18.34
+    },
+    {
+      "id": "wiki_41818",
+      "name": "Legion Elite Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.45
+    },
+    {
+      "id": "wiki_8999",
+      "name": "Lethargic Sentience",
+      "fights": 64,
+      "wins": 22,
+      "byClass": {
+        "priest": 6,
+        "sorcerer": 3,
+        "summoner": 3,
+        "druid": 10
+      },
+      "averageSeconds": 23.63
+    },
+    {
+      "id": "wiki_65287",
+      "name": "Lightning Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 9,
+        "sorcerer": 5,
+        "summoner": 5,
+        "druid": 11
+      },
+      "averageSeconds": 20.43
+    },
+    {
+      "id": "wiki_28834",
+      "name": "Lumiaire",
+      "fights": 64,
+      "wins": 32,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 6,
+        "summoner": 5,
+        "druid": 11
+      },
+      "averageSeconds": 17.37
+    },
+    {
+      "id": "wiki_19366",
+      "name": "Magic Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.18
+    },
+    {
+      "id": "wiki_12070",
+      "name": "Measuring Wand",
+      "fights": 64,
+      "wins": 29,
+      "byClass": {
+        "priest": 9,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 20.07
+    },
+    {
+      "id": "wiki_44913",
+      "name": "Morning Square",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.42
+    },
+    {
+      "id": "wiki_26748",
+      "name": "Morning Star Of Sweet Miracles",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19
+    },
+    {
+      "id": "wiki_24974",
+      "name": "Morning Star of the Hero",
+      "fights": 64,
+      "wins": 32,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 6,
+        "summoner": 5,
+        "druid": 11
+      },
+      "averageSeconds": 18.44
+    },
+    {
+      "id": "wiki_41784",
+      "name": "Morning Star of the Void",
+      "fights": 64,
+      "wins": 32,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 6,
+        "summoner": 5,
+        "druid": 11
+      },
+      "averageSeconds": 18.44
+    },
+    {
+      "id": "wiki_56460",
+      "name": "Neo Snowblind Wand",
+      "fights": 64,
+      "wins": 31,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 12
+      },
+      "averageSeconds": 18.39
+    },
+    {
+      "id": "wiki_56459",
+      "name": "Neo Warlord Wand",
+      "fights": 64,
+      "wins": 31,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 12
+      },
+      "averageSeconds": 18.86
+    },
+    {
+      "id": "wiki_14450",
+      "name": "Obsidian Macuahuitl",
+      "fights": 64,
+      "wins": 32,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 6,
+        "summoner": 5,
+        "druid": 11
+      },
+      "averageSeconds": 18.44
+    },
+    {
+      "id": "wiki_9084",
+      "name": "Present Dispensing Wand",
+      "fights": 64,
+      "wins": 29,
+      "byClass": {
+        "priest": 9,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.89
+    },
+    {
+      "id": "wiki_48198",
+      "name": "Pulsating Wand",
+      "fights": 64,
+      "wins": 31,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 12
+      },
+      "averageSeconds": 19.23
+    },
+    {
+      "id": "wiki_19324",
+      "name": "Rainbow Rod",
+      "fights": 64,
+      "wins": 24,
+      "byClass": {
+        "priest": 7,
+        "sorcerer": 3,
+        "summoner": 4,
+        "druid": 10
+      },
+      "averageSeconds": 23.59
+    },
+    {
+      "id": "wiki_47907",
+      "name": "Ravenous Wand",
+      "fights": 64,
+      "wins": 34,
+      "byClass": {
+        "priest": 11,
+        "sorcerer": 6,
+        "summoner": 5,
+        "druid": 12
+      },
+      "averageSeconds": 18.98
+    },
+    {
+      "id": "wiki_42013",
+      "name": "Razorthorn Branch",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 4,
+        "summoner": 5,
+        "druid": 11
+      },
+      "averageSeconds": 20.14
+    },
+    {
+      "id": "wiki_63870",
+      "name": "Retrowinds Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.45
+    },
+    {
+      "id": "wiki_2009",
+      "name": "Rod of Radiance",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.45
+    },
+    {
+      "id": "wiki_42292",
+      "name": "Scarlet Etched Branch",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 4,
+        "summoner": 5,
+        "druid": 11
+      },
+      "averageSeconds": 20.32
+    },
+    {
+      "id": "wiki_25700",
+      "name": "Snowblind Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.08
+    },
+    {
+      "id": "wiki_7315",
+      "name": "Solar Flare Igniter",
+      "fights": 64,
+      "wins": 31,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 12
+      },
+      "averageSeconds": 18.34
+    },
+    {
+      "id": "wiki_24834",
+      "name": "Soul's Guidance",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 4,
+        "summoner": 5,
+        "druid": 11
+      },
+      "averageSeconds": 20.32
+    },
+    {
+      "id": "wiki_3307",
+      "name": "Spicy Wand of Spice",
+      "fights": 64,
+      "wins": 25,
+      "byClass": {
+        "priest": 7,
+        "sorcerer": 3,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 23.54
+    },
+    {
+      "id": "wiki_2635",
+      "name": "Sprite Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 20.19
+    },
+    {
+      "id": "wiki_3101",
+      "name": "St. Abraham's Wand",
+      "fights": 64,
+      "wins": 31,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 5,
+        "druid": 11
+      },
+      "averageSeconds": 20.13
+    },
+    {
+      "id": "wiki_41763",
+      "name": "Sweet Desire Wand",
+      "fights": 64,
+      "wins": 33,
+      "byClass": {
+        "priest": 11,
+        "sorcerer": 6,
+        "summoner": 5,
+        "druid": 11
+      },
+      "averageSeconds": 17.08
+    },
+    {
+      "id": "wiki_63774",
+      "name": "Sweettreats Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.08
+    },
+    {
+      "id": "wiki_3783",
+      "name": "Temporal Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.45
+    },
+    {
+      "id": "wiki_26227",
+      "name": "The North Star",
+      "fights": 64,
+      "wins": 32,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 6,
+        "summoner": 5,
+        "druid": 11
+      },
+      "averageSeconds": 18.44
+    },
+    {
+      "id": "wiki_8204",
+      "name": "Theurgy Wand",
+      "fights": 64,
+      "wins": 31,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 12
+      },
+      "averageSeconds": 18.74
+    },
+    {
+      "id": "wiki_14779",
+      "name": "Tormented Shriek",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 18.29
+    },
+    {
+      "id": "wiki_26096",
+      "name": "Tyrant's Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.37
+    },
+    {
+      "id": "wiki_38586",
+      "name": "Venerable Crystal Wand",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.26
+    },
+    {
+      "id": "wiki_3856",
+      "name": "Wand of Ancient Terror",
+      "fights": 64,
+      "wins": 29,
+      "byClass": {
+        "priest": 9,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.89
+    },
+    {
+      "id": "wiki_8844",
+      "name": "Wand of Budding Romance",
+      "fights": 64,
+      "wins": 29,
+      "byClass": {
+        "priest": 9,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.89
+    },
+    {
+      "id": "wiki_8854",
+      "name": "Wand of Egg-cellence",
+      "fights": 64,
+      "wins": 29,
+      "byClass": {
+        "priest": 9,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.89
+    },
+    {
+      "id": "wiki_9055",
+      "name": "Wand of Geb",
+      "fights": 64,
+      "wins": 33,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 6,
+        "druid": 12
+      },
+      "averageSeconds": 20.56
+    },
+    {
+      "id": "wiki_41751",
+      "name": "Wand of Hidden Knowledge",
+      "fights": 64,
+      "wins": 32,
+      "byClass": {
+        "priest": 11,
+        "sorcerer": 5,
+        "summoner": 5,
+        "druid": 11
+      },
+      "averageSeconds": 16.92
+    },
+    {
+      "id": "wiki_3076",
+      "name": "Wand of the Bulwark",
+      "fights": 64,
+      "wins": 29,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 4,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.66
+    },
+    {
+      "id": "wiki_6203",
+      "name": "Wand of the Fallen",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.08
+    },
+    {
+      "id": "wiki_14494",
+      "name": "Wand of the Summoned One",
+      "fights": 64,
+      "wins": 30,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.75
+    },
+    {
+      "id": "wiki_25699",
+      "name": "Warlord Wand",
+      "fights": 64,
+      "wins": 29,
+      "byClass": {
+        "priest": 10,
+        "sorcerer": 4,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 20.22
+    },
+    {
+      "id": "wiki_6861",
+      "name": "Winter's Breath Wand",
+      "fights": 64,
+      "wins": 29,
+      "byClass": {
+        "priest": 9,
+        "sorcerer": 5,
+        "summoner": 4,
+        "druid": 11
+      },
+      "averageSeconds": 19.89
+    }
+  ],
+  "changedFights": 4604,
+  "totalWins": {
+    "before": 2334,
+    "after": 2325
+  },
+  "finalConsistency": {
+    "delayedAndSoulProfiles": 9,
+    "currentSourceFights": 576,
+    "summariesMatched": true,
+    "ravenousRerunFightsPerVersion": 64,
+    "ravenousChangedFightRecords": 64,
+    "note": "Ravenous final before/after records replace its original 64 fixtures after changing Berserk to accelerate recharge progress. All 64 Ravenous records differed from baseline in both runs because of its HP capacity; aggregate changedFights is unchanged."
+  }
+}

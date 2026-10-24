@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.36.0 — 2026-10-24
+
+- Reworked all 93 imported UT/ST wand entries (77 regular profiles and 16 Shiny variants) from inspected RotMG game data. Independent morning-star rhythms, mixed piercing, returning/slow shots, burst/recovery cycles, Razorthorn’s Nettle pattern and broad Lightning/Sprite damage rolls replace generic recipes.
+- Added bounded Forgotten/Desperate Souls, acid pools, Dimensional Union’s pulsing squares, Fortitude’s ability-triggered rings, Hidden Knowledge’s self-curse bargain, Dusky Catalyst’s mana trade-off, Abomination mana procs and Ravenous bleed/Berserk. Close-range rings and circling volleys use explicit backpack-row positioning; full-hit budgets and chance effects are adapted to RealmPack.
+- Updated compact item summaries and live state indicators. Preserved saved upgrades, acquisition rules, artwork, footprints and existing Geb membership/ability bonuses. Sources, all profiles and adaptation details: docs/wand-identities.md.
+- Validation: JavaScript syntax and all 27 regression suites; 372 legal wand/class/version combat trials, 756 wand UI views, 7,176 catalogue views and a 4× mixed-wand/native-ability browser smoke check. All 1,995 tiered class fight records match the previous release. The 9,856-fight wand comparison stays close overall (2,334→2,325 wins per 4,928 fixtures); the 140-fight Geb comparison improves 38→42 wins per 70 fixtures. Novelty weapons remain weak; soul payoff and slow piercing trade-offs remain playtesting watch points.
+
 ## 0.35.0 — 2026-10-24
 
 - Reworked all 98 imported UT/ST staff entries (81 regular/historical definitions and 17 Shiny variants) from inspected RotMG game data. Distinct firing rhythms, mixed piercing spellblades, delayed accelerating shots, radial volleys and short scythe chains replace generic recipes. Reskins share their underlying weapon behavior; historical versions remain distinct.
