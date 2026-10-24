@@ -1,0 +1,3798 @@
+{
+  "inspected": "2026-10-24",
+  "source": "Realm.wiki rendered game data; numerical facts and identifiers, not flavor descriptions.",
+  "items": [
+    {
+      "id": "wiki_56474",
+      "name": "Acidic Guardian Enchantment",
+      "source": "https://realm.wiki/item?id=56474",
+      "damage": [
+        350,
+        400
+      ],
+      "tooltipRate": 0.66,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Stone Sword Reskin Missile Awakened 2",
+          "Speed": "100",
+          "MinDamage": "350",
+          "MaxDamage": "400",
+          "LifetimeMS": "450"
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Stone Sword Reskin Missile Awakened 1",
+          "Speed": "100",
+          "MinDamage": "350",
+          "MaxDamage": "400",
+          "LifetimeMS": "450"
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "1",
+          "RateOfFire": "0.66",
+          "ProjectilePattern": "",
+          "NumProjectiles": "1",
+          "PosOffset": "-0.25,0"
+        }
+      ],
+      "equip": [],
+      "helper": true,
+      "amulets": []
+    },
+    {
+      "id": "wiki_25692",
+      "name": "Acidic Slasher",
+      "source": "https://realm.wiki/item?id=25692",
+      "damage": [
+        350,
+        400
+      ],
+      "tooltipRate": 0.6,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Stone Reskin Missile",
+          "Speed": "100",
+          "MinDamage": "350",
+          "MaxDamage": "400",
+          "LifetimeMS": "400"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.6"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_3077",
+      "name": "Ancient Stone Sword",
+      "source": "https://realm.wiki/item?id=3077",
+      "damage": [
+        350,
+        400
+      ],
+      "tooltipRate": 0.6,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Stone Slash",
+          "Speed": "100",
+          "MinDamage": "350",
+          "MaxDamage": "400",
+          "LifetimeMS": "400"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.6"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_1705",
+      "name": "Apocalypse Feather",
+      "source": "https://realm.wiki/item?id=1705",
+      "damage": [
+        15,
+        45
+      ],
+      "tooltipRate": 2.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Apo Feather",
+          "Speed": "75",
+          "MinDamage": "15",
+          "MaxDamage": "45",
+          "LifetimeMS": "675",
+          "Amplitude": "0.5",
+          "Frequency": "0.75",
+          "Size": "100"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_9659",
+      "name": "Arcane Rapier",
+      "source": "https://realm.wiki/item?id=9659",
+      "damage": [
+        115,
+        300
+      ],
+      "tooltipRate": 0.2,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Arcane Blade",
+          "Speed": "200",
+          "MinDamage": "115",
+          "MaxDamage": "170",
+          "LifetimeMS": "400",
+          "MultiHit": true,
+          "Boomerang": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Arcane Lunge",
+          "Speed": "200",
+          "MinDamage": "300",
+          "MaxDamage": "300",
+          "LifetimeMS": "325",
+          "MultiHit": true,
+          "ArmorPiercing": true
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1"
+        },
+        {
+          "Index": "1",
+          "ProjectileId": "1",
+          "RateOfFire": "0.2"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_13867",
+      "name": "Artificial Core Enchantment",
+      "source": "https://realm.wiki/item?id=13867",
+      "damage": [
+        50,
+        70
+      ],
+      "tooltipRate": 0.65,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Awakened EP Shot",
+          "Speed": "90",
+          "MinDamage": "50",
+          "MaxDamage": "70",
+          "LifetimeMS": "600",
+          "Size": "80",
+          "TurnRate": "20",
+          "TurnStopTime": "300",
+          "ArmorPiercing": true,
+          "PassesCover": true,
+          "FaceDir": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Awakened EP Shot",
+          "Speed": "90",
+          "MinDamage": "50",
+          "MaxDamage": "70",
+          "LifetimeMS": "600",
+          "TurnRate": "-20",
+          "TurnStopTime": "300",
+          "Size": "80",
+          "ArmorPiercing": true,
+          "PassesCover": true,
+          "FaceDir": true
+        },
+        {
+          "Id": "2",
+          "ObjectId": "Awakened EP Shot",
+          "Speed": "100",
+          "MinDamage": "50",
+          "MaxDamage": "70",
+          "LifetimeMS": "580",
+          "Size": "80",
+          "TurnRate": "65",
+          "TurnStopTime": "300",
+          "ArmorPiercing": true,
+          "PassesCover": true,
+          "FaceDir": true
+        },
+        {
+          "Id": "3",
+          "ObjectId": "Awakened EP Shot",
+          "Speed": "100",
+          "MinDamage": "50",
+          "MaxDamage": "70",
+          "LifetimeMS": "580",
+          "TurnRate": "-65",
+          "TurnStopTime": "300",
+          "Size": "80",
+          "ArmorPiercing": true,
+          "PassesCover": true,
+          "FaceDir": true
+        },
+        {
+          "Id": "4",
+          "ObjectId": "Awakened EP Shot",
+          "Speed": "120",
+          "MinDamage": "50",
+          "MaxDamage": "70",
+          "LifetimeMS": "555",
+          "Size": "80",
+          "TurnRate": "120",
+          "TurnStopTime": "300",
+          "ArmorPiercing": true,
+          "PassesCover": true,
+          "FaceDir": true
+        },
+        {
+          "Id": "5",
+          "ObjectId": "Awakened EP Shot",
+          "Speed": "120",
+          "MinDamage": "50",
+          "MaxDamage": "70",
+          "LifetimeMS": "555",
+          "TurnRate": "-120",
+          "TurnStopTime": "300",
+          "Size": "80",
+          "ArmorPiercing": true,
+          "PassesCover": true,
+          "FaceDir": true
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "DefaultAngle": "-30",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.65"
+        },
+        {
+          "Index": "1",
+          "ProjectileId": "1",
+          "DefaultAngle": "30",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.65"
+        },
+        {
+          "Index": "2",
+          "ProjectileId": "2",
+          "DefaultAngle": "-90",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.65"
+        },
+        {
+          "Index": "3",
+          "ProjectileId": "3",
+          "DefaultAngle": "90",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.65"
+        },
+        {
+          "Index": "4",
+          "ProjectileId": "4",
+          "DefaultAngle": "-150",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.65"
+        },
+        {
+          "Index": "5",
+          "ProjectileId": "5",
+          "DefaultAngle": "150",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.65"
+        }
+      ],
+      "equip": [],
+      "helper": true,
+      "amulets": []
+    },
+    {
+      "id": "wiki_17706",
+      "name": "Aspirant's Sword",
+      "source": "https://realm.wiki/item?id=17706",
+      "damage": [
+        210,
+        255
+      ],
+      "tooltipRate": 1.1,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Aspirant Sword Slash",
+          "Speed": "100",
+          "MinDamage": "210",
+          "MaxDamage": "255",
+          "LifetimeMS": "350"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.1"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_49470",
+      "name": "Atavistic Soul Sabre",
+      "source": "https://realm.wiki/item?id=49470",
+      "damage": [
+        420,
+        475
+      ],
+      "tooltipRate": 0.6,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Mech Stone Proj",
+          "Speed": "100",
+          "MinDamage": "420",
+          "MaxDamage": "475",
+          "LifetimeMS": "400"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_17561",
+      "name": "Barnacle Basher",
+      "source": "https://realm.wiki/item?id=17561",
+      "damage": [
+        50,
+        500
+      ],
+      "tooltipRate": 0.4,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Flail Anchor",
+          "Speed": "100",
+          "MinDamage": "375",
+          "MaxDamage": "500",
+          "LifetimeMS": "1200",
+          "Acceleration": "-1000",
+          "AccelerationDelay": "400",
+          "Size": "120",
+          "SpeedClamp": "0",
+          "MultiHit": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Anchor Chain",
+          "Speed": "75",
+          "MinDamage": "50",
+          "MaxDamage": "120",
+          "LifetimeMS": "1200",
+          "Acceleration": "-1000",
+          "AccelerationDelay": "400",
+          "SpeedClamp": "0",
+          "MultiHit": true
+        },
+        {
+          "Id": "2",
+          "ObjectId": "Anchor Chain",
+          "Speed": "50",
+          "MinDamage": "50",
+          "MaxDamage": "120",
+          "LifetimeMS": "1200",
+          "Acceleration": "-1000",
+          "AccelerationDelay": "400",
+          "SpeedClamp": "0",
+          "ArmorPiercing": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "3",
+          "ObjectId": "Anchor Chain",
+          "Speed": "25",
+          "MinDamage": "50",
+          "MaxDamage": "120",
+          "LifetimeMS": "1200",
+          "Acceleration": "-1000",
+          "AccelerationDelay": "400",
+          "SpeedClamp": "0",
+          "ArmorPiercing": true,
+          "MultiHit": true
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.4"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.4"
+        },
+        {
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.4"
+        },
+        {
+          "ProjectileId": "3",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.4"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_28461",
+      "name": "Beach Umbrella",
+      "source": "https://realm.wiki/item?id=28461",
+      "damage": [
+        65,
+        400
+      ],
+      "tooltipRate": 0.5,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Beach Umbrella Projectile 2",
+          "Speed": "100",
+          "MinDamage": "340",
+          "MaxDamage": "400",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Beach Umbrella Projectile 1",
+          "Speed": "75",
+          "MinDamage": "65",
+          "MaxDamage": "90",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "2",
+          "ObjectId": "Beach Umbrella Projectile 1",
+          "Speed": "50",
+          "MinDamage": "65",
+          "MaxDamage": "90",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        },
+        {
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_42097",
+      "name": "Blacksmith Hammer",
+      "source": "https://realm.wiki/item?id=42097",
+      "damage": [
+        235,
+        290
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Mining Sword Proj",
+          "Speed": "100",
+          "MinDamage": "235",
+          "MaxDamage": "290",
+          "LifetimeMS": "350"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_7325",
+      "name": "Blade of Eternal Rebirth",
+      "source": "https://realm.wiki/item?id=7325",
+      "damage": [
+        280,
+        295
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Rebirth Slash",
+          "Speed": "100",
+          "MinDamage": "280",
+          "MaxDamage": "295",
+          "LifetimeMS": "450",
+          "Amplitude": "0.7",
+          "Frequency": "0.5",
+          "FaceDir": true
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_42316",
+      "name": "Blood Axe",
+      "source": "https://realm.wiki/item?id=42316",
+      "damage": [
+        205,
+        225
+      ],
+      "tooltipRate": 1.2,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Blood Viking Axe Small",
+          "Speed": "150",
+          "MinDamage": "205",
+          "MaxDamage": "225",
+          "LifetimeMS": "2250",
+          "Acceleration": "-10000",
+          "AccelerationDelay": "242.5",
+          "SpeedClamp": "0",
+          "Size": "80"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_13877",
+      "name": "Bone Claws Enchantment",
+      "source": "https://realm.wiki/item?id=13877",
+      "damage": [
+        70,
+        105
+      ],
+      "tooltipRate": 0.7,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Awakened Bone Dagger Shot",
+          "Speed": "130",
+          "Size": "80",
+          "MinDamage": "70",
+          "MaxDamage": "105",
+          "LifetimeMS": "387",
+          "Amplitude": "0.35",
+          "Frequency": "1.25",
+          "ConditionEffect": "Bleeding",
+          "Duration": "3",
+          "BleedDamage": "30",
+          "MultiHit": true,
+          "FaceDir": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Awakened Bone Dagger Shot2",
+          "Speed": "130",
+          "Size": "80",
+          "MinDamage": "70",
+          "MaxDamage": "105",
+          "LifetimeMS": "387",
+          "Amplitude": "0.35",
+          "Frequency": "1.25",
+          "ConditionEffect": "Bleeding",
+          "Duration": "3",
+          "BleedDamage": "30",
+          "MultiHit": true,
+          "FaceDir": true
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "DefaultAngle": "0.5",
+          "RateOfFire": "0.7"
+        },
+        {
+          "Index": "1",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "DefaultAngle": "-0.5",
+          "RateOfFire": "0.7"
+        }
+      ],
+      "equip": [],
+      "helper": true,
+      "amulets": []
+    },
+    {
+      "id": "wiki_12163",
+      "name": "Cheerful Chipper",
+      "source": "https://realm.wiki/item?id=12163",
+      "damage": [
+        120,
+        150
+      ],
+      "tooltipRate": 0.8,
+      "tooltipShots": 3,
+      "projectiles": [
+        {
+          "ObjectId": "Oryxmas Sword Projectile",
+          "Speed": "100",
+          "MinDamage": "120",
+          "MaxDamage": "150",
+          "LifetimeMS": "800",
+          "Acceleration": "-800",
+          "AccelerationDelay": "350",
+          "SpeedClamp": "0"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_28479",
+      "name": "Chocsicle",
+      "source": "https://realm.wiki/item?id=28479",
+      "damage": [
+        180,
+        230
+      ],
+      "tooltipRate": 1.3,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Chocsicle Projectile",
+          "Speed": "150",
+          "MinDamage": "180",
+          "MaxDamage": "230",
+          "LifetimeMS": "220"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.3"
+        }
+      ],
+      "equip": [
+        {
+          "Stat": "SPD",
+          "Amount": "3"
+        }
+      ],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_2563",
+      "name": "Crystal Sword",
+      "source": "https://realm.wiki/item?id=2563",
+      "damage": [
+        195,
+        225
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Leviathan Bolt",
+          "Speed": "100",
+          "MinDamage": "195",
+          "MaxDamage": "225",
+          "LifetimeMS": "450"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_22443",
+      "name": "Dalvar's Battle Axe",
+      "source": "https://realm.wiki/item?id=22443",
+      "damage": [
+        205,
+        225
+      ],
+      "tooltipRate": 1.2,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Nordic Axe Small",
+          "Speed": "150",
+          "MinDamage": "205",
+          "MaxDamage": "225",
+          "LifetimeMS": "2250",
+          "Acceleration": "-10000",
+          "AccelerationDelay": "242.5",
+          "SpeedClamp": "0",
+          "Size": "80"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_23732",
+      "name": "Damnation",
+      "source": "https://realm.wiki/item?id=23732",
+      "damage": [
+        210,
+        1200
+      ],
+      "tooltipRate": 0.2,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "SpecPen Damnation Flail Ball",
+          "Speed": "100",
+          "MinDamage": "1000",
+          "MaxDamage": "1200",
+          "LifetimeMS": "750",
+          "Size": "150",
+          "Boomerang": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "SpecPen Damnation Flail Chain",
+          "Speed": "75",
+          "MinDamage": "210",
+          "MaxDamage": "230",
+          "LifetimeMS": "750",
+          "Size": "65",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "2",
+          "ObjectId": "SpecPen Damnation Flail Chain",
+          "Speed": "50",
+          "MinDamage": "210",
+          "MaxDamage": "230",
+          "LifetimeMS": "750",
+          "Size": "65",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.2"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.2"
+        },
+        {
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.2"
+        }
+      ],
+      "equip": [
+        {
+          "Amount": "-60",
+          "Stat": "MAXHP"
+        },
+        {
+          "Amount": "10",
+          "Stat": "DEF"
+        },
+        {
+          "Amount": "-6",
+          "Stat": "SPD"
+        }
+      ],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_3073",
+      "name": "Demon Blade",
+      "source": "https://realm.wiki/item?id=3073",
+      "damage": [
+        150,
+        175
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 2,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Abyss Imp Projectile",
+          "Speed": "130",
+          "MinDamage": "150",
+          "MaxDamage": "175",
+          "LifetimeMS": "260"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "2",
+          "ArcGap": "25",
+          "RateOfFire": "1"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_53199",
+      "name": "Demon Blade",
+      "source": "https://realm.wiki/item?id=53199",
+      "damage": [
+        150,
+        175
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 2,
+      "projectiles": [
+        {
+          "ObjectId": "Fire Bolt",
+          "Speed": "130",
+          "MinDamage": "150",
+          "MaxDamage": "175",
+          "LifetimeMS": "260"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_28851",
+      "name": "Divinity",
+      "source": "https://realm.wiki/item?id=28851",
+      "damage": [
+        275,
+        325
+      ],
+      "tooltipRate": 0.6,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Divinity Projectile",
+          "Speed": "150",
+          "MinDamage": "275",
+          "MaxDamage": "325",
+          "LifetimeMS": "267",
+          "Size": "100",
+          "MultiHit": true
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_3295",
+      "name": "Doctor Swordsworth",
+      "source": "https://realm.wiki/item?id=3295",
+      "damage": [
+        40,
+        70
+      ],
+      "tooltipRate": 0.33,
+      "tooltipShots": 3,
+      "projectiles": [
+        {
+          "ObjectId": "Bearshot",
+          "Speed": "7",
+          "MinDamage": "40",
+          "MaxDamage": "70",
+          "LifetimeMS": "4000",
+          "Size": "75",
+          "Parametric": true,
+          "PassesCover": true
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_1460",
+      "name": "Egg Basher",
+      "source": "https://realm.wiki/item?id=1460",
+      "damage": [
+        60,
+        395
+      ],
+      "tooltipRate": 0.5,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Egg Basher Head",
+          "Speed": "100",
+          "MinDamage": "330",
+          "MaxDamage": "395",
+          "LifetimeMS": "700",
+          "Boomerang": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Egg Basher Chain",
+          "Speed": "75",
+          "MinDamage": "60",
+          "MaxDamage": "80",
+          "LifetimeMS": "700",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "2",
+          "ObjectId": "Egg Basher Chain",
+          "Speed": "50",
+          "MinDamage": "60",
+          "MaxDamage": "80",
+          "LifetimeMS": "700",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        },
+        {
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_5846",
+      "name": "Enchanted Ice Blade",
+      "source": "https://realm.wiki/item?id=5846",
+      "damage": [
+        195,
+        225
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Enchanted Ice Blade Slash",
+          "Speed": "100",
+          "MinDamage": "195",
+          "MaxDamage": "225",
+          "LifetimeMS": "450"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_13265",
+      "name": "Eternal Echo",
+      "source": "https://realm.wiki/item?id=13265",
+      "damage": [
+        275,
+        325
+      ],
+      "tooltipRate": 0.6,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Eternal Echo Projectile",
+          "Speed": "150",
+          "MinDamage": "275",
+          "MaxDamage": "325",
+          "LifetimeMS": "267",
+          "Size": "100",
+          "MultiHit": true
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_5034",
+      "name": "Eternal Graved Great Sword",
+      "source": "https://realm.wiki/item?id=5034",
+      "damage": [
+        350,
+        400
+      ],
+      "tooltipRate": 0.6,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Flower Slash",
+          "Speed": "100",
+          "MinDamage": "350",
+          "MaxDamage": "400",
+          "LifetimeMS": "400"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.6"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_55416",
+      "name": "Excubicur",
+      "source": "https://realm.wiki/item?id=55416",
+      "damage": [
+        275,
+        325
+      ],
+      "tooltipRate": 0.6,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Excubicur Projectile",
+          "Speed": "150",
+          "MinDamage": "275",
+          "MaxDamage": "325",
+          "LifetimeMS": "267",
+          "Size": "100",
+          "MultiHit": true
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_3782",
+      "name": "Faithful Spatha",
+      "source": "https://realm.wiki/item?id=3782",
+      "damage": [
+        235,
+        290
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "MotMG 2024 Sword Projectile",
+          "Speed": "100",
+          "MinDamage": "235",
+          "MaxDamage": "290",
+          "LifetimeMS": "350"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": [
+        3756,
+        3757,
+        3758,
+        3759,
+        3760,
+        3761,
+        3762,
+        3763,
+        3764,
+        3765,
+        3766,
+        3767,
+        3768,
+        3769,
+        3770,
+        3771,
+        3772,
+        3773,
+        3774,
+        3775,
+        3776,
+        3777,
+        3778,
+        3779,
+        3804,
+        3805,
+        3806,
+        3807,
+        3808,
+        3809
+      ]
+    },
+    {
+      "id": "wiki_17387",
+      "name": "Fallen One's Blade",
+      "source": "https://realm.wiki/item?id=17387",
+      "damage": [
+        125,
+        150
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 2,
+      "projectiles": [
+        {
+          "ObjectId": "CorrPala Dark Blast",
+          "Speed": "100",
+          "MinDamage": "125",
+          "MaxDamage": "150",
+          "LifetimeMS": "400",
+          "Amplitude": ".85",
+          "Frequency": "1"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_37678",
+      "name": "FFabulous FFlail",
+      "source": "https://realm.wiki/item?id=37678",
+      "damage": [
+        333,
+        333
+      ],
+      "tooltipRate": 0.4,
+      "tooltipShots": 2,
+      "projectiles": [
+        {
+          "ObjectId": "FFlail",
+          "Speed": "40",
+          "MinDamage": "333",
+          "MaxDamage": "333",
+          "LifetimeMS": "1250",
+          "Size": "80"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_13879",
+      "name": "Fractured Blade Enchantment",
+      "source": "https://realm.wiki/item?id=13879",
+      "damage": [
+        30,
+        225
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Awakened CSword Shot",
+          "Speed": "180",
+          "MinDamage": "195",
+          "MaxDamage": "225",
+          "LifetimeMS": "275",
+          "MultiHit": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Awakened CSword Shot2",
+          "Speed": "100",
+          "Size": "90",
+          "MinDamage": "30",
+          "MaxDamage": "45",
+          "ArmorPiercing": true,
+          "LifetimeMS": "175"
+        },
+        {
+          "Id": "2",
+          "ObjectId": "Awakened CSword Shot3",
+          "Speed": "100",
+          "Size": "90",
+          "MinDamage": "30",
+          "MaxDamage": "45",
+          "ArmorPiercing": true,
+          "LifetimeMS": "175"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1"
+        },
+        {
+          "Index": "1",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "DefaultAngle": "-12.5",
+          "PosOffset": "0,3",
+          "RateOfFire": "1"
+        },
+        {
+          "Index": "2",
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "DefaultAngle": "12.5",
+          "PosOffset": "0,3",
+          "RateOfFire": "1"
+        }
+      ],
+      "equip": [],
+      "helper": true,
+      "amulets": []
+    },
+    {
+      "id": "wiki_9612",
+      "name": "Frostbite",
+      "source": "https://realm.wiki/item?id=9612",
+      "damage": [
+        210,
+        270
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "ice bomb",
+          "Speed": "100",
+          "MinDamage": "210",
+          "MaxDamage": "270",
+          "LifetimeMS": "350"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_65282",
+      "name": "Fury Flail",
+      "source": "https://realm.wiki/item?id=65282",
+      "damage": [
+        55,
+        345
+      ],
+      "tooltipRate": 0.6,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Flail Anvil",
+          "Speed": "230",
+          "MinDamage": "300",
+          "MaxDamage": "345",
+          "LifetimeMS": "1000",
+          "MultiHit": true,
+          "Size": "120",
+          "ConditionEffect": "Bleeding",
+          "Duration": "3",
+          "Amount": "15",
+          "CircleTurnDelay": "200",
+          "CircleTurnAngle": "90",
+          "PassesCover": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Flail Chain",
+          "Speed": "150",
+          "MinDamage": "55",
+          "MaxDamage": "55",
+          "LifetimeMS": "1000",
+          "MultiHit": true,
+          "Size": "100",
+          "CircleTurnDelay": "200",
+          "CircleTurnAngle": "90",
+          "Acceleration": "300",
+          "AccelerationDelay": "200",
+          "PassesCover": true
+        },
+        {
+          "Id": "2",
+          "ObjectId": "Flail Chain",
+          "Speed": "100",
+          "MinDamage": "55",
+          "MaxDamage": "55",
+          "LifetimeMS": "1000",
+          "MultiHit": true,
+          "Size": "80",
+          "CircleTurnDelay": "200",
+          "CircleTurnAngle": "90",
+          "Acceleration": "300",
+          "AccelerationDelay": "200",
+          "PassesCover": true
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.6",
+          "PosOffset": "0,-0.5"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.6",
+          "PosOffset": "0,-0.5"
+        },
+        {
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.6",
+          "PosOffset": "0,-0.5"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_25691",
+      "name": "Gaseous Glaive",
+      "source": "https://realm.wiki/item?id=25691",
+      "damage": [
+        180,
+        230
+      ],
+      "tooltipRate": 1.3,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Cutlass Reskin Missile",
+          "Speed": "150",
+          "MinDamage": "180",
+          "MaxDamage": "230",
+          "LifetimeMS": "220"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.3"
+        }
+      ],
+      "equip": [
+        {
+          "Stat": "SPD",
+          "Amount": "3"
+        }
+      ],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_48081",
+      "name": "General's Arsenal",
+      "source": "https://realm.wiki/item?id=48081",
+      "damage": [
+        85,
+        107
+      ],
+      "tooltipRate": 2.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Arsenal Slash",
+          "Speed": "150",
+          "SpeedClamp": "50",
+          "Acceleration": "-10000000",
+          "AccelerationDelay": "200",
+          "MinDamage": "85",
+          "MaxDamage": "107",
+          "LifetimeMS": "450",
+          "PassesCover": true,
+          "ProtectFromSink": true,
+          "Size": "100"
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Arsenal Stab",
+          "Speed": "150",
+          "SpeedClamp": "50",
+          "Acceleration": "-10000000",
+          "AccelerationDelay": "200",
+          "MinDamage": "85",
+          "MaxDamage": "107",
+          "LifetimeMS": "450",
+          "PassesCover": true,
+          "ProtectFromSink": true
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "1",
+          "RateOfFire": "2",
+          "ProjectilePattern": "",
+          "NumProjectiles": "2",
+          "ArcGap": "30"
+        }
+      ],
+      "equip": [
+        {
+          "Amount": "5",
+          "Stat": "DEF"
+        }
+      ],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_14451",
+      "name": "Gilded Chain Scythe",
+      "source": "https://realm.wiki/item?id=14451",
+      "damage": [
+        65,
+        390
+      ],
+      "tooltipRate": 0.5,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Interregnum Flail 1",
+          "Speed": "100",
+          "MinDamage": "330",
+          "MaxDamage": "390",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Interregnum Flail 2",
+          "Speed": "75",
+          "MinDamage": "65",
+          "MaxDamage": "85",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "2",
+          "ObjectId": "Interregnum Flail 3",
+          "Speed": "50",
+          "MinDamage": "65",
+          "MaxDamage": "85",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        },
+        {
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_12071",
+      "name": "Hammer Sword",
+      "source": "https://realm.wiki/item?id=12071",
+      "damage": [
+        220,
+        275
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Hammer Projectile",
+          "Speed": "100",
+          "MinDamage": "220",
+          "MaxDamage": "275",
+          "LifetimeMS": "350"
+        }
+      ],
+      "attacks": [],
+      "equip": [
+        {
+          "Amount": "2",
+          "Stat": "VIT"
+        }
+      ],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_26564",
+      "name": "Heartsteel Claymore",
+      "source": "https://realm.wiki/item?id=26564",
+      "damage": [
+        150,
+        375
+      ],
+      "tooltipRate": 0.6,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Heartsteel Claymore Projectile",
+          "Size": "105",
+          "MinDamage": "325",
+          "MaxDamage": "375",
+          "Speed": "200",
+          "LifetimeMS": "800",
+          "Acceleration": "-500",
+          "AccelerationDelay": "0",
+          "SpeedClamp": "0"
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Heartsteel Claymore Side Projectile",
+          "Size": "95",
+          "MinDamage": "150",
+          "MaxDamage": "200",
+          "Speed": "200",
+          "LifetimeMS": "800",
+          "Acceleration": "-500",
+          "AccelerationDelay": "0",
+          "SpeedClamp": "0"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.60"
+        },
+        {
+          "Index": "1",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.20",
+          "PosOffset": "-.25,-.25"
+        },
+        {
+          "Index": "2",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.20",
+          "PosOffset": "0.25,-.25"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_25745",
+      "name": "Hellfire Broadsword",
+      "source": "https://realm.wiki/item?id=25745",
+      "damage": [
+        75,
+        90
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 4,
+      "projectiles": [
+        {
+          "ObjectId": "HFairy Bullet",
+          "Speed": "140",
+          "MinDamage": "75",
+          "MaxDamage": "90",
+          "LifetimeMS": "325",
+          "Size": "80"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_26095",
+      "name": "Henchman's Claymore",
+      "source": "https://realm.wiki/item?id=26095",
+      "damage": [
+        75,
+        75
+      ],
+      "tooltipRate": 1.1,
+      "tooltipShots": 3,
+      "projectiles": [
+        {
+          "ObjectId": "Realm Blade",
+          "Speed": "80",
+          "MinDamage": "75",
+          "MaxDamage": "75",
+          "LifetimeMS": "475",
+          "ArmorPiercing": true,
+          "Wavy": true,
+          "FaceDir": true
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_24975",
+      "name": "Hero's Flail",
+      "source": "https://realm.wiki/item?id=24975",
+      "damage": [
+        65,
+        400
+      ],
+      "tooltipRate": 0.5,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Hero Flail Ball",
+          "Speed": "100",
+          "MinDamage": "340",
+          "MaxDamage": "400",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Hero Flail Outer Chain",
+          "Speed": "75",
+          "MinDamage": "65",
+          "MaxDamage": "90",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "2",
+          "ObjectId": "Hero Flail Inner Chain",
+          "Speed": "50",
+          "MinDamage": "65",
+          "MaxDamage": "90",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        },
+        {
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_24969",
+      "name": "Hero's Sword",
+      "source": "https://realm.wiki/item?id=24969",
+      "damage": [
+        235,
+        290
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Hero Bolt",
+          "Speed": "100",
+          "MinDamage": "235",
+          "MaxDamage": "290",
+          "LifetimeMS": "350"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_42355",
+      "name": "Icebreaker Maul",
+      "source": "https://realm.wiki/item?id=42355",
+      "damage": [
+        175,
+        300
+      ],
+      "tooltipRate": 0.4,
+      "tooltipShots": 3,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Frosted Club Ball",
+          "Speed": "120",
+          "MinDamage": "250",
+          "MaxDamage": "300",
+          "LifetimeMS": "400",
+          "MultiHit": true,
+          "Size": "130",
+          "ArmorPiercing": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Frosted Club Wave",
+          "Speed": "120",
+          "MinDamage": "175",
+          "MaxDamage": "215",
+          "LifetimeMS": "175",
+          "MultiHit": true,
+          "Size": "120",
+          "ArmorPiercing": true
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.4"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "3",
+          "ArcGap": "22",
+          "RateOfFire": "0.4"
+        }
+      ],
+      "equip": [
+        {
+          "Amount": "5",
+          "Stat": "ATT"
+        }
+      ],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_32700",
+      "name": "Indomptable",
+      "source": "https://realm.wiki/item?id=32700",
+      "damage": [
+        550,
+        600
+      ],
+      "tooltipRate": 0.33,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Fire Bust Shot",
+          "Speed": "90",
+          "MinDamage": "550",
+          "MaxDamage": "600",
+          "LifetimeMS": "500",
+          "Size": "100",
+          "MultiHit": true
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_32442",
+      "name": "Jagged Hatchet",
+      "source": "https://realm.wiki/item?id=32442",
+      "damage": [
+        175,
+        200
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Jagged Hatchet Normal",
+          "Speed": "150",
+          "MinDamage": "175",
+          "MaxDamage": "200",
+          "LifetimeMS": "2250",
+          "Acceleration": "-250",
+          "AccelerationDelay": "0",
+          "SpeedClamp": "1",
+          "Size": "80",
+          "ConditionEffect": "Bleeding",
+          "Duration": "3.0",
+          "Amount": "85"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_19212",
+      "name": "Keychain Cutlass",
+      "source": "https://realm.wiki/item?id=19212",
+      "damage": [
+        20,
+        475
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Keytastrophe",
+          "Speed": "100",
+          "MinDamage": "20",
+          "MaxDamage": "475",
+          "LifetimeMS": "350",
+          "Wavy": true
+        }
+      ],
+      "attacks": [],
+      "equip": [
+        {
+          "Amount": "50",
+          "Stat": "MAXMP"
+        },
+        {
+          "Amount": "5",
+          "Stat": "VIT"
+        },
+        {
+          "Amount": "3",
+          "Stat": "DEF"
+        }
+      ],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_2010",
+      "name": "Khopesh",
+      "source": "https://realm.wiki/item?id=2010",
+      "damage": [
+        235,
+        290
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "K Hero Bolt",
+          "Speed": "100",
+          "MinDamage": "235",
+          "MaxDamage": "290",
+          "LifetimeMS": "350"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_26229",
+      "name": "Lament of the Frozen Prisoner",
+      "source": "https://realm.wiki/item?id=26229",
+      "damage": [
+        60,
+        385
+      ],
+      "tooltipRate": 0.5,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Ice Flail Ball",
+          "Speed": "100",
+          "MinDamage": "325",
+          "MaxDamage": "385",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Ice Flail Chain",
+          "Speed": "75",
+          "MinDamage": "60",
+          "MaxDamage": "80",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "2",
+          "ObjectId": "Ice Flail Chain",
+          "Speed": "50",
+          "MinDamage": "60",
+          "MaxDamage": "80",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        },
+        {
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_9063",
+      "name": "Legacy Pixie-Enchanted Sword",
+      "source": "https://realm.wiki/item?id=9063",
+      "damage": [
+        75,
+        90
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 4,
+      "projectiles": [
+        {
+          "ObjectId": "Fairy Bullet",
+          "Speed": "140",
+          "MinDamage": "75",
+          "MaxDamage": "90",
+          "LifetimeMS": "325",
+          "Size": "80"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_41820",
+      "name": "Legion Elite Sword",
+      "source": "https://realm.wiki/item?id=41820",
+      "damage": [
+        235,
+        290
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Legion Elite Slash",
+          "Speed": "100",
+          "MinDamage": "235",
+          "MaxDamage": "290",
+          "LifetimeMS": "350"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_52255",
+      "name": "Lion Tamer",
+      "source": "https://realm.wiki/item?id=52255",
+      "damage": [
+        40,
+        400
+      ],
+      "tooltipRate": 0.5,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Lion Tamer Flail",
+          "Speed": "100",
+          "MinDamage": "355",
+          "MaxDamage": "400",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Lion Tamer Flail Chain",
+          "Speed": "75",
+          "MinDamage": "40",
+          "MaxDamage": "60",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "2",
+          "ObjectId": "Lion Tamer Flail Chain",
+          "Speed": "50",
+          "MinDamage": "40",
+          "MaxDamage": "60",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        },
+        {
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        }
+      ],
+      "equip": [
+        {
+          "Stat": "DEF",
+          "Amount": "3"
+        }
+      ],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_39345",
+      "name": "Long Sword 1Rarity",
+      "source": "https://realm.wiki/item?id=39345",
+      "damage": [
+        75,
+        120
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Blade",
+          "Speed": "100",
+          "MinDamage": "75",
+          "MaxDamage": "120",
+          "LifetimeMS": "350"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_39346",
+      "name": "Long Sword 2Rarity",
+      "source": "https://realm.wiki/item?id=39346",
+      "damage": [
+        75,
+        120
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Blade",
+          "Speed": "100",
+          "MinDamage": "75",
+          "MaxDamage": "120",
+          "LifetimeMS": "350"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_39347",
+      "name": "Long Sword 3Rarity",
+      "source": "https://realm.wiki/item?id=39347",
+      "damage": [
+        75,
+        120
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Blade",
+          "Speed": "100",
+          "MinDamage": "75",
+          "MaxDamage": "120",
+          "LifetimeMS": "350"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_39348",
+      "name": "Long Sword 4Rarity",
+      "source": "https://realm.wiki/item?id=39348",
+      "damage": [
+        75,
+        120
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Blade",
+          "Speed": "100",
+          "MinDamage": "75",
+          "MaxDamage": "120",
+          "LifetimeMS": "350"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_26749",
+      "name": "Lovestruck Yoyo",
+      "source": "https://realm.wiki/item?id=26749",
+      "damage": [
+        60,
+        375
+      ],
+      "tooltipRate": 0.5,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Lovestruck Yoyo Ball",
+          "Speed": "100",
+          "MinDamage": "315",
+          "MaxDamage": "375",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Lovestruck Yoyo Chain",
+          "Speed": "75",
+          "MinDamage": "60",
+          "MaxDamage": "75",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "2",
+          "ObjectId": "Lovestruck Yoyo Chain",
+          "Speed": "50",
+          "MinDamage": "60",
+          "MaxDamage": "75",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        },
+        {
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_1395",
+      "name": "MMace MMurderer",
+      "source": "https://realm.wiki/item?id=1395",
+      "damage": [
+        222,
+        333
+      ],
+      "tooltipRate": 0.4,
+      "tooltipShots": 2,
+      "projectiles": [
+        {
+          "ObjectId": "MMissile",
+          "Speed": "40",
+          "MinDamage": "222",
+          "MaxDamage": "333",
+          "LifetimeMS": "1250",
+          "Size": "80"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_13869",
+      "name": "Molecular Blade Enchantment",
+      "source": "https://realm.wiki/item?id=13869",
+      "damage": [
+        30,
+        235
+      ],
+      "tooltipRate": 1.5,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Awakened Cutlass Main Shot",
+          "Speed": "150",
+          "MinDamage": "180",
+          "MaxDamage": "235",
+          "LifetimeMS": "220",
+          "ArmorPiercing": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Awakened Cutlass Sub Shot",
+          "Speed": "150",
+          "MinDamage": "30",
+          "MaxDamage": "55",
+          "LifetimeMS": "220",
+          "Amplitude": "0.3",
+          "Frequency": "1",
+          "Size": "70",
+          "ArmorPiercing": true
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1"
+        },
+        {
+          "Index": "1",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.5"
+        }
+      ],
+      "equip": [],
+      "helper": true,
+      "amulets": []
+    },
+    {
+      "id": "wiki_56475",
+      "name": "Neo Acidic Guardian Enchantment",
+      "source": "https://realm.wiki/item?id=56475",
+      "damage": [
+        650,
+        700
+      ],
+      "tooltipRate": 0.44,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Neo Stone Sword Reskin Missile Awakened 2",
+          "Speed": "100",
+          "MinDamage": "650",
+          "MaxDamage": "700",
+          "LifetimeMS": "450"
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Neo Stone Sword Reskin Missile Awakened 1",
+          "Speed": "100",
+          "MinDamage": "650",
+          "MaxDamage": "700",
+          "LifetimeMS": "450"
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "1",
+          "RateOfFire": "0.44",
+          "ProjectilePattern": "",
+          "NumProjectiles": "1",
+          "PosOffset": "-0.25,0"
+        }
+      ],
+      "equip": [],
+      "helper": true,
+      "amulets": []
+    },
+    {
+      "id": "wiki_56454",
+      "name": "Neo Acidic Slasher",
+      "source": "https://realm.wiki/item?id=56454",
+      "damage": [
+        650,
+        700
+      ],
+      "tooltipRate": 0.4,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Neo Stone Reskin Missile",
+          "Speed": "100",
+          "MinDamage": "650",
+          "MaxDamage": "700",
+          "LifetimeMS": "400"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.4"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_56453",
+      "name": "Neo Gaseous Glaive",
+      "source": "https://realm.wiki/item?id=56453",
+      "damage": [
+        180,
+        230
+      ],
+      "tooltipRate": 1.3,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Neo Cutlass Reskin Missile",
+          "Speed": "150",
+          "MinDamage": "180",
+          "MaxDamage": "230",
+          "LifetimeMS": "220",
+          "ConditionEffect": "Bleeding",
+          "Duration": "4",
+          "Amount": "18"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.3"
+        }
+      ],
+      "equip": [
+        {
+          "Stat": "SPD",
+          "Amount": "3"
+        }
+      ],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_41667",
+      "name": "Nutrient Rich Carrot Blade",
+      "source": "https://realm.wiki/item?id=41667",
+      "damage": [
+        125,
+        150
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 2,
+      "projectiles": [
+        {
+          "ObjectId": "Carrot Pala Blast",
+          "Speed": "100",
+          "MinDamage": "125",
+          "MaxDamage": "150",
+          "LifetimeMS": "400",
+          "Amplitude": ".85",
+          "Frequency": "1"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_23521",
+      "name": "Oryx's Greatsword",
+      "source": "https://realm.wiki/item?id=23521",
+      "damage": [
+        185,
+        215
+      ],
+      "tooltipRate": 1.2,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Knight DPS Bolt",
+          "Speed": "90",
+          "MinDamage": "185",
+          "MaxDamage": "215",
+          "LifetimeMS": "389",
+          "Size": "100",
+          "ArmorPiercing": true
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_57116",
+      "name": "Petal Strike Sword",
+      "source": "https://realm.wiki/item?id=57116",
+      "damage": [
+        235,
+        290
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Blooming Sword Projectile",
+          "Speed": "100",
+          "MinDamage": "235",
+          "MaxDamage": "290",
+          "LifetimeMS": "350"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_3291",
+      "name": "Pirate King's Cutlass",
+      "source": "https://realm.wiki/item?id=3291",
+      "damage": [
+        180,
+        230
+      ],
+      "tooltipRate": 1.3,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Cutlass Bolt",
+          "Speed": "150",
+          "MinDamage": "180",
+          "MaxDamage": "230",
+          "LifetimeMS": "220"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.3"
+        }
+      ],
+      "equip": [
+        {
+          "Stat": "SPD",
+          "Amount": "3"
+        }
+      ],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_53188",
+      "name": "Pirate King's Cutlass",
+      "source": "https://realm.wiki/item?id=53188",
+      "damage": [
+        180,
+        230
+      ],
+      "tooltipRate": 1.3,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Gold Shot",
+          "Speed": "150",
+          "MinDamage": "180",
+          "MaxDamage": "230",
+          "LifetimeMS": "220"
+        }
+      ],
+      "attacks": [],
+      "equip": [
+        {
+          "Stat": "DEF",
+          "Amount": "-2"
+        },
+        {
+          "Stat": "SPD",
+          "Amount": "3"
+        }
+      ],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_49640",
+      "name": "Pirate's Artillery",
+      "source": "https://realm.wiki/item?id=49640",
+      "damage": [
+        50,
+        777
+      ],
+      "tooltipRate": 0.25,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Bilgewater Cannonball S",
+          "Speed": "100",
+          "MinDamage": "777",
+          "MaxDamage": "777",
+          "LifetimeMS": "300",
+          "Size": "80",
+          "MultiHit": true,
+          "PassesCover": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Bilgewater Cannonball S",
+          "Speed": "100",
+          "MinDamage": "50",
+          "MaxDamage": "50",
+          "LifetimeMS": "600",
+          "Size": "70",
+          "MultiHit": true
+        },
+        {
+          "Id": "2",
+          "ObjectId": "Bilgewater Cannonball S",
+          "Speed": "100",
+          "MinDamage": "50",
+          "MaxDamage": "50",
+          "LifetimeMS": "600",
+          "TurnRate": "45",
+          "TurnRateDelay": "300",
+          "TurnStopTime": "301",
+          "Size": "70",
+          "MultiHit": true
+        },
+        {
+          "Id": "3",
+          "ObjectId": "Bilgewater Cannonball S",
+          "Speed": "100",
+          "MinDamage": "50",
+          "MaxDamage": "50",
+          "LifetimeMS": "600",
+          "TurnRate": "90",
+          "TurnRateDelay": "300",
+          "TurnStopTime": "301",
+          "Size": "70",
+          "MultiHit": true
+        },
+        {
+          "Id": "4",
+          "ObjectId": "Bilgewater Cannonball S",
+          "Speed": "100",
+          "MinDamage": "50",
+          "MaxDamage": "50",
+          "LifetimeMS": "600",
+          "TurnRate": "135",
+          "TurnRateDelay": "300",
+          "TurnStopTime": "301",
+          "Size": "70",
+          "MultiHit": true
+        },
+        {
+          "Id": "5",
+          "ObjectId": "Bilgewater Cannonball S",
+          "Speed": "100",
+          "MinDamage": "50",
+          "MaxDamage": "50",
+          "LifetimeMS": "300",
+          "Size": "70",
+          "MultiHit": true
+        },
+        {
+          "Id": "6",
+          "ObjectId": "Bilgewater Cannonball S",
+          "Speed": "100",
+          "MinDamage": "50",
+          "MaxDamage": "50",
+          "LifetimeMS": "600",
+          "TurnRate": "-135",
+          "TurnRateDelay": "300",
+          "TurnStopTime": "301",
+          "Size": "70",
+          "MultiHit": true
+        },
+        {
+          "Id": "7",
+          "ObjectId": "Bilgewater Cannonball S",
+          "Speed": "100",
+          "MinDamage": "50",
+          "MaxDamage": "50",
+          "LifetimeMS": "600",
+          "TurnRate": "-90",
+          "TurnRateDelay": "300",
+          "TurnStopTime": "301",
+          "Size": "70",
+          "MultiHit": true
+        },
+        {
+          "Id": "8",
+          "ObjectId": "Bilgewater Cannonball S",
+          "Speed": "100",
+          "MinDamage": "50",
+          "MaxDamage": "50",
+          "LifetimeMS": "600",
+          "TurnRate": "-45",
+          "TurnRateDelay": "300",
+          "TurnStopTime": "301",
+          "Size": "70",
+          "MultiHit": true
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.25",
+          "PosOffset": "0,0"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.25",
+          "PosOffset": "0,0.4"
+        },
+        {
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.25",
+          "PosOffset": "0.283,0.283"
+        },
+        {
+          "ProjectileId": "3",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.25",
+          "PosOffset": "0.4,0"
+        },
+        {
+          "ProjectileId": "4",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.25",
+          "PosOffset": "0.283,-0.283"
+        },
+        {
+          "ProjectileId": "5",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.25",
+          "PosOffset": "0,-0.4"
+        },
+        {
+          "ProjectileId": "6",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.25",
+          "PosOffset": "-0.283,-0.283"
+        },
+        {
+          "ProjectileId": "7",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.25",
+          "PosOffset": "-0.4,0"
+        },
+        {
+          "ProjectileId": "8",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.25",
+          "PosOffset": "-0.283,0.283"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_1189",
+      "name": "Pixie-Enchanted Sword",
+      "source": "https://realm.wiki/item?id=1189",
+      "damage": [
+        75,
+        90
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 4,
+      "projectiles": [
+        {
+          "ObjectId": "Fairy Bullet",
+          "Speed": "140",
+          "MinDamage": "75",
+          "MaxDamage": "90",
+          "LifetimeMS": "325",
+          "Size": "80"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_14922",
+      "name": "Razor Shards Enchantment",
+      "source": "https://realm.wiki/item?id=14922",
+      "damage": [
+        35,
+        35
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Razor Shard",
+          "Speed": "180",
+          "MinDamage": "35",
+          "MaxDamage": "35",
+          "LifetimeMS": "400",
+          "ArmorPiercing": true,
+          "MultiHit": true
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1"
+        }
+      ],
+      "equip": [],
+      "helper": true,
+      "amulets": []
+    },
+    {
+      "id": "wiki_63871",
+      "name": "Retrowinds Sword",
+      "source": "https://realm.wiki/item?id=63871",
+      "damage": [
+        235,
+        290
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "RetroWinds Sword Projectile",
+          "Speed": "100",
+          "MinDamage": "235",
+          "MaxDamage": "290",
+          "LifetimeMS": "350"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_6862",
+      "name": "Saint Nicolas' Blade",
+      "source": "https://realm.wiki/item?id=6862",
+      "damage": [
+        220,
+        275
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "XMAS Sword",
+          "Speed": "100",
+          "MinDamage": "220",
+          "MaxDamage": "275",
+          "LifetimeMS": "350"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_14773",
+      "name": "Savage Claws",
+      "source": "https://realm.wiki/item?id=14773",
+      "damage": [
+        275,
+        280
+      ],
+      "tooltipRate": 0.8,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Lycan Slash",
+          "Speed": "90",
+          "LifetimeMS": "472",
+          "MinDamage": "275",
+          "MaxDamage": "280",
+          "Size": "100",
+          "Wavy": true
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_53819",
+      "name": "Seismic Flail",
+      "source": "https://realm.wiki/item?id=53819",
+      "damage": [
+        60,
+        395
+      ],
+      "tooltipRate": 0.5,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Siesmic Flail Head",
+          "Speed": "100",
+          "MinDamage": "330",
+          "MaxDamage": "395",
+          "LifetimeMS": "700",
+          "Boomerang": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Siesmic Flail Chain",
+          "Speed": "75",
+          "MinDamage": "60",
+          "MaxDamage": "80",
+          "LifetimeMS": "700",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "2",
+          "ObjectId": "Siesmic Flail Chain",
+          "Speed": "50",
+          "MinDamage": "60",
+          "MaxDamage": "80",
+          "LifetimeMS": "700",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        },
+        {
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_23334",
+      "name": "Silex's Hammer",
+      "source": "https://realm.wiki/item?id=23334",
+      "damage": [
+        5,
+        70
+      ],
+      "tooltipRate": 0.33,
+      "tooltipShots": 3,
+      "projectiles": [
+        {
+          "ObjectId": "Banshot",
+          "Speed": "7",
+          "MinDamage": "5",
+          "MaxDamage": "70",
+          "LifetimeMS": "6500",
+          "Size": "80",
+          "Parametric": true,
+          "ArmorPiercing": true,
+          "PassesCover": true
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_8732",
+      "name": "Skull-splitter Sword",
+      "source": "https://realm.wiki/item?id=8732",
+      "damage": [
+        210,
+        270
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Halloween SSS",
+          "Speed": "100",
+          "MinDamage": "210",
+          "MaxDamage": "270",
+          "LifetimeMS": "350"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_41744",
+      "name": "Spectral Sword",
+      "source": "https://realm.wiki/item?id=41744",
+      "damage": [
+        100,
+        125
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Sword of Light Slash",
+          "Speed": "80",
+          "MinDamage": "100",
+          "MaxDamage": "125",
+          "LifetimeMS": "740",
+          "CircleTurnAngle": "-90",
+          "CircleTurnDelay": "440",
+          "MultiHit": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Sword of Light Slash",
+          "Speed": "80",
+          "MinDamage": "100",
+          "MaxDamage": "125",
+          "LifetimeMS": "740",
+          "CircleTurnAngle": "90",
+          "CircleTurnDelay": "440",
+          "MultiHit": true
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "DefaultAngle": "-4",
+          "RateOfFire": "1"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "DefaultAngle": "4",
+          "RateOfFire": "1"
+        }
+      ],
+      "equip": [
+        {
+          "Amount": "4",
+          "Stat": "VIT"
+        }
+      ],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_1023",
+      "name": "Spooky Smasher",
+      "source": "https://realm.wiki/item?id=1023",
+      "damage": [
+        50,
+        500
+      ],
+      "tooltipRate": 0.4,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Pumpkin Flail",
+          "Speed": "100",
+          "MinDamage": "375",
+          "MaxDamage": "500",
+          "LifetimeMS": "1200",
+          "Acceleration": "-1000",
+          "AccelerationDelay": "400",
+          "Size": "120",
+          "SpeedClamp": "0",
+          "MultiHit": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Pumpkin Chain",
+          "Speed": "75",
+          "MinDamage": "50",
+          "MaxDamage": "120",
+          "LifetimeMS": "1200",
+          "Acceleration": "-1000",
+          "AccelerationDelay": "400",
+          "SpeedClamp": "0",
+          "MultiHit": true
+        },
+        {
+          "Id": "2",
+          "ObjectId": "Pumpkin Chain",
+          "Speed": "50",
+          "MinDamage": "50",
+          "MaxDamage": "120",
+          "LifetimeMS": "1200",
+          "Acceleration": "-1000",
+          "AccelerationDelay": "400",
+          "SpeedClamp": "0",
+          "ArmorPiercing": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "3",
+          "ObjectId": "Pumpkin Chain",
+          "Speed": "25",
+          "MinDamage": "50",
+          "MaxDamage": "120",
+          "LifetimeMS": "1200",
+          "Acceleration": "-1000",
+          "AccelerationDelay": "400",
+          "SpeedClamp": "0",
+          "ArmorPiercing": true,
+          "MultiHit": true
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.4"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.4"
+        },
+        {
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.4"
+        },
+        {
+          "ProjectileId": "3",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.4"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_56473",
+      "name": "Stone Guardian Enchantment",
+      "source": "https://realm.wiki/item?id=56473",
+      "damage": [
+        350,
+        400
+      ],
+      "tooltipRate": 0.66,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Stone Sword Slash Awakened 2",
+          "Speed": "100",
+          "MinDamage": "350",
+          "MaxDamage": "400",
+          "LifetimeMS": "450"
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Stone Sword Slash Awakened 1",
+          "Speed": "100",
+          "MinDamage": "350",
+          "MaxDamage": "400",
+          "LifetimeMS": "450"
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "1",
+          "RateOfFire": "0.66",
+          "ProjectilePattern": "",
+          "NumProjectiles": "1",
+          "PosOffset": "-0.25,0"
+        }
+      ],
+      "equip": [],
+      "helper": true,
+      "amulets": []
+    },
+    {
+      "id": "wiki_8665",
+      "name": "Swashbuckler's Sickle",
+      "source": "https://realm.wiki/item?id=8665",
+      "damage": [
+        275,
+        280
+      ],
+      "tooltipRate": 0.8,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Pirate King Gold",
+          "Speed": "90",
+          "LifetimeMS": "472",
+          "MinDamage": "275",
+          "MaxDamage": "280",
+          "Size": "100",
+          "Wavy": true
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_63900",
+      "name": "Sweettreats Sword",
+      "source": "https://realm.wiki/item?id=63900",
+      "damage": [
+        180,
+        230
+      ],
+      "tooltipRate": 1.3,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Sweettreats Sword Projectile",
+          "Speed": "150",
+          "MinDamage": "180",
+          "MaxDamage": "230",
+          "LifetimeMS": "220"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.3"
+        }
+      ],
+      "equip": [
+        {
+          "Stat": "SPD",
+          "Amount": "3"
+        }
+      ],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_8963",
+      "name": "Sword of Illumination",
+      "source": "https://realm.wiki/item?id=8963",
+      "damage": [
+        150,
+        175
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 2,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Fire Bullet",
+          "Size": "75",
+          "Speed": "130",
+          "MinDamage": "150",
+          "MaxDamage": "175",
+          "LifetimeMS": "260"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "2",
+          "ArcGap": "25",
+          "RateOfFire": "1"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_596",
+      "name": "Sword of the Colossus",
+      "source": "https://realm.wiki/item?id=596",
+      "damage": [
+        280,
+        295
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Colossus Slash",
+          "Speed": "100",
+          "MinDamage": "280",
+          "MaxDamage": "295",
+          "LifetimeMS": "450",
+          "Amplitude": "0.7",
+          "Frequency": "0.5",
+          "FaceDir": true
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_8962",
+      "name": "Sword of the Mad God",
+      "source": "https://realm.wiki/item?id=8962",
+      "damage": [
+        220,
+        275
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Oryx Sword Attack",
+          "Speed": "100",
+          "MinDamage": "220",
+          "MaxDamage": "275",
+          "LifetimeMS": "350",
+          "Size": "80"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_5707",
+      "name": "Sword of the Rainbow's End",
+      "source": "https://realm.wiki/item?id=5707",
+      "damage": [
+        20,
+        40
+      ],
+      "tooltipRate": 1.5,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "Patty Rainbow Bolt",
+          "Speed": "80",
+          "MinDamage": "20",
+          "MaxDamage": "40",
+          "LifetimeMS": "438",
+          "Frequency": "1",
+          "Size": "100",
+          "Wavy": true
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_14495",
+      "name": "Sword of the Unending Chaos",
+      "source": "https://realm.wiki/item?id=14495",
+      "damage": [
+        220,
+        275
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "MotMG Void Blast",
+          "Speed": "100",
+          "MinDamage": "220",
+          "MaxDamage": "275",
+          "LifetimeMS": "350"
+        }
+      ],
+      "attacks": [],
+      "equip": [
+        {
+          "Stat": "ATT",
+          "Amount": "2"
+        }
+      ],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_42278",
+      "name": "The Crimson Blade",
+      "source": "https://realm.wiki/item?id=42278",
+      "damage": [
+        100,
+        125
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Crimson Slash",
+          "Speed": "80",
+          "MinDamage": "100",
+          "MaxDamage": "125",
+          "LifetimeMS": "740",
+          "CircleTurnAngle": "-90",
+          "CircleTurnDelay": "440",
+          "MultiHit": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Crimson Slash",
+          "Speed": "80",
+          "MinDamage": "100",
+          "MaxDamage": "125",
+          "LifetimeMS": "740",
+          "CircleTurnAngle": "90",
+          "CircleTurnDelay": "440",
+          "MultiHit": true
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "DefaultAngle": "-4",
+          "RateOfFire": "1"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "DefaultAngle": "4",
+          "RateOfFire": "1"
+        }
+      ],
+      "equip": [
+        {
+          "Amount": "4",
+          "Stat": "VIT"
+        }
+      ],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_8996",
+      "name": "Unstable Anomaly",
+      "source": "https://realm.wiki/item?id=8996",
+      "damage": [
+        10,
+        15
+      ],
+      "tooltipRate": 0.25,
+      "tooltipShots": 10,
+      "projectiles": [
+        {
+          "ObjectId": "Hat Cascade",
+          "Speed": "50",
+          "LifetimeMS": "1000",
+          "MinDamage": "10",
+          "MaxDamage": "15",
+          "Amplitude": "0.15",
+          "Frequency": "2"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_38583",
+      "name": "Venerable Ancient Stone Sword",
+      "source": "https://realm.wiki/item?id=38583",
+      "damage": [
+        400,
+        450
+      ],
+      "tooltipRate": 0.6,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Venerable Stone Slash",
+          "Speed": "100",
+          "MinDamage": "400",
+          "MaxDamage": "450",
+          "LifetimeMS": "450"
+        }
+      ],
+      "attacks": [
+        {
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.6"
+        }
+      ],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_8846",
+      "name": "Vinesword",
+      "source": "https://realm.wiki/item?id=8846",
+      "damage": [
+        210,
+        270
+      ],
+      "tooltipRate": 1.0,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "ObjectId": "BellaBerry",
+          "Speed": "100",
+          "MinDamage": "210",
+          "MaxDamage": "270",
+          "LifetimeMS": "350"
+        }
+      ],
+      "attacks": [],
+      "equip": [],
+      "helper": false,
+      "amulets": []
+    },
+    {
+      "id": "wiki_41775",
+      "name": "Void Flail",
+      "source": "https://realm.wiki/item?id=41775",
+      "damage": [
+        65,
+        400
+      ],
+      "tooltipRate": 0.5,
+      "tooltipShots": 1,
+      "projectiles": [
+        {
+          "Id": "0",
+          "ObjectId": "Void Flail Ball",
+          "Speed": "100",
+          "MinDamage": "340",
+          "MaxDamage": "400",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "1",
+          "ObjectId": "Void Flail Chain",
+          "Speed": "75",
+          "MinDamage": "65",
+          "MaxDamage": "90",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        },
+        {
+          "Id": "2",
+          "ObjectId": "Void Flail Chain",
+          "Speed": "50",
+          "MinDamage": "65",
+          "MaxDamage": "90",
+          "LifetimeMS": "750",
+          "Boomerang": true,
+          "ArmorPiercing": true,
+          "MultiHit": true
+        }
+      ],
+      "attacks": [
+        {
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        },
+        {
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        },
+        {
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.5"
+        }
+      ],
+      "equip": [
+        {
+          "Stat": "VIT",
+          "Amount": "5"
+        }
+      ],
+      "helper": false,
+      "amulets": []
+    }
+  ]
+}

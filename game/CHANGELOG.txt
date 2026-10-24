@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.33.0 — 2026-10-24
+
+- Reworked every imported UT/ST sword weapon: 81 names across 99 regular, retro and Shiny entries. Heavy, rapid, spread, piercing, novelty and reskin weapons now use inspected source-backed damage and cadence instead of the shared placeholder profile.
+- Added returning flails, short chain/shockwave placement, shared beam cooldowns, Rapier lunges, Heartsteel side blades, Arsenal volleys/arrows, source-backed bleeding and impact bursts. Faithful Spatha and Gilded Chain Scythe recognize their matching packed gear. Damnation now carries its low-health offensive/Armored window, full-health healing penalty and reduced max HP.
+- Removed eight imported internal enchantment objects from new loot; existing saved copies remain usable and inspectable under Unobtainable. Preserved non-sword definitions, dagger recipes, tiered sword progression, existing ST membership, sprites and IDs. Full source references, numerical adaptations and limits are in docs/sword-identities.md.
+- Validation: JavaScript syntax, all 25 regression suites, 297 legal sword/class/version combat trials and 868 browser views across item inspection and compact offers. All 1,995 ordinary class fight records matched the previous build; a 7,968-fight paired sword benchmark records gains, losses and limitations, including the intentionally weaker novelty weapons and less-forgiving Icebreaker.
+
 ## 0.32.0 — 2026-10-24
 
 - Reworked the first ten audited UT/ST items around their RotMG identities: Vesture of Duality, Mechanical Kogbold Limb, Fungal Breastplate, Breastplate of New Life, The Forgotten Crown, Skull of Endless Torment, Socket Blade, Vampiric Cape, Hallowed Hide and Edictum Praetoris.

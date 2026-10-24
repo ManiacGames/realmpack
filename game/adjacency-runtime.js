@@ -56,7 +56,7 @@ function packedRingBonus(attribute,cap){
  if(cache)cache.ringBonuses[attribute]=value;return value
 }
 function manaCapacity(){return 50+packedRingBonus('magic',40)+realmEquipmentStats().mana+(s.consumableBattle?.tempMana||0)}
-function syncRingVitals(){if(!s)return;const health=packedRingBonus('health',100),gear=realmEquipmentStats().health;s.max=Math.max(20,s.max+health-(s.ringHealthBonus||0)+gear-(s.realmGearHealthBonus||0));s.ringHealthBonus=health;s.realmGearHealthBonus=gear;s.hp=Math.min(s.hp,s.max);s.mana=Math.min(s.mana,manaCapacity())}
+function syncRingVitals(){if(!s)return;const health=packedRingBonus('health',100),base=Math.max(20,s.max-(s.ringHealthBonus||0)-(s.realmGearHealthBonus||0)),gear=Math.max(20-base-health,realmEquipmentStats().health);s.max=base+health+gear;s.ringHealthBonus=health;s.realmGearHealthBonus=gear;s.hp=Math.min(s.hp,s.max);s.mana=Math.min(s.mana,manaCapacity())}
 function passiveRing(d){return d.group==='ring'&&d.effect==='support'&&(!!d.ringAttribute||!!d.mechanic?.passivePrimary)}
 function ringCanActivate(i){return itemEnchants(i).some(e=>['barrier','siphon','relay'].includes(e.key))}
 function ringDescription(d){if(d.mechanic?.passivePrimary)return realmSummary(d);

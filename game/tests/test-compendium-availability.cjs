@@ -5,7 +5,7 @@ console.log(vm.runInContext(`(()=>{
  freshRun('knight',true);selectPortal(s.portalChoices[0]);
  const available=catalogueMatches();check(available.length>0&&available.every(d=>!itemUnobtainable(d)),'Default includes unavailable gear');
  catalogueFilter('availability','unobtainable');const retired=catalogueMatches();
- check(retired.length===173&&retired.every(itemUnobtainable),'Unavailable pool missing retired consumables or daggers');
+ check(retired.length===181&&retired.filter(d=>d.swordHelper).length===8&&retired.every(itemUnobtainable),'Unavailable pool missing retired consumables, daggers or internal sword helpers');
  catalogueFilter('availability','all');const all=catalogueMatches();check(all.length===DATA.items.length&&all.length===available.length+retired.length,'All items not a complete partition');
  catalogueState.page=9;catalogueFilter('availability','unobtainable');check(catalogueState.page===0,'Availability change retains stale page');
  catalogueFilter('group','consumable');check(catalogueMatches().length===168,'Type filter does not combine with availability');

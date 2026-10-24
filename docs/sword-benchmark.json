@@ -1,0 +1,2007 @@
+{
+  "version": "0.33.0",
+  "baselineCommit": "01edd7ed9b2fb581c6ae2b41b2d38ccb911b869b",
+  "assumptions": "All 83 non-Shiny weapon definitions, including retro duplicates and four imported Long Sword rarity variants; Warrior/Knight/Paladin, eight bosses at dungeon indices 0,4,9,14,19,24,29,34; two tiered support levels at 60%/90% family maximum, magic ring T3/T6, extra native tiered sword, 3 Health Potions, +50 base HP and full equipped HP, +8% relic recharge, seed 123456, Adventurer depth 20, 0.05s tick. Tested sword packed first in top row; no enhancements, enchantments, infused gear or paired special rings. Same fixtures in both versions. Fixed-build comparison, not an optimized-build or full-run economy test.",
+  "fightsPerVersion": 3984,
+  "before": [
+    {
+      "id": "wiki_25692",
+      "name": "Acidic Slasher",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_3077",
+      "name": "Ancient Stone Sword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_1705",
+      "name": "Apocalypse Feather",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_9659",
+      "name": "Arcane Rapier",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_17706",
+      "name": "Aspirant's Sword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_49470",
+      "name": "Atavistic Soul Sabre",
+      "fights": 48,
+      "wins": 33,
+      "byClass": {
+        "warrior": 10,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 20.83
+    },
+    {
+      "id": "wiki_17561",
+      "name": "Barnacle Basher",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_28461",
+      "name": "Beach Umbrella",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_42097",
+      "name": "Blacksmith Hammer",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_7325",
+      "name": "Blade of Eternal Rebirth",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_42316",
+      "name": "Blood Axe",
+      "fights": 48,
+      "wins": 33,
+      "byClass": {
+        "warrior": 10,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 20.83
+    },
+    {
+      "id": "wiki_12163",
+      "name": "Cheerful Chipper",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_28479",
+      "name": "Chocsicle",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_2563",
+      "name": "Crystal Sword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_22443",
+      "name": "Dalvar's Battle Axe",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_23732",
+      "name": "Damnation",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_3073",
+      "name": "Demon Blade",
+      "fights": 48,
+      "wins": 33,
+      "byClass": {
+        "warrior": 10,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 19.66
+    },
+    {
+      "id": "wiki_53199",
+      "name": "Demon Blade",
+      "fights": 48,
+      "wins": 33,
+      "byClass": {
+        "warrior": 10,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 19.66
+    },
+    {
+      "id": "wiki_28851",
+      "name": "Divinity",
+      "fights": 48,
+      "wins": 32,
+      "byClass": {
+        "warrior": 9,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 21
+    },
+    {
+      "id": "wiki_3295",
+      "name": "Doctor Swordsworth",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_1460",
+      "name": "Egg Basher",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_5846",
+      "name": "Enchanted Ice Blade",
+      "fights": 48,
+      "wins": 33,
+      "byClass": {
+        "warrior": 10,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 21.47
+    },
+    {
+      "id": "wiki_13265",
+      "name": "Eternal Echo",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_5034",
+      "name": "Eternal Graved Great Sword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_55416",
+      "name": "Excubicur",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_3782",
+      "name": "Faithful Spatha",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_17387",
+      "name": "Fallen One's Blade",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_37678",
+      "name": "FFabulous FFlail",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_9612",
+      "name": "Frostbite",
+      "fights": 48,
+      "wins": 33,
+      "byClass": {
+        "warrior": 10,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 21.47
+    },
+    {
+      "id": "wiki_65282",
+      "name": "Fury Flail",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_25691",
+      "name": "Gaseous Glaive",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_48081",
+      "name": "General's Arsenal",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_14451",
+      "name": "Gilded Chain Scythe",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_12071",
+      "name": "Hammer Sword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_26564",
+      "name": "Heartsteel Claymore",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_25745",
+      "name": "Hellfire Broadsword",
+      "fights": 48,
+      "wins": 31,
+      "byClass": {
+        "warrior": 9,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.74
+    },
+    {
+      "id": "wiki_26095",
+      "name": "Henchman's Claymore",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_24975",
+      "name": "Hero's Flail",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_24969",
+      "name": "Hero's Sword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_42355",
+      "name": "Icebreaker Maul",
+      "fights": 48,
+      "wins": 33,
+      "byClass": {
+        "warrior": 10,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 21.47
+    },
+    {
+      "id": "wiki_32700",
+      "name": "Indomptable",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_32442",
+      "name": "Jagged Hatchet",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_19212",
+      "name": "Keychain Cutlass",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_2010",
+      "name": "Khopesh",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_26229",
+      "name": "Lament of the Frozen Prisoner",
+      "fights": 48,
+      "wins": 33,
+      "byClass": {
+        "warrior": 10,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 21.47
+    },
+    {
+      "id": "wiki_9063",
+      "name": "Legacy Pixie-Enchanted Sword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_41820",
+      "name": "Legion Elite Sword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_52255",
+      "name": "Lion Tamer",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_39345",
+      "name": "Long Sword 1Rarity",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_39346",
+      "name": "Long Sword 2Rarity",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_39347",
+      "name": "Long Sword 3Rarity",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_39348",
+      "name": "Long Sword 4Rarity",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_26749",
+      "name": "Lovestruck Yoyo",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_1395",
+      "name": "MMace MMurderer",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_56454",
+      "name": "Neo Acidic Slasher",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_56453",
+      "name": "Neo Gaseous Glaive",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_41667",
+      "name": "Nutrient Rich Carrot Blade",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_23521",
+      "name": "Oryx's Greatsword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_57116",
+      "name": "Petal Strike Sword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_3291",
+      "name": "Pirate King's Cutlass",
+      "fights": 48,
+      "wins": 32,
+      "byClass": {
+        "warrior": 9,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 20.83
+    },
+    {
+      "id": "wiki_53188",
+      "name": "Pirate King's Cutlass",
+      "fights": 48,
+      "wins": 31,
+      "byClass": {
+        "warrior": 8,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 20.89
+    },
+    {
+      "id": "wiki_49640",
+      "name": "Pirate's Artillery",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_1189",
+      "name": "Pixie-Enchanted Sword",
+      "fights": 48,
+      "wins": 32,
+      "byClass": {
+        "warrior": 9,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 19.62
+    },
+    {
+      "id": "wiki_63871",
+      "name": "Retrowinds Sword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_6862",
+      "name": "Saint Nicolas' Blade",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_14773",
+      "name": "Savage Claws",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_53819",
+      "name": "Seismic Flail",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_23334",
+      "name": "Silex's Hammer",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_8732",
+      "name": "Skull-splitter Sword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_41744",
+      "name": "Spectral Sword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_1023",
+      "name": "Spooky Smasher",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_8665",
+      "name": "Swashbuckler's Sickle",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 7,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 21.61
+    },
+    {
+      "id": "wiki_63900",
+      "name": "Sweettreats Sword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_8963",
+      "name": "Sword of Illumination",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_596",
+      "name": "Sword of the Colossus",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 21.32
+    },
+    {
+      "id": "wiki_8962",
+      "name": "Sword of the Mad God",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 21.4
+    },
+    {
+      "id": "wiki_5707",
+      "name": "Sword of the Rainbow's End",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_14495",
+      "name": "Sword of the Unending Chaos",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_42278",
+      "name": "The Crimson Blade",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_8996",
+      "name": "Unstable Anomaly",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_38583",
+      "name": "Venerable Ancient Stone Sword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_8846",
+      "name": "Vinesword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_41775",
+      "name": "Void Flail",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.53
+    }
+  ],
+  "after": [
+    {
+      "id": "wiki_25692",
+      "name": "Acidic Slasher",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "warrior": 7,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 23.47
+    },
+    {
+      "id": "wiki_3077",
+      "name": "Ancient Stone Sword",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "warrior": 7,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 23.47
+    },
+    {
+      "id": "wiki_1705",
+      "name": "Apocalypse Feather",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "warrior": 5,
+        "knight": 9,
+        "paladin": 7
+      },
+      "averageSeconds": 28.67
+    },
+    {
+      "id": "wiki_9659",
+      "name": "Arcane Rapier",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "warrior": 7,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 24.26
+    },
+    {
+      "id": "wiki_17706",
+      "name": "Aspirant's Sword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 9,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 21.95
+    },
+    {
+      "id": "wiki_49470",
+      "name": "Atavistic Soul Sabre",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 22.25
+    },
+    {
+      "id": "wiki_17561",
+      "name": "Barnacle Basher",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "warrior": 6,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 22.8
+    },
+    {
+      "id": "wiki_28461",
+      "name": "Beach Umbrella",
+      "fights": 48,
+      "wins": 31,
+      "byClass": {
+        "warrior": 9,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 21.76
+    },
+    {
+      "id": "wiki_42097",
+      "name": "Blacksmith Hammer",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 21.95
+    },
+    {
+      "id": "wiki_7325",
+      "name": "Blade of Eternal Rebirth",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.98
+    },
+    {
+      "id": "wiki_42316",
+      "name": "Blood Axe",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 21.85
+    },
+    {
+      "id": "wiki_12163",
+      "name": "Cheerful Chipper",
+      "fights": 48,
+      "wins": 31,
+      "byClass": {
+        "warrior": 9,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.63
+    },
+    {
+      "id": "wiki_28479",
+      "name": "Chocsicle",
+      "fights": 48,
+      "wins": 32,
+      "byClass": {
+        "warrior": 9,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 21.52
+    },
+    {
+      "id": "wiki_2563",
+      "name": "Crystal Sword",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 23.63
+    },
+    {
+      "id": "wiki_22443",
+      "name": "Dalvar's Battle Axe",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 21.85
+    },
+    {
+      "id": "wiki_23732",
+      "name": "Damnation",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 9,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 23.76
+    },
+    {
+      "id": "wiki_3073",
+      "name": "Demon Blade",
+      "fights": 48,
+      "wins": 32,
+      "byClass": {
+        "warrior": 9,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 18.51
+    },
+    {
+      "id": "wiki_53199",
+      "name": "Demon Blade",
+      "fights": 48,
+      "wins": 32,
+      "byClass": {
+        "warrior": 9,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 18.51
+    },
+    {
+      "id": "wiki_28851",
+      "name": "Divinity",
+      "fights": 48,
+      "wins": 31,
+      "byClass": {
+        "warrior": 8,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 21
+    },
+    {
+      "id": "wiki_3295",
+      "name": "Doctor Swordsworth",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "warrior": 5,
+        "knight": 9,
+        "paladin": 7
+      },
+      "averageSeconds": 29.56
+    },
+    {
+      "id": "wiki_1460",
+      "name": "Egg Basher",
+      "fights": 48,
+      "wins": 31,
+      "byClass": {
+        "warrior": 9,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 21.64
+    },
+    {
+      "id": "wiki_5846",
+      "name": "Enchanted Ice Blade",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 23.63
+    },
+    {
+      "id": "wiki_13265",
+      "name": "Eternal Echo",
+      "fights": 48,
+      "wins": 31,
+      "byClass": {
+        "warrior": 8,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 21
+    },
+    {
+      "id": "wiki_5034",
+      "name": "Eternal Graved Great Sword",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "warrior": 7,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 23.47
+    },
+    {
+      "id": "wiki_55416",
+      "name": "Excubicur",
+      "fights": 48,
+      "wins": 31,
+      "byClass": {
+        "warrior": 8,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 21
+    },
+    {
+      "id": "wiki_3782",
+      "name": "Faithful Spatha",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 21.95
+    },
+    {
+      "id": "wiki_17387",
+      "name": "Fallen One's Blade",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 21.7
+    },
+    {
+      "id": "wiki_37678",
+      "name": "FFabulous FFlail",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "warrior": 6,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 23.19
+    },
+    {
+      "id": "wiki_9612",
+      "name": "Frostbite",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 22.41
+    },
+    {
+      "id": "wiki_65282",
+      "name": "Fury Flail",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 21.93
+    },
+    {
+      "id": "wiki_25691",
+      "name": "Gaseous Glaive",
+      "fights": 48,
+      "wins": 32,
+      "byClass": {
+        "warrior": 9,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 21.52
+    },
+    {
+      "id": "wiki_48081",
+      "name": "General's Arsenal",
+      "fights": 48,
+      "wins": 34,
+      "byClass": {
+        "warrior": 11,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 19.65
+    },
+    {
+      "id": "wiki_14451",
+      "name": "Gilded Chain Scythe",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 9,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 22.71
+    },
+    {
+      "id": "wiki_12071",
+      "name": "Hammer Sword",
+      "fights": 48,
+      "wins": 31,
+      "byClass": {
+        "warrior": 8,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 22.33
+    },
+    {
+      "id": "wiki_26564",
+      "name": "Heartsteel Claymore",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 22.36
+    },
+    {
+      "id": "wiki_25745",
+      "name": "Hellfire Broadsword",
+      "fights": 48,
+      "wins": 32,
+      "byClass": {
+        "warrior": 9,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 18.51
+    },
+    {
+      "id": "wiki_26095",
+      "name": "Henchman's Claymore",
+      "fights": 48,
+      "wins": 31,
+      "byClass": {
+        "warrior": 9,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 22.49
+    },
+    {
+      "id": "wiki_24975",
+      "name": "Hero's Flail",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 22.73
+    },
+    {
+      "id": "wiki_24969",
+      "name": "Hero's Sword",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 21.95
+    },
+    {
+      "id": "wiki_42355",
+      "name": "Icebreaker Maul",
+      "fights": 48,
+      "wins": 26,
+      "byClass": {
+        "warrior": 5,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 24.46
+    },
+    {
+      "id": "wiki_32700",
+      "name": "Indomptable",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "warrior": 7,
+        "knight": 11,
+        "paladin": 9
+      },
+      "averageSeconds": 24.66
+    },
+    {
+      "id": "wiki_32442",
+      "name": "Jagged Hatchet",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 23.86
+    },
+    {
+      "id": "wiki_19212",
+      "name": "Keychain Cutlass",
+      "fights": 48,
+      "wins": 31,
+      "byClass": {
+        "warrior": 8,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 22.56
+    },
+    {
+      "id": "wiki_2010",
+      "name": "Khopesh",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 21.95
+    },
+    {
+      "id": "wiki_26229",
+      "name": "Lament of the Frozen Prisoner",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 22.98
+    },
+    {
+      "id": "wiki_9063",
+      "name": "Legacy Pixie-Enchanted Sword",
+      "fights": 48,
+      "wins": 32,
+      "byClass": {
+        "warrior": 9,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 18.51
+    },
+    {
+      "id": "wiki_41820",
+      "name": "Legion Elite Sword",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 21.95
+    },
+    {
+      "id": "wiki_52255",
+      "name": "Lion Tamer",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 23.53
+    },
+    {
+      "id": "wiki_39345",
+      "name": "Long Sword 1Rarity",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "warrior": 5,
+        "knight": 9,
+        "paladin": 8
+      },
+      "averageSeconds": 27.42
+    },
+    {
+      "id": "wiki_39346",
+      "name": "Long Sword 2Rarity",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "warrior": 5,
+        "knight": 9,
+        "paladin": 8
+      },
+      "averageSeconds": 27.42
+    },
+    {
+      "id": "wiki_39347",
+      "name": "Long Sword 3Rarity",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "warrior": 5,
+        "knight": 9,
+        "paladin": 8
+      },
+      "averageSeconds": 27.42
+    },
+    {
+      "id": "wiki_39348",
+      "name": "Long Sword 4Rarity",
+      "fights": 48,
+      "wins": 22,
+      "byClass": {
+        "warrior": 5,
+        "knight": 9,
+        "paladin": 8
+      },
+      "averageSeconds": 27.42
+    },
+    {
+      "id": "wiki_26749",
+      "name": "Lovestruck Yoyo",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 23.36
+    },
+    {
+      "id": "wiki_1395",
+      "name": "MMace MMurderer",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "warrior": 6,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 24.22
+    },
+    {
+      "id": "wiki_56454",
+      "name": "Neo Acidic Slasher",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "warrior": 6,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 23.18
+    },
+    {
+      "id": "wiki_56453",
+      "name": "Neo Gaseous Glaive",
+      "fights": 48,
+      "wins": 33,
+      "byClass": {
+        "warrior": 9,
+        "knight": 12,
+        "paladin": 12
+      },
+      "averageSeconds": 19.08
+    },
+    {
+      "id": "wiki_41667",
+      "name": "Nutrient Rich Carrot Blade",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 21.7
+    },
+    {
+      "id": "wiki_23521",
+      "name": "Oryx's Greatsword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 22.23
+    },
+    {
+      "id": "wiki_57116",
+      "name": "Petal Strike Sword",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 21.95
+    },
+    {
+      "id": "wiki_3291",
+      "name": "Pirate King's Cutlass",
+      "fights": 48,
+      "wins": 32,
+      "byClass": {
+        "warrior": 9,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 21.52
+    },
+    {
+      "id": "wiki_53188",
+      "name": "Pirate King's Cutlass",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "warrior": 7,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 21.16
+    },
+    {
+      "id": "wiki_49640",
+      "name": "Pirate's Artillery",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 21.23
+    },
+    {
+      "id": "wiki_1189",
+      "name": "Pixie-Enchanted Sword",
+      "fights": 48,
+      "wins": 32,
+      "byClass": {
+        "warrior": 9,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 18.51
+    },
+    {
+      "id": "wiki_63871",
+      "name": "Retrowinds Sword",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 21.95
+    },
+    {
+      "id": "wiki_6862",
+      "name": "Saint Nicolas' Blade",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 22.24
+    },
+    {
+      "id": "wiki_14773",
+      "name": "Savage Claws",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "warrior": 7,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 23.12
+    },
+    {
+      "id": "wiki_53819",
+      "name": "Seismic Flail",
+      "fights": 48,
+      "wins": 31,
+      "byClass": {
+        "warrior": 9,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 21.64
+    },
+    {
+      "id": "wiki_23334",
+      "name": "Silex's Hammer",
+      "fights": 48,
+      "wins": 17,
+      "byClass": {
+        "warrior": 4,
+        "knight": 7,
+        "paladin": 6
+      },
+      "averageSeconds": 30.33
+    },
+    {
+      "id": "wiki_8732",
+      "name": "Skull-splitter Sword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 22.41
+    },
+    {
+      "id": "wiki_41744",
+      "name": "Spectral Sword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 23.15
+    },
+    {
+      "id": "wiki_1023",
+      "name": "Spooky Smasher",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "warrior": 6,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 22.8
+    },
+    {
+      "id": "wiki_8665",
+      "name": "Swashbuckler's Sickle",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "warrior": 7,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 23.12
+    },
+    {
+      "id": "wiki_63900",
+      "name": "Sweettreats Sword",
+      "fights": 48,
+      "wins": 32,
+      "byClass": {
+        "warrior": 9,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 21.52
+    },
+    {
+      "id": "wiki_8963",
+      "name": "Sword of Illumination",
+      "fights": 48,
+      "wins": 32,
+      "byClass": {
+        "warrior": 9,
+        "knight": 12,
+        "paladin": 11
+      },
+      "averageSeconds": 18.51
+    },
+    {
+      "id": "wiki_596",
+      "name": "Sword of the Colossus",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 11
+      },
+      "averageSeconds": 20.98
+    },
+    {
+      "id": "wiki_8962",
+      "name": "Sword of the Mad God",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 22.24
+    },
+    {
+      "id": "wiki_5707",
+      "name": "Sword of the Rainbow's End",
+      "fights": 48,
+      "wins": 20,
+      "byClass": {
+        "warrior": 5,
+        "knight": 9,
+        "paladin": 6
+      },
+      "averageSeconds": 29.53
+    },
+    {
+      "id": "wiki_14495",
+      "name": "Sword of the Unending Chaos",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 22.06
+    },
+    {
+      "id": "wiki_42278",
+      "name": "The Crimson Blade",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 23.15
+    },
+    {
+      "id": "wiki_8996",
+      "name": "Unstable Anomaly",
+      "fights": 48,
+      "wins": 17,
+      "byClass": {
+        "warrior": 3,
+        "knight": 8,
+        "paladin": 6
+      },
+      "averageSeconds": 30.49
+    },
+    {
+      "id": "wiki_38583",
+      "name": "Venerable Ancient Stone Sword",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "warrior": 8,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 22.62
+    },
+    {
+      "id": "wiki_8846",
+      "name": "Vinesword",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 8,
+        "knight": 12,
+        "paladin": 10
+      },
+      "averageSeconds": 22.41
+    },
+    {
+      "id": "wiki_41775",
+      "name": "Void Flail",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "warrior": 9,
+        "knight": 11,
+        "paladin": 10
+      },
+      "averageSeconds": 23.03
+    }
+  ],
+  "changedFights": 3890,
+  "totalWins": {
+    "before": 2522,
+    "after": 2400
+  }
+}

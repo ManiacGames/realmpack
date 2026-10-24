@@ -1,3 +1,7 @@
+# Sword follow-up — 0.33.0
+
+The [complete sword pass](sword-identities.md) now takes precedence for all 99 imported regular/retro/Shiny UT/ST sword weapon definitions. It adds source-backed profiles for the remaining swords, preserves existing ST membership and separates eight internal enchantment objects from new acquisition. Non-sword definitions, including daggers, retain their prior recipes. The sections below document preceding passes.
+
 # UT and ST identities — 0.32.0
 
 This second pass implements the first ten audited non-dagger items and four supporting ST pieces. There are now 62 individually researched names across eight complete ST sets; other imported items still use family rules. These are RealmPack adaptations, not literal RotMG damage or stat values. Existing IDs, sprites, footprints and saves remain compatible.
