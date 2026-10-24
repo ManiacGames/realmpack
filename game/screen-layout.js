@@ -89,6 +89,7 @@ function screenShowPage(p){const visible=new Set(p.pages[p.page]||[]);for(const 
 function screenFitModal(){
  const focus=screenFocus(),modal=document.querySelector('#overlay .modal');if(!modal||modal.dataset.screenFit)return;modal.dataset.screenFit='true';modal.classList.add('screen-modal');
  if(modalKind==='reward'||modalKind==='shop'){fitOfferModal(modal);return}
+ if(modalKind==='catalogueinspect'){fitCatalogueInspection(modal);return}
  if(modalKind==='defeat'){modal.classList.add('defeat-modal');modal.setAttribute('role','dialog');modal.setAttribute('aria-modal','true');modal.querySelector('h1').id='defeatTitle';modal.setAttribute('aria-labelledby','defeatTitle');modal.querySelector('p').id='defeatCause';modal.setAttribute('aria-describedby','defeatCause');modal.addEventListener('keydown',e=>{if(e.key==='Tab'){e.preventDefault();modal.querySelector('.defeat-continue').focus()}});modal.querySelector('.defeat-continue')?.focus({preventScroll:true});return}
  if(modalKind==='enchanter'){modal.classList.add('enchanter-modal');return}
  if(modalKind==='help'){modal.classList.add('quick-help-modal');return}
@@ -251,3 +252,11 @@ function initScreenLayout(){
  document.documentElement.dataset.playView='pack';screenFitModal();screenReflow()
 }
 if(!window.__TEST__)initScreenLayout();
+
+// Catalogue entries are one responsive panel, independent of the dialog paginator.
+function fitCatalogueInspection(modal){
+ modal.classList.add('catalogue-item-modal');modal.setAttribute('role','dialog');modal.setAttribute('aria-modal','true');modal.querySelector('h1').id='catalogueItemTitle';modal.setAttribute('aria-labelledby','catalogueItemTitle');
+ const set=modal.querySelector('.catalogue-item-set .mechanic-note'),matching=set?.querySelector('details'),rules=set?.querySelector(':scope > small');if(matching&&rules){rules.classList.add('catalogue-set-counting');matching.append(rules)}
+ modal.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const controls=[...modal.querySelectorAll('button,a[href],summary')].filter(el=>!el.disabled&&el.getClientRects().length),first=controls[0],last=controls[controls.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}});
+ modal.querySelector('.catalogue-item-footer button')?.focus({preventScroll:true})
+}

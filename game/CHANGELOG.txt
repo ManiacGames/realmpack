@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.33.1 — 2026-10-24
+
+- Catalogue item inspection now uses one responsive panel with stats and class information beside the item’s effects. Removed Previous/Next pages, oversized spacing and the repeated boilerplate heading.
+- Kept placement rules and Shiny comparisons in inline expandable sections, with Wiki and Back to catalogue always reachable. Small screens keep the same panel and can scroll longer expanded content without scrolling the game.
+- Validation: relevant inventory, compendium, shop, adjacency and UT/ST regression suites; JavaScript syntax; 7,166 browser inspection views plus 60 related dialog views. All 2,318 catalogue entries fit without local scrolling at 1366×768 and 790×635 with default text; longer expanded content remains reachable on small screens. Back, Escape and keyboard focus navigation passed.
+
 ## 0.33.0 — 2026-10-24
 
 - Reworked every imported UT/ST sword weapon: 81 names across 99 regular, retro and Shiny entries. Heavy, rapid, spread, piercing, novelty and reskin weapons now use inspected source-backed damage and cadence instead of the shared placeholder profile.
