@@ -1,6 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict'),crypto=require('node:crypto'),fs=require('node:fs'),path=require('node:path'),{ctx,vm}=require('./load-game.cjs');
-assert.equal(crypto.createHash('sha256').update(vm.runInContext(`JSON.stringify(DATA.items.filter(d=>!['wand','katana'].includes(d.kind)))`,ctx)).digest('hex'),'ef30018d33d47613bab0fea3802b7e30ced35c72cd5ed13a02979389439d393f','Non-wand/non-katana definitions changed');
+assert.equal(crypto.createHash('sha256').update(vm.runInContext(`JSON.stringify(DATA.items.filter(d=>!(d.group==='ring'&&['UT','ST'].includes(d.tier))))`,ctx)).digest('hex'),'eb81551b6e1447c1cac86f6ffc28d57ca47b3ed0102fa576289d2cf1802996eb','Definitions outside special UT/ST rings changed');
 const facts=JSON.parse(fs.readFileSync(path.join(__dirname,'../../docs/wand-source-facts.json'),'utf8')).items;assert.equal(facts.length,93);assert.equal(new Set(facts.map(d=>d.id)).size,93);assert.equal(facts.find(d=>d.id==='wiki_42013').subattacks[0].ProjectilePattern.length,8,'Raw source pattern was flattened');
 console.log(vm.runInContext(String.raw`(()=>{
  const check=(v,m)=>{if(!v)throw Error(m)},near=(a,b)=>Math.abs(a-b)<1e-7,type=n=>DATA.items.find(d=>d.name===n&&!d.isShiny).id,basePassive=passive,baseClass=classActivation;

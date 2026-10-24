@@ -1,0 +1,3464 @@
+{
+  "version": "0.38.0",
+  "fightsPerVersion": 4576,
+  "fixture": "277 non-Shiny UT/ST rings, eight T7 tiered roles and an empty slot. Rogue/Sorcerer/Knight/Summoner; dungeon boss indices 0/9/19/34; Normal depth20; fixed native tiered support at80% family max plus extra native weapon and3Health Potions; +50baseHP,full equipped HP,+8%relicrecharge,seed123456,0.05s tick. Identical gear positions; ring placement maximizes all non-consumable neighbors without outcome information. No enchants/infusions/paired special gear. Fixed-build checks, not optimized builds or player win probabilities.",
+  "before": [
+    {
+      "id": null,
+      "name": "Empty slot",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_19323",
+      "name": "+Kagenohikari",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_25991",
+      "name": "Abyssal Trophy",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_20905",
+      "name": "Adventurer's Scarf",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_8257",
+      "name": "Akuma's Tear",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14869",
+      "name": "Alexander's Band",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_25702",
+      "name": "Alien Core Corrosion",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_25703",
+      "name": "Alien Core Dark Matter",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_25686",
+      "name": "Alien Core Power",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_25701",
+      "name": "Alien Core Warp",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_9016",
+      "name": "Almandine Ring of Wrath",
+      "wins": 7,
+      "seconds": 18.43
+    },
+    {
+      "id": "wiki_3117",
+      "name": "America Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_23631",
+      "name": "Amulet of Desecration",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_2878",
+      "name": "Amulet of Dispersion",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_32698",
+      "name": "Amulet of Drakefyre",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14399",
+      "name": "Amulet of Elemental Air",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14401",
+      "name": "Amulet of Elemental Earth",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14398",
+      "name": "Amulet of Elemental Fire",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14400",
+      "name": "Amulet of Elemental Water",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_3762",
+      "name": "Amulet of Exalted Attack",
+      "wins": 7,
+      "seconds": 17.4
+    },
+    {
+      "id": "wiki_3763",
+      "name": "Amulet of Exalted Defense",
+      "wins": 8,
+      "seconds": 18.72
+    },
+    {
+      "id": "wiki_3767",
+      "name": "Amulet of Exalted Dexterity",
+      "wins": 7,
+      "seconds": 18.21
+    },
+    {
+      "id": "wiki_3764",
+      "name": "Amulet of Exalted Speed",
+      "wins": 7,
+      "seconds": 18.21
+    },
+    {
+      "id": "wiki_3765",
+      "name": "Amulet of Exalted Vitality",
+      "wins": 8,
+      "seconds": 19.28
+    },
+    {
+      "id": "wiki_3766",
+      "name": "Amulet of Exalted Wisdom",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_17691",
+      "name": "Amulet of Lightning",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_3756",
+      "name": "Amulet of Paramount Attack",
+      "wins": 7,
+      "seconds": 17.4
+    },
+    {
+      "id": "wiki_3757",
+      "name": "Amulet of Paramount Defense",
+      "wins": 8,
+      "seconds": 18.72
+    },
+    {
+      "id": "wiki_3761",
+      "name": "Amulet of Paramount Dexterity",
+      "wins": 7,
+      "seconds": 18.21
+    },
+    {
+      "id": "wiki_3758",
+      "name": "Amulet of Paramount Speed",
+      "wins": 7,
+      "seconds": 18.21
+    },
+    {
+      "id": "wiki_3759",
+      "name": "Amulet of Paramount Vitality",
+      "wins": 8,
+      "seconds": 19.28
+    },
+    {
+      "id": "wiki_3760",
+      "name": "Amulet of Paramount Wisdom",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_23624",
+      "name": "Amulet of Restoration",
+      "wins": 8,
+      "seconds": 19.28
+    },
+    {
+      "id": "wiki_3804",
+      "name": "Amulet of Superior Attack",
+      "wins": 7,
+      "seconds": 17.4
+    },
+    {
+      "id": "wiki_3805",
+      "name": "Amulet of Superior Defense",
+      "wins": 8,
+      "seconds": 18.72
+    },
+    {
+      "id": "wiki_3809",
+      "name": "Amulet of Superior Dexterity",
+      "wins": 7,
+      "seconds": 18.21
+    },
+    {
+      "id": "wiki_3806",
+      "name": "Amulet of Superior Speed",
+      "wins": 7,
+      "seconds": 18.21
+    },
+    {
+      "id": "wiki_3807",
+      "name": "Amulet of Superior Vitality",
+      "wins": 8,
+      "seconds": 19.28
+    },
+    {
+      "id": "wiki_3808",
+      "name": "Amulet of Superior Wisdom",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_37470",
+      "name": "Amulet of the Great Shaman",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_3774",
+      "name": "Amulet of Transcendent Attack",
+      "wins": 7,
+      "seconds": 17.4
+    },
+    {
+      "id": "wiki_3775",
+      "name": "Amulet of Transcendent Defense",
+      "wins": 8,
+      "seconds": 18.72
+    },
+    {
+      "id": "wiki_3779",
+      "name": "Amulet of Transcendent Dexterity",
+      "wins": 7,
+      "seconds": 18.21
+    },
+    {
+      "id": "wiki_3776",
+      "name": "Amulet of Transcendent Speed",
+      "wins": 7,
+      "seconds": 18.21
+    },
+    {
+      "id": "wiki_3777",
+      "name": "Amulet of Transcendent Vitality",
+      "wins": 8,
+      "seconds": 19.28
+    },
+    {
+      "id": "wiki_3778",
+      "name": "Amulet of Transcendent Wisdom",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_3768",
+      "name": "Amulet of Unbound Attack",
+      "wins": 7,
+      "seconds": 17.4
+    },
+    {
+      "id": "wiki_3769",
+      "name": "Amulet of Unbound Defense",
+      "wins": 8,
+      "seconds": 18.72
+    },
+    {
+      "id": "wiki_3773",
+      "name": "Amulet of Unbound Dexterity",
+      "wins": 7,
+      "seconds": 18.21
+    },
+    {
+      "id": "wiki_3770",
+      "name": "Amulet of Unbound Speed",
+      "wins": 7,
+      "seconds": 18.21
+    },
+    {
+      "id": "wiki_3771",
+      "name": "Amulet of Unbound Vitality",
+      "wins": 8,
+      "seconds": 19.28
+    },
+    {
+      "id": "wiki_3772",
+      "name": "Amulet of Unbound Wisdom",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14756",
+      "name": "Antinomy Artifact",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_21116",
+      "name": "Aquamarine Amulet",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14356",
+      "name": "Augur of the Tempest",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_32418",
+      "name": "Autarch Amulet",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_48003",
+      "name": "Babel Blocks",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_20703",
+      "name": "Basic Fishing Rod",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_28849",
+      "name": "Battalion Banner",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_595",
+      "name": "Bloodshed Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_23519",
+      "name": "Bloodstone Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_65290",
+      "name": "Bolt in a Bottle",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_2989",
+      "name": "Bracer of the Guardian",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_53198",
+      "name": "Bracer of the Guardian",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_65285",
+      "name": "Brass Knuckles",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_17857",
+      "name": "Brewer's Bangle",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_3136",
+      "name": "Bronze Medal",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_65059",
+      "name": "Bronze Pocketwatch",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_42016",
+      "name": "Bud of Beginning",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_25734",
+      "name": "Burlap Hat",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14229",
+      "name": "C.O.N.T.R.O.L.L.E.R.",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_3167",
+      "name": "Candy Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_3111",
+      "name": "Captain's Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_28844",
+      "name": "Chancellor's Cranium",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_18360",
+      "name": "Chef's Hat",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_41766",
+      "name": "Chocolate Bunny Ears",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14214",
+      "name": "Chrysalis of Eternity",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_6215",
+      "name": "Chrysanthemum Corsage",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_25741",
+      "name": "Collarbone Collar",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_28833",
+      "name": "Collector's Monocle",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_786",
+      "name": "Colossal Ring of the Crucible",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_6703",
+      "name": "Conqueror's Crown",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_3091",
+      "name": "Coral Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_789",
+      "name": "Corrupted Ring of the Crucible",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_8841",
+      "name": "Corsair Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_585",
+      "name": "Creator's Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_2323",
+      "name": "Crown",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_3095",
+      "name": "Crystal Bone Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_19250",
+      "name": "Crystal Key",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_1201",
+      "name": "Crystallised Mist",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_16980",
+      "name": "Cuband",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_38594",
+      "name": "Decades Chronicle",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_8694",
+      "name": "Defiled Equilibrium",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_1223",
+      "name": "Devil Horn Headband",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_42089",
+      "name": "Diamond Pickaxe",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_28838",
+      "name": "Divine Coronation",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_1911",
+      "name": "Diving Weights",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_15759",
+      "name": "E.Y.E.",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_59893",
+      "name": "Eden's Embrace",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_42352",
+      "name": "Elderfrost Heirloom",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14402",
+      "name": "Elemental Equilibrium",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14326",
+      "name": "Ember of the Daeva",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14501",
+      "name": "Ember of the Void",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_37469",
+      "name": "Emblem of the Empire",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_42088",
+      "name": "Emerald Pickaxe",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_32722",
+      "name": "Enchanted Ice Shard",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_1178",
+      "name": "Entropy Reactor",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_46072",
+      "name": "Esben's Wedding Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_7333",
+      "name": "Essence of Enlightened Love",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_7332",
+      "name": "Essence of Love",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_28856",
+      "name": "Exalted God's Horn",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_3121",
+      "name": "Experimental Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_20810",
+      "name": "Expert Fishing Rod",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_22525",
+      "name": "Eye of Divination",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_17390",
+      "name": "Eye of the Void",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14457",
+      "name": "Faded Heart Scarab",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_2109",
+      "name": "Fairy Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_8787",
+      "name": "Fang Necklace",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_52937",
+      "name": "Fast Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14382",
+      "name": "Firelight Necklace",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_8668",
+      "name": "First Mate's Hook",
+      "wins": 7,
+      "seconds": 17.61
+    },
+    {
+      "id": "wiki_17140",
+      "name": "Flames of Genesis",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_12078",
+      "name": "Foreman's Hard Hat",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14458",
+      "name": "Fractured Hannya",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_32724",
+      "name": "Frimarra",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_26567",
+      "name": "Frozen Heart",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_1383",
+      "name": "Geb's Lost Hedjet",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_9053",
+      "name": "Geb's Ring of Wisdom",
+      "wins": 7,
+      "seconds": 18.69
+    },
+    {
+      "id": "wiki_4054",
+      "name": "Gem of Adoration",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_4053",
+      "name": "Gem of Tenderness",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_22482",
+      "name": "Gjallarhorn",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_3134",
+      "name": "Gold Medal",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_32441",
+      "name": "Gothic Bouffant",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_32487",
+      "name": "Grim Goblet",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_32445",
+      "name": "Headless Ted",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_7365",
+      "name": "Heart of the Eternal Pyre",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_19964",
+      "name": "Heavenly Halo",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_7760",
+      "name": "Heavenly Magatama",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14294",
+      "name": "His Majesty's Eminence",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_3035",
+      "name": "Hivemind Circlet",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_2298",
+      "name": "Honey Circlet",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_25748",
+      "name": "Horned Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_3007",
+      "name": "Horrific Claws",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_5852",
+      "name": "Ice Crown",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_20305",
+      "name": "Imperial Keepsake",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_48833",
+      "name": "Infinite Bands",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_20722",
+      "name": "Intermediate Fishing Rod",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_2527",
+      "name": "Interregnum",
+      "wins": 8,
+      "seconds": 18.63
+    },
+    {
+      "id": "wiki_42087",
+      "name": "Iron Pickaxe",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_7758",
+      "name": "Jade Beetle",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_22509",
+      "name": "Jewel of Vengeance",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_20795",
+      "name": "Kagenohikari",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_12076",
+      "name": "Laborer's Hard Hat",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_8618",
+      "name": "Legacy Forgotten Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_9061",
+      "name": "Legacy Ring of Pure Wishes",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_8611",
+      "name": "Legacy Spectral Ring of Horrors",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_26576",
+      "name": "Legacy's Pendant",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_20726",
+      "name": "Legendary Fishing Rod",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_1176",
+      "name": "Loaded Core",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_1159",
+      "name": "Locked Reactor",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_50820",
+      "name": "Lucky Grenade",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_598",
+      "name": "Magical Lodestone",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_42503",
+      "name": "Magical Winter Scarf",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_52042",
+      "name": "Mala Beads",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_4058",
+      "name": "Mask of Anubis",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_4060",
+      "name": "Mask of Cnidaria",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_4059",
+      "name": "Mask of Lightning",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_4061",
+      "name": "Mask of Mucus",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_20723",
+      "name": "Master Fishing Rod",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_32416",
+      "name": "Mayhem Medallion",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14776",
+      "name": "Moonstone Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_56469",
+      "name": "Neo Alien Core Corrosion",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_56470",
+      "name": "Neo Alien Core Dark Matter",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_56467",
+      "name": "Neo Alien Core Power",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_56468",
+      "name": "Neo Alien Core Warp",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_56462",
+      "name": "Neo Entropy Reactor",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_56461",
+      "name": "Neo Loaded Core",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_56463",
+      "name": "Neo Reality Reactor",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14895",
+      "name": "Nightmatter Circlet",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_26732",
+      "name": "Omamori",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_26761",
+      "name": "Omamori",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_23359",
+      "name": "Omni-Impotence Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_593",
+      "name": "Omnipotence Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_12077",
+      "name": "Operator's Hard Hat",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_25791",
+      "name": "Ornaments of Unity",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_7393",
+      "name": "Oryx Dominus Crest",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_25788",
+      "name": "Oryxmas Ornament Energized",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_25790",
+      "name": "Oryxmas Ornament Exposed",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_25789",
+      "name": "Oryxmas Ornament Weak",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_17499",
+      "name": "Overclocking Amulet",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_41603",
+      "name": "Painted Egg Amulet",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_19361",
+      "name": "Performer's Hat",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_19259",
+      "name": "Pernicious Peridot",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_25762",
+      "name": "Phantom Pendant",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_26736",
+      "name": "Plague Mask",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_26763",
+      "name": "Plague Mask",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_52035",
+      "name": "Pointy Tail",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14787",
+      "name": "Pontifex Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_29899",
+      "name": "Pressure Gauge Band",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_8791",
+      "name": "Protective Gloves",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_19264",
+      "name": "Radiant Heart",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_1403",
+      "name": "Regal Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_7751",
+      "name": "Revenant Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_44831",
+      "name": "Ring of Cubed Wisdom",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_2990",
+      "name": "Ring of Decades",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_3104",
+      "name": "Ring of Divine Faith",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_8207",
+      "name": "Ring of Pagan Favor",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_1192",
+      "name": "Ring of Pure Wishes",
+      "wins": 7,
+      "seconds": 18.66
+    },
+    {
+      "id": "wiki_57129",
+      "name": "Ring Of Radiant Petals",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_27627",
+      "name": "Ring of Skeletal Specters",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_8960",
+      "name": "Ring of the Burning Sun",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_9057",
+      "name": "Ring of the Covetous Heart",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_19270",
+      "name": "Ring of the Inferno",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_17636",
+      "name": "Ring of the Magus",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_2977",
+      "name": "Ring of the Nile",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_32723",
+      "name": "Ring of the Northern Light",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_2978",
+      "name": "Ring of the Pyramid",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_17601",
+      "name": "Ring of the Sniper",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_2976",
+      "name": "Ring of the Sphinx",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_17635",
+      "name": "Ring of the Stalwart",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_17602",
+      "name": "Ring of the Swiftblade",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_25605",
+      "name": "Ring of Unbound Love",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_32417",
+      "name": "Ring of Wrath",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_788",
+      "name": "Robotic Ring of the Crucible",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_7357",
+      "name": "Rose Brooch",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_1781",
+      "name": "Rusted Mechanism",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_603",
+      "name": "Rusty Cuffs",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_17886",
+      "name": "Ruthven's Rosary",
+      "wins": 8,
+      "seconds": 18.6
+    },
+    {
+      "id": "wiki_787",
+      "name": "Shattered Ring of the Crucible",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_3135",
+      "name": "Silver Medal",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_2625",
+      "name": "Snake Eye Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_53182",
+      "name": "Snake Eye Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_8792",
+      "name": "Soul Gem Amulet",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_5361",
+      "name": "Soul Necklace",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_4055",
+      "name": "Soulful Affection",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_591",
+      "name": "Sourcestone",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_10067",
+      "name": "Spectral Ring of Horrors",
+      "wins": 7,
+      "seconds": 18.58
+    },
+    {
+      "id": "wiki_1800",
+      "name": "Spider's Eye Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_53183",
+      "name": "Spider's Eye Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_42305",
+      "name": "Spike Headband",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14221",
+      "name": "Steadfast Glyph",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_42085",
+      "name": "Stone Pickaxe",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_63887",
+      "name": "Storied Fossil",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_43384",
+      "name": "Strange Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_41671",
+      "name": "Sun Bathed Straw Hat",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_28467",
+      "name": "Sun Hat",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14456",
+      "name": "Sunken Fire Opal Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_1387",
+      "name": "Sunken Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_55420",
+      "name": "Superior Mask of Anubis",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_55422",
+      "name": "Superior Mask of Cnidaria",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_55421",
+      "name": "Superior Mask of Lightning",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_55423",
+      "name": "Superior Mask of Mucus",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_34338",
+      "name": "Sweetener Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_63790",
+      "name": "Sweettreats Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_50816",
+      "name": "Targeting Monocular",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_2987",
+      "name": "The Forgotten Crown",
+      "wins": 7,
+      "seconds": 18.26
+    },
+    {
+      "id": "wiki_53196",
+      "name": "The Forgotten Crown",
+      "wins": 7,
+      "seconds": 18.26
+    },
+    {
+      "id": "wiki_9669",
+      "name": "The Forgotten Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_1021",
+      "name": "The Golden Forgotten Crown",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_42301",
+      "name": "The Hemomancer's Ring",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_2988",
+      "name": "The Twilight Gemstone",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_53197",
+      "name": "The Twilight Gemstone",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_26036",
+      "name": "Thistleleaf Necklace",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_5037",
+      "name": "Tiara of Eggscellent Sturdiness",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_47107",
+      "name": "Tiki Pendant",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_20764",
+      "name": "Token of Happiness",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_20765",
+      "name": "Token of Warmth",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_21224",
+      "name": "Traveler's Trinket",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14782",
+      "name": "Unresolved Grudge",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_38592",
+      "name": "Venerable Ring of the Nile",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_38593",
+      "name": "Venerable Ring of the Pyramid",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_38591",
+      "name": "Venerable Ring of the Sphinx",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_14792",
+      "name": "Vial of Sustenance",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_54800",
+      "name": "Void Mask",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_48829",
+      "name": "Willow Sprout",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_42319",
+      "name": "Winter Boots",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_25754",
+      "name": "Witch's Brooch",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_7200",
+      "name": "Yokai Amulet",
+      "wins": 7,
+      "seconds": 18.07
+    },
+    {
+      "id": "wiki_3810",
+      "name": "Ring of Transcendent Attack",
+      "wins": 6,
+      "seconds": 17.82
+    },
+    {
+      "id": "wiki_3811",
+      "name": "Ring of Transcendent Defense",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_3815",
+      "name": "Ring of Transcendent Dexterity",
+      "wins": 6,
+      "seconds": 17.79
+    },
+    {
+      "id": "wiki_3816",
+      "name": "Ring of Transcendent Health",
+      "wins": 7,
+      "seconds": 18.8
+    },
+    {
+      "id": "wiki_3817",
+      "name": "Ring of Transcendent Magic",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_3812",
+      "name": "Ring of Transcendent Speed",
+      "wins": 6,
+      "seconds": 17.69
+    },
+    {
+      "id": "wiki_3813",
+      "name": "Ring of Transcendent Vitality",
+      "wins": 8,
+      "seconds": 19.37
+    },
+    {
+      "id": "wiki_3814",
+      "name": "Ring of Transcendent Wisdom",
+      "wins": 6,
+      "seconds": 17.84
+    }
+  ],
+  "after": [
+    {
+      "id": null,
+      "name": "Empty slot",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_19323",
+      "name": "+Kagenohikari",
+      "wins": 11,
+      "seconds": 17.41
+    },
+    {
+      "id": "wiki_25991",
+      "name": "Abyssal Trophy",
+      "wins": 6,
+      "seconds": 17.77
+    },
+    {
+      "id": "wiki_20905",
+      "name": "Adventurer's Scarf",
+      "wins": 8,
+      "seconds": 19.01
+    },
+    {
+      "id": "wiki_8257",
+      "name": "Akuma's Tear",
+      "wins": 7,
+      "seconds": 17.99
+    },
+    {
+      "id": "wiki_14869",
+      "name": "Alexander's Band",
+      "wins": 7,
+      "seconds": 18.32
+    },
+    {
+      "id": "wiki_25702",
+      "name": "Alien Core Corrosion",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_25703",
+      "name": "Alien Core Dark Matter",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_25686",
+      "name": "Alien Core Power",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_25701",
+      "name": "Alien Core Warp",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_9016",
+      "name": "Almandine Ring of Wrath",
+      "wins": 7,
+      "seconds": 18.53
+    },
+    {
+      "id": "wiki_3117",
+      "name": "America Ring",
+      "wins": 6,
+      "seconds": 18.19
+    },
+    {
+      "id": "wiki_23631",
+      "name": "Amulet of Desecration",
+      "wins": 4,
+      "seconds": 14.79
+    },
+    {
+      "id": "wiki_2878",
+      "name": "Amulet of Dispersion",
+      "wins": 7,
+      "seconds": 18.79
+    },
+    {
+      "id": "wiki_32698",
+      "name": "Amulet of Drakefyre",
+      "wins": 7,
+      "seconds": 18.72
+    },
+    {
+      "id": "wiki_14399",
+      "name": "Amulet of Elemental Air",
+      "wins": 7,
+      "seconds": 17.9
+    },
+    {
+      "id": "wiki_14401",
+      "name": "Amulet of Elemental Earth",
+      "wins": 7,
+      "seconds": 17.96
+    },
+    {
+      "id": "wiki_14398",
+      "name": "Amulet of Elemental Fire",
+      "wins": 7,
+      "seconds": 17.82
+    },
+    {
+      "id": "wiki_14400",
+      "name": "Amulet of Elemental Water",
+      "wins": 8,
+      "seconds": 19.03
+    },
+    {
+      "id": "wiki_3762",
+      "name": "Amulet of Exalted Attack",
+      "wins": 6,
+      "seconds": 17.84
+    },
+    {
+      "id": "wiki_3763",
+      "name": "Amulet of Exalted Defense",
+      "wins": 6,
+      "seconds": 17.97
+    },
+    {
+      "id": "wiki_3767",
+      "name": "Amulet of Exalted Dexterity",
+      "wins": 6,
+      "seconds": 17.85
+    },
+    {
+      "id": "wiki_3764",
+      "name": "Amulet of Exalted Speed",
+      "wins": 6,
+      "seconds": 17.93
+    },
+    {
+      "id": "wiki_3765",
+      "name": "Amulet of Exalted Vitality",
+      "wins": 8,
+      "seconds": 18.88
+    },
+    {
+      "id": "wiki_3766",
+      "name": "Amulet of Exalted Wisdom",
+      "wins": 6,
+      "seconds": 17.85
+    },
+    {
+      "id": "wiki_17691",
+      "name": "Amulet of Lightning",
+      "wins": 7,
+      "seconds": 18.12
+    },
+    {
+      "id": "wiki_3756",
+      "name": "Amulet of Paramount Attack",
+      "wins": 6,
+      "seconds": 17.77
+    },
+    {
+      "id": "wiki_3757",
+      "name": "Amulet of Paramount Defense",
+      "wins": 6,
+      "seconds": 17.91
+    },
+    {
+      "id": "wiki_3761",
+      "name": "Amulet of Paramount Dexterity",
+      "wins": 6,
+      "seconds": 17.85
+    },
+    {
+      "id": "wiki_3758",
+      "name": "Amulet of Paramount Speed",
+      "wins": 6,
+      "seconds": 17.87
+    },
+    {
+      "id": "wiki_3759",
+      "name": "Amulet of Paramount Vitality",
+      "wins": 8,
+      "seconds": 18.85
+    },
+    {
+      "id": "wiki_3760",
+      "name": "Amulet of Paramount Wisdom",
+      "wins": 6,
+      "seconds": 17.85
+    },
+    {
+      "id": "wiki_23624",
+      "name": "Amulet of Restoration",
+      "wins": 7,
+      "seconds": 18.94
+    },
+    {
+      "id": "wiki_3804",
+      "name": "Amulet of Superior Attack",
+      "wins": 6,
+      "seconds": 17.77
+    },
+    {
+      "id": "wiki_3805",
+      "name": "Amulet of Superior Defense",
+      "wins": 6,
+      "seconds": 17.9
+    },
+    {
+      "id": "wiki_3809",
+      "name": "Amulet of Superior Dexterity",
+      "wins": 6,
+      "seconds": 17.86
+    },
+    {
+      "id": "wiki_3806",
+      "name": "Amulet of Superior Speed",
+      "wins": 6,
+      "seconds": 17.86
+    },
+    {
+      "id": "wiki_3807",
+      "name": "Amulet of Superior Vitality",
+      "wins": 8,
+      "seconds": 18.78
+    },
+    {
+      "id": "wiki_3808",
+      "name": "Amulet of Superior Wisdom",
+      "wins": 6,
+      "seconds": 17.84
+    },
+    {
+      "id": "wiki_37470",
+      "name": "Amulet of the Great Shaman",
+      "wins": 7,
+      "seconds": 18.02
+    },
+    {
+      "id": "wiki_3774",
+      "name": "Amulet of Transcendent Attack",
+      "wins": 7,
+      "seconds": 17.93
+    },
+    {
+      "id": "wiki_3775",
+      "name": "Amulet of Transcendent Defense",
+      "wins": 7,
+      "seconds": 18.13
+    },
+    {
+      "id": "wiki_3779",
+      "name": "Amulet of Transcendent Dexterity",
+      "wins": 7,
+      "seconds": 17.96
+    },
+    {
+      "id": "wiki_3776",
+      "name": "Amulet of Transcendent Speed",
+      "wins": 7,
+      "seconds": 17.96
+    },
+    {
+      "id": "wiki_3777",
+      "name": "Amulet of Transcendent Vitality",
+      "wins": 8,
+      "seconds": 19.17
+    },
+    {
+      "id": "wiki_3778",
+      "name": "Amulet of Transcendent Wisdom",
+      "wins": 7,
+      "seconds": 18.02
+    },
+    {
+      "id": "wiki_3768",
+      "name": "Amulet of Unbound Attack",
+      "wins": 7,
+      "seconds": 17.82
+    },
+    {
+      "id": "wiki_3769",
+      "name": "Amulet of Unbound Defense",
+      "wins": 7,
+      "seconds": 17.96
+    },
+    {
+      "id": "wiki_3773",
+      "name": "Amulet of Unbound Dexterity",
+      "wins": 7,
+      "seconds": 17.9
+    },
+    {
+      "id": "wiki_3770",
+      "name": "Amulet of Unbound Speed",
+      "wins": 7,
+      "seconds": 17.9
+    },
+    {
+      "id": "wiki_3771",
+      "name": "Amulet of Unbound Vitality",
+      "wins": 8,
+      "seconds": 19.03
+    },
+    {
+      "id": "wiki_3772",
+      "name": "Amulet of Unbound Wisdom",
+      "wins": 7,
+      "seconds": 17.96
+    },
+    {
+      "id": "wiki_14756",
+      "name": "Antinomy Artifact",
+      "wins": 7,
+      "seconds": 18.57
+    },
+    {
+      "id": "wiki_21116",
+      "name": "Aquamarine Amulet",
+      "wins": 8,
+      "seconds": 18.85
+    },
+    {
+      "id": "wiki_14356",
+      "name": "Augur of the Tempest",
+      "wins": 7,
+      "seconds": 18.21
+    },
+    {
+      "id": "wiki_32418",
+      "name": "Autarch Amulet",
+      "wins": 7,
+      "seconds": 18.02
+    },
+    {
+      "id": "wiki_48003",
+      "name": "Babel Blocks",
+      "wins": 9,
+      "seconds": 18.86
+    },
+    {
+      "id": "wiki_20703",
+      "name": "Basic Fishing Rod",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_28849",
+      "name": "Battalion Banner",
+      "wins": 7,
+      "seconds": 17.85
+    },
+    {
+      "id": "wiki_595",
+      "name": "Bloodshed Ring",
+      "wins": 7,
+      "seconds": 18.47
+    },
+    {
+      "id": "wiki_23519",
+      "name": "Bloodstone Ring",
+      "wins": 7,
+      "seconds": 18.64
+    },
+    {
+      "id": "wiki_65290",
+      "name": "Bolt in a Bottle",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_2989",
+      "name": "Bracer of the Guardian",
+      "wins": 7,
+      "seconds": 18.29
+    },
+    {
+      "id": "wiki_53198",
+      "name": "Bracer of the Guardian",
+      "wins": 7,
+      "seconds": 17.89
+    },
+    {
+      "id": "wiki_65285",
+      "name": "Brass Knuckles",
+      "wins": 6,
+      "seconds": 17.93
+    },
+    {
+      "id": "wiki_17857",
+      "name": "Brewer's Bangle",
+      "wins": 8,
+      "seconds": 19.24
+    },
+    {
+      "id": "wiki_3136",
+      "name": "Bronze Medal",
+      "wins": 6,
+      "seconds": 18.16
+    },
+    {
+      "id": "wiki_65059",
+      "name": "Bronze Pocketwatch",
+      "wins": 7,
+      "seconds": 18.56
+    },
+    {
+      "id": "wiki_42016",
+      "name": "Bud of Beginning",
+      "wins": 7,
+      "seconds": 18.12
+    },
+    {
+      "id": "wiki_25734",
+      "name": "Burlap Hat",
+      "wins": 7,
+      "seconds": 18.04
+    },
+    {
+      "id": "wiki_14229",
+      "name": "C.O.N.T.R.O.L.L.E.R.",
+      "wins": 7,
+      "seconds": 17.98
+    },
+    {
+      "id": "wiki_3167",
+      "name": "Candy Ring",
+      "wins": 8,
+      "seconds": 18.93
+    },
+    {
+      "id": "wiki_3111",
+      "name": "Captain's Ring",
+      "wins": 7,
+      "seconds": 18.39
+    },
+    {
+      "id": "wiki_28844",
+      "name": "Chancellor's Cranium",
+      "wins": 7,
+      "seconds": 17.63
+    },
+    {
+      "id": "wiki_18360",
+      "name": "Chef's Hat",
+      "wins": 7,
+      "seconds": 18.02
+    },
+    {
+      "id": "wiki_41766",
+      "name": "Chocolate Bunny Ears",
+      "wins": 7,
+      "seconds": 18.32
+    },
+    {
+      "id": "wiki_14214",
+      "name": "Chrysalis of Eternity",
+      "wins": 7,
+      "seconds": 18.33
+    },
+    {
+      "id": "wiki_6215",
+      "name": "Chrysanthemum Corsage",
+      "wins": 6,
+      "seconds": 17.81
+    },
+    {
+      "id": "wiki_25741",
+      "name": "Collarbone Collar",
+      "wins": 7,
+      "seconds": 17.89
+    },
+    {
+      "id": "wiki_28833",
+      "name": "Collector's Monocle",
+      "wins": 7,
+      "seconds": 18.48
+    },
+    {
+      "id": "wiki_786",
+      "name": "Colossal Ring of the Crucible",
+      "wins": 8,
+      "seconds": 18.87
+    },
+    {
+      "id": "wiki_6703",
+      "name": "Conqueror's Crown",
+      "wins": 8,
+      "seconds": 18.97
+    },
+    {
+      "id": "wiki_3091",
+      "name": "Coral Ring",
+      "wins": 6,
+      "seconds": 17.84
+    },
+    {
+      "id": "wiki_789",
+      "name": "Corrupted Ring of the Crucible",
+      "wins": 8,
+      "seconds": 18.99
+    },
+    {
+      "id": "wiki_8841",
+      "name": "Corsair Ring",
+      "wins": 6,
+      "seconds": 17.84
+    },
+    {
+      "id": "wiki_585",
+      "name": "Creator's Ring",
+      "wins": 8,
+      "seconds": 19.1
+    },
+    {
+      "id": "wiki_2323",
+      "name": "Crown",
+      "wins": 8,
+      "seconds": 18.47
+    },
+    {
+      "id": "wiki_3095",
+      "name": "Crystal Bone Ring",
+      "wins": 6,
+      "seconds": 17.85
+    },
+    {
+      "id": "wiki_19250",
+      "name": "Crystal Key",
+      "wins": 7,
+      "seconds": 17.99
+    },
+    {
+      "id": "wiki_1201",
+      "name": "Crystallised Mist",
+      "wins": 7,
+      "seconds": 19.35
+    },
+    {
+      "id": "wiki_16980",
+      "name": "Cuband",
+      "wins": 7,
+      "seconds": 18.32
+    },
+    {
+      "id": "wiki_38594",
+      "name": "Decades Chronicle",
+      "wins": 7,
+      "seconds": 18.68
+    },
+    {
+      "id": "wiki_8694",
+      "name": "Defiled Equilibrium",
+      "wins": 7,
+      "seconds": 18.02
+    },
+    {
+      "id": "wiki_1223",
+      "name": "Devil Horn Headband",
+      "wins": 7,
+      "seconds": 18.68
+    },
+    {
+      "id": "wiki_42089",
+      "name": "Diamond Pickaxe",
+      "wins": 7,
+      "seconds": 18.28
+    },
+    {
+      "id": "wiki_28838",
+      "name": "Divine Coronation",
+      "wins": 7,
+      "seconds": 18.38
+    },
+    {
+      "id": "wiki_1911",
+      "name": "Diving Weights",
+      "wins": 7,
+      "seconds": 18.02
+    },
+    {
+      "id": "wiki_15759",
+      "name": "E.Y.E.",
+      "wins": 7,
+      "seconds": 18.21
+    },
+    {
+      "id": "wiki_59893",
+      "name": "Eden's Embrace",
+      "wins": 7,
+      "seconds": 19.32
+    },
+    {
+      "id": "wiki_42352",
+      "name": "Elderfrost Heirloom",
+      "wins": 7,
+      "seconds": 18.38
+    },
+    {
+      "id": "wiki_14402",
+      "name": "Elemental Equilibrium",
+      "wins": 8,
+      "seconds": 18.46
+    },
+    {
+      "id": "wiki_14326",
+      "name": "Ember of the Daeva",
+      "wins": 8,
+      "seconds": 18.96
+    },
+    {
+      "id": "wiki_14501",
+      "name": "Ember of the Void",
+      "wins": 6,
+      "seconds": 17.68
+    },
+    {
+      "id": "wiki_37469",
+      "name": "Emblem of the Empire",
+      "wins": 7,
+      "seconds": 18.53
+    },
+    {
+      "id": "wiki_42088",
+      "name": "Emerald Pickaxe",
+      "wins": 7,
+      "seconds": 18.25
+    },
+    {
+      "id": "wiki_32722",
+      "name": "Enchanted Ice Shard",
+      "wins": 6,
+      "seconds": 17.73
+    },
+    {
+      "id": "wiki_1178",
+      "name": "Entropy Reactor",
+      "wins": 6,
+      "seconds": 18.51
+    },
+    {
+      "id": "wiki_46072",
+      "name": "Esben's Wedding Ring",
+      "wins": 7,
+      "seconds": 18.47
+    },
+    {
+      "id": "wiki_7333",
+      "name": "Essence of Enlightened Love",
+      "wins": 7,
+      "seconds": 18.33
+    },
+    {
+      "id": "wiki_7332",
+      "name": "Essence of Love",
+      "wins": 7,
+      "seconds": 18.33
+    },
+    {
+      "id": "wiki_28856",
+      "name": "Exalted God's Horn",
+      "wins": 7,
+      "seconds": 18.38
+    },
+    {
+      "id": "wiki_3121",
+      "name": "Experimental Ring",
+      "wins": 7,
+      "seconds": 18.83
+    },
+    {
+      "id": "wiki_20810",
+      "name": "Expert Fishing Rod",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_22525",
+      "name": "Eye of Divination",
+      "wins": 7,
+      "seconds": 18.08
+    },
+    {
+      "id": "wiki_17390",
+      "name": "Eye of the Void",
+      "wins": 7,
+      "seconds": 18.49
+    },
+    {
+      "id": "wiki_14457",
+      "name": "Faded Heart Scarab",
+      "wins": 7,
+      "seconds": 18.14
+    },
+    {
+      "id": "wiki_2109",
+      "name": "Fairy Ring",
+      "wins": 8,
+      "seconds": 18.63
+    },
+    {
+      "id": "wiki_8787",
+      "name": "Fang Necklace",
+      "wins": 7,
+      "seconds": 18.33
+    },
+    {
+      "id": "wiki_52937",
+      "name": "Fast Ring",
+      "wins": 6,
+      "seconds": 17.83
+    },
+    {
+      "id": "wiki_14382",
+      "name": "Firelight Necklace",
+      "wins": 7,
+      "seconds": 17.89
+    },
+    {
+      "id": "wiki_8668",
+      "name": "First Mate's Hook",
+      "wins": 7,
+      "seconds": 18.19
+    },
+    {
+      "id": "wiki_17140",
+      "name": "Flames of Genesis",
+      "wins": 8,
+      "seconds": 19.03
+    },
+    {
+      "id": "wiki_12078",
+      "name": "Foreman's Hard Hat",
+      "wins": 7,
+      "seconds": 17.82
+    },
+    {
+      "id": "wiki_14458",
+      "name": "Fractured Hannya",
+      "wins": 7,
+      "seconds": 18.16
+    },
+    {
+      "id": "wiki_32724",
+      "name": "Frimarra",
+      "wins": 7,
+      "seconds": 18.28
+    },
+    {
+      "id": "wiki_26567",
+      "name": "Frozen Heart",
+      "wins": 6,
+      "seconds": 18.03
+    },
+    {
+      "id": "wiki_1383",
+      "name": "Geb's Lost Hedjet",
+      "wins": 7,
+      "seconds": 18.21
+    },
+    {
+      "id": "wiki_9053",
+      "name": "Geb's Ring of Wisdom",
+      "wins": 7,
+      "seconds": 18.48
+    },
+    {
+      "id": "wiki_4054",
+      "name": "Gem of Adoration",
+      "wins": 8,
+      "seconds": 19.17
+    },
+    {
+      "id": "wiki_4053",
+      "name": "Gem of Tenderness",
+      "wins": 6,
+      "seconds": 17.82
+    },
+    {
+      "id": "wiki_22482",
+      "name": "Gjallarhorn",
+      "wins": 7,
+      "seconds": 18.12
+    },
+    {
+      "id": "wiki_3134",
+      "name": "Gold Medal",
+      "wins": 7,
+      "seconds": 18.51
+    },
+    {
+      "id": "wiki_32441",
+      "name": "Gothic Bouffant",
+      "wins": 7,
+      "seconds": 18.33
+    },
+    {
+      "id": "wiki_32487",
+      "name": "Grim Goblet",
+      "wins": 7,
+      "seconds": 18.58
+    },
+    {
+      "id": "wiki_32445",
+      "name": "Headless Ted",
+      "wins": 7,
+      "seconds": 18.5
+    },
+    {
+      "id": "wiki_7365",
+      "name": "Heart of the Eternal Pyre",
+      "wins": 7,
+      "seconds": 18.56
+    },
+    {
+      "id": "wiki_19964",
+      "name": "Heavenly Halo",
+      "wins": 7,
+      "seconds": 18.02
+    },
+    {
+      "id": "wiki_7760",
+      "name": "Heavenly Magatama",
+      "wins": 8,
+      "seconds": 18.96
+    },
+    {
+      "id": "wiki_14294",
+      "name": "His Majesty's Eminence",
+      "wins": 7,
+      "seconds": 18.26
+    },
+    {
+      "id": "wiki_3035",
+      "name": "Hivemind Circlet",
+      "wins": 7,
+      "seconds": 17.83
+    },
+    {
+      "id": "wiki_2298",
+      "name": "Honey Circlet",
+      "wins": 7,
+      "seconds": 18.12
+    },
+    {
+      "id": "wiki_25748",
+      "name": "Horned Ring",
+      "wins": 7,
+      "seconds": 18.14
+    },
+    {
+      "id": "wiki_3007",
+      "name": "Horrific Claws",
+      "wins": 7,
+      "seconds": 17.89
+    },
+    {
+      "id": "wiki_5852",
+      "name": "Ice Crown",
+      "wins": 7,
+      "seconds": 18.26
+    },
+    {
+      "id": "wiki_20305",
+      "name": "Imperial Keepsake",
+      "wins": 7,
+      "seconds": 18.02
+    },
+    {
+      "id": "wiki_48833",
+      "name": "Infinite Bands",
+      "wins": 6,
+      "seconds": 17.7
+    },
+    {
+      "id": "wiki_20722",
+      "name": "Intermediate Fishing Rod",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_2527",
+      "name": "Interregnum",
+      "wins": 7,
+      "seconds": 18.58
+    },
+    {
+      "id": "wiki_42087",
+      "name": "Iron Pickaxe",
+      "wins": 7,
+      "seconds": 17.89
+    },
+    {
+      "id": "wiki_7758",
+      "name": "Jade Beetle",
+      "wins": 7,
+      "seconds": 18.09
+    },
+    {
+      "id": "wiki_22509",
+      "name": "Jewel of Vengeance",
+      "wins": 7,
+      "seconds": 17.44
+    },
+    {
+      "id": "wiki_20795",
+      "name": "Kagenohikari",
+      "wins": 9,
+      "seconds": 18.4
+    },
+    {
+      "id": "wiki_12076",
+      "name": "Laborer's Hard Hat",
+      "wins": 7,
+      "seconds": 17.89
+    },
+    {
+      "id": "wiki_8618",
+      "name": "Legacy Forgotten Ring",
+      "wins": 6,
+      "seconds": 17.71
+    },
+    {
+      "id": "wiki_9061",
+      "name": "Legacy Ring of Pure Wishes",
+      "wins": 6,
+      "seconds": 17.83
+    },
+    {
+      "id": "wiki_8611",
+      "name": "Legacy Spectral Ring of Horrors",
+      "wins": 7,
+      "seconds": 18.55
+    },
+    {
+      "id": "wiki_26576",
+      "name": "Legacy's Pendant",
+      "wins": 6,
+      "seconds": 17.87
+    },
+    {
+      "id": "wiki_20726",
+      "name": "Legendary Fishing Rod",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_1176",
+      "name": "Loaded Core",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_1159",
+      "name": "Locked Reactor",
+      "wins": 6,
+      "seconds": 18.51
+    },
+    {
+      "id": "wiki_50820",
+      "name": "Lucky Grenade",
+      "wins": 7,
+      "seconds": 18.11
+    },
+    {
+      "id": "wiki_598",
+      "name": "Magical Lodestone",
+      "wins": 6,
+      "seconds": 17.72
+    },
+    {
+      "id": "wiki_42503",
+      "name": "Magical Winter Scarf",
+      "wins": 7,
+      "seconds": 18.19
+    },
+    {
+      "id": "wiki_52042",
+      "name": "Mala Beads",
+      "wins": 8,
+      "seconds": 18.96
+    },
+    {
+      "id": "wiki_4058",
+      "name": "Mask of Anubis",
+      "wins": 7,
+      "seconds": 18.53
+    },
+    {
+      "id": "wiki_4060",
+      "name": "Mask of Cnidaria",
+      "wins": 7,
+      "seconds": 18.02
+    },
+    {
+      "id": "wiki_4059",
+      "name": "Mask of Lightning",
+      "wins": 7,
+      "seconds": 18.02
+    },
+    {
+      "id": "wiki_4061",
+      "name": "Mask of Mucus",
+      "wins": 7,
+      "seconds": 18.53
+    },
+    {
+      "id": "wiki_20723",
+      "name": "Master Fishing Rod",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_32416",
+      "name": "Mayhem Medallion",
+      "wins": 7,
+      "seconds": 18.13
+    },
+    {
+      "id": "wiki_14776",
+      "name": "Moonstone Ring",
+      "wins": 7,
+      "seconds": 18.19
+    },
+    {
+      "id": "wiki_56469",
+      "name": "Neo Alien Core Corrosion",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_56470",
+      "name": "Neo Alien Core Dark Matter",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_56467",
+      "name": "Neo Alien Core Power",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_56468",
+      "name": "Neo Alien Core Warp",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_56462",
+      "name": "Neo Entropy Reactor",
+      "wins": 6,
+      "seconds": 18.51
+    },
+    {
+      "id": "wiki_56461",
+      "name": "Neo Loaded Core",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_56463",
+      "name": "Neo Reality Reactor",
+      "wins": 6,
+      "seconds": 18.52
+    },
+    {
+      "id": "wiki_14895",
+      "name": "Nightmatter Circlet",
+      "wins": 8,
+      "seconds": 19.02
+    },
+    {
+      "id": "wiki_26732",
+      "name": "Omamori",
+      "wins": 7,
+      "seconds": 17.98
+    },
+    {
+      "id": "wiki_26761",
+      "name": "Omamori",
+      "wins": 7,
+      "seconds": 17.98
+    },
+    {
+      "id": "wiki_23359",
+      "name": "Omni-Impotence Ring",
+      "wins": 6,
+      "seconds": 17.03
+    },
+    {
+      "id": "wiki_593",
+      "name": "Omnipotence Ring",
+      "wins": 7,
+      "seconds": 18.56
+    },
+    {
+      "id": "wiki_12077",
+      "name": "Operator's Hard Hat",
+      "wins": 7,
+      "seconds": 17.82
+    },
+    {
+      "id": "wiki_25791",
+      "name": "Ornaments of Unity",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_7393",
+      "name": "Oryx Dominus Crest",
+      "wins": 7,
+      "seconds": 17.85
+    },
+    {
+      "id": "wiki_25788",
+      "name": "Oryxmas Ornament Energized",
+      "wins": 6,
+      "seconds": 17.85
+    },
+    {
+      "id": "wiki_25790",
+      "name": "Oryxmas Ornament Exposed",
+      "wins": 7,
+      "seconds": 18.22
+    },
+    {
+      "id": "wiki_25789",
+      "name": "Oryxmas Ornament Weak",
+      "wins": 7,
+      "seconds": 18.54
+    },
+    {
+      "id": "wiki_17499",
+      "name": "Overclocking Amulet",
+      "wins": 6,
+      "seconds": 18.15
+    },
+    {
+      "id": "wiki_41603",
+      "name": "Painted Egg Amulet",
+      "wins": 8,
+      "seconds": 18.85
+    },
+    {
+      "id": "wiki_19361",
+      "name": "Performer's Hat",
+      "wins": 7,
+      "seconds": 18.68
+    },
+    {
+      "id": "wiki_19259",
+      "name": "Pernicious Peridot",
+      "wins": 7,
+      "seconds": 19.16
+    },
+    {
+      "id": "wiki_25762",
+      "name": "Phantom Pendant",
+      "wins": 7,
+      "seconds": 18.02
+    },
+    {
+      "id": "wiki_26736",
+      "name": "Plague Mask",
+      "wins": 7,
+      "seconds": 17.93
+    },
+    {
+      "id": "wiki_26763",
+      "name": "Plague Mask",
+      "wins": 7,
+      "seconds": 18.79
+    },
+    {
+      "id": "wiki_52035",
+      "name": "Pointy Tail",
+      "wins": 7,
+      "seconds": 18.02
+    },
+    {
+      "id": "wiki_14787",
+      "name": "Pontifex Ring",
+      "wins": 7,
+      "seconds": 18.02
+    },
+    {
+      "id": "wiki_29899",
+      "name": "Pressure Gauge Band",
+      "wins": 7,
+      "seconds": 18.53
+    },
+    {
+      "id": "wiki_8791",
+      "name": "Protective Gloves",
+      "wins": 7,
+      "seconds": 17.89
+    },
+    {
+      "id": "wiki_19264",
+      "name": "Radiant Heart",
+      "wins": 7,
+      "seconds": 18.28
+    },
+    {
+      "id": "wiki_1403",
+      "name": "Regal Ring",
+      "wins": 6,
+      "seconds": 17.85
+    },
+    {
+      "id": "wiki_7751",
+      "name": "Revenant Ring",
+      "wins": 7,
+      "seconds": 17.89
+    },
+    {
+      "id": "wiki_44831",
+      "name": "Ring of Cubed Wisdom",
+      "wins": 7,
+      "seconds": 18.56
+    },
+    {
+      "id": "wiki_2990",
+      "name": "Ring of Decades",
+      "wins": 7,
+      "seconds": 18.8
+    },
+    {
+      "id": "wiki_3104",
+      "name": "Ring of Divine Faith",
+      "wins": 8,
+      "seconds": 18.79
+    },
+    {
+      "id": "wiki_8207",
+      "name": "Ring of Pagan Favor",
+      "wins": 7,
+      "seconds": 18.02
+    },
+    {
+      "id": "wiki_1192",
+      "name": "Ring of Pure Wishes",
+      "wins": 7,
+      "seconds": 18.14
+    },
+    {
+      "id": "wiki_57129",
+      "name": "Ring Of Radiant Petals",
+      "wins": 7,
+      "seconds": 18.53
+    },
+    {
+      "id": "wiki_27627",
+      "name": "Ring of Skeletal Specters",
+      "wins": 7,
+      "seconds": 18.6
+    },
+    {
+      "id": "wiki_8960",
+      "name": "Ring of the Burning Sun",
+      "wins": 7,
+      "seconds": 17.96
+    },
+    {
+      "id": "wiki_9057",
+      "name": "Ring of the Covetous Heart",
+      "wins": 6,
+      "seconds": 17.69
+    },
+    {
+      "id": "wiki_19270",
+      "name": "Ring of the Inferno",
+      "wins": 6,
+      "seconds": 17.71
+    },
+    {
+      "id": "wiki_17636",
+      "name": "Ring of the Magus",
+      "wins": 7,
+      "seconds": 18.02
+    },
+    {
+      "id": "wiki_2977",
+      "name": "Ring of the Nile",
+      "wins": 7,
+      "seconds": 18.11
+    },
+    {
+      "id": "wiki_32723",
+      "name": "Ring of the Northern Light",
+      "wins": 7,
+      "seconds": 18.11
+    },
+    {
+      "id": "wiki_2978",
+      "name": "Ring of the Pyramid",
+      "wins": 7,
+      "seconds": 18.28
+    },
+    {
+      "id": "wiki_17601",
+      "name": "Ring of the Sniper",
+      "wins": 7,
+      "seconds": 17.95
+    },
+    {
+      "id": "wiki_2976",
+      "name": "Ring of the Sphinx",
+      "wins": 6,
+      "seconds": 17.73
+    },
+    {
+      "id": "wiki_17635",
+      "name": "Ring of the Stalwart",
+      "wins": 7,
+      "seconds": 18.64
+    },
+    {
+      "id": "wiki_17602",
+      "name": "Ring of the Swiftblade",
+      "wins": 7,
+      "seconds": 18.37
+    },
+    {
+      "id": "wiki_25605",
+      "name": "Ring of Unbound Love",
+      "wins": 7,
+      "seconds": 18.53
+    },
+    {
+      "id": "wiki_32417",
+      "name": "Ring of Wrath",
+      "wins": 8,
+      "seconds": 18.96
+    },
+    {
+      "id": "wiki_788",
+      "name": "Robotic Ring of the Crucible",
+      "wins": 7,
+      "seconds": 18.36
+    },
+    {
+      "id": "wiki_7357",
+      "name": "Rose Brooch",
+      "wins": 7,
+      "seconds": 18.21
+    },
+    {
+      "id": "wiki_1781",
+      "name": "Rusted Mechanism",
+      "wins": 6,
+      "seconds": 18.15
+    },
+    {
+      "id": "wiki_603",
+      "name": "Rusty Cuffs",
+      "wins": 7,
+      "seconds": 18.04
+    },
+    {
+      "id": "wiki_17886",
+      "name": "Ruthven's Rosary",
+      "wins": 8,
+      "seconds": 18.79
+    },
+    {
+      "id": "wiki_787",
+      "name": "Shattered Ring of the Crucible",
+      "wins": 7,
+      "seconds": 18.36
+    },
+    {
+      "id": "wiki_3135",
+      "name": "Silver Medal",
+      "wins": 7,
+      "seconds": 18.41
+    },
+    {
+      "id": "wiki_2625",
+      "name": "Snake Eye Ring",
+      "wins": 7,
+      "seconds": 17.7
+    },
+    {
+      "id": "wiki_53182",
+      "name": "Snake Eye Ring",
+      "wins": 6,
+      "seconds": 17.75
+    },
+    {
+      "id": "wiki_8792",
+      "name": "Soul Gem Amulet",
+      "wins": 7,
+      "seconds": 18.33
+    },
+    {
+      "id": "wiki_5361",
+      "name": "Soul Necklace",
+      "wins": 7,
+      "seconds": 18.26
+    },
+    {
+      "id": "wiki_4055",
+      "name": "Soulful Affection",
+      "wins": 8,
+      "seconds": 19.22
+    },
+    {
+      "id": "wiki_591",
+      "name": "Sourcestone",
+      "wins": 7,
+      "seconds": 19.16
+    },
+    {
+      "id": "wiki_10067",
+      "name": "Spectral Ring of Horrors",
+      "wins": 7,
+      "seconds": 17.87
+    },
+    {
+      "id": "wiki_1800",
+      "name": "Spider's Eye Ring",
+      "wins": 8,
+      "seconds": 19.16
+    },
+    {
+      "id": "wiki_53183",
+      "name": "Spider's Eye Ring",
+      "wins": 7,
+      "seconds": 18.48
+    },
+    {
+      "id": "wiki_42305",
+      "name": "Spike Headband",
+      "wins": 7,
+      "seconds": 18.32
+    },
+    {
+      "id": "wiki_14221",
+      "name": "Steadfast Glyph",
+      "wins": 7,
+      "seconds": 18.32
+    },
+    {
+      "id": "wiki_42085",
+      "name": "Stone Pickaxe",
+      "wins": 6,
+      "seconds": 17.91
+    },
+    {
+      "id": "wiki_63887",
+      "name": "Storied Fossil",
+      "wins": 7,
+      "seconds": 18.53
+    },
+    {
+      "id": "wiki_43384",
+      "name": "Strange Ring",
+      "wins": 7,
+      "seconds": 18.08
+    },
+    {
+      "id": "wiki_41671",
+      "name": "Sun Bathed Straw Hat",
+      "wins": 7,
+      "seconds": 18.49
+    },
+    {
+      "id": "wiki_28467",
+      "name": "Sun Hat",
+      "wins": 7,
+      "seconds": 18.53
+    },
+    {
+      "id": "wiki_14456",
+      "name": "Sunken Fire Opal Ring",
+      "wins": 7,
+      "seconds": 18.04
+    },
+    {
+      "id": "wiki_1387",
+      "name": "Sunken Ring",
+      "wins": 6,
+      "seconds": 17.84
+    },
+    {
+      "id": "wiki_55420",
+      "name": "Superior Mask of Anubis",
+      "wins": 7,
+      "seconds": 18.54
+    },
+    {
+      "id": "wiki_55422",
+      "name": "Superior Mask of Cnidaria",
+      "wins": 7,
+      "seconds": 18.08
+    },
+    {
+      "id": "wiki_55421",
+      "name": "Superior Mask of Lightning",
+      "wins": 7,
+      "seconds": 18.08
+    },
+    {
+      "id": "wiki_55423",
+      "name": "Superior Mask of Mucus",
+      "wins": 7,
+      "seconds": 18.54
+    },
+    {
+      "id": "wiki_34338",
+      "name": "Sweetener Ring",
+      "wins": 7,
+      "seconds": 18.53
+    },
+    {
+      "id": "wiki_63790",
+      "name": "Sweettreats Ring",
+      "wins": 7,
+      "seconds": 18.56
+    },
+    {
+      "id": "wiki_50816",
+      "name": "Targeting Monocular",
+      "wins": 7,
+      "seconds": 18.19
+    },
+    {
+      "id": "wiki_2987",
+      "name": "The Forgotten Crown",
+      "wins": 7,
+      "seconds": 18.26
+    },
+    {
+      "id": "wiki_53196",
+      "name": "The Forgotten Crown",
+      "wins": 7,
+      "seconds": 18.26
+    },
+    {
+      "id": "wiki_9669",
+      "name": "The Forgotten Ring",
+      "wins": 7,
+      "seconds": 18.8
+    },
+    {
+      "id": "wiki_1021",
+      "name": "The Golden Forgotten Crown",
+      "wins": 7,
+      "seconds": 18.26
+    },
+    {
+      "id": "wiki_42301",
+      "name": "The Hemomancer's Ring",
+      "wins": 8,
+      "seconds": 18.85
+    },
+    {
+      "id": "wiki_2988",
+      "name": "The Twilight Gemstone",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_53197",
+      "name": "The Twilight Gemstone",
+      "wins": 6,
+      "seconds": 17.84
+    },
+    {
+      "id": "wiki_26036",
+      "name": "Thistleleaf Necklace",
+      "wins": 7,
+      "seconds": 18.16
+    },
+    {
+      "id": "wiki_5037",
+      "name": "Tiara of Eggscellent Sturdiness",
+      "wins": 6,
+      "seconds": 17.97
+    },
+    {
+      "id": "wiki_47107",
+      "name": "Tiki Pendant",
+      "wins": 7,
+      "seconds": 18.58
+    },
+    {
+      "id": "wiki_20764",
+      "name": "Token of Happiness",
+      "wins": 6,
+      "seconds": 18.05
+    },
+    {
+      "id": "wiki_20765",
+      "name": "Token of Warmth",
+      "wins": 8,
+      "seconds": 20.17
+    },
+    {
+      "id": "wiki_21224",
+      "name": "Traveler's Trinket",
+      "wins": 7,
+      "seconds": 17.92
+    },
+    {
+      "id": "wiki_14782",
+      "name": "Unresolved Grudge",
+      "wins": 7,
+      "seconds": 17.98
+    },
+    {
+      "id": "wiki_38592",
+      "name": "Venerable Ring of the Nile",
+      "wins": 7,
+      "seconds": 18.34
+    },
+    {
+      "id": "wiki_38593",
+      "name": "Venerable Ring of the Pyramid",
+      "wins": 7,
+      "seconds": 18.39
+    },
+    {
+      "id": "wiki_38591",
+      "name": "Venerable Ring of the Sphinx",
+      "wins": 6,
+      "seconds": 17.73
+    },
+    {
+      "id": "wiki_14792",
+      "name": "Vial of Sustenance",
+      "wins": 6,
+      "seconds": 17.81
+    },
+    {
+      "id": "wiki_54800",
+      "name": "Void Mask",
+      "wins": 7,
+      "seconds": 18.79
+    },
+    {
+      "id": "wiki_48829",
+      "name": "Willow Sprout",
+      "wins": 8,
+      "seconds": 19.33
+    },
+    {
+      "id": "wiki_42319",
+      "name": "Winter Boots",
+      "wins": 7,
+      "seconds": 18.12
+    },
+    {
+      "id": "wiki_25754",
+      "name": "Witch's Brooch",
+      "wins": 6,
+      "seconds": 17.69
+    },
+    {
+      "id": "wiki_7200",
+      "name": "Yokai Amulet",
+      "wins": 7,
+      "seconds": 18.12
+    },
+    {
+      "id": "wiki_3810",
+      "name": "Ring of Transcendent Attack",
+      "wins": 6,
+      "seconds": 17.82
+    },
+    {
+      "id": "wiki_3811",
+      "name": "Ring of Transcendent Defense",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_3815",
+      "name": "Ring of Transcendent Dexterity",
+      "wins": 6,
+      "seconds": 17.79
+    },
+    {
+      "id": "wiki_3816",
+      "name": "Ring of Transcendent Health",
+      "wins": 7,
+      "seconds": 18.8
+    },
+    {
+      "id": "wiki_3817",
+      "name": "Ring of Transcendent Magic",
+      "wins": 6,
+      "seconds": 17.88
+    },
+    {
+      "id": "wiki_3812",
+      "name": "Ring of Transcendent Speed",
+      "wins": 6,
+      "seconds": 17.69
+    },
+    {
+      "id": "wiki_3813",
+      "name": "Ring of Transcendent Vitality",
+      "wins": 8,
+      "seconds": 19.37
+    },
+    {
+      "id": "wiki_3814",
+      "name": "Ring of Transcendent Wisdom",
+      "wins": 6,
+      "seconds": 17.84
+    }
+  ],
+  "totalWins": {
+    "before": 2009,
+    "after": 1961
+  },
+  "changedFights": 4084,
+  "validation": {
+    "javascriptSyntax": "all game scripts",
+    "regressionSuites": 29,
+    "tieredClassFightsPerVersion": 1995,
+    "tieredClassRowsIdentical": true,
+    "ringInspectionViews": 2524,
+    "ringInspectionContentPages": 10364,
+    "ringInspectionIssues": 0,
+    "catalogueViews": 7176,
+    "catalogueDefaultOverflowItems": 0,
+    "browserRuntimeErrors": 0,
+    "mixedRingCombatSpeed": "4x",
+    "presentationSimulationParitySpeeds": [
+      1,
+      2,
+      4
+    ]
+  }
+}

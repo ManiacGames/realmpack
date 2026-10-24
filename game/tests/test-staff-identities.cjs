@@ -1,6 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict'),crypto=require('node:crypto'),{ctx,vm}=require('./load-game.cjs');
-assert.equal(crypto.createHash('sha256').update(vm.runInContext(`JSON.stringify(DATA.items.filter(d=>!['staff','wand','katana'].includes(d.kind)))`,ctx)).digest('hex'),'43b147523158bd1de029918b280c7dc60775d6ce726e3fc54c94dbccea311a60','Non-staff/non-wand/non-katana recipes changed');
+assert.equal(crypto.createHash('sha256').update(vm.runInContext(`JSON.stringify(DATA.items.filter(d=>!(d.group==='ring'&&['UT','ST'].includes(d.tier))))`,ctx)).digest('hex'),'eb81551b6e1447c1cac86f6ffc28d57ca47b3ed0102fa576289d2cf1802996eb','Definitions outside special UT/ST rings changed');
 console.log(vm.runInContext(String.raw`(()=>{
  const check=(v,m)=>{if(!v)throw Error(m)},near=(a,b)=>Math.abs(a-b)<1e-7,type=n=>DATA.items.find(d=>d.name===n&&!d.isShiny).id,basePassive=passive,baseClass=classActivation;
  passive=()=>{};classActivation=()=>{};enemyProfiles=()=>[];log=()=>{};

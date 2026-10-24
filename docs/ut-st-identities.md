@@ -1,3 +1,7 @@
+# Ring follow-up — 0.38.0
+
+The [complete ring pass](ring-identities.md) now takes precedence for all 314 UT/ST ring variants, including Crown, Gemstone, Rosary and Interregnum. It translates source stats and signatures against the unchanged tiered ring archetypes. Existing ST memberships and all non-ring definitions are preserved. Ring values in the historical sections below describe their earlier release.
+
 # Dagger follow-up — 0.34.0
 
 The [researched dagger pass](dagger-identities.md) now takes precedence for every UT/ST dagger profile, including Etherite and Soulcursed Scythe. The [sword pass](sword-identities.md) remains authoritative for swords. Existing ST memberships and all non-dagger definitions are preserved. Earlier snapshot statements below describe their release at the time.

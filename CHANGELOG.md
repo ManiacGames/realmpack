@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.38.0 — 2026-10-24
+
+- Reworked all 314 UT/ST ring variants around their RotMG stats, conditional effects, companions and equipment synergies.
+- Balanced hybrid bonuses against the current tiered rings, with shared adjacency caps, bounded procs and no recurring generic mana pulse. All 57 tiered rings remain unchanged.
+- Preserved ST memberships, saved upgrades, artwork and unobtainable Legacy items; updated ring descriptions and Shiny comparisons.
+- Validation: 29 regression suites, JavaScript syntax, 4,576 paired ring fixtures, 1,995 unchanged tiered class fixtures, desktop/phone inspections and 4× mixed-ring combat.
+
 ## 0.37.0 — 2026-10-24
 
 - Reworked all 84 imported UT/ST katana entries (69 regular/historical profiles and 15 Shiny variants) using inspected RotMG game data. Distinct projectile rhythms, true piercing, returning blades, delayed accelerating strikes and Winter’s burst cycle replace generic recipes. Fiery Katana’s side arcs recover independently of its central shot.

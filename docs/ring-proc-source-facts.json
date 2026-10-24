@@ -1,0 +1,162 @@
+{
+  "7297": {
+    "source": "https://realm.wiki/object?id=7297",
+    "averageDamage": 175.0,
+    "pierce": true,
+    "bleed": true,
+    "chill": false,
+    "expose": false
+  },
+  "22510": {
+    "source": "https://realm.wiki/object?id=22510",
+    "averageDamage": 325.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "7298": {
+    "source": "https://realm.wiki/object?id=7298",
+    "averageDamage": 175.0,
+    "pierce": true,
+    "bleed": true,
+    "chill": false,
+    "expose": false
+  },
+  "17140": {
+    "source": "https://realm.wiki/object?id=17140",
+    "averageDamage": 400.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": true,
+    "expose": false
+  },
+  "50821": {
+    "source": "https://realm.wiki/object?id=50821",
+    "averageDamage": 162.5,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "7292": {
+    "source": "https://realm.wiki/object?id=7292",
+    "averageDamage": 150.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "15760": {
+    "source": "https://realm.wiki/object?id=15760",
+    "averageDamage": 350.0,
+    "pierce": false,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "26040": {
+    "source": "https://realm.wiki/object?id=26040",
+    "averageDamage": 175.0,
+    "pierce": true,
+    "bleed": true,
+    "chill": false,
+    "expose": false
+  },
+  "22512": {
+    "source": "https://realm.wiki/object?id=22512",
+    "averageDamage": 325.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "26036": {
+    "source": "https://realm.wiki/object?id=26036",
+    "averageDamage": 150.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "19251": {
+    "source": "https://realm.wiki/object?id=19251",
+    "averageDamage": 100.0,
+    "pierce": false,
+    "bleed": false,
+    "chill": true,
+    "expose": true
+  },
+  "7301": {
+    "source": "https://realm.wiki/object?id=7301",
+    "averageDamage": 175.0,
+    "pierce": true,
+    "bleed": true,
+    "chill": false,
+    "expose": false
+  },
+  "26041": {
+    "source": "https://realm.wiki/object?id=26041",
+    "averageDamage": 175.0,
+    "pierce": true,
+    "bleed": true,
+    "chill": false,
+    "expose": false
+  },
+  "26038": {
+    "source": "https://realm.wiki/object?id=26038",
+    "averageDamage": 175.0,
+    "pierce": true,
+    "bleed": true,
+    "chill": false,
+    "expose": false
+  },
+  "7299": {
+    "source": "https://realm.wiki/object?id=7299",
+    "averageDamage": 175.0,
+    "pierce": true,
+    "bleed": true,
+    "chill": false,
+    "expose": false
+  },
+  "26039": {
+    "source": "https://realm.wiki/object?id=26039",
+    "averageDamage": 175.0,
+    "pierce": true,
+    "bleed": true,
+    "chill": false,
+    "expose": false
+  },
+  "7300": {
+    "source": "https://realm.wiki/object?id=7300",
+    "averageDamage": 175.0,
+    "pierce": true,
+    "bleed": true,
+    "chill": false,
+    "expose": false
+  },
+  "2023": {
+    "source": "https://realm.wiki/object?id=2023",
+    "averageDamage": 350.0,
+    "pierce": false,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "26037": {
+    "source": "https://realm.wiki/object?id=26037",
+    "averageDamage": 175.0,
+    "pierce": true,
+    "bleed": true,
+    "chill": false,
+    "expose": false
+  },
+  "22511": {
+    "source": "https://realm.wiki/object?id=22511",
+    "averageDamage": 325.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  }
+}

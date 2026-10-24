@@ -1,7 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict'),crypto=require('node:crypto'),{ctx,vm}=require('./load-game.cjs');
-const unchanged=vm.runInContext(`JSON.stringify(DATA.items.filter(d=>!['dagger','sword','staff','wand','katana'].includes(d.kind)).map(d=>{if(!d.legacyUnavailable)return d;const {legacyUnavailable,...copy}=d;delete copy.lootExcluded;return copy}))`,ctx);
-assert.equal(crypto.createHash('sha256').update(unchanged).digest('hex'),'a816a72764ac9c3fd5e71bf0a3f5621688b7822865196e394b4f03ebc8d02d40','Definitions outside the dagger/sword/staff passes changed');
+assert.equal(crypto.createHash('sha256').update(vm.runInContext(`JSON.stringify(DATA.items.filter(d=>!(d.group==='ring'&&['UT','ST'].includes(d.tier))))`,ctx)).digest('hex'),'eb81551b6e1447c1cac86f6ffc28d57ca47b3ed0102fa576289d2cf1802996eb','Definitions outside special UT/ST rings changed');
 console.log(vm.runInContext(String.raw`(()=>{
  const check=(v,m)=>{if(!v)throw Error(m)},type=n=>DATA.items.find(d=>d.name===n&&!d.isShiny).id;
  const basePassive=passive;passive=()=>{};enemyProfiles=()=>[];
