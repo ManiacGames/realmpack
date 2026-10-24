@@ -4,6 +4,7 @@ Repository: ManiacGames/realmpack. Production is GitHub Pages at https://maniacg
 
 ## Every game update
 
+- Before taking baselines in a resumed session, verify the local source matches the current GitHub main build. Sync stale restored checkouts first, preserving intentional local work; do not build a new release on an older snapshot.
 - Edit the individual source files in `game/`; the root ZIP is a legacy backup and is not deployed.
 - In the same commit as every change to `game/`, update root `CHANGELOG.md` with the release version, Europe/Helsinki date, and concise user-facing changes. Keep the newest release first. Record validation and material limitations accurately. Do not claim browser verification if only automated checks ran. Omit routine browser-layout verification disclaimers from the changelog; describe the checks actually performed.
 - Increment the experimental build version and script/style cache query strings in `game/index.html`. Keep `game/CHANGELOG.txt` consistent with the current release notes.

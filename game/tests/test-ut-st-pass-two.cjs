@@ -1,7 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict'),crypto=require('node:crypto'),{ctx,vm}=require('./load-game.cjs');
-const otherItems=vm.runInContext('JSON.stringify(DATA.items.filter(d=>!["dagger","staff","wand"].includes(d.kind)))',ctx);
-assert.equal(crypto.createHash('sha256').update(otherItems).digest('hex'),'64c7d0b89a1f2bd64faa9740c1cb8cdcc4ab4160c5d43d4c4d24eeb96a745c5d','Definitions outside the dagger/staff passes changed');
+const otherItems=vm.runInContext('JSON.stringify(DATA.items.filter(d=>!["dagger","staff","wand","katana"].includes(d.kind)))',ctx);
+assert.equal(crypto.createHash('sha256').update(otherItems).digest('hex'),'59e6dacdb0879de3adeb12970aa90cd4bdd511e255e4c563db4fb67088b01af7','Definitions outside the dagger/staff passes changed');
 console.log(vm.runInContext(`(()=>{
  const check=(v,m)=>{if(!v)throw Error(m)},near=(a,b)=>Math.abs(a-b)<1e-7,type=name=>DATA.items.find(d=>d.name===name&&!d.isShiny).id;
  passive=()=>{};enemyProfiles=()=>[];log=()=>{};

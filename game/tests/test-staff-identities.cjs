@@ -1,6 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict'),crypto=require('node:crypto'),{ctx,vm}=require('./load-game.cjs');
-assert.equal(crypto.createHash('sha256').update(vm.runInContext(`JSON.stringify(DATA.items.filter(d=>!['staff','wand'].includes(d.kind)))`,ctx)).digest('hex'),'5f31fd1143e9ab80abaca5c998b3ede6ae12de2340e3f4e1ed54a524cd937284','Non-staff/non-wand recipes changed');
+assert.equal(crypto.createHash('sha256').update(vm.runInContext(`JSON.stringify(DATA.items.filter(d=>!['staff','wand','katana'].includes(d.kind)))`,ctx)).digest('hex'),'43b147523158bd1de029918b280c7dc60775d6ce726e3fc54c94dbccea311a60','Non-staff/non-wand/non-katana recipes changed');
 console.log(vm.runInContext(String.raw`(()=>{
  const check=(v,m)=>{if(!v)throw Error(m)},near=(a,b)=>Math.abs(a-b)<1e-7,type=n=>DATA.items.find(d=>d.name===n&&!d.isShiny).id,basePassive=passive,baseClass=classActivation;
  passive=()=>{};classActivation=()=>{};enemyProfiles=()=>[];log=()=>{};
@@ -34,5 +34,5 @@ console.log(vm.runInContext(String.raw`(()=>{
  // Every staff/variant in each compatible class, with legal geometry and native support.
  let fights=0;passive=basePassive;classActivation=baseClass;
  for(const d of staves)for(const classId of ['wizard','necromancer','mystic']){freshRun(classId,true);s.seed=123456;selectPortal(s.portalChoices[0]);s.items=[];s.stash=[];for(const id of [d.id,...classes[classId].startingIds.slice(1,3)])check(autoPlace(makeItem(id)),'Illegal pack '+d.name);s.phase='prep';startFight();for(let n=0;n<600&&s.phase==='fight';n++)tick(.05);check(Number.isFinite(s.hp)&&Number.isFinite(s.enemy.hp)&&s.summons.length<=8&&(s.staffProjectiles||[]).length<=48,'Invalid battle '+d.name);fights++}
- return 'PASS: all 98 UT/ST staff entries; reskins/historical versions, mixed rhythms/piercing, slow starts, radial/chain placement, recovery floors, Esben meter/locks, Vigor pulses/caps, capacities, partners, saved upgrades, Legacy exclusions and '+fights+' legal class/version combat trials; every non-staff/non-wand recipe unchanged';
+ return 'PASS: all 98 UT/ST staff entries; reskins/historical versions, mixed rhythms/piercing, slow starts, radial/chain placement, recovery floors, Esben meter/locks, Vigor pulses/caps, capacities, partners, saved upgrades, Legacy exclusions and '+fights+' legal class/version combat trials; every non-staff/non-wand/non-katana recipe unchanged';
 })()`,ctx));

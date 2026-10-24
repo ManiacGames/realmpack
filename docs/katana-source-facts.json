@@ -1,0 +1,4349 @@
+{
+  "inspected": "2026-10-24",
+  "source": "Realm.wiki rendered game data; numerical facts and identifiers, not flavor descriptions.",
+  "items": [
+    {
+      "id": "wiki_52254",
+      "name": "Acrobat's Edge",
+      "source": "https://realm.wiki/item?id=52254",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Acrobat's Edge Slash",
+          "Speed": "130",
+          "LifetimeMS": "365",
+          "MinDamage": "175",
+          "MaxDamage": "210",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "SPD",
+          "Amount": "5"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_14414",
+      "name": "Arashi",
+      "source": "https://realm.wiki/item?id=14414",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Arashi Slash",
+          "Speed": "130",
+          "MinDamage": "205",
+          "MaxDamage": "225",
+          "LifetimeMS": "400",
+          "Amplitude": "0.55",
+          "Frequency": "0.55"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_3310",
+      "name": "Arbiter's Wrath",
+      "source": "https://realm.wiki/item?id=3310",
+      "shiny": false,
+      "rate": 0.5,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "boss spawn",
+          "Speed": "30",
+          "MinDamage": "10",
+          "MaxDamage": "40",
+          "LifetimeMS": "1600",
+          "Amplitude": "0.5",
+          "Frequency": "1",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_17711",
+      "name": "Aspirant's Blade",
+      "source": "https://realm.wiki/item?id=17711",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Aspirant Katana Slash",
+          "Speed": "130",
+          "LifetimeMS": "365",
+          "MinDamage": "120",
+          "MaxDamage": "165",
+          "MultiHit": true
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Aspirant Katana Slash",
+          "Speed": "0",
+          "LifetimeMS": "0",
+          "MinDamage": "0",
+          "MaxDamage": "0",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.2"
+        },
+        {
+          "value": "",
+          "Index": "1",
+          "ProjectileId": "1",
+          "NumProjectiles": "0",
+          "RateOfFire": "1.2"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_26232",
+      "name": "Aurora Tachi",
+      "source": "https://realm.wiki/item?id=26232",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Icy Cross Slash",
+          "Speed": "120",
+          "MinDamage": "90",
+          "MaxDamage": "125",
+          "LifetimeMS": "384",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1",
+          "PosOffset": "1,.75",
+          "DefaultAngle": "-25"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1",
+          "PosOffset": "-1,.75",
+          "DefaultAngle": "25"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_1399",
+      "name": "Blade of Ages",
+      "source": "https://realm.wiki/item?id=1399",
+      "shiny": false,
+      "rate": 0.01,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Slowpoke Slash",
+          "Speed": "10",
+          "LifetimeMS": "500",
+          "MinDamage": "1000",
+          "MaxDamage": "1000",
+          "MultiHit": true,
+          "Wavy": true,
+          "FaceDir": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_37682",
+      "name": "Blade of Blooming",
+      "source": "https://realm.wiki/item?id=37682",
+      "shiny": false,
+      "rate": 0.1,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Rosepoke Slash",
+          "Speed": "10",
+          "LifetimeMS": "875",
+          "MinDamage": "2000",
+          "MaxDamage": "2000",
+          "Acceleration": "10000",
+          "AccelerationDelay": "500",
+          "SpeedClamp": "150",
+          "MultiHit": true,
+          "Wavy": true,
+          "FaceDir": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_26100",
+      "name": "Blade of the Assailant",
+      "source": "https://realm.wiki/item?id=26100",
+      "shiny": false,
+      "rate": 1.25,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Realm Slash",
+          "Speed": "200",
+          "LifetimeMS": "250",
+          "MinDamage": "130",
+          "MaxDamage": "180",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_42294",
+      "name": "Blood Ritual Tools",
+      "source": "https://realm.wiki/item?id=42294",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Blood Tool Sickle",
+          "Speed": "100",
+          "MinDamage": "65",
+          "MaxDamage": "75",
+          "LifetimeMS": "450",
+          "TurnRate": "-25",
+          "TurnStopTime": "400",
+          "MultiHit": true
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Blood Tool Dagger",
+          "Speed": "100",
+          "MinDamage": "290",
+          "MaxDamage": "340",
+          "LifetimeMS": "450",
+          "TurnRate": "25",
+          "TurnStopTime": "400",
+          "MultiHit": true,
+          "ArmorPiercing": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.5",
+          "PosOffset": "0.0,0.0",
+          "DefaultAngle": "25"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.33",
+          "PosOffset": "-0.0,0.0",
+          "DefaultAngle": "-25"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStatRelative",
+          "Amount": "-50",
+          "Stat": "DEX",
+          "StatRelativeTo": "DEX"
+        },
+        {
+          "value": "IncrementStatRelative",
+          "Amount": "70",
+          "Stat": "DEX",
+          "StatRelativeTo": "VIT"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_42284",
+      "name": "Blood Siphoning Katana",
+      "source": "https://realm.wiki/item?id=42284",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Blood Siphon Shot",
+          "Speed": "130",
+          "MinDamage": "440",
+          "MaxDamage": "520",
+          "LifetimeMS": "420",
+          "MultiHit": true,
+          "Boomerang": true,
+          "ConditionEffect": {
+            "value": "Bleeding",
+            "Amount": "80",
+            "Duration": "3"
+          },
+          "Acceleration": "26942069",
+          "AccelerationDelay": "210",
+          "SpeedClamp": "390"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "DefaultAngle": "180",
+          "RateOfFire": "0.4"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_20882",
+      "name": "Bloodbath Blade",
+      "source": "https://realm.wiki/item?id=20882",
+      "shiny": false,
+      "rate": 1.4,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Bloodbath Shot",
+          "Speed": "140",
+          "MinDamage": "155",
+          "MaxDamage": "175",
+          "LifetimeMS": "700",
+          "Size": "110",
+          "Boomerang": true,
+          "MultiHit": true
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Bloodbath Splatter",
+          "Speed": "15",
+          "MinDamage": "60",
+          "MaxDamage": "80",
+          "Acceleration": "-10",
+          "AccelerationDelay": "0",
+          "SpeedClamp": "0",
+          "LifetimeMS": "2500",
+          "ArmorPiercing": true,
+          "Wavy": true,
+          "Size": "75",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.4"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "3",
+          "ArcGap": "120",
+          "DefaultAngle": "60",
+          "DefaultAngleIncr": "30",
+          "RateOfFire": "0.25"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Amount": "-15",
+          "Stat": "VIT"
+        }
+      ],
+      "onShoot": [
+        {
+          "value": "ConditionEffectSelf",
+          "Color": "-1",
+          "Proc": "1",
+          "Effect": "Sick",
+          "Cooldown": "0",
+          "Duration": "1.5",
+          "RequiredConditions": "In Combat"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "2",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.95"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "4",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.85"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "6",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.75"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "8",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.65"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "10",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.55"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "12",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.45"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "14",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.35"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "16",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.25"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "18",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.15"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "20",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.05"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 3
+    },
+    {
+      "id": "wiki_53223",
+      "name": "Shiny Bloodbath Blade",
+      "source": "https://realm.wiki/item?id=53223",
+      "shiny": true,
+      "rate": 1.4,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Bloodbath Shot Shiny",
+          "Speed": "140",
+          "MinDamage": "155",
+          "MaxDamage": "175",
+          "LifetimeMS": "700",
+          "Size": "110",
+          "Boomerang": true,
+          "MultiHit": true
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Bloodbath Splatter Shiny",
+          "Speed": "15",
+          "MinDamage": "60",
+          "MaxDamage": "80",
+          "Acceleration": "-10",
+          "AccelerationDelay": "0",
+          "SpeedClamp": "0",
+          "LifetimeMS": "2500",
+          "ArmorPiercing": true,
+          "Wavy": true,
+          "Size": "75",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.4"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "3",
+          "ArcGap": "120",
+          "DefaultAngle": "60",
+          "DefaultAngleIncr": "30",
+          "RateOfFire": "0.25"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Amount": "-15",
+          "Stat": "VIT"
+        }
+      ],
+      "onShoot": [
+        {
+          "value": "ConditionEffectSelf",
+          "Color": "-1",
+          "Proc": "1",
+          "Effect": "Sick",
+          "Cooldown": "0",
+          "Duration": "1.5",
+          "RequiredConditions": "In Combat"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "2",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.95"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "4",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.85"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "6",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.75"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "8",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.65"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "10",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.55"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "12",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.45"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "14",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.35"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "16",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.25"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "18",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.15"
+        },
+        {
+          "value": "StatBoostSelf",
+          "Amount": "20",
+          "Channel": "maxStack",
+          "Color": "-1",
+          "Cooldown": "0",
+          "Duration": "1",
+          "Proc": "1",
+          "Stat": "ATT",
+          "HpMinThresholdRelative": "0.05"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 3
+    },
+    {
+      "id": "wiki_25590",
+      "name": "Brambletooth Tachi",
+      "source": "https://realm.wiki/item?id=25590",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "SulfW Tachi Shot",
+          "Speed": "135",
+          "MinDamage": "75",
+          "MaxDamage": "105",
+          "LifetimeMS": "550",
+          "PassesCover": true,
+          "FaceDir": true,
+          "MultiHit": true,
+          "Size": "100",
+          "Boomerang": true
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "SulfW Tachi Shot",
+          "Speed": "135",
+          "MinDamage": "75",
+          "MaxDamage": "105",
+          "LifetimeMS": "550",
+          "PassesCover": true,
+          "MultiHit": true,
+          "FaceDir": true,
+          "Size": "100",
+          "Boomerang": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.40",
+          "PosOffset": "1,4.75",
+          "DefaultAngle": "225"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.40",
+          "PosOffset": "-1,4.75",
+          "DefaultAngle": "135"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_38296",
+      "name": "Shiny Brambletooth Tachi",
+      "source": "https://realm.wiki/item?id=38296",
+      "shiny": true,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "SulfW Tachi Shot Shiny",
+          "Speed": "135",
+          "MinDamage": "75",
+          "MaxDamage": "105",
+          "LifetimeMS": "550",
+          "PassesCover": true,
+          "FaceDir": true,
+          "MultiHit": true,
+          "Size": "100",
+          "Boomerang": true
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "SulfW Tachi Shot Shiny",
+          "Speed": "135",
+          "MinDamage": "75",
+          "MaxDamage": "105",
+          "LifetimeMS": "550",
+          "PassesCover": true,
+          "MultiHit": true,
+          "FaceDir": true,
+          "Size": "100",
+          "Boomerang": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.40",
+          "PosOffset": "1,4.75",
+          "DefaultAngle": "225"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.40",
+          "PosOffset": "-1,4.75",
+          "DefaultAngle": "135"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_1461",
+      "name": "Bunny Ear Tachi",
+      "source": "https://realm.wiki/item?id=1461",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Bunny Ear Tachi Slash",
+          "Speed": "120",
+          "MinDamage": "80",
+          "MaxDamage": "115",
+          "LifetimeMS": "450",
+          "MultiHit": true,
+          "CircleTurnDelay": "275",
+          "CircleTurnAngle": "-25"
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Bunny Ear Tachi Slash",
+          "Speed": "120",
+          "MinDamage": "90",
+          "MaxDamage": "120",
+          "LifetimeMS": "450",
+          "MultiHit": true,
+          "CircleTurnDelay": "275",
+          "CircleTurnAngle": "25"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1",
+          "PosOffset": "1,.75",
+          "DefaultAngle": "-25"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "1",
+          "PosOffset": "-1,.75",
+          "DefaultAngle": "25"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_17563",
+      "name": "Burial Blades",
+      "source": "https://realm.wiki/item?id=17563",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Phaedra Cross Slash",
+          "Speed": "120",
+          "MinDamage": "75",
+          "MaxDamage": "125",
+          "LifetimeMS": "384",
+          "MultiHit": true,
+          "Amplitude": "1",
+          "Frequency": "1",
+          "FaceDir": true,
+          "ArmorPiercing": true
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Valus Cross Slash",
+          "Speed": "120",
+          "MinDamage": "75",
+          "MaxDamage": "125",
+          "LifetimeMS": "384",
+          "MultiHit": true,
+          "Amplitude": "1",
+          "Frequency": "1",
+          "ArmorPiercing": true,
+          "FaceDir": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1",
+          "PosOffset": "1.4,0.75",
+          "DefaultAngle": "-25"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "1",
+          "PosOffset": "-1.4,0.75",
+          "DefaultAngle": "25"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_5316",
+      "name": "Shiny Burial Blades",
+      "source": "https://realm.wiki/item?id=5316",
+      "shiny": true,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Phaedra Cross Slash Shiny",
+          "Speed": "120",
+          "MinDamage": "75",
+          "MaxDamage": "125",
+          "LifetimeMS": "384",
+          "MultiHit": true,
+          "Amplitude": "1",
+          "Frequency": "1",
+          "FaceDir": true,
+          "ArmorPiercing": true
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Valus Cross Slash Shiny",
+          "Speed": "120",
+          "MinDamage": "75",
+          "MaxDamage": "125",
+          "LifetimeMS": "384",
+          "MultiHit": true,
+          "Amplitude": "1",
+          "Frequency": "1",
+          "ArmorPiercing": true,
+          "FaceDir": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1",
+          "PosOffset": "1.4,0.75",
+          "DefaultAngle": "-25"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "1",
+          "PosOffset": "-1.4,0.75",
+          "DefaultAngle": "25"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_12164",
+      "name": "Candy Katana",
+      "source": "https://realm.wiki/item?id=12164",
+      "shiny": false,
+      "rate": 1.25,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Oryxmas Katana Projectile",
+          "Speed": "225",
+          "LifetimeMS": "675",
+          "MinDamage": "130",
+          "MaxDamage": "175",
+          "Acceleration": "-800",
+          "AccelerationDelay": "75",
+          "SpeedClamp": "20",
+          "Amplitude": "0.55",
+          "Frequency": "0.7",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_1241",
+      "name": "Shiny Candy Katana",
+      "source": "https://realm.wiki/item?id=1241",
+      "shiny": true,
+      "rate": 1.25,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Oryxmas Katana Projectile Shiny",
+          "Speed": "225",
+          "LifetimeMS": "675",
+          "MinDamage": "130",
+          "MaxDamage": "175",
+          "Acceleration": "-800",
+          "AccelerationDelay": "75",
+          "SpeedClamp": "20",
+          "Amplitude": "0.55",
+          "Frequency": "0.7",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_30053",
+      "name": "Celestial Blade",
+      "source": "https://realm.wiki/item?id=30053",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "LOD Celestial Slash",
+          "Speed": "130",
+          "MinDamage": "205",
+          "MaxDamage": "225",
+          "LifetimeMS": "400",
+          "Amplitude": "0.55",
+          "Frequency": "0.55"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_3927",
+      "name": "Shiny Celestial Blade",
+      "source": "https://realm.wiki/item?id=3927",
+      "shiny": true,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "LOD Celestial Slash Shiny",
+          "Speed": "130",
+          "MinDamage": "205",
+          "MaxDamage": "225",
+          "LifetimeMS": "400",
+          "Amplitude": "0.55",
+          "Frequency": "0.55"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_3860",
+      "name": "Corrupted Cleaver",
+      "source": "https://realm.wiki/item?id=3860",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Cleaved Eyeball",
+          "Speed": "130",
+          "LifetimeMS": "365",
+          "MinDamage": "130",
+          "MaxDamage": "195",
+          "MultiHit": true,
+          "ParticleTrail": {
+            "value": "0xbe0406",
+            "Intensity": "0.3",
+            "LifetimeMS": "200"
+          }
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_8842",
+      "name": "Diamond-Bladed Katana",
+      "source": "https://realm.wiki/item?id=8842",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Glittering Prizes",
+          "Size": "90",
+          "Speed": "130",
+          "LifetimeMS": "365",
+          "MinDamage": "130",
+          "MaxDamage": "195",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_3292",
+      "name": "Doku No Ken",
+      "source": "https://realm.wiki/item?id=3292",
+      "shiny": false,
+      "rate": 1.2,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Doku Slash",
+          "Speed": "130",
+          "MinDamage": "130",
+          "MaxDamage": "160",
+          "LifetimeMS": "400",
+          "Amplitude": "0.5",
+          "Frequency": "1",
+          "Size": "90",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [
+        {
+          "value": "PoisonGrenade",
+          "Proc": "1",
+          "Cooldown": "3",
+          "Radius": "6",
+          "ImpactDamage": "0",
+          "TotalDamage": "1000",
+          "Duration": "6",
+          "ThrowTime": "0"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_1228",
+      "name": "Shiny Doku No Ken",
+      "source": "https://realm.wiki/item?id=1228",
+      "shiny": true,
+      "rate": 1.2,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Doku Slash Shiny",
+          "Speed": "130",
+          "MinDamage": "130",
+          "MaxDamage": "160",
+          "LifetimeMS": "400",
+          "Amplitude": "0.5",
+          "Frequency": "1",
+          "Size": "90",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [
+        {
+          "value": "PoisonGrenade",
+          "Proc": "1",
+          "Cooldown": "3",
+          "Radius": "6",
+          "ImpactDamage": "0",
+          "TotalDamage": "1000",
+          "Duration": "6",
+          "ThrowTime": "0",
+          "Color": "0xFF55FF"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_53189",
+      "name": "Doku No Ken",
+      "source": "https://realm.wiki/item?id=53189",
+      "shiny": false,
+      "rate": 1.2,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Poison Katana Slash",
+          "Speed": "130",
+          "MinDamage": "120",
+          "MaxDamage": "150",
+          "LifetimeMS": "400",
+          "Amplitude": "0.5",
+          "Frequency": "1",
+          "Size": "90",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_42101",
+      "name": "Dynamite",
+      "source": "https://realm.wiki/item?id=42101",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Mining Katana Proj",
+          "Speed": "130",
+          "LifetimeMS": "365",
+          "MinDamage": "160",
+          "MaxDamage": "210",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_28846",
+      "name": "Enforcer",
+      "source": "https://realm.wiki/item?id=28846",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 2,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Enforcer Projectile",
+          "Speed": "130",
+          "MinDamage": "105",
+          "MaxDamage": "145",
+          "LifetimeMS": "410"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 2
+    },
+    {
+      "id": "wiki_65507",
+      "name": "Shiny Enforcer",
+      "source": "https://realm.wiki/item?id=65507",
+      "shiny": true,
+      "rate": 1.0,
+      "shots": 2,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Enforcer Projectile Shiny",
+          "Speed": "130",
+          "MinDamage": "105",
+          "MaxDamage": "145",
+          "LifetimeMS": "410"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 2
+    },
+    {
+      "id": "wiki_14379",
+      "name": "Fiery Katana",
+      "source": "https://realm.wiki/item?id=14379",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "2KenseiST Katana Projectile 2",
+          "Speed": "130",
+          "MinDamage": "105",
+          "MaxDamage": "205",
+          "LifetimeMS": "410",
+          "TurnRate": "-80",
+          "TurnRateDelay": "0",
+          "TurnStopTime": "360",
+          "TurnAcceleration": "0.2",
+          "TurnAccelerationDelay": "200",
+          "TurnClamp": "90"
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "2KenseiST Katana Projectile 1",
+          "Speed": "130",
+          "MinDamage": "115",
+          "MaxDamage": "170",
+          "LifetimeMS": "410"
+        },
+        {
+          "value": "",
+          "Id": "2",
+          "ObjectId": "2KenseiST Katana Projectile 2",
+          "Speed": "130",
+          "MinDamage": "105",
+          "MaxDamage": "205",
+          "LifetimeMS": "410",
+          "TurnRate": "80",
+          "TurnRateDelay": "0",
+          "TurnStopTime": "360",
+          "TurnAcceleration": "0.2",
+          "TurnAccelerationDelay": "200",
+          "TurnClamp": "-90"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.4",
+          "DefaultAngle": "90",
+          "BurstCount": "3",
+          "BurstDelay": "1.2",
+          "BurstMinDelay": "1.0"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.0"
+        },
+        {
+          "value": "",
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.4",
+          "DefaultAngle": "270",
+          "BurstCount": "3",
+          "BurstDelay": "1.2",
+          "BurstMinDelay": "1.0"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_25693",
+      "name": "Fire Blade",
+      "source": "https://realm.wiki/item?id=25693",
+      "shiny": false,
+      "rate": 1.2,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Doku Reskin Missile",
+          "Speed": "130",
+          "MinDamage": "130",
+          "MaxDamage": "160",
+          "LifetimeMS": "400",
+          "Amplitude": "0.5",
+          "Frequency": "1",
+          "Size": "90",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [
+        {
+          "value": "PoisonGrenade",
+          "Proc": "1",
+          "Cooldown": "3",
+          "Radius": "6",
+          "ImpactDamage": "0",
+          "TotalDamage": "1000",
+          "Duration": "6",
+          "ThrowTime": "0",
+          "Color": "0xFF705C"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_52070",
+      "name": "Shiny Fire Blade",
+      "source": "https://realm.wiki/item?id=52070",
+      "shiny": true,
+      "rate": 1.2,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Shiny Fire Blade Missile",
+          "Speed": "130",
+          "MinDamage": "130",
+          "MaxDamage": "160",
+          "LifetimeMS": "400",
+          "Amplitude": "0.5",
+          "Frequency": "1",
+          "Size": "90",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [
+        {
+          "value": "PoisonGrenade",
+          "Proc": "1",
+          "Cooldown": "3",
+          "Radius": "6",
+          "ImpactDamage": "0",
+          "TotalDamage": "1000",
+          "Duration": "6",
+          "ThrowTime": "0",
+          "Color": "0x33F591"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_57118",
+      "name": "Floral Edge Katana",
+      "source": "https://realm.wiki/item?id=57118",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Blooming Katana Projectile",
+          "Speed": "130",
+          "LifetimeMS": "365",
+          "MinDamage": "160",
+          "MaxDamage": "210",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_34335",
+      "name": "Heartseeker Katana",
+      "source": "https://realm.wiki/item?id=34335",
+      "shiny": false,
+      "rate": 1.11,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Valentine's Katana Projectile",
+          "Speed": "200",
+          "MinDamage": "160",
+          "MaxDamage": "160",
+          "LifetimeMS": "310",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_24970",
+      "name": "Hero's Katana",
+      "source": "https://realm.wiki/item?id=24970",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Hero Slash",
+          "Speed": "130",
+          "LifetimeMS": "365",
+          "MinDamage": "160",
+          "MaxDamage": "210",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_24976",
+      "name": "Hero's Tachi",
+      "source": "https://realm.wiki/item?id=24976",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Hero Tachi Slash",
+          "Speed": "120",
+          "MinDamage": "100",
+          "MaxDamage": "135",
+          "LifetimeMS": "384",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.95",
+          "PosOffset": "1,.75",
+          "DefaultAngle": "-25"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.95",
+          "PosOffset": "-1,.75",
+          "DefaultAngle": "25"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_53820",
+      "name": "Hookblade Tachi",
+      "source": "https://realm.wiki/item?id=53820",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Hookblade Tachi Slash",
+          "Speed": "120",
+          "MinDamage": "90",
+          "MaxDamage": "120",
+          "LifetimeMS": "450",
+          "MultiHit": true,
+          "CircleTurnDelay": "275",
+          "CircleTurnAngle": "-25"
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Hookblade Tachi Slash",
+          "Speed": "120",
+          "MinDamage": "90",
+          "MaxDamage": "120",
+          "LifetimeMS": "450",
+          "MultiHit": true,
+          "CircleTurnDelay": "275",
+          "CircleTurnAngle": "25"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1",
+          "PosOffset": "1,.75",
+          "DefaultAngle": "-25"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "1",
+          "PosOffset": "-1,.75",
+          "DefaultAngle": "25"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_26573",
+      "name": "Iceborn Arsenal",
+      "source": "https://realm.wiki/item?id=26573",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Iceborn Arsenal Small Spinner Projectile",
+          "Size": "100",
+          "MinDamage": "54",
+          "MaxDamage": "100",
+          "Speed": "150",
+          "LifetimeMS": "450",
+          "MultiHit": true,
+          "ArmorPiercing": true
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Iceborn Arsenal Small Spinner Projectile",
+          "Size": "90",
+          "MinDamage": "54",
+          "MaxDamage": "100",
+          "Speed": "135",
+          "LifetimeMS": "450",
+          "MultiHit": true,
+          "ArmorPiercing": true
+        },
+        {
+          "value": "",
+          "Id": "2",
+          "ObjectId": "Iceborn Arsenal Slash Projectile",
+          "Size": "90",
+          "MinDamage": "100",
+          "MaxDamage": "130",
+          "Speed": "140",
+          "LifetimeMS": "320",
+          "TurnRate": "020",
+          "TurnRateDelay": "100",
+          "TurnStopTime": "350",
+          "MultiHit": true
+        },
+        {
+          "value": "",
+          "Id": "3",
+          "ObjectId": "Iceborn Arsenal Slash Projectile",
+          "Size": "90",
+          "MinDamage": "100",
+          "MaxDamage": "130",
+          "Speed": "140",
+          "LifetimeMS": "320",
+          "TurnRate": "-20",
+          "TurnRateDelay": "100",
+          "TurnStopTime": "350",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.20"
+        },
+        {
+          "value": "",
+          "Index": "1",
+          "ProjectileId": "1",
+          "NumProjectiles": "2",
+          "ArcGap": "7.6",
+          "RateOfFire": "0.20"
+        },
+        {
+          "value": "",
+          "Index": "2",
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.80",
+          "PosOffset": "-.25,0"
+        },
+        {
+          "value": "",
+          "Index": "3",
+          "ProjectileId": "3",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.80",
+          "PosOffset": "0.25,0"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 2
+    },
+    {
+      "id": "wiki_29720",
+      "name": "Katana of Good Fortune",
+      "source": "https://realm.wiki/item?id=29720",
+      "shiny": false,
+      "rate": 1.4,
+      "shots": 3,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Patty Rainbow Bolt",
+          "Speed": "80",
+          "MinDamage": "10",
+          "MaxDamage": "30",
+          "LifetimeMS": "750",
+          "Size": "100",
+          "Amplitude": ".13",
+          "Frequency": "2.25",
+          "FaceDir": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 3
+    },
+    {
+      "id": "wiki_8254",
+      "name": "Kazekiri",
+      "source": "https://realm.wiki/item?id=8254",
+      "shiny": false,
+      "rate": 0.85,
+      "shots": 2,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Katana Akuma Slash",
+          "Speed": "150",
+          "MinDamage": "105",
+          "MaxDamage": "130",
+          "LifetimeMS": "300",
+          "Amplitude": "0.4",
+          "Frequency": "0.5",
+          "MultiHit": true,
+          "PassesCover": true,
+          "FaceDir": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 2
+    },
+    {
+      "id": "wiki_21218",
+      "name": "Kiritsukeru",
+      "source": "https://realm.wiki/item?id=21218",
+      "shiny": false,
+      "rate": 0.7,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Iron Slash",
+          "Speed": "100",
+          "LifetimeMS": "500",
+          "MinDamage": "240",
+          "MaxDamage": "280",
+          "Amplitude": "0",
+          "Frequency": "1",
+          "Size": "100",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_23332",
+      "name": "Krathana",
+      "source": "https://realm.wiki/item?id=23332",
+      "shiny": false,
+      "rate": 1.2,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Kratana Slash",
+          "Speed": "130",
+          "MinDamage": "1",
+          "MaxDamage": "75",
+          "LifetimeMS": "650",
+          "Amplitude": "0.5",
+          "Frequency": "1",
+          "Size": "90",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_41742",
+      "name": "Kyuuketsuki Hitogoroshi",
+      "source": "https://realm.wiki/item?id=41742",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Kyuuketsuki Hitogoroshi Shot",
+          "Speed": "130",
+          "MinDamage": "440",
+          "MaxDamage": "520",
+          "LifetimeMS": "420",
+          "MultiHit": true,
+          "Boomerang": true,
+          "ConditionEffect": {
+            "value": "Bleeding",
+            "Amount": "80",
+            "Duration": "3"
+          },
+          "Acceleration": "26942069",
+          "AccelerationDelay": "210",
+          "SpeedClamp": "390"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "DefaultAngle": "180",
+          "RateOfFire": "0.4"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_7466",
+      "name": "Shiny Kyuuketsuki Hitogoroshi",
+      "source": "https://realm.wiki/item?id=7466",
+      "shiny": true,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Kyuuketsuki Hitogoroshi Shot Shiny",
+          "Speed": "130",
+          "MinDamage": "440",
+          "MaxDamage": "520",
+          "LifetimeMS": "420",
+          "MultiHit": true,
+          "Boomerang": true,
+          "ConditionEffect": {
+            "value": "Bleeding",
+            "Amount": "80",
+            "Duration": "3"
+          },
+          "Acceleration": "26942069",
+          "AccelerationDelay": "210",
+          "SpeedClamp": "390"
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "DefaultAngle": "180",
+          "RateOfFire": "0.4"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_41822",
+      "name": "Legion Elite Katana",
+      "source": "https://realm.wiki/item?id=41822",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Legion Elite Rend",
+          "Speed": "130",
+          "LifetimeMS": "365",
+          "MinDamage": "160",
+          "MaxDamage": "210",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_3787",
+      "name": "Legions Odachi",
+      "source": "https://realm.wiki/item?id=3787",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "MotMG 2024 Katana Projectile",
+          "Speed": "130",
+          "LifetimeMS": "365",
+          "MinDamage": "160",
+          "MaxDamage": "210",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "onShoot": [
+        {
+          "value": "BulletCreate",
+          "Type": "0xED9",
+          "MustWear": "0xEDC",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2",
+          "MaxDistance": "2",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED9",
+          "MustWear": "0xEDD",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2",
+          "MaxDistance": "2",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED9",
+          "MustWear": "0xEDE",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2",
+          "MaxDistance": "2",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED9",
+          "MustWear": "0xEAC",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2",
+          "MaxDistance": "2",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED9",
+          "MustWear": "0xEAD",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2",
+          "MaxDistance": "2",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED9",
+          "MustWear": "0xEAE",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2",
+          "MaxDistance": "2",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED9",
+          "MustWear": "0xEB2",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2",
+          "MaxDistance": "2",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED9",
+          "MustWear": "0xEB3",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2",
+          "MaxDistance": "2",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED9",
+          "MustWear": "0xEB4",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2",
+          "MaxDistance": "2",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED9",
+          "MustWear": "0xEB8",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2",
+          "MaxDistance": "2",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED9",
+          "MustWear": "0xEB9",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2",
+          "MaxDistance": "2",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED9",
+          "MustWear": "0xEBA",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2",
+          "MaxDistance": "2",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED9",
+          "MustWear": "0xEBE",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2",
+          "MaxDistance": "2",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED9",
+          "MustWear": "0xEBF",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2",
+          "MaxDistance": "2",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xED9",
+          "MustWear": "0xEC0",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2",
+          "MaxDistance": "2",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xEDA",
+          "MustWear": "0xEDF",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2.5",
+          "MaxDistance": "2.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xEDA",
+          "MustWear": "0xEE0",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2.5",
+          "MaxDistance": "2.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xEDA",
+          "MustWear": "0xEE1",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2.5",
+          "MaxDistance": "2.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xEDA",
+          "MustWear": "0xEAF",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2.5",
+          "MaxDistance": "2.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xEDA",
+          "MustWear": "0xEB0",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2.5",
+          "MaxDistance": "2.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xEDA",
+          "MustWear": "0xEB1",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2.5",
+          "MaxDistance": "2.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xEDA",
+          "MustWear": "0xEB5",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2.5",
+          "MaxDistance": "2.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xEDA",
+          "MustWear": "0xEB6",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2.5",
+          "MaxDistance": "2.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xEDA",
+          "MustWear": "0xEB7",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2.5",
+          "MaxDistance": "2.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xEDA",
+          "MustWear": "0xEBB",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2.5",
+          "MaxDistance": "2.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xEDA",
+          "MustWear": "0xEBC",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2.5",
+          "MaxDistance": "2.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xEDA",
+          "MustWear": "0xEBD",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2.5",
+          "MaxDistance": "2.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xEDA",
+          "MustWear": "0xEC1",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2.5",
+          "MaxDistance": "2.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xEDA",
+          "MustWear": "0xEC2",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2.5",
+          "MaxDistance": "2.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        },
+        {
+          "value": "BulletCreate",
+          "Type": "0xEDA",
+          "MustWear": "0xEC3",
+          "TargetMouse": "true",
+          "ArcGap": "7",
+          "MinDistance": "2.5",
+          "MaxDistance": "2.5",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "NumShots": "2",
+          "OffsetAngle": "0",
+          "Proc": "1",
+          "Cooldown": "0",
+          "IgnoreOnTooltip": "true"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_25694",
+      "name": "Moonbeam Blade",
+      "source": "https://realm.wiki/item?id=25694",
+      "shiny": false,
+      "rate": 1.11,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Ray Reskin Missile",
+          "Speed": "200",
+          "MinDamage": "160",
+          "MaxDamage": "160",
+          "LifetimeMS": "310",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_7491",
+      "name": "Shiny Moonbeam Blade",
+      "source": "https://realm.wiki/item?id=7491",
+      "shiny": true,
+      "rate": 1.11,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Ray Reskin Missile Shiny",
+          "Speed": "200",
+          "MinDamage": "160",
+          "MaxDamage": "160",
+          "LifetimeMS": "310",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_56455",
+      "name": "Neo Fire Blade",
+      "source": "https://realm.wiki/item?id=56455",
+      "shiny": false,
+      "rate": 1.33,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Neo Doku Reskin Missile",
+          "Speed": "130",
+          "MinDamage": "130",
+          "MaxDamage": "160",
+          "LifetimeMS": "400",
+          "Amplitude": "0.5",
+          "Frequency": "1",
+          "Size": "90",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [
+        {
+          "value": "PoisonGrenade",
+          "Proc": "1",
+          "Cooldown": "3",
+          "Radius": "6",
+          "ImpactDamage": "0",
+          "TotalDamage": "1000",
+          "Duration": "6",
+          "ThrowTime": "0",
+          "Color": "0xFF705C"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_56456",
+      "name": "Neo Moonbeam Blade",
+      "source": "https://realm.wiki/item?id=56456",
+      "shiny": false,
+      "rate": 1.11,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Neo Ray Reskin Missile",
+          "Speed": "200",
+          "MinDamage": "180",
+          "MaxDamage": "180",
+          "LifetimeMS": "570",
+          "MultiHit": true,
+          "PassesCover": true,
+          "Size": "300",
+          "CollisionMult": "3",
+          "SpeedClamp": "0",
+          "Acceleration": "-320"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_28463",
+      "name": "Pool Noodle",
+      "source": "https://realm.wiki/item?id=28463",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Invisible",
+          "Speed": "0",
+          "MinDamage": "0",
+          "MaxDamage": "0",
+          "LifetimeMS": "0",
+          "MultiHit": true
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Pool Noodle Projectile 1",
+          "Speed": "120",
+          "MinDamage": "100",
+          "MaxDamage": "135",
+          "LifetimeMS": "384",
+          "MultiHit": true
+        },
+        {
+          "value": "",
+          "Id": "2",
+          "ObjectId": "Pool Noodle Projectile 2",
+          "Speed": "120",
+          "MinDamage": "100",
+          "MaxDamage": "135",
+          "LifetimeMS": "384",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.95"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.95",
+          "PosOffset": "1,.75",
+          "DefaultAngle": "-25"
+        },
+        {
+          "value": "",
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.95",
+          "PosOffset": "-1,.75",
+          "DefaultAngle": "25"
+        }
+      ],
+      "equip": [],
+      "onShoot": [
+        {
+          "value": "ObjectToss",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "TargetMouseRange": "4",
+          "ObjectId": "Wood Totems Equipment Helper Object",
+          "Color": "18a6ed",
+          "Cooldown": "3",
+          "ThrowTime": "1"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_19260",
+      "name": "Quartz Cutter",
+      "source": "https://realm.wiki/item?id=19260",
+      "shiny": false,
+      "rate": 0.8,
+      "shots": 3,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Crystal Katana Slash",
+          "Speed": "100",
+          "MinDamage": "80",
+          "MaxDamage": "95",
+          "LifetimeMS": "525",
+          "Amplitude": "0.5",
+          "Frequency": "0.5",
+          "Size": "100",
+          "MultiHit": true,
+          "FaceDir": true,
+          "Wavy": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 3
+    },
+    {
+      "id": "wiki_2325",
+      "name": "Ray Katana",
+      "source": "https://realm.wiki/item?id=2325",
+      "shiny": false,
+      "rate": 1.11,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Beam Slash",
+          "Speed": "200",
+          "MinDamage": "160",
+          "MaxDamage": "160",
+          "LifetimeMS": "310",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [
+        {
+          "value": "BulletCreate",
+          "IgnoreOnTooltip": "true",
+          "AttackType": "weapon",
+          "GapTiles": "0.25",
+          "OffsetAngle": "0",
+          "GapAngle": "0",
+          "MinDistance": "6.2",
+          "MaxDistance": "6.2",
+          "Cooldown": "1",
+          "Proc": "1",
+          "ScalingStat": "DEF",
+          "StatModScalingMin": "25",
+          "StatModDamage": "0",
+          "StatModNumShots": "0.25",
+          "NumShots": "4",
+          "Type": "0xbc15"
+        }
+      ],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_3922",
+      "name": "Shiny Ray Katana",
+      "source": "https://realm.wiki/item?id=3922",
+      "shiny": true,
+      "rate": 1.11,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Beam Slash",
+          "Speed": "200",
+          "MinDamage": "160",
+          "MaxDamage": "160",
+          "LifetimeMS": "310",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [
+        {
+          "value": "BulletCreate",
+          "IgnoreOnTooltip": "true",
+          "AttackType": "weapon",
+          "GapTiles": "0.25",
+          "OffsetAngle": "0",
+          "GapAngle": "0",
+          "MinDistance": "6.2",
+          "MaxDistance": "6.2",
+          "Cooldown": "1",
+          "Proc": "1",
+          "ScalingStat": "DEF",
+          "StatModScalingMin": "25",
+          "StatModDamage": "0",
+          "StatModNumShots": "0.25",
+          "NumShots": "4",
+          "Type": "0xaf46"
+        }
+      ],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_7757",
+      "name": "Reikoku",
+      "source": "https://realm.wiki/item?id=7757",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 2,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Ninja ST Katana Proj",
+          "Speed": "140",
+          "LifetimeMS": "340",
+          "MinDamage": "80",
+          "MaxDamage": "90",
+          "Amplitude": ".5",
+          "Frequency": "1",
+          "MultiHit": true,
+          "ArmorPiercing": true,
+          "FaceDir": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 2
+    },
+    {
+      "id": "wiki_63872",
+      "name": "Retrowinds Katana",
+      "source": "https://realm.wiki/item?id=63872",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "RetroWinds Katana Projectile",
+          "Speed": "130",
+          "LifetimeMS": "365",
+          "MinDamage": "160",
+          "MaxDamage": "210",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_47977",
+      "name": "Rift Rippers",
+      "source": "https://realm.wiki/item?id=47977",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Rift Slash",
+          "MinDamage": "70",
+          "MaxDamage": "95",
+          "LifetimeMS": "1000",
+          "Speed": "50",
+          "Amplitude": "4",
+          "Frequency": "1",
+          "MultiHit": true,
+          "PassesCover": true,
+          "ProtectFromSink": true,
+          "FaceDir": true,
+          "Boomerang": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "2",
+          "RateOfFire": "0.8",
+          "PosOffset": "-1.25,0",
+          "ArcGap": "0",
+          "DefaultAngle": "90"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "2",
+          "RateOfFire": "0.8",
+          "PosOffset": "1.25,0",
+          "ArcGap": "0",
+          "DefaultAngle": "270"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Amount": "6",
+          "Stat": "WIS"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 2
+    },
+    {
+      "id": "wiki_14452",
+      "name": "Ritual Khopesh",
+      "source": "https://realm.wiki/item?id=14452",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Black Ball",
+          "Speed": "0",
+          "MinDamage": "0",
+          "MaxDamage": "0",
+          "LifetimeMS": "10",
+          "MultiHit": true,
+          "Size": "0",
+          "ArmorPiercing": true
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "Interregnum Tachi 1",
+          "Speed": "120",
+          "MinDamage": "90",
+          "MaxDamage": "120",
+          "LifetimeMS": "384",
+          "MultiHit": true
+        },
+        {
+          "value": "",
+          "Id": "2",
+          "ObjectId": "Interregnum Tachi 2",
+          "Speed": "120",
+          "MinDamage": "90",
+          "MaxDamage": "120",
+          "LifetimeMS": "384",
+          "MultiHit": true
+        },
+        {
+          "value": "",
+          "Id": "3",
+          "ObjectId": "Black Ball",
+          "Speed": "0",
+          "MinDamage": "0",
+          "MaxDamage": "0",
+          "LifetimeMS": "0",
+          "MultiHit": true,
+          "Size": "0",
+          "ArmorPiercing": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "3",
+          "NumProjectiles": "1",
+          "RateOfFire": "1",
+          "PosOffset": "1,.75",
+          "DefaultAngle": "-0.1"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "1",
+          "PosOffset": "1,.75",
+          "DefaultAngle": "-25"
+        },
+        {
+          "value": "",
+          "ProjectileId": "2",
+          "NumProjectiles": "1",
+          "RateOfFire": "1",
+          "PosOffset": "-1,.75",
+          "DefaultAngle": "25"
+        }
+      ],
+      "equip": [],
+      "onShoot": [
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "Cooldown": "0.4",
+          "MinDistance": "-8.0",
+          "MaxDistance": "-8.0",
+          "OffsetAngle": "0.5",
+          "NumShots": "2",
+          "GapAngle": "270",
+          "GapTiles": "0.5",
+          "ArcGap": "0",
+          "Type": "0x387b",
+          "MustNotWearOR": "0x385a;0x385c;0x38A6;0x38A8",
+          "MustWear": "0x3878"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "Cooldown": "0.4",
+          "MinDistance": "3.9",
+          "MaxDistance": "3.9",
+          "OffsetAngle": "6.088528154195175",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x387c",
+          "MustNotWearOR": "0x385a;0x385c;0x38A6;0x38A8",
+          "MustWear": "0x3879"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "Cooldown": "0.4",
+          "MinDistance": "3.9",
+          "MaxDistance": "3.9",
+          "OffsetAngle": "-6.088528154195175",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x387c",
+          "MustNotWearOR": "0x385a;0x385c;0x38A6;0x38A8",
+          "MustWear": "0x3879"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "Cooldown": "1.0",
+          "MinDistance": "3.2",
+          "MaxDistance": "3.2",
+          "OffsetAngle": "120",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x387d",
+          "MustNotWearOR": "0x385a;0x385c;0x38A6;0x38A8",
+          "MustWear": "0x387a"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "Cooldown": "1.0",
+          "MinDistance": "3.2",
+          "MaxDistance": "3.2",
+          "OffsetAngle": "60",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x387d",
+          "MustNotWearOR": "0x385a;0x385c;0x38A6;0x38A8",
+          "MustWear": "0x387a"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "Cooldown": "1.0",
+          "MinDistance": "3.2",
+          "MaxDistance": "3.2",
+          "OffsetAngle": "0",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x387d",
+          "MustNotWearOR": "0x385a;0x385c;0x38A6;0x38A8",
+          "MustWear": "0x387a"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "Cooldown": "1.0",
+          "MinDistance": "3.2",
+          "MaxDistance": "3.2",
+          "OffsetAngle": "180",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x387d",
+          "MustNotWearOR": "0x385a;0x385c;0x38A6;0x38A8",
+          "MustWear": "0x387a"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "Cooldown": "1.0",
+          "MinDistance": "3.2",
+          "MaxDistance": "3.2",
+          "OffsetAngle": "-120",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x387d",
+          "MustNotWearOR": "0x385a;0x385c;0x38A6;0x38A8",
+          "MustWear": "0x387a"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "Cooldown": "1.0",
+          "MinDistance": "3.2",
+          "MaxDistance": "3.2",
+          "OffsetAngle": "-60",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x387d",
+          "MustNotWearOR": "0x385a;0x385c;0x38A6;0x38A8",
+          "MustWear": "0x387a"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_14866",
+      "name": "Saif of the Deep",
+      "source": "https://realm.wiki/item?id=14866",
+      "shiny": false,
+      "rate": 0.7,
+      "shots": 4,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Kensei ST Projectile 2",
+          "Speed": "60",
+          "MinDamage": "70",
+          "MaxDamage": "85",
+          "LifetimeMS": "925",
+          "Amplitude": "0.4",
+          "Frequency": "1",
+          "MultiHit": true,
+          "PassesCover": true,
+          "FaceDir": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 4
+    },
+    {
+      "id": "wiki_9087",
+      "name": "Salju",
+      "source": "https://realm.wiki/item?id=9087",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Salju Slash",
+          "Speed": "130",
+          "LifetimeMS": "365",
+          "MinDamage": "130",
+          "MaxDamage": "195",
+          "MultiHit": true,
+          "ParticleTrail": {
+            "value": "0x1ba38f",
+            "Intensity": "0.3",
+            "LifetimeMS": "200"
+          }
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_12072",
+      "name": "Sawblade Katana",
+      "source": "https://realm.wiki/item?id=12072",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Sawblade Projectile",
+          "Speed": "130",
+          "LifetimeMS": "365",
+          "MinDamage": "145",
+          "MaxDamage": "195",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Amount": "2",
+          "Stat": "VIT"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_26729",
+      "name": "Shakujo",
+      "source": "https://realm.wiki/item?id=26729",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Sacred Ring Small",
+          "Speed": "200",
+          "LifetimeMS": "525",
+          "MinDamage": "145",
+          "MaxDamage": "195",
+          "Acceleration": "-800",
+          "AccelerationDelay": "100",
+          "SpeedClamp": "50",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.5",
+          "ArcGap": "0",
+          "DefaultAngle": "00",
+          "BurstCount": "4",
+          "BurstDelay": "1.5",
+          "BurstMinDelay": "0.5"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_2011",
+      "name": "Shining Blade",
+      "source": "https://realm.wiki/item?id=2011",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "SB Hero Slash",
+          "Speed": "130",
+          "LifetimeMS": "365",
+          "MinDamage": "160",
+          "MaxDamage": "210",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "RateOfFire": "1",
+          "NumProjectiles": "1"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_14497",
+      "name": "Skybound Blade",
+      "source": "https://realm.wiki/item?id=14497",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "MotMG Daeva Slash",
+          "Speed": "130",
+          "LifetimeMS": "365",
+          "MinDamage": "145",
+          "MaxDamage": "195",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "ATT",
+          "Amount": "2"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_41656",
+      "name": "Snowflake Blade",
+      "source": "https://realm.wiki/item?id=41656",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Snowflake Blade Bullet",
+          "Speed": "130",
+          "MinDamage": "205",
+          "MaxDamage": "225",
+          "LifetimeMS": "400",
+          "Amplitude": "0.55",
+          "Frequency": "0.55"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_49471",
+      "name": "Socket Blade",
+      "source": "https://realm.wiki/item?id=49471",
+      "shiny": false,
+      "rate": 0.3,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Mech Void Gear",
+          "Speed": "0",
+          "MinDamage": "720",
+          "MaxDamage": "870",
+          "LifetimeMS": "2100",
+          "Acceleration": "200",
+          "AccelerationDelay": "1181",
+          "SpeedClamp": "85",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Amount": "-5",
+          "Stat": "DEX"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_3983",
+      "name": "Shiny Socket Blade",
+      "source": "https://realm.wiki/item?id=3983",
+      "shiny": true,
+      "rate": 0.3,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Mech Void Gear Shiny",
+          "Speed": "0",
+          "MinDamage": "720",
+          "MaxDamage": "870",
+          "LifetimeMS": "2100",
+          "Acceleration": "200",
+          "AccelerationDelay": "1181",
+          "SpeedClamp": "85",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Amount": "-5",
+          "Stat": "DEX"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_7323",
+      "name": "Sovereign Cinder-Blade",
+      "source": "https://realm.wiki/item?id=7323",
+      "shiny": false,
+      "rate": 0.45,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Cinder Projectile",
+          "Speed": "195",
+          "MinDamage": "480",
+          "MaxDamage": "555",
+          "LifetimeMS": "244",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Amount": "5",
+          "Stat": "SPD"
+        }
+      ],
+      "onShoot": [
+        {
+          "value": "StatBoostSelf",
+          "Cooldown": "0.0",
+          "Proc": "1",
+          "Amount": "-10",
+          "Duration": "1",
+          "Stat": "ATT",
+          "RequiredConditions": "In Combat",
+          "Channel": "noStackItm"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_53195",
+      "name": "Sullen Blade",
+      "source": "https://realm.wiki/item?id=53195",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "LOD Celestial Slash",
+          "Speed": "130",
+          "MinDamage": "200",
+          "MaxDamage": "220",
+          "LifetimeMS": "400",
+          "Amplitude": "0.65",
+          "Frequency": "0.2"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_26750",
+      "name": "Sweetheart Taichi",
+      "source": "https://realm.wiki/item?id=26750",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Lovers Slash",
+          "Speed": "120",
+          "MinDamage": "85",
+          "MaxDamage": "120",
+          "LifetimeMS": "384",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.95",
+          "PosOffset": "1,.75",
+          "DefaultAngle": "-25"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.95",
+          "PosOffset": "-1,.75",
+          "DefaultAngle": "25"
+        }
+      ],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_63775",
+      "name": "Sweettreats Katana",
+      "source": "https://realm.wiki/item?id=63775",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Sweettreats Katana Projectile",
+          "Speed": "130",
+          "MinDamage": "205",
+          "MaxDamage": "225",
+          "LifetimeMS": "400",
+          "Amplitude": "0.55",
+          "Frequency": "0.55"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_52039",
+      "name": "Thunder Mallet",
+      "source": "https://realm.wiki/item?id=52039",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 2,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Lei Gong Proj",
+          "Speed": "140",
+          "LifetimeMS": "340",
+          "MinDamage": "80",
+          "MaxDamage": "90",
+          "Amplitude": ".5",
+          "Frequency": "1",
+          "MultiHit": true,
+          "ArmorPiercing": true,
+          "FaceDir": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 2
+    },
+    {
+      "id": "wiki_23898",
+      "name": "Tools of the Tarnished",
+      "source": "https://realm.wiki/item?id=23898",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "SpecPen Tarnished Sickle",
+          "Speed": "100",
+          "MinDamage": "65",
+          "MaxDamage": "75",
+          "LifetimeMS": "450",
+          "TurnRate": "-25",
+          "TurnStopTime": "400",
+          "MultiHit": true
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "SpecPen Tarnished Hammer",
+          "Speed": "100",
+          "MinDamage": "290",
+          "MaxDamage": "340",
+          "LifetimeMS": "450",
+          "TurnRate": "25",
+          "TurnStopTime": "400",
+          "MultiHit": true,
+          "ArmorPiercing": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.5",
+          "PosOffset": "0.0,0.0",
+          "DefaultAngle": "25"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.33",
+          "PosOffset": "-0.0,0.0",
+          "DefaultAngle": "-25"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStatRelative",
+          "Amount": "-50",
+          "Stat": "DEX",
+          "StatRelativeTo": "DEX"
+        },
+        {
+          "value": "IncrementStatRelative",
+          "Amount": "70",
+          "Stat": "DEX",
+          "StatRelativeTo": "VIT"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_7295",
+      "name": "Shiny Tools of the Tarnished",
+      "source": "https://realm.wiki/item?id=7295",
+      "shiny": true,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "SpecPen Tarnished Sickle Shiny",
+          "Speed": "100",
+          "MinDamage": "65",
+          "MaxDamage": "75",
+          "LifetimeMS": "450",
+          "TurnRate": "-25",
+          "TurnStopTime": "400",
+          "MultiHit": true
+        },
+        {
+          "value": "",
+          "Id": "1",
+          "ObjectId": "SpecPen Tarnished Hammer Shiny",
+          "Speed": "100",
+          "MinDamage": "290",
+          "MaxDamage": "340",
+          "LifetimeMS": "450",
+          "TurnRate": "25",
+          "TurnStopTime": "400",
+          "MultiHit": true,
+          "ArmorPiercing": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.5",
+          "PosOffset": "0.0,0.0",
+          "DefaultAngle": "25"
+        },
+        {
+          "value": "",
+          "ProjectileId": "1",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.33",
+          "PosOffset": "-0.0,0.0",
+          "DefaultAngle": "-25"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStatRelative",
+          "Amount": "-50",
+          "Stat": "DEX",
+          "StatRelativeTo": "DEX"
+        },
+        {
+          "value": "IncrementStatRelative",
+          "Amount": "70",
+          "Stat": "DEX",
+          "StatRelativeTo": "VIT"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_14413",
+      "name": "Tsunami",
+      "source": "https://realm.wiki/item?id=14413",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Tsunami Slash",
+          "Speed": "130",
+          "LifetimeMS": "365",
+          "MinDamage": "160",
+          "MaxDamage": "215",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_2324",
+      "name": "Useless Katana",
+      "source": "https://realm.wiki/item?id=2324",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Masamune Slash",
+          "Speed": "100",
+          "MinDamage": "10",
+          "MaxDamage": "30",
+          "LifetimeMS": "350"
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_14464",
+      "name": "Valor",
+      "source": "https://realm.wiki/item?id=14464",
+      "shiny": false,
+      "rate": 0.45,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Shatters Katana Projectile",
+          "Speed": "195",
+          "MinDamage": "480",
+          "MaxDamage": "555",
+          "LifetimeMS": "244",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Amount": "5",
+          "Stat": "SPD"
+        }
+      ],
+      "onShoot": [
+        {
+          "value": "StatBoostSelf",
+          "Cooldown": "0.0",
+          "Proc": "1",
+          "Amount": "-10",
+          "Duration": "1",
+          "Stat": "ATT",
+          "RequiredConditions": "In Combat",
+          "Channel": "noStackItm"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_38549",
+      "name": "Shiny Valor",
+      "source": "https://realm.wiki/item?id=38549",
+      "shiny": true,
+      "rate": 0.45,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Shatters Katana Projectile Shiny",
+          "Speed": "195",
+          "MinDamage": "480",
+          "MaxDamage": "555",
+          "LifetimeMS": "244",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Amount": "5",
+          "Stat": "SPD"
+        }
+      ],
+      "onShoot": [
+        {
+          "value": "StatBoostSelf",
+          "Cooldown": "0.0",
+          "Proc": "1",
+          "Amount": "-10",
+          "Duration": "1",
+          "Stat": "ATT",
+          "RequiredConditions": "In Combat",
+          "Channel": "noStackItm"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_38587",
+      "name": "Venerable Doku No Ken",
+      "source": "https://realm.wiki/item?id=38587",
+      "shiny": false,
+      "rate": 1.2,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Venerable Doku Slash",
+          "Speed": "130",
+          "MinDamage": "140",
+          "MaxDamage": "170",
+          "LifetimeMS": "400",
+          "Amplitude": "0.5",
+          "Frequency": "1",
+          "Size": "90",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [
+        {
+          "value": "PoisonGrenade",
+          "Proc": "1",
+          "Cooldown": "3",
+          "Radius": "6",
+          "ImpactDamage": "0",
+          "TotalDamage": "1500",
+          "Duration": "6",
+          "ThrowTime": "0"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_29037",
+      "name": "Void Blade",
+      "source": "https://realm.wiki/item?id=29037",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Void Star",
+          "Speed": "0",
+          "MinDamage": "605",
+          "MaxDamage": "755",
+          "LifetimeMS": "2100",
+          "Acceleration": "200",
+          "AccelerationDelay": "1250",
+          "SpeedClamp": "100",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.3"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEX",
+          "Amount": "-5"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_2021",
+      "name": "Shiny Void Blade",
+      "source": "https://realm.wiki/item?id=2021",
+      "shiny": true,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Void Star Shiny",
+          "Speed": "0",
+          "MinDamage": "605",
+          "MaxDamage": "755",
+          "LifetimeMS": "2100",
+          "Acceleration": "200",
+          "AccelerationDelay": "1250",
+          "SpeedClamp": "100",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "Index": "0",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.3"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEX",
+          "Amount": "-5"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_41788",
+      "name": "Void Tachi",
+      "source": "https://realm.wiki/item?id=41788",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Void Cross Slash",
+          "Speed": "120",
+          "MinDamage": "100",
+          "MaxDamage": "135",
+          "LifetimeMS": "384",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.95",
+          "PosOffset": "1,.75",
+          "DefaultAngle": "-25"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "0.95",
+          "PosOffset": "-1,.75",
+          "DefaultAngle": "25"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEX",
+          "Amount": "5"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_42353",
+      "name": "Winter's Dire Kiss",
+      "source": "https://realm.wiki/item?id=42353",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "Id": "0",
+          "ObjectId": "Frosted Katana Slash",
+          "Speed": "120",
+          "MinDamage": "220",
+          "MaxDamage": "340",
+          "LifetimeMS": "600",
+          "MultiHit": true,
+          "Size": "100",
+          "ArmorPiercing": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "RateOfFire": "1.3",
+          "BurstCount": "4",
+          "BurstDelay": "1.4",
+          "BurstMinDelay": "0.6"
+        }
+      ],
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Amount": "6",
+          "Stat": "SPD"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    },
+    {
+      "id": "wiki_6863",
+      "name": "Yuki",
+      "source": "https://realm.wiki/item?id=6863",
+      "shiny": false,
+      "rate": 1.0,
+      "shots": 1,
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "XMAS Katana",
+          "Speed": "130",
+          "LifetimeMS": "365",
+          "MinDamage": "145",
+          "MaxDamage": "195",
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "equip": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "meters": [],
+      "tooltipShots": 1
+    }
+  ]
+}

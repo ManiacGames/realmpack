@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.37.0 — 2026-10-24
+
+- Reworked all 84 imported UT/ST katana entries (69 regular/historical profiles and 15 Shiny variants) using inspected RotMG game data. Distinct projectile rhythms, true piercing, returning blades, delayed accelerating strikes and Winter’s burst cycle replace generic recipes. Fiery Katana’s side arcs recover independently of its central shot.
+- Added Ray’s block-scaled sunbeams, shared Doku/Fire grenade adaptations, Bloodbath’s low-HP damage/healing trade-off, Valor’s short weapon-fatigue penalty and Tools’ vitality-ring conversion. Preserved historical Doku’s lack of a grenade and kept novelty weapons’ source limitations.
+- Updated compact item summaries and live state indicators. Saved upgrades, prices, acquisition rules, artwork, footprints and existing ST memberships remain intact. Full per-item profiles, source facts and translation limits: docs/katana-identities.md.
+- Validation: JavaScript syntax and all 28 regression suites; 252 legal katana/class/version combat trials, 684 katana UI views, 7,176 catalogue views and a 4× mixed-katana/native-ability browser smoke check. All 1,995 tiered class fight records match the previous release. The 6,624-fight katana comparison stays close overall (1,882→1,864 wins per 3,312 fixtures). Void/Socket wind-up and novelty limitations remain playtesting watch points; Blade of Ages cannot fire within the existing 150s battle limit.
+
 ## 0.36.0 — 2026-10-24
 
 - Reworked all 93 imported UT/ST wand entries (77 regular profiles and 16 Shiny variants) from inspected RotMG game data. Independent morning-star rhythms, mixed piercing, returning/slow shots, burst/recovery cycles, Razorthorn’s Nettle pattern and broad Lightning/Sprite damage rolls replace generic recipes.

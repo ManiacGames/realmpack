@@ -155,3 +155,7 @@ All 98 UT/ST staff entries now use [source-backed staff profiles](staff-identiti
 ## Complete wand pass — 0.36.0
 
 All 93 UT/ST wand entries now use [inspected wand profiles](wand-identities.md), including morning-star rhythms, mixed piercing, returning/slow shots, burst cycles, soul summons, fields, self-curse and ability-triggered effects. These recipes supersede earlier wand profiles above. Existing Geb memberships and designated full-set ability bonuses remain.
+
+## Complete katana pass — 0.37.0
+
+All 84 UT/ST katana entries now use [inspected katana profiles](katana-identities.md), including independent side bursts, returning/accelerating attacks, piercing sunbeams, poison/fire grenades, HP/healing trade-offs, weapon fatigue and vitality conversion. These profiles supersede earlier katana recipes, including Socket Blade. Existing item identities, upgrades and set membership remain.

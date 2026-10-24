@@ -1,0 +1,1671 @@
+{
+  "version": "0.37.0",
+  "baselineCommit": "b5b0ee8519c186032800e47992e9d9c8c62fea17",
+  "assumptions": "All 69 non-Shiny katana definitions, including historical Doku and reskins; Ninja/Samurai/Kensei, eight bosses at dungeon indices 0,4,9,14,19,24,29,34; two tiered support levels at 60%/90% family maximum, magic ring T3/T6, extra native tiered katana, 3 Health Potions, +50 base HP and full equipped HP, +8% relic recharge, seed 123456, Adventurer depth 20, 0.05s tick. Tested katana packed first in top row; no enhancements, enchantments, infused gear or paired special rings. Same fixtures in both versions. Fixed-build comparison, not an optimized-build or full-run economy test.",
+  "fightsPerVersion": 3312,
+  "before": [
+    {
+      "id": "wiki_52254",
+      "name": "Acrobat's Edge",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_14414",
+      "name": "Arashi",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_3310",
+      "name": "Arbiter's Wrath",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_17711",
+      "name": "Aspirant's Blade",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_26232",
+      "name": "Aurora Tachi",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_1399",
+      "name": "Blade of Ages",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_37682",
+      "name": "Blade of Blooming",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_26100",
+      "name": "Blade of the Assailant",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_42294",
+      "name": "Blood Ritual Tools",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "ninja": 8,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 18.87
+    },
+    {
+      "id": "wiki_42284",
+      "name": "Blood Siphoning Katana",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "ninja": 8,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 18.87
+    },
+    {
+      "id": "wiki_20882",
+      "name": "Bloodbath Blade",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "ninja": 8,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 18.87
+    },
+    {
+      "id": "wiki_25590",
+      "name": "Brambletooth Tachi",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_1461",
+      "name": "Bunny Ear Tachi",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_17563",
+      "name": "Burial Blades",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_12164",
+      "name": "Candy Katana",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_30053",
+      "name": "Celestial Blade",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_3860",
+      "name": "Corrupted Cleaver",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_8842",
+      "name": "Diamond-Bladed Katana",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_3292",
+      "name": "Doku No Ken",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_53189",
+      "name": "Doku No Ken",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_42101",
+      "name": "Dynamite",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_28846",
+      "name": "Enforcer",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_14379",
+      "name": "Fiery Katana",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_25693",
+      "name": "Fire Blade",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.78
+    },
+    {
+      "id": "wiki_57118",
+      "name": "Floral Edge Katana",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_34335",
+      "name": "Heartseeker Katana",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_24970",
+      "name": "Hero's Katana",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_24976",
+      "name": "Hero's Tachi",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_53820",
+      "name": "Hookblade Tachi",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_26573",
+      "name": "Iceborn Arsenal",
+      "fights": 48,
+      "wins": 33,
+      "byClass": {
+        "ninja": 10,
+        "samurai": 11,
+        "kensei": 12
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_29720",
+      "name": "Katana of Good Fortune",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_8254",
+      "name": "Kazekiri",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_21218",
+      "name": "Kiritsukeru",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_23332",
+      "name": "Krathana",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_41742",
+      "name": "Kyuuketsuki Hitogoroshi",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_41822",
+      "name": "Legion Elite Katana",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_3787",
+      "name": "Legions Odachi",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_25694",
+      "name": "Moonbeam Blade",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_56455",
+      "name": "Neo Fire Blade",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.78
+    },
+    {
+      "id": "wiki_56456",
+      "name": "Neo Moonbeam Blade",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_28463",
+      "name": "Pool Noodle",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_19260",
+      "name": "Quartz Cutter",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_2325",
+      "name": "Ray Katana",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_7757",
+      "name": "Reikoku",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_63872",
+      "name": "Retrowinds Katana",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_47977",
+      "name": "Rift Rippers",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_14452",
+      "name": "Ritual Khopesh",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_14866",
+      "name": "Saif of the Deep",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_9087",
+      "name": "Salju",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_12072",
+      "name": "Sawblade Katana",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_26729",
+      "name": "Shakujo",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_2011",
+      "name": "Shining Blade",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_14497",
+      "name": "Skybound Blade",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_41656",
+      "name": "Snowflake Blade",
+      "fights": 48,
+      "wins": 33,
+      "byClass": {
+        "ninja": 10,
+        "samurai": 11,
+        "kensei": 12
+      },
+      "averageSeconds": 20.53
+    },
+    {
+      "id": "wiki_49471",
+      "name": "Socket Blade",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 19.82
+    },
+    {
+      "id": "wiki_7323",
+      "name": "Sovereign Cinder-Blade",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.78
+    },
+    {
+      "id": "wiki_53195",
+      "name": "Sullen Blade",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_26750",
+      "name": "Sweetheart Taichi",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_63775",
+      "name": "Sweettreats Katana",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_52039",
+      "name": "Thunder Mallet",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_23898",
+      "name": "Tools of the Tarnished",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_14413",
+      "name": "Tsunami",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_2324",
+      "name": "Useless Katana",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_14464",
+      "name": "Valor",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_38587",
+      "name": "Venerable Doku No Ken",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_29037",
+      "name": "Void Blade",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_41788",
+      "name": "Void Tachi",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_42353",
+      "name": "Winter's Dire Kiss",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_6863",
+      "name": "Yuki",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    }
+  ],
+  "after": [
+    {
+      "id": "wiki_52254",
+      "name": "Acrobat's Edge",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 18.25
+    },
+    {
+      "id": "wiki_14414",
+      "name": "Arashi",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 17.76
+    },
+    {
+      "id": "wiki_3310",
+      "name": "Arbiter's Wrath",
+      "fights": 48,
+      "wins": 17,
+      "byClass": {
+        "ninja": 4,
+        "samurai": 6,
+        "kensei": 7
+      },
+      "averageSeconds": 26.64
+    },
+    {
+      "id": "wiki_17711",
+      "name": "Aspirant's Blade",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 8,
+        "samurai": 8,
+        "kensei": 11
+      },
+      "averageSeconds": 18.95
+    },
+    {
+      "id": "wiki_26232",
+      "name": "Aurora Tachi",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 10,
+        "kensei": 12
+      },
+      "averageSeconds": 17.77
+    },
+    {
+      "id": "wiki_1399",
+      "name": "Blade of Ages",
+      "fights": 48,
+      "wins": 14,
+      "byClass": {
+        "ninja": 3,
+        "samurai": 4,
+        "kensei": 7
+      },
+      "averageSeconds": 27.18
+    },
+    {
+      "id": "wiki_37682",
+      "name": "Blade of Blooming",
+      "fights": 48,
+      "wins": 21,
+      "byClass": {
+        "ninja": 6,
+        "samurai": 4,
+        "kensei": 11
+      },
+      "averageSeconds": 22.66
+    },
+    {
+      "id": "wiki_26100",
+      "name": "Blade of the Assailant",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 10,
+        "kensei": 12
+      },
+      "averageSeconds": 18.5
+    },
+    {
+      "id": "wiki_42294",
+      "name": "Blood Ritual Tools",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.98
+    },
+    {
+      "id": "wiki_42284",
+      "name": "Blood Siphoning Katana",
+      "fights": 48,
+      "wins": 26,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 11
+      },
+      "averageSeconds": 19.85
+    },
+    {
+      "id": "wiki_20882",
+      "name": "Bloodbath Blade",
+      "fights": 48,
+      "wins": 31,
+      "byClass": {
+        "ninja": 9,
+        "samurai": 10,
+        "kensei": 12
+      },
+      "averageSeconds": 14.48
+    },
+    {
+      "id": "wiki_25590",
+      "name": "Brambletooth Tachi",
+      "fights": 48,
+      "wins": 32,
+      "byClass": {
+        "ninja": 9,
+        "samurai": 11,
+        "kensei": 12
+      },
+      "averageSeconds": 17.1
+    },
+    {
+      "id": "wiki_1461",
+      "name": "Bunny Ear Tachi",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.27
+    },
+    {
+      "id": "wiki_17563",
+      "name": "Burial Blades",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.16
+    },
+    {
+      "id": "wiki_12164",
+      "name": "Candy Katana",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "ninja": 8,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 19.01
+    },
+    {
+      "id": "wiki_30053",
+      "name": "Celestial Blade",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 17.76
+    },
+    {
+      "id": "wiki_3860",
+      "name": "Corrupted Cleaver",
+      "fights": 48,
+      "wins": 26,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 11
+      },
+      "averageSeconds": 19.22
+    },
+    {
+      "id": "wiki_8842",
+      "name": "Diamond-Bladed Katana",
+      "fights": 48,
+      "wins": 26,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 11
+      },
+      "averageSeconds": 19.22
+    },
+    {
+      "id": "wiki_3292",
+      "name": "Doku No Ken",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 18.53
+    },
+    {
+      "id": "wiki_53189",
+      "name": "Doku No Ken",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 8,
+        "samurai": 8,
+        "kensei": 11
+      },
+      "averageSeconds": 19.63
+    },
+    {
+      "id": "wiki_42101",
+      "name": "Dynamite",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_28846",
+      "name": "Enforcer",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "ninja": 8,
+        "samurai": 10,
+        "kensei": 12
+      },
+      "averageSeconds": 16.74
+    },
+    {
+      "id": "wiki_14379",
+      "name": "Fiery Katana",
+      "fights": 48,
+      "wins": 32,
+      "byClass": {
+        "ninja": 9,
+        "samurai": 11,
+        "kensei": 12
+      },
+      "averageSeconds": 14.13
+    },
+    {
+      "id": "wiki_25693",
+      "name": "Fire Blade",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 18.53
+    },
+    {
+      "id": "wiki_57118",
+      "name": "Floral Edge Katana",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_34335",
+      "name": "Heartseeker Katana",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 19.21
+    },
+    {
+      "id": "wiki_24970",
+      "name": "Hero's Katana",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_24976",
+      "name": "Hero's Tachi",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "ninja": 8,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 18.02
+    },
+    {
+      "id": "wiki_53820",
+      "name": "Hookblade Tachi",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 17.99
+    },
+    {
+      "id": "wiki_26573",
+      "name": "Iceborn Arsenal",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "ninja": 8,
+        "samurai": 10,
+        "kensei": 12
+      },
+      "averageSeconds": 17.42
+    },
+    {
+      "id": "wiki_29720",
+      "name": "Katana of Good Fortune",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "ninja": 4,
+        "samurai": 6,
+        "kensei": 9
+      },
+      "averageSeconds": 22.88
+    },
+    {
+      "id": "wiki_8254",
+      "name": "Kazekiri",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.66
+    },
+    {
+      "id": "wiki_21218",
+      "name": "Kiritsukeru",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 19.49
+    },
+    {
+      "id": "wiki_23332",
+      "name": "Krathana",
+      "fights": 48,
+      "wins": 19,
+      "byClass": {
+        "ninja": 6,
+        "samurai": 5,
+        "kensei": 8
+      },
+      "averageSeconds": 24.7
+    },
+    {
+      "id": "wiki_41742",
+      "name": "Kyuuketsuki Hitogoroshi",
+      "fights": 48,
+      "wins": 26,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 11
+      },
+      "averageSeconds": 19.85
+    },
+    {
+      "id": "wiki_41822",
+      "name": "Legion Elite Katana",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_3787",
+      "name": "Legions Odachi",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_25694",
+      "name": "Moonbeam Blade",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 19.21
+    },
+    {
+      "id": "wiki_56455",
+      "name": "Neo Fire Blade",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "ninja": 8,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 17.94
+    },
+    {
+      "id": "wiki_56456",
+      "name": "Neo Moonbeam Blade",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 18.32
+    },
+    {
+      "id": "wiki_28463",
+      "name": "Pool Noodle",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "ninja": 9,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 16.88
+    },
+    {
+      "id": "wiki_19260",
+      "name": "Quartz Cutter",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 18.21
+    },
+    {
+      "id": "wiki_2325",
+      "name": "Ray Katana",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "ninja": 9,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 17
+    },
+    {
+      "id": "wiki_7757",
+      "name": "Reikoku",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.99
+    },
+    {
+      "id": "wiki_63872",
+      "name": "Retrowinds Katana",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_47977",
+      "name": "Rift Rippers",
+      "fights": 48,
+      "wins": 30,
+      "byClass": {
+        "ninja": 9,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 16.81
+    },
+    {
+      "id": "wiki_14452",
+      "name": "Ritual Khopesh",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 17.99
+    },
+    {
+      "id": "wiki_14866",
+      "name": "Saif of the Deep",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.26
+    },
+    {
+      "id": "wiki_9087",
+      "name": "Salju",
+      "fights": 48,
+      "wins": 26,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 11
+      },
+      "averageSeconds": 19.22
+    },
+    {
+      "id": "wiki_12072",
+      "name": "Sawblade Katana",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 19.12
+    },
+    {
+      "id": "wiki_26729",
+      "name": "Shakujo",
+      "fights": 48,
+      "wins": 31,
+      "byClass": {
+        "ninja": 10,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 16.68
+    },
+    {
+      "id": "wiki_2011",
+      "name": "Shining Blade",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_14497",
+      "name": "Skybound Blade",
+      "fights": 48,
+      "wins": 26,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 11
+      },
+      "averageSeconds": 18.9
+    },
+    {
+      "id": "wiki_41656",
+      "name": "Snowflake Blade",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 17.76
+    },
+    {
+      "id": "wiki_49471",
+      "name": "Socket Blade",
+      "fights": 48,
+      "wins": 26,
+      "byClass": {
+        "ninja": 6,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.78
+    },
+    {
+      "id": "wiki_7323",
+      "name": "Sovereign Cinder-Blade",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.42
+    },
+    {
+      "id": "wiki_53195",
+      "name": "Sullen Blade",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.06
+    },
+    {
+      "id": "wiki_26750",
+      "name": "Sweetheart Taichi",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "ninja": 8,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 18.95
+    },
+    {
+      "id": "wiki_63775",
+      "name": "Sweettreats Katana",
+      "fights": 48,
+      "wins": 28,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 17.76
+    },
+    {
+      "id": "wiki_52039",
+      "name": "Thunder Mallet",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.99
+    },
+    {
+      "id": "wiki_23898",
+      "name": "Tools of the Tarnished",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.98
+    },
+    {
+      "id": "wiki_14413",
+      "name": "Tsunami",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.77
+    },
+    {
+      "id": "wiki_2324",
+      "name": "Useless Katana",
+      "fights": 48,
+      "wins": 16,
+      "byClass": {
+        "ninja": 4,
+        "samurai": 5,
+        "kensei": 7
+      },
+      "averageSeconds": 25.68
+    },
+    {
+      "id": "wiki_14464",
+      "name": "Valor",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 18.42
+    },
+    {
+      "id": "wiki_38587",
+      "name": "Venerable Doku No Ken",
+      "fights": 48,
+      "wins": 32,
+      "byClass": {
+        "ninja": 10,
+        "samurai": 10,
+        "kensei": 12
+      },
+      "averageSeconds": 16.67
+    },
+    {
+      "id": "wiki_29037",
+      "name": "Void Blade",
+      "fights": 48,
+      "wins": 24,
+      "byClass": {
+        "ninja": 6,
+        "samurai": 7,
+        "kensei": 11
+      },
+      "averageSeconds": 19.88
+    },
+    {
+      "id": "wiki_41788",
+      "name": "Void Tachi",
+      "fights": 48,
+      "wins": 29,
+      "byClass": {
+        "ninja": 8,
+        "samurai": 9,
+        "kensei": 12
+      },
+      "averageSeconds": 17.06
+    },
+    {
+      "id": "wiki_42353",
+      "name": "Winter's Dire Kiss",
+      "fights": 48,
+      "wins": 31,
+      "byClass": {
+        "ninja": 9,
+        "samurai": 10,
+        "kensei": 12
+      },
+      "averageSeconds": 16.72
+    },
+    {
+      "id": "wiki_6863",
+      "name": "Yuki",
+      "fights": 48,
+      "wins": 27,
+      "byClass": {
+        "ninja": 7,
+        "samurai": 8,
+        "kensei": 12
+      },
+      "averageSeconds": 19.03
+    }
+  ],
+  "changedFights": 2729,
+  "totalWins": {
+    "before": 1882,
+    "after": 1864
+  }
+}
