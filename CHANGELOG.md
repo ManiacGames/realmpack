@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.33.2 — 2026-10-24
+
+- Temporarily made all 13 explicitly labelled Legacy item versions unobtainable from loot, shops, events, transformations and Sandbox. Legacy Etherite Dagger was already unavailable; 12 additional versions join it. Legacy’s Pendant remains available because its name is not a Legacy version label.
+- Legacy items appear under the compendium’s Unobtainable / All items filters with the existing availability notice. Owned copies retain their stats, effects, upgrades and inventory placement, and can still be used, sold or sacrificed. Pending saved offers are filtered on load.
+- Validation: JavaScript syntax and all 25 regression suites. Targeted checks cover all 13 Legacy versions, the Pendant exception, acquisition guards, saved offer cleanup with preserved rarity, owned-copy activation/trading and unchanged recipes. All 78 Legacy inspection viewport/text combinations and the compendium filter passed browser checks.
+
 ## 0.33.1 — 2026-10-24
 
 - Catalogue item inspection now uses one responsive panel with stats and class information beside the item’s effects. Removed Previous/Next pages, oversized spacing and the repeated boilerplate heading.

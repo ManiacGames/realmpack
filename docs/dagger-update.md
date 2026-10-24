@@ -1,5 +1,7 @@
 # The Dagger Update — 0.22.2
 
+**0.33.2 acquisition follow-up:** All 13 explicitly labelled Legacy versions are now temporarily unobtainable. Legacy Etherite was already excluded; its recipe and all owned copies remain unchanged. Temporary Legacy availability metadata is excluded from the recipe snapshot hash.
+
 **0.32.0 compatibility:** Soulcursed Scythe joins the Vampire Rogue set through membership metadata only. All dagger recipe fields and effects remain unchanged; the full-set rules are documented in [UT/ST identities](ut-st-identities.md).
 
 **0.22.2 follow-up:** Chain Dagger now builds bleed to a maximum of 6 stacks (Shiny 8), retaining its 10 base damage and 2-stack application. Higher bleed from other sources is left untouched, including its expiry timer.

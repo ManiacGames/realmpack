@@ -1,6 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict'),crypto=require('node:crypto'),{ctx,vm}=require('./load-game.cjs');
-const daggers=vm.runInContext('JSON.stringify(DATA.items.filter(d=>d.kind==="dagger").map(({realmSet,realmSlot,...d})=>d))',ctx);
+const daggers=vm.runInContext('JSON.stringify(DATA.items.filter(d=>d.kind==="dagger").map(({realmSet,realmSlot,legacyUnavailable,...d})=>d))',ctx);
 assert.equal(crypto.createHash('sha256').update(daggers).digest('hex'),'3e2f0bc02599f9612bbbf53489fd034649907b62b85316ee52681c579788fa49','Dagger recipe changed beyond ST metadata');
 console.log(vm.runInContext(`(()=>{
  const check=(v,m)=>{if(!v)throw Error(m)},near=(a,b)=>Math.abs(a-b)<1e-7,type=name=>DATA.items.find(d=>d.name===name&&!d.isShiny).id;

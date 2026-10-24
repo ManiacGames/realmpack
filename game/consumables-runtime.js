@@ -24,6 +24,10 @@
   if(/^Potion of Health[1-6]$/.test(name))d.consumableReplacement=data.byName['Health Potion'];
   if(/^(Steampunk Epic Quest|Steamworks Compensation|Steamworks Engraving) Chest$/.test(name))d.consumableReplacement=data.byName['Stat Potion Choice Chest'];
  }
+ // A Legacy version label is distinct from a possessive item name such as Legacy's Pendant.
+ for(const d of data.items)if(/(?:^|\s)Legacy(?=\s|$)/i.test(d.name)){d.lootExcluded=true;d.legacyUnavailable=true}
+ const byId=Object.fromEntries(data.items.map(d=>[d.id,d]));
+ for(const d of data.items)if(d.isShiny&&byId[d.baseId]?.legacyUnavailable){d.lootExcluded=true;d.legacyUnavailable=true}
  data.consumableStats=statNames;
 })();
 function consumableProfile(i){const d=defs[i.type];return d?.once&&d.group==='consumable'&&d.consumableRework?d.consumable:undefined}
@@ -103,7 +107,7 @@ function leaveSupplies(){if(s.phase!=='reward')return;s.pendingSupplies=[];save(
 function continueRewardSupplies(){if(s.phase!=='reward'||!s.lootChoiceDone)return;if(s.pendingSupplies?.length)return showSupplies();advanceReward()}
 function advanceReward(){if(s.phase!=='reward'||!s.lootChoiceDone)return;s.lootChoiceDone=false;s.consumableRewardMods=null;if(ROOMS[s.room].type==='boss'){s.phase='boon';save();showBoon()}else nextRoom()}
 function openStatChest(id){if(s.phase!=='prep')return false;const i=[...s.items,...s.stash].find(i=>i.id===id);if(!i||consumableProfile(i)?.mode!=='chest')return false;i.chestOffer??=randomStatPotion();const rewardItem=makeItem(i.chestOffer),removed=stackCount(i)===1?[i.id]:[];if(!stashCanReceive(rewardItem,true,removed)){save();toast('Make a stash slot or room in a matching potion stack before opening.');return false}if(stackCount(i)===1){s.items=s.items.filter(j=>j!==i);s.stash=s.stash.filter(j=>j!==i)}else{i.quantity--;delete i.chestOffer}receiveItem(rewardItem);save();render();if(modalKind==='itemdetails'){if([...s.items,...s.stash].some(j=>j.id===id))showItemDetails(id);else closeItemDetails()}return true}
-function migrateConsumables(){for(const i of [...s.items,...s.stash]){const d=defs[i.type];if(d?.consumableReplacement){i.type=d.consumableReplacement;i.consumableTarget=null}if(defs[i.type]?.consumableRework){i.quantity=stackCount(i);i.usesSpent=0;i.used=false}}if(s.consumableBattle){s.max-=s.consumableBattle.tempHP||0;s.consumableBattle=null;s.hp=Math.min(s.hp,s.max)}syncRingVitals();stock=stock.filter(id=>!defs[id].lootExcluded);reward=reward.filter(id=>!defs[id].lootExcluded);if(s.activeEvent?.offers)for(const [key,id] of Object.entries(s.activeEvent.offers))if(defs[id]?.lootExcluded)s.activeEvent.offers[key]=eventOffer(0,true)}
+function migrateConsumables(){for(const i of [...s.items,...s.stash]){const d=defs[i.type];if(d?.consumableReplacement){i.type=d.consumableReplacement;i.consumableTarget=null}if(defs[i.type]?.consumableRework){i.quantity=stackCount(i);i.usesSpent=0;i.used=false}}if(s.consumableBattle){s.max-=s.consumableBattle.tempHP||0;s.consumableBattle=null;s.hp=Math.min(s.hp,s.max)}syncRingVitals();stock=stock.filter(id=>!defs[id].lootExcluded);reward=reward.filter(id=>!defs[id].lootExcluded);if(s.activeEvent?.offers)for(const [key,id] of Object.entries(s.activeEvent.offers))if(defs[id]?.lootExcluded)s.activeEvent.offers[key]=defs[id].legacyUnavailable?eventOffer(defs[id].quality,defs[id].group==='consumable'):eventOffer(0,true)}
 function consumableDescription(d){const p=d.consumable;if(!p)return '';const suffix=' Permanently spent after use; stacks to five.';
  if(p.mode==='legacy')return effectText(d.effect,d.amount)+'. Temporarily unobtainable; existing copies are spent after use.'+(consumableBundleSize(d.id)>1?' Contains '+consumableBundleSize(d.id)+' copies.':'');
  if(p.mode==='supply')return effectText(p.effect,p.amount)+'. '+(p.effect==='heal'?'Waits until 50% health or lower.':'Waits until at least '+p.amount+' mana is missing.')+suffix;

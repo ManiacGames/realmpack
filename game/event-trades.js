@@ -1,7 +1,7 @@
 /* Reversible selection previews; item loss happens only on the labelled action. */
 'use strict';
 const INFUSION_CAP=.30;
-function tradeInventory(){return [...s.items,...s.stash].filter(i=>defs[i.type]&&(!defs[i.type].lootExcluded||defs[i.type].daggerUnavailable))}
+function tradeInventory(){return [...s.items,...s.stash].filter(i=>defs[i.type]&&(!defs[i.type].lootExcluded||defs[i.type].daggerUnavailable||defs[i.type].legacyUnavailable))}
 function tradeDamageSource(i){return ['damage','drain','poison','burn','bleed','summon'].includes(defs[i.type].effect)}
 function itemRemovalReason(i,quantity=1){if(!i||!tradeInventory().includes(i))return 'Choose an owned item.';if(!Number.isInteger(quantity)||quantity<1||quantity>stackCount(i))return 'Invalid quantity.';if(tradeDamageSource(i)&&quantity===stackCount(i)&&!tradeInventory().some(j=>j.id!==i.id&&tradeDamageSource(j)))return 'Keep at least one damage source.';return ''}
 function removeTradeCopies(i,quantity){if(defs[i.type].once&&quantity<stackCount(i)){i.quantity=stackCount(i)-quantity;return}s.items=s.items.filter(j=>j.id!==i.id);s.stash=s.stash.filter(j=>j.id!==i.id);if(selected===i.id)selected=null;inventoryCancel()}

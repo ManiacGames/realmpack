@@ -1,5 +1,7 @@
 # Sword identities — 0.33.0
 
+**0.33.2 acquisition follow-up:** Legacy Pixie-Enchanted Sword is temporarily unobtainable with the other labelled Legacy versions. Its existing saved copies retain this profile. The catalogue snapshot test permits only the new Legacy acquisition flags in addition to its existing recipe exclusions.
+
 This pass covers every imported UT/ST entry in the sword family: **81 distinct weapon names, 83 non-Shiny definitions (including two retro duplicates), 16 Shiny definitions and eight internal enchantment objects**. Flails share this inventory family. All 99 usable weapon definitions receive explicit profiles; the eight internal objects become unobtainable in new gameplay and remain inspectable and usable in existing saves. No item IDs, sprites, footprints, tiered sword recipes or non-sword definitions change.
 
 ## Source and adaptation rules
