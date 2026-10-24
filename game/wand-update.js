@@ -87,7 +87,7 @@
 })();
 
 function wandPrimaryAmount(i,amount){const m=defs[i.type].mechanic;return amount*(1+(m.ownAttack||0)+((m.amulets||m.syndicate)?swordPartner(i):0))}
-function wandQueue(i,damage,pierce,time){const q=s.wandProjectiles||(s.wandProjectiles=[]);if(damage>0&&q.length<48)q.push({damage,pierce,time,wave:s.enemy.wave,source:i.id})}
+function wandQueue(i,damage,pierce,time){const q=s.wandProjectiles||(s.wandProjectiles=[]);if(damage>0&&q.length<48)q.push({damage,pierce,time,wave:s.enemy.wave,source:i.id,armorActivation:i.activations})}
 function wandDamage(i,total){const m=defs[i.type].mechanic,state=specialState(i),phases=state.wandPhases||(state.wandPhases=m.components.map(c=>1-c.rate)),parts=[];let weight=0;
  for(let n=0;n<m.components.length;n++){const c=m.components[n];phases[n]+=c.rate;if(phases[n]+1e-8<1)continue;phases[n]-=1;if(c.frontOnly&&i.y!==0)continue;parts.push(c);weight+=c.weight}
  state.lastVolleyShots=m.pattern?m.pattern[(i.activations-1)%m.pattern.length]:parts.reduce((n,c)=>n+c.count,0);if(m.pulseSizes)state.lastPulseSize=m.pulseSizes[(i.activations-1)%m.pulseSizes.length];
@@ -96,7 +96,7 @@ function wandDamage(i,total){const m=defs[i.type].mechanic,state=specialState(i)
  if(m.curse&&wandCurseActive())dealt+=swordHit(20,1);return dealt
 }
 function wandReady(key,lock){const locks=s.wandLocks||(s.wandLocks={});if(s.time<(locks[key]||0))return false;locks[key]=s.time+lock;return true}
-function wandField(i,kind,total,duration,steps,delay=0){const fields=s.wandFields||(s.wandFields=[]);s.wandFields=fields.filter(p=>p.kind!==kind);if(s.wandFields.length<8)s.wandFields.push({source:i.id,wave:s.enemy.wave,kind,total,duration,steps,elapsed:-delay,pulses:0})}
+function wandField(i,kind,total,duration,steps,delay=0){const fields=s.wandFields||(s.wandFields=[]);s.wandFields=fields.filter(p=>p.kind!==kind);if(s.wandFields.length<8)s.wandFields.push({source:i.id,armorActivation:i.activations,wave:s.enemy.wave,kind,total,duration,steps,elapsed:-delay,pulses:0})}
 function wandAfterActivation(i){const m=defs[i.type].mechanic,state=specialState(i);
  if(m.wandMana)gainMana(m.wandMana,i);
  if(m.discount)s.wandWisdomUntil=s.time+1;
@@ -124,8 +124,8 @@ function wandRechargeStep(i,dt){if(!defs[i.type].mechanic?.berserk||!(i.special?
 function wandCooldownFloor(i){return wandRecovery(i)?defs[i.type].mechanic.burstFloor:0}
 function resetWandMechanics(){s.wandProjectiles=[];s.wandFields=[];s.wandLocks={};s.wandCurseCharge=0;s.wandCurseUntil=0;s.wandWisdomUntil=0;s.wandDiscountCarry=0}
 function tickWandMechanics(dt){const valid=p=>p.wave===s.enemy.wave&&s.items.some(i=>i.id===(p.source??p.ownerId));
- for(const p of s.wandProjectiles||[]){p.time-=dt;if(p.time<=1e-8&&valid(p))swordHit(p.damage,p.pierce)}s.wandProjectiles=(s.wandProjectiles||[]).filter(p=>p.time>1e-8&&valid(p));
- for(const p of s.wandFields||[]){if(!valid(p))continue;p.elapsed=Math.min(p.duration,p.elapsed+dt);while(p.pulses<p.steps&&(p.pulses+1)*p.duration/p.steps<=p.elapsed+1e-8){const before=Math.floor(p.total*p.pulses/p.steps);p.pulses++;swordHit(Math.floor(p.total*p.pulses/p.steps)-before)}}s.wandFields=(s.wandFields||[]).filter(p=>valid(p)&&p.pulses<p.steps);
+ for(const p of s.wandProjectiles||[]){p.time-=dt;if(p.time<=1e-8&&valid(p))armorProjectileImpact(p)}s.wandProjectiles=(s.wandProjectiles||[]).filter(p=>p.time>1e-8&&valid(p));
+ for(const p of s.wandFields||[]){if(!valid(p))continue;p.elapsed=Math.min(p.duration,p.elapsed+dt);while(p.pulses<p.steps&&(p.pulses+1)*p.duration/p.steps<=p.elapsed+1e-8){const before=Math.floor(p.total*p.pulses/p.steps);p.pulses++;armorProjectileImpact({...p,damage:Math.floor(p.total*p.pulses/p.steps)-before,pierce:0})}}s.wandFields=(s.wandFields||[]).filter(p=>valid(p)&&p.pulses<p.steps);
  for(const p of s.summons){if(!p.wandSoul)continue;if(!valid(p)){p.duration=0;continue}p.elapsed+=dt;if(!p.impact&&p.elapsed+1e-8>=.4){p.impact=true;swordHit(p.wandSoul==='desperate'?13:4)}if(!p.exposed&&p.elapsed+1e-8>=(p.wandSoul==='desperate'?6:5)){p.exposed=true;s.enemy.vulnerable=Math.max(s.enemy.vulnerable,p.wandSoul==='desperate'?2:4)}if(p.elapsed+1e-8>=(p.wandSoul==='desperate'?10:8))p.duration=0}
  s.summons=s.summons.filter(p=>!p.wandSoul||p.duration>0)
 }

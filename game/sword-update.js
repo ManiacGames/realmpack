@@ -122,7 +122,7 @@ function swordDamage(i,total){
  else if(m.rapier){const thrust=i.activations%5===0?Math.round(damage*300/442.5):0;parts.push({amount:damage-thrust,pierce:0,returning:true});if(thrust)parts.push({amount:thrust,pierce:1})}
  else if(m.innerFraction){const chain=Math.round(damage*m.innerFraction);parts.push({amount:damage-chain,pierce:m.pierce||0,returning:m.returning});if(i.y===0)parts.push({amount:chain,pierce:m.pierce||m.innerPierce||0,returning:m.returning})}
  else parts.push({amount:damage,pierce:m.pierce||0,returning:m.returning});
- let dealt=0;for(const p of parts){let immediate=p.amount;if(p.returning){const back=Math.floor(p.amount/2);immediate-=back;const queue=s.swordReturns||(s.swordReturns=[]);if(back&&queue.length<32)queue.push({time:.35,damage:back,pierce:p.pierce,wave:s.enemy.wave,source:i.id})}dealt+=swordHit(immediate,p.pierce)}return dealt
+ let dealt=0;for(const p of parts){let immediate=p.amount;if(p.returning){const back=Math.floor(p.amount/2);immediate-=back;const queue=s.swordReturns||(s.swordReturns=[]);if(back&&queue.length<32)queue.push({time:.35,damage:back,pierce:p.pierce,wave:s.enemy.wave,source:i.id,armorActivation:i.activations})}dealt+=swordHit(immediate,p.pierce)}return dealt
 }
 function swordReady(i,key,lock){const ready=s.swordLocks||(s.swordLocks={}),name=swordBaseName(i)+':'+key;if(s.time<(ready[name]||0))return false;ready[name]=s.time+lock;return true}
 function swordAfterActivation(i){const m=defs[i.type].mechanic;
@@ -134,7 +134,7 @@ function swordAfterActivation(i){const m=defs[i.type].mechanic;
  if(m.damnation){if(s.hp>s.max*.99)s.swordConscienceUntil=s.time+3;if(s.hp<s.max*.66){s.realmArmoredUntil=Math.max(s.realmArmoredUntil||0,s.time+6);s.swordFuryUntil=s.time+6}}
 }
 function resetSwordMechanics(){s.swordReturns=[];s.swordLocks={};s.swordBeamReady=0;s.swordConscienceUntil=0;s.swordFuryUntil=0}
-function tickSwordMechanics(dt){const queue=s.swordReturns||[];for(const p of queue){p.time-=dt;if(p.time<=0&&p.wave===s.enemy.wave&&s.items.some(i=>i.id===p.source))swordHit(p.damage,p.pierce)}s.swordReturns=queue.filter(p=>p.time>0&&p.wave===s.enemy.wave)}
+function tickSwordMechanics(dt){const queue=s.swordReturns||[];for(const p of queue){p.time-=dt;if(p.time<=0&&p.wave===s.enemy.wave&&s.items.some(i=>i.id===p.source))armorProjectileImpact(p)}s.swordReturns=queue.filter(p=>p.time>0&&p.wave===s.enemy.wave)}
 function swordEquipmentPenalty(){const names=new Map();for(const i of s.items){const m=defs[i.type].mechanic;if(m?.healthPenalty)names.set(swordBaseName(i),Math.max(names.get(swordBaseName(i))||0,m.healthPenalty))}return Math.min(40,[...names.values()].reduce((n,v)=>n+v,0))}
 function swordIncomingMultiplier(){const names=new Map();for(const i of s.items){const n=defs[i.type].mechanic?.incomingPenalty;if(n)names.set(swordBaseName(i),n)}return 1+Math.min(.15,[...names.values()].reduce((n,v)=>n+v,0))}
 function swordHealingMultiplier(){return s.phase==='fight'&&s.time<(s.swordConscienceUntil||0)&&s.items.some(i=>defs[i.type].mechanic?.damnation)?.75:1}

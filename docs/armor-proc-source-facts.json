@@ -1,0 +1,266 @@
+{
+  "14208": {
+    "source": "https://realm.wiki/object?id=14208",
+    "averageDamage": 90.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "14209": {
+    "source": "https://realm.wiki/object?id=14209",
+    "averageDamage": 75.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "3841": {
+    "source": "https://realm.wiki/object?id=3841",
+    "averageDamage": 350.0,
+    "pierce": false,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "14467": {
+    "source": "https://realm.wiki/object?id=14467",
+    "averageDamage": 92.5,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "14468": {
+    "source": "https://realm.wiki/object?id=14468",
+    "averageDamage": 75.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "14469": {
+    "source": "https://realm.wiki/object?id=14469",
+    "averageDamage": 70.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "3844": {
+    "source": "https://realm.wiki/object?id=3844",
+    "averageDamage": 350.0,
+    "pierce": false,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "3845": {
+    "source": "https://realm.wiki/object?id=3845",
+    "averageDamage": 350.0,
+    "pierce": false,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "3846": {
+    "source": "https://realm.wiki/object?id=3846",
+    "averageDamage": 350.0,
+    "pierce": false,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "3842": {
+    "source": "https://realm.wiki/object?id=3842",
+    "averageDamage": 350.0,
+    "pierce": false,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "3843": {
+    "source": "https://realm.wiki/object?id=3843",
+    "averageDamage": 350.0,
+    "pierce": false,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "32440": {
+    "source": "https://realm.wiki/object?id=32440",
+    "averageDamage": 237.5,
+    "pierce": false,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "37691": {
+    "source": "https://realm.wiki/object?id=37691",
+    "averageDamage": 42.5,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "37693": {
+    "source": "https://realm.wiki/object?id=37693",
+    "averageDamage": 42.5,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "42306": {
+    "source": "https://realm.wiki/object?id=42306",
+    "averageDamage": 800.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "42307": {
+    "source": "https://realm.wiki/object?id=42307",
+    "averageDamage": 400.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "41670": {
+    "source": "https://realm.wiki/object?id=41670",
+    "averageDamage": 300.0,
+    "pierce": false,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "16982": {
+    "source": "https://realm.wiki/object?id=16982",
+    "averageDamage": 800.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "16983": {
+    "source": "https://realm.wiki/object?id=16983",
+    "averageDamage": 400.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "14430": {
+    "source": "https://realm.wiki/object?id=14430",
+    "averageDamage": 115.0,
+    "pierce": false,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "17383": {
+    "source": "https://realm.wiki/object?id=17383",
+    "averageDamage": 300.0,
+    "pierce": false,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "14442": {
+    "source": "https://realm.wiki/object?id=14442",
+    "averageDamage": 77.5,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "14443": {
+    "source": "https://realm.wiki/object?id=14443",
+    "averageDamage": 87.5,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "14444": {
+    "source": "https://realm.wiki/object?id=14444",
+    "averageDamage": 125.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "14445": {
+    "source": "https://realm.wiki/object?id=14445",
+    "averageDamage": 105.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "14447": {
+    "source": "https://realm.wiki/object?id=14447",
+    "averageDamage": 75.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "14454": {
+    "source": "https://realm.wiki/object?id=14454",
+    "averageDamage": 97.5,
+    "pierce": false,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "14455": {
+    "source": "https://realm.wiki/object?id=14455",
+    "averageDamage": 75.5,
+    "pierce": false,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "14459": {
+    "source": "https://realm.wiki/object?id=14459",
+    "averageDamage": 75.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "14460": {
+    "source": "https://realm.wiki/object?id=14460",
+    "averageDamage": 100.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "14461": {
+    "source": "https://realm.wiki/object?id=14461",
+    "averageDamage": 107.5,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "14462": {
+    "source": "https://realm.wiki/object?id=14462",
+    "averageDamage": 75.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  },
+  "14463": {
+    "source": "https://realm.wiki/object?id=14463",
+    "averageDamage": 100.0,
+    "pierce": true,
+    "bleed": false,
+    "chill": false,
+    "expose": false
+  }
+}

@@ -1,6 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict'),crypto=require('node:crypto'),{ctx,vm}=require('./load-game.cjs');
-assert.equal(crypto.createHash('sha256').update(vm.runInContext(`JSON.stringify(DATA.items.filter(d=>!(d.group==='ring'&&['UT','ST'].includes(d.tier))))`,ctx)).digest('hex'),'eb81551b6e1447c1cac86f6ffc28d57ca47b3ed0102fa576289d2cf1802996eb','Definitions outside special UT/ST rings changed');
+assert.equal(crypto.createHash('sha256').update(vm.runInContext(`JSON.stringify(DATA.items.filter(d=>!(d.group==='armor'&&['UT','ST'].includes(d.tier))))`,ctx)).digest('hex'),'f1421f2e3694ef9ad7df81ea13dc69c2400a8b7af84187569fdc3e8e012771ec','Tiered armor or definitions outside UT/ST armor changed');
 console.log(vm.runInContext(String.raw`(()=>{
  const check=(v,m)=>{if(!v)throw Error(m)},type=n=>DATA.items.find(d=>d.name===n&&!d.isShiny).id;
  const basePassive=passive;passive=()=>{};enemyProfiles=()=>[];

@@ -1,0 +1,225 @@
+{
+  "inspected": "2026-10-25",
+  "items": [
+    {
+      "id": "wiki_2680",
+      "name": "Wolfskin Armor",
+      "source": "https://realm.wiki/item?id=2680",
+      "shiny": false,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEF",
+          "Amount": "5"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": []
+    },
+    {
+      "id": "wiki_2574",
+      "name": "Studded Leather Armor",
+      "source": "https://realm.wiki/item?id=2574",
+      "shiny": false,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEF",
+          "Amount": "13"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "DEX",
+          "Amount": "3"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": []
+    },
+    {
+      "id": "wiki_2499",
+      "name": "Leviathan Armor",
+      "source": "https://realm.wiki/item?id=2499",
+      "shiny": false,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEF",
+          "Amount": "22"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "DEX",
+          "Amount": "7"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": []
+    },
+    {
+      "id": "wiki_2652",
+      "name": "Robe of the Neophyte",
+      "source": "https://realm.wiki/item?id=2652",
+      "shiny": false,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEF",
+          "Amount": "2"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": []
+    },
+    {
+      "id": "wiki_2780",
+      "name": "Robe of the Illusionist",
+      "source": "https://realm.wiki/item?id=2780",
+      "shiny": false,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "ATT",
+          "Amount": "1"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "DEF",
+          "Amount": "8"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "WIS",
+          "Amount": "4"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "35"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": []
+    },
+    {
+      "id": "wiki_2512",
+      "name": "Robe of the Ancient Intellect",
+      "source": "https://realm.wiki/item?id=2512",
+      "shiny": false,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "75"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "ATT",
+          "Amount": "6"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "DEF",
+          "Amount": "17"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "WIS",
+          "Amount": "8"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": []
+    },
+    {
+      "id": "wiki_2683",
+      "name": "Iron Mail",
+      "source": "https://realm.wiki/item?id=2683",
+      "shiny": false,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEF",
+          "Amount": "5"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": []
+    },
+    {
+      "id": "wiki_2578",
+      "name": "Mithril Armor",
+      "source": "https://realm.wiki/item?id=2578",
+      "shiny": false,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEF",
+          "Amount": "15"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": []
+    },
+    {
+      "id": "wiki_2501",
+      "name": "Annihilation Armor",
+      "source": "https://realm.wiki/item?id=2501",
+      "shiny": false,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEF",
+          "Amount": "28"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": []
+    }
+  ]
+}
