@@ -1,0 +1,3068 @@
+{
+  "version": "0.39.0",
+  "baselineCommit": "18944049913bc0f72a03adc36a99371d18f62caa",
+  "fightsPerVersion": 5208,
+  "fixture": "208 normal/historical UT/ST armors plus nine T0/T7/T14 references. Three native classes per kind: heavy Warrior/Knight/Kensei, leather Rogue/Huntress/Druid, robes Wizard/Sorcerer/Summoner. Four bosses at dungeon indices0/9/19/34; depth20, Normal; native tiered weapon/ability at60%/90% family max, extra native weapon, T3/T6 Magic ring,3Health Potions, +50baseHP, full equippedHP,+8%relicrecharge,seed123456,0.05s ticks. Armor packed first. No enchants, infusions, special partners or optimized layouts; meters start empty. Comparative fixtures, not player win probabilities.",
+  "before": [
+    {
+      "id": "wiki_19258",
+      "name": "Acidic Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_8790",
+      "name": "Alchemist's Disheveled Garbs",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_2297",
+      "name": "Apiary Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_590",
+      "name": "Armor of Nil",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_17634",
+      "name": "Aspirant's Hide",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_3824",
+      "name": "Bachelor's Tuxedo",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_4308",
+      "name": "Beehemoth Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_4309",
+      "name": "Beehemoth Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_4310",
+      "name": "Beehemoth Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_17565",
+      "name": "Beehemoth Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_42502",
+      "name": "Blizzard Jacket",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_23919",
+      "name": "Cackling Straitjacket",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_28848",
+      "name": "Centaur's Shielding",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_18355",
+      "name": "Chefs Atire",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_34337",
+      "name": "Chocolate Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_3096",
+      "name": "Coral Silk Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_25604",
+      "name": "Cupid's Garments",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_52041",
+      "name": "Daopao",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_26731",
+      "name": "Divination Cloak",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_26760",
+      "name": "Divination Cloak",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_37691",
+      "name": "Eggshell Carapace",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_7428",
+      "name": "Eggshell Carapace",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_20604",
+      "name": "Ethereal Happi",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_12074",
+      "name": "Fitted Construction Vest",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_1157",
+      "name": "Fitted Protective Matrix",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_5850",
+      "name": "Frost Drake Hide Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_602",
+      "name": "Golem Garments",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_22508",
+      "name": "Gravetender's Vest",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_15717",
+      "name": "Greaterhosen",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_17885",
+      "name": "Hallowed Hide",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 19.56
+    },
+    {
+      "id": "wiki_3825",
+      "name": "Haori of the Wind",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_29768",
+      "name": "Harlequin Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_17569",
+      "name": "Helm of minstack",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_7759",
+      "name": "Hirejou Tenne",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_6214",
+      "name": "Hollyhock Hide",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_57127",
+      "name": "Jacket Of Blossoms",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_30050",
+      "name": "Leaf Dragon Hide Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_53192",
+      "name": "Leaf Draon Hide Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_8609",
+      "name": "Legacy Mantle of Skuld",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_41809",
+      "name": "Legion Elite Leather Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_28464",
+      "name": "Life Jacket",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_14426",
+      "name": "Light Syndicate Attire",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_19265",
+      "name": "Luminous Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_1402",
+      "name": "Luxurious Leather",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_10066",
+      "name": "Mantle of Skuld",
+      "fights": 24,
+      "wins": 12,
+      "seconds": 19.41
+    },
+    {
+      "id": "wiki_29898",
+      "name": "Mechpilot's Jerkin",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_14791",
+      "name": "Metal-plated Corset",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_48828",
+      "name": "Mossy Guard",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_56464",
+      "name": "Neo Fitted Protective Matrix",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_21191",
+      "name": "Ornate Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_41602",
+      "name": "Painted Eggshell Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_37468",
+      "name": "Pirate Queen's Brigandine",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_63886",
+      "name": "Primal Padding",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_3034",
+      "name": "Rags of the Host",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_5360",
+      "name": "Reaper's Shroud",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_63881",
+      "name": "Retrowinds Leather Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_17139",
+      "name": "Seraphim's Guard",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_14498",
+      "name": "Shadowbeast Hide",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_2622",
+      "name": "Snakeskin Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_3112",
+      "name": "Spectral Cloth Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_52022",
+      "name": "Splatter-proof Apron",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_48832",
+      "name": "Sprite's Dream",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_1771",
+      "name": "Squadron Sheathing",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_3788",
+      "name": "Temperate Curiass",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_50815",
+      "name": "Tinkerers Apron",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_25740",
+      "name": "Torso Tunic",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_28832",
+      "name": "Turncoat Cape",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_38590",
+      "name": "Venerable Coral Silk Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_14471",
+      "name": "Vest of Abandoned Shadows",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_32439",
+      "name": "Wedding Dress",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_25733",
+      "name": "Withered Poncho",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_7750",
+      "name": "Wraith's Brigandine",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_43383",
+      "name": "1-Bit Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_14228",
+      "name": "A.R.M.O.R.",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_8206",
+      "name": "Anointed Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_52024",
+      "name": "Apron of Conjuring",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_17633",
+      "name": "Aspirant's Robes",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_22524",
+      "name": "Astronomer's Gown",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_50819",
+      "name": "Blast Proof Robes",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_7331",
+      "name": "Boudoir Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_37692",
+      "name": "Carrotroot Vestments",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_3103",
+      "name": "Chasuble of Holy Light",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_41765",
+      "name": "Chocolate Glazed Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_42304",
+      "name": "Curse Binding Robes",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_54799",
+      "name": "Darkness Overcoat",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_1222",
+      "name": "Devilish Robes",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_28843",
+      "name": "Diplomatic Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_26735",
+      "name": "Doctor's Overcoat",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_26762",
+      "name": "Doctor's Overcoat",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_46071",
+      "name": "Esben's Shaman Attire",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_32486",
+      "name": "Executioner's Garb",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_7356",
+      "name": "Floral Corset",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_20706",
+      "name": "Flowering Kimono",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_5851",
+      "name": "Frost Elementalist Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_14786",
+      "name": "Garb of the Ordained",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_3006",
+      "name": "Garment of the Beast",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_3823",
+      "name": "Holy Order's Habit",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_25761",
+      "name": "Immortal Mantle",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_3790",
+      "name": "Insightful Mourning Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_1772",
+      "name": "Judge's Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_14781",
+      "name": "Lacerated Gown",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_57126",
+      "name": "Leaf Woven Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_42015",
+      "name": "Leafweave Raiment",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_8616",
+      "name": "Legacy Robe of Twilight",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_41808",
+      "name": "Legion Elite Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_12073",
+      "name": "Magic Construction Vest",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_1156",
+      "name": "Magic Protective Matrix",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_19362",
+      "name": "Magician's Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_14470",
+      "name": "Mantle of the Monarchy",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_19269",
+      "name": "Molten Mantle",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_14427",
+      "name": "Mystic Syndicate Attire",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_56465",
+      "name": "Neo Magic Protective Matrix",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_20304",
+      "name": "Oceanic Apparel",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_1910",
+      "name": "Phosphorescent Rags",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_16979",
+      "name": "Polygonal Garbs",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_8786",
+      "name": "Ragged Robes",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_3822",
+      "name": "Red Riding Dress",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_63880",
+      "name": "Retrowinds Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_594",
+      "name": "Ritual Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_47106",
+      "name": "Ritualistic Pa'u",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_14499",
+      "name": "Robe of Dark Summoning",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_25753",
+      "name": "Robe of the Enchantress",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_3122",
+      "name": "Robe of the Mad Scientist",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_8863",
+      "name": "Robe of the Summer Solstice",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_3092",
+      "name": "Robe of the Tlatoani",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_14220",
+      "name": "Rocky Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_9052",
+      "name": "Shendyt of Geb",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.41
+    },
+    {
+      "id": "wiki_47999",
+      "name": "Shifting Shroud",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_9056",
+      "name": "Soulless Robe",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.41
+    },
+    {
+      "id": "wiki_28465",
+      "name": "Summer Dress",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_65289",
+      "name": "Thunderstorm Tunic",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_14074",
+      "name": "Tlatoani's Shroud",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_2526",
+      "name": "Toga Picta",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.7
+    },
+    {
+      "id": "wiki_65058",
+      "name": "Traditional Blouse",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_8693",
+      "name": "Twilight Shroud",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_38589",
+      "name": "Venerable Robe of the Mad Scientist",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_28837",
+      "name": "Vesture of Duality",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 12.41
+    },
+    {
+      "id": "wiki_37466",
+      "name": "Wanderer's Cape",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_30051",
+      "name": "Water Dragon Silk Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_53193",
+      "name": "Water Dragon Silk Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_14355",
+      "name": "Wind Dancer Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_19963",
+      "name": "Wings of Sanctity",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_52034",
+      "name": "Wings of the Fallen",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_2110",
+      "name": "Woodland Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_24414",
+      "name": "Wretched Rags",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_1770",
+      "name": "Aegis Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_9015",
+      "name": "Almandine Armor of Anger",
+      "fights": 24,
+      "wins": 14,
+      "seconds": 19.32
+    },
+    {
+      "id": "wiki_14500",
+      "name": "Armor of Heavenly Light",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_17632",
+      "name": "Aspirant's Plate",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_48143",
+      "name": "Barnacle Shell",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_14868",
+      "name": "Barrier Reef",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_14876",
+      "name": "Berserker's Breastplate",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_3844",
+      "name": "Big Bad Fursuit",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_3845",
+      "name": "Big Bad Fursuit",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_3846",
+      "name": "Big Bad Fursuit",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_3827",
+      "name": "Big Bad Fursuit",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_23625",
+      "name": "Boundless Vessel",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_597",
+      "name": "Breastplate of New Life",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.98
+    },
+    {
+      "id": "wiki_3169",
+      "name": "Candy-Coated Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_17850",
+      "name": "Cask Corslet",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_22481",
+      "name": "Chainmail Body Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_37467",
+      "name": "Cuirass of the Black Blade",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_65284",
+      "name": "Cyclone Chestplate",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_5036",
+      "name": "Eggre Battle Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_1191",
+      "name": "Fairy Plate",
+      "fights": 24,
+      "wins": 14,
+      "seconds": 19.32
+    },
+    {
+      "id": "wiki_30052",
+      "name": "Fire Dragon Battle Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_53194",
+      "name": "Fire Dragon Battle Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_14381",
+      "name": "Flame Guard",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_57128",
+      "name": "Floral Guard Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_5853",
+      "name": "Frost Citadel Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_37693",
+      "name": "Fudgeclad Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_1205",
+      "name": "Fungal Breastplate",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 20.2
+    },
+    {
+      "id": "wiki_42318",
+      "name": "Fur Coat",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_28855",
+      "name": "Gladiator Guard",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_3789",
+      "name": "Glorious Banded Plate",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_41669",
+      "name": "Hardened Carrot Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_12075",
+      "name": "Heavy Construction Vest",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_1155",
+      "name": "Heavy Protective Matrix",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_14428",
+      "name": "Heavy Syndicate Attire",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_26566",
+      "name": "Hull of the Tundra",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_8256",
+      "name": "Kamishimo",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_9060",
+      "name": "Legacy Fairy Plate",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_41810",
+      "name": "Legion Elite Plate Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_34340",
+      "name": "Lovebite Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_23518",
+      "name": "Mercy's Bane",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_8667",
+      "name": "Naval Uniform",
+      "fights": 24,
+      "wins": 13,
+      "seconds": 19.05
+    },
+    {
+      "id": "wiki_56466",
+      "name": "Neo Heavy Protective Matrix",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_32444",
+      "name": "Overalls of Endurance",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_1978",
+      "name": "pD Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_3841",
+      "name": "Platinum Segmentata",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_3842",
+      "name": "Platinum Segmentata",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_3843",
+      "name": "Platinum Segmentata",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_3826",
+      "name": "Platinum Segmentata",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_14775",
+      "name": "Ragetorn Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_52023",
+      "name": "Reinforced Apron",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_21223",
+      "name": "Reinforced Root Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_3182",
+      "name": "Resurrected Warrior's Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_26575",
+      "name": "Retainer's Battlesuit",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_63882",
+      "name": "Retrowinds Heavy Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_14472",
+      "name": "Royal Guard's Cuirass",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_20468",
+      "name": "Sage's Wakibiki",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_48120",
+      "name": "Stoneborn Husk",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_28466",
+      "name": "Swim Tube",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_25747",
+      "name": "Tormentor's Chainmail",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_38588",
+      "name": "Venerable Resurrected Warrior's Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_17389",
+      "name": "Vortex Plating",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_26026",
+      "name": "Warped Mantle",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_32697",
+      "name": "Zaarvox's Heart",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.09
+    },
+    {
+      "id": "wiki_2680",
+      "name": "Wolfskin Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.48
+    },
+    {
+      "id": "wiki_2574",
+      "name": "Studded Leather Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.84
+    },
+    {
+      "id": "wiki_2499",
+      "name": "Leviathan Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_2652",
+      "name": "Robe of the Neophyte",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.35
+    },
+    {
+      "id": "wiki_2780",
+      "name": "Robe of the Illusionist",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.49
+    },
+    {
+      "id": "wiki_2512",
+      "name": "Robe of the Ancient Intellect",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_2683",
+      "name": "Iron Mail",
+      "fights": 24,
+      "wins": 13,
+      "seconds": 18.89
+    },
+    {
+      "id": "wiki_2578",
+      "name": "Mithril Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.4
+    },
+    {
+      "id": "wiki_2501",
+      "name": "Annihilation Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.04
+    }
+  ],
+  "after": [
+    {
+      "id": "wiki_19258",
+      "name": "Acidic Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 20.32
+    },
+    {
+      "id": "wiki_8790",
+      "name": "Alchemist's Disheveled Garbs",
+      "fights": 24,
+      "wins": 14,
+      "seconds": 19.22
+    },
+    {
+      "id": "wiki_2297",
+      "name": "Apiary Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.68
+    },
+    {
+      "id": "wiki_590",
+      "name": "Armor of Nil",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.97
+    },
+    {
+      "id": "wiki_17634",
+      "name": "Aspirant's Hide",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.72
+    },
+    {
+      "id": "wiki_3824",
+      "name": "Bachelor's Tuxedo",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.1
+    },
+    {
+      "id": "wiki_4308",
+      "name": "Beehemoth Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.58
+    },
+    {
+      "id": "wiki_4309",
+      "name": "Beehemoth Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 20
+    },
+    {
+      "id": "wiki_4310",
+      "name": "Beehemoth Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.7
+    },
+    {
+      "id": "wiki_17565",
+      "name": "Beehemoth Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.85
+    },
+    {
+      "id": "wiki_42502",
+      "name": "Blizzard Jacket",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.7
+    },
+    {
+      "id": "wiki_23919",
+      "name": "Cackling Straitjacket",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.44
+    },
+    {
+      "id": "wiki_28848",
+      "name": "Centaur's Shielding",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 18.88
+    },
+    {
+      "id": "wiki_18355",
+      "name": "Chefs Atire",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.84
+    },
+    {
+      "id": "wiki_34337",
+      "name": "Chocolate Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.38
+    },
+    {
+      "id": "wiki_3096",
+      "name": "Coral Silk Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.57
+    },
+    {
+      "id": "wiki_25604",
+      "name": "Cupid's Garments",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.57
+    },
+    {
+      "id": "wiki_52041",
+      "name": "Daopao",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 18.64
+    },
+    {
+      "id": "wiki_26731",
+      "name": "Divination Cloak",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.67
+    },
+    {
+      "id": "wiki_26760",
+      "name": "Divination Cloak",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.67
+    },
+    {
+      "id": "wiki_37691",
+      "name": "Eggshell Carapace",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.49
+    },
+    {
+      "id": "wiki_7428",
+      "name": "Eggshell Carapace",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.49
+    },
+    {
+      "id": "wiki_20604",
+      "name": "Ethereal Happi",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 17.99
+    },
+    {
+      "id": "wiki_12074",
+      "name": "Fitted Construction Vest",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.75
+    },
+    {
+      "id": "wiki_1157",
+      "name": "Fitted Protective Matrix",
+      "fights": 24,
+      "wins": 14,
+      "seconds": 19.88
+    },
+    {
+      "id": "wiki_5850",
+      "name": "Frost Drake Hide Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.77
+    },
+    {
+      "id": "wiki_602",
+      "name": "Golem Garments",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.82
+    },
+    {
+      "id": "wiki_22508",
+      "name": "Gravetender's Vest",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.35
+    },
+    {
+      "id": "wiki_15717",
+      "name": "Greaterhosen",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.38
+    },
+    {
+      "id": "wiki_17885",
+      "name": "Hallowed Hide",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.61
+    },
+    {
+      "id": "wiki_3825",
+      "name": "Haori of the Wind",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 18.94
+    },
+    {
+      "id": "wiki_29768",
+      "name": "Harlequin Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.39
+    },
+    {
+      "id": "wiki_17569",
+      "name": "Helm of minstack",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 18.77
+    },
+    {
+      "id": "wiki_7759",
+      "name": "Hirejou Tenne",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 18.64
+    },
+    {
+      "id": "wiki_6214",
+      "name": "Hollyhock Hide",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.6
+    },
+    {
+      "id": "wiki_57127",
+      "name": "Jacket Of Blossoms",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.89
+    },
+    {
+      "id": "wiki_30050",
+      "name": "Leaf Dragon Hide Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 20
+    },
+    {
+      "id": "wiki_53192",
+      "name": "Leaf Draon Hide Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.99
+    },
+    {
+      "id": "wiki_8609",
+      "name": "Legacy Mantle of Skuld",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.77
+    },
+    {
+      "id": "wiki_41809",
+      "name": "Legion Elite Leather Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.89
+    },
+    {
+      "id": "wiki_28464",
+      "name": "Life Jacket",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.89
+    },
+    {
+      "id": "wiki_14426",
+      "name": "Light Syndicate Attire",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.63
+    },
+    {
+      "id": "wiki_19265",
+      "name": "Luminous Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.07
+    },
+    {
+      "id": "wiki_1402",
+      "name": "Luxurious Leather",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.37
+    },
+    {
+      "id": "wiki_10066",
+      "name": "Mantle of Skuld",
+      "fights": 24,
+      "wins": 14,
+      "seconds": 19.51
+    },
+    {
+      "id": "wiki_29898",
+      "name": "Mechpilot's Jerkin",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.78
+    },
+    {
+      "id": "wiki_14791",
+      "name": "Metal-plated Corset",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.6
+    },
+    {
+      "id": "wiki_48828",
+      "name": "Mossy Guard",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.64
+    },
+    {
+      "id": "wiki_56464",
+      "name": "Neo Fitted Protective Matrix",
+      "fights": 24,
+      "wins": 14,
+      "seconds": 19.94
+    },
+    {
+      "id": "wiki_21191",
+      "name": "Ornate Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.29
+    },
+    {
+      "id": "wiki_41602",
+      "name": "Painted Eggshell Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.29
+    },
+    {
+      "id": "wiki_37468",
+      "name": "Pirate Queen's Brigandine",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.77
+    },
+    {
+      "id": "wiki_63886",
+      "name": "Primal Padding",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.78
+    },
+    {
+      "id": "wiki_3034",
+      "name": "Rags of the Host",
+      "fights": 24,
+      "wins": 14,
+      "seconds": 19.29
+    },
+    {
+      "id": "wiki_5360",
+      "name": "Reaper's Shroud",
+      "fights": 24,
+      "wins": 14,
+      "seconds": 19.31
+    },
+    {
+      "id": "wiki_63881",
+      "name": "Retrowinds Leather Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.89
+    },
+    {
+      "id": "wiki_17139",
+      "name": "Seraphim's Guard",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 20.12
+    },
+    {
+      "id": "wiki_14498",
+      "name": "Shadowbeast Hide",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.72
+    },
+    {
+      "id": "wiki_2622",
+      "name": "Snakeskin Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.57
+    },
+    {
+      "id": "wiki_3112",
+      "name": "Spectral Cloth Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.11
+    },
+    {
+      "id": "wiki_52022",
+      "name": "Splatter-proof Apron",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.66
+    },
+    {
+      "id": "wiki_48832",
+      "name": "Sprite's Dream",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.29
+    },
+    {
+      "id": "wiki_1771",
+      "name": "Squadron Sheathing",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.44
+    },
+    {
+      "id": "wiki_3788",
+      "name": "Temperate Curiass",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.67
+    },
+    {
+      "id": "wiki_50815",
+      "name": "Tinkerers Apron",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.7
+    },
+    {
+      "id": "wiki_25740",
+      "name": "Torso Tunic",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 20.21
+    },
+    {
+      "id": "wiki_28832",
+      "name": "Turncoat Cape",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 21.46
+    },
+    {
+      "id": "wiki_38590",
+      "name": "Venerable Coral Silk Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.55
+    },
+    {
+      "id": "wiki_14471",
+      "name": "Vest of Abandoned Shadows",
+      "fights": 24,
+      "wins": 18,
+      "seconds": 21.3
+    },
+    {
+      "id": "wiki_32439",
+      "name": "Wedding Dress",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.08
+    },
+    {
+      "id": "wiki_25733",
+      "name": "Withered Poncho",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.82
+    },
+    {
+      "id": "wiki_7750",
+      "name": "Wraith's Brigandine",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 20.21
+    },
+    {
+      "id": "wiki_43383",
+      "name": "1-Bit Robe",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.37
+    },
+    {
+      "id": "wiki_14228",
+      "name": "A.R.M.O.R.",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.81
+    },
+    {
+      "id": "wiki_8206",
+      "name": "Anointed Robe",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.24
+    },
+    {
+      "id": "wiki_52024",
+      "name": "Apron of Conjuring",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.56
+    },
+    {
+      "id": "wiki_17633",
+      "name": "Aspirant's Robes",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.53
+    },
+    {
+      "id": "wiki_22524",
+      "name": "Astronomer's Gown",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.37
+    },
+    {
+      "id": "wiki_50819",
+      "name": "Blast Proof Robes",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.59
+    },
+    {
+      "id": "wiki_7331",
+      "name": "Boudoir Robe",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.17
+    },
+    {
+      "id": "wiki_37692",
+      "name": "Carrotroot Vestments",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.78
+    },
+    {
+      "id": "wiki_3103",
+      "name": "Chasuble of Holy Light",
+      "fights": 24,
+      "wins": 8,
+      "seconds": 15.19
+    },
+    {
+      "id": "wiki_41765",
+      "name": "Chocolate Glazed Robe",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 15.08
+    },
+    {
+      "id": "wiki_42304",
+      "name": "Curse Binding Robes",
+      "fights": 24,
+      "wins": 8,
+      "seconds": 13.64
+    },
+    {
+      "id": "wiki_54799",
+      "name": "Darkness Overcoat",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.7
+    },
+    {
+      "id": "wiki_1222",
+      "name": "Devilish Robes",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.68
+    },
+    {
+      "id": "wiki_28843",
+      "name": "Diplomatic Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.38
+    },
+    {
+      "id": "wiki_26735",
+      "name": "Doctor's Overcoat",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.45
+    },
+    {
+      "id": "wiki_26762",
+      "name": "Doctor's Overcoat",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.7
+    },
+    {
+      "id": "wiki_46071",
+      "name": "Esben's Shaman Attire",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 15.3
+    },
+    {
+      "id": "wiki_32486",
+      "name": "Executioner's Garb",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.99
+    },
+    {
+      "id": "wiki_7356",
+      "name": "Floral Corset",
+      "fights": 24,
+      "wins": 8,
+      "seconds": 15.37
+    },
+    {
+      "id": "wiki_20706",
+      "name": "Flowering Kimono",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 15.12
+    },
+    {
+      "id": "wiki_5851",
+      "name": "Frost Elementalist Robe",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.6
+    },
+    {
+      "id": "wiki_14786",
+      "name": "Garb of the Ordained",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.24
+    },
+    {
+      "id": "wiki_3006",
+      "name": "Garment of the Beast",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.46
+    },
+    {
+      "id": "wiki_3823",
+      "name": "Holy Order's Habit",
+      "fights": 24,
+      "wins": 8,
+      "seconds": 15.46
+    },
+    {
+      "id": "wiki_25761",
+      "name": "Immortal Mantle",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.55
+    },
+    {
+      "id": "wiki_3790",
+      "name": "Insightful Mourning Robe",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.6
+    },
+    {
+      "id": "wiki_1772",
+      "name": "Judge's Robe",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.45
+    },
+    {
+      "id": "wiki_14781",
+      "name": "Lacerated Gown",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.81
+    },
+    {
+      "id": "wiki_57126",
+      "name": "Leaf Woven Robe",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.56
+    },
+    {
+      "id": "wiki_42015",
+      "name": "Leafweave Raiment",
+      "fights": 24,
+      "wins": 8,
+      "seconds": 15.57
+    },
+    {
+      "id": "wiki_8616",
+      "name": "Legacy Robe of Twilight",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.41
+    },
+    {
+      "id": "wiki_41808",
+      "name": "Legion Elite Robe",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.56
+    },
+    {
+      "id": "wiki_12073",
+      "name": "Magic Construction Vest",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 15
+    },
+    {
+      "id": "wiki_1156",
+      "name": "Magic Protective Matrix",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.67
+    },
+    {
+      "id": "wiki_19362",
+      "name": "Magician's Robe",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.68
+    },
+    {
+      "id": "wiki_14470",
+      "name": "Mantle of the Monarchy",
+      "fights": 24,
+      "wins": 10,
+      "seconds": 16.54
+    },
+    {
+      "id": "wiki_19269",
+      "name": "Molten Mantle",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.35
+    },
+    {
+      "id": "wiki_14427",
+      "name": "Mystic Syndicate Attire",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.41
+    },
+    {
+      "id": "wiki_56465",
+      "name": "Neo Magic Protective Matrix",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.63
+    },
+    {
+      "id": "wiki_20304",
+      "name": "Oceanic Apparel",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.71
+    },
+    {
+      "id": "wiki_1910",
+      "name": "Phosphorescent Rags",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.71
+    },
+    {
+      "id": "wiki_16979",
+      "name": "Polygonal Garbs",
+      "fights": 24,
+      "wins": 8,
+      "seconds": 13.64
+    },
+    {
+      "id": "wiki_8786",
+      "name": "Ragged Robes",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.17
+    },
+    {
+      "id": "wiki_3822",
+      "name": "Red Riding Dress",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.63
+    },
+    {
+      "id": "wiki_63880",
+      "name": "Retrowinds Robe",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.56
+    },
+    {
+      "id": "wiki_594",
+      "name": "Ritual Robe",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.56
+    },
+    {
+      "id": "wiki_47106",
+      "name": "Ritualistic Pa'u",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.74
+    },
+    {
+      "id": "wiki_14499",
+      "name": "Robe of Dark Summoning",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.65
+    },
+    {
+      "id": "wiki_25753",
+      "name": "Robe of the Enchantress",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.7
+    },
+    {
+      "id": "wiki_3122",
+      "name": "Robe of the Mad Scientist",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.85
+    },
+    {
+      "id": "wiki_8863",
+      "name": "Robe of the Summer Solstice",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.6
+    },
+    {
+      "id": "wiki_3092",
+      "name": "Robe of the Tlatoani",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 13.98
+    },
+    {
+      "id": "wiki_14220",
+      "name": "Rocky Robe",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 15.08
+    },
+    {
+      "id": "wiki_9052",
+      "name": "Shendyt of Geb",
+      "fights": 24,
+      "wins": 8,
+      "seconds": 15.49
+    },
+    {
+      "id": "wiki_47999",
+      "name": "Shifting Shroud",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.45
+    },
+    {
+      "id": "wiki_9056",
+      "name": "Soulless Robe",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.7
+    },
+    {
+      "id": "wiki_28465",
+      "name": "Summer Dress",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.56
+    },
+    {
+      "id": "wiki_65289",
+      "name": "Thunderstorm Tunic",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.35
+    },
+    {
+      "id": "wiki_14074",
+      "name": "Tlatoani's Shroud",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 13.98
+    },
+    {
+      "id": "wiki_2526",
+      "name": "Toga Picta",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.99
+    },
+    {
+      "id": "wiki_65058",
+      "name": "Traditional Blouse",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.85
+    },
+    {
+      "id": "wiki_8693",
+      "name": "Twilight Shroud",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.55
+    },
+    {
+      "id": "wiki_38589",
+      "name": "Venerable Robe of the Mad Scientist",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 15.08
+    },
+    {
+      "id": "wiki_28837",
+      "name": "Vesture of Duality",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 13.68
+    },
+    {
+      "id": "wiki_37466",
+      "name": "Wanderer's Cape",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.6
+    },
+    {
+      "id": "wiki_30051",
+      "name": "Water Dragon Silk Robe",
+      "fights": 24,
+      "wins": 8,
+      "seconds": 15.37
+    },
+    {
+      "id": "wiki_53193",
+      "name": "Water Dragon Silk Robe",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.2
+    },
+    {
+      "id": "wiki_14355",
+      "name": "Wind Dancer Robe",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.54
+    },
+    {
+      "id": "wiki_19963",
+      "name": "Wings of Sanctity",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.85
+    },
+    {
+      "id": "wiki_52034",
+      "name": "Wings of the Fallen",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.85
+    },
+    {
+      "id": "wiki_2110",
+      "name": "Woodland Robe",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.33
+    },
+    {
+      "id": "wiki_24414",
+      "name": "Wretched Rags",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.42
+    },
+    {
+      "id": "wiki_1770",
+      "name": "Aegis Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 18.9
+    },
+    {
+      "id": "wiki_9015",
+      "name": "Almandine Armor of Anger",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 19.85
+    },
+    {
+      "id": "wiki_14500",
+      "name": "Armor of Heavenly Light",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 19.85
+    },
+    {
+      "id": "wiki_17632",
+      "name": "Aspirant's Plate",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.67
+    },
+    {
+      "id": "wiki_48143",
+      "name": "Barnacle Shell",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 19.06
+    },
+    {
+      "id": "wiki_14868",
+      "name": "Barrier Reef",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.38
+    },
+    {
+      "id": "wiki_14876",
+      "name": "Berserker's Breastplate",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.05
+    },
+    {
+      "id": "wiki_3844",
+      "name": "Big Bad Fursuit",
+      "fights": 24,
+      "wins": 12,
+      "seconds": 18.65
+    },
+    {
+      "id": "wiki_3845",
+      "name": "Big Bad Fursuit",
+      "fights": 24,
+      "wins": 12,
+      "seconds": 18.65
+    },
+    {
+      "id": "wiki_3846",
+      "name": "Big Bad Fursuit",
+      "fights": 24,
+      "wins": 12,
+      "seconds": 18.65
+    },
+    {
+      "id": "wiki_3827",
+      "name": "Big Bad Fursuit",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 18.61
+    },
+    {
+      "id": "wiki_23625",
+      "name": "Boundless Vessel",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.44
+    },
+    {
+      "id": "wiki_597",
+      "name": "Breastplate of New Life",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.78
+    },
+    {
+      "id": "wiki_3169",
+      "name": "Candy-Coated Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.55
+    },
+    {
+      "id": "wiki_17850",
+      "name": "Cask Corslet",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 19.8
+    },
+    {
+      "id": "wiki_22481",
+      "name": "Chainmail Body Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.58
+    },
+    {
+      "id": "wiki_37467",
+      "name": "Cuirass of the Black Blade",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 19.85
+    },
+    {
+      "id": "wiki_65284",
+      "name": "Cyclone Chestplate",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.66
+    },
+    {
+      "id": "wiki_5036",
+      "name": "Eggre Battle Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 18.33
+    },
+    {
+      "id": "wiki_1191",
+      "name": "Fairy Plate",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.66
+    },
+    {
+      "id": "wiki_30052",
+      "name": "Fire Dragon Battle Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 18.33
+    },
+    {
+      "id": "wiki_53194",
+      "name": "Fire Dragon Battle Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.31
+    },
+    {
+      "id": "wiki_14381",
+      "name": "Flame Guard",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 18.92
+    },
+    {
+      "id": "wiki_57128",
+      "name": "Floral Guard Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 19.89
+    },
+    {
+      "id": "wiki_5853",
+      "name": "Frost Citadel Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 19.85
+    },
+    {
+      "id": "wiki_37693",
+      "name": "Fudgeclad Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 19.73
+    },
+    {
+      "id": "wiki_1205",
+      "name": "Fungal Breastplate",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 20.2
+    },
+    {
+      "id": "wiki_42318",
+      "name": "Fur Coat",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.58
+    },
+    {
+      "id": "wiki_28855",
+      "name": "Gladiator Guard",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 18.9
+    },
+    {
+      "id": "wiki_3789",
+      "name": "Glorious Banded Plate",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.67
+    },
+    {
+      "id": "wiki_41669",
+      "name": "Hardened Carrot Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 18.87
+    },
+    {
+      "id": "wiki_12075",
+      "name": "Heavy Construction Vest",
+      "fights": 24,
+      "wins": 18,
+      "seconds": 19.97
+    },
+    {
+      "id": "wiki_1155",
+      "name": "Heavy Protective Matrix",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.19
+    },
+    {
+      "id": "wiki_14428",
+      "name": "Heavy Syndicate Attire",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.63
+    },
+    {
+      "id": "wiki_26566",
+      "name": "Hull of the Tundra",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 19.68
+    },
+    {
+      "id": "wiki_8256",
+      "name": "Kamishimo",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.51
+    },
+    {
+      "id": "wiki_9060",
+      "name": "Legacy Fairy Plate",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.66
+    },
+    {
+      "id": "wiki_41810",
+      "name": "Legion Elite Plate Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 19.89
+    },
+    {
+      "id": "wiki_34340",
+      "name": "Lovebite Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 19.8
+    },
+    {
+      "id": "wiki_23518",
+      "name": "Mercy's Bane",
+      "fights": 24,
+      "wins": 13,
+      "seconds": 18.52
+    },
+    {
+      "id": "wiki_8667",
+      "name": "Naval Uniform",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.22
+    },
+    {
+      "id": "wiki_56466",
+      "name": "Neo Heavy Protective Matrix",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 20.35
+    },
+    {
+      "id": "wiki_32444",
+      "name": "Overalls of Endurance",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.18
+    },
+    {
+      "id": "wiki_1978",
+      "name": "pD Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 19.78
+    },
+    {
+      "id": "wiki_3841",
+      "name": "Platinum Segmentata",
+      "fights": 24,
+      "wins": 12,
+      "seconds": 18.65
+    },
+    {
+      "id": "wiki_3842",
+      "name": "Platinum Segmentata",
+      "fights": 24,
+      "wins": 12,
+      "seconds": 18.65
+    },
+    {
+      "id": "wiki_3843",
+      "name": "Platinum Segmentata",
+      "fights": 24,
+      "wins": 12,
+      "seconds": 18.65
+    },
+    {
+      "id": "wiki_3826",
+      "name": "Platinum Segmentata",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.57
+    },
+    {
+      "id": "wiki_14775",
+      "name": "Ragetorn Armor",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 19.22
+    },
+    {
+      "id": "wiki_52023",
+      "name": "Reinforced Apron",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 19.89
+    },
+    {
+      "id": "wiki_21223",
+      "name": "Reinforced Root Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.44
+    },
+    {
+      "id": "wiki_3182",
+      "name": "Resurrected Warrior's Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.32
+    },
+    {
+      "id": "wiki_26575",
+      "name": "Retainer's Battlesuit",
+      "fights": 24,
+      "wins": 14,
+      "seconds": 18.89
+    },
+    {
+      "id": "wiki_63882",
+      "name": "Retrowinds Heavy Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 19.89
+    },
+    {
+      "id": "wiki_14472",
+      "name": "Royal Guard's Cuirass",
+      "fights": 24,
+      "wins": 18,
+      "seconds": 20.22
+    },
+    {
+      "id": "wiki_20468",
+      "name": "Sage's Wakibiki",
+      "fights": 24,
+      "wins": 18,
+      "seconds": 20.03
+    },
+    {
+      "id": "wiki_48120",
+      "name": "Stoneborn Husk",
+      "fights": 24,
+      "wins": 14,
+      "seconds": 19.15
+    },
+    {
+      "id": "wiki_28466",
+      "name": "Swim Tube",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 19.89
+    },
+    {
+      "id": "wiki_25747",
+      "name": "Tormentor's Chainmail",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.66
+    },
+    {
+      "id": "wiki_38588",
+      "name": "Venerable Resurrected Warrior's Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.44
+    },
+    {
+      "id": "wiki_17389",
+      "name": "Vortex Plating",
+      "fights": 24,
+      "wins": 16,
+      "seconds": 18.87
+    },
+    {
+      "id": "wiki_26026",
+      "name": "Warped Mantle",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 19.8
+    },
+    {
+      "id": "wiki_32697",
+      "name": "Zaarvox's Heart",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.3
+    },
+    {
+      "id": "wiki_2680",
+      "name": "Wolfskin Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.48
+    },
+    {
+      "id": "wiki_2574",
+      "name": "Studded Leather Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.84
+    },
+    {
+      "id": "wiki_2499",
+      "name": "Leviathan Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 20.16
+    },
+    {
+      "id": "wiki_2652",
+      "name": "Robe of the Neophyte",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.35
+    },
+    {
+      "id": "wiki_2780",
+      "name": "Robe of the Illusionist",
+      "fights": 24,
+      "wins": 6,
+      "seconds": 14.49
+    },
+    {
+      "id": "wiki_2512",
+      "name": "Robe of the Ancient Intellect",
+      "fights": 24,
+      "wins": 7,
+      "seconds": 14.97
+    },
+    {
+      "id": "wiki_2683",
+      "name": "Iron Mail",
+      "fights": 24,
+      "wins": 13,
+      "seconds": 18.89
+    },
+    {
+      "id": "wiki_2578",
+      "name": "Mithril Armor",
+      "fights": 24,
+      "wins": 15,
+      "seconds": 19.4
+    },
+    {
+      "id": "wiki_2501",
+      "name": "Annihilation Armor",
+      "fights": 24,
+      "wins": 17,
+      "seconds": 20.04
+    }
+  ],
+  "totalWins": {
+    "before": 2754,
+    "after": 2699
+  },
+  "changedFights": 3979,
+  "validation": {
+    "regressionSuites": 30,
+    "tieredClassFightsPerVersion": 1995,
+    "tieredClassRowsIdentical": true,
+    "armorInspectionViews": 2012,
+    "catalogueViews": 7176,
+    "catalogueDefaultOverflowItems": 0,
+    "browserRuntimeErrors": 0,
+    "mixedArmorCombatSpeed": "4x",
+    "presentationParitySpeeds": [
+      1,
+      2,
+      4
+    ]
+  }
+}

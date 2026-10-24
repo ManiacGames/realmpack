@@ -85,7 +85,7 @@ function daggerPrimary(i,amount){const m=defs[i.type].mechanic;return amount*(1+
 function daggerDamage(i,total){const m=defs[i.type].mechanic,state=specialState(i),phases=state.bladePhases||(state.bladePhases=m.components.map(c=>1-c.rate)),parts=[];let weight=0;
  for(let n=0;n<m.components.length;n++){const c=m.components[n];phases[n]+=c.rate;if(phases[n]+1e-8<1)continue;phases[n]-=1;if(c.frontOnly&&i.y!==0)continue;parts.push(c);weight+=c.weight}
  state.lastVolleyShots=m.pattern?m.pattern[(i.activations-1)%m.pattern.length]:parts.reduce((n,c)=>n+c.count,0);const pattern=m.pattern?state.lastVolleyShots/3:1,budget=Math.max(0,Math.round(total*weight/m.expectedWeight*pattern+s.power)),full=weight||1;let dealt=0,used=0;
- for(const c of parts){const next=used+c.weight,amount=Math.floor(budget*next/full)-Math.floor(budget*used/full);used=next;const pierce=m.lethal&&s.time<(s.daggerLethalUntil||0)?.4:c.pierce;let immediate=amount;if(c.returning){const back=Math.floor(amount/2);immediate-=back;const queue=s.daggerReturns||(s.daggerReturns=[]);if(back&&queue.length<32)queue.push({time:.35,damage:back,pierce,wave:s.enemy.wave,source:i.id})}dealt+=daggerHit(immediate,pierce)}return dealt
+ for(const c of parts){const next=used+c.weight,amount=Math.floor(budget*next/full)-Math.floor(budget*used/full);used=next;const pierce=m.lethal&&s.time<(s.daggerLethalUntil||0)?.4:c.pierce;let immediate=amount;if(c.returning){const back=Math.floor(amount/2);immediate-=back;const queue=s.daggerReturns||(s.daggerReturns=[]);if(back&&queue.length<32)queue.push({time:.35,damage:back,pierce,wave:s.enemy.wave,source:i.id,armorActivation:i.activations})}dealt+=daggerHit(immediate,pierce)}return dealt
 }
 function daggerHit(amount,pierce=0){const bypass=Math.round(amount*pierce),ordinary=amount-bypass;let n=ordinary>0?hit(ordinary):0;if(bypass){const ward=s.enemy.ward;s.enemy.ward=0;n+=hit(bypass);s.enemy.ward=ward}return n}
 function daggerReady(i,key,duration){const locks=s.daggerLocks||(s.daggerLocks={}),id=key==='expose'?'exposing-dirk':key==='food'?'food':daggerBaseName(i)+':'+key;if(s.time<(locks[id]||0))return false;locks[id]=s.time+duration;return true}
@@ -103,7 +103,7 @@ function daggerCooldown(i,base){const m=defs[i.type].mechanic;if(m?.revRate&&s.t
 function daggerHasteRate(i){return itemHasHaste(i)?.25:0}
 function daggerAbilityEvent(source){if(source&&defs[source.type].kind==='cloak'&&s.items.some(i=>defs[i.type].mechanic?.lethal))s.daggerLethalUntil=s.time+2.4}
 function resetDaggerMechanics(){s.daggerReturns=[];s.daggerLocks={};s.daggerLethalUntil=0;s.daggerFedUntil=0;s.daggerFoodCycle=0}
-function tickDaggerMechanics(dt){const queue=s.daggerReturns||[];for(const p of queue){p.time-=dt;if(p.time<=0&&p.wave===s.enemy.wave&&s.items.some(i=>i.id===p.source))daggerHit(p.damage,p.pierce)}s.daggerReturns=queue.filter(p=>p.time>0&&p.wave===s.enemy.wave)}
+function tickDaggerMechanics(dt){const queue=s.daggerReturns||[];for(const p of queue){p.time-=dt;if(p.time<=0&&p.wave===s.enemy.wave&&s.items.some(i=>i.id===p.source))armorProjectileImpact(p,true)}s.daggerReturns=queue.filter(p=>p.time>0&&p.wave===s.enemy.wave)}
 function daggerWeaponBuff(){return s.time<(s.daggerFedUntil||0)&&s.items.some(i=>defs[i.type].mechanic?.foodEvery)?.1:0}
 function daggerHealingMultiplier(){return s.phase==='fight'&&s.items.some(i=>defs[i.type].mechanic?.healingPenalty)?.9:1}
 function initDaggerEnchantments(i){return i}

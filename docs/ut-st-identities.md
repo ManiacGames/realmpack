@@ -1,3 +1,7 @@
+# Armor follow-up — 0.39.0
+
+The [complete armor pass](armor-identities.md) takes precedence for all 250 UT/ST armor variants, including Fungal Breastplate, New Life, Hallowed Hide, Toga Picta and Vesture of Duality. It uses source stats/signatures and the unchanged tiered armor anchors. Existing ST memberships and all non-armor item definitions are preserved. Earlier armor values below describe their historical release.
+
 # Ring follow-up — 0.38.0
 
 The [complete ring pass](ring-identities.md) now takes precedence for all 314 UT/ST ring variants, including Crown, Gemstone, Rosary and Interregnum. It translates source stats and signatures against the unchanged tiered ring archetypes. Existing ST memberships and all non-ring definitions are preserved. Ring values in the historical sections below describe their earlier release.

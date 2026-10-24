@@ -95,7 +95,7 @@ function staffDamage(i,total){
  const m=defs[i.type].mechanic,state=specialState(i),phases=state.staffPhases||(state.staffPhases=m.components.map(c=>1-c.rate)),parts=[];let weight=0;
  for(let n=0;n<m.components.length;n++){const c=m.components[n];phases[n]+=c.rate;if(phases[n]+1e-8<1)continue;phases[n]-=1;if(c.frontOnly&&i.y!==0)continue;parts.push(c);weight+=c.weight}
  state.lastVolleyShots=parts.reduce((n,c)=>n+c.count,0);const budget=Math.max(0,Math.round((total*weight/m.expectedWeight+s.power)*(m.radial&&i.y!==0?.2:1))),full=weight||1;let dealt=0,used=0;
- for(const c of parts){const next=used+c.weight,damage=Math.floor(budget*next/full)-Math.floor(budget*used/full);used=next;if(c.delay){const queue=s.staffProjectiles||(s.staffProjectiles=[]);if(damage&&queue.length<48)queue.push({time:c.delay,damage,pierce:c.pierce,wave:s.enemy.wave,source:i.id})}else dealt+=swordHit(damage,c.pierce)}return dealt
+ for(const c of parts){const next=used+c.weight,damage=Math.floor(budget*next/full)-Math.floor(budget*used/full);used=next;if(c.delay){const queue=s.staffProjectiles||(s.staffProjectiles=[]);if(damage&&queue.length<48)queue.push({time:c.delay,damage,pierce:c.pierce,wave:s.enemy.wave,source:i.id,armorActivation:i.activations})}else dealt+=swordHit(damage,c.pierce)}return dealt
 }
 function staffReady(i,key,lock){const locks=s.staffLocks||(s.staffLocks={}),name=key==='esben'||key==='esbenGuard'?key:swordBaseName(i)+':'+key;if(s.time<(locks[name]||0))return false;locks[name]=s.time+lock;return true}
 function staffAfterActivation(i){const m=defs[i.type].mechanic,state=specialState(i);
@@ -110,7 +110,7 @@ function staffCooldown(i,base){return staffRecovery(i)?defs[i.type].mechanic.bur
 function staffCooldownFloor(i){return staffRecovery(i)?defs[i.type].mechanic.burstFloor:0}
 function resetStaffMechanics(){s.staffProjectiles=[];s.staffLocks={}}
 function tickStaffMechanics(dt){
- const queue=s.staffProjectiles||[];for(const p of queue){p.time-=dt;if(p.time<=0&&p.wave===s.enemy.wave&&s.items.some(i=>i.id===p.source))swordHit(p.damage,p.pierce)}s.staffProjectiles=queue.filter(p=>p.time>0&&p.wave===s.enemy.wave&&s.items.some(i=>i.id===p.source));
+ const queue=s.staffProjectiles||[];for(const p of queue){p.time-=dt;if(p.time<=0&&p.wave===s.enemy.wave&&s.items.some(i=>i.id===p.source))armorProjectileImpact(p)}s.staffProjectiles=queue.filter(p=>p.time>0&&p.wave===s.enemy.wave&&s.items.some(i=>i.id===p.source));
  for(const p of s.summons){if(!p.staffSpirit)continue;if(p.wave!==s.enemy.wave||!s.items.some(i=>i.id===p.ownerId)){p.duration=0;continue}p.elapsed=Math.min(8,p.elapsed+dt);while(p.pulses<5&&(p.pulses+1)*1.6<=p.elapsed+1e-8){p.pulses++;swordHit(4)}if(p.elapsed+1e-8>=8){swordHit(6);p.duration=0}}
  s.summons=s.summons.filter(p=>!p.staffSpirit||p.duration>0)
 }

@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.39.0 — 2026-10-25
+
+- Reworked all 250 UT/ST armor variants around RotMG stats, trade-offs and signatures, using the existing armor roles as the baseline. All 45 tiered armor definitions remain unchanged.
+- Added conditional defenses, retaliation, healing, spirits, mana efficiency and charged bursts with shared caps. Rare proc progress persists between fights; delayed weapon hits count once per activation.
+- Preserved armor IDs, art, footprints, prices, ST memberships, Legacy restrictions and saved items. Updated descriptions and Shiny comparisons.
+- Validation: 30 regression suites, JavaScript syntax, 5,208 paired armor fights, 1,995 unchanged tiered-class fixtures, desktop/phone inspections and 4× mixed-armor combat.
+
 ## 0.38.1 — 2026-10-24
 
 - Clarified Amulet of Desecration: its curse affects the player, prevents healing for the rest of combat and provides no stat bonuses. Simplified its description and active status.
