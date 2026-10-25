@@ -1,0 +1,476 @@
+{
+  "version": "0.43.0",
+  "baselineCommit": "b1318188f314672516788ba3464e24a13b4d5289",
+  "historicalFightsPerBuild": 1995,
+  "historicalBeforeWins": 1611,
+  "historicalAfterWins": 1578,
+  "nativeEnabledFightsPerBuild": 152,
+  "nativeBeforeWins": 94,
+  "nativeAfterWins": 95,
+  "nativeAblationBeforeFights": 304,
+  "nativeAblationAfterFights": 912,
+  "layoutBeforeFights": 172,
+  "layoutAfterFights": 516,
+  "enchantmentBeforeFights": 760,
+  "enchantmentAfterFights": 2280,
+  "exactSpeedParity": true,
+  "retainedClassesExactlyMatchingHistoricalRows": 735,
+  "classes": [
+    {
+      "classId": "rogue",
+      "historicalBefore": 80,
+      "historicalAfter": 77,
+      "nativeBefore": 4,
+      "nativeAfter": 4,
+      "disabledNativeAfter": 3
+    },
+    {
+      "classId": "archer",
+      "historicalBefore": 96,
+      "historicalAfter": 96,
+      "nativeBefore": 6,
+      "nativeAfter": 6,
+      "disabledNativeAfter": 6
+    },
+    {
+      "classId": "wizard",
+      "historicalBefore": 77,
+      "historicalAfter": 77,
+      "nativeBefore": 4,
+      "nativeAfter": 4,
+      "disabledNativeAfter": 2
+    },
+    {
+      "classId": "priest",
+      "historicalBefore": 91,
+      "historicalAfter": 91,
+      "nativeBefore": 6,
+      "nativeAfter": 6,
+      "disabledNativeAfter": 2
+    },
+    {
+      "classId": "warrior",
+      "historicalBefore": 86,
+      "historicalAfter": 86,
+      "nativeBefore": 4,
+      "nativeAfter": 4,
+      "disabledNativeAfter": 4
+    },
+    {
+      "classId": "knight",
+      "historicalBefore": 94,
+      "historicalAfter": 94,
+      "nativeBefore": 7,
+      "nativeAfter": 7,
+      "disabledNativeAfter": 5
+    },
+    {
+      "classId": "paladin",
+      "historicalBefore": 91,
+      "historicalAfter": 91,
+      "nativeBefore": 6,
+      "nativeAfter": 6,
+      "disabledNativeAfter": 5
+    },
+    {
+      "classId": "assassin",
+      "historicalBefore": 81,
+      "historicalAfter": 78,
+      "nativeBefore": 4,
+      "nativeAfter": 4,
+      "disabledNativeAfter": 2
+    },
+    {
+      "classId": "necromancer",
+      "historicalBefore": 84,
+      "historicalAfter": 82,
+      "nativeBefore": 6,
+      "nativeAfter": 6,
+      "disabledNativeAfter": 2
+    },
+    {
+      "classId": "huntress",
+      "historicalBefore": 93,
+      "historicalAfter": 86,
+      "nativeBefore": 6,
+      "nativeAfter": 6,
+      "disabledNativeAfter": 5
+    },
+    {
+      "classId": "mystic",
+      "historicalBefore": 82,
+      "historicalAfter": 78,
+      "nativeBefore": 3,
+      "nativeAfter": 4,
+      "disabledNativeAfter": 2
+    },
+    {
+      "classId": "trickster",
+      "historicalBefore": 78,
+      "historicalAfter": 75,
+      "nativeBefore": 4,
+      "nativeAfter": 4,
+      "disabledNativeAfter": 2
+    },
+    {
+      "classId": "sorcerer",
+      "historicalBefore": 68,
+      "historicalAfter": 64,
+      "nativeBefore": 4,
+      "nativeAfter": 4,
+      "disabledNativeAfter": 1
+    },
+    {
+      "classId": "ninja",
+      "historicalBefore": 80,
+      "historicalAfter": 81,
+      "nativeBefore": 4,
+      "nativeAfter": 4,
+      "disabledNativeAfter": 2
+    },
+    {
+      "classId": "samurai",
+      "historicalBefore": 85,
+      "historicalAfter": 85,
+      "nativeBefore": 5,
+      "nativeAfter": 5,
+      "disabledNativeAfter": 3
+    },
+    {
+      "classId": "bard",
+      "historicalBefore": 80,
+      "historicalAfter": 80,
+      "nativeBefore": 5,
+      "nativeAfter": 5,
+      "disabledNativeAfter": 4
+    },
+    {
+      "classId": "summoner",
+      "historicalBefore": 73,
+      "historicalAfter": 72,
+      "nativeBefore": 4,
+      "nativeAfter": 4,
+      "disabledNativeAfter": 1
+    },
+    {
+      "classId": "kensei",
+      "historicalBefore": 96,
+      "historicalAfter": 95,
+      "nativeBefore": 6,
+      "nativeAfter": 6,
+      "disabledNativeAfter": 3
+    },
+    {
+      "classId": "druid",
+      "historicalBefore": 96,
+      "historicalAfter": 90,
+      "nativeBefore": 6,
+      "nativeAfter": 6,
+      "disabledNativeAfter": 2
+    }
+  ],
+  "enchantmentSummaryBefore": [
+    {
+      "choice": "none",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 44
+        }
+      ]
+    },
+    {
+      "choice": "quickening",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 45
+        }
+      ]
+    },
+    {
+      "choice": "might",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 48
+        }
+      ]
+    },
+    {
+      "choice": "execution",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 48
+        }
+      ]
+    },
+    {
+      "choice": "siphon",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 50
+        }
+      ]
+    },
+    {
+      "choice": "spark",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 45
+        }
+      ]
+    },
+    {
+      "choice": "abilityPower",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 45
+        }
+      ]
+    },
+    {
+      "choice": "insight",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 44
+        }
+      ]
+    },
+    {
+      "choice": "armorPower",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 44
+        }
+      ]
+    },
+    {
+      "choice": "resonance",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 44
+        }
+      ]
+    }
+  ],
+  "enchantmentSummaryAfter": [
+    {
+      "choice": "none",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 45
+        },
+        {
+          "speed": 2,
+          "fights": 76,
+          "wins": 45
+        },
+        {
+          "speed": 4,
+          "fights": 76,
+          "wins": 45
+        }
+      ]
+    },
+    {
+      "choice": "quickening",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 45
+        },
+        {
+          "speed": 2,
+          "fights": 76,
+          "wins": 45
+        },
+        {
+          "speed": 4,
+          "fights": 76,
+          "wins": 45
+        }
+      ]
+    },
+    {
+      "choice": "might",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 46
+        },
+        {
+          "speed": 2,
+          "fights": 76,
+          "wins": 46
+        },
+        {
+          "speed": 4,
+          "fights": 76,
+          "wins": 46
+        }
+      ]
+    },
+    {
+      "choice": "execution",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 46
+        },
+        {
+          "speed": 2,
+          "fights": 76,
+          "wins": 46
+        },
+        {
+          "speed": 4,
+          "fights": 76,
+          "wins": 46
+        }
+      ]
+    },
+    {
+      "choice": "siphon",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 50
+        },
+        {
+          "speed": 2,
+          "fights": 76,
+          "wins": 50
+        },
+        {
+          "speed": 4,
+          "fights": 76,
+          "wins": 50
+        }
+      ]
+    },
+    {
+      "choice": "spark",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 44
+        },
+        {
+          "speed": 2,
+          "fights": 76,
+          "wins": 44
+        },
+        {
+          "speed": 4,
+          "fights": 76,
+          "wins": 44
+        }
+      ]
+    },
+    {
+      "choice": "abilityPower",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 46
+        },
+        {
+          "speed": 2,
+          "fights": 76,
+          "wins": 46
+        },
+        {
+          "speed": 4,
+          "fights": 76,
+          "wins": 46
+        }
+      ]
+    },
+    {
+      "choice": "insight",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 45
+        },
+        {
+          "speed": 2,
+          "fights": 76,
+          "wins": 45
+        },
+        {
+          "speed": 4,
+          "fights": 76,
+          "wins": 45
+        }
+      ]
+    },
+    {
+      "choice": "armorPower",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 46
+        },
+        {
+          "speed": 2,
+          "fights": 76,
+          "wins": 46
+        },
+        {
+          "speed": 4,
+          "fights": 76,
+          "wins": 46
+        }
+      ]
+    },
+    {
+      "choice": "resonance",
+      "bySpeed": [
+        {
+          "speed": 1,
+          "fights": 76,
+          "wins": 45
+        },
+        {
+          "speed": 2,
+          "fights": 76,
+          "wins": 45
+        },
+        {
+          "speed": 4,
+          "fights": 76,
+          "wins": 45
+        }
+      ]
+    }
+  ]
+}

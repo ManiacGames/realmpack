@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.43.0 — 2026-10-25
+
+- Reworked Mystic, Ninja, Assassin, Huntress and Trickster around orb/staff, katana/star, poison/dagger, trap/bow and prism/decoy combinations.
+- Connected Paladin, Sorcerer and Summoner to seals, scepters and maces; refined Rogue ambushes, Necromancer skulls, Kensei sheaths and Druid spirit nurturing.
+- Added live class readiness feedback, shared recharge limits, bounded charges and source-owned companions. Preserved all item definitions, seven existing class identities, class health and encounter tuning.
+- Validation: 34 regression suites; paired class, native-ability, adjacency and enchantment simulations; identical results at three playback speeds; responsive class/inspection and combat presentation checks. Native test clears rose from 94 to 95 of 152; the historical mixed-build fixture fell from 1,611 to 1,578 of 1,995 as unrelated gear no longer drives several passives. Class strength differences remain.
+
 ## 0.42.1 — 2026-10-25
 
 - Fixed expanding adjacency bonuses in victory spoils breaking item cards into fragments and excessive pages.

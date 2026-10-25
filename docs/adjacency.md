@@ -1,5 +1,7 @@
 # Adjacency — 0.42.0
 
+For the current class ability loops, see [Class identities — 0.43.0](class-identities.md). Earlier class descriptions and comparison tables below describe their named historical release.
+
 Shared edges still define adjacency. Diagonals, empty gaps and the stash do not count. Each distinct neighbor counts once **per matching rule**, regardless of shared-edge length or stack size. A well-matched item can provide different bonuses through different rules. The strongest two eligible sources per rule count, with stable item-ID tie breaks; reordering the inventory array cannot change which equal-valued sources qualify.
 
 All item definitions, IDs, art, footprints, class recipes, encounter tuning, saved enchantments and ST membership remain unchanged. This pass changes placement effects and feedback.

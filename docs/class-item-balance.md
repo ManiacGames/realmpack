@@ -1,5 +1,7 @@
 # Class and item balance — 0.21.0
 
+For the current class ability loops, see [Class identities — 0.43.0](class-identities.md). Earlier class descriptions and comparison tables below describe their named historical release.
+
 This pass replaces incidental item-ID variation with explicit family recipes. `game/catalogue.js` remains the imported identity catalogue; `game/item-balance.js` is the canonical gameplay layer loaded immediately afterward. Tests, offline benchmarks and the browser load the same rules. Names, object IDs, sprites, shapes, class restrictions and save references remain stable.
 
 For the later researched UT/ST identity layer and set mechanics, see [UT/ST identities — 0.21.5](ut-st-identities.md). The [Dagger Update — 0.22.0](dagger-update.md) overrides its named special daggers. The ordinary tiered rules below remain unchanged.

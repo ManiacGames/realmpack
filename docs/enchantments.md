@@ -1,5 +1,7 @@
 # Enchantments — 0.41.0
 
+For the current class ability loops, see [Class identities — 0.43.0](class-identities.md). Earlier class descriptions and comparison tables below describe their named historical release.
+
 Fixed slot capacity, dust, locking and paid keep/replace previews remain. The rework corrects timing, fractional effects, role coverage and prices. Item definitions, class recipes, encounter tuning, IDs, art and footprints are unchanged.
 
 ## Timing and fractional output
