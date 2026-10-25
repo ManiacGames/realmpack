@@ -1,4 +1,4 @@
-const fs=require('fs');const path=require('node:path');const {ctx,vm}=require('../game/tests/load-game.cjs');
+const fs=require('fs');const path=require('node:path');const {ctx,vm}=require('../game/tests/load-game.cjs');const depthArg=process.argv.indexOf('--depth'),auditDepth=depthArg>=0?Number(process.argv[depthArg+1]):20;if(!Number.isFinite(auditDepth)||auditDepth<1)throw Error('Invalid --depth');ctx.auditDepth=auditDepth;
 vm.runInContext(`
 log=()=>{};
 let cache=null;const rawConnections=adjacencyConnections;adjacencyConnections=i=>{if(!cache)return rawConnections(i);if(!cache.has(i.id))cache.set(i.id,rawConnections(i));return cache.get(i.id)};
@@ -15,7 +15,7 @@ for(const baseId of classes[classId].startingIds.slice(0,3)){
 gear.push(gear[0],DATA.byName['Ring of Magic'],DATA.byName['Health Potion'],DATA.byName['Healing Tome']);
 for(const type of gear){const i=makeItem(type);if(!defs[type].once){i.eventHaste=.1;if(['damage','drain','heal','block','mana','poison','burn','bleed','summon'].includes(defs[type].effect)&&Math.round(defs[type].amount*1.15)>defs[type].amount)i.eventInfusion=.15;i.enchantments=[{key:'quickening',value:.05,rank:2}]}if(defs[type].once)i.quantity=3;if(!autoPlace(i))s.stash.push(i)}
 if(s.stash.length)throw Error('Benchmark packing failed for '+classId);
-ROOMS[0]=scaledRoom(enemy.id,20);s.route=ROOMS;s.phase='prep';startFight();if(s.phase!=='fight')throw Error('No battle');cache=new Map();
+ROOMS[0]=scaledRoom(enemy.id,auditDepth);s.route=ROOMS;s.phase='prep';startFight();if(s.phase!=='fight')throw Error('No battle');cache=new Map();
 for(let n=0;n<3002&&s.phase==='fight';n++)tick(.05);
 return {classId,variant,dungeon:enemy.dungeon,tier:dungeonRating(enemy.dungeon).level,won:s.phase==='reward',seconds:+s.time.toFixed(2),hp:Math.round(s.hp),enemyRemaining:Math.round(s.enemy.hp/s.enemy.max*100),packed:s.items.map(i=>defs[i.type].name),stashed:s.stash.map(i=>defs[i.type].name)}
 }
@@ -27,7 +27,7 @@ for(const c of vm.runInContext('Object.keys(classes)',ctx)){
  if(process.stderr.isTTY)process.stderr.write(c+' done\n');
 }
 
-const summary={gameVersion:fs.readFileSync(path.join(__dirname,'../game/index.html'),'utf8').match(/0\.\d+\.\d+/)[0],runMode:'normal',depth:20,dungeons:35,variants:3,fights:rows.length,results:[...new Set(rows.map(r=>r.classId))].map(classId=>{const group=rows.filter(r=>r.classId===classId);return {classId,wins:group.filter(r=>r.won).length,fights:group.length,variants:[0,1,2].map(v=>group.filter(r=>r.variant===v&&r.won).length)}})};
+const summary={gameVersion:fs.readFileSync(path.join(__dirname,'../game/index.html'),'utf8').match(/0\.\d+\.\d+/)[0],runMode:'normal',depth:auditDepth,dungeons:35,variants:3,fights:rows.length,results:[...new Set(rows.map(r=>r.classId))].map(classId=>{const group=rows.filter(r=>r.classId===classId);return {classId,wins:group.filter(r=>r.won).length,fights:group.length,variants:[0,1,2].map(v=>group.filter(r=>r.variant===v&&r.won).length)}})};
 summary.classes=summary.results.length;
 const out=process.argv.indexOf('--output');if(out>=0){if(!process.argv[out+1])throw Error('--output needs a path');fs.writeFileSync(path.resolve(process.argv[out+1]),JSON.stringify({summary,rows},null,2)+'\n')}
 console.log(JSON.stringify(summary,null,2));

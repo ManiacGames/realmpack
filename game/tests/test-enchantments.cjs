@@ -44,7 +44,7 @@ assert.equal(run(`enchantCapacity(gear)>=gear.enchantments.length`),true);
 assert.equal(run(`JSON.stringify(gear.enchantments)===legacy`),true);
 const cap=run(`enchantCapacity(gear)`);run(`s.seed=42;enchantCapacity(gear)`);assert.equal(run(`enchantCapacity(gear)`),cap);
 run(`s.room=20;s.enchantDust={green:0,red:0,purple:0};awardEnchantDust({type:'boss'})`);
-assert.equal(run(`JSON.stringify(s.enchantDust)`),JSON.stringify({green:10,red:7,purple:6}));
+assert.equal(run(`JSON.stringify(s.enchantDust)`),JSON.stringify({green:10,red:6,purple:5}));
 run(`freshRun('knight',true);selectPortal(s.portalChoices[0]);s.phase='fight';ROOMS[s.room].waves=2;s.enemy.wave=1;const waveBank=JSON.stringify(s.enchantDust);showRewards=()=>{};finishBattle(true)`);
 assert.equal(run(`JSON.stringify(s.enchantDust)===waveBank`),true);
 run(`finishBattle(true)`);assert.equal(run(`JSON.stringify(s.enchantDust)===waveBank`),false);

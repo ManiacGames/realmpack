@@ -1,5 +1,13 @@
 # RealmPack changelog
 
+## 0.49.0 — 2026-10-25
+
+- New runs visit five distinct dungeons, eight rooms each. Three room layouts retain a shop, rest, elite, two events and a final boss in every dungeon.
+- Added five-stage portal progression, preference for unowned class-compatible dungeon drops, and short loot previews. Dungeons do not repeat within a circuit.
+- Spread the existing boss difficulty curve across depths 8/16/24/32/40; adjusted loot progression and boss blessings for the longer run. Updated maps, progress labels and endings.
+- Existing saves retain ten-room dungeons and their original victory point. Endless play extends using the saved run format.
+- Verified 190 generated routes, all 19 classes, 39 regression suites, equivalent-depth combat benchmarks and responsive maps/dialogs.
+
 ## 0.48.0 — 2026-10-25
 
 - Added 17 novelty quirks to Mangoes, Butter/Baked/Brilliance Bows, Useless Katana, Mirror Cloak, Luxurious Leather, Regal/Omni-Impotence Rings and the Testiken family.

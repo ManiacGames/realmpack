@@ -15,7 +15,7 @@ const specialistGroupCache={};
 function shopCandidateGroups(classId=s.classId){if(specialistGroupCache[classId])return specialistGroupCache[classId];const groups={native:[],shared:[],offClass:[]};for(const m of SHOP_SPECIALISTS)if(specialistItems(m.kind).length)groups[shopRelation(m.kind,classId)].push(m);specialistGroupCache[classId]=groups;return groups}
 function chooseShopKind(){const groups=shopCandidateGroups(),entries=Object.entries(SHOP_BIAS).filter(([key])=>groups[key].length),total=entries.reduce((sum,[,weight])=>sum+weight,0);let roll=rng()*total,group=entries[entries.length-1][0];for(const [key,weight] of entries){roll-=weight;if(roll<0){group=key;break}}return pick(groups[group]).kind}
 function decorateShopRoom(room){if(!specialistByKind[room.shopKind])room.shopKind=chooseShopKind();const m=specialistByKind[room.shopKind];room.name=m.name;room.enemy=m.label+' specialist';return room}
-function rollSpecialistStock(n,kind){const eligible=specialistItems(kind),chosen=[],used=new Set(),weights=lootRarityWeights('shop',actIndex());
+function rollSpecialistStock(n,kind){const eligible=specialistItems(kind),chosen=[],used=new Set(),weights=lootRarityWeights('shop',rewardActIndex());
  const add=d=>{if(!d)return;const identity=d.name+'|'+d.tier;if(used.has(identity))return;chosen.push(d.id);used.add(identity)};
  // Reliable basic supplies plus opportunities to reinforce an owned consumable.
  if(kind==='consumable')for(const name of ['Health Potion','Magic Potion'])if(chosen.length<n)add(eligible.find(d=>d.name===name));
