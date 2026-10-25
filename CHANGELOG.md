@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.48.0 — 2026-10-25
+
+- Added 17 novelty quirks to Mangoes, Butter/Baked/Brilliance Bows, Useless Katana, Mirror Cloak, Luxurious Leather, Regal/Omni-Impotence Rings and the Testiken family.
+- Added situational venom cleansing, low-mana snacks, ward breaking, finishing damage and defensive oddities. Successful activations trigger small, bounded bonuses; base item stats and availability are unchanged.
+- Updated item summaries and inspection rules. Verified novelty combat at 1×/2×/4× and existing regression suites.
+
 ## 0.47.0 — 2026-10-25
 
 - Shortened the guide, gameplay tips, reward prompts, event actions and inventory instructions. Removed repeated header copy.

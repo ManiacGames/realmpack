@@ -152,7 +152,7 @@ function realmEquipmentStats(){
  const identities=new Map();for(const i of s.items){const d=defs[i.type],name=defs[d.baseId]?.name||d.name,old=identities.get(name)||{health:0,mana:0};old.health=Math.max(old.health,realmModifier(i,'maxHealth'));old.mana=Math.max(old.mana,realmModifier(i,'maxMana'));identities.set(name,old)}
  const result={health:Math.min(80,Math.round([...identities.values()].reduce((n,v)=>n+v.health,0)))-swordEquipmentPenalty()-specialRingPenalty('health')-armorEquipmentPenalty('health')-abilityPenalty('health'),mana:Math.min(20,Math.round([...identities.values()].reduce((n,v)=>n+v.mana,0)))-specialRingPenalty('magic')-armorEquipmentPenalty('magic')-abilityPenalty('magic')};if(cache)cache.realmStats=result;return result
 }
-function realmSummary(d){return realmText(d,d.mechanic?.summary||'')}
+function realmSummary(d){if(vanityQuirk(d))return (d.group==='ring'?'':effectText(d.effect,d.amount)+'. ')+vanityQuirk(d)[1];return realmText(d,d.mechanic?.summary||'')}
 function realmText(d,text){return text.replace(/\{(amount|maxHP|maxMP|weaponDamage|weaponRate)\}/g,(_,key)=>key==='amount'?d.amount:key==='maxHP'?d.mechanic.maxHealth||0:key==='maxMP'?d.mechanic.maxMana||0:Math.round((d.mechanic[key]||0)*10000)/100)}
 function realmWeaponMultiplier(i){if(s.phase!=='fight'||defs[i.type].group!=='weapon')return 1;return katanaWeaponMultiplier(i)*(1+swordWeaponBuff()+daggerWeaponBuff()+(s.time<(s.realmDualityUntil||0)&&s.items.some(j=>defs[j.type].mechanic?.key==='realmduality')?.2:0)+(s.time<(s.realmMoriUntil||0)&&s.items.some(j=>defs[j.type].mechanic?.key==='realmmori')?.1:0)+(s.time<(s.realmInterregnumUntil||0)&&s.items.some(j=>defs[j.type].mechanic?.key==='realminterregnum')?.08:0))}
 function realmAbilityEvent(){

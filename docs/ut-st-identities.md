@@ -179,3 +179,5 @@ The [enchantment rework](enchantments.md) adds role-specific primary bonuses and
 ## Adjacency integration — 0.42.0
 
 The [adjacency rework](adjacency.md) adds thematic pairings and source-owned summon support, fixes temporary stat recipients, and reports capped support. Existing UT/ST item recipes and set memberships are unchanged. Companion damage is modified at delivery, within the shared support cap; healing meters still count actual healing only.
+
+0.48.0 adds separate RealmPack novelty utilities after successful activations; base recipes and modifier budgets remain unchanged. See vanity-quirks.md for scope and validation.

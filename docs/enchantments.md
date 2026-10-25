@@ -76,3 +76,5 @@ See [enchantment balance](enchantment-balance.md). Tests cover transactions and 
 ## Mana economy — 0.45.0
 
 Each battle now resets mana to 10 plus 1 per 5 capacity above 50, capped at 10 additional reserve. Opening Magic-ring, Reservoir and event grants then apply with the normal capacity limit. Mana-capacity consumables apply before the reserve is calculated. Existing enchantments and paid previews remain unchanged. Passive regeneration is 0.5 mana/second; item generation is unchanged. Insight still uses actual modified costs and its existing shared refund cap. See `mana-economy.md` for controlled resource and encounter comparisons.
+
+0.48.0 adds separate RealmPack novelty utilities after successful activations; base recipes and modifier budgets remain unchanged. See vanity-quirks.md for scope and validation.

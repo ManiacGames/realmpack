@@ -145,3 +145,5 @@ The **Chain Dagger ceiling adopted in 0.22.2** retained 10 damage and 2 bleed pe
 The implemented 0.22.2 ceiling was rechecked with 20 seeded output trials per variant: regular Chain averaged 15.82 damage/second and Shiny averaged 19.00, including the Rogue passive. Full regression tests passed, including partial stack additions and preserving both higher bleed and its expiry from other sources.
 
 0.46.0: verified dungeon sources now weight matching obtainable UT/ST daggers 10× in combat loot, with one possible featured local reward (35% normal, 60% elite, 90% boss). Item recipes and exclusion flags are unchanged. See dungeon-loot-sources.json for provenance.
+
+0.48.0 adds separate RealmPack novelty utilities after successful activations; base recipes and modifier budgets remain unchanged. See vanity-quirks.md for scope and validation.
