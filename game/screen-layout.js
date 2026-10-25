@@ -109,8 +109,8 @@ function screenFitModal(){
  // Keep direct dialog actions together, rather than paging a Leave/Keep button away.
  const actions=rest.filter(n=>n.tagName==='BUTTON'&&!(modalKind==='path'&&n.getAttribute('onclick')==='showRunMap()'));
  if(actions.length){const bar=document.createElement('div');bar.className='dialog-actions';for(const action of actions)bar.append(action);modal.append(bar);footer=bar}
- const description=nodes[start-1];if(description?.tagName==='P'&&description.getBoundingClientRect().height>52)body.append(description);
- for(const node of rest)if(node!==footer&&!actions.includes(node))body.append(node);modal.insertBefore(body,footer);screenPager(body);screenRestoreFocus(focus);if(modalKind==='itemdetails')modal.querySelector('button.gold')?.focus({preventScroll:true});if(modalKind==='classconfirm')modal.querySelector('#cancelClassStart')?.focus({preventScroll:true});
+ const description=nodes[start-1];if(description?.tagName==='P'&&description.getBoundingClientRect().height>52&&modalKind!=='event')body.append(description);
+ for(const node of rest)if(node!==footer&&!actions.includes(node)&&!(modalKind==='event'&&node.matches('.event-scene,.event-wallet')))body.append(node);modal.insertBefore(body,footer);screenPager(body);screenRestoreFocus(focus);if(modalKind==='itemdetails')modal.querySelector('button.gold')?.focus({preventScroll:true});if(modalKind==='classconfirm')modal.querySelector('#cancelClassStart')?.focus({preventScroll:true});
 }
 // Measure all content before pagination so small dialogs never inherit an empty viewport.
 function sizeAdaptiveModal(p,allowColumns=true){
@@ -122,7 +122,7 @@ function sizeAdaptiveModal(p,allowColumns=true){
  modal.style.width=Math.min(innerWidth-24,count>2?1040:modalKind==='itemdetails'?1200:modalKind==='trade'?840:760)+'px';
  modal.classList.toggle('item-details-columns',modalKind==='itemdetails'&&innerWidth>=900&&allowColumns);
  let natural=p.content.getBoundingClientRect().height;const overhead=modal.getBoundingClientRect().height-p.host.getBoundingClientRect().height,available=Math.max(40,innerHeight-24-overhead);
- if(choices&&[...choices.children].some(card=>card.getBoundingClientRect().height>available-45)){modal.classList.add('dialog-choice-stack');natural=p.content.getBoundingClientRect().height}
+ if(choices&&[...choices.children].some(card=>card.getBoundingClientRect().height>available-(modalKind==='event'?0:45))){modal.classList.add('dialog-choice-stack');natural=p.content.getBoundingClientRect().height}
  const sections=modal.querySelector('.shop-inspect-sections');if(sections&&[...sections.children].some(node=>node.getBoundingClientRect().height>available-45)){modal.classList.add('dialog-inspect-stack');natural=p.content.getBoundingClientRect().height}
  // Keep every rule accessible on short screens; desktop uses both columns.
  if(modal.classList.contains('item-details-columns')&&(natural>available+1||p.content.scrollWidth>p.content.clientWidth+2)){modal.classList.remove('item-details-columns');natural=p.content.getBoundingClientRect().height}

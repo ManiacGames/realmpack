@@ -1,5 +1,13 @@
 # RealmPack changelog
 
+## 0.44.0 — 2026-10-25
+
+- Reworked 23 non-combat encounters into distinct weapon, ability, armor, food, research and risk/reward services. Added revealed native gear choices that improve with the act and coin alternatives for several loot encounters.
+- Fixed whole-stack sacrifices, useless paid healing/mana rewards, inactive-ring tempering and potion-based rare-equipment payouts. Added exact cost/benefit previews and a starter supply purchase when no consumables are owned.
+- Added dungeon-weighted, usefulness-aware selection across all 35 dungeons. Cursed-armory bargains now track recoverable maximum health; the restless spirit can lift the curse. Goblin passage and its nonlethal detour have disclosed costs.
+- Improved event layouts and kept exits reachable. Reward changes preserve their page; new choices and offers survive save/load without rerolling. Existing active visits and paid enchantment rolls remain compatible.
+- Validation: 35 regression suites, 936 event/state checks, 560 responsive dialog views and 48 interactive event views. All 1,995 fixed combat results match 0.43.0; full-run event economy remains a playtesting focus.
+
 ## 0.43.0 — 2026-10-25
 
 - Reworked Mystic, Ninja, Assassin, Huntress and Trickster around orb/staff, katana/star, poison/dagger, trap/bow and prism/decoy combinations.
