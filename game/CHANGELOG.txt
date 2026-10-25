@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.50.1 — 2026-10-25
+
+- Replaced crossing dashed map lines with curved, outlined connectors and direction arrows. Next routes are stronger; distant or closed routes recede.
+- Hover, keyboard focus or tap a preview room to isolate its incoming/outgoing connections and neighboring rooms. Existing saved maps gain the clearer presentation without rerolling routes.
+- Checked map layouts at eight sizes, mouse/keyboard/touch previews, responsive dialogs and unchanged saved-route behavior.
+
 ## 0.50.0 — 2026-10-25
 
 - Replaced mostly linear dungeon maps with generated networks of two or three lanes across five decision points. Connections now determine which rooms can be reached next.
