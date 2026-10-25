@@ -4,19 +4,19 @@ const gameplayHintKey='realmpack-gameplay-tips-v1';
 let gameplayHintsEnabled=true,gameplayHintsSeen=new Set(),gameplayHintCurrent=null,gameplayHintNextAt=0;
 try{const saved=JSON.parse(localStorage.getItem(gameplayHintKey));if(saved){gameplayHintsEnabled=saved.enabled!==false;gameplayHintsSeen=new Set(Array.isArray(saved.seen)?saved.seen.filter(id=>typeof id==='string'):[])}}catch{}
 const gameplayHintRules=[
- {id:'loot',title:'Make room for loot',text:'Rewards go to your stash. Matching consumables join a stack, up to five copies.',when:()=>modalKind==='reward'},
- {id:'shop',title:'A shop with a specialty',text:'Each merchant sells one type of gear. You get one free stock refresh per visit.',when:()=>modalKind==='shop'},
- {id:'event',title:'Check the trade',text:'Some events cost an item or gold. Read the offer before you commit.',when:()=>['event','trade'].includes(modalKind)},
- {id:'dungeon',title:'Pick your challenge',text:'More skulls mean tougher enemies. Choose a dungeon that suits your build.',when:()=>modalKind==='portal'},
- {id:'mana',title:'Ready, but waiting?',text:'An item with a full cooldown bar may need more mana. You recover 1 mana each second.',when:()=>!modalKind&&s?.phase==='fight'&&s.items.some(i=>!i.used&&i.charge>=cooldown(i)&&itemManaCost(defs[i.type],i)>s.mana)},
- {id:'healing',title:'Potions wait until you need them',text:'Healing consumables wait until you are at half health or lower, so they aren’t wasted.',when:()=>!modalKind&&s?.phase==='fight'&&s.time>=5&&s.items.some(i=>isHealingConsumable(defs[i.type]))},
- {id:'pressure',title:'Long fights get harder',text:'Healing weakens after 20 seconds. Enemy damage starts rising after 30. Aim for a faster kill next time.',when:()=>!modalKind&&s?.phase==='fight'&&s.time>=20},
- {id:'combat',title:'Your pack does the fighting',text:'Items fire when their cooldown bars fill. Plan your next changes; you can move gear after the fight.',when:()=>!modalKind&&s?.phase==='fight'},
- {id:'pack',title:'Pack before you fight',text:'Drag gear into your backpack to use it. Press R to rotate. Spare items in the stash stay inactive.',when:()=>!modalKind&&s?.phase==='prep'},
- {id:'stash',title:'Move a spare out of the way',text:'Hover over a backpack item and press S to stash it. The stash has nine slots; drag gear back to equip it.',when:()=>!modalKind&&s?.phase==='prep'},
- {id:'adjacency',title:'Try moving items together',text:'Hover over gear to see its bonuses. Items count as neighbors when their edges touch, not their corners.',when:()=>!modalKind&&s?.phase==='prep'},
- {id:'class',title:'Get to know your build',text:'Hover over your character for its passive, or the enemy for its tricks. Off-class gear has longer cooldowns.',when:()=>!modalKind&&s?.phase==='prep'},
- {id:'stacks',title:'Keep a few copies',text:'Identical consumables stack up to five. Each copy gets one use per battle, and all uses return next battle.',when:()=>!modalKind&&s?.phase==='prep'&&s.items.concat(s.stash).some(i=>defs[i.type].once)}
+ {id:'loot',title:'Make room for loot',text:'Loot goes to your stash. Consumables stack to 5.',when:()=>modalKind==='reward'},
+ {id:'shop',title:'A shop with a specialty',text:'Specialist stock. One free refresh per visit.',when:()=>modalKind==='shop'},
+ {id:'event',title:'Check the trade',text:'Check the cost and reward before choosing.',when:()=>['event','trade'].includes(modalKind)},
+ {id:'dungeon',title:'Pick your challenge',text:'More skulls = tougher enemies.',when:()=>modalKind==='portal'},
+ {id:'mana',title:'Ready, but waiting?',text:'Ready items may need mana. Base regen: 0.5/s.',when:()=>!modalKind&&s?.phase==='fight'&&s.items.some(i=>!i.used&&i.charge>=cooldown(i)&&itemManaCost(defs[i.type],i)>s.mana)},
+ {id:'healing',title:'Potions wait until you need them',text:'Healing potions activate at 50% HP or below.',when:()=>!modalKind&&s?.phase==='fight'&&s.time>=5&&s.items.some(i=>isHealingConsumable(defs[i.type]))},
+ {id:'pressure',title:'Long fights get harder',text:'Healing weakens after 20s. Enemy damage rises after 30s.',when:()=>!modalKind&&s?.phase==='fight'&&s.time>=20},
+ {id:'combat',title:'Your pack does the fighting',text:'Full bar = ready. Move gear between fights.',when:()=>!modalKind&&s?.phase==='fight'},
+ {id:'pack',title:'Pack before you fight',text:'Backpack gear is active. R rotates; stash gear is inactive.',when:()=>!modalKind&&s?.phase==='prep'},
+ {id:'stash',title:'Move a spare out of the way',text:'Hover + S to stash. Drag back to equip. 9 stash slots.',when:()=>!modalKind&&s?.phase==='prep'},
+ {id:'adjacency',title:'Try moving items together',text:'Bonuses use shared edges. Corners don’t count.',when:()=>!modalKind&&s?.phase==='prep'},
+ {id:'class',title:'Get to know your build',text:'Hover over characters for details. Off-class gear is slower.',when:()=>!modalKind&&s?.phase==='prep'},
+ {id:'stacks',title:'Keep a few copies',text:'Consumables stack to 5. Used potion copies are spent permanently.',when:()=>!modalKind&&s?.phase==='prep'&&s.items.concat(s.stash).some(i=>defs[i.type].once)}
 ];
 // Resolve live elements each time: inventory nodes and room dialogs can be replaced.
 function gameplayHintTarget(id){

@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.47.0 — 2026-10-25
+
+- Shortened the guide, gameplay tips, reward prompts, event actions and inventory instructions. Removed repeated header copy.
+- Put Runeforge reference rules behind an expandable section; kept the selected sacrifice and exact upgrade preview visible. Shortened merchant and supply rules.
+- Corrected stale tips: base mana regeneration is 0.5/s, and used potion copies do not return next battle.
+
 ## 0.46.0 — 2026-10-25
 
 - Added sourced UT/ST loot preferences across all 35 dungeons. Matching items gain 10× weight in combat rewards, retaining class preference.
