@@ -19,7 +19,7 @@ assert.equal(run(`decideEnchant(true,1)`),true);
 assert.equal(run(`itemEnchants(gear).length`),4);
 const old=run(`JSON.stringify(gear.enchantments[0])`);
 assert.equal(run(`toggleEnchantLock(gear.id,0,2)`),true);
-assert.equal(run(`enchantRerollCost(gear)`),40);
+assert.equal(run(`enchantRerollCost(gear)`),24);
 assert.equal(run(`enchantService('reroll',gear.id,-1,3)`),true);
 assert.equal(run(`JSON.stringify(s.activeEvent.pendingEnchant.next[0])`),old);
 run(`const paid=s.enchantDust[enchantDustColor(gear)];decideEnchant(false,4);`);

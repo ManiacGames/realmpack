@@ -1,0 +1,186 @@
+{
+  "version": "0.41.0",
+  "fixture": "19 native classes; ten enchantment choices; four dungeon boss indices 0/9/19/34 at depth20 Normal. T7 native ability, native tiered weapon/armor at80% family max, extra native weapon, T3Magic ring, T6Attack ring placed for weapon adjacency, three Health Potions,+50baseHP,+8%relicrecharge,seed123456,.05s simulation steps at requested speeds. One rankIII modifier on the relevant item; no other enchants, infusions, partners or optimized layouts. Missing/ineligible modifiers in older builds remain unenchanted (applied=false). Fixed comparisons, not player win probabilities.",
+  "beforeFights": 760,
+  "afterFights": 2280,
+  "speedMatchedScenarios": 760,
+  "speedMismatches": 0,
+  "enchantments": [
+    {
+      "case": "none",
+      "fightsPerSpeed": 76,
+      "beforeWins": 45,
+      "afterWins": 46
+    },
+    {
+      "case": "quickening",
+      "fightsPerSpeed": 76,
+      "beforeWins": 46,
+      "afterWins": 45
+    },
+    {
+      "case": "might",
+      "fightsPerSpeed": 76,
+      "beforeWins": 47,
+      "afterWins": 49
+    },
+    {
+      "case": "execution",
+      "fightsPerSpeed": 76,
+      "beforeWins": 45,
+      "afterWins": 49
+    },
+    {
+      "case": "siphon",
+      "fightsPerSpeed": 76,
+      "beforeWins": 54,
+      "afterWins": 51
+    },
+    {
+      "case": "spark",
+      "fightsPerSpeed": 76,
+      "beforeWins": 47,
+      "afterWins": 48
+    },
+    {
+      "case": "abilityPower",
+      "fightsPerSpeed": 76,
+      "beforeWins": 44,
+      "afterWins": 47
+    },
+    {
+      "case": "insight",
+      "fightsPerSpeed": 76,
+      "beforeWins": 46,
+      "afterWins": 46
+    },
+    {
+      "case": "armorPower",
+      "fightsPerSpeed": 76,
+      "beforeWins": 45,
+      "afterWins": 46
+    },
+    {
+      "case": "resonance",
+      "fightsPerSpeed": 76,
+      "beforeWins": 45,
+      "afterWins": 46
+    }
+  ],
+  "classes": [
+    {
+      "classId": "rogue",
+      "fights": 105,
+      "beforeWins": 81,
+      "afterWins": 82
+    },
+    {
+      "classId": "archer",
+      "fights": 105,
+      "beforeWins": 94,
+      "afterWins": 95
+    },
+    {
+      "classId": "wizard",
+      "fights": 105,
+      "beforeWins": 73,
+      "afterWins": 77
+    },
+    {
+      "classId": "priest",
+      "fights": 105,
+      "beforeWins": 90,
+      "afterWins": 92
+    },
+    {
+      "classId": "warrior",
+      "fights": 105,
+      "beforeWins": 85,
+      "afterWins": 86
+    },
+    {
+      "classId": "knight",
+      "fights": 105,
+      "beforeWins": 94,
+      "afterWins": 96
+    },
+    {
+      "classId": "paladin",
+      "fights": 105,
+      "beforeWins": 89,
+      "afterWins": 91
+    },
+    {
+      "classId": "assassin",
+      "fights": 105,
+      "beforeWins": 83,
+      "afterWins": 84
+    },
+    {
+      "classId": "necromancer",
+      "fights": 105,
+      "beforeWins": 84,
+      "afterWins": 85
+    },
+    {
+      "classId": "huntress",
+      "fights": 105,
+      "beforeWins": 94,
+      "afterWins": 93
+    },
+    {
+      "classId": "mystic",
+      "fights": 105,
+      "beforeWins": 82,
+      "afterWins": 83
+    },
+    {
+      "classId": "trickster",
+      "fights": 105,
+      "beforeWins": 79,
+      "afterWins": 80
+    },
+    {
+      "classId": "sorcerer",
+      "fights": 105,
+      "beforeWins": 66,
+      "afterWins": 68
+    },
+    {
+      "classId": "ninja",
+      "fights": 105,
+      "beforeWins": 80,
+      "afterWins": 80
+    },
+    {
+      "classId": "samurai",
+      "fights": 105,
+      "beforeWins": 85,
+      "afterWins": 85
+    },
+    {
+      "classId": "bard",
+      "fights": 105,
+      "beforeWins": 79,
+      "afterWins": 80
+    },
+    {
+      "classId": "summoner",
+      "fights": 105,
+      "beforeWins": 71,
+      "afterWins": 73
+    },
+    {
+      "classId": "kensei",
+      "fights": 105,
+      "beforeWins": 95,
+      "afterWins": 96
+    },
+    {
+      "classId": "druid",
+      "fights": 105,
+      "beforeWins": 96,
+      "afterWins": 96
+    }
+  ]
+}

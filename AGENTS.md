@@ -13,6 +13,7 @@ Repository: ManiacGames/realmpack. Production is GitHub Pages at https://maniacg
 - For UT/ST signatures, set bonuses or their combat state, also run `node game/tests/test-ut-st-identities.cjs` and update `docs/ut-st-identities.md` when changing researched identities.
 - For dagger recipes, acquisition rules or dagger combat/event effects, also run `node game/tests/test-dagger-update.cjs`. Keep `docs/dagger-update.md` and its seeded comparison assumptions accurate; preserve requested values unless a new instruction changes them.
 - For haste, cooldown or speed-effect changes, also run `node game/tests/test-local-haste.cjs`.
+- For enchantment or combat timing changes, also run `node game/tests/test-enchantments.cjs`, `node game/tests/test-enchantment-rework.cjs` and the seeded `scripts/benchmark-enchantments.cjs` comparison at 1×/2×/4×. Keep `docs/enchantments.md` and its balance assumptions current; preserve saved modifier values and pending paid rolls.
 - For healing or consumable activation changes, also run `node game/tests/test-healing-consumables.cjs`.
 - For stash capacity or item acquisition changes, also run `node game/tests/test-stash-capacity.cjs` and `node game/tests/test-provisions.cjs`.
 - For item selection, dragging, hovering or inspection controls, also run `node game/tests/test-inventory-interaction.cjs`.

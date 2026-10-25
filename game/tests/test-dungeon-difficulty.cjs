@@ -29,8 +29,9 @@ for(const classId of ['knight','wizard','priest'])for(const dungeon of ['Pirate 
   const i=makeItem(type),d=defs[type];if(!autoPlace(i))throw Error('Endgame fixture does not fit');
   if(d.once){i.quantity=5;continue}
   i.eventHaste=.20;if(['damage','drain','heal','block','mana','poison','burn','bleed','summon'].includes(d.effect)&&Math.round(d.amount*1.3)>d.amount)i.eventInfusion=.30;
-  const fourth=['damage','drain'].includes(d.effect)?'might':d.effect==='block'?'bulwark':d.effect==='heal'?'restoration':'ward';
-  i.enchantments=['quickening','barrier','siphon',fourth].map(key=>{if(!ENCHANT_TYPES[key].eligible(d))throw Error('Illegal benchmark enchant');return {key,value:ENCHANT_TYPES[key].values[2],rank:3}});
+  const keys=passiveRing(d)?['resonance','barrier','siphon','reservoir']:['damage','drain'].includes(d.effect)?['might','barrier','siphon','spark']:d.effect==='heal'?['restoration','quickening','barrier','reservoir']:d.effect==='block'?['bulwark','quickening','siphon','reservoir']:['quickening','barrier','siphon','reservoir'];
+  i.enchantments=keys.map(key=>{if(!ENCHANT_TYPES[key].eligible(d))throw Error('Illegal benchmark enchant');return {key,value:ENCHANT_TYPES[key].values[2],rank:3}});
+  if(new Set(keys.map(k=>ENCHANT_CATEGORIES[k])).size!==4)throw Error('Illegal benchmark category conflict');
  }
  s.max+=80;s.hp=s.max;s.relicPower=6;s.relicHaste=.24;
  const id=ENCOUNTERS.dungeons.find(d=>d.name===dungeon).id,enemy=ENCOUNTERS.encounters.find(e=>e.dungeon===id&&e.role==='boss');ROOMS[0]=scaledRoom(enemy.id,30);startFight();

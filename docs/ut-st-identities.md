@@ -171,3 +171,7 @@ All 84 UT/ST katana entries now use [inspected katana profiles](katana-identitie
 ## Ability identity pass — 0.40.0
 
 All 559 UT/ST ability variants have a researched mapping, calibrated against unchanged tiered abilities. See [ability identities](ability-identities.md) for the full item mapping, translations, limits and preserved custom signatures, and [ability balance](ability-balance.md) for the seeded comparison. Internal effect helpers are unobtainable; old saves remain readable.
+
+## Enchantment integration — 0.41.0
+
+The [enchantment rework](enchantments.md) adds role-specific primary bonuses and source-owned companion damage. Summon bursts, explosions and counters can receive Command without extra summons, charge or activation hooks. Positive ring stats can receive Resonance within existing caps. No UT/ST item recipe, source identity, footprint or set membership changes.

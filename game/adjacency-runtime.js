@@ -49,7 +49,7 @@ function adjacencyLinkLabel(rule,source){if(typeof rule.value==='function'&&sour
 function adjacencyGuide(d){const rules=ADJACENCY_RULES.filter(r=>r.target(d));return rules.length?`<section class="adjacency-guide" aria-label="Adjacency bonuses"><b>Adjacency bonuses</b><ul>${rules.map(r=>{const copy=adjacencyCopy(r);return `<li title="${esc(r.name+': '+r.text)}"><strong>${esc(copy.bonus)}</strong><span>${esc(copy.neighbor)}</span></li>`}).join('')}</ul><details class="adjacency-rules"><summary>Placement rules</summary><p>Items must share an edge. Each neighbor counts once, regardless of stack size. Combined primary bonuses cap at +35%.</p></details></section>`:''}
 
 // Capacity bonuses are derived from packed rings, never granted permanently.
-function ringStrength(i){if(!i)return 0;const d=defs[i.type],value=d.amount*(1+Math.min(.3,Math.max(0,i.eventInfusion||0)))*(1+(i.potionUpgrades?.ringStrength||0));return ['health','magic'].includes(d.ringAttribute)?Math.round(value):Math.round(value*100)/100}
+function ringStrength(i){if(!i)return 0;const d=defs[i.type],value=d.amount*(1+enchantTotal(i,'resonance'))*(1+Math.min(.3,Math.max(0,i.eventInfusion||0)))*(1+(i.potionUpgrades?.ringStrength||0));return ['health','magic'].includes(d.ringAttribute)?Math.round(value):Math.round(value*100)/100}
 function packedRingBonus(attribute,cap){
  const cache=prepareCombatGeometry();if(cache){cache.ringBonuses??={};if(attribute in cache.ringBonuses)return cache.ringBonuses[attribute]}
  const value=Math.min(cap,s.items.reduce((sum,i)=>sum+(defs[i.type].ringAttribute===attribute?ringStrength(i):0),0));

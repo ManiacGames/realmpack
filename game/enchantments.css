@@ -20,3 +20,7 @@ body #overlay .enchanter-modal{max-width:880px!important}
 @media(max-height:700px){body #overlay .enchanter-modal{padding:12px;gap:6px}.enchanter-modal>.eyebrow{display:none}.enchanter-modal .enchant-heading{margin:0}.enchanter-modal .enchant-card{padding:8px;min-height:68px}.enchanter-modal .dust-wallet{padding:4px 0}.enchanter-modal .enchant-heading h2{font-size:22px}.enchanter-modal .enchant-heading .sprite-art{--sprite-size:30px}.enchanter-modal .enchant-card-grid{gap:6px}}
 .enchanter-modal:has(.enchant-comparison) .dust-wallet,.enchanter-modal:has(.enchant-comparison)>select{display:none}
 @media(max-width:600px) and (max-height:700px){.enchanter-modal>h1+p{display:none}.enchanter-modal .enchant-card{font-size:17px;line-height:1.2;min-height:57px}.enchanter-modal .enchant-heading h2{font-size:20px}.enchanter-modal .enchant-heading span{font-size:16px}.enchanter-modal .enchant-heading{gap:8px}.enchanter-modal .enchant-note{font-size:16px!important}.enchanter-modal button{min-height:30px;padding:5px 7px}}
+
+body #overlay .enchanter-modal .enchant-impact{font-size:17px!important;line-height:1.25;margin:0;padding:5px 8px;border-left:2px solid #a8bd86;background:#16231d}
+
+@media(max-height:500px){body #overlay .enchanter-modal>h1{font-size:20px;line-height:1.1;margin:0}body #overlay .enchanter-modal .enchant-impact{padding:2px 6px;font-size:16px!important}}
