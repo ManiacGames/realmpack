@@ -1,6 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict'),crypto=require('node:crypto'),fs=require('node:fs'),path=require('node:path'),{ctx,vm}=require('./load-game.cjs');
-assert.equal(crypto.createHash('sha256').update(vm.runInContext(`JSON.stringify(DATA.items.filter(d=>!(d.group==='armor'&&['UT','ST'].includes(d.tier))))`,ctx)).digest('hex'),'f1421f2e3694ef9ad7df81ea13dc69c2400a8b7af84187569fdc3e8e012771ec','Tiered armor or definitions outside UT/ST armor changed');
+assert.equal(crypto.createHash('sha256').update(vm.runInContext(`JSON.stringify(DATA.items.filter(d=>!(d.group==='ability'&&['UT','ST'].includes(d.tier))))`,ctx)).digest('hex'),'9ff29b0d94e0949816fe4a622a61807a5f4ccf13f76b723ca63061821f4830d7','Tiered abilities or definitions outside UT/ST abilities changed');
 const facts=require('../../docs/ring-source-facts.json').items;assert.equal(facts.length,314);assert.equal(new Set(facts.map(d=>d.id)).size,314);
 console.log(vm.runInContext(`(()=>{
 const check=(v,m)=>{if(!v)throw Error(m)},near=(a,b)=>Math.abs(a-b)<1e-7,type=n=>DATA.items.find(d=>d.name===n&&!d.isShiny).id;

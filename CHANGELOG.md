@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.40.0 — 2026-10-25
+
+- Reworked UT/ST abilities across all 19 types around RotMG identities, with 559 variants audited. All 176 tiered ability definitions and other item recipes remain unchanged.
+- Added distinct companion behavior, charged skull releases and sigil forms, Hex detonations, offensive/support tomes, and clearer costs, conditions and local support effects. Preserved the existing custom signatures.
+- Excluded 26 internal effect helpers from new loot and marked them unobtainable. Saved copies remain readable; fixed Shiny Midnight Star resolving to a helper.
+- Validation: 31 regression suites, JavaScript syntax, 3,592 paired ability fixtures per build, 1,995 unchanged tiered-class fixtures, desktop/phone inspections and live 4× mixed-ability combat. Movement and multi-enemy mechanics use documented pack-side adaptations.
+
 ## 0.39.0 — 2026-10-25
 
 - Reworked all 250 UT/ST armor variants around RotMG stats, trade-offs and signatures, using the existing armor roles as the baseline. All 45 tiered armor definitions remain unchanged.

@@ -1,0 +1,4053 @@
+{
+  "version": "0.40.0",
+  "fixture": "410 non-Shiny actual UT/ST abilities plus T0/T7 references; one native class per kind. Four bosses at dungeon indices 0/9/19/34; depth20 Normal, native tiered weapon/armor at60%/90% family max, extra native weapon, T3/T6 Magic ring,3Health Potions,+50baseHP,full equippedHP,+8%relicrecharge,seed123456,.05s ticks. No enchants/infusions/special partners or optimized layouts; charge starts empty. Comparative fixtures, not player win probabilities.",
+  "fightsPerBuild": 3592,
+  "beforeWins": 1870,
+  "afterWins": 1858,
+  "tieredClassFights": 1995,
+  "tieredClassRowsIdentical": true,
+  "summary": [
+    {
+      "id": "wiki_599",
+      "name": "Cloak of Bloody Surprises",
+      "kind": "cloak",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 25.96,
+      "afterSeconds": 26.56
+    },
+    {
+      "id": "wiki_19307",
+      "name": "Cloak of Cubic Enigma",
+      "kind": "cloak",
+      "beforeWins": 5,
+      "afterWins": 4,
+      "beforeSeconds": 25.96,
+      "afterSeconds": 24.61
+    },
+    {
+      "id": "wiki_14815",
+      "name": "Cloak of Eerie Trepidation",
+      "kind": "cloak",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 25.96,
+      "afterSeconds": 26.56
+    },
+    {
+      "id": "wiki_1417",
+      "name": "Cloak of Refraction",
+      "kind": "cloak",
+      "beforeWins": 5,
+      "afterWins": 4,
+      "beforeSeconds": 25.96,
+      "afterSeconds": 25.42
+    },
+    {
+      "id": "wiki_21228",
+      "name": "Cloak of the Darkened Sun",
+      "kind": "cloak",
+      "beforeWins": 5,
+      "afterWins": 4,
+      "beforeSeconds": 25.96,
+      "afterSeconds": 25.04
+    },
+    {
+      "id": "wiki_20883",
+      "name": "Cloak of the Deep",
+      "kind": "cloak",
+      "beforeWins": 5,
+      "afterWins": 4,
+      "beforeSeconds": 25.96,
+      "afterSeconds": 25.12
+    },
+    {
+      "id": "wiki_23327",
+      "name": "Cloak of the Mad God",
+      "kind": "cloak",
+      "beforeWins": 5,
+      "afterWins": 4,
+      "beforeSeconds": 25.96,
+      "afterSeconds": 24.92
+    },
+    {
+      "id": "wiki_2650",
+      "name": "Cloak of the Planewalker",
+      "kind": "cloak",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 25.67,
+      "afterSeconds": 25.34
+    },
+    {
+      "id": "wiki_53187",
+      "name": "Cloak of the Planewalker",
+      "kind": "cloak",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 25.67,
+      "afterSeconds": 25.46
+    },
+    {
+      "id": "wiki_8333",
+      "name": "Cloak of Winter",
+      "kind": "cloak",
+      "beforeWins": 5,
+      "afterWins": 4,
+      "beforeSeconds": 25.96,
+      "afterSeconds": 24.82
+    },
+    {
+      "id": "wiki_18358",
+      "name": "Eggshell Cowl",
+      "kind": "cloak",
+      "beforeWins": 5,
+      "afterWins": 4,
+      "beforeSeconds": 25.96,
+      "afterSeconds": 23.87
+    },
+    {
+      "id": "wiki_10065",
+      "name": "Ghastly Drape",
+      "kind": "cloak",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 25.12,
+      "afterSeconds": 25.12
+    },
+    {
+      "id": "wiki_54896",
+      "name": "Hydroflow Cloak",
+      "kind": "cloak",
+      "beforeWins": 5,
+      "afterWins": 4,
+      "beforeSeconds": 25.96,
+      "afterSeconds": 24.82
+    },
+    {
+      "id": "wiki_8610",
+      "name": "Legacy Ghastly Drape",
+      "kind": "cloak",
+      "beforeWins": 5,
+      "afterWins": 4,
+      "beforeSeconds": 25.96,
+      "afterSeconds": 25.72
+    },
+    {
+      "id": "wiki_41824",
+      "name": "Legion Elite Cloak",
+      "kind": "cloak",
+      "beforeWins": 5,
+      "afterWins": 4,
+      "beforeSeconds": 25.96,
+      "afterSeconds": 24.82
+    },
+    {
+      "id": "wiki_23335",
+      "name": "Mirror Cloak",
+      "kind": "cloak",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 25.96,
+      "afterSeconds": 25.96
+    },
+    {
+      "id": "wiki_5359",
+      "name": "Spectre Cloak",
+      "kind": "cloak",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 25.96,
+      "afterSeconds": 25.96
+    },
+    {
+      "id": "wiki_17881",
+      "name": "Vampiric Cape",
+      "kind": "cloak",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 26.73,
+      "afterSeconds": 26.73
+    },
+    {
+      "id": "wiki_23337",
+      "name": "Archerang",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 12.11
+    },
+    {
+      "id": "wiki_4333",
+      "name": "Beehemoth Quiver",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 14.11
+    },
+    {
+      "id": "wiki_4339",
+      "name": "Beehemoth Quiver",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 14.11
+    },
+    {
+      "id": "wiki_4338",
+      "name": "Beehemoth Quiver",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 14.11
+    },
+    {
+      "id": "wiki_17564",
+      "name": "Beehemoth Quiver",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 14.11
+    },
+    {
+      "id": "wiki_3299",
+      "name": "Brine Quiver",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 14.56
+    },
+    {
+      "id": "wiki_8336",
+      "name": "Coalbearing Quiver",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 14.56
+    },
+    {
+      "id": "wiki_9089",
+      "name": "Cocoon Quiver",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 12.11
+    },
+    {
+      "id": "wiki_17849",
+      "name": "Double Vision Darts",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 12.86
+    },
+    {
+      "id": "wiki_21187",
+      "name": "Embellished Quiver",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 11.41
+    },
+    {
+      "id": "wiki_5139",
+      "name": "Freezing Quiver",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 14.11
+    },
+    {
+      "id": "wiki_41601",
+      "name": "Fresh Breeze Quiver",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 11.41
+    },
+    {
+      "id": "wiki_25457",
+      "name": "Huntsman's Volley",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.34
+    },
+    {
+      "id": "wiki_54899",
+      "name": "Hydroflow Quiver",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 14.06
+    },
+    {
+      "id": "wiki_41827",
+      "name": "Legion Elite Quiver",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 14.06
+    },
+    {
+      "id": "wiki_20276",
+      "name": "Mad Javelin",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.82
+    },
+    {
+      "id": "wiki_15761",
+      "name": "Q.U.I.V.E.R.",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.98
+    },
+    {
+      "id": "wiki_1401",
+      "name": "Quintessential Quiver",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.44
+    },
+    {
+      "id": "wiki_25607",
+      "name": "Quiver of Dazing Love",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 14.11
+    },
+    {
+      "id": "wiki_589",
+      "name": "Quiver of Shadows",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.09
+    },
+    {
+      "id": "wiki_7749",
+      "name": "Quiver of Shrieking Specters",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 12.01
+    },
+    {
+      "id": "wiki_3079",
+      "name": "Quiver of Thunder",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 14.15,
+      "afterSeconds": 14.15
+    },
+    {
+      "id": "wiki_30041",
+      "name": "Quiver of Thunder - Overcharged",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 14.11
+    },
+    {
+      "id": "wiki_50814",
+      "name": "Sentry Turret",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.27
+    },
+    {
+      "id": "wiki_23745",
+      "name": "Sinister Syringes",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.31
+    },
+    {
+      "id": "wiki_42501",
+      "name": "Snow Critters",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.27
+    },
+    {
+      "id": "wiki_25739",
+      "name": "Spinal Quiver",
+      "kind": "quiver",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 12.01
+    },
+    {
+      "id": "wiki_8692",
+      "name": "Ancient Eminence",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 2,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 15.01
+    },
+    {
+      "id": "wiki_1382",
+      "name": "Cobra Serpentis Scroll",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 2,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 13.72
+    },
+    {
+      "id": "wiki_19282",
+      "name": "Cursed Spire Spell",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 2,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 14.51
+    },
+    {
+      "id": "wiki_1909",
+      "name": "Depth Charge",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 2,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 14.42
+    },
+    {
+      "id": "wiki_17041",
+      "name": "Esben's Vows",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 13.65
+    },
+    {
+      "id": "wiki_28840",
+      "name": "Genesis Spell",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 2,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 14.45
+    },
+    {
+      "id": "wiki_54901",
+      "name": "Hydroflow Spell",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 2,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 13.97
+    },
+    {
+      "id": "wiki_23326",
+      "name": "Jade Storm",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 5,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 12.65
+    },
+    {
+      "id": "wiki_8617",
+      "name": "Legacy Ancient Spell: Pierce",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 2,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 14.76
+    },
+    {
+      "id": "wiki_41829",
+      "name": "Legion Elite Spell",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 2,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 13.97
+    },
+    {
+      "id": "wiki_13988",
+      "name": "Penetrating Blast Spell",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 13.84
+    },
+    {
+      "id": "wiki_23330",
+      "name": "Random Spell Extraction Device",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 2,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 14.76
+    },
+    {
+      "id": "wiki_1953",
+      "name": "Recurring Terror Spell",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 2,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 13.72
+    },
+    {
+      "id": "wiki_20901",
+      "name": "Runes of Knowledge",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 4,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 17.13
+    },
+    {
+      "id": "wiki_20303",
+      "name": "Slurpian Sea Scroll",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 2,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 14.42
+    },
+    {
+      "id": "wiki_25760",
+      "name": "Spectral Spell",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 2,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 15.01
+    },
+    {
+      "id": "wiki_23339",
+      "name": "Spelling Spell",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 2,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 14.76
+    },
+    {
+      "id": "wiki_1203",
+      "name": "Sporous Spray Spell",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 2,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 14.59
+    },
+    {
+      "id": "wiki_2881",
+      "name": "Tablet of the King's Avatar",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 13.53
+    },
+    {
+      "id": "wiki_8862",
+      "name": "Thousand Suns Spell",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 2,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 14.66
+    },
+    {
+      "id": "wiki_50818",
+      "name": "Unstable Firework",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 13.41
+    },
+    {
+      "id": "wiki_8338",
+      "name": "Vigil Spell",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 2,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 14.66
+    },
+    {
+      "id": "wiki_2217",
+      "name": "Vitamine Buster",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 2,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 15.25
+    },
+    {
+      "id": "wiki_28241",
+      "name": "Wandering Souls Spell",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 13.6
+    },
+    {
+      "id": "wiki_3297",
+      "name": "X-Marks-the-Spot Spell",
+      "kind": "spell",
+      "beforeWins": 3,
+      "afterWins": 2,
+      "beforeSeconds": 13.81,
+      "afterSeconds": 14.66
+    },
+    {
+      "id": "wiki_26734",
+      "name": "Bloodletting Leeches",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 1,
+      "beforeSeconds": 25.27,
+      "afterSeconds": 16.86
+    },
+    {
+      "id": "wiki_9054",
+      "name": "Book of Geb",
+      "kind": "tome",
+      "beforeWins": 3,
+      "afterWins": 4,
+      "beforeSeconds": 20.93,
+      "afterSeconds": 21.97
+    },
+    {
+      "id": "wiki_25113",
+      "name": "Botany Book",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 5,
+      "beforeSeconds": 25.27,
+      "afterSeconds": 24.51
+    },
+    {
+      "id": "wiki_8205",
+      "name": "Ceremonial Merlot",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 25.27,
+      "afterSeconds": 23.7
+    },
+    {
+      "id": "wiki_28835",
+      "name": "Chaotic Scripture",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 25.27,
+      "afterSeconds": 22.82
+    },
+    {
+      "id": "wiki_20900",
+      "name": "Evolutionary Records",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 2,
+      "beforeSeconds": 25.27,
+      "afterSeconds": 23.57
+    },
+    {
+      "id": "wiki_54903",
+      "name": "Hydroflow Tome",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 6,
+      "beforeSeconds": 25.27,
+      "afterSeconds": 23.55
+    },
+    {
+      "id": "wiki_41831",
+      "name": "Legion Elite Tome",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 6,
+      "beforeSeconds": 25.27,
+      "afterSeconds": 23.55
+    },
+    {
+      "id": "wiki_8342",
+      "name": "Nativity Tome",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 6,
+      "beforeSeconds": 25.27,
+      "afterSeconds": 23.55
+    },
+    {
+      "id": "wiki_1405",
+      "name": "Necronomicon",
+      "kind": "tome",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 16.31,
+      "afterSeconds": 16.31
+    },
+    {
+      "id": "wiki_48142",
+      "name": "Scary Stories",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 3,
+      "beforeSeconds": 25.27,
+      "afterSeconds": 18.54
+    },
+    {
+      "id": "wiki_2514",
+      "name": "Strike Amulet",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 2,
+      "beforeSeconds": 25.27,
+      "afterSeconds": 21.46
+    },
+    {
+      "id": "wiki_14785",
+      "name": "Tome of Exorcism",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 25.27,
+      "afterSeconds": 23.7
+    },
+    {
+      "id": "wiki_5854",
+      "name": "Tome of Frigid Protection",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 25.27,
+      "afterSeconds": 25.62
+    },
+    {
+      "id": "wiki_608",
+      "name": "Tome of Holy Furor",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 2,
+      "beforeSeconds": 25.27,
+      "afterSeconds": 18.19
+    },
+    {
+      "id": "wiki_3102",
+      "name": "Tome of Holy Protection",
+      "kind": "tome",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 20.41,
+      "afterSeconds": 21.54
+    },
+    {
+      "id": "wiki_23341",
+      "name": "Tome of Moral Support",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 1,
+      "beforeSeconds": 25.27,
+      "afterSeconds": 18.41
+    },
+    {
+      "id": "wiki_1976",
+      "name": "Tome of Pain",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 5,
+      "beforeSeconds": 25.27,
+      "afterSeconds": 22.79
+    },
+    {
+      "id": "wiki_3298",
+      "name": "Tome of Piracy",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 6,
+      "beforeSeconds": 25.27,
+      "afterSeconds": 23.55
+    },
+    {
+      "id": "wiki_3081",
+      "name": "Tome of Purification",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 24.11,
+      "afterSeconds": 24.07
+    },
+    {
+      "id": "wiki_26262",
+      "name": "Tome of the Dragon",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 2,
+      "beforeSeconds": 25.27,
+      "afterSeconds": 18.19
+    },
+    {
+      "id": "wiki_1151",
+      "name": "Tome of the Mushroom Tribes",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 22.86,
+      "afterSeconds": 22.53
+    },
+    {
+      "id": "wiki_21227",
+      "name": "Tome of the Tarnished Gods",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 1,
+      "beforeSeconds": 25.27,
+      "afterSeconds": 17.36
+    },
+    {
+      "id": "wiki_54798",
+      "name": "Void Leeches",
+      "kind": "tome",
+      "beforeWins": 4,
+      "afterWins": 1,
+      "beforeSeconds": 25.27,
+      "afterSeconds": 16.86
+    },
+    {
+      "id": "wiki_14875",
+      "name": "Adamantine Helm",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 5,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 17.98
+    },
+    {
+      "id": "wiki_9661",
+      "name": "Amber Encrusted Helmet",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 17.41
+    },
+    {
+      "id": "wiki_14774",
+      "name": "Beastly Mane",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 5,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 17.14
+    },
+    {
+      "id": "wiki_5187",
+      "name": "Bubblegum Bucket",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 5,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 17.94
+    },
+    {
+      "id": "wiki_32443",
+      "name": "Burlap Cowl",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 17.37
+    },
+    {
+      "id": "wiki_23343",
+      "name": "Challenger Helm",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 18.12
+    },
+    {
+      "id": "wiki_32699",
+      "name": "Helm of Draconic Dominance",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 5,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 18.03
+    },
+    {
+      "id": "wiki_6938",
+      "name": "Helm of Exalted Might",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 3,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 17.74
+    },
+    {
+      "id": "wiki_610",
+      "name": "Helm of the Immortal",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 18.7
+    },
+    {
+      "id": "wiki_6036",
+      "name": "Helm of the Jack-o'-naut",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 5,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 18.34
+    },
+    {
+      "id": "wiki_3080",
+      "name": "Helm of the Juggernaut",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 18.38,
+      "afterSeconds": 18.34
+    },
+    {
+      "id": "wiki_30039",
+      "name": "Helm of the Juggernaut - Chaos",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 5,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 18.34
+    },
+    {
+      "id": "wiki_30038",
+      "name": "Helm of the Juggernaut - Jade",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 5,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 18.34
+    },
+    {
+      "id": "wiki_30037",
+      "name": "Helm of the Juggernaut - Midas",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 5,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 18.34
+    },
+    {
+      "id": "wiki_2216",
+      "name": "Helm of the Swift Bunny",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 5,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 17.94
+    },
+    {
+      "id": "wiki_2225",
+      "name": "Hivemaster Helm",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 17.41
+    },
+    {
+      "id": "wiki_54904",
+      "name": "Hydroflow Helm",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 17.23
+    },
+    {
+      "id": "wiki_41832",
+      "name": "Legion Elite Helm",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 17.23
+    },
+    {
+      "id": "wiki_8335",
+      "name": "Pathfinder's Helm",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 17.23
+    },
+    {
+      "id": "wiki_17848",
+      "name": "Tipsy Topper",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 18.07
+    },
+    {
+      "id": "wiki_8666",
+      "name": "Tricorne of the High Seas",
+      "kind": "helm",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 16.94,
+      "afterSeconds": 16.94
+    },
+    {
+      "id": "wiki_14980",
+      "name": "Vanguard's Visage",
+      "kind": "helm",
+      "beforeWins": 4,
+      "afterWins": 5,
+      "beforeSeconds": 17.34,
+      "afterSeconds": 17.72
+    },
+    {
+      "id": "wiki_20275",
+      "name": "Brutal Buckler",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 18.5
+    },
+    {
+      "id": "wiki_20904",
+      "name": "Cavalry Lance",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 18.91
+    },
+    {
+      "id": "wiki_23520",
+      "name": "Champion's Bastion",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 17.24
+    },
+    {
+      "id": "wiki_1177",
+      "name": "Crystal Shield",
+      "kind": "shield",
+      "beforeWins": 5,
+      "afterWins": 6,
+      "beforeSeconds": 19.27,
+      "afterSeconds": 19.68
+    },
+    {
+      "id": "wiki_26263",
+      "name": "Dragon Slayer",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 19.13
+    },
+    {
+      "id": "wiki_42290",
+      "name": "Esoteric Buckler",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 18.89
+    },
+    {
+      "id": "wiki_54905",
+      "name": "Hydroflow Shield",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 22.22
+    },
+    {
+      "id": "wiki_49690",
+      "name": "Kogbold Cower Shield",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 18.11
+    },
+    {
+      "id": "wiki_41833",
+      "name": "Legion Elite Shield",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 22.22
+    },
+    {
+      "id": "wiki_9017",
+      "name": "Onyx Shield of the Mad God",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.24,
+      "afterSeconds": 19.24
+    },
+    {
+      "id": "wiki_28853",
+      "name": "Oryx's Escutcheon",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 19.32
+    },
+    {
+      "id": "wiki_8340",
+      "name": "Resounding Shield",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 22.22
+    },
+    {
+      "id": "wiki_23328",
+      "name": "Shield of Flowing Clarity",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 19.13
+    },
+    {
+      "id": "wiki_3820",
+      "name": "Shield of Jawgmur",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 15.95
+    },
+    {
+      "id": "wiki_3087",
+      "name": "Shield of Ogmur",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 15.95
+    },
+    {
+      "id": "wiki_23344",
+      "name": "Shield of Pogmur",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 5,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 17.13
+    },
+    {
+      "id": "wiki_3296",
+      "name": "Ship's Wheel Shield",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 18.64
+    },
+    {
+      "id": "wiki_65283",
+      "name": "Shockwave Shield",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 19.17
+    },
+    {
+      "id": "wiki_2624",
+      "name": "Snakeskin Shield",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 19.17
+    },
+    {
+      "id": "wiki_3395",
+      "name": "Spiteful Scutum",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 18.89
+    },
+    {
+      "id": "wiki_5035",
+      "name": "Spriteful Shield",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 18.89
+    },
+    {
+      "id": "wiki_42317",
+      "name": "Sun Star Buckler",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 18.3
+    },
+    {
+      "id": "wiki_22458",
+      "name": "Sunken Buckler",
+      "kind": "shield",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 18.3
+    },
+    {
+      "id": "wiki_17388",
+      "name": "Abyssal Insignia",
+      "kind": "seal",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.77,
+      "afterSeconds": 23.57
+    },
+    {
+      "id": "wiki_8344",
+      "name": "Advent Seal",
+      "kind": "seal",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.77,
+      "afterSeconds": 22.76
+    },
+    {
+      "id": "wiki_41668",
+      "name": "Carrot Cake Crest",
+      "kind": "seal",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.77,
+      "afterSeconds": 23.57
+    },
+    {
+      "id": "wiki_20889",
+      "name": "Doom's Emblem",
+      "kind": "seal",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.77,
+      "afterSeconds": 21.99
+    },
+    {
+      "id": "wiki_54907",
+      "name": "Hydroflow Seal",
+      "kind": "seal",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.77,
+      "afterSeconds": 22.76
+    },
+    {
+      "id": "wiki_9062",
+      "name": "Legacy Seal of the Enchanted Forest",
+      "kind": "seal",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.77,
+      "afterSeconds": 23.41
+    },
+    {
+      "id": "wiki_41835",
+      "name": "Legion Elite Seal",
+      "kind": "seal",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.77,
+      "afterSeconds": 22.76
+    },
+    {
+      "id": "wiki_579",
+      "name": "Marble Seal",
+      "kind": "seal",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.77,
+      "afterSeconds": 23.57
+    },
+    {
+      "id": "wiki_25746",
+      "name": "Sacrilege Seal",
+      "kind": "seal",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.77,
+      "afterSeconds": 23.37
+    },
+    {
+      "id": "wiki_9660",
+      "name": "Sandstone Seal",
+      "kind": "seal",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.77,
+      "afterSeconds": 22.97
+    },
+    {
+      "id": "wiki_1406",
+      "name": "Scholar's Seal",
+      "kind": "seal",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.77,
+      "afterSeconds": 22.98
+    },
+    {
+      "id": "wiki_3078",
+      "name": "Seal of Blasphemous Prayer",
+      "kind": "seal",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 22.9,
+      "afterSeconds": 22.72
+    },
+    {
+      "id": "wiki_19304",
+      "name": "Seal of Cubic Conundra",
+      "kind": "seal",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.77,
+      "afterSeconds": 23.09
+    },
+    {
+      "id": "wiki_612",
+      "name": "Seal of Divine Focus",
+      "kind": "seal",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.77,
+      "afterSeconds": 22.86
+    },
+    {
+      "id": "wiki_23346",
+      "name": "Seal of Eternal Life",
+      "kind": "seal",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.77,
+      "afterSeconds": 23.24
+    },
+    {
+      "id": "wiki_19973",
+      "name": "Seal of the Battle God",
+      "kind": "seal",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.77,
+      "afterSeconds": 22.04
+    },
+    {
+      "id": "wiki_1190",
+      "name": "Seal of the Enchanted Forest",
+      "kind": "seal",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 21.92,
+      "afterSeconds": 21.67
+    },
+    {
+      "id": "wiki_26565",
+      "name": "Symbol of the Lost",
+      "kind": "seal",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.77,
+      "afterSeconds": 23.81
+    },
+    {
+      "id": "wiki_28480",
+      "name": "Bottled Lemonade",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 16.24
+    },
+    {
+      "id": "wiki_2557",
+      "name": "Bottled Medusozoan",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 16.24
+    },
+    {
+      "id": "wiki_1200",
+      "name": "Crystallised Fang's Venom",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 16.31
+    },
+    {
+      "id": "wiki_1380",
+      "name": "Cursed Canopic Jar",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 6,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 16.05
+    },
+    {
+      "id": "wiki_8343",
+      "name": "Holly Poison",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 16.04
+    },
+    {
+      "id": "wiki_54908",
+      "name": "Hydroflow Poison",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 16.04
+    },
+    {
+      "id": "wiki_41836",
+      "name": "Legion Elite Poison",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 16.04
+    },
+    {
+      "id": "wiki_23347",
+      "name": "Lightning in a Bottle",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 16.51
+    },
+    {
+      "id": "wiki_8789",
+      "name": "Makeshift Blowpipe",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 16.31
+    },
+    {
+      "id": "wiki_15718",
+      "name": "Mighty Stein",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 6,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 16.05
+    },
+    {
+      "id": "wiki_29040",
+      "name": "Murky Toxin",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 6,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 16.05
+    },
+    {
+      "id": "wiki_23623",
+      "name": "Pandemic Poison",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 16.31
+    },
+    {
+      "id": "wiki_3033",
+      "name": "Parasitic Concoction",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 16.13
+    },
+    {
+      "id": "wiki_3181",
+      "name": "Plague Poison",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 16.31
+    },
+    {
+      "id": "wiki_18347",
+      "name": "Polarity Poison",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 4,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 15.24
+    },
+    {
+      "id": "wiki_20917",
+      "name": "Pollen Incendiary",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 15.7
+    },
+    {
+      "id": "wiki_14283",
+      "name": "Rusted Barrel",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 16.31
+    },
+    {
+      "id": "wiki_29036",
+      "name": "Sewer Cocktail",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 6,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 17.05
+    },
+    {
+      "id": "wiki_14698",
+      "name": "Spirit's Bane",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 16.13
+    },
+    {
+      "id": "wiki_65341",
+      "name": "Trick Poison",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 15.81
+    },
+    {
+      "id": "wiki_6937",
+      "name": "Tyrant's Toxin",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 4,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 15.23
+    },
+    {
+      "id": "wiki_19257",
+      "name": "Virulent Venom",
+      "kind": "poison",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 16.11,
+      "afterSeconds": 15.33
+    },
+    {
+      "id": "wiki_42303",
+      "name": "Blood Essence",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 3,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 16.49
+    },
+    {
+      "id": "wiki_49694",
+      "name": "Brain Cube",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 4,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 15.36
+    },
+    {
+      "id": "wiki_3094",
+      "name": "Cracked Crystal Skull",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 16.03
+    },
+    {
+      "id": "wiki_3300",
+      "name": "Crossbones Skull",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 16.38
+    },
+    {
+      "id": "wiki_16978",
+      "name": "Cubic Frame",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 3,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 16.49
+    },
+    {
+      "id": "wiki_21010",
+      "name": "Demon Lord's Skull",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 16.01
+    },
+    {
+      "id": "wiki_23349",
+      "name": "Epiphany Skull",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 15.31
+    },
+    {
+      "id": "wiki_7355",
+      "name": "Ever Green Skull",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 15.94
+    },
+    {
+      "id": "wiki_48129",
+      "name": "Fossilized Skull",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 16.03
+    },
+    {
+      "id": "wiki_32485",
+      "name": "Hooded Skull",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 16
+    },
+    {
+      "id": "wiki_54909",
+      "name": "Hydroflow Skull",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 6,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 17.34
+    },
+    {
+      "id": "wiki_41837",
+      "name": "Legion Elite Skull",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 6,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 17.46
+    },
+    {
+      "id": "wiki_7330",
+      "name": "Mask of Passion",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 3,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 15.97
+    },
+    {
+      "id": "wiki_5184",
+      "name": "Maw of Malignance",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 15.94
+    },
+    {
+      "id": "wiki_2525",
+      "name": "Memento Mori",
+      "kind": "skull",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 15.42,
+      "afterSeconds": 15.23
+    },
+    {
+      "id": "wiki_19350",
+      "name": "Perennial Cranium",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 15.94
+    },
+    {
+      "id": "wiki_8785",
+      "name": "Ritual Skull",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 3,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 15.97
+    },
+    {
+      "id": "wiki_13987",
+      "name": "Sealed Crystal Skull",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 15.94
+    },
+    {
+      "id": "wiki_592",
+      "name": "Skull of Corrupted Souls",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 6,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 14.86
+    },
+    {
+      "id": "wiki_2321",
+      "name": "Skull of Endless Torment",
+      "kind": "skull",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 16.24,
+      "afterSeconds": 16.28
+    },
+    {
+      "id": "wiki_53191",
+      "name": "Skull of Endless Torment",
+      "kind": "skull",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 16.54,
+      "afterSeconds": 16.27
+    },
+    {
+      "id": "wiki_8337",
+      "name": "Skull of Krampus",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 16.38
+    },
+    {
+      "id": "wiki_20893",
+      "name": "Skull of Restless Souls",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 15.85
+    },
+    {
+      "id": "wiki_1895",
+      "name": "Skullish Remains of Esben",
+      "kind": "skull",
+      "beforeWins": 5,
+      "afterWins": 6,
+      "beforeSeconds": 15.66,
+      "afterSeconds": 17.34
+    },
+    {
+      "id": "wiki_20962",
+      "name": "Blacklight Artifice",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.56
+    },
+    {
+      "id": "wiki_1202",
+      "name": "Cave Dweller Trap",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.62
+    },
+    {
+      "id": "wiki_14790",
+      "name": "Consecrated Trap",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.49
+    },
+    {
+      "id": "wiki_3100",
+      "name": "Coral Venom Trap",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.39
+    },
+    {
+      "id": "wiki_17847",
+      "name": "Deadly Keg",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.62
+    },
+    {
+      "id": "wiki_8339",
+      "name": "Greedsnatcher Trap",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.64
+    },
+    {
+      "id": "wiki_23351",
+      "name": "Helium Trap",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.63
+    },
+    {
+      "id": "wiki_2296",
+      "name": "Honeytomb Snare",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 5,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.95
+    },
+    {
+      "id": "wiki_54917",
+      "name": "Hydroflow Trap",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.64
+    },
+    {
+      "id": "wiki_41845",
+      "name": "Legion Elite Trap",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.64
+    },
+    {
+      "id": "wiki_6213",
+      "name": "Lifebringing Lotus",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.49
+    },
+    {
+      "id": "wiki_32438",
+      "name": "Lightning Rod",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.5
+    },
+    {
+      "id": "wiki_19252",
+      "name": "Mimicry Trap",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.65
+    },
+    {
+      "id": "wiki_18079",
+      "name": "Mouse Trap",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.57
+    },
+    {
+      "id": "wiki_23512",
+      "name": "Ocular Entrapment",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.87
+    },
+    {
+      "id": "wiki_25109",
+      "name": "Painbow",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.66
+    },
+    {
+      "id": "wiki_20480",
+      "name": "Rain Maker",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.74
+    },
+    {
+      "id": "wiki_26129",
+      "name": "Sulfuric Stone",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.64
+    },
+    {
+      "id": "wiki_29646",
+      "name": "Trap of the Blood Spirit",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.41
+    },
+    {
+      "id": "wiki_2880",
+      "name": "Trap of the Vile Spirit",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.41
+    },
+    {
+      "id": "wiki_37518",
+      "name": "Trap of the Vile Spirit",
+      "kind": "trap",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.41
+    },
+    {
+      "id": "wiki_23742",
+      "name": "Command Cornea",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 3,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 15.53
+    },
+    {
+      "id": "wiki_22522",
+      "name": "Cosmic Astrolabe",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 3,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 15.7
+    },
+    {
+      "id": "wiki_2111",
+      "name": "Enchantment Orb",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 3,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 17.05
+    },
+    {
+      "id": "wiki_65057",
+      "name": "Entrancing Hourglass",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 16.16
+    },
+    {
+      "id": "wiki_26276",
+      "name": "Forbidden Artifact",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 17.26
+    },
+    {
+      "id": "wiki_54919",
+      "name": "Hydroflow Orb",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 3,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 15.84
+    },
+    {
+      "id": "wiki_23352",
+      "name": "Karma Orb",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 16.43
+    },
+    {
+      "id": "wiki_41847",
+      "name": "Legion Elite Orb",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 3,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 15.84
+    },
+    {
+      "id": "wiki_8386",
+      "name": "Orb of Aether",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 16.16
+    },
+    {
+      "id": "wiki_3083",
+      "name": "Orb of Conflict",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 3,
+      "beforeSeconds": 14.94,
+      "afterSeconds": 15.31
+    },
+    {
+      "id": "wiki_30042",
+      "name": "Orb of Conflict - Chaos",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 17
+    },
+    {
+      "id": "wiki_19969",
+      "name": "Orb of Conquest",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 15.53
+    },
+    {
+      "id": "wiki_306",
+      "name": "Orb of Sweet Demise",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 16.14
+    },
+    {
+      "id": "wiki_29647",
+      "name": "Orb of Terror",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 17
+    },
+    {
+      "id": "wiki_25752",
+      "name": "Orb of the Sabbath",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 15.98
+    },
+    {
+      "id": "wiki_14992",
+      "name": "Primal Arcana",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 15.77
+    },
+    {
+      "id": "wiki_19268",
+      "name": "Scorchium Stone",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 15.42
+    },
+    {
+      "id": "wiki_8334",
+      "name": "Snowbound Orb",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 3,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 15.84
+    },
+    {
+      "id": "wiki_9058",
+      "name": "Soul of the Bearer",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 17.31,
+      "afterSeconds": 17.31
+    },
+    {
+      "id": "wiki_4302",
+      "name": "Sphere of Ice",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 16.37
+    },
+    {
+      "id": "wiki_48890",
+      "name": "Teratoma",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 16.16
+    },
+    {
+      "id": "wiki_57471",
+      "name": "Titan's Heart",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 16.69
+    },
+    {
+      "id": "wiki_43382",
+      "name": "Treasure Orb",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 3,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 15.7
+    },
+    {
+      "id": "wiki_5194",
+      "name": "Vision of Draconis",
+      "kind": "orb",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 16.48,
+      "afterSeconds": 17.26
+    },
+    {
+      "id": "wiki_22507",
+      "name": "Accursed Memory",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 23.46
+    },
+    {
+      "id": "wiki_5266",
+      "name": "Ase's Echo",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 22.88
+    },
+    {
+      "id": "wiki_601",
+      "name": "Brain of the Golem",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 23.02
+    },
+    {
+      "id": "wiki_26274",
+      "name": "Corsair's Crown Jewel",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 21.93
+    },
+    {
+      "id": "wiki_17135",
+      "name": "Daevite Progenitor",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 3,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 22.35
+    },
+    {
+      "id": "wiki_1206",
+      "name": "Echoes Prism",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 21.93
+    },
+    {
+      "id": "wiki_23353",
+      "name": "Fool's Prism",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 22.28
+    },
+    {
+      "id": "wiki_37689",
+      "name": "Fool's Prism",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 22.28
+    },
+    {
+      "id": "wiki_28830",
+      "name": "Gambler's Fate",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 22.28
+    },
+    {
+      "id": "wiki_3114",
+      "name": "Ghostly Prism",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 22.45
+    },
+    {
+      "id": "wiki_1904",
+      "name": "Heart of Gold Prism",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 23.27
+    },
+    {
+      "id": "wiki_54920",
+      "name": "Hydroflow Prism",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 23.27
+    },
+    {
+      "id": "wiki_41848",
+      "name": "Legion Elite Prism",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 23.27
+    },
+    {
+      "id": "wiki_8341",
+      "name": "Ornamental Prism",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 23.27
+    },
+    {
+      "id": "wiki_2322",
+      "name": "Prism of Dancing Swords",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 23.19
+    },
+    {
+      "id": "wiki_3394",
+      "name": "Prism of Dire Instability",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 23.02
+    },
+    {
+      "id": "wiki_21210",
+      "name": "Prism of Shattered Light",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 22.99
+    },
+    {
+      "id": "wiki_19254",
+      "name": "Prismimic",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 22.45
+    },
+    {
+      "id": "wiki_25732",
+      "name": "Pumpkin Prism",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 23.02
+    },
+    {
+      "id": "wiki_47947",
+      "name": "Rectangular Prism",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 24.95
+    },
+    {
+      "id": "wiki_26264",
+      "name": "The Heart of the Dragon",
+      "kind": "prism",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 23.02
+    },
+    {
+      "id": "wiki_19322",
+      "name": "+Tezutsu Hanabi",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 15.74
+    },
+    {
+      "id": "wiki_2556",
+      "name": "Cnidaria Rod",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 14.71
+    },
+    {
+      "id": "wiki_41739",
+      "name": "Eggsponential Scepter",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 14.71
+    },
+    {
+      "id": "wiki_3005",
+      "name": "Grotesque Scepter",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 15.19
+    },
+    {
+      "id": "wiki_310",
+      "name": "Honey Scepter",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 14.86
+    },
+    {
+      "id": "wiki_23354",
+      "name": "Honey Scepter Supreme",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 14.86
+    },
+    {
+      "id": "wiki_54910",
+      "name": "Hydroflow Scepter",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 15.01
+    },
+    {
+      "id": "wiki_41838",
+      "name": "Legion Elite Scepter",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 15.01
+    },
+    {
+      "id": "wiki_19363",
+      "name": "Lightshow Scepter",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 15.09
+    },
+    {
+      "id": "wiki_1221",
+      "name": "Lovesick Scepter",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 15.09
+    },
+    {
+      "id": "wiki_3301",
+      "name": "Parrot Skeleton Scepter",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 15.01
+    },
+    {
+      "id": "wiki_1977",
+      "name": "Scepter of Devastation",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 14.68
+    },
+    {
+      "id": "wiki_3120",
+      "name": "Scepter of Fulmination",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 14.78
+    },
+    {
+      "id": "wiki_49693",
+      "name": "Scepter of Rust",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 15.16
+    },
+    {
+      "id": "wiki_8346",
+      "name": "Scepter of Sainthood",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 15.01
+    },
+    {
+      "id": "wiki_42289",
+      "name": "Scepter of the Transgressor",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 14.68
+    },
+    {
+      "id": "wiki_19298",
+      "name": "Siege Scepter",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 14.95
+    },
+    {
+      "id": "wiki_14265",
+      "name": "Storm Caller",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 14.78
+    },
+    {
+      "id": "wiki_20466",
+      "name": "Tezutsu Hanabi",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 15.52
+    },
+    {
+      "id": "wiki_65288",
+      "name": "Totem Scepter",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 14.69
+    },
+    {
+      "id": "wiki_48139",
+      "name": "Wrathful Conduit",
+      "kind": "scepter",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 14.88
+    },
+    {
+      "id": "wiki_28847",
+      "name": "Ballistic Star",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 15.51
+    },
+    {
+      "id": "wiki_29718",
+      "name": "Clover Star",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 16.2
+    },
+    {
+      "id": "wiki_55414",
+      "name": "Combcutter Kunai",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 16.46
+    },
+    {
+      "id": "wiki_19262",
+      "name": "Crystalline Kunai",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 15.51
+    },
+    {
+      "id": "wiki_7768",
+      "name": "Daybreak Chakram",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 15.51
+    },
+    {
+      "id": "wiki_52040",
+      "name": "Enchanted Chisel",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 15.51
+    },
+    {
+      "id": "wiki_34336",
+      "name": "Eternal Star",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 15.25
+    },
+    {
+      "id": "wiki_19354",
+      "name": "Hanagasaku",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 15.84
+    },
+    {
+      "id": "wiki_54911",
+      "name": "Hydroflow Star",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 4,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 16.28
+    },
+    {
+      "id": "wiki_55409",
+      "name": "Igneous Starblossom",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 15.84
+    },
+    {
+      "id": "wiki_8345",
+      "name": "Ilex Star",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 4,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 16.28
+    },
+    {
+      "id": "wiki_26730",
+      "name": "Invocation Scroll",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 15.31
+    },
+    {
+      "id": "wiki_3821",
+      "name": "Kagebooshi",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 15.36
+    },
+    {
+      "id": "wiki_6205",
+      "name": "Kageboshi",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 15.36
+    },
+    {
+      "id": "wiki_41839",
+      "name": "Legion Elite Star",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 4,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 16.28
+    },
+    {
+      "id": "wiki_2326",
+      "name": "Midnight Star",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 15.3
+    },
+    {
+      "id": "wiki_23915",
+      "name": "Overwhelming Axehead",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 4,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 14.84
+    },
+    {
+      "id": "wiki_19291",
+      "name": "Rage Claws",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 15.27
+    },
+    {
+      "id": "wiki_14149",
+      "name": "Spider Shuriken",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 6,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 18.06
+    },
+    {
+      "id": "wiki_1421",
+      "name": "Star of Enlightenment",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 15.25
+    },
+    {
+      "id": "wiki_26277",
+      "name": "Storied Blades",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 16.46
+    },
+    {
+      "id": "wiki_39338",
+      "name": "Testiken",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 15.19
+    },
+    {
+      "id": "wiki_39339",
+      "name": "Testiken ATT",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 4,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 14.69
+    },
+    {
+      "id": "wiki_39340",
+      "name": "Testiken DEF",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 4,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 14.69
+    },
+    {
+      "id": "wiki_39341",
+      "name": "Testiken DEX",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 4,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 14.69
+    },
+    {
+      "id": "wiki_39342",
+      "name": "Testiken SPD",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 4,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 14.69
+    },
+    {
+      "id": "wiki_39343",
+      "name": "Testiken VIT",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 4,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 14.69
+    },
+    {
+      "id": "wiki_39344",
+      "name": "Testiken WIS",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 4,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 14.69
+    },
+    {
+      "id": "wiki_23355",
+      "name": "Unshuriken",
+      "kind": "shuriken",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 14.88,
+      "afterSeconds": 16.16
+    },
+    {
+      "id": "wiki_21002",
+      "name": "Amaterasu",
+      "kind": "wakizashi",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 16.44,
+      "afterSeconds": 16.42
+    },
+    {
+      "id": "wiki_5164",
+      "name": "Esben's Twisted Heart",
+      "kind": "wakizashi",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 16.44,
+      "afterSeconds": 16.82
+    },
+    {
+      "id": "wiki_1418",
+      "name": "Fractured Gemstone Wakizashi",
+      "kind": "wakizashi",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 16.44,
+      "afterSeconds": 16.98
+    },
+    {
+      "id": "wiki_54913",
+      "name": "Hydroflow Wakizashi",
+      "kind": "wakizashi",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 16.44,
+      "afterSeconds": 16.6
+    },
+    {
+      "id": "wiki_50307",
+      "name": "Kogbold Multitool",
+      "kind": "wakizashi",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 16.44,
+      "afterSeconds": 16.31
+    },
+    {
+      "id": "wiki_41841",
+      "name": "Legion Elite Wakizashi",
+      "kind": "wakizashi",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 16.44,
+      "afterSeconds": 16.6
+    },
+    {
+      "id": "wiki_23357",
+      "name": "NSFWakizashi",
+      "kind": "wakizashi",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 16.44,
+      "afterSeconds": 16.54
+    },
+    {
+      "id": "wiki_613",
+      "name": "Peppermint Wakizashi",
+      "kind": "wakizashi",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 16.44,
+      "afterSeconds": 16.6
+    },
+    {
+      "id": "wiki_1407",
+      "name": "Ronin's Wakizashi",
+      "kind": "wakizashi",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 16.44,
+      "afterSeconds": 18.21
+    },
+    {
+      "id": "wiki_3900",
+      "name": "Ryu's Blade",
+      "kind": "wakizashi",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 16.44,
+      "afterSeconds": 16.29
+    },
+    {
+      "id": "wiki_6206",
+      "name": "Sakura Wakizashi",
+      "kind": "wakizashi",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 16.44,
+      "afterSeconds": 16.29
+    },
+    {
+      "id": "wiki_17187",
+      "name": "Sentinel's Sidearm",
+      "kind": "wakizashi",
+      "beforeWins": 4,
+      "afterWins": 5,
+      "beforeSeconds": 16.44,
+      "afterSeconds": 15.46
+    },
+    {
+      "id": "wiki_21120",
+      "name": "Shadow Serpent Sidearm",
+      "kind": "wakizashi",
+      "beforeWins": 4,
+      "afterWins": 5,
+      "beforeSeconds": 16.44,
+      "afterSeconds": 16.23
+    },
+    {
+      "id": "wiki_26574",
+      "name": "Sublimation Sidearm",
+      "kind": "wakizashi",
+      "beforeWins": 4,
+      "afterWins": 2,
+      "beforeSeconds": 16.44,
+      "afterSeconds": 16.63
+    },
+    {
+      "id": "wiki_34339",
+      "name": "Sweetcut Wakizashi",
+      "kind": "wakizashi",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 16.44,
+      "afterSeconds": 16.98
+    },
+    {
+      "id": "wiki_9152",
+      "name": "Wakizashi of Crossing Fires",
+      "kind": "wakizashi",
+      "beforeWins": 4,
+      "afterWins": 5,
+      "beforeSeconds": 16.44,
+      "afterSeconds": 16.68
+    },
+    {
+      "id": "wiki_8994",
+      "name": "Wakizashi of Eastern Winds",
+      "kind": "wakizashi",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 16.44,
+      "afterSeconds": 16.29
+    },
+    {
+      "id": "wiki_21221",
+      "name": "Watarimono",
+      "kind": "wakizashi",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 16.44,
+      "afterSeconds": 16.98
+    },
+    {
+      "id": "wiki_19962",
+      "name": "Angel's Fanfare",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.7
+    },
+    {
+      "id": "wiki_19971",
+      "name": "Chief's War Horn",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.68
+    },
+    {
+      "id": "wiki_1780",
+      "name": "Ghost Ship's Bell",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.05
+    },
+    {
+      "id": "wiki_54918",
+      "name": "Hydroflow Singing Glass",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.41
+    },
+    {
+      "id": "wiki_52033",
+      "name": "Inferno Pick",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.7
+    },
+    {
+      "id": "wiki_26258",
+      "name": "Joker Timbrel",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.05
+    },
+    {
+      "id": "wiki_41846",
+      "name": "Legion Elite Drums",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.41
+    },
+    {
+      "id": "wiki_14207",
+      "name": "Lullaby",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.38
+    },
+    {
+      "id": "wiki_23916",
+      "name": "Motivational Megaphone",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 12.79
+    },
+    {
+      "id": "wiki_14981",
+      "name": "Noble Mandolin",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 12.77
+    },
+    {
+      "id": "wiki_47998",
+      "name": "Obsidian Lyre",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 12.82
+    },
+    {
+      "id": "wiki_12167",
+      "name": "Oryxmas Carol",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.41
+    },
+    {
+      "id": "wiki_19951",
+      "name": "Pharaoh's Requiem",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 14.26
+    },
+    {
+      "id": "wiki_18074",
+      "name": "Piper's Pan Flute",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.48
+    },
+    {
+      "id": "wiki_47105",
+      "name": "Sacred Lute",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.32
+    },
+    {
+      "id": "wiki_19950",
+      "name": "Snake Charmer Pungi",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.06
+    },
+    {
+      "id": "wiki_20605",
+      "name": "Taiko Drums",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.27
+    },
+    {
+      "id": "wiki_44916",
+      "name": "The Triangle",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 12.78
+    },
+    {
+      "id": "wiki_14354",
+      "name": "Thundering Chorus",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.27
+    },
+    {
+      "id": "wiki_19948",
+      "name": "Wavecrest Concertina",
+      "kind": "lute",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.05
+    },
+    {
+      "id": "wiki_14227",
+      "name": "B.O.O.M.",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 17.26
+    },
+    {
+      "id": "wiki_48140",
+      "name": "Big Berdtha",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 1,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 15.66
+    },
+    {
+      "id": "wiki_41764",
+      "name": "Chocolate Egg Mace",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 1,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 16.17
+    },
+    {
+      "id": "wiki_14336",
+      "name": "Crystal Mace",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 1,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 16.11
+    },
+    {
+      "id": "wiki_26259",
+      "name": "Dragon Mace",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 1,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 16.11
+    },
+    {
+      "id": "wiki_14780",
+      "name": "Ghastly Mace",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 17.26
+    },
+    {
+      "id": "wiki_10303",
+      "name": "Hivemind Mace",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 15.36
+    },
+    {
+      "id": "wiki_54921",
+      "name": "Hydroflow Mace",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 16.32
+    },
+    {
+      "id": "wiki_10304",
+      "name": "Incubation Mace",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 15.87
+    },
+    {
+      "id": "wiki_41849",
+      "name": "Legion Elite Mace",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 16.32
+    },
+    {
+      "id": "wiki_10291",
+      "name": "Mace of the Celestial Forest",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 16.44
+    },
+    {
+      "id": "wiki_14212",
+      "name": "Mace of the Depths",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 3,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 17.98
+    },
+    {
+      "id": "wiki_14341",
+      "name": "Mace of the North Pole",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 16.32
+    },
+    {
+      "id": "wiki_20906",
+      "name": "Mace of the Pumpkin Effigy",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 15.49
+    },
+    {
+      "id": "wiki_42014",
+      "name": "Mace of the Woods",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 1,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 15.81
+    },
+    {
+      "id": "wiki_14245",
+      "name": "Mechanical Mace",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 16.01
+    },
+    {
+      "id": "wiki_7433",
+      "name": "Minotaur Mace",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 15.87
+    },
+    {
+      "id": "wiki_14976",
+      "name": "Peacekeeper",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 15.75
+    },
+    {
+      "id": "wiki_18499",
+      "name": "Recursion Mace",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 15.66
+    },
+    {
+      "id": "wiki_14219",
+      "name": "Stonemould Mace",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 1,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 16.17
+    },
+    {
+      "id": "wiki_65339",
+      "name": "Trick Mace",
+      "kind": "mace",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 15.68
+    },
+    {
+      "id": "wiki_1381",
+      "name": "An Ancient's Embrace",
+      "kind": "sheath",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.17,
+      "afterSeconds": 23.39
+    },
+    {
+      "id": "wiki_14660",
+      "name": "Blitz Sheath",
+      "kind": "sheath",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.17,
+      "afterSeconds": 22.39
+    },
+    {
+      "id": "wiki_3851",
+      "name": "Cavalry Lance",
+      "kind": "sheath",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.17,
+      "afterSeconds": 22.66
+    },
+    {
+      "id": "wiki_20606",
+      "name": "Elegant Parasol",
+      "kind": "sheath",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.17,
+      "afterSeconds": 22.23
+    },
+    {
+      "id": "wiki_54915",
+      "name": "Hydroflow Sheath",
+      "kind": "sheath",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.17,
+      "afterSeconds": 21.98
+    },
+    {
+      "id": "wiki_14816",
+      "name": "Irradiance Sheath",
+      "kind": "sheath",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.17,
+      "afterSeconds": 21.98
+    },
+    {
+      "id": "wiki_14817",
+      "name": "Kaiken",
+      "kind": "sheath",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.17,
+      "afterSeconds": 21.84
+    },
+    {
+      "id": "wiki_14819",
+      "name": "Labyrinth Dweller's Sheath",
+      "kind": "sheath",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.17,
+      "afterSeconds": 22.39
+    },
+    {
+      "id": "wiki_41843",
+      "name": "Legion Elite Sheath",
+      "kind": "sheath",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.17,
+      "afterSeconds": 21.98
+    },
+    {
+      "id": "wiki_14867",
+      "name": "Loch Sheath",
+      "kind": "sheath",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.17,
+      "afterSeconds": 22.06
+    },
+    {
+      "id": "wiki_14661",
+      "name": "Paper Machete",
+      "kind": "sheath",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.17,
+      "afterSeconds": 23.04
+    },
+    {
+      "id": "wiki_14380",
+      "name": "Pyro Sheath",
+      "kind": "sheath",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.17,
+      "afterSeconds": 22.39
+    },
+    {
+      "id": "wiki_14820",
+      "name": "Quartermaster Scabbard",
+      "kind": "sheath",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.17,
+      "afterSeconds": 22.12
+    },
+    {
+      "id": "wiki_5189",
+      "name": "S.H.E.A.T.H.",
+      "kind": "sheath",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.17,
+      "afterSeconds": 22.18
+    },
+    {
+      "id": "wiki_26275",
+      "name": "Sheath of Thunderous Rites",
+      "kind": "sheath",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.17,
+      "afterSeconds": 22.18
+    },
+    {
+      "id": "wiki_14662",
+      "name": "Snowman's Sheath",
+      "kind": "sheath",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.17,
+      "afterSeconds": 21.98
+    },
+    {
+      "id": "wiki_14818",
+      "name": "Volcanic Sheath",
+      "kind": "sheath",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.17,
+      "afterSeconds": 23.39
+    },
+    {
+      "id": "wiki_31648",
+      "name": "Crystalline Sigil",
+      "kind": "sigil",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 21.47,
+      "afterSeconds": 21.19
+    },
+    {
+      "id": "wiki_31611",
+      "name": "Draconic Insignia",
+      "kind": "sigil",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 21.47,
+      "afterSeconds": 21.36
+    },
+    {
+      "id": "wiki_31650",
+      "name": "Hawkmaster Sigil",
+      "kind": "sigil",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 21.47,
+      "afterSeconds": 21.25
+    },
+    {
+      "id": "wiki_54923",
+      "name": "Hydroflow Sigil",
+      "kind": "sigil",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 21.47,
+      "afterSeconds": 21.49
+    },
+    {
+      "id": "wiki_48831",
+      "name": "Hyper Sigil",
+      "kind": "sigil",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 21.47,
+      "afterSeconds": 20.89
+    },
+    {
+      "id": "wiki_63885",
+      "name": "Jurassic Sigil",
+      "kind": "sigil",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 21.47,
+      "afterSeconds": 21.86
+    },
+    {
+      "id": "wiki_31652",
+      "name": "Legion Elite Sigil",
+      "kind": "sigil",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 21.47,
+      "afterSeconds": 21.49
+    },
+    {
+      "id": "wiki_31649",
+      "name": "Mechraptor Sigil",
+      "kind": "sigil",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 21.47,
+      "afterSeconds": 21.86
+    },
+    {
+      "id": "wiki_31603",
+      "name": "Sharktooth Sigil",
+      "kind": "sigil",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 21.47,
+      "afterSeconds": 24.67
+    },
+    {
+      "id": "wiki_31653",
+      "name": "Sigil of the Reindeer",
+      "kind": "sigil",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 21.47,
+      "afterSeconds": 21.49
+    },
+    {
+      "id": "wiki_31651",
+      "name": "Sigil of the Rubber Duck",
+      "kind": "sigil",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 21.47,
+      "afterSeconds": 21.88
+    },
+    {
+      "id": "wiki_31607",
+      "name": "Silken Sigil",
+      "kind": "sigil",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 21.47,
+      "afterSeconds": 24.21
+    },
+    {
+      "id": "wiki_48144",
+      "name": "Skeletal Sigilpede",
+      "kind": "sigil",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 21.47,
+      "afterSeconds": 21.94
+    },
+    {
+      "id": "wiki_48199",
+      "name": "Swampy Sigil",
+      "kind": "sigil",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 21.47,
+      "afterSeconds": 21.18
+    },
+    {
+      "id": "wiki_31612",
+      "name": "Swarmlord's Sigil",
+      "kind": "sigil",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 21.47,
+      "afterSeconds": 20.89
+    },
+    {
+      "id": "wiki_2646",
+      "name": "Cloak of Shadows",
+      "kind": "tiered reference",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 25.96,
+      "afterSeconds": 25.96
+    },
+    {
+      "id": "wiki_8280",
+      "name": "Cloak of Nightmares",
+      "kind": "tiered reference",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 25.96,
+      "afterSeconds": 25.96
+    },
+    {
+      "id": "wiki_2657",
+      "name": "Magic Quiver",
+      "kind": "tiered reference",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.47,
+      "afterSeconds": 13.47
+    },
+    {
+      "id": "wiki_8279",
+      "name": "Quiver of the Autumn King",
+      "kind": "tiered reference",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.27,
+      "afterSeconds": 13.27
+    },
+    {
+      "id": "wiki_2606",
+      "name": "Fire Spray Spell",
+      "kind": "tiered reference",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 14.79,
+      "afterSeconds": 14.79
+    },
+    {
+      "id": "wiki_8277",
+      "name": "Burning Retribution Spell",
+      "kind": "tiered reference",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 13.78,
+      "afterSeconds": 13.78
+    },
+    {
+      "id": "wiki_2609",
+      "name": "Healing Tome",
+      "kind": "tiered reference",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 23.47,
+      "afterSeconds": 23.47
+    },
+    {
+      "id": "wiki_8278",
+      "name": "Tome of Hallowed Language",
+      "kind": "tiered reference",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 25.5,
+      "afterSeconds": 25.5
+    },
+    {
+      "id": "wiki_2662",
+      "name": "Combat Helm",
+      "kind": "tiered reference",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 17.78,
+      "afterSeconds": 17.78
+    },
+    {
+      "id": "wiki_8281",
+      "name": "Helm of the Tribune",
+      "kind": "tiered reference",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 17.45,
+      "afterSeconds": 17.45
+    },
+    {
+      "id": "wiki_2568",
+      "name": "Wooden Shield",
+      "kind": "tiered reference",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 19.31,
+      "afterSeconds": 19.31
+    },
+    {
+      "id": "wiki_8282",
+      "name": "Shield of Orcish Regalia",
+      "kind": "tiered reference",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 19.18,
+      "afterSeconds": 19.18
+    },
+    {
+      "id": "wiki_2642",
+      "name": "Seal of the Initiate",
+      "kind": "tiered reference",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.57,
+      "afterSeconds": 23.57
+    },
+    {
+      "id": "wiki_8283",
+      "name": "Seal of Invocation",
+      "kind": "tiered reference",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.77,
+      "afterSeconds": 23.77
+    },
+    {
+      "id": "wiki_2723",
+      "name": "Centipede Poison",
+      "kind": "tiered reference",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 16.34,
+      "afterSeconds": 16.34
+    },
+    {
+      "id": "wiki_8284",
+      "name": "Necrofish Poison",
+      "kind": "tiered reference",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 16.24,
+      "afterSeconds": 16.24
+    },
+    {
+      "id": "wiki_2730",
+      "name": "Necrotic Skull",
+      "kind": "tiered reference",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 16.14,
+      "afterSeconds": 16.14
+    },
+    {
+      "id": "wiki_8285",
+      "name": "Mindwaster Skull",
+      "kind": "tiered reference",
+      "beforeWins": 5,
+      "afterWins": 5,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 15.31
+    },
+    {
+      "id": "wiki_2737",
+      "name": "Hunting Trap",
+      "kind": "tiered reference",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.67,
+      "afterSeconds": 13.67
+    },
+    {
+      "id": "wiki_27313",
+      "name": "Testing Trap",
+      "kind": "tiered reference",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.67,
+      "afterSeconds": 13.67
+    },
+    {
+      "id": "wiki_8286",
+      "name": "Depthchaser Trap",
+      "kind": "tiered reference",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 13.66,
+      "afterSeconds": 13.66
+    },
+    {
+      "id": "wiki_2788",
+      "name": "Stasis Orb",
+      "kind": "tiered reference",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 16.44,
+      "afterSeconds": 16.44
+    },
+    {
+      "id": "wiki_8287",
+      "name": "Dimensiongate Orb",
+      "kind": "tiered reference",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 16.39,
+      "afterSeconds": 16.39
+    },
+    {
+      "id": "wiki_2787",
+      "name": "Decoy Prism",
+      "kind": "tiered reference",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 22.28
+    },
+    {
+      "id": "wiki_8288",
+      "name": "Prism of Reveries",
+      "kind": "tiered reference",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 22.28,
+      "afterSeconds": 22.28
+    },
+    {
+      "id": "wiki_2789",
+      "name": "Lightning Scepter",
+      "kind": "tiered reference",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.01,
+      "afterSeconds": 15.01
+    },
+    {
+      "id": "wiki_8289",
+      "name": "Scepter of the Firmament",
+      "kind": "tiered reference",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.23,
+      "afterSeconds": 15.23
+    },
+    {
+      "id": "wiki_3155",
+      "name": "Basic Star",
+      "kind": "tiered reference",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 16.2,
+      "afterSeconds": 16.2
+    },
+    {
+      "id": "wiki_8290",
+      "name": "Dynastic Star",
+      "kind": "tiered reference",
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeSeconds": 15.31,
+      "afterSeconds": 15.31
+    },
+    {
+      "id": "wiki_6826",
+      "name": "Simple Wakizashi",
+      "kind": "tiered reference",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 17.18,
+      "afterSeconds": 17.18
+    },
+    {
+      "id": "wiki_8291",
+      "name": "Virtuous Wakizashi",
+      "kind": "tiered reference",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 16.43,
+      "afterSeconds": 16.43
+    },
+    {
+      "id": "wiki_53233",
+      "name": "Novice's Lute",
+      "kind": "tiered reference",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.63,
+      "afterSeconds": 13.63
+    },
+    {
+      "id": "wiki_53240",
+      "name": "Nebular Lute",
+      "kind": "tiered reference",
+      "beforeWins": 4,
+      "afterWins": 4,
+      "beforeSeconds": 13.34,
+      "afterSeconds": 13.34
+    },
+    {
+      "id": "wiki_14403",
+      "name": "Summoning Mace",
+      "kind": "tiered reference",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.67,
+      "afterSeconds": 15.67
+    },
+    {
+      "id": "wiki_14410",
+      "name": "Grandmaster Mace",
+      "kind": "tiered reference",
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeSeconds": 15.25,
+      "afterSeconds": 15.25
+    },
+    {
+      "id": "wiki_14608",
+      "name": "Slashing Sheath",
+      "kind": "tiered reference",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.17,
+      "afterSeconds": 23.17
+    },
+    {
+      "id": "wiki_14615",
+      "name": "Sonic Wave Sheath",
+      "kind": "tiered reference",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 23.17,
+      "afterSeconds": 23.17
+    },
+    {
+      "id": "wiki_31594",
+      "name": "Sigil of the Chicken",
+      "kind": "tiered reference",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 21.94,
+      "afterSeconds": 21.94
+    },
+    {
+      "id": "wiki_31602",
+      "name": "Sigil of the Rhino",
+      "kind": "tiered reference",
+      "beforeWins": 6,
+      "afterWins": 6,
+      "beforeSeconds": 20.23,
+      "afterSeconds": 20.23
+    }
+  ],
+  "tieredReferenceFightsIdentical": 312
+}

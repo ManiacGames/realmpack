@@ -30,32 +30,7 @@ jobs:
       - name: Check JavaScript and game behavior
         run: |
           for file in game/*.js; do node --check "$file"; done
-          node game/tests/test-stacks-adjacency.cjs
-          node game/tests/test-attribute-rings.cjs
-          node game/tests/test-consumable-rework.cjs
-          node game/tests/test-compendium-availability.cjs
-          node game/tests/test-combat-geometry.cjs
-          node game/tests/test-event-art.cjs
-          node game/tests/test-battle-floors.cjs
-          node game/tests/test-shop-layout.cjs
-          node game/tests/test-shop-specialists.cjs
-          node game/tests/test-inventory-interaction.cjs
-          node game/tests/test-stash-capacity.cjs
-          node game/tests/test-healing-consumables.cjs
-          node game/tests/test-local-haste.cjs
-          node game/tests/test-item-progression.cjs
-          node game/tests/test-class-reworks.cjs
-          node game/tests/test-event-trades.cjs
-          node game/tests/test-enchantments.cjs
-          node game/tests/test-provisions.cjs
-          node game/tests/test-ut-st-identities.cjs
-          node game/tests/test-ut-st-pass-two.cjs
-          node game/tests/test-sword-identities.cjs
-          node game/tests/test-dagger-update.cjs
-          node game/tests/test-staff-identities.cjs
-          node game/tests/test-wand-identities.cjs
-          node game/tests/test-katana-identities.cjs
-          node game/tests/test-dungeon-difficulty.cjs
+          for test in game/tests/test-*.cjs; do node "$test"; done
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

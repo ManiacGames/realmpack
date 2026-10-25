@@ -1,6 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict'),crypto=require('node:crypto'),{ctx,vm}=require('./load-game.cjs');
-assert.equal(crypto.createHash('sha256').update(vm.runInContext(`JSON.stringify(DATA.items.filter(d=>!(d.group==='armor'&&['UT','ST'].includes(d.tier))))`,ctx)).digest('hex'),'f1421f2e3694ef9ad7df81ea13dc69c2400a8b7af84187569fdc3e8e012771ec');
+assert.equal(crypto.createHash('sha256').update(vm.runInContext(`JSON.stringify(DATA.items.filter(d=>!(d.group==='ability'&&['UT','ST'].includes(d.tier))))`,ctx)).digest('hex'),'9ff29b0d94e0949816fe4a622a61807a5f4ccf13f76b723ca63061821f4830d7');
 assert.equal(crypto.createHash('sha256').update(vm.runInContext(`JSON.stringify(DATA.items.filter(d=>d.group==='armor').map(d=>[d.id,d.name,d.source,d.w,d.h,d.price,d.classes,d.isShiny,d.baseId,d.lootExcluded,d.legacyUnavailable,d.realmSet,d.realmSlot]))`,ctx)).digest('hex'),'8bde40704eb5cbdab1410e02f7f229eaa25943a8ef519ef987c5c02da9f27076');
 assert.equal(require('../../docs/armor-source-facts.json').items.length,250);
 console.log(vm.runInContext(`(()=>{

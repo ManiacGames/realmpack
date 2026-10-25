@@ -1,0 +1,5288 @@
+{
+  "inspected": "2026-10-25",
+  "source": "Realm.wiki item game data. Numerical facts/identifiers; tooltip snippets are local research only.",
+  "items": [
+    {
+      "id": "wiki_2646",
+      "name": "Cloak of Shadows",
+      "kind": "cloak",
+      "source": "https://realm.wiki/item?id=2646",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Cloak",
+      "mana": "70",
+      "mana2": null,
+      "cooldown": "5.5",
+      "shots": 1,
+      "equip": [],
+      "activate": [
+        {
+          "value": "Sneak",
+          "ConditionEffect": "Invisible",
+          "Duration": "5.0",
+          "CancelTime": "1"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "RequiredConditions": "LethalStrike",
+          "Cooldown": "0.1",
+          "MinDistance": "4.6",
+          "MaxDistance": "4.6",
+          "ManaCost": "2",
+          "OffsetAngle": "9",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x4617"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "RequiredConditions": "LethalStrike",
+          "Cooldown": "0.1",
+          "MinDistance": "4.6",
+          "MaxDistance": "4.6",
+          "ManaCost": "2",
+          "OffsetAngle": "-9",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x4617"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0xa56"
+        },
+        {
+          "key": "Object id",
+          "value": "Cloak of Shadows"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Cloak"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/fire_nova"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "70"
+        },
+        {
+          "key": "OnConditionEndActivate",
+          "value": "LethalStrike",
+          "Proc": "1",
+          "RequiredCondition": "Invisible",
+          "Duration": "2.4",
+          "IgnoreFlat": "20",
+          "IgnorePerc": "0.20",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "34",
+          "StatModFlat": "1",
+          "StatModPerc": "0.005"
+        },
+        {
+          "key": "Cooldown",
+          "value": "5.5"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nCLOAK\nTIERED\nLOOTABLE\nT0\nMPCOST\nTRADEABLE\nCOOLDOWN\nAPPLY_STAT_EFF\nSTATMOD"
+        }
+      ]
+    },
+    {
+      "id": "wiki_8280",
+      "name": "Cloak of Nightmares",
+      "kind": "cloak",
+      "source": "https://realm.wiki/item?id=8280",
+      "tier": "T7",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Cloak",
+      "mana": "100",
+      "mana2": null,
+      "cooldown": "5.5",
+      "shots": 1,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "SPD",
+          "Amount": "6"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "DEX",
+          "Amount": "6"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXHP",
+          "Amount": "40"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "40"
+        }
+      ],
+      "activate": [
+        {
+          "value": "Sneak",
+          "ConditionEffect": "Invisible",
+          "Duration": "5.0",
+          "CancelTime": "1"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "RequiredConditions": "LethalStrike",
+          "Cooldown": "0.1",
+          "MinDistance": "4.6",
+          "MaxDistance": "4.6",
+          "ManaCost": "2",
+          "OffsetAngle": "9",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x4614"
+        },
+        {
+          "value": "BulletCreate",
+          "Proc": "1",
+          "TargetMouse": "true",
+          "RequiredConditions": "LethalStrike",
+          "Cooldown": "0.1",
+          "MinDistance": "4.6",
+          "MaxDistance": "4.6",
+          "ManaCost": "2",
+          "OffsetAngle": "-9",
+          "NumShots": "1",
+          "GapAngle": "0",
+          "GapTiles": "0",
+          "ArcGap": "0",
+          "Type": "0x4614"
+        }
+      ],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x2058"
+        },
+        {
+          "key": "Object id",
+          "value": "Cloak of Nightmares"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Cloak"
+        },
+        {
+          "key": "Tier",
+          "value": "7"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/fire_nova"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Red Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "100"
+        },
+        {
+          "key": "OnConditionEndActivate",
+          "value": "LethalStrike",
+          "Proc": "1",
+          "RequiredCondition": "Invisible",
+          "Duration": "2.4",
+          "IgnoreFlat": "80",
+          "IgnorePerc": "0.55",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "34",
+          "StatModFlat": "3",
+          "StatModPerc": "0.005"
+        },
+        {
+          "key": "Cooldown",
+          "value": "5.5"
+        },
+        {
+          "key": "Soulbound",
+          "value": true
+        },
+        {
+          "key": "FeedPower",
+          "value": "570"
+        },
+        {
+          "key": "XPBonus",
+          "value": "8"
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nCLOAK\nTIERED\nLOOTABLE\nT7\nT7_ABILITY\nMPCOST\nXPBONUS\nCOOLDOWN\nAPPLY_STAT_EFF\nSTATMOD"
+        },
+        {
+          "key": "EnchantmentSlots",
+          "value": true,
+          "SlotChance": "0.5,0.375,0.25,0.125",
+          "SeasonalSlotMod": "1.05",
+          "ForgeSlotMod": "0.8",
+          "DustType": "purpleDust",
+          "DustAmounts": "50,65,80,100",
+          "EnchantmentList": "Default Enchantment Pool"
+        }
+      ]
+    },
+    {
+      "id": "wiki_2657",
+      "name": "Magic Quiver",
+      "kind": "quiver",
+      "source": "https://realm.wiki/item?id=2657",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Quiver",
+      "mana": "45",
+      "mana2": null,
+      "cooldown": null,
+      "shots": "2",
+      "equip": [],
+      "activate": [
+        {
+          "value": "Shoot",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "34",
+          "StatModDamage": "0.5"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Red Arrow",
+          "Speed": "150",
+          "MinDamage": "35",
+          "MaxDamage": "50",
+          "LifetimeMS": "1000",
+          "Size": "150",
+          "ConditionEffect": {
+            "value": "Paralyzed",
+            "Duration": "3"
+          },
+          "DamageMultiplier": {
+            "value": true,
+            "Mult": "1.1",
+            "Duration": "3"
+          },
+          "MultiHit": true,
+          "PassesCover": true,
+          "ParticleTrail": true
+        }
+      ],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0xa61"
+        },
+        {
+          "key": "Object id",
+          "value": "Magic Quiver"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Quiver"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/fire_spray"
+        },
+        {
+          "key": "ConditionEffect",
+          "value": "Paralyzed",
+          "Duration": "3"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "ArcGap",
+          "value": "7"
+        },
+        {
+          "key": "NumProjectiles",
+          "value": "2"
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "45"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nQUIVER\nTIERED\nLOOTABLE\nT0\nMPCOST\nTRADEABLE\nSTATMOD"
+        }
+      ]
+    },
+    {
+      "id": "wiki_8279",
+      "name": "Quiver of the Autumn King",
+      "kind": "quiver",
+      "source": "https://realm.wiki/item?id=8279",
+      "tier": "T7",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Quiver",
+      "mana": "80",
+      "mana2": null,
+      "cooldown": null,
+      "shots": "4",
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEX",
+          "Amount": "7"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXHP",
+          "Amount": "40"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "40"
+        }
+      ],
+      "activate": [
+        {
+          "value": "Shoot",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "34",
+          "StatModDamage": "4.5"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Crimson Arrow",
+          "Speed": "150",
+          "MinDamage": "350",
+          "MaxDamage": "390",
+          "LifetimeMS": "1000",
+          "Size": "150",
+          "ConditionEffect": {
+            "value": "Paralyzed",
+            "Duration": "3"
+          },
+          "DamageMultiplier": {
+            "value": true,
+            "Mult": "1.1",
+            "Duration": "3"
+          },
+          "MultiHit": true,
+          "PassesCover": true,
+          "ParticleTrail": true
+        }
+      ],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x2057"
+        },
+        {
+          "key": "Object id",
+          "value": "Quiver of the Autumn King"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Quiver"
+        },
+        {
+          "key": "Tier",
+          "value": "7"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/fire_spray"
+        },
+        {
+          "key": "ConditionEffect",
+          "value": "Paralyzed",
+          "Duration": "3"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "ArcGap",
+          "value": "7"
+        },
+        {
+          "key": "NumProjectiles",
+          "value": "4"
+        },
+        {
+          "key": "BagType",
+          "value": "Red Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "80"
+        },
+        {
+          "key": "Soulbound",
+          "value": true
+        },
+        {
+          "key": "FeedPower",
+          "value": "570"
+        },
+        {
+          "key": "XPBonus",
+          "value": "8"
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nQUIVER\nTIERED\nLOOTABLE\nT7\nT7_ABILITY\nMPCOST\nXPBONUS\nSTATMOD"
+        },
+        {
+          "key": "EnchantmentSlots",
+          "value": true,
+          "SlotChance": "0.5,0.375,0.25,0.125",
+          "SeasonalSlotMod": "1.05",
+          "ForgeSlotMod": "0.8",
+          "DustType": "purpleDust",
+          "DustAmounts": "50,65,80,100",
+          "EnchantmentList": "Default Enchantment Pool"
+        }
+      ]
+    },
+    {
+      "id": "wiki_2606",
+      "name": "Fire Spray Spell",
+      "kind": "spell",
+      "source": "https://realm.wiki/item?id=2606",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Spell",
+      "mana": "20",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [],
+      "activate": [
+        {
+          "value": "BulletNova",
+          "NumShots": "16",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "42",
+          "StatModDamage": "0.5",
+          "StatModNumShots": "0.0667"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Fire Bolt",
+          "Speed": "160",
+          "MinDamage": "20",
+          "MaxDamage": "25",
+          "LifetimeMS": "1000"
+        }
+      ],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0xa2e"
+        },
+        {
+          "key": "Object id",
+          "value": "Fire Spray Spell"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Spell"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/fire_spray"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "20"
+        },
+        {
+          "key": "MaxProjSpawnDist",
+          "value": "13"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nSPELL\nSTATMOD\nTIERED\nLOOTABLE\nT0\nMPCOST\nTRADEABLE"
+        }
+      ]
+    },
+    {
+      "id": "wiki_8277",
+      "name": "Burning Retribution Spell",
+      "kind": "spell",
+      "source": "https://realm.wiki/item?id=8277",
+      "tier": "T7",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Spell",
+      "mana": "90",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "WIS",
+          "Amount": "7"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXHP",
+          "Amount": "40"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "40"
+        }
+      ],
+      "activate": [
+        {
+          "value": "BulletNova",
+          "NumShots": "16",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "42",
+          "StatModDamage": "2.25",
+          "StatModNumShots": "0.0667"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Red Bolt",
+          "Speed": "160",
+          "MinDamage": "115",
+          "MaxDamage": "220",
+          "LifetimeMS": "1000"
+        }
+      ],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x2055"
+        },
+        {
+          "key": "Object id",
+          "value": "Burning Retribution Spell"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Spell"
+        },
+        {
+          "key": "Tier",
+          "value": "7"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/magic_nova"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Red Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "90"
+        },
+        {
+          "key": "MaxProjSpawnDist",
+          "value": "13"
+        },
+        {
+          "key": "Soulbound",
+          "value": true
+        },
+        {
+          "key": "FeedPower",
+          "value": "570"
+        },
+        {
+          "key": "XPBonus",
+          "value": "8"
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nSPELL\nSTATMOD\nTIERED\nLOOTABLE\nT7\nT7_ABILITY\nMPCOST\nXPBONUS"
+        },
+        {
+          "key": "EnchantmentSlots",
+          "value": true,
+          "SlotChance": "0.5,0.375,0.25,0.125",
+          "SeasonalSlotMod": "1.05",
+          "ForgeSlotMod": "0.8",
+          "DustType": "purpleDust",
+          "DustAmounts": "50,65,80,100",
+          "EnchantmentList": "Default Enchantment Pool"
+        }
+      ]
+    },
+    {
+      "id": "wiki_2609",
+      "name": "Healing Tome",
+      "kind": "tome",
+      "source": "https://realm.wiki/item?id=2609",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Tome",
+      "mana": "120",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [],
+      "activate": [
+        {
+          "value": "ConditionEffectAura",
+          "Amount": "050",
+          "StatModAmount": "0.3300",
+          "Range": "6.0",
+          "StatModRadius": "0.050",
+          "Effect": "Healing",
+          "Duration": "10",
+          "Color": "0xFFFFCC",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "70",
+          "StatModDuration": "0"
+        },
+        {
+          "value": "DamageNova",
+          "MinDamage": "160",
+          "MaxDamage": "160",
+          "StatModDamage": "4.80",
+          "ActivationCount": "2",
+          "Time": "0.4",
+          "Radius": "2.5",
+          "StatModActivationCount": "0",
+          "StatModRadius": "0",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "70",
+          "Color": "0xFFFF00"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x0a31"
+        },
+        {
+          "key": "Object id",
+          "value": "Healing Tome"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Tome"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/light_heal"
+        },
+        {
+          "key": "MpCost",
+          "value": "120"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nTOME\nTIERED\nLOOTABLE\nT0\nMPCOST\nTRADEABLE\nAPPLY_STAT_EFF\nSTATMOD"
+        }
+      ]
+    },
+    {
+      "id": "wiki_8278",
+      "name": "Tome of Hallowed Language",
+      "kind": "tome",
+      "source": "https://realm.wiki/item?id=8278",
+      "tier": "T7",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Tome",
+      "mana": "190",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "VIT",
+          "Amount": "7"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXHP",
+          "Amount": "40"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "40"
+        }
+      ],
+      "activate": [
+        {
+          "value": "Heal",
+          "Amount": "150",
+          "StatModAmount": "1.0450",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "70"
+        },
+        {
+          "value": "ConditionEffectAura",
+          "Amount": "075",
+          "StatModAmount": "0.5225",
+          "Range": "7.4",
+          "StatModRadius": "0.050",
+          "Effect": "Healing",
+          "Duration": "4.4",
+          "Color": "0xFFFFCC",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "70",
+          "StatModDuration": "0"
+        },
+        {
+          "value": "DamageNova",
+          "MinDamage": "720",
+          "MaxDamage": "720",
+          "StatModDamage": "7.60",
+          "ActivationCount": "2",
+          "Time": "0.4",
+          "Radius": "2.5",
+          "StatModActivationCount": "0",
+          "StatModRadius": "0",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "70",
+          "Color": "0xFFFF00"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x2056"
+        },
+        {
+          "key": "Object id",
+          "value": "Tome of Hallowed Language"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Tome"
+        },
+        {
+          "key": "Tier",
+          "value": "7"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/major_heal"
+        },
+        {
+          "key": "MpCost",
+          "value": "190"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Red Bag"
+        },
+        {
+          "key": "FeedPower",
+          "value": "570"
+        },
+        {
+          "key": "XPBonus",
+          "value": "8"
+        },
+        {
+          "key": "Soulbound",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nTOME\nTIERED\nLOOTABLE\nT7\nT7_ABILITY\nMPCOST\nXPBONUS\nAPPLY_STAT_EFF\nSTATMOD"
+        },
+        {
+          "key": "EnchantmentSlots",
+          "value": true,
+          "SlotChance": "0.5,0.375,0.25,0.125",
+          "SeasonalSlotMod": "1.05",
+          "ForgeSlotMod": "0.8",
+          "DustType": "purpleDust",
+          "DustAmounts": "50,65,80,100",
+          "EnchantmentList": "Default Enchantment Pool"
+        }
+      ]
+    },
+    {
+      "id": "wiki_2662",
+      "name": "Combat Helm",
+      "kind": "helm",
+      "source": "https://realm.wiki/item?id=2662",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Helm",
+      "mana": "60",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEF",
+          "Amount": "2"
+        }
+      ],
+      "activate": [
+        {
+          "value": "ConditionEffectAura",
+          "Effect": "Berserk",
+          "Duration": "2.5",
+          "Range": "4.5",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "30",
+          "StatModDuration": "0.1",
+          "StatModRadius": "0.1"
+        },
+        {
+          "value": "ConditionEffectSelf",
+          "Effect": "Speedy",
+          "Duration": "2.5",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "30",
+          "StatModDuration": "0.1"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0xa66"
+        },
+        {
+          "key": "Object id",
+          "value": "Combat Helm"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Helm"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "60"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nHELM\nTIERED\nLOOTABLE\nT0\nMPCOST\nTRADEABLE\nAPPLY_STAT_EFF\nSTATMOD"
+        }
+      ]
+    },
+    {
+      "id": "wiki_8281",
+      "name": "Helm of the Tribune",
+      "kind": "helm",
+      "source": "https://realm.wiki/item?id=8281",
+      "tier": "T7",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Helm",
+      "mana": "95",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEF",
+          "Amount": "12"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXHP",
+          "Amount": "40"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "40"
+        }
+      ],
+      "activate": [
+        {
+          "value": "ConditionEffectAura",
+          "Effect": "Berserk",
+          "Duration": "4.5",
+          "Range": "4.5",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "30",
+          "StatModDuration": "0.1",
+          "StatModRadius": "0.1"
+        },
+        {
+          "value": "ConditionEffectSelf",
+          "Effect": "Speedy",
+          "Duration": "4",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "30",
+          "StatModDuration": "0.1"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x2059"
+        },
+        {
+          "key": "Object id",
+          "value": "Helm of the Tribune"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Helm"
+        },
+        {
+          "key": "Tier",
+          "value": "7"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Red Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "95"
+        },
+        {
+          "key": "Soulbound",
+          "value": true
+        },
+        {
+          "key": "FeedPower",
+          "value": "570"
+        },
+        {
+          "key": "XPBonus",
+          "value": "8"
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nHELM\nTIERED\nLOOTABLE\nT7\nT7_ABILITY\nMPCOST\nXPBONUS\nAPPLY_STAT_EFF\nSTATMOD"
+        },
+        {
+          "key": "EnchantmentSlots",
+          "value": true,
+          "SlotChance": "0.5,0.375,0.25,0.125",
+          "SeasonalSlotMod": "1.05",
+          "ForgeSlotMod": "0.8",
+          "DustType": "purpleDust",
+          "DustAmounts": "50,65,80,100",
+          "EnchantmentList": "Default Enchantment Pool"
+        }
+      ]
+    },
+    {
+      "id": "wiki_2568",
+      "name": "Wooden Shield",
+      "kind": "shield",
+      "source": "https://realm.wiki/item?id=2568",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Shield",
+      "mana": "85",
+      "mana2": null,
+      "cooldown": null,
+      "shots": "1",
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEF",
+          "Amount": "2"
+        }
+      ],
+      "activate": [
+        {
+          "value": "DamageMultAura",
+          "Type": "self",
+          "Mult": "0.75",
+          "Duration": "5"
+        },
+        {
+          "value": "Shoot",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "34",
+          "StatModDamage": "2"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Silver Shield",
+          "Speed": "160",
+          "MinDamage": "55",
+          "MaxDamage": "90",
+          "LifetimeMS": "200",
+          "Size": "140",
+          "ConditionEffect": {
+            "value": "Stunned",
+            "Duration": "3"
+          },
+          "MultiHit": true,
+          "PassesCover": true,
+          "ParticleTrail": true
+        }
+      ],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0xa08"
+        },
+        {
+          "key": "Object id",
+          "value": "Wooden Shield"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Shield"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/fire_spray"
+        },
+        {
+          "key": "ConditionEffect",
+          "value": "Stunned",
+          "Duration": "3"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "85"
+        },
+        {
+          "key": "NumProjectiles",
+          "value": "1"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nSHIELD\nTIERED\nLOOTABLE\nT0\nNUMPROJ_1\nMPCOST\nTRADEABLE\nSTATMOD"
+        }
+      ]
+    },
+    {
+      "id": "wiki_8282",
+      "name": "Shield of Orcish Regalia",
+      "kind": "shield",
+      "source": "https://realm.wiki/item?id=8282",
+      "tier": "T7",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Shield",
+      "mana": "100",
+      "mana2": null,
+      "cooldown": null,
+      "shots": "5",
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEF",
+          "Amount": "14"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXHP",
+          "Amount": "40"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "40"
+        }
+      ],
+      "activate": [
+        {
+          "value": "Shoot",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "34",
+          "StatModDamage": "5"
+        },
+        {
+          "value": "DamageMultAura",
+          "Type": "self",
+          "Mult": "0.75",
+          "Duration": "5"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Silver Shield",
+          "Speed": "160",
+          "MinDamage": "340",
+          "MaxDamage": "400",
+          "LifetimeMS": "200",
+          "Size": "140",
+          "ConditionEffect": {
+            "value": "Stunned",
+            "Duration": "3"
+          },
+          "MultiHit": true,
+          "PassesCover": true,
+          "ParticleTrail": true
+        }
+      ],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x205a"
+        },
+        {
+          "key": "Object id",
+          "value": "Shield of Orcish Regalia"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Shield"
+        },
+        {
+          "key": "Tier",
+          "value": "7"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/fire_spray"
+        },
+        {
+          "key": "ConditionEffect",
+          "value": "Stunned",
+          "Duration": "3"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Red Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "100"
+        },
+        {
+          "key": "NumProjectiles",
+          "value": "5"
+        },
+        {
+          "key": "Soulbound",
+          "value": true
+        },
+        {
+          "key": "FeedPower",
+          "value": "570"
+        },
+        {
+          "key": "XPBonus",
+          "value": "8"
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nSHIELD\nTIERED\nLOOTABLE\nT7\nT7_ABILITY\nNUMPROJ_5\nMPCOST\nXPBONUS\nSTATMOD"
+        },
+        {
+          "key": "EnchantmentSlots",
+          "value": true,
+          "SlotChance": "0.5,0.375,0.25,0.125",
+          "SeasonalSlotMod": "1.05",
+          "ForgeSlotMod": "0.8",
+          "DustType": "purpleDust",
+          "DustAmounts": "50,65,80,100",
+          "EnchantmentList": "Default Enchantment Pool"
+        }
+      ]
+    },
+    {
+      "id": "wiki_2642",
+      "name": "Seal of the Initiate",
+      "kind": "seal",
+      "source": "https://realm.wiki/item?id=2642",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Seal",
+      "mana": "60",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [],
+      "activate": [
+        {
+          "value": "StatBoostAura",
+          "Stat": "MAXHP",
+          "Amount": "10",
+          "Duration": "2.5",
+          "Range": "4.5",
+          "WisMin": "50",
+          "WisAmountBase": "2",
+          "Channel": "maxStack"
+        },
+        {
+          "value": "ConditionEffectAura",
+          "Effect": "Healing",
+          "Duration": "2.5",
+          "Range": "4.5",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "50",
+          "StatModDuration": "0.1",
+          "StatModRadius": "0.1"
+        },
+        {
+          "value": "ConditionEffectAura",
+          "Effect": "Damaging",
+          "Duration": "2.5",
+          "Range": "4.5",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "50",
+          "StatModDuration": "0.1",
+          "StatModRadius": "0.1"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0xa52"
+        },
+        {
+          "key": "Object id",
+          "value": "Seal of the Initiate"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Seal"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/light_heal"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "60"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nSEAL\nTIERED\nLOOTABLE\nT0\nMPCOST\nTRADEABLE\nAPPLY_STAT_EFF\nSTATMOD"
+        }
+      ]
+    },
+    {
+      "id": "wiki_8283",
+      "name": "Seal of Invocation",
+      "kind": "seal",
+      "source": "https://realm.wiki/item?id=8283",
+      "tier": "T7",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Seal",
+      "mana": "95",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEX",
+          "Amount": "4"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXHP",
+          "Amount": "40"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "40"
+        }
+      ],
+      "activate": [
+        {
+          "value": "StatBoostAura",
+          "Stat": "MAXHP",
+          "Amount": "80",
+          "Duration": "4",
+          "Range": "4.5",
+          "WisMin": "50",
+          "WisAmountBase": "2",
+          "Channel": "maxStack"
+        },
+        {
+          "value": "ConditionEffectAura",
+          "Effect": "Healing",
+          "Duration": "4.5",
+          "Range": "4.5",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "50",
+          "StatModDuration": "0.1",
+          "StatModRadius": "0.1"
+        },
+        {
+          "value": "ConditionEffectAura",
+          "Effect": "Damaging",
+          "Duration": "4.5",
+          "Range": "4.5",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "50",
+          "StatModDuration": "0.1",
+          "StatModRadius": "0.1"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x205b"
+        },
+        {
+          "key": "Object id",
+          "value": "Seal of Invocation"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Seal"
+        },
+        {
+          "key": "Tier",
+          "value": "7"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/light_heal"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Red Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "95"
+        },
+        {
+          "key": "Soulbound",
+          "value": true
+        },
+        {
+          "key": "FeedPower",
+          "value": "570"
+        },
+        {
+          "key": "XPBonus",
+          "value": "8"
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nSEAL\nTIERED\nLOOTABLE\nT7\nT7_ABILITY\nMPCOST\nXPBONUS\nAPPLY_STAT_EFF\nSTATMOD"
+        },
+        {
+          "key": "EnchantmentSlots",
+          "value": true,
+          "SlotChance": "0.5,0.375,0.25,0.125",
+          "SeasonalSlotMod": "1.05",
+          "ForgeSlotMod": "0.8",
+          "DustType": "purpleDust",
+          "DustAmounts": "50,65,80,100",
+          "EnchantmentList": "Default Enchantment Pool"
+        }
+      ]
+    },
+    {
+      "id": "wiki_2723",
+      "name": "Centipede Poison",
+      "kind": "poison",
+      "source": "https://realm.wiki/item?id=2723",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Poison",
+      "mana": "25",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [],
+      "activate": [
+        {
+          "value": "PoisonGrenade",
+          "Radius": "2",
+          "Color": "0x1bf06d",
+          "ImpactDamage": "50",
+          "TotalDamage": "150",
+          "Duration": "3",
+          "ThrowTime": "0.8",
+          "DamageBoost": "1.05",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "50",
+          "StatModDamage": "40",
+          "StatModImpactDamage": "5",
+          "StatModRadius": "0.025",
+          "StatModDamageBoost": "0.00075"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0xaa3"
+        },
+        {
+          "key": "Object id",
+          "value": "Centipede Poison"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Poison"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "25"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nPOISON\nTIERED\nLOOTABLE\nT0\nMPCOST\nTRADEABLE\nSTATMOD"
+        }
+      ]
+    },
+    {
+      "id": "wiki_8284",
+      "name": "Necrofish Poison",
+      "kind": "poison",
+      "source": "https://realm.wiki/item?id=8284",
+      "tier": "T7",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Poison",
+      "mana": "110",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "WIS",
+          "Amount": "4"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXHP",
+          "Amount": "40"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "40"
+        }
+      ],
+      "activate": [
+        {
+          "value": "PoisonGrenade",
+          "Radius": "5.5",
+          "Color": "0x35406b",
+          "ImpactDamage": "400",
+          "TotalDamage": "1250",
+          "Duration": "4.8",
+          "ThrowTime": "0.8",
+          "DamageBoost": "1.105",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "50",
+          "StatModDamage": "210",
+          "StatModImpactDamage": "36",
+          "StatModRadius": "0.025",
+          "StatModDamageBoost": "0.0025"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x205c"
+        },
+        {
+          "key": "Object id",
+          "value": "Necrofish Poison"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Poison"
+        },
+        {
+          "key": "Tier",
+          "value": "7"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Red Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "110"
+        },
+        {
+          "key": "Soulbound",
+          "value": true
+        },
+        {
+          "key": "FeedPower",
+          "value": "570"
+        },
+        {
+          "key": "XPBonus",
+          "value": "8"
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nPOISON\nTIERED\nLOOTABLE\nT7\nT7_ABILITY\nMPCOST\nXPBONUS\nSTATMOD"
+        },
+        {
+          "key": "EnchantmentSlots",
+          "value": true,
+          "SlotChance": "0.5,0.375,0.25,0.125",
+          "SeasonalSlotMod": "1.05",
+          "ForgeSlotMod": "0.8",
+          "DustType": "purpleDust",
+          "DustAmounts": "50,65,80,100",
+          "EnchantmentList": "Default Enchantment Pool"
+        }
+      ]
+    },
+    {
+      "id": "wiki_2730",
+      "name": "Necrotic Skull",
+      "kind": "skull",
+      "source": "https://realm.wiki/item?id=2730",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Skull",
+      "mana": "40",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [],
+      "activate": [],
+      "activate2": [],
+      "modes": [
+        {
+          "value": "",
+          "Name": "Raise Dead",
+          "OnPlayerHealActivate": {
+            "value": "FillMeter",
+            "HealType": "All",
+            "HealThreshhold": "1",
+            "IdMeter": "0",
+            "Proc": "1",
+            "WornFlat": "true",
+            "AmountWorn": "100",
+            "Amount": "100"
+          },
+          "Activate": {
+            "value": "RaiseDead",
+            "NumDead": "1",
+            "UndeadId": "Necrotic Undead",
+            "ScalingStat": "WIS",
+            "StatModScalingMin": "55",
+            "StatModScaleProjs": "0",
+            "StatModDamage": "3"
+          },
+          "OnSwitchAbilityActivate": {
+            "value": "VampireBlast",
+            "IdMeter": "0",
+            "MinimumMeter": "1500",
+            "MeterCost": "1500",
+            "Proc": "1",
+            "TargetMouse": "true",
+            "Radius": "2.5",
+            "TotalDamage": "65",
+            "Heal": "25",
+            "WisDamageBase": "40",
+            "HealRange": "4"
+          },
+          "SwitchTime": "0",
+          "MpCost": "40"
+        },
+        {
+          "value": "",
+          "Name": "Raise Dead",
+          "OnPlayerHealActivate": {
+            "value": "FillMeter",
+            "HealType": "All",
+            "HealThreshhold": "1",
+            "IdMeter": "0",
+            "Proc": "1",
+            "WornFlat": "true",
+            "AmountWorn": "100",
+            "Amount": "100"
+          },
+          "OnSwitchAbilityActivate": {
+            "value": "VampireBlast",
+            "IdMeter": "0",
+            "MinimumMeter": "1500",
+            "MeterCost": "1500",
+            "Proc": "1",
+            "TargetMouse": "true",
+            "Radius": "2.5",
+            "TotalDamage": "65",
+            "Heal": "25",
+            "WisDamageBase": "40",
+            "HealRange": "4"
+          },
+          "Activate": {
+            "value": "RaiseDead",
+            "NumDead": "1",
+            "UndeadId": "Necrotic Undead",
+            "ScalingStat": "WIS",
+            "StatModScalingMin": "55",
+            "StatModScaleProjs": "0",
+            "StatModDamage": "3"
+          },
+          "SwitchTime": "0",
+          "MpCost": "40"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [
+        {
+          "value": "",
+          "Id": "0",
+          "MaxValue": "1500",
+          "StartValue": "0",
+          "ChargeString": "Charge the meter by healing with your Raised Dead!",
+          "BarColor": [
+            {
+              "value": "0xFF0000",
+              "MaxValue": "0.25"
+            },
+            {
+              "value": "0xFFAA00",
+              "MaxValue": "0.50"
+            },
+            {
+              "value": "0x00FF00",
+              "MaxValue": "0.75"
+            },
+            {
+              "value": "0x00FFAA",
+              "MaxValue": "1.00"
+            }
+          ]
+        }
+      ],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0xaaa"
+        },
+        {
+          "key": "Object id",
+          "value": "Necrotic Skull"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Skull"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "40"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nSKULL\nSTATMOD\nTIERED\nLOOTABLE\nT0\nMPCOST\nTRADEABLE"
+        }
+      ]
+    },
+    {
+      "id": "wiki_8285",
+      "name": "Mindwaster Skull",
+      "kind": "skull",
+      "source": "https://realm.wiki/item?id=8285",
+      "tier": "T7",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Skull",
+      "mana": "115",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXHP",
+          "Amount": "120"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "40"
+        }
+      ],
+      "activate": [],
+      "activate2": [],
+      "modes": [
+        {
+          "value": "",
+          "Name": "Raise Dead",
+          "OnPlayerHealActivate": {
+            "value": "FillMeter",
+            "HealType": "All",
+            "HealThreshhold": "1",
+            "IdMeter": "0",
+            "Proc": "1",
+            "WornFlat": "true",
+            "AmountWorn": "100",
+            "Amount": "100"
+          },
+          "Activate": {
+            "value": "RaiseDead",
+            "NumDead": "1",
+            "UndeadId": "Mindwaster Undead",
+            "ScalingStat": "WIS",
+            "StatModScalingMin": "55",
+            "StatModScaleProjs": "0",
+            "StatModDamage": "3"
+          },
+          "OnSwitchAbilityActivate": {
+            "value": "VampireBlast",
+            "IdMeter": "0",
+            "MinimumMeter": "1500",
+            "MeterCost": "1500",
+            "Proc": "1",
+            "TargetMouse": "true",
+            "Radius": "4",
+            "TotalDamage": "320",
+            "Heal": "120",
+            "IgnoreDef": "5",
+            "WisDamageBase": "60",
+            "HealRange": "4"
+          },
+          "MpCost": "115",
+          "SwitchTime": "0"
+        },
+        {
+          "value": "",
+          "Name": "Raise Dead",
+          "OnPlayerHealActivate": {
+            "value": "FillMeter",
+            "HealType": "All",
+            "HealThreshhold": "1",
+            "IdMeter": "0",
+            "Proc": "1",
+            "WornFlat": "true",
+            "AmountWorn": "100",
+            "Amount": "100"
+          },
+          "OnSwitchAbilityActivate": {
+            "value": "VampireBlast",
+            "IdMeter": "0",
+            "MinimumMeter": "1500",
+            "MeterCost": "1500",
+            "Proc": "1",
+            "TargetMouse": "true",
+            "Radius": "4",
+            "TotalDamage": "320",
+            "Heal": "120",
+            "IgnoreDef": "5",
+            "WisDamageBase": "60",
+            "HealRange": "4"
+          },
+          "Activate": {
+            "value": "RaiseDead",
+            "NumDead": "1",
+            "UndeadId": "Mindwaster Undead",
+            "ScalingStat": "WIS",
+            "StatModScalingMin": "55",
+            "StatModScaleProjs": "0",
+            "StatModDamage": "3"
+          },
+          "SwitchTime": "0",
+          "MpCost": "115"
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [
+        {
+          "value": "FillMeter",
+          "HealType": "All",
+          "HealThreshhold": "1",
+          "IdMeter": "0",
+          "Proc": "1",
+          "WornFlat": "true",
+          "AmountWorn": "100",
+          "Amount": "100"
+        }
+      ],
+      "onKill": [],
+      "meters": [
+        {
+          "value": "",
+          "Id": "0",
+          "MaxValue": "1500",
+          "StartValue": "0",
+          "ChargeString": "Charge the meter by healing with your Raised Dead!",
+          "BarColor": [
+            {
+              "value": "0xFF0000",
+              "MaxValue": "0.25"
+            },
+            {
+              "value": "0xFFAA00",
+              "MaxValue": "0.50"
+            },
+            {
+              "value": "0x00FF00",
+              "MaxValue": "0.75"
+            },
+            {
+              "value": "0x00FFAA",
+              "MaxValue": "1.00"
+            }
+          ]
+        }
+      ],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x205d"
+        },
+        {
+          "key": "Object id",
+          "value": "Mindwaster Skull"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Skull"
+        },
+        {
+          "key": "Tier",
+          "value": "7"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Red Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "115"
+        },
+        {
+          "key": "Soulbound",
+          "value": true
+        },
+        {
+          "key": "FeedPower",
+          "value": "570"
+        },
+        {
+          "key": "XPBonus",
+          "value": "8"
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nSKULL\nSTATMOD\nTIERED\nLOOTABLE\nT7\nT7_ABILITY\nMPCOST\nXPBONUS"
+        },
+        {
+          "key": "EnchantmentSlots",
+          "value": true,
+          "SlotChance": "0.5,0.375,0.25,0.125",
+          "SeasonalSlotMod": "1.05",
+          "ForgeSlotMod": "0.8",
+          "DustType": "purpleDust",
+          "DustAmounts": "50,65,80,100",
+          "EnchantmentList": "Default Enchantment Pool"
+        }
+      ]
+    },
+    {
+      "id": "wiki_2737",
+      "name": "Hunting Trap",
+      "kind": "trap",
+      "source": "https://realm.wiki/item?id=2737",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Trap",
+      "mana": "40",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [],
+      "activate": [
+        {
+          "value": "Trap",
+          "Radius": "2.0",
+          "Sensitivity": "1.0",
+          "TotalDamage": "65",
+          "Color": "D4D4D4",
+          "CondEffect": "Slowed",
+          "CondDuration": "2.0",
+          "ArmTime": "0.0",
+          "ThrowTime": "0.6",
+          "Duration": "8",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "34",
+          "StatModTrapRadius": "0.0625",
+          "StatModTrapDamage": "5",
+          "StatModTrapCondDuration": "0.1",
+          "BombDelay": "0.8",
+          "BombDamage": "150",
+          "BombRadius": "1.5",
+          "BombCount": "1",
+          "BombTriggerCount": "1",
+          "BombTriggerPeriod": "2.0",
+          "BombCondEffect": "Slowed",
+          "BombCondEffectDuration": "1.0",
+          "StatModBombRadius": "0.03125",
+          "StatModBombCount": ".00067",
+          "StatModBombDamage": "5",
+          "StatModBombCondDuration": "0.1",
+          "TextureSourceId": "Hunting Trap"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0xab1"
+        },
+        {
+          "key": "Object id",
+          "value": "Hunting Trap"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Trap"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "40"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nTRAP\nTIERED\nLOOTABLE\nT0\nMPCOST\nTRADEABLE\nSTATMOD"
+        }
+      ]
+    },
+    {
+      "id": "wiki_27313",
+      "name": "Testing Trap",
+      "kind": "trap",
+      "source": "https://realm.wiki/item?id=27313",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Trap",
+      "mana": "40",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [],
+      "activate": [
+        {
+          "value": "Trap",
+          "Radius": "4.0",
+          "TotalDamage": "100",
+          "Color": "32CD32",
+          "CondEffect": "Slowed",
+          "CondDuration": "4.0",
+          "ArmTime": "1.0",
+          "Duration": "1",
+          "ScalingStat": "ATT",
+          "StatModScalingMin": "50",
+          "StatModTrapRadius": "0.2",
+          "StatModTrapDamage": "10",
+          "StatModTrapCondDuration": "0.1",
+          "BombDelay": "1.4",
+          "BombDamage": "200",
+          "BombRadius": "3.0",
+          "BombCount": "3",
+          "BombTriggerCount": "2",
+          "BombTriggerPeriod": "1.0",
+          "BombCondEffect": "Slowed",
+          "BombCondEffectDuration": "5.0",
+          "StatModBombRadius": "0.1",
+          "StatModBombCount": "0.2",
+          "StatModBombDamage": "10",
+          "StatModBombCondDuration": "0.01",
+          "TextureSourceId": "Wilderlands Trap"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x6ab1"
+        },
+        {
+          "key": "Object id",
+          "value": "Testing Trap"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Trap"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "40"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nTRAP\nTIERED\nT0\nMPCOST\nTRADEABLE"
+        }
+      ]
+    },
+    {
+      "id": "wiki_8286",
+      "name": "Depthchaser Trap",
+      "kind": "trap",
+      "source": "https://realm.wiki/item?id=8286",
+      "tier": "T7",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Trap",
+      "mana": "110",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "ATT",
+          "Amount": "6"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXHP",
+          "Amount": "40"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "40"
+        }
+      ],
+      "activate": [
+        {
+          "value": "Trap",
+          "Radius": "5.0",
+          "Sensitivity": "1.0",
+          "TotalDamage": "525",
+          "Color": "7EDD47",
+          "CondEffect": "Slowed",
+          "CondDuration": "5.0",
+          "ArmTime": "0.0",
+          "ThrowTime": "0.6",
+          "Duration": "8",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "34",
+          "StatModTrapRadius": "0.0625",
+          "StatModTrapDamage": "5",
+          "StatModTrapCondDuration": "0.1",
+          "BombDelay": "0.8",
+          "BombDamage": "815",
+          "BombRadius": "3.75",
+          "BombCount": "1",
+          "BombTriggerCount": "1",
+          "BombTriggerPeriod": "2.0",
+          "BombCondEffect": "Slowed",
+          "BombCondEffectDuration": "2.5",
+          "StatModBombRadius": "0.03125",
+          "StatModBombCount": ".00067",
+          "StatModBombDamage": "5",
+          "StatModBombCondDuration": "0.1",
+          "TextureSourceId": "Depthchaser Trap"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x205e"
+        },
+        {
+          "key": "Object id",
+          "value": "Depthchaser Trap"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Trap"
+        },
+        {
+          "key": "Tier",
+          "value": "7"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Red Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "110"
+        },
+        {
+          "key": "Soulbound",
+          "value": true
+        },
+        {
+          "key": "FeedPower",
+          "value": "570"
+        },
+        {
+          "key": "XPBonus",
+          "value": "8"
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nTRAP\nTIERED\nLOOTABLE\nT7\nT7_ABILITY\nMPCOST\nXPBONUS\nSTATMOD"
+        },
+        {
+          "key": "EnchantmentSlots",
+          "value": true,
+          "SlotChance": "0.5,0.375,0.25,0.125",
+          "SeasonalSlotMod": "1.05",
+          "ForgeSlotMod": "0.8",
+          "DustType": "purpleDust",
+          "DustAmounts": "50,65,80,100",
+          "EnchantmentList": "Default Enchantment Pool"
+        }
+      ]
+    },
+    {
+      "id": "wiki_2788",
+      "name": "Stasis Orb",
+      "kind": "orb",
+      "source": "https://realm.wiki/item?id=2788",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Orb",
+      "mana": "75",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [],
+      "activate": [
+        {
+          "value": "DetonateHex",
+          "Radius": "2",
+          "BaseDamage": "100",
+          "StackDamage": "3",
+          "StackMultiplier": "0.01",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "50",
+          "StatModBaseDamage": "1",
+          "StatModStackDamage": "0.1",
+          "StatModRadius": "0.1"
+        },
+        {
+          "value": "EffectBlast",
+          "CondDuration": "2",
+          "CondEffect": "Curse",
+          "WisPerDuration": "20",
+          "Radius": "2",
+          "Color": "0xa10020",
+          "WisMin": "50"
+        },
+        {
+          "value": "EffectBlast",
+          "IgnoreOnTooltip": "true",
+          "Radius": "1",
+          "Color": "0x541b7d",
+          "CollapseEffect": "true",
+          "WisMin": "50"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [
+        {
+          "value": "ApplyCondition",
+          "IgnoreOnTooltip": "true",
+          "Proc": "1",
+          "Cooldown": "0",
+          "Effect": "Hex",
+          "Duration": "3"
+        }
+      ],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0xae4"
+        },
+        {
+          "key": "Object id",
+          "value": "Stasis Orb"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Orb"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "75"
+        },
+        {
+          "key": "OnDetonateHexActivate",
+          "value": "ApplyCondition",
+          "IgnoreOnTooltip": "true",
+          "MinHex": "25",
+          "MaxHex": "100",
+          "Proc": "1",
+          "Cooldown": "0",
+          "Effect": "Petrify",
+          "Duration": "3"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nORB\nSTATMOD\nTIERED\nLOOTABLE\nT0\nMPCOST\nTRADEABLE\nCAUSE_STAT_EFF"
+        }
+      ]
+    },
+    {
+      "id": "wiki_8287",
+      "name": "Dimensiongate Orb",
+      "kind": "orb",
+      "source": "https://realm.wiki/item?id=8287",
+      "tier": "T7",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Orb",
+      "mana": "110",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEX",
+          "Amount": "5"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXHP",
+          "Amount": "40"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "40"
+        }
+      ],
+      "activate": [
+        {
+          "value": "DetonateHex",
+          "Radius": "3.75",
+          "BaseDamage": "625",
+          "StackDamage": "17",
+          "StackMultiplier": "0.01",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "50",
+          "StatModBaseDamage": "8",
+          "StatModStackDamage": "0.275",
+          "StatModRadius": "0.1"
+        },
+        {
+          "value": "EffectBlast",
+          "CondDuration": "3.75",
+          "CondEffect": "Curse",
+          "Radius": "3.75",
+          "Color": "0xa10020",
+          "WisMin": "50"
+        },
+        {
+          "value": "EffectBlast",
+          "IgnoreOnTooltip": "true",
+          "Radius": "2.75",
+          "Color": "0x541b7d",
+          "CollapseEffect": "true",
+          "WisMin": "50"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [
+        {
+          "value": "ApplyCondition",
+          "IgnoreOnTooltip": "true",
+          "Proc": "1",
+          "Cooldown": "0",
+          "Effect": "Hex",
+          "Duration": "3"
+        }
+      ],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x205f"
+        },
+        {
+          "key": "Object id",
+          "value": "Dimensiongate Orb"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Orb"
+        },
+        {
+          "key": "Tier",
+          "value": "7"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Red Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "110"
+        },
+        {
+          "key": "OnDetonateHexActivate",
+          "value": "ApplyCondition",
+          "IgnoreOnTooltip": "true",
+          "MinHex": "25",
+          "MaxHex": "100",
+          "Proc": "1",
+          "Cooldown": "0",
+          "Effect": "Petrify",
+          "Duration": "3"
+        },
+        {
+          "key": "Soulbound",
+          "value": true
+        },
+        {
+          "key": "FeedPower",
+          "value": "570"
+        },
+        {
+          "key": "XPBonus",
+          "value": "8"
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nORB\nSTATMOD\nTIERED\nLOOTABLE\nT7\nT7_ABILITY\nMPCOST\nXPBONUS\nCAUSE_STAT_EFF"
+        },
+        {
+          "key": "EnchantmentSlots",
+          "value": true,
+          "SlotChance": "0.5,0.375,0.25,0.125",
+          "SeasonalSlotMod": "1.05",
+          "ForgeSlotMod": "0.8",
+          "DustType": "purpleDust",
+          "DustAmounts": "50,65,80,100",
+          "EnchantmentList": "Default Enchantment Pool"
+        }
+      ]
+    },
+    {
+      "id": "wiki_2787",
+      "name": "Decoy Prism",
+      "kind": "prism",
+      "source": "https://realm.wiki/item?id=2787",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Prism",
+      "mana": "60",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [],
+      "activate": [
+        {
+          "value": "Decoy",
+          "Duration": "3",
+          "Speed": "1.00"
+        },
+        {
+          "value": "Teleport",
+          "MaxDistance": "13"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0xae3"
+        },
+        {
+          "key": "Object id",
+          "value": "Decoy Prism"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Prism"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "60"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nPRISM\nTIERED\nLOOTABLE\nT0\nMPCOST\nTRADEABLE"
+        }
+      ]
+    },
+    {
+      "id": "wiki_8288",
+      "name": "Prism of Reveries",
+      "kind": "prism",
+      "source": "https://realm.wiki/item?id=8288",
+      "tier": "T7",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Prism",
+      "mana": "95",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "WIS",
+          "Amount": "7"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXHP",
+          "Amount": "40"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "40"
+        }
+      ],
+      "activate": [
+        {
+          "value": "Decoy",
+          "Duration": "10",
+          "Speed": "1.30"
+        },
+        {
+          "value": "Teleport",
+          "MaxDistance": "13"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x2060"
+        },
+        {
+          "key": "Object id",
+          "value": "Prism of Reveries"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Prism"
+        },
+        {
+          "key": "Tier",
+          "value": "7"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Red Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "95"
+        },
+        {
+          "key": "Soulbound",
+          "value": true
+        },
+        {
+          "key": "FeedPower",
+          "value": "570"
+        },
+        {
+          "key": "XPBonus",
+          "value": "8"
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nPRISM\nTIERED\nLOOTABLE\nT7\nT7_ABILITY\nMPCOST\nXPBONUS"
+        },
+        {
+          "key": "EnchantmentSlots",
+          "value": true,
+          "SlotChance": "0.5,0.375,0.25,0.125",
+          "SeasonalSlotMod": "1.05",
+          "ForgeSlotMod": "0.8",
+          "DustType": "purpleDust",
+          "DustAmounts": "50,65,80,100",
+          "EnchantmentList": "Default Enchantment Pool"
+        }
+      ]
+    },
+    {
+      "id": "wiki_2789",
+      "name": "Lightning Scepter",
+      "kind": "scepter",
+      "source": "https://realm.wiki/item?id=2789",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Scepter",
+      "mana": "30",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [],
+      "activate": [
+        {
+          "value": "Lightning",
+          "TotalDamage": "80",
+          "DecrDamage": "8",
+          "WisDamageBase": "15",
+          "MaxTargets": "3",
+          "Color": "0x7DF9FF",
+          "AoeActivationCount": "1",
+          "AoeTime": "1",
+          "AoeArmorPierce": "true",
+          "AoeDamage": "20",
+          "StatModDamage": "10",
+          "AoeRange": "1.5",
+          "StatModRadius": "0.02",
+          "AoeMaxTargets": "1",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "50",
+          "StatModPerTarget": "10"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0xae5"
+        },
+        {
+          "key": "Object id",
+          "value": "Lightning Scepter"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Scepter"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/fire_spray"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "30"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nSCEPTER\nTIERED\nLOOTABLE\nT0\nMPCOST\nTRADEABLE\nSTATMOD"
+        }
+      ]
+    },
+    {
+      "id": "wiki_8289",
+      "name": "Scepter of the Firmament",
+      "kind": "scepter",
+      "source": "https://realm.wiki/item?id=8289",
+      "tier": "T7",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Scepter",
+      "mana": "95",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "SPD",
+          "Amount": "4"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXHP",
+          "Amount": "40"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "40"
+        }
+      ],
+      "activate": [
+        {
+          "value": "Lightning",
+          "TotalDamage": "320",
+          "DecrDamage": "45",
+          "WisDamageBase": "90",
+          "MaxTargets": "5",
+          "Color": "0x7DF9FF",
+          "AoeActivationCount": "3",
+          "AoeArmorPierce": "true",
+          "AoeTime": "1",
+          "AoeDamage": "80",
+          "StatModDamage": "24",
+          "AoeRange": "2.5",
+          "StatModRadius": "0.02",
+          "AoeMaxTargets": "2",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "50",
+          "StatModPerTarget": "10"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x2061"
+        },
+        {
+          "key": "Object id",
+          "value": "Scepter of the Firmament"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Scepter"
+        },
+        {
+          "key": "Tier",
+          "value": "7"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/magic_nova"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Red Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "95"
+        },
+        {
+          "key": "Soulbound",
+          "value": true
+        },
+        {
+          "key": "FeedPower",
+          "value": "570"
+        },
+        {
+          "key": "XPBonus",
+          "value": "8"
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nSCEPTER\nTIERED\nLOOTABLE\nT7\nT7_ABILITY\nMPCOST\nXPBONUS\nSTATMOD"
+        },
+        {
+          "key": "EnchantmentSlots",
+          "value": true,
+          "SlotChance": "0.5,0.375,0.25,0.125",
+          "SeasonalSlotMod": "1.05",
+          "ForgeSlotMod": "0.8",
+          "DustType": "purpleDust",
+          "DustAmounts": "50,65,80,100",
+          "EnchantmentList": "Default Enchantment Pool"
+        }
+      ]
+    },
+    {
+      "id": "wiki_3155",
+      "name": "Basic Star",
+      "kind": "shuriken",
+      "source": "https://realm.wiki/item?id=3155",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Shuriken",
+      "mana": "0",
+      "mana2": "30",
+      "cooldown": null,
+      "shots": 1,
+      "equip": [],
+      "activate": [
+        {
+          "value": "ShurikenAbility",
+          "Stat": "DEX",
+          "Amount": "3",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "50",
+          "StatModAmount": "0.075",
+          "StatModDamage": "06.00"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Ninja Star Basic",
+          "MinDamage": "150",
+          "MaxDamage": "250",
+          "Speed": "180",
+          "LifetimeMS": "600",
+          "Size": "150",
+          "CollisionMult": "2.0",
+          "MultiHit": true,
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0xc53"
+        },
+        {
+          "key": "Object id",
+          "value": "Basic Star"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Shuriken"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/fire_spray"
+        },
+        {
+          "key": "MpCost",
+          "value": "0"
+        },
+        {
+          "key": "MpEndCost",
+          "value": "30"
+        },
+        {
+          "key": "MpCostPerSecond",
+          "value": "12"
+        },
+        {
+          "key": "MultiPhase",
+          "value": true
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nSHURIKEN\nTIERED\nLOOTABLE\nT0\nMPCOST\nTRADEABLE\nSTATMOD"
+        }
+      ]
+    },
+    {
+      "id": "wiki_8290",
+      "name": "Dynastic Star",
+      "kind": "shuriken",
+      "source": "https://realm.wiki/item?id=8290",
+      "tier": "T7",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Shuriken",
+      "mana": "0",
+      "mana2": "100",
+      "cooldown": null,
+      "shots": 1,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "VIT",
+          "Amount": "12"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXHP",
+          "Amount": "40"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "40"
+        }
+      ],
+      "activate": [
+        {
+          "value": "ShurikenAbility",
+          "Stat": "DEX",
+          "Amount": "7",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "50",
+          "StatModAmount": "0.110",
+          "StatModDamage": "20.00"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Ninja Star Dynastic",
+          "MinDamage": "1550",
+          "MaxDamage": "1650",
+          "Speed": "180",
+          "LifetimeMS": "600",
+          "Size": "150",
+          "CollisionMult": "2.0",
+          "MultiHit": true,
+          "PassesCover": true
+        }
+      ],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x2062"
+        },
+        {
+          "key": "Object id",
+          "value": "Dynastic Star"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Shuriken"
+        },
+        {
+          "key": "Tier",
+          "value": "7"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/fire_spray"
+        },
+        {
+          "key": "MpCost",
+          "value": "0"
+        },
+        {
+          "key": "MpEndCost",
+          "value": "100"
+        },
+        {
+          "key": "MpCostPerSecond",
+          "value": "19"
+        },
+        {
+          "key": "MultiPhase",
+          "value": true
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Red Bag"
+        },
+        {
+          "key": "FeedPower",
+          "value": "570"
+        },
+        {
+          "key": "XPBonus",
+          "value": "8"
+        },
+        {
+          "key": "Soulbound",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nSHURIKEN\nTIERED\nLOOTABLE\nT7\nT7_ABILITY\nMPCOST\nXPBONUS\nSTATMOD"
+        },
+        {
+          "key": "EnchantmentSlots",
+          "value": true,
+          "SlotChance": "0.5,0.375,0.25,0.125",
+          "SeasonalSlotMod": "1.05",
+          "ForgeSlotMod": "0.8",
+          "DustType": "purpleDust",
+          "DustAmounts": "50,65,80,100",
+          "EnchantmentList": "Default Enchantment Pool"
+        }
+      ]
+    },
+    {
+      "id": "wiki_6826",
+      "name": "Simple Wakizashi",
+      "kind": "wakizashi",
+      "source": "https://realm.wiki/item?id=6826",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Wakizashi",
+      "mana": "40",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [],
+      "activate": [
+        {
+          "value": "BulletCreate",
+          "NumShots": "2",
+          "GapAngle": "45",
+          "GapTiles": "0.4",
+          "OffsetAngle": "27",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "42",
+          "StatModDamage": "3",
+          "StatModNumShots": "0.06"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Wakizashi Slash 0",
+          "Speed": "180",
+          "MinDamage": "150",
+          "MaxDamage": "250",
+          "LifetimeMS": "350",
+          "PassesCover": true,
+          "MultiHit": true
+        }
+      ],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x1aaa"
+        },
+        {
+          "key": "Object id",
+          "value": "Simple Wakizashi"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Wakizashi"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "40"
+        },
+        {
+          "key": "MaxProjSpawnDist",
+          "value": "6"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nWAKIZASHI\nTIERED\nLOOTABLE\nT0\nMPCOST\nTRADEABLE\nSTATMOD"
+        }
+      ]
+    },
+    {
+      "id": "wiki_8291",
+      "name": "Virtuous Wakizashi",
+      "kind": "wakizashi",
+      "source": "https://realm.wiki/item?id=8291",
+      "tier": "T7",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Wakizashi",
+      "mana": "85",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEX",
+          "Amount": "7"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXHP",
+          "Amount": "40"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "40"
+        }
+      ],
+      "activate": [
+        {
+          "value": "BulletCreate",
+          "NumShots": "3",
+          "GapAngle": "45",
+          "GapTiles": "0.4",
+          "OffsetAngle": "27",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "42",
+          "StatModDamage": "3",
+          "StatModNumShots": "0.06"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Wakizashi Slash 7",
+          "Speed": "180",
+          "MinDamage": "550",
+          "MaxDamage": "650",
+          "LifetimeMS": "350",
+          "PassesCover": true,
+          "MultiHit": true,
+          "ConditionEffect": {
+            "value": "Exposed",
+            "Duration": "4"
+          }
+        }
+      ],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x2063"
+        },
+        {
+          "key": "Object id",
+          "value": "Virtuous Wakizashi"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Wakizashi"
+        },
+        {
+          "key": "Tier",
+          "value": "7"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Red Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "85"
+        },
+        {
+          "key": "MaxProjSpawnDist",
+          "value": "6"
+        },
+        {
+          "key": "Soulbound",
+          "value": true
+        },
+        {
+          "key": "FeedPower",
+          "value": "570"
+        },
+        {
+          "key": "XPBonus",
+          "value": "8"
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nWAKIZASHI\nTIERED\nLOOTABLE\nT7\nT7_ABILITY\nMPCOST\nXPBONUS\nSTATMOD"
+        },
+        {
+          "key": "EnchantmentSlots",
+          "value": true,
+          "SlotChance": "0.5,0.375,0.25,0.125",
+          "SeasonalSlotMod": "1.05",
+          "ForgeSlotMod": "0.8",
+          "DustType": "purpleDust",
+          "DustAmounts": "50,65,80,100",
+          "EnchantmentList": "Default Enchantment Pool"
+        }
+      ]
+    },
+    {
+      "id": "wiki_53233",
+      "name": "Novice's Lute",
+      "kind": "lute",
+      "source": "https://realm.wiki/item?id=53233",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Lute",
+      "mana": "70",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [],
+      "activate": [
+        {
+          "value": "BoostRange",
+          "Radius": "4.5",
+          "SpeedBoost": "1.25",
+          "LifeBoost": "1",
+          "Duration": "3",
+          "Targeted": "false"
+        },
+        {
+          "value": "StatBoostAura",
+          "Range": "4.5",
+          "Stat": "DEF",
+          "Amount": "1",
+          "Duration": "2",
+          "Channel": "maxStack"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0xcff1"
+        },
+        {
+          "key": "Object id",
+          "value": "Novice's Lute"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Lute"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/major_heal"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "70"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nLUTE\nTIERED\nLOOTABLE\nT0\nMPCOST\nAPPLY_STAT_EFF\nTRADEABLE"
+        }
+      ]
+    },
+    {
+      "id": "wiki_53240",
+      "name": "Nebular Lute",
+      "kind": "lute",
+      "source": "https://realm.wiki/item?id=53240",
+      "tier": "T7",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Lute",
+      "mana": "105",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEF",
+          "Amount": "5"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXHP",
+          "Amount": "40"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "40"
+        }
+      ],
+      "activate": [
+        {
+          "value": "BoostRange",
+          "Radius": "4.5",
+          "Duration": "6.5",
+          "SpeedBoost": "1.25",
+          "LifeBoost": "1",
+          "Targeted": "false"
+        },
+        {
+          "value": "StatBoostAura",
+          "Range": "4.5",
+          "Stat": "DEF",
+          "Amount": "8",
+          "Duration": "5.5",
+          "Channel": "maxStack"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0xcff8"
+        },
+        {
+          "key": "Object id",
+          "value": "Nebular Lute"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Lute"
+        },
+        {
+          "key": "Tier",
+          "value": "7"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/major_heal"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Red Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "105"
+        },
+        {
+          "key": "FeedPower",
+          "value": "570"
+        },
+        {
+          "key": "Soulbound",
+          "value": true
+        },
+        {
+          "key": "XPBonus",
+          "value": "8"
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nLUTE\nTIERED\nLOOTABLE\nT7\nT7_ABILITY\nMPCOST\nXPBONUS\nAPPLY_STAT_EFF"
+        },
+        {
+          "key": "EnchantmentSlots",
+          "value": true,
+          "SlotChance": "0.5,0.375,0.25,0.125",
+          "SeasonalSlotMod": "1.05",
+          "ForgeSlotMod": "0.8",
+          "DustType": "purpleDust",
+          "DustAmounts": "50,65,80,100",
+          "EnchantmentList": "Default Enchantment Pool"
+        }
+      ]
+    },
+    {
+      "id": "wiki_14403",
+      "name": "Summoning Mace",
+      "kind": "mace",
+      "source": "https://realm.wiki/item?id=14403",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Mace",
+      "mana": "45",
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [],
+      "activate": [
+        {
+          "value": "SpawnCreep",
+          "ObjectId": "Summon Rat",
+          "SummonCost": "3.0",
+          "LifeTime": "9.0",
+          "MaxSpawnDistance": "8.0",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "55",
+          "StatModDamage": "5.2"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x3843"
+        },
+        {
+          "key": "Object id",
+          "value": "Summoning Mace"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Mace"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/fire_spray"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "45"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nMACE\nSTATMOD\nSUMMONPOWERED\nTIERED\nLOOTABLE\nT0\nNUMPROJ_1\nMPCOST\nTRADEABLE"
+        }
+      ]
+    },
+    {
+      "id": "wiki_14410",
+      "name": "Grandmaster Mace",
+      "kind": "mace",
+      "source": "https://realm.wiki/item?id=14410",
+      "tier": "T7",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Mace",
+      "mana": "110",
+      "mana2": null,
+      "cooldown": null,
+      "shots": "1",
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "ATT",
+          "Amount": "6"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXHP",
+          "Amount": "40"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "40"
+        }
+      ],
+      "activate": [
+        {
+          "value": "SpawnCreep",
+          "ObjectId": "Summon Panther",
+          "SummonCost": "3.0",
+          "LifeTime": "10.0",
+          "MaxSpawnDistance": "8.0",
+          "ScalingStat": "WIS",
+          "StatModScalingMin": "55",
+          "StatModDamage": "5.2"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x384a"
+        },
+        {
+          "key": "Object id",
+          "value": "Grandmaster Mace"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Mace"
+        },
+        {
+          "key": "Tier",
+          "value": "7"
+        },
+        {
+          "key": "NumProjectiles",
+          "value": "1"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/magic_nova"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Red Bag"
+        },
+        {
+          "key": "MpCost",
+          "value": "110"
+        },
+        {
+          "key": "Soulbound",
+          "value": true
+        },
+        {
+          "key": "FeedPower",
+          "value": "570"
+        },
+        {
+          "key": "XPBonus",
+          "value": "8"
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nMACE\nSTATMOD\nSUMMONPOWERED\nTIERED\nLOOTABLE\nT7\nT7_ABILITY\nNUMPROJ_1\nMPCOST\nXPBONUS"
+        },
+        {
+          "key": "EnchantmentSlots",
+          "value": true,
+          "SlotChance": "0.5,0.375,0.25,0.125",
+          "SeasonalSlotMod": "1.05",
+          "ForgeSlotMod": "0.8",
+          "DustType": "purpleDust",
+          "DustAmounts": "50,65,80,100",
+          "EnchantmentList": "Default Enchantment Pool"
+        }
+      ]
+    },
+    {
+      "id": "wiki_14608",
+      "name": "Slashing Sheath",
+      "kind": "sheath",
+      "source": "https://realm.wiki/item?id=14608",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Sheath",
+      "mana": "60",
+      "mana2": null,
+      "cooldown": "3",
+      "shots": 1,
+      "equip": [],
+      "activate": [
+        {
+          "value": "ChannelDash",
+          "Amount": "3",
+          "Duration": "20",
+          "ChannelTime": "500"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Tier 0 Sheath Projectile",
+          "Speed": "160",
+          "MinDamage": "150",
+          "MaxDamage": "250",
+          "LifetimeMS": "500",
+          "MultiHit": true,
+          "Size": "120"
+        }
+      ],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x3910"
+        },
+        {
+          "key": "Object id",
+          "value": "Slashing Sheath"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Sheath"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "Cooldown",
+          "value": "3"
+        },
+        {
+          "key": "MpCost",
+          "value": "60"
+        },
+        {
+          "key": "StartUse",
+          "value": "",
+          "Activate": {
+            "value": "Dash",
+            "Speed": "50",
+            "MinDistance": "1",
+            "MaxDistance": "3.5",
+            "Damage": "200",
+            "Color": "0x7A4646",
+            "PostCondDuration": "0.16",
+            "Effect": "Multiplied",
+            "Stat": "ATT",
+            "AmountPerEnemy": "1,5,10,16,23",
+            "EffectDuration": "10",
+            "Cooldown": "0.4"
+          }
+        },
+        {
+          "key": "EndUse",
+          "value": "",
+          "Activate": "Shoot"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nSHEATH\nTIERED\nLOOTABLE\nT0\nNUMPROJ_1\nMPCOST\nTRADEABLE"
+        }
+      ]
+    },
+    {
+      "id": "wiki_14615",
+      "name": "Sonic Wave Sheath",
+      "kind": "sheath",
+      "source": "https://realm.wiki/item?id=14615",
+      "tier": "T7",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Sheath",
+      "mana": "140",
+      "mana2": null,
+      "cooldown": "3",
+      "shots": "3",
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "DEF",
+          "Amount": "7"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXHP",
+          "Amount": "40"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "40"
+        }
+      ],
+      "activate": [
+        {
+          "value": "ChannelDash",
+          "Amount": "3",
+          "Duration": "20"
+        }
+      ],
+      "activate2": [],
+      "modes": [],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [],
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Tier 7 Sheath Projectile",
+          "Speed": "160",
+          "MinDamage": "450",
+          "MaxDamage": "500",
+          "LifetimeMS": "500",
+          "MultiHit": true,
+          "Size": "120"
+        }
+      ],
+      "subattacks": [],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x3917"
+        },
+        {
+          "key": "Object id",
+          "value": "Sonic Wave Sheath"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Sheath"
+        },
+        {
+          "key": "Tier",
+          "value": "7"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Red Bag"
+        },
+        {
+          "key": "Cooldown",
+          "value": "3"
+        },
+        {
+          "key": "MpCost",
+          "value": "140"
+        },
+        {
+          "key": "ArcGap",
+          "value": "7"
+        },
+        {
+          "key": "NumProjectiles",
+          "value": "3"
+        },
+        {
+          "key": "StartUse",
+          "value": "",
+          "Activate": {
+            "value": "Dash",
+            "Speed": "50",
+            "MinDistance": "1",
+            "MaxDistance": "7",
+            "Damage": "1600",
+            "Color": "0x419df6",
+            "PostCondDuration": "0.16",
+            "Effect": "Multiplied",
+            "Stat": "ATT",
+            "AmountPerEnemy": "8,12,17,23,30",
+            "EffectDuration": "10",
+            "Cooldown": "0.4"
+          }
+        },
+        {
+          "key": "EndUse",
+          "value": "",
+          "Activate": "Shoot"
+        },
+        {
+          "key": "FeedPower",
+          "value": "570"
+        },
+        {
+          "key": "XPBonus",
+          "value": "8"
+        },
+        {
+          "key": "Soulbound",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nSHEATH\nTIERED\nLOOTABLE\nT7\nT7_ABILITY\nNUMPROJ_3\nMPCOST\nXPBONUS"
+        },
+        {
+          "key": "EnchantmentSlots",
+          "value": true,
+          "SlotChance": "0.5,0.375,0.25,0.125",
+          "SeasonalSlotMod": "1.05",
+          "ForgeSlotMod": "0.8",
+          "DustType": "purpleDust",
+          "DustAmounts": "50,65,80,100",
+          "EnchantmentList": "Default Enchantment Pool"
+        }
+      ]
+    },
+    {
+      "id": "wiki_31594",
+      "name": "Sigil of the Chicken",
+      "kind": "sigil",
+      "source": "https://realm.wiki/item?id=31594",
+      "tier": "T0",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Sigil",
+      "mana": null,
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [],
+      "activate": [],
+      "activate2": [],
+      "modes": [
+        {
+          "value": "",
+          "Name": "Normal Ability",
+          "AttackIndex": "0",
+          "Activate": {
+            "value": "Shoot",
+            "ScalingStat": "WIS",
+            "StatModScalingMin": "42",
+            "StatModDamage": "3"
+          },
+          "OnPlayerAbilityActivate": {
+            "value": "FillMeter",
+            "IdMeter": "0",
+            "Proc": "1",
+            "WornFlat": "true",
+            "AmountWorn": "80",
+            "Amount": "0"
+          },
+          "OnEnemyHitActivate": {
+            "value": "FillMeter",
+            "IdMeter": "0",
+            "Proc": "1",
+            "WornFlat": "true",
+            "AmountWorn": "1",
+            "Amount": "0"
+          },
+          "MpCost": "30",
+          "SwitchTime": "0",
+          "FullChange": true
+        },
+        {
+          "value": "",
+          "Name": "Chicken Form",
+          "AttackIndex": "1",
+          "OnSwitchAbilityActivate": [
+            {
+              "value": "StatBoostSelf",
+              "Proc": "1",
+              "IdMeter": "0",
+              "MinimumMeter": "500",
+              "MeterCost": "0",
+              "Amount": "10",
+              "Channel": "noStackItm",
+              "Duration": "6.0",
+              "Stat": "ATT"
+            },
+            {
+              "value": "StatBoostSelf",
+              "Proc": "1",
+              "IdMeter": "0",
+              "MinimumMeter": "500",
+              "MeterCost": "0",
+              "Amount": "5",
+              "Channel": "noStackItm",
+              "Duration": "6.0",
+              "Stat": "DEF"
+            },
+            {
+              "value": "SelfTransform",
+              "Proc": "1",
+              "IdMeter": "0",
+              "MinimumMeter": "500",
+              "MeterCost": "500",
+              "Duration": "6.0",
+              "Skin": "0x70cc"
+            },
+            {
+              "value": "BoostRange",
+              "Proc": "1",
+              "Radius": "1",
+              "SelfOnly": "true",
+              "LifeBoost": "0.66",
+              "SpeedBoost": "1",
+              "Duration": "6.0",
+              "Targeted": "false"
+            }
+          ],
+          "Activate": [
+            {
+              "value": "Shoot",
+              "ScalingStat": "WIS",
+              "StatModScalingMin": "42",
+              "StatModDamage": "3"
+            },
+            {
+              "value": "BulletCreate",
+              "NumShots": "2",
+              "GapAngle": "-45",
+              "GapTiles": "0.65",
+              "OffsetAngle": "+75",
+              "MaxDistance": "6.0",
+              "ScalingStat": "WIS",
+              "StatModScalingMin": "42",
+              "StatModDamage": "1",
+              "StatModNumShots": "0.0000001",
+              "Type": "0x7b4f"
+            },
+            {
+              "value": "BulletCreate",
+              "NumShots": "2",
+              "GapAngle": "+45",
+              "GapTiles": "0.65",
+              "OffsetAngle": "-75",
+              "MaxDistance": "6.0",
+              "ScalingStat": "WIS",
+              "StatModScalingMin": "42",
+              "StatModDamage": "1",
+              "StatModNumShots": "0.0000001",
+              "Type": "0x7b4f"
+            }
+          ],
+          "MpCost": "30",
+          "SwitchTime": "0",
+          "AbilityTime": "6",
+          "NoChange": true
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [
+        {
+          "value": "",
+          "Id": "0",
+          "MaxValue": "500",
+          "StartValue": "0",
+          "ChargeString": "Charge the meter by using your ability or hitting enemies.",
+          "BarColor": [
+            {
+              "value": "0xFF0000",
+              "MaxValue": "0.25"
+            },
+            {
+              "value": "0xFFAA00",
+              "MaxValue": "0.50"
+            },
+            {
+              "value": "0x00FF00",
+              "MaxValue": "0.75"
+            },
+            {
+              "value": "0x00FFAA",
+              "MaxValue": "1.00"
+            }
+          ]
+        }
+      ],
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Tier 0 Sigil Projectile",
+          "Size": "120",
+          "CollisionMult": "1.2",
+          "Speed": "160",
+          "MinDamage": "120",
+          "MaxDamage": "180",
+          "LifetimeMS": "600",
+          "MultiHit": true,
+          "FaceDir": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "ArcGap": "15",
+          "RateOfFire": "1"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "ArcGap": "15",
+          "RateOfFire": "1"
+        }
+      ],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x7b6a"
+        },
+        {
+          "key": "Object id",
+          "value": "Sigil of the Chicken"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Sigil"
+        },
+        {
+          "key": "Tier",
+          "value": "0"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/magic_nova"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Pink Bag"
+        },
+        {
+          "key": "FeedPower",
+          "value": "4"
+        },
+        {
+          "key": "DropTradable",
+          "value": true
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nSIGIL\nT0\nT0_ABILITY\nLOOTABLE\nMPCOST\nSTATMOD\nTRADEABLE"
+        }
+      ]
+    },
+    {
+      "id": "wiki_31602",
+      "name": "Sigil of the Rhino",
+      "kind": "sigil",
+      "source": "https://realm.wiki/item?id=31602",
+      "tier": "T7",
+      "shiny": false,
+      "class": "Equipment",
+      "slot": "Sigil",
+      "mana": null,
+      "mana2": null,
+      "cooldown": null,
+      "shots": 1,
+      "equip": [
+        {
+          "value": "IncrementStat",
+          "Stat": "WIS",
+          "Amount": "7"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXHP",
+          "Amount": "40"
+        },
+        {
+          "value": "IncrementStat",
+          "Stat": "MAXMP",
+          "Amount": "40"
+        }
+      ],
+      "activate": [],
+      "activate2": [],
+      "modes": [
+        {
+          "value": "",
+          "Name": "Normal Ability",
+          "AttackIndex": "0",
+          "Activate": {
+            "value": "Shoot",
+            "ScalingStat": "WIS",
+            "StatModScalingMin": "42",
+            "StatModDamage": "11.5"
+          },
+          "OnPlayerAbilityActivate": {
+            "value": "FillMeter",
+            "IdMeter": "0",
+            "Proc": "1",
+            "WornFlat": "true",
+            "AmountWorn": "80",
+            "Amount": "0"
+          },
+          "OnEnemyHitActivate": {
+            "value": "FillMeter",
+            "IdMeter": "0",
+            "Proc": "1",
+            "WornFlat": "true",
+            "AmountWorn": "1",
+            "Amount": "0"
+          },
+          "MpCost": "100",
+          "SwitchTime": "0",
+          "FullChange": true
+        },
+        {
+          "value": "",
+          "Name": "Rhino Form",
+          "AttackIndex": "1",
+          "OnSwitchAbilityActivate": [
+            {
+              "value": "StatBoostSelf",
+              "Proc": "1",
+              "IdMeter": "0",
+              "MinimumMeter": "500",
+              "MeterCost": "0",
+              "Amount": "45",
+              "Channel": "noStackItm",
+              "Duration": "9.6",
+              "Stat": "ATT"
+            },
+            {
+              "value": "StatBoostSelf",
+              "Proc": "1",
+              "IdMeter": "0",
+              "MinimumMeter": "500",
+              "MeterCost": "0",
+              "Amount": "26",
+              "Channel": "noStackItm",
+              "Duration": "9.6",
+              "Stat": "DEF"
+            },
+            {
+              "value": "SelfTransform",
+              "Proc": "1",
+              "IdMeter": "0",
+              "MinimumMeter": "500",
+              "MeterCost": "500",
+              "Duration": "9.6",
+              "Skin": "0x7b16"
+            },
+            {
+              "value": "BoostRange",
+              "Proc": "1",
+              "Radius": "1",
+              "SelfOnly": "true",
+              "LifeBoost": "0.66",
+              "SpeedBoost": "1",
+              "Duration": "9.6",
+              "Targeted": "false"
+            }
+          ],
+          "Activate": [
+            {
+              "value": "Shoot",
+              "ScalingStat": "WIS",
+              "StatModScalingMin": "42",
+              "StatModDamage": "11.5"
+            },
+            {
+              "value": "BulletCreate",
+              "NumShots": "2",
+              "GapAngle": "-45",
+              "GapTiles": "0.65",
+              "OffsetAngle": "+75",
+              "MaxDistance": "6.0",
+              "ScalingStat": "WIS",
+              "StatModScalingMin": "42",
+              "StatModDamage": "2.75",
+              "StatModNumShots": "0.0000001",
+              "Type": "0x7b56"
+            },
+            {
+              "value": "BulletCreate",
+              "NumShots": "2",
+              "GapAngle": "+45",
+              "GapTiles": "0.65",
+              "OffsetAngle": "-75",
+              "MaxDistance": "6.0",
+              "ScalingStat": "WIS",
+              "StatModScalingMin": "42",
+              "StatModDamage": "2.75",
+              "StatModNumShots": "0.0000001",
+              "Type": "0x7b56"
+            }
+          ],
+          "MpCost": "100",
+          "SwitchTime": "0",
+          "AbilityTime": "9.6",
+          "NoChange": true
+        }
+      ],
+      "onShoot": [],
+      "onAbility": [],
+      "onHit": [],
+      "onHurt": [],
+      "onHeal": [],
+      "onKill": [],
+      "meters": [
+        {
+          "value": "",
+          "Id": "0",
+          "MaxValue": "500",
+          "StartValue": "0",
+          "ChargeString": "Charge the meter by using your ability or hitting enemies.",
+          "BarColor": [
+            {
+              "value": "0xFF0000",
+              "MaxValue": "0.25"
+            },
+            {
+              "value": "0xFFAA00",
+              "MaxValue": "0.50"
+            },
+            {
+              "value": "0x00FF00",
+              "MaxValue": "0.75"
+            },
+            {
+              "value": "0x00FFAA",
+              "MaxValue": "1.00"
+            }
+          ]
+        }
+      ],
+      "projectiles": [
+        {
+          "value": "",
+          "ObjectId": "Tier 7 Sigil Projectile",
+          "Size": "120",
+          "CollisionMult": "1.2",
+          "Speed": "160",
+          "MinDamage": "1140",
+          "MaxDamage": "1260",
+          "LifetimeMS": "600",
+          "MultiHit": true,
+          "FaceDir": true
+        }
+      ],
+      "subattacks": [
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "ArcGap": "15",
+          "RateOfFire": "1"
+        },
+        {
+          "value": "",
+          "ProjectileId": "0",
+          "NumProjectiles": "1",
+          "ArcGap": "15",
+          "RateOfFire": "1"
+        }
+      ],
+      "rawFields": [
+        {
+          "key": "Object type",
+          "value": "0x7b72"
+        },
+        {
+          "key": "Object id",
+          "value": "Sigil of the Rhino"
+        },
+        {
+          "key": "Class",
+          "value": "Equipment"
+        },
+        {
+          "key": "Item",
+          "value": true
+        },
+        {
+          "key": "Soulbound",
+          "value": true
+        },
+        {
+          "key": "SlotType",
+          "value": "Sigil"
+        },
+        {
+          "key": "Tier",
+          "value": "7"
+        },
+        {
+          "key": "Sound",
+          "value": "spell/magic_nova"
+        },
+        {
+          "key": "Usable",
+          "value": true
+        },
+        {
+          "key": "BagType",
+          "value": "Red Bag"
+        },
+        {
+          "key": "Labels",
+          "value": "EQUIPMENT\nABILITY\nSIGIL\nT7\nT7_ABILITY\nLOOTABLE\nMPCOST\nSTATMOD\nTRADEABLE"
+        },
+        {
+          "key": "XPBonus",
+          "value": "8"
+        },
+        {
+          "key": "FeedPower",
+          "value": "570"
+        },
+        {
+          "key": "EnchantmentSlots",
+          "value": true,
+          "SlotChance": "0.5,0.375,0.25,0.125",
+          "SeasonalSlotMod": "1.05",
+          "ForgeSlotMod": "0.8",
+          "DustType": "purpleDust",
+          "DustAmounts": "50,65,80,100",
+          "EnchantmentList": "Default Enchantment Pool"
+        }
+      ]
+    }
+  ]
+}

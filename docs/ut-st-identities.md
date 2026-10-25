@@ -167,3 +167,7 @@ All 93 UT/ST wand entries now use [inspected wand profiles](wand-identities.md),
 ## Complete katana pass — 0.37.0
 
 All 84 UT/ST katana entries now use [inspected katana profiles](katana-identities.md), including independent side bursts, returning/accelerating attacks, piercing sunbeams, poison/fire grenades, HP/healing trade-offs, weapon fatigue and vitality conversion. These profiles supersede earlier katana recipes, including Socket Blade. Existing item identities, upgrades and set membership remain.
+
+## Ability identity pass — 0.40.0
+
+All 559 UT/ST ability variants have a researched mapping, calibrated against unchanged tiered abilities. See [ability identities](ability-identities.md) for the full item mapping, translations, limits and preserved custom signatures, and [ability balance](ability-balance.md) for the seeded comparison. Internal effect helpers are unobtainable; old saves remain readable.
