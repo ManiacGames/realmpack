@@ -7,7 +7,7 @@
 - Added Command, Potency, Focus, Clarity and Resonance for companions, afflictions, support, mana generation and passive rings. Prevented new inactive Quickening rolls on passive rings.
 - Improved Execution and added distinct 10/15/20% Insight refunds, sharing the existing gear-refund cap. Existing saved values and paid previews remain intact.
 - Limited flat activation procs to once per 2 seconds per item; Shattering removes ward before the primary attack. Preserved consumable readiness, local haste, item identities and encounter tuning.
-- Validation: 32 regression suites, syntax checks, 760 enchantment scenarios with identical outcomes at all three speeds, 1,995 paired class fixtures, responsive Enchanter checks and live 4× combat.
+- Validation: 32 regression suites including ward and delayed-hit checks, syntax checks, 760 enchantment scenarios with identical outcomes at all three speeds, 1,995 paired class fixtures, responsive Enchanter checks and live 4× combat.
 
 ## 0.40.0 — 2026-10-25
 

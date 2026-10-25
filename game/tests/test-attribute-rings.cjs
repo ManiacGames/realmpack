@@ -2,17 +2,17 @@
 const assert=require('node:assert/strict'),{ctx,vm}=require('./load-game.cjs');
 console.log(vm.runInContext(`(()=>{
  const check=(v,m)=>{if(!v)throw Error(m)},near=(a,b)=>Math.abs(a-b)<1e-8;
- freshRun('knight',true);selectPortal(s.portalChoices[0]);
+ freshRun('knight',true);s.seed=123456;s.portalChoices=[ENCOUNTERS.dungeons[0].id];selectPortal(s.portalChoices[0]);
  const ring=(attribute,tier=1)=>DATA.items.find(d=>d.ringAttribute===attribute&&d.tier==='T'+tier);
  const pack=(type,x,y)=>Object.assign(makeItem(type),{x,y});
  defs.ringTestWeapon={id:'ringTestWeapon',name:'Test weapon',group:'weapon',kind:'sword',effect:'damage',amount:100,cd:4,mana:0,w:1,h:1,classes:[],condition:'none'};
  defs.ringTestArmor={...defs.ringTestWeapon,id:'ringTestArmor',name:'Test armor',group:'armor',kind:'plate',effect:'block'};
  defs.ringTestAbility={...defs.ringTestWeapon,id:'ringTestAbility',name:'Test ability',group:'ability',kind:'spell'};
- const begin=(target,attribute,tier=1)=>{s.phase='fight';s.max=1000;s.ringHealthBonus=0;s.hp=100;s.block=0;s.mana=0;s.power=0;s.relicHaste=0;s.haste=0;s.fury=0;s.focus=0;s.time=0;s.enemy.hp=s.enemy.max=100000;s.enemy.vulnerable=0;const i=pack(target,2,2),r=pack(ring(attribute,tier).id,1,2);s.items=[i,r];s.stash=[];return [i,r]};
+ const begin=(target,attribute,tier=1)=>{s.phase='fight';s.max=1000;s.ringHealthBonus=0;s.hp=100;s.block=0;s.mana=0;s.power=0;s.relicHaste=0;s.haste=0;s.fury=0;s.focus=0;s.time=0;s.enemy.hp=s.enemy.max=100000;s.enemy.vulnerable=0;s.enemy.ward=0;s.enemy.veil=0;const i=pack(target,2,2),r=pack(ring(attribute,tier).id,1,2);s.items=[i,r];s.stash=[];return [i,r]};
  const tiered=DATA.items.filter(d=>d.ringAttribute);check(tiered.length===57,'All 57 tiered attribute rings covered');
  for(const key of ['attack','defense','dexterity','speed','wisdom','vitality','health','magic']){check(ring(key)&&ring(key,7),'Missing ring family '+key);check(ring(key,7).amount>ring(key).amount,'Tier progression '+key)}
  check(DATA.items.filter(d=>d.group==='ring'&&!/^T/.test(d.tier)).every(d=>!d.ringAttribute),'UT/ST ring changed');
- let [i,r]=begin('ringTestWeapon','attack');check(activate(i)&&s.enemy.hp===99892,'Attack buffs weapon output');check(!activate(r)&&r.activations===0,'Attack ring attacks on its own');
+ let [i,r]=begin('ringTestWeapon','attack');check(activate(i)&&s.enemy.hp===99892,'Attack buffs weapon output');check(!activate(r)&&r.activations===0,'Attack ring attacks on its own');const beforeWard=s.enemy.hp;s.enemy.ward=20;check(activate(i)&&s.enemy.ward===0&&s.enemy.hp===beforeWard-88,'Attack ring respects enemy ward');
  r.eventInfusion=.25;check(enchantPrimary(i,100)===110,'Attack ring infusion');check(itemLinks().some(l=>l.source===r.id&&l.target===i.id&&l.label.includes('10%')),'Infused link amount');r.eventInfusion=0;
  check(itemLinks().some(l=>l.source===r.id&&l.target===i.id&&l.label.includes('8%')),'Accurate Attack link');
  r.x=0;check(enchantPrimary(i,100)===100,'Distant Attack ring');r.x=1;r.y=1;check(enchantPrimary(i,100)===100,'Diagonal Attack ring');s.items=[i];s.stash=[r];check(enchantPrimary(i,100)===100,'Stashed Attack ring');
