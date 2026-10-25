@@ -1,0 +1,802 @@
+{
+  "classes": {
+    "casesPerSpeed": 304,
+    "fightsPerBuild": 912,
+    "beforeWins": 151,
+    "afterWins": 151,
+    "afterSummary": [
+      {
+        "classId": "rogue",
+        "wins": 4,
+        "disabledWins": 3,
+        "events": 99,
+        "disabledEvents": 57
+      },
+      {
+        "classId": "archer",
+        "wins": 6,
+        "disabledWins": 6,
+        "events": 14,
+        "disabledEvents": 14
+      },
+      {
+        "classId": "wizard",
+        "wins": 4,
+        "disabledWins": 2,
+        "events": 14,
+        "disabledEvents": 0
+      },
+      {
+        "classId": "priest",
+        "wins": 6,
+        "disabledWins": 2,
+        "events": 60,
+        "disabledEvents": 14
+      },
+      {
+        "classId": "warrior",
+        "wins": 4,
+        "disabledWins": 4,
+        "events": 28,
+        "disabledEvents": 26
+      },
+      {
+        "classId": "knight",
+        "wins": 7,
+        "disabledWins": 5,
+        "events": 44,
+        "disabledEvents": 26
+      },
+      {
+        "classId": "paladin",
+        "wins": 6,
+        "disabledWins": 5,
+        "events": 88,
+        "disabledEvents": 38
+      },
+      {
+        "classId": "assassin",
+        "wins": 4,
+        "disabledWins": 2,
+        "events": 73,
+        "disabledEvents": 0
+      },
+      {
+        "classId": "necromancer",
+        "wins": 6,
+        "disabledWins": 2,
+        "events": 12,
+        "disabledEvents": 0
+      },
+      {
+        "classId": "huntress",
+        "wins": 6,
+        "disabledWins": 5,
+        "events": 44,
+        "disabledEvents": 0
+      },
+      {
+        "classId": "mystic",
+        "wins": 4,
+        "disabledWins": 2,
+        "events": 43,
+        "disabledEvents": 0
+      },
+      {
+        "classId": "trickster",
+        "wins": 4,
+        "disabledWins": 2,
+        "events": 33,
+        "disabledEvents": 0
+      },
+      {
+        "classId": "sorcerer",
+        "wins": 4,
+        "disabledWins": 1,
+        "events": 11,
+        "disabledEvents": 0
+      },
+      {
+        "classId": "ninja",
+        "wins": 4,
+        "disabledWins": 2,
+        "events": 39,
+        "disabledEvents": 28
+      },
+      {
+        "classId": "samurai",
+        "wins": 5,
+        "disabledWins": 3,
+        "events": 32,
+        "disabledEvents": 42
+      },
+      {
+        "classId": "bard",
+        "wins": 5,
+        "disabledWins": 4,
+        "events": 9,
+        "disabledEvents": 0
+      },
+      {
+        "classId": "summoner",
+        "wins": 4,
+        "disabledWins": 1,
+        "events": 7,
+        "disabledEvents": 0
+      },
+      {
+        "classId": "kensei",
+        "wins": 6,
+        "disabledWins": 3,
+        "events": 29,
+        "disabledEvents": 0
+      },
+      {
+        "classId": "druid",
+        "wins": 6,
+        "disabledWins": 2,
+        "events": 33,
+        "disabledEvents": 0
+      }
+    ],
+    "speedMismatches": 0
+  },
+  "enchant": {
+    "casesPerSpeed": 760,
+    "fightsPerBuild": 2280,
+    "beforeWins": 458,
+    "afterWins": 458,
+    "afterSummary": [
+      {
+        "choice": "none",
+        "bySpeed": [
+          {
+            "speed": 1,
+            "fights": 76,
+            "wins": 45
+          },
+          {
+            "speed": 2,
+            "fights": 76,
+            "wins": 45
+          },
+          {
+            "speed": 4,
+            "fights": 76,
+            "wins": 45
+          }
+        ]
+      },
+      {
+        "choice": "quickening",
+        "bySpeed": [
+          {
+            "speed": 1,
+            "fights": 76,
+            "wins": 45
+          },
+          {
+            "speed": 2,
+            "fights": 76,
+            "wins": 45
+          },
+          {
+            "speed": 4,
+            "fights": 76,
+            "wins": 45
+          }
+        ]
+      },
+      {
+        "choice": "might",
+        "bySpeed": [
+          {
+            "speed": 1,
+            "fights": 76,
+            "wins": 46
+          },
+          {
+            "speed": 2,
+            "fights": 76,
+            "wins": 46
+          },
+          {
+            "speed": 4,
+            "fights": 76,
+            "wins": 46
+          }
+        ]
+      },
+      {
+        "choice": "execution",
+        "bySpeed": [
+          {
+            "speed": 1,
+            "fights": 76,
+            "wins": 46
+          },
+          {
+            "speed": 2,
+            "fights": 76,
+            "wins": 46
+          },
+          {
+            "speed": 4,
+            "fights": 76,
+            "wins": 46
+          }
+        ]
+      },
+      {
+        "choice": "siphon",
+        "bySpeed": [
+          {
+            "speed": 1,
+            "fights": 76,
+            "wins": 50
+          },
+          {
+            "speed": 2,
+            "fights": 76,
+            "wins": 50
+          },
+          {
+            "speed": 4,
+            "fights": 76,
+            "wins": 50
+          }
+        ]
+      },
+      {
+        "choice": "spark",
+        "bySpeed": [
+          {
+            "speed": 1,
+            "fights": 76,
+            "wins": 44
+          },
+          {
+            "speed": 2,
+            "fights": 76,
+            "wins": 44
+          },
+          {
+            "speed": 4,
+            "fights": 76,
+            "wins": 44
+          }
+        ]
+      },
+      {
+        "choice": "abilityPower",
+        "bySpeed": [
+          {
+            "speed": 1,
+            "fights": 76,
+            "wins": 46
+          },
+          {
+            "speed": 2,
+            "fights": 76,
+            "wins": 46
+          },
+          {
+            "speed": 4,
+            "fights": 76,
+            "wins": 46
+          }
+        ]
+      },
+      {
+        "choice": "insight",
+        "bySpeed": [
+          {
+            "speed": 1,
+            "fights": 76,
+            "wins": 45
+          },
+          {
+            "speed": 2,
+            "fights": 76,
+            "wins": 45
+          },
+          {
+            "speed": 4,
+            "fights": 76,
+            "wins": 45
+          }
+        ]
+      },
+      {
+        "choice": "armorPower",
+        "bySpeed": [
+          {
+            "speed": 1,
+            "fights": 76,
+            "wins": 46
+          },
+          {
+            "speed": 2,
+            "fights": 76,
+            "wins": 46
+          },
+          {
+            "speed": 4,
+            "fights": 76,
+            "wins": 46
+          }
+        ]
+      },
+      {
+        "choice": "resonance",
+        "bySpeed": [
+          {
+            "speed": 1,
+            "fights": 76,
+            "wins": 45
+          },
+          {
+            "speed": 2,
+            "fights": 76,
+            "wins": 45
+          },
+          {
+            "speed": 4,
+            "fights": 76,
+            "wins": 45
+          }
+        ]
+      }
+    ],
+    "speedMismatches": 0
+  },
+  "balance": {
+    "fights": 1995,
+    "beforeWins": 1578,
+    "afterWins": 1570,
+    "before": [
+      {
+        "classId": "rogue",
+        "wins": 77,
+        "fights": 105,
+        "variants": [
+          25,
+          26,
+          26
+        ]
+      },
+      {
+        "classId": "archer",
+        "wins": 96,
+        "fights": 105,
+        "variants": [
+          30,
+          33,
+          33
+        ]
+      },
+      {
+        "classId": "wizard",
+        "wins": 77,
+        "fights": 105,
+        "variants": [
+          23,
+          27,
+          27
+        ]
+      },
+      {
+        "classId": "priest",
+        "wins": 91,
+        "fights": 105,
+        "variants": [
+          30,
+          30,
+          31
+        ]
+      },
+      {
+        "classId": "warrior",
+        "wins": 86,
+        "fights": 105,
+        "variants": [
+          27,
+          29,
+          30
+        ]
+      },
+      {
+        "classId": "knight",
+        "wins": 94,
+        "fights": 105,
+        "variants": [
+          30,
+          31,
+          33
+        ]
+      },
+      {
+        "classId": "paladin",
+        "wins": 91,
+        "fights": 105,
+        "variants": [
+          30,
+          31,
+          30
+        ]
+      },
+      {
+        "classId": "assassin",
+        "wins": 78,
+        "fights": 105,
+        "variants": [
+          25,
+          26,
+          27
+        ]
+      },
+      {
+        "classId": "necromancer",
+        "wins": 82,
+        "fights": 105,
+        "variants": [
+          27,
+          27,
+          28
+        ]
+      },
+      {
+        "classId": "huntress",
+        "wins": 86,
+        "fights": 105,
+        "variants": [
+          28,
+          29,
+          29
+        ]
+      },
+      {
+        "classId": "mystic",
+        "wins": 78,
+        "fights": 105,
+        "variants": [
+          26,
+          26,
+          26
+        ]
+      },
+      {
+        "classId": "trickster",
+        "wins": 75,
+        "fights": 105,
+        "variants": [
+          24,
+          25,
+          26
+        ]
+      },
+      {
+        "classId": "sorcerer",
+        "wins": 64,
+        "fights": 105,
+        "variants": [
+          18,
+          22,
+          24
+        ]
+      },
+      {
+        "classId": "ninja",
+        "wins": 81,
+        "fights": 105,
+        "variants": [
+          26,
+          27,
+          28
+        ]
+      },
+      {
+        "classId": "samurai",
+        "wins": 85,
+        "fights": 105,
+        "variants": [
+          27,
+          29,
+          29
+        ]
+      },
+      {
+        "classId": "bard",
+        "wins": 80,
+        "fights": 105,
+        "variants": [
+          26,
+          27,
+          27
+        ]
+      },
+      {
+        "classId": "summoner",
+        "wins": 72,
+        "fights": 105,
+        "variants": [
+          22,
+          26,
+          24
+        ]
+      },
+      {
+        "classId": "kensei",
+        "wins": 95,
+        "fights": 105,
+        "variants": [
+          31,
+          31,
+          33
+        ]
+      },
+      {
+        "classId": "druid",
+        "wins": 90,
+        "fights": 105,
+        "variants": [
+          29,
+          30,
+          31
+        ]
+      }
+    ],
+    "after": [
+      {
+        "classId": "rogue",
+        "wins": 77,
+        "fights": 105,
+        "variants": [
+          25,
+          26,
+          26
+        ]
+      },
+      {
+        "classId": "archer",
+        "wins": 96,
+        "fights": 105,
+        "variants": [
+          30,
+          33,
+          33
+        ]
+      },
+      {
+        "classId": "wizard",
+        "wins": 77,
+        "fights": 105,
+        "variants": [
+          23,
+          27,
+          27
+        ]
+      },
+      {
+        "classId": "priest",
+        "wins": 91,
+        "fights": 105,
+        "variants": [
+          30,
+          30,
+          31
+        ]
+      },
+      {
+        "classId": "warrior",
+        "wins": 86,
+        "fights": 105,
+        "variants": [
+          27,
+          29,
+          30
+        ]
+      },
+      {
+        "classId": "knight",
+        "wins": 94,
+        "fights": 105,
+        "variants": [
+          30,
+          31,
+          33
+        ]
+      },
+      {
+        "classId": "paladin",
+        "wins": 90,
+        "fights": 105,
+        "variants": [
+          30,
+          30,
+          30
+        ]
+      },
+      {
+        "classId": "assassin",
+        "wins": 78,
+        "fights": 105,
+        "variants": [
+          25,
+          26,
+          27
+        ]
+      },
+      {
+        "classId": "necromancer",
+        "wins": 82,
+        "fights": 105,
+        "variants": [
+          27,
+          27,
+          28
+        ]
+      },
+      {
+        "classId": "huntress",
+        "wins": 86,
+        "fights": 105,
+        "variants": [
+          28,
+          29,
+          29
+        ]
+      },
+      {
+        "classId": "mystic",
+        "wins": 78,
+        "fights": 105,
+        "variants": [
+          26,
+          26,
+          26
+        ]
+      },
+      {
+        "classId": "trickster",
+        "wins": 72,
+        "fights": 105,
+        "variants": [
+          22,
+          24,
+          26
+        ]
+      },
+      {
+        "classId": "sorcerer",
+        "wins": 64,
+        "fights": 105,
+        "variants": [
+          18,
+          22,
+          24
+        ]
+      },
+      {
+        "classId": "ninja",
+        "wins": 81,
+        "fights": 105,
+        "variants": [
+          26,
+          27,
+          28
+        ]
+      },
+      {
+        "classId": "samurai",
+        "wins": 85,
+        "fights": 105,
+        "variants": [
+          27,
+          29,
+          29
+        ]
+      },
+      {
+        "classId": "bard",
+        "wins": 80,
+        "fights": 105,
+        "variants": [
+          26,
+          27,
+          27
+        ]
+      },
+      {
+        "classId": "summoner",
+        "wins": 72,
+        "fights": 105,
+        "variants": [
+          22,
+          26,
+          24
+        ]
+      },
+      {
+        "classId": "kensei",
+        "wins": 95,
+        "fights": 105,
+        "variants": [
+          31,
+          31,
+          33
+        ]
+      },
+      {
+        "classId": "druid",
+        "wins": 86,
+        "fights": 105,
+        "variants": [
+          27,
+          28,
+          31
+        ]
+      }
+    ]
+  },
+  "resource": {
+    "before": [
+      {
+        "abilities": 1,
+        "builds": 15,
+        "rounds": 45,
+        "shortages": []
+      },
+      {
+        "abilities": 2,
+        "builds": 15,
+        "rounds": 45,
+        "shortages": []
+      },
+      {
+        "abilities": 3,
+        "builds": 15,
+        "rounds": 45,
+        "shortages": [
+          "assassin",
+          "necromancer",
+          "druid"
+        ]
+      }
+    ],
+    "after": [
+      {
+        "abilities": 1,
+        "builds": 15,
+        "rounds": 45,
+        "shortages": []
+      },
+      {
+        "abilities": 2,
+        "builds": 15,
+        "rounds": 45,
+        "shortages": [
+          "assassin",
+          "necromancer",
+          "druid"
+        ]
+      },
+      {
+        "abilities": 3,
+        "builds": 15,
+        "rounds": 45,
+        "shortages": [
+          "wizard",
+          "priest",
+          "paladin",
+          "assassin",
+          "necromancer",
+          "huntress",
+          "sorcerer",
+          "summoner",
+          "druid"
+        ]
+      }
+    ]
+  }
+}

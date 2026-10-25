@@ -26,7 +26,7 @@ a=setup('goblins');p=s.stash.find(i=>defs[i.type].once);resolveEvent('scavenge',
 a=setup('broker');check(!eventCandidates('rareGear').some(i=>defs[i.type].once),'Broker treats potions as rare equipment');const target=eventCandidates('rareGear')[0],quote=eventSaleQuote(target,1.15);check(quote<=Math.floor(defs[target.type].price*.75),'Broker arbitrage cap');
 a=setup('healer',0,'full');let gold=s.gold;resolveEvent('treat');check(s.phase==='event'&&s.gold===gold,'Paid for zero healing');
 a=setup('surgeon',0,'full');resolveEvent('procedure');check(s.max===200&&s.phase==='event','Surgery removed max HP without healing');
-a=setup('mana',0,'fullMana');let hp=s.hp;resolveEvent('touch');check(s.hp===hp&&s.phase==='event','Paid health for capped mana');
+a=setup('mana',0,'fullMana');s.eventBuffs={mana:manaCapacity()};let hp=s.hp;resolveEvent('touch');check(s.hp===hp&&s.phase==='event','Paid health for capped mana');
 a=setup('runes');let ring=makeItem(DATA.byName['Ring of Magic']);s.stash.push(ring);const donor=s.stash[2];check(runeforgePreview(donor,ring,'tempo').reason,'Inactive passive ring accepts tempering');
 a=setup('ward');s.eventBuffs.block=120;gold=s.gold;resolveEvent('ward');check(s.phase==='event'&&s.gold===gold,'Paid for capped opening ward');
 a=setup('spirit');gold=s.gold;resolveEvent('coin');check(s.phase==='event'&&s.gold===gold,'Paid to cleanse a nonexistent curse');

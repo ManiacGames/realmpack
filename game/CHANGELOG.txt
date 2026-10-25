@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.45.0 — 2026-10-25
+
+- Mana now resets for each battle: 10 base, plus 1 per 5 capacity above 50 (up to 10 extra). Magic rings keep their separate opening bonus. Waves within a battle share the same pool.
+- Reduced universal regeneration from 1 to 0.5 mana per second. Robes and other item-based mana generation retain their values.
+- Magic Potions now wait for ready equipment that cannot afford its mana cost, with at least 6/12 mana missing. Updated potion descriptions, opening-mana previews and mana-event rewards.
+- Verified the mana rules and regression suites; compared all 19 classes, enchantments and starter mana demand. Seeded class/enchantment results match across 1×, 2× and 4× playback.
+
 ## 0.44.0 — 2026-10-25
 
 - Reworked 23 non-combat encounters into distinct weapon, ability, armor, food, research and risk/reward services. Added revealed native gear choices that improve with the act and coin alternatives for several loot encounters.

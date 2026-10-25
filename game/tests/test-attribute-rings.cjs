@@ -56,7 +56,7 @@ console.log(vm.runInContext(`(()=>{
  s.items=[magicRings[0]];syncRingVitals();check(s.mana===5,'Equip refilled mana');s.magicRingManaGranted=false;check(startRingBattle()===1&&s.mana===6,'T1 battle mana');check(startRingBattle()===0&&s.mana===6,'Repeated battle-start mana');
  s.items=magicRings;s.magicRingManaGranted=false;s.mana=5;startRingBattle();check(s.mana===11,'Magic start total cap');
  s.magicRingManaGranted=false;s.mana=manaCapacity()-1;check(startRingBattle()===1&&s.mana===manaCapacity(),'Magic start ignores capacity');
- const weapon=pack('ringTestWeapon',2,2);s.items=[weapon,magicRings[2]];s.phase='prep';s.mana=0;ROOMS[s.room].type='combat';startFight();check(s.phase==='fight'&&s.mana===8,'StartFight did not apply T7 start mana');
+ const weapon=pack('ringTestWeapon',2,2);s.items=[weapon,magicRings[2]];s.phase='prep';s.mana=0;ROOMS[s.room].type='combat';startFight();check(s.phase==='fight'&&s.mana===battleManaReserve()+3,'StartFight did not apply T7 reserve and start mana');
  s.mana=0;setupWave();check(startRingBattle()===0&&s.mana===0,'New wave repeated start mana');
  // Health fills its added capacity once per battle, never on equip or each wave.
  s.phase='prep';s.items=[];s.stash=[];syncRingVitals();s.max=130;s.ringHealthBonus=0;s.hp=50;

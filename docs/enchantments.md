@@ -72,3 +72,7 @@ Existing enchantment objects, capacity, locks, dust, pending previews and indivi
 ## Validation
 
 See [enchantment balance](enchantment-balance.md). Tests cover transactions and migration; successful-cast fractional credit, all speeds, blocked readiness, consumable copies, all-role eligibility/category exclusions, 8,212 generated slots across obtainable equipment, companion ownership, per-item intervals, Insight ranks/shared refunds, Shattering order, Execution gates, additive prices, passive ring scaling, save round-trips and HUD batching. Browser checks cover Enchanter previews/locks/reloads across six viewport sizes and both text modes, plus live 4× combat. Fixed fixtures are balance checks, not player win-rate estimates.
+
+## Mana economy — 0.45.0
+
+Each battle now resets mana to 10 plus 1 per 5 capacity above 50, capped at 10 additional reserve. Opening Magic-ring, Reservoir and event grants then apply with the normal capacity limit. Mana-capacity consumables apply before the reserve is calculated. Existing enchantments and paid previews remain unchanged. Passive regeneration is 0.5 mana/second; item generation is unchanged. Insight still uses actual modified costs and its existing shared refund cap. See `mana-economy.md` for controlled resource and encounter comparisons.
