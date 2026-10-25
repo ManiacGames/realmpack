@@ -110,3 +110,16 @@ body #overlay .catalogue-item-modal .catalogue-item-content,body #overlay .catal
 html[data-large-text=true] body #overlay .catalogue-item-modal .catalogue-item-content,html[data-large-text=true] body #overlay .catalogue-item-modal :is(.mechanic-note,.shiny-note){font-size:19px}
 
 .catalogue-set-counting{display:block;margin-top:8px}
+
+/* Loot/shop inspection keeps expandable rules intact, with actions always visible. */
+body #overlay .offer-inspection-modal{width:min(940px,100%);max-width:940px;height:auto;min-height:0;max-height:calc(100dvh - 24px)!important;padding:18px;gap:10px}
+.offer-inspection-modal>.eyebrow{display:none}
+.offer-inspection-modal>:is(h1,p){flex:none}
+.offer-inspection-content{min-height:0;min-width:0;flex:0 1 auto;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.offer-inspection-modal>.loot-inspect-footer,.offer-inspection-modal>.shop-footer{display:flex;flex:none;justify-content:space-between;gap:8px;margin:0;border-top:1px solid #697657;padding-top:10px}
+body #overlay .offer-inspection-modal .choice{box-sizing:border-box;height:auto;min-height:0;width:100%;margin:0;padding:12px}
+body #overlay .offer-inspection-modal .shop-inspect-sections{margin-top:10px}
+body #overlay .offer-inspection-modal :is(p,li,small,summary){font-size:17px;line-height:1.35}
+.offer-inspection-modal summary{cursor:pointer}
+.offer-inspection-modal .adjacency-guide{margin:10px 0}
+@media(max-width:600px),(max-height:500px){body #overlay .offer-inspection-modal{padding:10px;gap:7px}.offer-inspection-modal .shop-inspect-sections{grid-template-columns:1fr}.offer-inspection-modal>.loot-inspect-footer button{font-size:16px;padding:6px 8px}}

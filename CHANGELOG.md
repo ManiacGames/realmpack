@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.42.1 — 2026-10-25
+
+- Fixed expanding adjacency bonuses in victory spoils breaking item cards into fragments and excessive pages.
+- Loot and shop inspections now keep their content intact, with Back and Take/Buy actions always visible. Longer expanded details stay inside the inspection panel.
+- Validation: repeated bonus expansion/collapse, return and take/buy interactions across desktop, phone and short landscape layouts in both text sizes; regression suites and dialog audit.
+
 ## 0.42.0 — 2026-10-25
 
 - Added twelve thematic adjacency links for summons, poison/traps, mixed afflictions, magic, stealth, holy armor, battle hymns, companion healing, katana techniques, sigils and Hex-based hunting.

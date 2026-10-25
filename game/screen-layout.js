@@ -90,6 +90,7 @@ function screenFitModal(){
  const focus=screenFocus(),modal=document.querySelector('#overlay .modal');if(!modal||modal.dataset.screenFit)return;modal.dataset.screenFit='true';modal.classList.add('screen-modal');
  if(modalKind==='reward'||modalKind==='shop'){fitOfferModal(modal);return}
  if(modalKind==='catalogueinspect'){fitCatalogueInspection(modal);return}
+ if(modalKind==='rewardinspect'||modalKind==='shopinspect'){fitOfferInspection(modal);return}
  if(modalKind==='defeat'){modal.classList.add('defeat-modal');modal.setAttribute('role','dialog');modal.setAttribute('aria-modal','true');modal.querySelector('h1').id='defeatTitle';modal.setAttribute('aria-labelledby','defeatTitle');modal.querySelector('p').id='defeatCause';modal.setAttribute('aria-describedby','defeatCause');modal.addEventListener('keydown',e=>{if(e.key==='Tab'){e.preventDefault();modal.querySelector('.defeat-continue').focus()}});modal.querySelector('.defeat-continue')?.focus({preventScroll:true});return}
  if(modalKind==='enchanter'){modal.classList.add('enchanter-modal');return}
  if(modalKind==='help'){modal.classList.add('quick-help-modal');return}
@@ -259,4 +260,16 @@ function fitCatalogueInspection(modal){
  const set=modal.querySelector('.catalogue-item-set .mechanic-note'),matching=set?.querySelector('details'),rules=set?.querySelector(':scope > small');if(matching&&rules){rules.classList.add('catalogue-set-counting');matching.append(rules)}
  modal.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const controls=[...modal.querySelectorAll('button,a[href],summary')].filter(el=>!el.disabled&&el.getClientRects().length),first=controls[0],last=controls[controls.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}});
  modal.querySelector('.catalogue-item-footer button')?.focus({preventScroll:true})
+}
+
+// Disclosures must keep their original DOM: the generic paginator splits oversized
+// cards into clones, losing disclosure state and repeatedly splitting their text.
+function fitOfferInspection(modal){
+ modal.classList.add('offer-inspection-modal');modal.setAttribute('role','dialog');modal.setAttribute('aria-modal','true');
+ const heading=modal.querySelector('h1');heading.id='offerInspectionTitle';modal.setAttribute('aria-labelledby',heading.id);
+ const footer=modal.querySelector(':scope > .loot-inspect-footer,:scope > .shop-footer'),body=document.createElement('div');body.className='offer-inspection-content';
+ const nodes=[...modal.children];for(const node of nodes.slice(nodes.indexOf(modal.querySelector(':scope > p'))+1))if(node!==footer)body.append(node);
+ modal.insertBefore(body,footer);
+ modal.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const controls=[...modal.querySelectorAll('button,a[href],summary')].filter(el=>!el.disabled&&el.getClientRects().length),first=controls[0],last=controls[controls.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}});
+ footer.querySelector('button')?.focus({preventScroll:true})
 }
