@@ -4,7 +4,7 @@ Fixed slot capacity, dust, locking and paid keep/replace previews remain. The re
 
 ## Timing and fractional output
 
-Combat runs simulation steps of at most 0.05s at every playback speed. Recharge overflow is retained after successful repeating-item activations. A ready item waiting for mana or its activation condition cannot bank missed casts; consumable copies restart their own cooldown. Haste stays local under the existing rules. The HUD updates once per timer callback, including accelerated playback, rather than rendering every simulation substep.
+Combat runs simulation steps of at most 0.05s at every playback speed. Recharge overflow is retained after successful repeating-item activations. A ready item waiting for mana or its activation condition cannot bank missed casts; consumable copies restart their own cooldown. Haste stays local under the existing rules. The HUD updates once per timer callback, including accelerated playback, rather than rendering every simulation substep. The 0.41.1 follow-up also keeps HUD reads inside the validated placement cache.
 
 Small percentage enchantments accumulate their marginal bonus into whole extra points instead of repeatedly rounding it away. For example, Restoration I on a 3-HP primary contributes three additional HP over twenty successful uses before other healing modifiers. Inspection does not spend fractional credit. Credits and proc intervals reset at battle start; they do not change item slots or saved enchantment values. Existing Wisdom carry and shared adjacency limits still apply.
 

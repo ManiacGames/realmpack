@@ -1,5 +1,10 @@
 # RealmPack changelog
 
+## 0.41.1 — 2026-10-25
+
+- Kept batched combat HUD updates inside the shared placement cache, avoiding repeated backpack scans at accelerated speeds.
+- Added a regression check for cached HUD updates. Enchantment rules and balance remain as documented for 0.41.0.
+
 ## 0.41.0 — 2026-10-25
 
 - Reworked enchantments with affordable locking: each lock adds 4 dust instead of doubling the price. Previews show relevant base-value changes and clear proc limits.
