@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.51.0 — 2026-10-25
+
+- Mobile: larger play controls, a three-column stash with a Show/Hide button, and readable wrapped combat stats. Portrait combat also shows the equipped backpack and its cooldowns.
+- Tapping a map room on mobile shows its full encounter name. Gameplay tips use touch instructions; the stash folds while a tip is visible and can be reopened with Show. Desktop layouts and gameplay rules are unchanged.
+- Checked five touch sizes, inventory transfers/layout, map previews, offer/dialog layouts and desktop screenshot parity.
+
 ## 0.50.1 — 2026-10-25
 
 - Replaced crossing dashed map lines with curved, outlined connectors and direction arrows. Next routes are stronger; distant or closed routes recede.

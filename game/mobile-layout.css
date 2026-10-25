@@ -1,0 +1,57 @@
+/* Touch-only adjustments; desktop keeps the existing layout. */
+@media(max-width:550px),(max-width:900px) and (pointer:coarse){
+ body .wrap{grid-template-rows:44px 44px minmax(0,1fr);gap:6px}
+ html.has-gameplay-hint body .wrap{grid-template-rows:44px 44px minmax(0,1fr) auto}
+ body .bottom{display:none}
+ body .topright button,body .play-tabs button,body .info-tabs button{min-height:44px;min-width:44px}
+ body .pack-pane .invfoot button,body .battlefoot button{min-height:44px;min-width:44px;padding:5px 8px!important}
+ body .pack-pane .invfoot>div{display:flex;gap:4px;flex-wrap:wrap}
+ body .pack-pane .invfoot{flex:none;padding:4px 6px}
+ body .stash-pane .panelhead{min-height:44px;padding:0 8px;gap:6px}
+ body .mobile-stash-toggle{min-width:44px;min-height:44px;padding:4px 8px;margin:0}
+ body .stash-pane .stash{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;padding:6px;min-height:0;max-height:none;overflow:visible;flex:none}
+ body .stash-pane .stash button{height:44px;min-height:44px;aspect-ratio:auto}
+ body .stash-pane .stash button .sprite-art{--sprite-size:30px}
+ body .stash-pane .stash-empty-slot{display:none}
+ body .stash-pane.mobile-stash-collapsed .stash,body .stash-pane.mobile-stash-collapsed .stash-trashbar{display:none}
+ body .stash-pane .stash>small{font-size:15px}
+ body .battle-panel .arena{flex:0 1 280px;min-height:190px;height:auto}
+ body .arena .fighter{gap:5px;grid-template-rows:auto;align-content:center}
+ body .arena .fighter b,body .arena .fighter small{white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere;line-height:1.2}
+ body .arena .fighter b{font-size:18px}
+ body .arena .fighter small{font-size:15px}
+ body .arena .fighter .sprite{width:64px;height:64px}
+ body .arena .fighter .sprite>.sprite-art{--sprite-size:62px!important}
+ body .battlefoot{flex-wrap:wrap;gap:6px}
+ body .combat-effects{flex-wrap:wrap;gap:4px}
+ body .combat-effects span{white-space:normal!important;overflow:visible}
+ body .arena .enemy-debuff{min-width:44px;min-height:44px;height:44px}
+ body .run-map-modal .map-node{min-height:44px;min-width:44px}
+ body .run-map-footer button{min-height:44px}
+ body .run-map-modal .map-caption{display:block;font-size:15px;line-height:1.2}
+ body .gameplay-hint-actions button{min-height:36px;min-width:44px}
+ body .screen-menu button,body .quick-help-modal>button{min-height:44px}
+}
+@media(min-width:551px) and (max-width:900px) and (pointer:coarse){
+ body .inventory-workspace{grid-template-columns:minmax(0,1fr) 170px}
+ body .stash-pane{container-type:normal}
+ body .battle-panel .arena{flex:1;min-height:100px}
+ body .arena .fighter .sprite{height:44px;width:40px}
+ body .arena .fighter .sprite>.sprite-art{--sprite-size:40px!important}
+}
+@media(max-width:550px),(max-width:900px) and (pointer:coarse){
+ body .pack-pane .grid{--cell:max(10px,min(112px,calc((100cqw - 25px)/6),calc((100cqh - 20px)/5)))}
+ body .stash-pane .inventory-trash{min-height:44px;min-width:44px}
+}
+@media(max-width:550px),(max-width:900px) and (pointer:coarse){
+ html.has-gameplay-hint body .stash-pane .stash,html.has-gameplay-hint body .stash-pane .stash-trashbar{display:none}
+}
+@media(max-width:550px) and (min-height:600px){
+ html[data-play-view=battle] body .battle-panel{height:auto;flex:none}
+ html[data-play-view=battle] body .battle-panel .arena{height:180px;min-height:180px;flex:none}
+ html[data-play-view=battle] body .inventory{display:flex!important;flex:1;min-height:0}
+ html[data-play-view=battle] body .inventory .stash-pane,html[data-play-view=battle] body .inventory .invfoot{display:none}
+ html[data-play-view=battle] body .inventory .iname{display:none}
+ html[data-play-view=battle] body .inventory .panelhead{min-height:28px;padding:3px 10px}
+ html[data-play-view=battle] body .inventory .panelhead h2{font-size:16px}
+}
