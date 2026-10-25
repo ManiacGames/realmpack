@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.50.0 — 2026-10-25
+
+- Replaced mostly linear dungeon maps with generated networks of two or three lanes across five decision points. Connections now determine which rooms can be reached next.
+- Added route choices between distinct enemies, dangerous combat, elites, themed events, specialist shops and rest stops. Maps offer accessible shopping/recovery and converge at an Enchanter and boss.
+- Reduced repeated enemies/events and shop specialties within a dungeon. Extra elite encounters can promote other dungeon enemies. New maps persist across save/load; already-generated saved dungeons retain their routes.
+- Verified 150 unique seeded graphs, connected-path selection and save stability, 190 five-dungeon routes, regression suites and responsive map/path layouts.
+
 ## 0.49.0 — 2026-10-25
 
 - New runs visit five distinct dungeons, eight rooms each. Three room layouts retain a shop, rest, elite, two events and a final boss in every dungeon.

@@ -9,7 +9,7 @@ const assert=require('node:assert/strict'),path=require('node:path'),{pathToFile
   }
  }
  // A branch remains selectable from the single sheet and records the same route choice.
- await page.setViewportSize({width:390,height:844});await page.evaluate(()=>{setLargeText(false);s.room=ROOMS.findIndex((r,i)=>i>0&&r.type==='combat');s.phase='prep';preparePath();showRunMap()});await page.waitForTimeout(50);const choices=page.locator('.run-map-modal .map-node.available');assert.equal(await choices.count(),2);await choices.nth(1).click();assert(await page.evaluate(()=>s.phase==='prep'&&s.mapTaken[s.room]===1),'Route choice failed');assert.equal(await page.locator('.run-map-modal').count(),0);
+ await page.setViewportSize({width:390,height:844});await page.evaluate(()=>{setLargeText(false);s.room=1;s.phase='prep';preparePath();showRunMap()});await page.waitForTimeout(50);const choices=page.locator('.run-map-modal .map-node.available');assert((await choices.count())>=2);await choices.nth(1).click();assert(await page.evaluate(()=>s.phase==='prep'&&s.mapTaken[s.room]===1),'Route choice failed');assert.equal(await page.locator('.run-map-modal').count(),0);
  await page.evaluate(()=>{freshRun('wizard');showRunMap()});await page.waitForTimeout(30);assert(await page.locator('.run-map-modal .map-empty').isVisible(),'Unrevealed map lost portal hint');assert.equal(await page.locator('.run-map-modal .screen-page-nav').count(),0);
  assert.deepEqual(errors,[]);console.log(`PASS: ${sheets} single-sheet maps across eight sizes/two text modes, all depths/nodes, no paging or scroll, route/RNG preservation, branch choice, return and unrevealed-portal state`);await browser.close()
 })().catch(e=>{console.error(e);process.exit(1)});
