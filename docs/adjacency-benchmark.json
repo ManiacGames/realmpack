@@ -1,0 +1,516 @@
+{
+  "version": "0.42.0",
+  "fixture": "19 native tiered ability packs plus twelve themed pairs, each linked and separated. Four dungeon boss indices0/9/19/34, depth20 Normal. Highest available tiered main targets, native weapon/armor at80% family max; other source equipment at80% family max; Crossbones Skull for healing summons, T7Vitality for its partner. Matching native gear is included once by kind; T3Magic ring, threeHealthPotions,+50baseHP,+8%relicrecharge,seed123456. No enchants, infusions or special set completion. Main item fixed at(0,0); partner is the first legal linked/separated placement allowing remaining gear. All layouts are checked and matched between builds. Layout moves may change other edges too. Comparative fixtures, not player win probabilities.",
+  "beforeFights": 172,
+  "afterFights": 516,
+  "matchedLayouts": 172,
+  "speedMismatches": 0,
+  "beforeWins": 52,
+  "afterWinsAt1x": 51,
+  "layoutCases": [
+    {
+      "case": "Native rogue",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 0,
+      "afterWins": 0,
+      "beforeMeanSeconds": 26.46,
+      "afterMeanSeconds": 24.9
+    },
+    {
+      "case": "Native archer",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 16.36,
+      "afterMeanSeconds": 16.36
+    },
+    {
+      "case": "Native wizard",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 15.24,
+      "afterMeanSeconds": 14.53
+    },
+    {
+      "case": "Native priest",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 31.69,
+      "afterMeanSeconds": 31.69
+    },
+    {
+      "case": "Native warrior",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 22.61,
+      "afterMeanSeconds": 22.44
+    },
+    {
+      "case": "Native knight",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeMeanSeconds": 27.21,
+      "afterMeanSeconds": 27.21
+    },
+    {
+      "case": "Native paladin",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 39.05,
+      "afterMeanSeconds": 39.05
+    },
+    {
+      "case": "Native assassin",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 18.04,
+      "afterMeanSeconds": 18.04
+    },
+    {
+      "case": "Native necromancer",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 19.2,
+      "afterMeanSeconds": 18.75
+    },
+    {
+      "case": "Native huntress",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 19.45,
+      "afterMeanSeconds": 19.4
+    },
+    {
+      "case": "Native mystic",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 0,
+      "beforeMeanSeconds": 20.05,
+      "afterMeanSeconds": 19.44
+    },
+    {
+      "case": "Native trickster",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 0,
+      "afterWins": 0,
+      "beforeMeanSeconds": 24.75,
+      "afterMeanSeconds": 22.48
+    },
+    {
+      "case": "Native sorcerer",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 0,
+      "beforeMeanSeconds": 15.31,
+      "afterMeanSeconds": 14.88
+    },
+    {
+      "case": "Native ninja",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 17.65,
+      "afterMeanSeconds": 17.59
+    },
+    {
+      "case": "Native samurai",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 19.94,
+      "afterMeanSeconds": 19.86
+    },
+    {
+      "case": "Native bard",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 15.99,
+      "afterMeanSeconds": 15.99
+    },
+    {
+      "case": "Native summoner",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 15.61,
+      "afterMeanSeconds": 15.58
+    },
+    {
+      "case": "Native kensei",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 37.51,
+      "afterMeanSeconds": 37.51
+    },
+    {
+      "case": "Native druid",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeMeanSeconds": 27.0,
+      "afterMeanSeconds": 26.95
+    },
+    {
+      "case": "Conjurer circle",
+      "linked": false,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 15.61,
+      "afterMeanSeconds": 15.61
+    },
+    {
+      "case": "Conjurer circle",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 15.61,
+      "afterMeanSeconds": 15.58
+    },
+    {
+      "case": "Toxic craft",
+      "linked": false,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 19.76,
+      "afterMeanSeconds": 18.04
+    },
+    {
+      "case": "Toxic craft",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 18.04,
+      "afterMeanSeconds": 18.04
+    },
+    {
+      "case": "Prepared ambush",
+      "linked": false,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 19.45,
+      "afterMeanSeconds": 19.45
+    },
+    {
+      "case": "Prepared ambush",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 19.45,
+      "afterMeanSeconds": 19.4
+    },
+    {
+      "case": "Volatile mixture",
+      "linked": false,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 16.89,
+      "afterMeanSeconds": 16.89
+    },
+    {
+      "case": "Volatile mixture",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 17.48,
+      "afterMeanSeconds": 17.48
+    },
+    {
+      "case": "Arcane conduction",
+      "linked": false,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 15.24,
+      "afterMeanSeconds": 14.53
+    },
+    {
+      "case": "Arcane conduction",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 15.22,
+      "afterMeanSeconds": 14.97
+    },
+    {
+      "case": "Ambusher poise",
+      "linked": false,
+      "fights": 4,
+      "beforeWins": 0,
+      "afterWins": 0,
+      "beforeMeanSeconds": 23.94,
+      "afterMeanSeconds": 23.94
+    },
+    {
+      "case": "Ambusher poise",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 0,
+      "afterWins": 1,
+      "beforeMeanSeconds": 23.94,
+      "afterMeanSeconds": 25.05
+    },
+    {
+      "case": "Sacred bulwark",
+      "linked": false,
+      "fights": 4,
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeMeanSeconds": 28.88,
+      "afterMeanSeconds": 28.88
+    },
+    {
+      "case": "Sacred bulwark",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeMeanSeconds": 28.88,
+      "afterMeanSeconds": 28.88
+    },
+    {
+      "case": "Battle hymn",
+      "linked": false,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 22.56,
+      "afterMeanSeconds": 22.56
+    },
+    {
+      "case": "Battle hymn",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 23.09,
+      "afterMeanSeconds": 23.09
+    },
+    {
+      "case": "Restorative bond",
+      "linked": false,
+      "fights": 4,
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeMeanSeconds": 21.93,
+      "afterMeanSeconds": 21.93
+    },
+    {
+      "case": "Restorative bond",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 2,
+      "afterWins": 2,
+      "beforeMeanSeconds": 21.93,
+      "afterMeanSeconds": 21.93
+    },
+    {
+      "case": "Fencer discipline",
+      "linked": false,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 21.98,
+      "afterMeanSeconds": 20.79
+    },
+    {
+      "case": "Fencer discipline",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 19.94,
+      "afterMeanSeconds": 19.86
+    },
+    {
+      "case": "Hexed hunt",
+      "linked": false,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 19.21,
+      "afterMeanSeconds": 19.21
+    },
+    {
+      "case": "Hexed hunt",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 1,
+      "afterWins": 1,
+      "beforeMeanSeconds": 21.46,
+      "afterMeanSeconds": 20.19
+    },
+    {
+      "case": "Wild communion",
+      "linked": false,
+      "fights": 4,
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeMeanSeconds": 27.0,
+      "afterMeanSeconds": 26.95
+    },
+    {
+      "case": "Wild communion",
+      "linked": true,
+      "fights": 4,
+      "beforeWins": 3,
+      "afterWins": 3,
+      "beforeMeanSeconds": 27.5,
+      "afterMeanSeconds": 26.91
+    }
+  ],
+  "classFixtureFightsPerBuild": 1995,
+  "classes": [
+    {
+      "classId": "rogue",
+      "beforeWins": 82,
+      "afterWins": 80,
+      "fights": 105
+    },
+    {
+      "classId": "archer",
+      "beforeWins": 95,
+      "afterWins": 96,
+      "fights": 105
+    },
+    {
+      "classId": "wizard",
+      "beforeWins": 77,
+      "afterWins": 77,
+      "fights": 105
+    },
+    {
+      "classId": "priest",
+      "beforeWins": 92,
+      "afterWins": 91,
+      "fights": 105
+    },
+    {
+      "classId": "warrior",
+      "beforeWins": 86,
+      "afterWins": 86,
+      "fights": 105
+    },
+    {
+      "classId": "knight",
+      "beforeWins": 96,
+      "afterWins": 94,
+      "fights": 105
+    },
+    {
+      "classId": "paladin",
+      "beforeWins": 91,
+      "afterWins": 91,
+      "fights": 105
+    },
+    {
+      "classId": "assassin",
+      "beforeWins": 84,
+      "afterWins": 81,
+      "fights": 105
+    },
+    {
+      "classId": "necromancer",
+      "beforeWins": 85,
+      "afterWins": 84,
+      "fights": 105
+    },
+    {
+      "classId": "huntress",
+      "beforeWins": 93,
+      "afterWins": 93,
+      "fights": 105
+    },
+    {
+      "classId": "mystic",
+      "beforeWins": 83,
+      "afterWins": 82,
+      "fights": 105
+    },
+    {
+      "classId": "trickster",
+      "beforeWins": 80,
+      "afterWins": 78,
+      "fights": 105
+    },
+    {
+      "classId": "sorcerer",
+      "beforeWins": 68,
+      "afterWins": 68,
+      "fights": 105
+    },
+    {
+      "classId": "ninja",
+      "beforeWins": 80,
+      "afterWins": 80,
+      "fights": 105
+    },
+    {
+      "classId": "samurai",
+      "beforeWins": 85,
+      "afterWins": 85,
+      "fights": 105
+    },
+    {
+      "classId": "bard",
+      "beforeWins": 80,
+      "afterWins": 80,
+      "fights": 105
+    },
+    {
+      "classId": "summoner",
+      "beforeWins": 73,
+      "afterWins": 73,
+      "fights": 105
+    },
+    {
+      "classId": "kensei",
+      "beforeWins": 96,
+      "afterWins": 96,
+      "fights": 105
+    },
+    {
+      "classId": "druid",
+      "beforeWins": 96,
+      "afterWins": 96,
+      "fights": 105
+    }
+  ]
+}

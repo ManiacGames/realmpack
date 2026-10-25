@@ -175,3 +175,7 @@ All 559 UT/ST ability variants have a researched mapping, calibrated against unc
 ## Enchantment integration — 0.41.0
 
 The [enchantment rework](enchantments.md) adds role-specific primary bonuses and source-owned companion damage. Summon bursts, explosions and counters can receive Command without extra summons, charge or activation hooks. Positive ring stats can receive Resonance within existing caps. No UT/ST item recipe, source identity, footprint or set membership changes.
+
+## Adjacency integration — 0.42.0
+
+The [adjacency rework](adjacency.md) adds thematic pairings and source-owned summon support, fixes temporary stat recipients, and reports capped support. Existing UT/ST item recipes and set memberships are unchanged. Companion damage is modified at delivery, within the shared support cap; healing meters still count actual healing only.

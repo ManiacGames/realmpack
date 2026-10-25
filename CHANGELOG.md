@@ -1,5 +1,13 @@
 # RealmPack changelog
 
+## 0.42.0 — 2026-10-25
+
+- Added twelve thematic adjacency links for summons, poison/traps, mixed afflictions, magic, stealth, holy armor, battle hymns, companion healing, katana techniques, sigils and Hex-based hunting.
+- Reworked guard into an opening grant plus a fractional recharge budget; reduced flat mana/affliction bonuses to bounded percentages. Small primary bonuses now accumulate instead of rounding away.
+- Fixed temporary DEX affecting abilities and Wisdom affecting armor. Summon support applies to owned companion damage, including bursts/counters, within a shared 35% cap.
+- Added live applied/capped summaries and compact hover hints. Retired obsolete generic-ring links; inactive passive rings no longer show unused Speed links.
+- Preserved item definitions, class/encounter tuning, footprints, saves, local haste and existing ring identities. Validation: 33 regression suites, paired all-class/layout fixtures, identical results across three speeds, responsive inspection and hover/performance checks.
+
 ## 0.41.1 — 2026-10-25
 
 - Kept batched combat HUD updates inside the shared placement cache, avoiding repeated backpack scans at accelerated speeds.

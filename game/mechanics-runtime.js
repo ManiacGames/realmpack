@@ -10,7 +10,7 @@ let combatGeometryCache=null,combatGeometryTick=false;
 function prepareCombatGeometry(){
  if(!s||s.phase!=='fight'){combatGeometryCache=null;return null}
  if(combatGeometryTick&&combatGeometryCache?.state===s)return combatGeometryCache;
- const key=s.items.map(i=>{const d=defs[i.type];return [i.id,i.type,i.x,i.y,i.rot,d.w,d.h,d.group,d.effect,d.ringAttribute,d.amount,i.eventInfusion,JSON.stringify(i.potionUpgrades||{}),!!d.once,typeof d.realmSet+':'+d.realmSet,d.realmSlot].join(':')}).join('|')+';'+ADJACENCY_RULES.map(r=>r.stat+':'+r.value).join(',');
+ const key=s.items.map(i=>{const d=defs[i.type];return [i.id,i.type,i.x,i.y,i.rot,d.w,d.h,d.kind,d.group,d.effect,d.ringAttribute,d.amount,i.eventInfusion,JSON.stringify(i.potionUpgrades||{}),!!d.once,typeof d.realmSet+':'+d.realmSet,d.realmSlot,passiveRing(d)?ringCanActivate(i):false].join(':')}).join('|')+';'+ADJACENCY_RULES.map(r=>r.stat+':'+r.value).join(',');
  if(combatGeometryCache?.state===s&&combatGeometryCache.key===key&&combatGeometryCache.items.length===s.items.length&&combatGeometryCache.items.every((i,n)=>i===s.items[n]))return combatGeometryCache;
  const neighbors=new Map(),sets=new Map();for(const i of s.items){neighbors.set(i,s.items.filter(j=>j.id!==i.id&&adjacent(i,j)));const d=defs[i.type];{if(!sets.has(d.realmSet))sets.set(d.realmSet,new Set());sets.get(d.realmSet).add(d.realmSlot)}}
  combatGeometryCache={state:s,key,items:s.items.slice(),neighbors,connections:new Map(),stats:new Map(),sets};return combatGeometryCache

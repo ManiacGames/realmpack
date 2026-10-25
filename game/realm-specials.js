@@ -166,6 +166,6 @@ function realmSpawn(kind,power,duration,limit,source,heal=0){
  if(s.summons.length<8)s.summons.push({power,duration,realmKind:kind,ownerId:source.id,realmHeal:heal,wave:s.enemy.wave})
 }
 function realmCompanionHealing(){
- for(const p of s.summons){if(!p.realmHeal)continue;const owner=s.items.find(i=>i.id===p.ownerId);if(!owner)continue;const actual=restore(p.realmHeal,true,owner);if(actual>0&&p.realmKind==='torment'){const state=specialState(owner);state.tormentMeter=Math.min(8,(state.tormentMeter||0)+actual)}}
+ for(const p of s.summons){if(!p.realmHeal)continue;const owner=s.items.find(i=>i.id===p.ownerId);if(!owner)continue;const actual=restore(adjacencyCompanionHealing(owner,p.realmHeal),true,owner);if(actual>0&&p.realmKind==='torment'){const state=specialState(owner);state.tormentMeter=Math.min(8,(state.tormentMeter||0)+actual)}}
 }
 function realmCanCleanse(i){const m=defs[i.type].mechanic;return m?.abilityProfile?.actions.some(a=>a.kind==='cleanse'&&['all','Silenced'].includes(a.effect))||m?.key==='purify'||!!m?.cleanse||m?.key==='realmundead'&&(specialState(i).tormentMeter||0)>=8}
