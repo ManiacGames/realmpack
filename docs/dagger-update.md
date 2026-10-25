@@ -143,3 +143,5 @@ These include the Rogue passive, as in the original fixture. Evergreen's raised 
 The **Chain Dagger ceiling adopted in 0.22.2** retained 10 damage and 2 bleed per hit but allowed it to add bleed only while total enemy bleed was below 6, stopping at 6. It never removed or reduced higher bleed from other sources. Twenty seeded output trials averaged 15.82 rather than 26.67 (about 41% less), retaining a bleed specialization without independently filling the global 24-stack cap. The Shiny counterpart adopts an 8-stack ceiling and is covered by ceiling/preservation tests.
 
 The implemented 0.22.2 ceiling was rechecked with 20 seeded output trials per variant: regular Chain averaged 15.82 damage/second and Shiny averaged 19.00, including the Rogue passive. Full regression tests passed, including partial stack additions and preserving both higher bleed and its expiry from other sources.
+
+0.46.0: verified dungeon sources now weight matching obtainable UT/ST daggers 10× in combat loot, with one possible featured local reward (35% normal, 60% elite, 90% boss). Item recipes and exclusion flags are unchanged. See dungeon-loot-sources.json for provenance.

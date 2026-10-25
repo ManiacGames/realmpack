@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.46.0 — 2026-10-25
+
+- Added sourced UT/ST loot preferences across all 35 dungeons. Matching items gain 10× weight in combat rewards, retaining class preference.
+- Normal fights have a 35% chance to feature one local UT/ST choice, elites 60%, bosses 90%. Other reward choices retain global variety; unavailable items stay excluded and Shiny upgrade rates are unchanged.
+- Mapped 358 obtainable items using listed enemy drop sources. Unknown sources remain global; Ice Cave uses the modern Ice Citadel pool. Verified 3,500 boss reward sets across all dungeons.
+
 ## 0.45.0 — 2026-10-25
 
 - Mana now resets for each battle: 10 base, plus 1 per 5 capacity above 50 (up to 10 extra). Magic rings keep their separate opening bonus. Waves within a battle share the same pool.
