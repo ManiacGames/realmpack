@@ -65,3 +65,7 @@ body .arena .player-inspect-trigger:focus-visible{outline:2px solid #c6cfae;outl
 .restart-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:8px;flex-wrap:wrap}
 .restart-actions button{margin:0;min-height:40px;padding:8px 12px;font-size:17px}
 @media(max-width:550px){#overlay .screen-modal.compact-confirm-modal{padding:18px;gap:10px}#overlay .compact-confirm-modal>h1{font-size:25px}.restart-actions{gap:8px}.restart-actions button{font-size:16px;padding:8px 10px}}
+
+/* One class section at a time, on desktop as well as touch screens. */
+.class-preview-tabs{display:flex;gap:6px;float:right}
+.class-preview[data-section=overview] .class-passive,.class-preview[data-section=passive] .class-overview{display:none}

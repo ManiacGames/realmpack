@@ -30,3 +30,7 @@ body #overlay .adaptive-modal[data-dialog-kind=classconfirm]{max-width:560px}.ro
 
 /* Health stays with the heading, outside paginated event choices. */
 .event-health-status{display:block;font-size:18px;line-height:1.25;color:#d8e5b9;margin-top:4px;letter-spacing:0;font-weight:normal}
+
+.event-preview[hidden]{display:none!important}
+body #overlay .event-choice{gap:6px}body #overlay .event-choice h2{margin:0}body #overlay .event-choice>.event-brief{margin:5px 0}
+.event-choice-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px}.event-choice-actions button{margin:0;padding:6px 8px;min-height:44px}

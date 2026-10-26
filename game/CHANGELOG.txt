@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.52.0 — 2026-10-26
+
+- Shortened default item inspection and removed repeated class-compatibility and stack reminders from loot cards. Full item rules remain in Full details.
+- Event choices lead with costs and outcomes; longer descriptions are under Details. Route cards show the service instead of repeating flavor text. Health, permanent costs and blocked-choice reasons remain visible.
+- Desktop class selection now uses the existing Overview/Passive tabs, matching mobile. Combat and item balance are unchanged.
+- Checked responsive offers, all class previews, event details/transactions and dialog layouts.
+
 ## 0.51.1 — 2026-10-26
 
 - Current and maximum health now stay visible under event and rest headings, including trades and results, while browsing choice pages. Applies to desktop and mobile.
