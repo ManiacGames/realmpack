@@ -27,3 +27,6 @@ body #overlay .adaptive-modal[data-dialog-kind=classconfirm]{max-width:560px}.ro
 
 /* Keep destination cards focused on difficulty, loot and the boss. */
 .adaptive-modal .portal-choice{padding:12px}.adaptive-modal .portal-choice .portal-loot-preview{margin:6px 0;line-height:1.25}
+
+/* Health stays with the heading, outside paginated event choices. */
+.event-health-status{display:block;font-size:18px;line-height:1.25;color:#d8e5b9;margin-top:4px;letter-spacing:0;font-weight:normal}

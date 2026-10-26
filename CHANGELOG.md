@@ -1,5 +1,9 @@
 # RealmPack changelog
 
+## 0.51.1 — 2026-10-26
+
+- Current and maximum health now stay visible under event and rest headings, including trades and results, while browsing choice pages. Applies to desktop and mobile.
+
 ## 0.51.0 — 2026-10-25
 
 - Mobile: larger play controls, a three-column stash with a Show/Hide button, and readable wrapped combat stats. Portrait combat also shows the equipped backpack and its cooldowns.
