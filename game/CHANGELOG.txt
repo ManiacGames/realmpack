@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.52.1 — 2026-10-27
+
+- Fixed passive rings displaying only “support” in item inspection. Ring summaries now show their actual bonus and who receives it.
+- Inspection, shop and loot cards share the same summary rules. Special effects, secondary effects and conditions remain readable; full rules stay in Full details.
+- Added a regression audit for all 2,318 catalogue entries and verified passive-ring descriptions on desktop and mobile.
+
 ## 0.52.0 — 2026-10-26
 
 - Shortened default item inspection and removed repeated class-compatibility and stack reminders from loot cards. Full item rules remain in Full details.
