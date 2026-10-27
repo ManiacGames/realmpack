@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.53.0 — 2026-10-27
+
+- Multi-function item explanations now use short effect lines instead of dense paragraphs. Repeated trigger sentences appear once; distinct conditions, values and drawbacks remain.
+- Shortened repeated wording in item summaries and resolved equipment IDs to item names where available. Long explanations retain the original wording under Full rules.
+- Item recipes, combat effects and saved upgrades are unchanged.
+- Audited descriptions and numeric conditions across all 2,318 items, with responsive catalogue, dialog and offer checks.
+
 ## 0.52.1 — 2026-10-27
 
 - Fixed passive rings displaying only “support” in item inspection. Ring summaries now show their actual bonus and who receives it.

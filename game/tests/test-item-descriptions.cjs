@@ -12,7 +12,7 @@ console.log(vm.runInContext(`(()=>{
   for(const context of ['shop','reward'])check(rewardCard(d.id,context).includes('<p class="loot-primary">'+esc(text)+'</p>'),context+': '+d.name);
   if(passiveRing(d)&&d.ringAttribute){passive++;check(text.includes(String(d.amount)),'Missing ring value: '+d.name);check(describe(d).includes(String(d.amount)),'Full ring description: '+d.name)}
   if(d.consumableRework)check(text===consumableOfferSummary(d),'Consumable condition lost: '+d.name);
-  if(d.mechanic&&!d.ringAttribute||d.affix&&!d.ringAttribute)check(text===describe(d),'Signature/secondary effect lost: '+d.name);
+  if(d.mechanic&&!d.ringAttribute||d.affix&&!d.ringAttribute)check(text===shortItemCopy(describe(d)),'Signature/secondary effect lost: '+d.name);
   checked++;
  }
  const ring=defs[DATA.byName['Ring of Exalted Attack']],summary=itemPrimarySummary(ring);
