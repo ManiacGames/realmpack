@@ -1,14 +1,20 @@
-# Game presentation — 0.54.0
+# Game presentation — 0.54.1
 
 `game-ui.css` and `game-ui.js` load last and build the current presentation over the existing live inventory and combat DOM. Desktop uses a full-width dungeon stage and inventory workspace. The stash remains nine entries beside the cloth-lined pack. The compact HUD mirrors class, HP, opening/current mana, gold and progress. Map, Menu and Dev notes remain accessible; reference/settings actions are in Menu.
 
-Desktop inspection floats without resizing the grid. Pointer/focus previews; click or Pin retains it. Close/Escape dismiss it. The card fits its content, with bounded scrolling for long overviews and Full details for complete rules. Its backdrop passes pointer input through until pinned; controls remain interactive. Pointer-down and active drags clear the card, and a brief post-drop suppression prevents a newly rendered tile from reopening it over the drop target. Mobile retains its Battle / Pack & stash / Details views and a three-column, collapsible stash.
+Desktop inspection floats without resizing the grid. Pointer/focus previews; click or Pin retains it. Close/Escape dismiss it. The card fits its content, with bounded scrolling for long overviews and Full details for complete rules. The entire card is interactive. A 12px hover bridge spans the positioning gap, an 800ms close grace permits pointer travel, and pointer/focus inside the card cancels closing. Pointer-down and active drags clear the card, and a brief post-drop suppression prevents a newly rendered tile from reopening it over the drop target. Mobile retains its Battle / Pack & stash / Details views and a three-column, collapsible stash.
 
 The enemy readout presents HP/ward/waves and the next **base normal strike** before player mitigation. It accounts for current heavy-strike cadence, Berserker state, rage, double strikes, chill and freeze. Piercing labels describe normal boss/elite minimums. Pulses, future phase changes, dodges and player protection can change the actual outcome; the tooltip states this distinction. Prediction reads state only and never consumes RNG.
 
-Optional synthesized placement/purchase sounds start off, are controlled in Menu, and persist separately from run saves. Decorative textures are CSS and existing sprites; reduced-motion settings suppress presentation animation. Existing item movement, stack merges, trades, acquisition, combat timing and saved data remain authoritative. No per-tick map rebuild or inspector repagination is introduced.
+Optional synthesized placement/purchase sounds start off. Menu provides an independent 0–100% volume slider (default 50%, matching the previous loudness); 0% is silent. The toggle and volume persist separately from run saves. Decorative textures are CSS and existing sprites; reduced-motion settings suppress presentation animation. Existing item movement, stack merges, trades, acquisition, combat timing and saved data remain authoritative. No per-tick map rebuild or inspector repagination is introduced.
 
 Validation: game-style HUD/inspection/sound/journal controls at six desktop/touch sizes; real chest drag and base-strike prediction against `enemyAttack`; inventory geometry/transfers at 12 sizes; 20 crowded combat/debuff layouts; class roster, offers, dialogs, hover behavior and simulation parity at 1×/2×/4×. Desktop combat is deliberately smaller than the backpack at large sizes (minimum tested ratio 0.4 rather than the former 0.6), while preserving icon and action bounds.
+
+## Keyboard commands — 0.54.1
+
+D uses the selected owned item and opens the existing discard confirmation; it cannot discard during combat. F uses an actually hovered/focused owned item, the card being read, or the selected item as fallback. I and E open the existing catalogue and bestiary. New letter commands ignore typing fields/contenteditable, IME composition, Ctrl/Alt/Meta, held repeats and open dialogs; they do not run during pointer drags.
+
+Escape cancels active placement first. Existing sprite/status panels and foreground dialogs retain their close/back behavior. It then closes the floating inspector, and opens Menu when clear. Escape closes Menu even with the volume slider focused; it returns from Keyboard shortcuts to Menu. The shortcut reference is a separate, paused dialog to avoid expanding/paginating nested controls in short menus.
 
 The earlier implementation notes below describe the underlying workspace and historical layout.
 

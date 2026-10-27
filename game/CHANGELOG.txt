@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.54.1 — 2026-10-27
+
+- Added a saved 0–100% sound-volume slider in Menu; 0% mutes sound.
+- Item cards are easier to enter: an 800 ms close delay, a hover bridge and an interactive card surface keep Full details reachable. Keyboard focus also keeps the card open.
+- Added D to discard the selected item with confirmation, F for hovered/focused item details, I for the item catalogue, E for the bestiary, and Esc to open Menu after closing/cancelling the current layer. New shortcuts ignore typing, modified keys and held repeats.
+- Keyboard shortcuts are listed in Menu. Tested real pointer travel, confirmation/cancel, typing and combat guards, volume persistence/mute, responsive menus and hover performance.
+
 ## 0.54.0 — 2026-10-27
 
 - Rebuilt the game presentation around a compact resource HUD, dungeon stage, cloth-lined backpack and wooden stash. Map, menu and Dev notes stay within reach.
