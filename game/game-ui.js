@@ -60,7 +60,7 @@ if(!window.__TEST__){
  const originalBuy=buy;buy=function(id){const gold=s?.gold;const result=originalBuy(id);if(s&&s.gold<gold)gameUiSound('buy');return result};
  const selector='.item,#stash [data-item-id]';let downItem=null;
  document.addEventListener('pointerover',e=>{const target=e.target.closest(selector);if(target&&e.pointerType!=='touch')gameUiInspectorShow(target);else if(e.target.closest('.layout>.right'))clearTimeout(gameInspectorTimer)});
- const scheduleHide=()=>{clearTimeout(gameInspectorTimer);if(!gameInspectorPinned)gameInspectorTimer=setTimeout(()=>{const panel=document.querySelector('.layout>.right');if(!gameInspectorPinned&&!panel?.matches(':hover,:focus-within'))document.documentElement.classList.remove('game-inspector-open')},250)};
+ const scheduleHide=()=>{clearTimeout(gameInspectorTimer);if(!gameInspectorPinned)gameInspectorTimer=setTimeout(()=>{const panel=document.querySelector('.layout>.right');if(!gameInspectorPinned&&!panel?.matches(':hover,:focus-within'))document.documentElement.classList.remove('game-inspector-open')},125)};
  document.addEventListener('pointerout',e=>{if(e.target.closest(selector+',.layout>.right')&&!e.relatedTarget?.closest(selector+',.layout>.right'))scheduleHide()});
  document.addEventListener('focusin',e=>{const target=e.target.closest(selector);if(target)gameUiInspectorShow(target);else if(e.target.closest('.layout>.right'))clearTimeout(gameInspectorTimer)});
  document.addEventListener('pointerdown',e=>{const t=e.target.closest(selector);if(t){gameUiInspectorClose();const id=Number(t.dataset.itemId||t.id.replace(/^item/,'')),i=[...s.items,...s.stash].find(i=>i.id===id);downItem=i?{id:i.id,x:i.x,y:i.y,rot:i.rot,stash:s.stash.includes(i)}:null}});

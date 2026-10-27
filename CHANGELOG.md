@@ -1,5 +1,10 @@
 # RealmPack changelog
 
+## 0.54.6 — 2026-10-27
+
+- Reduced the floating item-card close delay to 125 ms. The interactive card, hover bridge, keyboard-focus protection and existing pin state remain intact.
+- Checked slow pointer travel, waiting on the hover bridge, Full details access, focus/pin behaviour and delayed closing.
+
 ## 0.54.5 — 2026-10-27
 
 - Restored the wooden shop/loot backgrounds and dedicated event, rest and trading colours, which the general dialog theme had overridden.
