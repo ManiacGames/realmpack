@@ -1,27 +1,3 @@
-# Game presentation — 0.55.0
-
-The generic dialog theme keeps its exclusions at zero specificity so dedicated offer/event themes can override it. Top-bar styling targets `.wrap > header` only. `scripts/check-screen-themes.cjs` checks 20 screen types at four sizes in both text modes, including map/death protections.
-
-`game-ui.css` and `game-ui.js` load last and build the current presentation over the existing live inventory and combat DOM. Desktop uses a full-width dungeon stage and inventory workspace. The stash remains nine entries beside the cloth-lined pack. A RotMG-inspired sheet to the left of the desktop backpack shows class, HP, opening/current mana, block, gold and progress. HP and MP use green/blue filled bars with numeric values; block has its own capped bar. The ribbon contains controls only. Phones have compact HP/MP above the pack and a Stats button (also in Menu) for all resources and combat output. Text size, Restart, Map and Menu are available in the top ribbon; phone layouts use labelled Aa/restart icons and keep Map in Menu. Dev notes has been removed. Reference/settings actions remain in Menu.
-
-Desktop inspection floats above the hovered item, centred horizontally and clamped to the screen edges. Its height is bounded by the available space above the item, leaving a 10px gap above the item. It does not resize the grid. Pointer/focus previews; click or Pin retains it. Pin keeps the card open without freezing its position; it stays anchored to the inspected item across placement and rotation. Mouse dragging hides the card, then restores a previously open card beside the relocated item after the post-drop quiet interval. Temporary previews return only while that item is still hovered. Close/Escape dismiss it. The card fits its content, with bounded scrolling for long overviews and Full details for complete rules. The entire card is interactive. A 12px hover bridge spans the positioning gap, a 125ms close grace permits pointer travel, and pointer/focus inside the card cancels closing. Pointer-down and active drags clear the card, and a brief post-drop suppression prevents a newly rendered tile from reopening it over the drop target. Mobile retains its Battle / Pack & stash / Details views and a three-column, collapsible stash.
-
-The enemy readout presents HP/ward/waves and the next **base normal strike** before player mitigation. It accounts for current heavy-strike cadence, Berserker state, rage, double strikes, chill and freeze. Piercing labels describe normal boss/elite minimums. Pulses, future phase changes, dodges and player protection can change the actual outcome; the tooltip states this distinction. Prediction reads state only and never consumes RNG.
-
-Optional synthesized placement/purchase sounds start off. Menu provides an independent 0–100% volume slider (default 50%, matching the previous loudness); 0% is silent. The toggle and volume persist separately from run saves. Decorative textures are CSS and existing sprites; reduced-motion settings suppress presentation animation. Existing item movement, stack merges, trades, acquisition, combat timing and saved data remain authoritative. No per-tick map rebuild or inspector repagination is introduced.
-
-Validation: game-style HUD/inspection/sound/journal controls at six desktop/touch sizes; real chest drag and base-strike prediction against `enemyAttack`; inventory geometry/transfers at 12 sizes; 20 crowded combat/debuff layouts; class roster, offers, dialogs, hover behavior and simulation parity at 1×/2×/4×. Desktop combat is deliberately smaller than the backpack at large sizes (minimum tested ratio 0.4 rather than the former 0.6), while preserving icon and action bounds.
-
-## Keyboard commands — 0.54.1
-
-D uses the selected owned item and opens the existing discard confirmation; it cannot discard during combat. F uses an actually hovered/focused owned item, the card being read, or the selected item as fallback. Opening Full details with F or its button preserves the existing pin state; a temporary hover card remains unpinned and an already pinned card remains pinned. I and E open the existing catalogue and bestiary. New letter commands ignore typing fields/contenteditable, IME composition, Ctrl/Alt/Meta, held repeats and open dialogs; they do not run during pointer drags.
-
-Escape cancels active placement first. Existing sprite/status panels and foreground dialogs retain their close/back behavior. It then closes the floating inspector, and opens Menu when clear. Escape closes Menu even with the volume slider focused; it returns from Keyboard shortcuts to Menu. The shortcut reference is a separate, paused dialog to avoid expanding/paginating nested controls in short menus.
-
-The earlier implementation notes below describe the underlying workspace and historical layout.
-
----
-
 # Viewport workspace — 0.29.0
 
 The main playfield uses the viewport height, with a compact header/footer. Desktop keeps combat above the backpack, with the nine-slot stash adjacent and a tabbed information panel. Below 901px, Battle / Pack & stash / Details tabs share the available screen. On phones the stash is a single nine-slot row below the backpack. The mobile Menu retains catalogue, bestiary, guide, larger-text and restart access.
@@ -64,7 +40,7 @@ The backpack measures its available grid area in both dimensions, keeping square
 
 Run Map bypasses the content pager. Its title, difficulty, legend, complete act route and Return action share one viewport-sized sheet. The route area takes the remaining height and its existing node/edge coordinates scale proportionally; map choices, IDs, routes and RNG behavior are unchanged. Compact maps use the legend and accessible marker labels instead of repeating text under every marker.
 
-The general game theme excludes the run-map sheet and its header so their original paper background and dark ink remain intact. The map uses CSS parchment tones, stained edges, a fold crease and faint contour lines with dark ink markers/routes. Current, visited, skipped and available nodes remain distinct by fill, border, opacity and state annotations. Available nodes retain keyboard focus and route selection.
+The map uses CSS parchment tones, stained edges, a fold crease and faint contour lines with dark ink markers/routes. Current, visited, skipped and available nodes remain distinct by fill, border, opacity and state annotations. Available nodes retain keyboard focus and route selection.
 
 `node scripts/check-run-map.cjs` uses the optional browser setup to check eight viewport sizes at both text settings, every depth/node, absence of pagination or clipping, unchanged route/RNG, selection from the map, return behavior and the unrevealed-portal hint.
 
@@ -98,7 +74,7 @@ Run `REALMPACK_CHROME=/path/to/chrome node scripts/check-hint-pointers.cjs` to c
 
 ## Defeat screen — 0.29.0
 
-The defeat summary bypasses generic modal paging and the general game modal/header colours, preserving its original red/black styling. A red/black frame surrounds the enemy attribution, class sprite, depth banner and six run stats. Character selection preserves the completed run until Start. New losses record `endedAt`; older saves omit the date. A surviving character at the 150-second limit receives a timeout message. The victory and endless-run flow is unchanged.
+The defeat summary bypasses generic modal paging. A red/black frame surrounds the enemy attribution, class sprite, depth banner and six run stats. Character selection preserves the completed run until Start. New losses record `endedAt`; older saves omit the date. A surviving character at the 150-second limit receives a timeout message. The victory and endless-run flow is unchanged.
 
 Run `REALMPACK_CHROME=/path/to/chrome node scripts/check-defeat-screen.cjs` for viewport/text-mode checks, all class portraits, statistics, loss persistence and navigation.
 
@@ -123,9 +99,3 @@ Shared desktop views allocate about 42% of the main column to combat and the res
 `enemy-status.js` renders the six existing enemy debuffs below the enemy health/stats. Burn, poison and bleed show stacks; chill, weakened and exposed show rounded-up seconds. Icons use stable DOM and update only their counts and descriptions. Hover/focus shows an explanation; tapping pins it, tapping again or pressing Escape closes it. No simulation state or effect values are changed.
 
 Browser QA: `scripts/check-combat-status.cjs` verifies viewport proportions, backpack/stash geometry, status values, tooltips and reset/expiry behavior in both text modes. `scripts/check-inventory-sizing.cjs` checks responsive cell sizing and transfers; roomy desktop cells now exceed 70px within the balanced layout.
-
-## Combat output statistics — 0.55.0
-
-Damage, healing, mana regeneration and block rates are **effective fight averages per simulated combat second**, not forecasts. Damage counts actual enemy HP and ward removed, excluding overkill; healing excludes overheal; mana/block exclude gains lost to their caps. Display-only counters reset with each encounter and do not enter run saves or consume RNG. Rates read 0 before combat, update during combat, and retain the finished fight’s values while its rewards are open. Pauses and 1×/2×/4× do not inflate elapsed combat time. Base and Bard mana regeneration use the existing gainMana path so actual recovered mana is counted consistently.
-
-`node scripts/check-run-statistics.cjs` checks resources, rate accounting/caps, reset behaviour, mobile access and responsive layout. Combat parity is checked by `scripts/check-combat-performance.cjs`.

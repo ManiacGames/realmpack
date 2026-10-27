@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.53.0 — 2026-10-28 (restored)
+
+- Restored the original 0.53.0 game and interface from commit d66e2e0, reverting the changes introduced in 0.54.0–0.55.0.
+- Verified the restored source and checked inventory, shops, events, inspection, dialogs and combat performance.
+- Later versions remain in GitHub history. Game source matches the original release; release notes and cache keys identify this restoration.
+
+
 ## 0.55.0 — 2026-10-28
 
 - Moved run resources from the ribbon into a RotMG-inspired sheet beside the backpack, with green HP, blue MP and block bars plus class, gold and progress.

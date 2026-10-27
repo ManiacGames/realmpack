@@ -22,7 +22,7 @@ const {prepareCombatWorkload}=require('./profile-combat.cjs');
    await page.evaluate(()=>closeModal(true));
   }
  }
- await page.setViewportSize({width:1366,height:900});await page.evaluate(prepareCombatWorkload);await page.evaluate(()=>{screenView('details');screenTab('item');inspectItem(s.items[2].id)});await page.waitForTimeout(80);
+ await page.setViewportSize({width:1366,height:900});await page.evaluate(prepareCombatWorkload);await page.evaluate(()=>{screenTab('item');inspectItem(s.items[2].id)});await page.waitForTimeout(80);
  const stable=await page.evaluate(()=>{inspectItem(s.items[2].id);const node=$('detail').firstChild,state=JSON.stringify(s);let pages=0;const original=screenPaginate;screenPaginate=p=>{pages++;return original(p)};for(let n=0;n<50;n++)inspectItem(s.items[2].id);const unchanged=state===JSON.stringify(s);for(let n=0;n<20;n++)tick(.2);screenPaginate=original;return {same:node===$('detail').firstChild,unchanged,pages}});assert.deepEqual(stable,{same:true,unchanged:true,pages:0});
  await page.locator('#detail .inspection-actions button').first().click();await page.waitForTimeout(60);await page.keyboard.press('Escape');assert.equal(await page.evaluate(()=>!modalKind&&document.activeElement===$('detail').querySelector('.inspection-actions button')),true,'details Escape restores focus');
  if(process.env.REALMPACK_HOVER_SCREENSHOT)await page.screenshot({path:process.env.REALMPACK_HOVER_SCREENSHOT});assert.deepEqual(errors,[]);console.log(JSON.stringify({views,detailPages,stationaryHover:stable,errors}));await browser.close();
