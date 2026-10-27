@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.55.0 — 2026-10-28
+
+- Moved run resources from the ribbon into a RotMG-inspired sheet beside the backpack, with green HP, blue MP and block bars plus class, gold and progress.
+- Added effective damage, healing, mana regeneration and block per second. These are live fight averages using combat time; overkill, overheal and capped resource gains do not count.
+- Phones show compact HP/MP above the pack, with a Stats button for the full sheet. Full statistics are also available in Menu.
+- Checked resource/rate accounting, responsive inventory layouts, unchanged combat outcomes at 1×/2×/4×, hover/drag controls and dialogs.
+
 ## 0.54.9 — 2026-10-27
 
 - Floating item cards now appear above the hovered item, centred and kept within the screen. Card height adapts to the space above the item so it stays clear of the hovered item.
