@@ -1,8 +1,8 @@
-# Game presentation — 0.54.1
+# Game presentation — 0.54.2
 
 `game-ui.css` and `game-ui.js` load last and build the current presentation over the existing live inventory and combat DOM. Desktop uses a full-width dungeon stage and inventory workspace. The stash remains nine entries beside the cloth-lined pack. The compact HUD mirrors class, HP, opening/current mana, gold and progress. Map, Menu and Dev notes remain accessible; reference/settings actions are in Menu.
 
-Desktop inspection floats without resizing the grid. Pointer/focus previews; click or Pin retains it. Close/Escape dismiss it. The card fits its content, with bounded scrolling for long overviews and Full details for complete rules. The entire card is interactive. A 12px hover bridge spans the positioning gap, an 800ms close grace permits pointer travel, and pointer/focus inside the card cancels closing. Pointer-down and active drags clear the card, and a brief post-drop suppression prevents a newly rendered tile from reopening it over the drop target. Mobile retains its Battle / Pack & stash / Details views and a three-column, collapsible stash.
+Desktop inspection floats without resizing the grid. Pointer/focus previews; click or Pin retains it. Close/Escape dismiss it. The card fits its content, with bounded scrolling for long overviews and Full details for complete rules. The entire card is interactive. A 12px hover bridge spans the positioning gap, a 250ms close grace permits pointer travel, and pointer/focus inside the card cancels closing. Pointer-down and active drags clear the card, and a brief post-drop suppression prevents a newly rendered tile from reopening it over the drop target. Mobile retains its Battle / Pack & stash / Details views and a three-column, collapsible stash.
 
 The enemy readout presents HP/ward/waves and the next **base normal strike** before player mitigation. It accounts for current heavy-strike cadence, Berserker state, rage, double strikes, chill and freeze. Piercing labels describe normal boss/elite minimums. Pulses, future phase changes, dodges and player protection can change the actual outcome; the tooltip states this distinction. Prediction reads state only and never consumes RNG.
 
@@ -62,7 +62,7 @@ The backpack measures its available grid area in both dimensions, keeping square
 
 Run Map bypasses the content pager. Its title, difficulty, legend, complete act route and Return action share one viewport-sized sheet. The route area takes the remaining height and its existing node/edge coordinates scale proportionally; map choices, IDs, routes and RNG behavior are unchanged. Compact maps use the legend and accessible marker labels instead of repeating text under every marker.
 
-The map uses CSS parchment tones, stained edges, a fold crease and faint contour lines with dark ink markers/routes. Current, visited, skipped and available nodes remain distinct by fill, border, opacity and state annotations. Available nodes retain keyboard focus and route selection.
+The general game theme excludes the run-map sheet and its header so their original paper background and dark ink remain intact. The map uses CSS parchment tones, stained edges, a fold crease and faint contour lines with dark ink markers/routes. Current, visited, skipped and available nodes remain distinct by fill, border, opacity and state annotations. Available nodes retain keyboard focus and route selection.
 
 `node scripts/check-run-map.cjs` uses the optional browser setup to check eight viewport sizes at both text settings, every depth/node, absence of pagination or clipping, unchanged route/RNG, selection from the map, return behavior and the unrevealed-portal hint.
 

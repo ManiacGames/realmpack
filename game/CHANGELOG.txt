@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.54.2 — 2026-10-27
+
+- Reduced the item-card close delay to 250 ms while retaining the hover bridge and focus protection.
+- Restored the run map’s worn parchment background and plain paper heading, fixing general theme overrides that made its colours clash and labels hard to read.
+- Checked pointer travel and delayed closing, map styling, responsive map layouts and route selection.
+
 ## 0.54.1 — 2026-10-27
 
 - Added a saved 0–100% sound-volume slider in Menu; 0% mutes sound.
