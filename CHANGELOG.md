@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.53.2 — 2026-10-28
+
+- Added distinct pixel-style sound effects for inventory placement, stacking, loot, purchases and sales, enchanting, travel, combat hits, blocking, healing, mana gains, victory and defeat. Buttons have a soft click; hovering stays silent.
+- Added Menu → Sound effects with saved master, interface/inventory and combat volume sliders, mute and a test button. Audio starts after interaction and pauses when the tab is hidden.
+- Limited overlapping voices and combat cue frequency to keep busy fights clear at 2× and 4×. Preserved the restored layout and gameplay balance.
+- Checked gesture unlock, rendered audio samples, mute/settings persistence, successful and rejected actions, combat parity at all three speeds, responsive sound controls, dialog layouts and keyboard/inventory regressions.
+
 ## 0.53.1 — 2026-10-28
 
 - Added D to discard the selected item with confirmation, F for hovered/focused item details, I for the item catalogue and E for the encounter bestiary.
