@@ -1,4 +1,6 @@
-# Game presentation — 0.54.4
+# Game presentation — 0.54.5
+
+The generic dialog theme keeps its exclusions at zero specificity so dedicated offer/event themes can override it. Top-bar styling targets `.wrap > header` only. `scripts/check-screen-themes.cjs` checks 21 screen types at four sizes in both text modes, including map/death protections.
 
 `game-ui.css` and `game-ui.js` load last and build the current presentation over the existing live inventory and combat DOM. Desktop uses a full-width dungeon stage and inventory workspace. The stash remains nine entries beside the cloth-lined pack. The compact HUD mirrors class, HP, opening/current mana, gold and progress. Map, Menu and Dev notes remain accessible; reference/settings actions are in Menu.
 

@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.54.5 — 2026-10-27
+
+- Restored the wooden shop/loot backgrounds and dedicated event, rest and trading colours, which the general dialog theme had overridden.
+- Scoped top-bar styling to the game header so it cannot leak into screen-specific headings.
+- Added theme regression checks across 21 screen types, including the map and death screen. Audited dialogs, offers, references, enchantments and class/enemy details at desktop/mobile sizes.
+
 ## 0.54.4 — 2026-10-27
 
 - Restored the death screen’s original black background, red frame and red “Dead!” heading by excluding it from the general dialog theme.

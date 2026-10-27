@@ -2,7 +2,7 @@
 .game-ui{--game-ink:#e2dece;--game-brass:#a28b5d}
 .game-ui body{background:radial-gradient(ellipse at 45% 0,#253b3d66,transparent 70%),#10191b;color:var(--game-ink)}
 .game-ui body .wrap{padding:8px 12px;gap:9px}
-.game-ui body header:not(.run-map-heading){background:linear-gradient(#253237,#172326);border:1px solid #68736b;box-shadow:inset 0 -2px #0d1518,0 3px #080f11;gap:12px;padding:0 8px}
+.game-ui body .wrap>header{background:linear-gradient(#253237,#172326);border:1px solid #68736b;box-shadow:inset 0 -2px #0d1518,0 3px #080f11;gap:12px;padding:0 8px}
 .game-ui .brand{font-size:25px;white-space:nowrap}.game-ui .brand-icon{width:30px;height:30px}
 .game-ui .game-hud{display:flex;gap:13px;align-items:center;justify-content:center;min-width:0;flex:1;white-space:nowrap;font-size:18px}.game-ui .game-hud>span{padding:3px 0}.game-ui #gameHudHealth{color:#df9f91}.game-ui #gameHudMana{color:#9cbfce}.game-ui #gameHudGold{color:#dcc285}.game-ui #gameHudClass{color:#d6dac5}.game-ui .game-hud small{font-size:14px;color:#aab8b6}
 .game-ui .topright>button{display:none!important}
@@ -28,8 +28,8 @@
 .game-ui .game-inspector-controls{display:flex;align-items:center;gap:6px;flex:none;padding:6px 9px;border-bottom:1px solid #8d835f;background:#463f2f}.game-ui .game-inspector-controls>span{flex:1;color:#e6d4ae;font-size:16px}.game-ui .game-inspector-controls button{font-size:15px;padding:3px 7px;min-height:32px}
 .game-ui .layout>.right{background:#202d28;border:2px solid #ac9668;box-shadow:0 5px 20px #0009,inset 0 0 0 2px #17251f}.game-ui .right .info-tabs{background:#2d3a2f}.game-ui .right .panelhead{background:#364431}.game-ui .right .detail{background:#202d25}
 .game-ui:has(#overlay .modal) .layout>.right{visibility:hidden}
-.game-ui #overlay .modal:not(.run-map-modal):not(.defeat-modal){border:2px solid #a58e61;box-shadow:0 7px #0b1110,0 12px 42px #0007,inset 0 0 0 3px #19251d;background:radial-gradient(ellipse at top,#3e524047,transparent 70%),#202e28}
-.game-ui #overlay .modal:not(.defeat-modal)>h1{color:#e9d5a6}
+.game-ui #overlay .modal:where(:not(.run-map-modal,.defeat-modal)){border:2px solid #a58e61;box-shadow:0 7px #0b1110,0 12px 42px #0007,inset 0 0 0 3px #19251d;background:radial-gradient(ellipse at top,#3e524047,transparent 70%),#202e28}
+.game-ui #overlay .modal:where(:not(.run-map-modal,.defeat-modal))>h1{color:#e9d5a6}
 .game-ui #overlay .offer-modal{position:relative;background:repeating-linear-gradient(0deg,#302a22 0 42px,#352f26 42px 44px);border-color:#b19766}
 .game-ui #overlay .offer-modal>.eyebrow{color:#bca47a}
 .game-ui #overlay .offer-modal .loot-card{background:linear-gradient(#37453a,#24352d);border:1px solid #968462;box-shadow:0 4px #151b15,inset 0 0 0 2px #17251c}
@@ -51,7 +51,7 @@
 }
 @media(min-width:901px) and (max-width:1150px){.game-ui #gameHudClass,.game-ui #gameHudDepth{display:none}.game-ui .brand{font-size:22px}.game-ui .game-hud{gap:9px}}
 @media(max-width:900px){
- .game-ui body .wrap{padding:6px 8px;gap:6px}.game-ui body header .brand{font-size:0!important;gap:0}.game-ui .brand span{display:none}.game-ui .brand-icon{width:26px;height:26px;margin:0}.game-ui body header:not(.run-map-heading){gap:5px;padding:0 3px}.game-ui .game-hud{font-size:15px;gap:7px;justify-content:space-evenly}.game-ui #gameHudClass,.game-ui #gameHudDepth{display:none}.game-ui .topright{gap:4px;flex-wrap:nowrap}.game-ui .topright>button[onclick="showRunMap()"]{display:none!important}
+ .game-ui body .wrap{padding:6px 8px;gap:6px}.game-ui body .wrap>header .brand{font-size:0!important;gap:0}.game-ui .brand span{display:none}.game-ui .brand-icon{width:26px;height:26px;margin:0}.game-ui body .wrap>header{gap:5px;padding:0 3px}.game-ui .game-hud{font-size:15px;gap:7px;justify-content:space-evenly}.game-ui #gameHudClass,.game-ui #gameHudDepth{display:none}.game-ui .topright{gap:4px;flex-wrap:nowrap}.game-ui .topright>button[onclick="showRunMap()"]{display:none!important}
  .game-ui .topright>#devNotesButton,.game-ui .topright>.screen-menu-button{font-size:13px;min-height:44px;padding:3px 5px}.game-ui .game-inspector-controls{display:none}.game-ui .layout>.right{box-shadow:none;border:0}.game-ui .game-enemy-intent{font-size:13px}.game-ui #fight{font-size:17px;padding:5px 12px}.game-ui .stash-pane{border-left:0;border-top:3px solid #9f875d}.game-ui #overlay .shop-banner{display:none}
 }
 @media(max-width:700px){.game-ui #overlay .offer-modal:has(.loot-grid):before{display:none}}
