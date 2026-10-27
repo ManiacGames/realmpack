@@ -1,4 +1,4 @@
-# Game presentation — 0.54.2
+# Game presentation — 0.54.3
 
 `game-ui.css` and `game-ui.js` load last and build the current presentation over the existing live inventory and combat DOM. Desktop uses a full-width dungeon stage and inventory workspace. The stash remains nine entries beside the cloth-lined pack. The compact HUD mirrors class, HP, opening/current mana, gold and progress. Map, Menu and Dev notes remain accessible; reference/settings actions are in Menu.
 
@@ -12,7 +12,7 @@ Validation: game-style HUD/inspection/sound/journal controls at six desktop/touc
 
 ## Keyboard commands — 0.54.1
 
-D uses the selected owned item and opens the existing discard confirmation; it cannot discard during combat. F uses an actually hovered/focused owned item, the card being read, or the selected item as fallback. I and E open the existing catalogue and bestiary. New letter commands ignore typing fields/contenteditable, IME composition, Ctrl/Alt/Meta, held repeats and open dialogs; they do not run during pointer drags.
+D uses the selected owned item and opens the existing discard confirmation; it cannot discard during combat. F uses an actually hovered/focused owned item, the card being read, or the selected item as fallback. Opening Full details with F or its button preserves the existing pin state; a temporary hover card remains unpinned and an already pinned card remains pinned. I and E open the existing catalogue and bestiary. New letter commands ignore typing fields/contenteditable, IME composition, Ctrl/Alt/Meta, held repeats and open dialogs; they do not run during pointer drags.
 
 Escape cancels active placement first. Existing sprite/status panels and foreground dialogs retain their close/back behavior. It then closes the floating inspector, and opens Menu when clear. Escape closes Menu even with the volume slider focused; it returns from Keyboard shortcuts to Menu. The shortcut reference is a separate, paused dialog to avoid expanding/paginating nested controls in short menus.
 

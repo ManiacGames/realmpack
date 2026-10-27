@@ -57,7 +57,6 @@ if(!window.__TEST__){
  const originalView=screenView;screenView=function(view){if(innerWidth>900&&view==='details'){document.documentElement.classList.add('game-inspector-open');gameInspectorPinned=true;const p=document.querySelector('.layout>.right');p.style.left=Math.max(12,innerWidth-350)+'px';p.style.top='66px';gameUiSetText('gameInspectorPin','Unpin');document.getElementById('gameInspectorPin')?.setAttribute('aria-pressed','true')}originalView(view)};
  const originalTab=screenTab;screenTab=function(tab){if(innerWidth>900&&tab==='journal')screenView('details');originalTab(tab)};
  const originalFresh=freshRun;freshRun=function(...args){gameUiInspectorClose();return originalFresh(...args)};
- const originalDetails=showItemDetails;showItemDetails=function(id){if(innerWidth>900){gameInspectorPinned=true;document.documentElement.classList.add('game-inspector-open');gameUiSetText('gameInspectorPin','Unpin');document.getElementById('gameInspectorPin')?.setAttribute('aria-pressed','true')}return originalDetails(id)};
  const originalBuy=buy;buy=function(id){const gold=s?.gold;const result=originalBuy(id);if(s&&s.gold<gold)gameUiSound('buy');return result};
  const selector='.item,#stash [data-item-id]';let downItem=null;
  document.addEventListener('pointerover',e=>{const target=e.target.closest(selector);if(target&&e.pointerType!=='touch')gameUiInspectorShow(target);else if(e.target.closest('.layout>.right'))clearTimeout(gameInspectorTimer)});

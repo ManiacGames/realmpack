@@ -1,5 +1,10 @@
 # RealmPack changelog
 
+## 0.54.3 — 2026-10-27
+
+- Opening Full details with F or its button no longer pins the floating item card. Existing pinned cards remain pinned.
+- Checked both pin states, returning from details, the 250 ms hover close delay and inventory controls.
+
 ## 0.54.2 — 2026-10-27
 
 - Reduced the item-card close delay to 250 ms while retaining the hover bridge and focus protection.
