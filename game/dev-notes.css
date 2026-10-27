@@ -1,4 +1,0 @@
-body #overlay .adaptive-modal[data-dialog-kind=devnotes]{max-width:760px}
-body #overlay .adaptive-modal .dev-note-copy{font-size:19px;line-height:1.45;margin:8px 0;white-space:pre-wrap}
-@media(max-width:1100px){.topright>button{display:none!important}.topright>button[onclick="showRunMap()"],.topright>.screen-menu-button,.topright>#devNotesButton{display:block!important}}
-@media(max-width:550px){.topright>button[onclick="showRunMap()"]{display:none!important}.topright>#devNotesButton{font-size:13px;padding:3px 5px}}

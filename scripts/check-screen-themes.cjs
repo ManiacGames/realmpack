@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),path=require('node:path'),{pathToFileURL}=require('node:url'),{chromium}=require('playwright');
 (async()=>{
  const browser=await chromium.launch({executablePath:process.env.REALMPACK_CHROME,args:['--no-sandbox','--no-zygote','--single-process','--allow-file-access-from-files']}),page=await browser.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto(pathToFileURL(path.resolve(__dirname,'../game/index.html')).href);let views=0;
- const scenes=['map','defeat','shop','reward','event','rest','trade','classes','classConfirm','catalogue','bestiary','itemDetails','rewardInspect','shopInspect','enchanter','menu','devNotes','help','shortcuts','victory','discard'];
+ const scenes=['map','defeat','shop','reward','event','rest','trade','classes','classConfirm','catalogue','bestiary','itemDetails','rewardInspect','shopInspect','enchanter','menu','help','shortcuts','victory','discard'];
  for(const [width,height]of [[1366,768],[1024,600],[700,400],[360,640]])for(const large of [false,true])for(const scene of scenes){
   await page.setViewportSize({width,height});await page.evaluate(({scene,large})=>{
    freshRun('knight',true);selectPortal(s.portalChoices[0]);closeModal(true);setLargeText(large);gameplayHintsEnabled=false;updateGameplayHints();s.gold=999;const id=s.items[0].type;
@@ -23,7 +23,7 @@ const assert=require('node:assert/strict'),path=require('node:path'),{pathToFile
     case'shopInspect':s.phase='shop';stock=[id];inspectShop(id);break;
     case'enchanter':s.phase='event';s.activeEvent={id:'enchanter',enchantRevision:0};showEnchanter();break;
     case'menu':screenMenu();break;
-    case'devNotes':showDevNotes();break;
+    
     case'help':showHelp();break;
     case'shortcuts':showGameUiHotkeys();break;
     case'victory':s.phase='won';showEnding();break;

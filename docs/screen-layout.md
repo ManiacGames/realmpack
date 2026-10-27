@@ -1,8 +1,8 @@
-# Game presentation — 0.54.6
+# Game presentation — 0.54.7
 
-The generic dialog theme keeps its exclusions at zero specificity so dedicated offer/event themes can override it. Top-bar styling targets `.wrap > header` only. `scripts/check-screen-themes.cjs` checks 21 screen types at four sizes in both text modes, including map/death protections.
+The generic dialog theme keeps its exclusions at zero specificity so dedicated offer/event themes can override it. Top-bar styling targets `.wrap > header` only. `scripts/check-screen-themes.cjs` checks 20 screen types at four sizes in both text modes, including map/death protections.
 
-`game-ui.css` and `game-ui.js` load last and build the current presentation over the existing live inventory and combat DOM. Desktop uses a full-width dungeon stage and inventory workspace. The stash remains nine entries beside the cloth-lined pack. The compact HUD mirrors class, HP, opening/current mana, gold and progress. Map, Menu and Dev notes remain accessible; reference/settings actions are in Menu.
+`game-ui.css` and `game-ui.js` load last and build the current presentation over the existing live inventory and combat DOM. Desktop uses a full-width dungeon stage and inventory workspace. The stash remains nine entries beside the cloth-lined pack. The compact HUD mirrors class, HP, opening/current mana, gold and progress. Text size, Restart, Map and Menu are available in the top ribbon; phone layouts use labelled Aa/restart icons and keep Map in Menu. Dev notes has been removed. Reference/settings actions remain in Menu.
 
 Desktop inspection floats without resizing the grid. Pointer/focus previews; click or Pin retains it. Close/Escape dismiss it. The card fits its content, with bounded scrolling for long overviews and Full details for complete rules. The entire card is interactive. A 12px hover bridge spans the positioning gap, a 125ms close grace permits pointer travel, and pointer/focus inside the card cancels closing. Pointer-down and active drags clear the card, and a brief post-drop suppression prevents a newly rendered tile from reopening it over the drop target. Mobile retains its Battle / Pack & stash / Details views and a three-column, collapsible stash.
 

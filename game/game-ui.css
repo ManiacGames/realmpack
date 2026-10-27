@@ -6,7 +6,7 @@
 .game-ui .brand{font-size:25px;white-space:nowrap}.game-ui .brand-icon{width:30px;height:30px}
 .game-ui .game-hud{display:flex;gap:13px;align-items:center;justify-content:center;min-width:0;flex:1;white-space:nowrap;font-size:18px}.game-ui .game-hud>span{padding:3px 0}.game-ui #gameHudHealth{color:#df9f91}.game-ui #gameHudMana{color:#9cbfce}.game-ui #gameHudGold{color:#dcc285}.game-ui #gameHudClass{color:#d6dac5}.game-ui .game-hud small{font-size:14px;color:#aab8b6}
 .game-ui .topright>button{display:none!important}
-.game-ui .topright>#devNotesButton,.game-ui .topright>.screen-menu-button,.game-ui .topright>button[onclick="showRunMap()"]{display:block!important;font-size:15px;min-height:34px;padding:4px 9px;background:#2b393a;border-color:#778075}
+.game-ui .topright>#readability,.game-ui .topright>#restartRun,.game-ui .topright>.screen-menu-button,.game-ui .topright>button[onclick="showRunMap()"]{display:block!important;font-size:15px;min-height:34px;padding:4px 9px;background:#2b393a;border-color:#778075}
 .game-ui .panel{border:1px solid #788074;box-shadow:0 3px #080e10,inset 0 0 0 2px #131d20;background:#1a282a}
 .game-ui .panelhead{background:linear-gradient(90deg,#304044,#243236);border-bottom:1px solid #748074;color:#dddbc9}
 .game-ui .battle-panel .panelhead h2{font-size:23px;color:#e4d3a5}.game-ui .battle-panel .panelhead .label{color:#b8c3be}
@@ -52,7 +52,7 @@
 @media(min-width:901px) and (max-width:1150px){.game-ui #gameHudClass,.game-ui #gameHudDepth{display:none}.game-ui .brand{font-size:22px}.game-ui .game-hud{gap:9px}}
 @media(max-width:900px){
  .game-ui body .wrap{padding:6px 8px;gap:6px}.game-ui body .wrap>header .brand{font-size:0!important;gap:0}.game-ui .brand span{display:none}.game-ui .brand-icon{width:26px;height:26px;margin:0}.game-ui body .wrap>header{gap:5px;padding:0 3px}.game-ui .game-hud{font-size:15px;gap:7px;justify-content:space-evenly}.game-ui #gameHudClass,.game-ui #gameHudDepth{display:none}.game-ui .topright{gap:4px;flex-wrap:nowrap}.game-ui .topright>button[onclick="showRunMap()"]{display:none!important}
- .game-ui .topright>#devNotesButton,.game-ui .topright>.screen-menu-button{font-size:13px;min-height:44px;padding:3px 5px}.game-ui .game-inspector-controls{display:none}.game-ui .layout>.right{box-shadow:none;border:0}.game-ui .game-enemy-intent{font-size:13px}.game-ui #fight{font-size:17px;padding:5px 12px}.game-ui .stash-pane{border-left:0;border-top:3px solid #9f875d}.game-ui #overlay .shop-banner{display:none}
+ .game-ui .topright>#readability,.game-ui .topright>#restartRun,.game-ui .topright>.screen-menu-button{font-size:13px;min-height:44px;padding:3px 5px}.game-ui .game-inspector-controls{display:none}.game-ui .layout>.right{box-shadow:none;border:0}.game-ui .game-enemy-intent{font-size:13px}.game-ui #fight{font-size:17px;padding:5px 12px}.game-ui .stash-pane{border-left:0;border-top:3px solid #9f875d}.game-ui #overlay .shop-banner{display:none}
 }
 @media(max-width:700px){.game-ui #overlay .offer-modal:has(.loot-grid):before{display:none}}
 @media(max-height:500px){.game-ui .game-enemy-intent{font-size:12px;margin-top:0}.game-ui .arena .fighter{gap:2px 8px!important}.game-ui #overlay .shop-banner{display:none}}
@@ -99,4 +99,23 @@
  .game-ui .game-shortcuts .game-hotkeys{font-size:16px;line-height:1.2}
  .game-ui .game-shortcuts .game-hotkeys th,.game-ui .game-shortcuts .game-hotkeys td{padding:2px 6px}
  .game-ui #overlay .game-shortcuts>button{font-size:16px;min-height:36px;padding:4px 9px;margin:0}
+}
+
+/* Ribbon controls stay available without crowding the resource HUD on phones. */
+.game-ui .topright>#readability[aria-pressed=true]{background:#48533b;border-color:#d0b98b}
+@media(max-width:550px){
+ .game-ui body .wrap>header .brand{display:none}
+ .game-ui .game-hud{font-size:14px;gap:4px}
+ .game-ui .topright>#readability,.game-ui .topright>#restartRun{font-size:0;min-width:44px;width:44px;padding:3px}
+ .game-ui .topright>#readability:before{content:"Aa";font-size:17px}
+ .game-ui .topright>#restartRun:before{content:"↻";font-size:23px}
+}
+@media(max-width:900px){
+ .game-ui body .wrap{grid-template-rows:46px 34px minmax(0,1fr) 18px}
+ .game-ui body .wrap>header{min-height:46px;align-items:center}
+}
+
+@media(max-width:550px),(max-width:900px) and (pointer:coarse){
+ .game-ui body .wrap{grid-template-rows:46px 44px minmax(0,1fr)}
+ .game-ui.has-gameplay-hint body .wrap{grid-template-rows:46px 44px minmax(0,1fr) auto}
 }

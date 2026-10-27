@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.54.7 — 2026-10-27
+
+- Moved text size and Restart back to the top ribbon, with compact accessible controls on phones. Restart retains confirmation and its combat guard.
+- Removed Dev notes and its menu entry.
+- Checked ribbon layout, saved text-size changes, restart cancellation/confirmation, mobile controls and dialog layouts.
+
 ## 0.54.6 — 2026-10-27
 
 - Reduced the floating item-card close delay to 125 ms. The interactive card, hover bridge, keyboard-focus protection and existing pin state remain intact.
