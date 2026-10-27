@@ -1,5 +1,10 @@
 # RealmPack changelog
 
+## 0.54.9 — 2026-10-27
+
+- Floating item cards now appear above the hovered item, centred and kept within the screen. Card height adapts to the space above the item so it stays clear of the hovered item.
+- Preserved the hover bridge, 125 ms close delay, pin behaviour and following moved items. Checked pointer travel, Full details access, movement and drag performance.
+
 ## 0.54.8 — 2026-10-27
 
 - Item cards now follow the inspected item after moving or rotating it, including pinned cards and click-to-place moves.
