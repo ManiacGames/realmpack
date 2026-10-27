@@ -119,3 +119,6 @@
  .game-ui body .wrap{grid-template-rows:46px 44px minmax(0,1fr)}
  .game-ui.has-gameplay-hint body .wrap{grid-template-rows:46px 44px minmax(0,1fr) auto}
 }
+
+/* Keep the compact inspection overview inside short landscape screens. */
+@media(max-width:900px) and (max-height:500px){.game-ui .right #detail.inspection-overview{gap:6px}}

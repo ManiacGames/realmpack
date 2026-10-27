@@ -1,5 +1,11 @@
 # RealmPack changelog
 
+## 0.54.8 — 2026-10-27
+
+- Item cards now follow the inspected item after moving or rotating it, including pinned cards and click-to-place moves.
+- Dragging keeps the card out of the way, then restores a previously open card beside the moved item after dropping. Temporary previews only return if the item is still hovered.
+- Fixed a small inspection-card overflow on short landscape screens. Checked real item moves, stash transfers, pin state, hover controls and drag performance.
+
 ## 0.54.7 — 2026-10-27
 
 - Moved text size and Restart back to the top ribbon, with compact accessible controls on phones. Restart retains confirmation and its combat guard.

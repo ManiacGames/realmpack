@@ -1,6 +1,6 @@
 /* Game presentation only. Original inventory, combat, save and trading handlers stay in control. */
 'use strict';
-let gameInspectorPinned=false,gameInspectorTimer=0,gameInspectorQuietUntil=0,gameUiSounds=false,gameUiVolume=50,gameUiAudio=null;
+let gameInspectorPinned=false,gameInspectorTimer=0,gameInspectorQuietUntil=0,gameInspectorRestoreTimer=0,gameUiSounds=false,gameUiVolume=50,gameUiAudio=null;
 function gameUiSetText(id,value){const el=document.getElementById(id);if(el&&el.textContent!==String(value))el.textContent=String(value)}
 function gameUiSound(kind='click'){
  if(!gameUiSounds||gameUiVolume<=0||document.hidden)return;
@@ -27,15 +27,20 @@ function gameUiKeyboard(e){
 }
 function showGameUiHotkeys(){modal('Keyboard shortcuts','Available outside typing fields.',`<table class="game-hotkeys"><thead><tr><th scope="col">Key</th><th scope="col">Action</th></tr></thead><tbody>${[['R','Rotate'],['S','Backpack → stash'],['D','Discard selected (confirm)'],['F','Hovered/focused item details'],['I','Item catalogue'],['E','Encounter bestiary'],['Esc','Back/cancel; Menu when clear']].map(([key,action])=>`<tr><th scope="row"><kbd>${key}</kbd></th><td>${action}</td></tr>`).join('')}</tbody></table><button class="gold" onclick="screenMenu()">Back to menu</button>`,'help');document.querySelector('#overlay .modal')?.classList.add('game-shortcuts')}
 function toggleGameUiSounds(){gameUiSounds=!gameUiSounds;try{localStorage.setItem('realmpack-ui-sounds',String(gameUiSounds))}catch{}gameUiSound();screenMenu()}
-function gameUiInspectorClose(){clearTimeout(gameInspectorTimer);gameInspectorPinned=false;document.documentElement.classList.remove('game-inspector-open');gameUiSetText('gameInspectorPin','Pin');document.getElementById('gameInspectorPin')?.setAttribute('aria-pressed','false')}
+function gameUiInspectorClose(){clearTimeout(gameInspectorTimer);clearTimeout(gameInspectorRestoreTimer);gameInspectorPinned=false;document.documentElement.classList.remove('game-inspector-open');gameUiSetText('gameInspectorPin','Pin');document.getElementById('gameInspectorPin')?.setAttribute('aria-pressed','false')}
 function gameUiInspectorPin(){gameInspectorPinned=!gameInspectorPinned;gameUiSetText('gameInspectorPin',gameInspectorPinned?'Unpin':'Pin');document.getElementById('gameInspectorPin')?.setAttribute('aria-pressed',String(gameInspectorPinned))}
 function gameUiInspectorShow(target){
- if(innerWidth<=900||modalKind||inventoryDrag?.active||Date.now()<gameInspectorQuietUntil)return;
+ if(innerWidth<=900||modalKind||inventoryDrag||Date.now()<gameInspectorQuietUntil)return;
  clearTimeout(gameInspectorTimer);const root=document.documentElement,panel=document.querySelector('.layout>.right');if(!panel)return;
  screenTab('item');root.classList.add('game-inspector-open');
- if(!gameInspectorPinned){const r=target.getBoundingClientRect(),w=Math.min(330,innerWidth-24),x=r.right+w+16<innerWidth?r.right+10:Math.max(12,r.left-w-10);panel.style.left=x+'px';panel.style.top=Math.max(66,Math.min(innerHeight-panel.getBoundingClientRect().height-12,r.top-40))+'px'}
+ gameUiInspectorPosition(target);
  screenReflow();
 }
+function gameUiInspectorPosition(target){
+ const panel=document.querySelector('.layout>.right');if(innerWidth<=900||!panel||!target||!document.documentElement.classList.contains('game-inspector-open'))return;
+ const r=target.getBoundingClientRect(),w=Math.min(330,innerWidth-24),x=r.right+w+16<innerWidth?r.right+10:Math.max(12,r.left-w-10);panel.style.left=x+'px';panel.style.top=Math.max(66,Math.min(innerHeight-panel.getBoundingClientRect().height-12,r.top-40))+'px';
+}
+function gameUiInspectorTarget(id=findInspected()?.id){return document.getElementById('item'+id)||document.querySelector('#stash [data-item-id="'+id+'"]')}
 function gameUiJournal(){modal('Combat journal','Recent combat.',`<div>${logs.map(line=>`<p>${esc(line)}</p>`).join('')||'<p>No entries yet.</p>'}</div><button class="gold" onclick="restorePhaseModal()">Return to run</button>`,'help')}
 
 function gameUiRefresh(){
@@ -51,7 +56,7 @@ if(!window.__TEST__){
  const bar=document.createElement('div');bar.className='game-inspector-controls';bar.innerHTML='<span>Item card</span><button id="gameInspectorPin" aria-pressed="false" onclick="gameUiInspectorPin()">Pin</button><button aria-label="Close inspection" onclick="gameUiInspectorClose()">Close</button>';document.querySelector('.layout>.right').prepend(bar);
  const intent=document.createElement('div');intent.id='gameEnemyIntent';intent.className='game-enemy-intent';intent.title='Next normal attack before player mitigation. Future phase changes, extra pulses and dodges can change the result.';intent.hidden=true;const vitals=document.createElement('small');vitals.id='gameEnemyVitals';vitals.className='game-enemy-vitals';document.getElementById('estats').after(vitals,intent);
  const originalDetail=renderDetail;renderDetail=function(){originalDetail();if(innerWidth>900){const adj=document.querySelector('#detail .inspection-adjacency'),text=adj?.querySelector('.adjacency-live-summary')?.textContent||'';if(adj)adj.hidden=/^(No incoming|Stashed)/.test(text)}};
- const originalStats=updateStats;updateStats=function(){originalStats();gameUiRefresh()};const originalRender=render;render=function(){originalRender();gameUiRefresh()};
+ const originalStats=updateStats;updateStats=function(){originalStats();gameUiRefresh()};const originalRender=render;render=function(){originalRender();gameUiRefresh();gameUiInspectorPosition(gameUiInspectorTarget())};
  const originalMenu=screenMenu;screenMenu=function(){originalMenu();const menu=document.querySelector('.screen-menu');if(menu){const journal=document.createElement('button');journal.textContent='Combat journal';journal.onclick=()=>{closeModal(true);gameUiJournal()};menu.append(journal);const sound=document.createElement('button');sound.textContent='UI sounds: '+(gameUiSounds?'On':'Off');sound.setAttribute('aria-pressed',String(gameUiSounds));sound.onclick=toggleGameUiSounds;menu.append(sound);const volume=document.createElement('label');volume.className='game-volume-control';volume.innerHTML=`<span>Sound volume <output id="gameUiVolumeOutput" for="gameUiVolume">${gameUiVolume}%</output></span><input id="gameUiVolume" aria-label="Sound volume" aria-valuetext="${gameUiVolume===0?'Muted':gameUiVolume+' percent'}" type="range" min="0" max="100" step="1" value="${gameUiVolume}">`;volume.querySelector('input').oninput=e=>setGameUiVolume(e.target.value);volume.querySelector('input').onchange=()=>gameUiSound();menu.append(volume);const keys=document.createElement('button');keys.textContent='Keyboard shortcuts';keys.onclick=showGameUiHotkeys;menu.append(keys)}};
  document.querySelector('.screen-menu-button').onclick=()=>screenMenu();
  const originalView=screenView;screenView=function(view){if(innerWidth>900&&view==='details'){document.documentElement.classList.add('game-inspector-open');gameInspectorPinned=true;const p=document.querySelector('.layout>.right');p.style.left=Math.max(12,innerWidth-350)+'px';p.style.top='66px';gameUiSetText('gameInspectorPin','Unpin');document.getElementById('gameInspectorPin')?.setAttribute('aria-pressed','true')}originalView(view)};
@@ -63,10 +68,10 @@ if(!window.__TEST__){
  const scheduleHide=()=>{clearTimeout(gameInspectorTimer);if(!gameInspectorPinned)gameInspectorTimer=setTimeout(()=>{const panel=document.querySelector('.layout>.right');if(!gameInspectorPinned&&!panel?.matches(':hover,:focus-within'))document.documentElement.classList.remove('game-inspector-open')},125)};
  document.addEventListener('pointerout',e=>{if(e.target.closest(selector+',.layout>.right')&&!e.relatedTarget?.closest(selector+',.layout>.right'))scheduleHide()});
  document.addEventListener('focusin',e=>{const target=e.target.closest(selector);if(target)gameUiInspectorShow(target);else if(e.target.closest('.layout>.right'))clearTimeout(gameInspectorTimer)});
- document.addEventListener('pointerdown',e=>{const t=e.target.closest(selector);if(t){gameUiInspectorClose();const id=Number(t.dataset.itemId||t.id.replace(/^item/,'')),i=[...s.items,...s.stash].find(i=>i.id===id);downItem=i?{id:i.id,x:i.x,y:i.y,rot:i.rot,stash:s.stash.includes(i)}:null}});
+ document.addEventListener('pointerdown',e=>{const t=e.target.closest(selector);if(t){const pinned=gameInspectorPinned,open=document.documentElement.classList.contains('game-inspector-open');gameUiInspectorClose();const id=Number(t.dataset.itemId||t.id.replace(/^item/,'')),i=[...s.items,...s.stash].find(i=>i.id===id);downItem=i?{id:i.id,x:i.x,y:i.y,rot:i.rot,stash:s.stash.includes(i),pinned,open,pointerType:e.pointerType}:null}});
  document.addEventListener('pointerup',()=>{if(inventoryDrag?.active){gameInspectorQuietUntil=Date.now()+250;gameUiInspectorClose()}},true);
- document.addEventListener('pointerup',()=>{if(downItem){const i=[...s.items,...s.stash].find(i=>i.id===downItem.id);if(i&&(i.x!==downItem.x||i.y!==downItem.y||i.rot!==downItem.rot||s.stash.includes(i)!==downItem.stash))gameUiSound('place');downItem=null}});
- document.addEventListener('click',e=>{const t=e.target.closest(selector);if(t&&!inventoryDrag?.active&&!inventorySuppressClick&&Date.now()>=gameInspectorQuietUntil){gameUiInspectorShow(t);if(innerWidth>900){gameInspectorPinned=true;gameUiSetText('gameInspectorPin','Unpin');document.getElementById('gameInspectorPin')?.setAttribute('aria-pressed','true')}}});
+ document.addEventListener('pointerup',()=>{if(downItem){const i=[...s.items,...s.stash].find(i=>i.id===downItem.id);if(i&&(i.x!==downItem.x||i.y!==downItem.y||i.rot!==downItem.rot||s.stash.includes(i)!==downItem.stash)){gameUiSound('place');const moved=downItem;if(moved.open&&moved.pointerType!=='touch')gameInspectorRestoreTimer=setTimeout(()=>{const target=gameUiInspectorTarget(moved.id);if(!target||modalKind||inventoryDrag||!s||(!moved.pinned&&!target.matches(':hover')))return;inspectItem(moved.id);gameInspectorPinned=moved.pinned;gameUiSetText('gameInspectorPin',moved.pinned?'Unpin':'Pin');document.getElementById('gameInspectorPin')?.setAttribute('aria-pressed',String(moved.pinned));gameUiInspectorShow(target)},Math.max(0,gameInspectorQuietUntil-Date.now())+1)}downItem=null}});
+ document.addEventListener('click',e=>{const t=e.target.closest(selector);if(t&&!inventoryDrag?.active&&!inventorySuppressClick&&Date.now()>=gameInspectorQuietUntil){gameUiInspectorShow(t);if(innerWidth>900){gameInspectorPinned=true;gameUiSetText('gameInspectorPin','Unpin');document.getElementById('gameInspectorPin')?.setAttribute('aria-pressed','true')}}},true);
  document.addEventListener('focusout',e=>{if(e.target.closest('.layout>.right')&&!e.relatedTarget?.closest('.layout>.right'))scheduleHide()});
  document.addEventListener('keydown',gameUiKeyboard,true);window.addEventListener('resize',gameUiInspectorClose);gameUiRefresh();
 }
