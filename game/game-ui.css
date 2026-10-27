@@ -1,0 +1,86 @@
+/* Dungeon workbench presentation. Geometry belongs to the existing inventory system. */
+.game-ui{--game-ink:#e2dece;--game-brass:#a28b5d}
+.game-ui body{background:radial-gradient(ellipse at 45% 0,#253b3d66,transparent 70%),#10191b;color:var(--game-ink)}
+.game-ui body .wrap{padding:8px 12px;gap:9px}
+.game-ui body header{background:linear-gradient(#253237,#172326);border:1px solid #68736b;box-shadow:inset 0 -2px #0d1518,0 3px #080f11;gap:12px;padding:0 8px}
+.game-ui .brand{font-size:25px;white-space:nowrap}.game-ui .brand-icon{width:30px;height:30px}
+.game-ui .game-hud{display:flex;gap:13px;align-items:center;justify-content:center;min-width:0;flex:1;white-space:nowrap;font-size:18px}.game-ui .game-hud>span{padding:3px 0}.game-ui #gameHudHealth{color:#df9f91}.game-ui #gameHudMana{color:#9cbfce}.game-ui #gameHudGold{color:#dcc285}.game-ui #gameHudClass{color:#d6dac5}.game-ui .game-hud small{font-size:14px;color:#aab8b6}
+.game-ui .topright>button{display:none!important}
+.game-ui .topright>#devNotesButton,.game-ui .topright>.screen-menu-button,.game-ui .topright>button[onclick="showRunMap()"]{display:block!important;font-size:15px;min-height:34px;padding:4px 9px;background:#2b393a;border-color:#778075}
+.game-ui .panel{border:1px solid #788074;box-shadow:0 3px #080e10,inset 0 0 0 2px #131d20;background:#1a282a}
+.game-ui .panelhead{background:linear-gradient(90deg,#304044,#243236);border-bottom:1px solid #748074;color:#dddbc9}
+.game-ui .battle-panel .panelhead h2{font-size:23px;color:#e4d3a5}.game-ui .battle-panel .panelhead .label{color:#b8c3be}
+.game-ui body .battle-panel .arena{box-shadow:inset 0 10px 22px #060e1280,inset 0 -10px 24px #060e1266;isolation:isolate}
+.game-ui .arena .fighter{filter:drop-shadow(0 2px #081011)}.game-ui .arena .fighter b{color:#eee7cc;text-shadow:1px 2px #101811}
+.game-ui .arena .bar{border:1px solid #98a087;background:#131d1e;height:12px;box-shadow:0 2px #0c1112}.game-ui .arena .bar i{background:#a5b58b}.game-ui .arena .enemy .bar i{background:#b67d6c}
+.game-ui .game-enemy-intent{font-size:15px;color:#e3bd93;line-height:1.2;grid-column:1/-1;margin-top:5px;max-width:100%;text-align:center}.game-ui .game-enemy-vitals{font-size:15px;line-height:1.2;color:#dddcc8}.game-enemy-intent[hidden],.game-enemy-vitals[hidden]{display:none!important}.game-ui .arena #estats{display:none}
+.game-ui .combat-effects{background:#152326;border-color:#445751}.game-ui .battlefoot{background:linear-gradient(#253536,#1c2b2c);border-top:1px solid #526860}
+.game-ui #fight{background:linear-gradient(#d3b67b,#b0945e);border:2px solid #e3cc95;box-shadow:0 3px #534329,inset 0 0 0 2px #bfa26b;color:#211f18;font-size:20px;min-height:44px;padding:6px 18px}
+.game-ui #fight:disabled{background:#394b48;border-color:#6e7e70;color:#cad2bd;box-shadow:none}
+.game-ui .inventory{background:linear-gradient(90deg,#3c3025,#594632 48%,#382e26);border:2px solid #96805b;box-shadow:0 4px #100f0c,inset 0 0 0 3px #211e19}
+.game-ui .pack-pane>.panelhead{background:linear-gradient(#614b35,#433727);border-color:#a28a61;box-shadow:inset 0 2px #94795733}.game-ui .pack-pane>.panelhead h2{color:#ebdbb9}
+.game-ui .pack-pane .gridwrap{position:relative;background:repeating-linear-gradient(45deg,#ffffff02 0 1px,transparent 1px 5px),radial-gradient(ellipse,#304238,#182b26);box-shadow:inset 0 0 0 4px #342d21,inset 0 0 24px #070e0b}
+.game-ui .pack-pane .gridwrap:before,.game-ui .pack-pane .gridwrap:after{content:'';position:absolute;top:8px;bottom:8px;width:4px;background:repeating-linear-gradient(#9a8660 0 3px,transparent 3px 9px);pointer-events:none;opacity:.6}.game-ui .pack-pane .gridwrap:before{left:8px}.game-ui .pack-pane .gridwrap:after{right:8px}
+.game-ui .cell{border-color:#657e68;background:linear-gradient(135deg,#192d25,#243b2f);box-shadow:inset 0 1px #b5c8a30c}.game-ui .cell:hover{background:#3a5036}
+.game-ui .item{box-shadow:inset 0 0 0 1px #e5dec126,0 2px #07120d}.game-ui .item.selected{outline-color:#edcc80}.game-ui .pack-pane .invfoot{background:#362f25;border-top:1px solid #927e59}.game-ui .pack-pane .invfoot button{background:#4a4131;border-color:#978565;color:#e3dbc4}
+.game-ui .stash-pane{background:repeating-linear-gradient(0deg,#3d3024 0 35px,#30271f 35px 38px);border-left:3px solid #9f875d;box-shadow:inset 3px 0 #241e17}.game-ui .stash-pane>.panelhead{background:linear-gradient(#766044,#493a2a);border-color:#b49a68}.game-ui .stash-pane .stash button{background:linear-gradient(#514331,#322d23);border:1px solid #ae9465;box-shadow:inset 0 0 0 2px #25271d,0 2px #1b1813}.game-ui .stash-empty-slot{background:#201f17a8;border:1px dashed #8b7954}.game-ui .stash-trashbar{background:#302a21;border-color:#81704f}
+.game-ui .bottom{color:#9eab9e;font-size:11px;opacity:.75}
+.game-ui .game-inspector-controls{display:flex;align-items:center;gap:6px;flex:none;padding:6px 9px;border-bottom:1px solid #8d835f;background:#463f2f}.game-ui .game-inspector-controls>span{flex:1;color:#e6d4ae;font-size:16px}.game-ui .game-inspector-controls button{font-size:15px;padding:3px 7px;min-height:32px}
+.game-ui .layout>.right{background:#202d28;border:2px solid #ac9668;box-shadow:0 5px 20px #0009,inset 0 0 0 2px #17251f}.game-ui .right .info-tabs{background:#2d3a2f}.game-ui .right .panelhead{background:#364431}.game-ui .right .detail{background:#202d25}
+.game-ui:has(#overlay .modal) .layout>.right{visibility:hidden}
+.game-ui #overlay .modal{border:2px solid #a58e61;box-shadow:0 7px #0b1110,0 12px 42px #0007,inset 0 0 0 3px #19251d;background:radial-gradient(ellipse at top,#3e524047,transparent 70%),#202e28}
+.game-ui #overlay .modal>h1{color:#e9d5a6}
+.game-ui #overlay .offer-modal{position:relative;background:repeating-linear-gradient(0deg,#302a22 0 42px,#352f26 42px 44px);border-color:#b19766}
+.game-ui #overlay .offer-modal>.eyebrow{color:#bca47a}
+.game-ui #overlay .offer-modal .loot-card{background:linear-gradient(#37453a,#24352d);border:1px solid #968462;box-shadow:0 4px #151b15,inset 0 0 0 2px #17251c}
+.game-ui #overlay .offer-modal .loot-heading .sprite-art{filter:drop-shadow(0 4px #101910);--sprite-size:48px}
+.game-ui #overlay .offer-modal .loot-heading h2{color:#ece0c0}.game-ui #overlay .offer-modal .loot-stats{border-color:#64725b;color:#bfceb5}.game-ui #overlay .offer-modal .loot-primary{color:#e0e4ce}
+.game-ui #overlay .shop-banner{display:block;position:absolute;right:20px;top:8px;width:90px;height:70px;overflow:hidden;pointer-events:none;opacity:.65}.game-ui #overlay .shop-banner .event-scene{margin:0;transform:scale(.75);transform-origin:top right}
+.game-ui #overlay .offer-modal>.shop-footer,.game-ui #overlay .offer-modal>.loot-footer{border-top:2px solid #8c7855;padding-top:12px}
+.game-ui #overlay .adaptive-modal[data-dialog-kind=event],.game-ui #overlay .adaptive-modal[data-dialog-kind=rest],.game-ui #overlay .adaptive-modal[data-dialog-kind=trade]{background:radial-gradient(ellipse at 80% 0,#8a6b3733,transparent 55%),#26352b}
+.game-ui #overlay .event-choice{border-color:#8e835b;background:linear-gradient(#3c4630,#263826);box-shadow:0 3px #172216}.game-ui #overlay .event-wallet{background:#4b3e25;border-color:#a18a59;color:#e5cd96}
+.game-ui #overlay .offer-modal:has(.loot-grid):before{content:'';position:absolute;right:22px;top:14px;width:54px;height:54px;background:url('assets/vault-chest-unlocker.png') center/contain no-repeat;image-rendering:pixelated;pointer-events:none;opacity:.8}
+@media(min-width:901px){
+ .game-ui body .wrap{grid-template-rows:50px minmax(0,1fr) 16px}.game-ui body .layout{display:block;position:relative}.game-ui .layout>main{height:100%}.game-ui .layout>main>.battle-panel{flex:0 1 32%;min-height:280px}
+ .game-ui .layout>.right{display:none!important;position:fixed;z-index:35;width:330px;height:auto;max-height:min(550px,calc(100dvh - 90px));min-height:0;flex-direction:column;pointer-events:none}
+ .game-ui.game-inspector-open .layout>.right{display:flex!important}.game-ui .layout>.right>.panel{flex:0 1 auto;min-height:0;margin:0;overflow:auto}.game-ui .right .info-tabs{flex:none}
+ .game-ui .right #detail.inspection-overview{container-type:normal;flex:none;overflow:visible;min-height:0}.game-ui .right .inspection-extras{flex:none;overflow:visible}.game-ui .right .inspection-adjacency[hidden]{display:none!important}.game-ui .right .inspection-actions{position:sticky;bottom:0;background:#202d25;padding:6px 0}
+ .game-ui .right :is(button,a,select,input,summary){pointer-events:auto}.game-ui .layout>.right:has(#gameInspectorPin[aria-pressed=true]){pointer-events:auto}
+ .game-ui body .arena .fighter{grid-template-rows:auto;grid-template-columns:clamp(70px,7vw,104px) minmax(0,1fr);max-width:440px;width:39%;gap:5px 14px}.game-ui .arena .fighter .sprite{grid-row:1/5;height:88px;width:90px}.game-ui .arena .fighter .sprite>.sprite-art{--sprite-size:80px!important}.game-ui .arena .fighter b{font-size:23px;white-space:normal}.game-ui .arena .fighter small{font-size:16px;white-space:normal;overflow:visible}.game-ui .game-enemy-intent,.game-ui .game-enemy-vitals{grid-column:2;text-align:left}
+ .game-ui .battlefoot>.stats{display:none}.game-ui .battlefoot{justify-content:flex-end}
+}
+@media(min-width:901px) and (max-width:1150px){.game-ui #gameHudClass,.game-ui #gameHudDepth{display:none}.game-ui .brand{font-size:22px}.game-ui .game-hud{gap:9px}}
+@media(max-width:900px){
+ .game-ui body .wrap{padding:6px 8px;gap:6px}.game-ui body header .brand{font-size:0!important;gap:0}.game-ui .brand span{display:none}.game-ui .brand-icon{width:26px;height:26px;margin:0}.game-ui body header{gap:5px;padding:0 3px}.game-ui .game-hud{font-size:15px;gap:7px;justify-content:space-evenly}.game-ui #gameHudClass,.game-ui #gameHudDepth{display:none}.game-ui .topright{gap:4px;flex-wrap:nowrap}.game-ui .topright>button[onclick="showRunMap()"]{display:none!important}
+ .game-ui .topright>#devNotesButton,.game-ui .topright>.screen-menu-button{font-size:13px;min-height:44px;padding:3px 5px}.game-ui .game-inspector-controls{display:none}.game-ui .layout>.right{box-shadow:none;border:0}.game-ui .game-enemy-intent{font-size:13px}.game-ui #fight{font-size:17px;padding:5px 12px}.game-ui .stash-pane{border-left:0;border-top:3px solid #9f875d}.game-ui #overlay .shop-banner{display:none}
+}
+@media(max-width:700px){.game-ui #overlay .offer-modal:has(.loot-grid):before{display:none}}
+@media(max-height:500px){.game-ui .game-enemy-intent{font-size:12px;margin-top:0}.game-ui .arena .fighter{gap:2px 8px!important}.game-ui #overlay .shop-banner{display:none}}
+@media(prefers-reduced-motion:reduce){.game-ui *, .game-ui *:before,.game-ui *:after{transition:none!important;animation:none!important}}
+@media(min-width:901px){.game-ui .layout>.right>.info-tabs,.game-ui .layout>.right>.panel>.panelhead{display:none}}
+@media(min-width:901px) and (max-height:700px){
+ .game-ui .layout>main>.battle-panel{min-height:240px}
+ .game-ui body .arena .fighter{gap:2px 8px}.game-ui .arena .fighter .sprite{height:58px;width:58px}.game-ui .arena .fighter .sprite>.sprite-art{--sprite-size:54px!important}
+ .game-ui .arena .fighter b{font-size:18px}.game-ui .arena .fighter small{font-size:14px}.game-ui .game-enemy-intent{font-size:13px;margin-top:2px}
+ .game-ui .enemy-debuffs{margin-top:5px}.game-ui body .arena .enemy-debuff{width:26px;height:28px;min-height:28px;padding:2px}.game-ui .enemy-debuff svg{width:18px;height:18px}
+ .game-ui .battlefoot{min-height:44px;padding:4px 10px}.game-ui #fight{min-height:40px;font-size:17px}
+}
+@media(max-width:550px) and (min-height:600px){
+ .game-ui[data-play-view=battle] body .battle-panel .arena{height:230px;min-height:230px;padding-bottom:52px}
+ .game-ui .arena .fighter .sprite{width:48px;height:48px}.game-ui .arena .fighter .sprite>.sprite-art{--sprite-size:46px!important}
+ .game-ui .arena .enemy-debuffs{position:absolute;bottom:5px;left:8px;width:calc(100% - 16px);max-width:none;justify-content:center;margin:0}
+}
+@media(min-width:901px) and (max-height:700px){
+ .game-ui .pack-pane .grid{--cell:max(10px,min(112px,calc((100cqw - 25px)/6),calc((100cqh - 20px)/5)))}
+ .game-ui .stash-pane .stash{--stash-cell:max(16px,min(104px,calc((100cqw - 24px)/3),calc((100cqh - 112px)/3)));grid-template-columns:repeat(3,var(--stash-cell));padding:6px;gap:4px}
+ .game-ui .stash-pane .stash button .sprite-art{--sprite-size:clamp(16px,calc(var(--stash-cell)*.6),28px)}
+}
+@media(max-height:500px){
+ .game-ui .battle-panel .panelhead h2{font-size:18px}
+ .game-ui .game-enemy-vitals{font-size:13px}
+ .game-ui .enemy-debuffs{margin-top:3px}
+ .game-ui .gameplay-hint{padding:4px 8px;gap:8px}
+ .game-ui .gameplay-hint strong{font-size:15px}
+ .game-ui #gameplayHint p{font-size:14px!important;line-height:1.15!important;margin:2px 0!important}
+ .game-ui .gameplay-hint-actions button{font-size:14px;min-height:30px;padding:4px 8px}
+}

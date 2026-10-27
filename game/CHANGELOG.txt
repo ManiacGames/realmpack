@@ -1,5 +1,13 @@
 # RealmPack changelog
 
+## 0.54.0 — 2026-10-27
+
+- Rebuilt the game presentation around a compact resource HUD, dungeon stage, cloth-lined backpack and wooden stash. Map, menu and Dev notes stay within reach.
+- Desktop item inspection now floats without resizing the backpack. Hover/focus previews, click to pin, and Close/Escape dismiss; dragging clears the card. Mobile retains its Details view.
+- Shops, rewards and events use coordinated counter and encounter styling. Added a base-strike/timing preview and optional UI sounds in the menu; sounds start off.
+- Existing inventory, combat, item balance and saves are preserved.
+- Checked desktop/mobile resource HUDs, pinned inspection and chest dragging, crowded debuff layouts, offers/dialogs, hover stability and identical combat outcomes at 1×/2×/4×.
+
 ## 0.53.0 — 2026-10-27
 
 - Multi-function item explanations now use short effect lines instead of dense paragraphs. Repeated trigger sentences appear once; distinct conditions, values and drawbacks remain.
