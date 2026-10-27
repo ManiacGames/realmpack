@@ -1,5 +1,10 @@
 # RealmPack changelog
 
+## 0.54.4 — 2026-10-27
+
+- Restored the death screen’s original black background, red frame and red “Dead!” heading by excluding it from the general dialog theme.
+- Checked death-screen colours, desktop/phone layouts, run statistics, all class portraits and loss/restart behaviour.
+
 ## 0.54.3 — 2026-10-27
 
 - Opening Full details with F or its button no longer pins the floating item card. Existing pinned cards remain pinned.

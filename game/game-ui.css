@@ -28,8 +28,8 @@
 .game-ui .game-inspector-controls{display:flex;align-items:center;gap:6px;flex:none;padding:6px 9px;border-bottom:1px solid #8d835f;background:#463f2f}.game-ui .game-inspector-controls>span{flex:1;color:#e6d4ae;font-size:16px}.game-ui .game-inspector-controls button{font-size:15px;padding:3px 7px;min-height:32px}
 .game-ui .layout>.right{background:#202d28;border:2px solid #ac9668;box-shadow:0 5px 20px #0009,inset 0 0 0 2px #17251f}.game-ui .right .info-tabs{background:#2d3a2f}.game-ui .right .panelhead{background:#364431}.game-ui .right .detail{background:#202d25}
 .game-ui:has(#overlay .modal) .layout>.right{visibility:hidden}
-.game-ui #overlay .modal:not(.run-map-modal){border:2px solid #a58e61;box-shadow:0 7px #0b1110,0 12px 42px #0007,inset 0 0 0 3px #19251d;background:radial-gradient(ellipse at top,#3e524047,transparent 70%),#202e28}
-.game-ui #overlay .modal>h1{color:#e9d5a6}
+.game-ui #overlay .modal:not(.run-map-modal):not(.defeat-modal){border:2px solid #a58e61;box-shadow:0 7px #0b1110,0 12px 42px #0007,inset 0 0 0 3px #19251d;background:radial-gradient(ellipse at top,#3e524047,transparent 70%),#202e28}
+.game-ui #overlay .modal:not(.defeat-modal)>h1{color:#e9d5a6}
 .game-ui #overlay .offer-modal{position:relative;background:repeating-linear-gradient(0deg,#302a22 0 42px,#352f26 42px 44px);border-color:#b19766}
 .game-ui #overlay .offer-modal>.eyebrow{color:#bca47a}
 .game-ui #overlay .offer-modal .loot-card{background:linear-gradient(#37453a,#24352d);border:1px solid #968462;box-shadow:0 4px #151b15,inset 0 0 0 2px #17251c}

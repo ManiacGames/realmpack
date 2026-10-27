@@ -1,4 +1,4 @@
-# Game presentation — 0.54.3
+# Game presentation — 0.54.4
 
 `game-ui.css` and `game-ui.js` load last and build the current presentation over the existing live inventory and combat DOM. Desktop uses a full-width dungeon stage and inventory workspace. The stash remains nine entries beside the cloth-lined pack. The compact HUD mirrors class, HP, opening/current mana, gold and progress. Map, Menu and Dev notes remain accessible; reference/settings actions are in Menu.
 
@@ -96,7 +96,7 @@ Run `REALMPACK_CHROME=/path/to/chrome node scripts/check-hint-pointers.cjs` to c
 
 ## Defeat screen — 0.29.0
 
-The defeat summary bypasses generic modal paging. A red/black frame surrounds the enemy attribution, class sprite, depth banner and six run stats. Character selection preserves the completed run until Start. New losses record `endedAt`; older saves omit the date. A surviving character at the 150-second limit receives a timeout message. The victory and endless-run flow is unchanged.
+The defeat summary bypasses generic modal paging and the general game modal/header colours, preserving its original red/black styling. A red/black frame surrounds the enemy attribution, class sprite, depth banner and six run stats. Character selection preserves the completed run until Start. New losses record `endedAt`; older saves omit the date. A surviving character at the 150-second limit receives a timeout message. The victory and endless-run flow is unchanged.
 
 Run `REALMPACK_CHROME=/path/to/chrome node scripts/check-defeat-screen.cjs` for viewport/text-mode checks, all class portraits, statistics, loss persistence and navigation.
 
