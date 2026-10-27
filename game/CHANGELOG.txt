@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## 0.53.1 — 2026-10-28
+
+- Added D to discard the selected item with confirmation, F for hovered/focused item details, I for the item catalogue and E for the encounter bestiary.
+- Esc closes/cancels the current layer, then opens Menu when clear. Added a Keyboard shortcuts reference in Menu.
+- Shortcuts ignore typing, modified keys and held repeats; discard is disabled during combat. The restored 0.53 layout is unchanged.
+- Checked shortcut targeting, confirmation/cancellation, input/combat guards, Escape priority and responsive dialogs.
+
 ## 0.53.0 — 2026-10-28 (restored)
 
 - Restored the original 0.53.0 game and interface from commit d66e2e0, reverting the changes introduced in 0.54.0–0.55.0.

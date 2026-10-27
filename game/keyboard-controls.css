@@ -1,0 +1,5 @@
+body #overlay .keyboard-shortcuts-modal{width:min(560px,100%);height:auto;gap:10px}
+.keyboard-shortcuts{border-collapse:collapse;width:100%;font-size:18px;line-height:1.25;text-align:left}
+.keyboard-shortcuts th,.keyboard-shortcuts td{padding:6px 8px;border-bottom:1px solid #52634f}
+.keyboard-shortcuts th:first-child{width:56px}.keyboard-shortcuts kbd{font:inherit;color:#dfc58f}
+@media(max-height:500px){body #overlay .keyboard-shortcuts-modal{padding:10px;gap:6px}.keyboard-shortcuts-modal>.eyebrow{display:none}body #overlay .keyboard-shortcuts-modal>h1{font-size:23px;margin:0}body #overlay .keyboard-shortcuts-modal>p{font-size:15px;margin:0}.keyboard-shortcuts{font-size:16px;line-height:1.2}.keyboard-shortcuts th,.keyboard-shortcuts td{padding:3px 6px}.keyboard-shortcuts-modal>button{font-size:16px;min-height:32px;padding:4px 8px;margin:0}}

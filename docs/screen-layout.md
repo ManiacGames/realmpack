@@ -99,3 +99,9 @@ Shared desktop views allocate about 42% of the main column to combat and the res
 `enemy-status.js` renders the six existing enemy debuffs below the enemy health/stats. Burn, poison and bleed show stacks; chill, weakened and exposed show rounded-up seconds. Icons use stable DOM and update only their counts and descriptions. Hover/focus shows an explanation; tapping pins it, tapping again or pressing Escape closes it. No simulation state or effect values are changed.
 
 Browser QA: `scripts/check-combat-status.cjs` verifies viewport proportions, backpack/stash geometry, status values, tooltips and reset/expiry behavior in both text modes. `scripts/check-inventory-sizing.cjs` checks responsive cell sizing and transfers; roomy desktop cells now exceed 70px within the balanced layout.
+
+## Keyboard controls — 0.53.1
+
+The restored 0.53 presentation is preserved. D confirms discarding the selected owned item (including stat chests); F opens Full details for the hovered/focused owned item, the inspected item under the pointer, or selection as fallback. I/E open the catalogue/bestiary. New letter commands ignore text fields, contenteditable, IME composition, Ctrl/Alt/Meta, held repeats, active pointer holds and open dialogs. D is preparation-only.
+
+Escape cancels active placement first, retaining foreground sprite/status panels, reference filters and inspector return behaviour. With no foreground layer, it opens Menu; Escape closes Menu or returns from the shortcut reference. Menu includes Keyboard shortcuts, available on desktop and mobile. `scripts/check-keyboard-controls.cjs` verifies these interactions.
