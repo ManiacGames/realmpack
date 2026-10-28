@@ -1,6 +1,6 @@
 'use strict';
 class RealmScene extends Phaser.Scene{
- constructor(){super('RealmPack');this.itemNodes=new Map();this.view='pack';this.inspected=null;this.dragging=null;this.lastRevision=-1;this.lastPhase='';this.lastPaint=0}
+ constructor(){super('RealmPack');this.itemNodes=new Map();this.view='pack';this.inspected=null;this.hovered=null;this.dragging=null;this.lastRevision=-1;this.lastPhase='';this.lastPaint=0}
  preload(){for(const sheet of window.SPRITE_DATA.sheets)this.load.image(sheet.group,'../game/'+sheet.src);for(const [id,floor] of Object.entries(BATTLE_FLOORS))this.load.svg('floor-'+id,'../game/'+floor.image,{width:512,height:256});for(const [id,status] of Object.entries(ENEMY_STATUS_ICONS)){const svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="'+status.color+'" color="'+status.color+'">'+status.icon+'</svg>';this.load.svg('status-'+id,'data:image/svg+xml;base64,'+btoa(svg),{width:32,height:32})}}
  create(){
   for(const [source,frame] of Object.entries(window.SPRITE_DATA.sprites)){const texture=this.textures.get(frame.group),image=texture.getSourceImage(),cw=image.width/frame.cols,ch=image.height/frame.rows;texture.add(source,0,frame.x*cw,frame.y*ch,cw,ch)}
@@ -20,7 +20,7 @@ class RealmScene extends Phaser.Scene{
  rect(x,y,w,h,color,stroke=0x59624b,layer=this.staticLayer){const node=this.add.rectangle(x,y,w,h,color).setOrigin(0);if(stroke)node.setStrokeStyle(1,stroke);layer.add(node);return node}
  sprite(x,y,source,size,layer=this.staticLayer){const frame=window.SPRITE_DATA.sprites[source]||window.SPRITE_DATA.sprites[window.SPRITE_DATA.fallback],node=this.add.image(x,y,frame.group,source in window.SPRITE_DATA.sprites?source:window.SPRITE_DATA.fallback).setDisplaySize(size,size);layer.add(node);return node}
  rebuild(){
-  if(!RealmModel.state)return;this.detailName=null;this.detailFacts=null;this.detailBody=null;this.tweens.killAll();this.staticLayer.removeAll(true);this.hudLayer.removeAll(true);this.inventoryLayer.removeAll(true);this.itemNodes.clear();this.linkLines.clear();
+  if(!RealmModel.state)return;this.hovered=null;this.detailName=null;this.detailFacts=null;this.detailBody=null;this.tweens.killAll();this.staticLayer.removeAll(true);this.hudLayer.removeAll(true);this.inventoryLayer.removeAll(true);this.itemNodes.clear();this.linkLines.clear();
   const {width:w,height:h}=this.scale;this.compact=w<900||h<420;this.landscape=this.compact&&w/h>1.7;
   const side=this.compact?0:Math.min(290,w*.24),main=w-side;
   this.layout={w,h,main,side};
@@ -32,7 +32,7 @@ class RealmScene extends Phaser.Scene{
   if(!this.compact){const x=this.stash.x-17;this.rect(x,this.pack.y-30,1,this.pack.cell*5+30,0x6c755a,0);this.drawSidebar()}
   else if(!this.landscape)this.drawCompactInspection();
   this.drawTrash();this.buildItems();this.preview=this.rect(0,0,1,1,0xb7ce86,0xb7ce86,this.hudLayer).setAlpha(0).setDepth(10);
-  this.lastRevision=RealmModel.revision;this.lastPhase=RealmModel.state.phase;this.paintHud();this.paintSelection();this.paintInspection();
+  this.lastRevision=RealmModel.revision;this.lastPhase=RealmModel.state.phase;this.paintHud();this.paintSelection();this.paintInspection();window.RealmGuide?.refresh();
  }
  drawBoard(board,title,cols,rows){const {x,y,cell}=board;this.text(x,y-27,title,this.compact?18:21,'#edc77b');this.rect(x-5,y-5,cols*cell+10,rows*cell+10,0x202b22,0x8d8057);for(let row=0;row<rows;row++)for(let col=0;col<cols;col++)this.rect(x+col*cell+2,y+row*cell+2,cell-4,cell-4,0x152019,0x394b38)}
  drawArena(){
@@ -66,7 +66,8 @@ class RealmScene extends Phaser.Scene{
    if(d.once){const count=this.add.text(width-3,2,'×'+RealmModel.count(item),{fontFamily:'ChronoType',fontSize:16,color:'#edc77b'}).setOrigin(1,0);node.add(count)}
    node.cooldown=this.add.rectangle(1,height-4,width-2,3,0xedc77b).setOrigin(0).setVisible(!stashed);node.add(node.cooldown);
    node.setSize(width,height).setInteractive(new Phaser.Geom.Rectangle(width/2,height/2,width,height),Phaser.Geom.Rectangle.Contains);this.input.setDraggable(node,RealmModel.canEdit);
-   node.on('pointerover',()=>{if(this.dragging)return;this.inspect(item.id)});
+   node.on('pointerover',()=>{if(this.dragging)return;this.hovered=item.id;this.inspect(item.id)});
+   node.on('pointerout',()=>{if(this.hovered===item.id)this.hovered=null});
    node.on('pointerup',()=>{if(this.ignoreClick||this.dragging)return;RealmModel.select(item.id);this.inspect(item.id);this.paintSelection();window.updateRealmControls()});
    this.itemNodes.set(item.id,node);
   }

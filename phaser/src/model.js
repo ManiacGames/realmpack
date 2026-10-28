@@ -1,7 +1,7 @@
 'use strict';
 // One simulation, two presentations. Campaign saves never use the production slot.
 const RealmModel={
- version:'0.2.0',mode:'lab',speed:1,paused:false,revision:0,accumulator:0,presentation:null,
+ version:'0.3.0',mode:'lab',speed:1,paused:false,revision:0,accumulator:0,presentation:null,
  saveKey:'realmpack-phaser-v1',restoring:false,inventoryMutation:false,
  classes:()=>Object.values(classes),dungeons:()=>Object.values(dungeonDefs),
  get state(){return s},get room(){return ROOMS[s.room]},get definitions(){return defs},
@@ -27,7 +27,7 @@ const RealmModel={
  },
  canPlace(id,x,y,rot=null){const i=this.item(id);if(!i||!this.canEdit)return false;const candidate={...i,rot:rot??i.rot},stack=stackAtCell(candidate,x,y);return !!(stack&&stackCount(stack)<STACK_LIMIT)||fits(candidate,x,y,candidate.rot)},
  move(id,x,y,rot=null){const i=this.item(id);if(!i)return false;return this.edit(()=>{inventoryPick(i);const ok=inventoryCommit(i,{x,y,rot:rot??i.rot});selected=ok?null:id;return ok})},
- stash(id){const i=this.item(id);if(!i||!s.items.includes(i))return false;return this.edit(()=>{selected=id;const before=s.items.length;stashSelected();selected=null;return s.items.length<before})},
+ stash(id){const i=this.item(id);if(!i||!s.items.includes(i))return false;return this.edit(()=>{const prior=selected;selected=id;const before=s.items.length;stashSelected();const moved=s.items.length<before;selected=moved?null:prior;return moved})},
  rotate(id){const i=this.item(id);if(!i||!this.canEdit)return false;const rot=!i.rot;if(s.stash.includes(i))return this.edit(()=>{i.rot=rot;return true});return this.move(id,i.x,i.y,rot)},
  discard(id){if(!this.item(id))return false;return this.edit(()=>{removeItem(id);return true})},
  start(){if(s.phase!=='prep'){if(this.mode==='campaign')restorePhaseModal();return false}this.persist();startFight();clearInterval(timer);timer=null;this.accumulator=0;this.revision++;return s.phase==='fight'},
@@ -52,6 +52,7 @@ const RealmModel={
   if(!Array.isArray(run.reward||[])||!Array.isArray(run.stock||[]))return false;
   if((run.reward||[]).some(id=>!defs[id])||(run.stock||[]).some(id=>!defs[id]))return false;return true;
  },
+ readSaved(){try{const data=JSON.parse(localStorage.getItem(this.saveKey)||'null');return this.valid(data)?data:null}catch{return null}},
  load(data=null){
   let candidate;try{candidate=data||JSON.parse(localStorage.getItem(this.saveKey)||'null')}catch{return false}if(!this.valid(candidate))return false;
   const previous={state:s,route:ROOMS,uid,reward,stock,mode:this.mode,logs,selectedDifficulty};

@@ -43,6 +43,6 @@ function showRealmCombatInfo(){const c=classes[s.classId],room=ROOMS[s.room],ene
 function resizeRealmReferences(){const count=innerHeight<500?2:innerWidth>=1100?(innerHeight>=900?12:9):innerWidth>=700?6:4;referenceSizes.catalogue=count;referenceSizes.bestiary=count}
 resizeRealmReferences();window.addEventListener('resize',()=>{resizeRealmReferences();if(campaignDialog.open&&modalKind==='catalogue'){if(bestiaryOpen)drawBestiary();else drawCatalogue()}});
 
-function fitCampaignMap(){const canvas=campaignContent.querySelector('.map-canvas');if(!canvas)return;const extras=campaignContent.scrollHeight-canvas.offsetHeight;canvas.style.height=Math.max(140,campaignContent.clientHeight-extras-8)+'px'}
+function fitCampaignMap(){const canvas=campaignContent.querySelector('.map-canvas');if(!canvas)return;const extras=campaignContent.scrollHeight-canvas.offsetHeight;canvas.style.height=Math.max(140,campaignContent.clientHeight-extras-8)+'px';window.RealmGuide?.refresh()}
 window.addEventListener('resize',()=>{if(modalKind==='runmap')requestAnimationFrame(fitCampaignMap)});
 for(const type of ['click','change','input'])document.getElementById('campaign-actions').addEventListener(type,()=>queueMicrotask(()=>{RealmModel.revision++;window.updateRealmControls?.()}));

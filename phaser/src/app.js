@@ -3,8 +3,8 @@ window.realmPlainText=html=>{const el=document.createElement('textarea');el.inne
 let realmNoticeTimer=0;
 window.realmNotice=message=>{document.getElementById('notice').textContent=message;document.querySelectorAll('.realm-notice').forEach(n=>n.remove());const dialog=[...document.querySelectorAll('dialog[open]')].at(-1);if(dialog){const note=document.createElement('p');note.className='realm-notice';note.setAttribute('role','status');note.textContent=message;const header=dialog.querySelector('.campaign-heading>div');if(header)header.append(note);else dialog.querySelector('h1')?.after(note);clearTimeout(realmNoticeTimer);realmNoticeTimer=setTimeout(()=>note.remove(),4000)}};
 const byId=id=>document.getElementById(id),dialogs=[...document.querySelectorAll('dialog')];
-window.syncRealmPause=function(){RealmModel.paused=dialogs.some(dialog=>dialog.open)||document.hidden};
-function openRealmDialog(id){window.realmScene?.cancelDrag();if(id==='settings'){byId('game-mode').value=RealmModel.mode;updateLabSettings();byId('save-status').textContent=RealmModel.mode==='campaign'?(RealmModel.saveError?'Autosave unavailable. Export a backup.':'Autosaved between actions. Phaser saves are separate from the live game.'):'Combat lab does not replace your saved dungeon run.'}if(!byId(id).open)byId(id).showModal();syncRealmPause()}
+window.syncRealmPause=function(){RealmModel.paused=dialogs.some(dialog=>dialog.open)||document.hidden;RealmGuide.refresh()};
+function openRealmDialog(id){window.realmScene?.cancelDrag();if(id==='settings'){byId('resume-run').hidden=RealmModel.mode!=='lab';byId('resume-run').disabled=s.phase==='fight'||!RealmModel.readSaved();RealmGuide.syncButtons();byId('game-mode').value=RealmModel.mode;updateLabSettings();byId('save-status').textContent=RealmModel.mode==='campaign'?(RealmModel.saveError?'Autosave unavailable. Export a backup.':'Autosaved between actions. Phaser saves are separate from the live game.'):'Combat lab does not replace your saved dungeon run.'}if(!byId(id).open)byId(id).showModal();syncRealmPause()}
 for(const dialog of dialogs){dialog.addEventListener('close',syncRealmPause);if(dialog.id!=='campaign-dialog')dialog.addEventListener('cancel',()=>queueMicrotask(syncRealmPause));for(const close of dialog.querySelectorAll('[data-close]'))close.onclick=()=>dialog.close()}
 document.addEventListener('visibilitychange',()=>{syncRealmPause();RealmModel.accumulator=0;RealmModel.persist()});
 window.updateRealmControls=()=>{
@@ -12,20 +12,24 @@ window.updateRealmControls=()=>{
  byId('fight').disabled=phase==='fight';byId('fight').textContent=phase!=='prep'?(phase==='fight'?'In battle':'Continue ↗'):({event:'Enter event',shop:'Visit shop',rest:'Rest here'})[RealmModel.room.type]||'Begin battle';
  byId('speed').textContent=RealmModel.speed+'×';const selectedItem=RealmModel.item(RealmModel.selected),item=RealmModel.item(window.realmScene?.inspected)||selectedItem;
  byId('rotate').disabled=!selectedItem||!RealmModel.canEdit;byId('stash-item').disabled=!selectedItem||!state.items.includes(selectedItem)||!RealmModel.canEdit;byId('discard').disabled=!selectedItem||!RealmModel.canEdit;byId('details').disabled=!item;byId('new-run').disabled=phase==='fight';
+ RealmGuide.refresh();
  byId('run-progress').textContent=RealmModel.mode==='lab'?'Combat lab':`Dungeon ${Math.floor(state.room/dungeonRoomCount())%runDungeonCount()+1}/${runDungeonCount()} · Room ${state.room%dungeonRoomCount()+1}/${dungeonRoomCount()}`;
 };
-function detailItem(){return RealmModel.item(window.realmScene?.inspected)||RealmModel.item(RealmModel.selected)}
+function detailItem(){return RealmModel.item(window.realmScene?.hovered)||RealmModel.item(RealmModel.selected)||RealmModel.item(window.realmScene?.inspected)}
 function showRealmDetails(){const item=detailItem();if(!item)return;inspected=item.id;showItemDetails(item.id)}
 let discardId=null;
 function requestRealmDiscard(id=null){const item=RealmModel.item(typeof id==='number'?id:RealmModel.selected);if(!item||!RealmModel.canEdit)return;discardId=item.id;byId('discard-copy').textContent=RealmModel.definitions[item.type].name+(RealmModel.count(item)>1?' ×'+RealmModel.count(item):'');openRealmDialog('discard-confirm')}
 byId('confirm-discard').onclick=()=>{if(RealmModel.discard(discardId)){window.realmScene.inspected=null;window.realmScene.rebuild();updateRealmControls()}byId('discard-confirm').close()};
 byId('details').onclick=showRealmDetails;byId('discard').onclick=requestRealmDiscard;
 byId('rotate').onclick=()=>{window.realmScene.cancelDrag();if(!RealmModel.rotate(RealmModel.selected))realmNotice('Rotation blocked · make room before rotating.');window.realmScene.rebuild();updateRealmControls()};
-byId('stash-item').onclick=()=>{if(!RealmModel.stash(RealmModel.selected))realmNotice('Stash full · nine slots maximum.');window.realmScene.rebuild();updateRealmControls()};
+function stashRealmItem(id){if(!RealmModel.canEdit||window.realmScene.dragging)return;if(!RealmModel.stash(id))realmNotice('Stash full · nine slots maximum.');else RealmGuide.complete('stash');window.realmScene.rebuild();updateRealmControls()}
+byId('stash-item').onclick=()=>stashRealmItem(RealmModel.selected);
 byId('fight').onclick=()=>{if(RealmModel.start())realmNotice('Battle · items activate automatically');updateRealmControls()};
 byId('speed').onclick=()=>{RealmModel.speed=RealmModel.speed===4?1:RealmModel.speed*2;RealmModel.persist();updateRealmControls()};
 function screenMenu(){openRealmDialog('settings')}
 byId('menu').onclick=screenMenu;
+byId('hints-button').onclick=()=>RealmGuide.setEnabled(!RealmGuide.enabled);byId('hints-reset').onclick=()=>{RealmGuide.reset();realmNotice('Hints reset. Return to the game to see them.')};
+byId('resume-run').onclick=()=>{if(s.phase==='fight')return;if(!RealmModel.load())return realmNotice('No saved dungeon run is available.');byId('settings').close();window.realmScene.inspected=null;window.realmScene.rebuild();RealmModel.resume();updateRealmControls();realmNotice('Saved dungeon run resumed.')};
 function menuAction(action){return ()=>{byId('settings').close();action();syncRealmPause()}}
 byId('map-button').onclick=menuAction(showRunMap);byId('catalogue-button').onclick=menuAction(openCatalogue);byId('bestiary-button').onclick=menuAction(openBestiary);byId('journal-button').onclick=menuAction(showCampaignJournal);byId('help-button').onclick=menuAction(showRealmHelp);byId('info-button').onclick=menuAction(showRealmCombatInfo);byId('sound-button').onclick=menuAction(showSoundSettings);
 byId('quality-choice').innerHTML=effectsQualityOptions();byId('quality-choice').onchange=()=>{setEffectsQuality(byId('quality-choice').value);try{localStorage.setItem('realmpack-effects-quality-v1',effectsQuality)}catch{}};
@@ -43,9 +47,9 @@ byId('export-run').onclick=()=>{if(RealmModel.mode!=='campaign')return realmNoti
 byId('import-run').onclick=()=>{if(s.phase==='fight')return realmNotice('Finish the battle before importing a run.');byId('import-file').click()};
 byId('import-file').onchange=async()=>{const file=byId('import-file').files[0];if(!file)return;try{if(file.size>4000000)throw Error();const data=JSON.parse(await file.text());if(!RealmModel.valid(data))throw Error();if(!window.confirm('Replace the current Phaser run with this imported run?'))return;if(!RealmModel.load(data))throw Error();byId('settings').close();window.realmScene.inspected=null;window.realmScene.rebuild();RealmModel.resume();updateRealmControls();realmNotice('Imported run · the live game save is untouched')}catch{realmNotice('Cannot import this file. Choose a valid RealmPack run JSON.')}finally{byId('import-file').value=''}};
 document.addEventListener('keydown',e=>{
- if(e.defaultPrevented||e.repeat||e.isComposing||e.ctrlKey||e.metaKey||e.altKey||e.target.closest('input,select,textarea,[contenteditable="true"]'))return;if(dialogs.some(dialog=>dialog.open))return;
+ if(e.defaultPrevented||e.repeat||e.isComposing||e.ctrlKey||e.metaKey||e.altKey||e.target.isContentEditable||e.target.closest?.('input,select,textarea,[role="textbox"]'))return;if(dialogs.some(dialog=>dialog.open))return;
  const key=e.key.toLowerCase();if(!['r','s','f','d','i','e','escape'].includes(key))return;e.preventDefault();
- if(key==='r')byId('rotate').click();if(key==='s')byId('stash-item').click();if(key==='f')showRealmDetails();if(key==='d')requestRealmDiscard();if(key==='i')openCatalogue();if(key==='e')openBestiary();if(key==='escape'){if(window.realmScene.dragging||RealmModel.selected){window.realmScene.cancelDrag();selected=null;window.realmScene.paintSelection();updateRealmControls()}else openRealmDialog('settings')}
+ if(key==='r')byId('rotate').click();if(key==='s'){const hovered=RealmModel.item(window.realmScene.hovered);if(!hovered||s.items.includes(hovered))stashRealmItem(hovered?.id||RealmModel.selected);}if(key==='f')showRealmDetails();if(key==='d')requestRealmDiscard();if(key==='i')openCatalogue();if(key==='e')openBestiary();if(key==='escape'){if(window.realmScene.dragging||RealmModel.selected){window.realmScene.cancelDrag();selected=null;window.realmScene.paintSelection();updateRealmControls()}else openRealmDialog('settings')}
 });
 let showInitialClasses=false;
 window.addEventListener('realm-ready',()=>{applyRealmText();updateRealmControls();if(showInitialClasses)chooseClass(false);else RealmModel.resume();realmNotice(RealmModel.mode==='campaign'?'Choose connected routes · health persists between rooms':'Drag to arrange · R rotate · S stash · F details')});

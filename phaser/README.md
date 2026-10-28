@@ -1,4 +1,4 @@
-# RealmPack · Phaser 0.2.0
+# RealmPack · Phaser 0.3.0
 
 The Phaser branch now supports complete dungeon runs, using the same items, combat rules and balance as RealmPack 0.53.3. The live `main` game remains separate.
 
@@ -32,6 +32,7 @@ Open **http://127.0.0.1:4173/phaser/**. `npm run build` creates the portable pre
 - Specialist shops with class-weighted stock, one free refresh, purchases and healing. Loot and post-battle supplies remain explicit choices.
 - Noncombat encounters, item sales, sacrifices, supply restocking and enchanting, including locked modifiers and paid-roll Keep/Replace decisions.
 - Searchable item catalogue and bestiary with availability filters and full item/encounter information; a parchment route map and combat journal.
+- Optional contextual hints with arrows/highlights, remembered dismissals and a Menu option to replay them.
 - Sound effects with saved master/interface/combat volume and mute, effects-quality settings and larger text.
 - Independent campaign autosaves plus JSON export/import backups. Combat lab remains available in Menu for isolated single-encounter tests.
 
@@ -43,7 +44,7 @@ Dungeon runs use **`realmpack-phaser-v1`**, separate from the live game's `realm
 
 Use **Menu → Export run** to keep a portable JSON backup. Import asks before replacing the current Phaser run. Existing version-4 RealmPack run JSON objects are also accepted when they pass the save validation; this is an explicit import, not an automatic read of the production slot.
 
-Browser storage is specific to the browser and origin, including the local port. Export/import lets you move a run between browsers, machines or ports. Combat lab sessions do not overwrite a saved campaign.
+Browser storage is specific to the browser and origin, including the local port. Export/import lets you move a run between browsers, machines or ports. Combat lab sessions do not overwrite a saved campaign. Choose **Menu → Resume saved dungeon run** to return to your campaign without reloading.
 
 ## Controls
 
@@ -53,13 +54,15 @@ Browser storage is specific to the browser and origin, including the local port.
 | Inspect / full details | Hover or select, then **F** / Full details |
 | Move / stack | Drag to a free backpack space, matching stack or stash |
 | Rotate selected gear | **R** / Rotate |
-| Stash selected backpack gear | **S** / Stash |
+| Stash backpack gear | **S** uses hovered gear first, then the selection; Stash uses the selection |
 | Discard selected gear | **D** / Discard; confirmation required |
 | Item catalogue / bestiary | **I** / **E** |
 | Cancel selection / menu / close view | **Esc** |
 | Pause battle | Open Menu, inspection or a reference view |
 
-On narrow screens, use Backpack/Stash tabs and the action buttons. Full decision/inspection views can scroll internally on small displays; the combat/inventory playfield stays within the viewport. The earlier guided arrow tutorial is not migrated; How to play and contextual inspection remain available.
+On narrow screens, use Backpack/Stash tabs and the action buttons. Full decision/inspection views can scroll internally on small displays; the combat/inventory playfield stays within the viewport. Gameplay hints point to the relevant control with an arrow and highlight. They do not pause battles. Use **Menu → Gameplay hints** to hide them or **Show hints again** to replay them. Hint preferences are saved separately from your run.
+
+S only moves gear from backpack to stash. Hovering stash gear will not move another selected item, and a full stash preserves your selection. Shortcuts stay inactive while typing; S also ignores an active drag.
 
 ## Architecture
 
@@ -69,6 +72,7 @@ On narrow screens, use Backpack/Stash tabs and the action buttons. Full decision
 - `src/model.js`: campaign/lab lifecycle, inventory commands, save validation and simulation/view adapter.
 - `src/campaign-ui.js`: accessible native dialogs for the existing campaign choices and reference templates.
 - `src/app.js`: launch, settings, shortcuts, pause behavior, audio and import/export.
+- `src/guides.js`: contextual arrows/highlights and independent hint preferences.
 - `scripts/`: local server and portable build; `launch/`: preview launchers.
 
 The arena and inventories are Phaser game objects. Decision screens deliberately reuse the original templates inside accessible HTML dialogs. Further migration can replace those templates or extract the headless simulation boundary without changing balance. This release does not claim that every interface has been rewritten as a canvas scene or that busy late-run performance is already benchmarked.
@@ -87,6 +91,6 @@ npm run build
 
 Model tests cover all class loadouts and dungeon choices, inventory rules, exact seeded combat parity at 1×/2×/4×, scripted progression through all five dungeons, supplies/blessings, paid-roll recovery, merchant transactions and production-save isolation. Scripted victories exercise progression; they are not a new balance benchmark.
 
-Browser tests exercise actual mouse/touch dragging, discard cancellation, save/reload, purchases and refresh, route choices/maps, event offers, special services, paid enchanting, searchable references, sound controls and responsive views. Branch-only CI checks development and built output and publishes the downloadable preview artifact; it does not deploy over the live game.
+Browser tests exercise actual mouse/touch dragging, discard cancellation, save/reload, purchases and refresh, route choices/maps, event offers, special services, paid enchanting, searchable references, sound controls and responsive views. Additional hint checks cover 140 context/viewport combinations, larger text, uninterrupted combat, remembered preferences, keyboard guards and returning from lab to campaign. Branch-only CI checks development and built output and publishes the downloadable preview artifact; it does not deploy over the live game.
 
 Realm of the Mad God artwork attribution remains in the shared catalogue. Private fan game.

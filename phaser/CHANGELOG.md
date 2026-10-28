@@ -1,5 +1,13 @@
 # Phaser changelog
 
+## 0.3.0 — 2026-10-28
+
+- Added short gameplay hints with arrows and highlights for inventory, combat, routes, shops, rewards and events. Hints remember dismissals and can be hidden or replayed from Menu.
+- Added Resume saved dungeon run in Combat Lab, preserving the separate campaign checkpoint.
+- Made S stash the hovered backpack item first. Stashed gear, typing and active drags are ignored; a full stash keeps the current selection.
+- Fixed missing Backpack/Stash tabs at tablet widths. Hint placement follows resizing and scrolling, including larger text and short landscape screens.
+- Checked 140 hint contexts and viewport combinations, persistent settings, uninterrupted combat, lab recovery and keyboard guards alongside campaign and inventory checks.
+
 ## 0.2.0 — 2026-10-28
 
 - Added full five-dungeon campaign progression, connected routes and portal choices, bosses, blessings, endings and endless continuation. The original combat balance and item data are retained.
