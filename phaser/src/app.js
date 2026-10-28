@@ -1,10 +1,10 @@
 'use strict';
-window.realmPlainText=html=>{const el=document.createElement('textarea');el.innerHTML=String(html||'').replace(/<[^>]*>/g,'');return el.value.trim()};
+window.realmPlainText=html=>{const el=document.createElement('textarea');el.innerHTML=String(html||'').replace(/<br\s*\/?>|<\/?(?:p|div|section|li|h[1-6])\b[^>]*>/gi,'\n').replace(/<[^>]*>/g,'');return el.value.replace(/[ \t]+/g,' ').replace(/\n\s*\n+/g,'\n').trim()};
 let realmNoticeTimer=0;
 window.realmNotice=message=>{document.getElementById('notice').textContent=message;document.querySelectorAll('.realm-notice').forEach(n=>n.remove());const dialog=[...document.querySelectorAll('dialog[open]')].at(-1);if(dialog){const note=document.createElement('p');note.className='realm-notice';note.setAttribute('role','status');note.textContent=message;const header=dialog.querySelector('.campaign-heading>div');if(header)header.append(note);else dialog.querySelector('h1')?.after(note);clearTimeout(realmNoticeTimer);realmNoticeTimer=setTimeout(()=>note.remove(),4000)}};
 const byId=id=>document.getElementById(id),dialogs=[...document.querySelectorAll('dialog')];
 window.syncRealmPause=function(){RealmModel.paused=dialogs.some(dialog=>dialog.open)||document.hidden;RealmGuide.refresh()};
-function openRealmDialog(id){window.realmScene?.cancelDrag();if(id==='settings'){byId('resume-run').hidden=RealmModel.mode!=='lab';byId('resume-run').disabled=s.phase==='fight'||!RealmModel.readSaved();RealmGuide.syncButtons();byId('game-mode').value=RealmModel.mode;updateLabSettings();byId('save-status').textContent=RealmModel.mode==='campaign'?(RealmModel.saveError?'Autosave unavailable. Export a backup.':'Autosaved between actions. Phaser saves are separate from the live game.'):'Combat lab does not replace your saved dungeon run.'}if(!byId(id).open)byId(id).showModal();syncRealmPause()}
+function openRealmDialog(id){window.realmScene?.cancelDrag();if(id==='settings'){setRealmMenuTab('run');byId('resume-run').hidden=RealmModel.mode!=='lab';byId('resume-run').disabled=s.phase==='fight'||!RealmModel.readSaved();RealmGuide.syncButtons();byId('game-mode').value=RealmModel.mode;updateLabSettings();byId('save-status').textContent=RealmModel.mode==='campaign'?(RealmModel.saveError?'Autosave unavailable. Export a backup.':'Autosaved between actions. Phaser saves are separate from the live game.'):'Combat lab does not replace your saved dungeon run.'}if(!byId(id).open)byId(id).showModal();syncRealmPause()}
 for(const dialog of dialogs){dialog.addEventListener('close',syncRealmPause);if(dialog.id!=='campaign-dialog')dialog.addEventListener('cancel',()=>queueMicrotask(syncRealmPause));for(const close of dialog.querySelectorAll('[data-close]'))close.onclick=()=>dialog.close()}
 document.addEventListener('visibilitychange',()=>{syncRealmPause();RealmModel.accumulator=0;RealmModel.persist()});
 window.updateRealmControls=()=>{
@@ -28,6 +28,10 @@ byId('fight').onclick=()=>{if(RealmModel.start())realmNotice('Battle · items ac
 byId('speed').onclick=()=>{RealmModel.speed=RealmModel.speed===4?1:RealmModel.speed*2;RealmModel.persist();updateRealmControls()};
 function screenMenu(){openRealmDialog('settings')}
 byId('menu').onclick=screenMenu;
+function setRealmMenuTab(id,focus=false){for(const tab of document.querySelectorAll('[data-menu-tab]')){const active=tab.dataset.menuTab===id;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;byId('menu-'+tab.dataset.menuTab).hidden=!active;if(active&&focus)tab.focus()}}
+for(const tab of document.querySelectorAll('[data-menu-tab]')){tab.onclick=()=>setRealmMenuTab(tab.dataset.menuTab);tab.onkeydown=e=>{const tabs=[...document.querySelectorAll('[data-menu-tab]')],index=tabs.indexOf(tab);let next;if(e.key==='ArrowRight')next=(index+1)%tabs.length;else if(e.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;else if(e.key==='Home')next=0;else if(e.key==='End')next=tabs.length-1;if(next!==undefined){e.preventDefault();setRealmMenuTab(tabs[next].dataset.menuTab,true)}}}
+byId('quick-map').onclick=showRunMap;byId('quick-items').onclick=openCatalogue;byId('quick-enemies').onclick=openBestiary;
+
 byId('hints-button').onclick=()=>RealmGuide.setEnabled(!RealmGuide.enabled);byId('hints-reset').onclick=()=>{RealmGuide.reset();realmNotice('Hints reset. Return to the game to see them.')};
 byId('resume-run').onclick=()=>{if(s.phase==='fight')return;if(!RealmModel.load())return realmNotice('No saved dungeon run is available.');byId('settings').close();window.realmScene.inspected=null;window.realmScene.rebuild();RealmModel.resume();updateRealmControls();realmNotice('Saved dungeon run resumed.')};
 function menuAction(action){return ()=>{byId('settings').close();action();syncRealmPause()}}

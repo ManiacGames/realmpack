@@ -6,11 +6,11 @@ window.onRealmPresentation=function(view){
  const active=document.activeElement,focus=active?.id&&campaignDialog.contains(active)?{id:active.id,start:active.selectionStart,end:active.selectionEnd}:null;
  window.realmScene?.cancelDrag();campaignDialog.dataset.kind=view.kind;
  document.getElementById('campaign-title').textContent=window.realmPlainText?realmPlainText(view.title):view.title;
- document.getElementById('campaign-description').textContent=realmPlainText(view.desc||'');
+ document.getElementById('campaign-description').textContent=realmPlainText(view.desc||'').replace(view.kind==='shop'?/^\d+ gold\s*·\s*/:/^$/, '');
  campaignContent.innerHTML=view.body;
  const actions=document.getElementById('campaign-actions');actions.replaceChildren();
  const footer=campaignContent.querySelector('.shop-footer,.loot-footer,.loot-inspect-footer,.reference-pagination,.event-footer,.class-selection-footer,.catalogue-item-footer');if(footer)actions.append(footer);
- const state=RealmModel.state;document.getElementById('campaign-wallet').textContent=state?`HP ${Math.ceil(state.hp)}/${state.max} · MP ${Math.floor(state.mana)}/${manaCapacity()} · ${state.gold} gold · Depth ${state.room+1}`:'';
+ const state=RealmModel.state;document.getElementById('campaign-wallet').innerHTML=state?`<span class="wallet-meter hp" role="meter" aria-label="Health" aria-valuemin="0" aria-valuemax="${state.max}" aria-valuenow="${Math.max(0,Math.min(state.max,Math.ceil(state.hp)))}"><i style="width:${Math.max(0,Math.min(100,state.hp/state.max*100))}%"></i><b>HP ${Math.ceil(state.hp)}/${state.max}</b></span><span class="wallet-meter mp" role="meter" aria-label="Mana" aria-valuemin="0" aria-valuemax="${manaCapacity()}" aria-valuenow="${Math.max(0,Math.min(manaCapacity(),Math.floor(state.mana)))}"><i style="width:${Math.max(0,Math.min(100,state.mana/manaCapacity()*100))}%"></i><b>MP ${Math.floor(state.mana)}/${manaCapacity()}</b></span><span class="wallet-gold">◈ ${state.gold} gold</span><span class="wallet-depth">Depth ${state.room+1}</span>`:'';
  const manage=document.getElementById('campaign-pack');manage.disabled=!RealmModel.canEdit;manage.hidden=['catalogue','catalogueinspect','bestiaryinspect','classes','classconfirm','help','runmap','defeat','ending'].includes(view.kind);
  for(const node of campaignContent.querySelectorAll('.map-node,.map-depth'))node.style.top=(parseFloat(node.style.top)/860*100)+'%';
  campaignContent.querySelectorAll('.map-canvas svg').forEach(svg=>svg.setAttribute('height','100%'));

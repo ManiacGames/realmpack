@@ -1,5 +1,15 @@
 # Phaser changelog
 
+## 0.4.0 — 2026-10-28
+
+- Rebuilt the presentation around slate panels, brass frames, clear primary actions and matching inventory, shop, reward and event cards. Kept the existing pixel art and font.
+- Enlarged combat health displays and added separate blue mana and gold block meters. Event screens now show health and mana meters beside gold.
+- Added an adventurer/run panel in available desktop space, with class identity, room progress, gold and victories.
+- Upgraded item inspection with large artwork, rarity/type information, possible edge links and attunement notes. Short mobile inspection cards use less space.
+- Organized Menu into Adventure, Settings and Save & backup tabs, with arrow-key navigation. Added desktop Map, Items and Bestiary shortcuts.
+- Adjusted specialist shop stock to fit five offers on one row on larger screens. Preserved mobile inventory tabs, drag controls, hints and campaign saves.
+- Checked mouse/touch inventory controls, full campaign and event flows, guided hints, resource displays, inspection artwork, responsive menus and keyboard tabs in source and packaged builds.
+
 ## 0.3.0 — 2026-10-28
 
 - Added short gameplay hints with arrows and highlights for inventory, combat, routes, shops, rewards and events. Hints remember dismissals and can be hidden or replayed from Menu.

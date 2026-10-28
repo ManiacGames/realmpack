@@ -1,4 +1,4 @@
-# RealmPack · Phaser 0.3.0
+# RealmPack · Phaser 0.4.0
 
 The Phaser branch now supports complete dungeon runs, using the same items, combat rules and balance as RealmPack 0.53.3. The live `main` game remains separate.
 
@@ -28,11 +28,13 @@ Open **http://127.0.0.1:4173/phaser/**. `npm run build` creates the portable pre
 - Five dungeons with eight rooms each, connected route choices, dungeon portals, bosses, permanent blessings, victory/defeat and endless continuation.
 - The 6×5 backpack, nine-slot stash, consumable stacks, drag placement/stacking, rotation, inspection, upgrade targeting, confirmed discard and a drag-to-discard area in the stash.
 - Automatic combat at 1×, 2× and 4× with the original UT/ST, enchantment, adjacency, consumable and class rules.
-- Dungeon-themed battle floors, health/mana/block readouts, enemy/player effect indicators and restrained hit feedback.
+- Framed dungeon battlefields, larger health displays, separate mana/block meters, enemy/player effect indicators and restrained hit feedback.
+- A desktop adventurer/run panel, artwork-led item inspection, rarity-tinted inventory tiles and matching shop/reward/event cards.
 - Specialist shops with class-weighted stock, one free refresh, purchases and healing. Loot and post-battle supplies remain explicit choices.
 - Noncombat encounters, item sales, sacrifices, supply restocking and enchanting, including locked modifiers and paid-roll Keep/Replace decisions.
 - Searchable item catalogue and bestiary with availability filters and full item/encounter information; a parchment route map and combat journal.
 - Optional contextual hints with arrows/highlights, remembered dismissals and a Menu option to replay them.
+- Adventure, Settings and Save & backup menu tabs, keyboard tab navigation and desktop Map/Items/Bestiary shortcuts.
 - Sound effects with saved master/interface/combat volume and mute, effects-quality settings and larger text.
 - Independent campaign autosaves plus JSON export/import backups. Combat lab remains available in Menu for isolated single-encounter tests.
 
@@ -42,7 +44,7 @@ Open **http://127.0.0.1:4173/phaser/**. `npm run build` creates the portable pre
 
 Dungeon runs use **`realmpack-phaser-v1`**, separate from the live game's `realmpack-v4` slot. They autosave between actions, including route choices, shop stock, pending supplies and paid enchantment rolls. An interrupted battle restarts from the last saved preparation state; this is not an exact mid-frame combat resume.
 
-Use **Menu → Export run** to keep a portable JSON backup. Import asks before replacing the current Phaser run. Existing version-4 RealmPack run JSON objects are also accepted when they pass the save validation; this is an explicit import, not an automatic read of the production slot.
+Use **Menu → Save & backup → Export run** to keep a portable JSON backup. Import asks before replacing the current Phaser run. Existing version-4 RealmPack run JSON objects are also accepted when they pass the save validation; this is an explicit import, not an automatic read of the production slot.
 
 Browser storage is specific to the browser and origin, including the local port. Export/import lets you move a run between browsers, machines or ports. Combat lab sessions do not overwrite a saved campaign. Choose **Menu → Resume saved dungeon run** to return to your campaign without reloading.
 
@@ -60,7 +62,7 @@ Browser storage is specific to the browser and origin, including the local port.
 | Cancel selection / menu / close view | **Esc** |
 | Pause battle | Open Menu, inspection or a reference view |
 
-On narrow screens, use Backpack/Stash tabs and the action buttons. Full decision/inspection views can scroll internally on small displays; the combat/inventory playfield stays within the viewport. Gameplay hints point to the relevant control with an arrow and highlight. They do not pause battles. Use **Menu → Gameplay hints** to hide them or **Show hints again** to replay them. Hint preferences are saved separately from your run.
+On narrow screens, use Backpack/Stash tabs and the action buttons. Full decision/inspection views can scroll internally on small displays; the combat/inventory playfield stays within the viewport. Gameplay hints point to the relevant control with an arrow and highlight. They do not pause battles. Use **Menu → Settings → Gameplay hints** to hide them or **Settings → Show hints again** to replay them. Hint preferences are saved separately from your run.
 
 S only moves gear from backpack to stash. Hovering stash gear will not move another selected item, and a full stash preserves your selection. Shortcuts stay inactive while typing; S also ignores an active drag.
 
