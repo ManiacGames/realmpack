@@ -1,5 +1,7 @@
 # RealmPack — The Shattered Vault
 
+> **Phaser branch:** the first playable migration prototype is in [`phaser/`](phaser/README.md). Run instructions, current scope and migration notes are there. The live game remains on `main`.
+
 A Realm-inspired inventory auto-battler. Browser release 0.30.6: 19 classes, dungeon progression, branching maps, enchantments, ten additional adjacency rules, and single-use stacks of up to five.
 
 ## Play

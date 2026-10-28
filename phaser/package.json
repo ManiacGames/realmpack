@@ -1,0 +1,15 @@
+{
+  "name": "realmpack-phaser",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Isolated Phaser migration prototype for RealmPack",
+  "scripts": {
+    "dev": "node scripts/serve.cjs",
+    "build": "node scripts/build.cjs",
+    "check": "node --check src/model.js && node --check src/scene.js && node --check src/app.js",
+    "test": "node tests/model.cjs",
+    "test:browser": "node tests/browser.cjs"
+  },
+  "dependencies": {"phaser": "3.90.0"},
+  "devDependencies": {"playwright": "1.56.1"}
+}
