@@ -1,5 +1,12 @@
 # Phaser changelog
 
+## 0.4.1 — 2026-10-28
+
+- Fixed item links being hidden behind tiles and absent on compact layouts. Active connections now use coloured directional arrows above the items; hover or selection highlights connected gear. Inspection distinguishes active links from possible bonuses.
+- Added hover-and-R, right-click and an on-tile touch rotation control. Rotating keeps the item selected and tries nearby free space.
+- Added rotation while dragging, with an accurate footprint and visible blocked-space preview. Changes commit only on a valid drop; Escape and invalid drops restore the original item. Stash drags show the full item size.
+- Checked mouse/touch rotation, repeated rotations, rotated drags, cancellation, blocked drops, stash transfers, combat/typing guards and directional links across desktop and phone layouts. Existing combat and adjacency rules are retained.
+
 ## 0.4.0 — 2026-10-28
 
 - Rebuilt the presentation around slate panels, brass frames, clear primary actions and matching inventory, shop, reward and event cards. Kept the existing pixel art and font.

@@ -21,7 +21,8 @@ let discardId=null;
 function requestRealmDiscard(id=null){const item=RealmModel.item(typeof id==='number'?id:RealmModel.selected);if(!item||!RealmModel.canEdit)return;discardId=item.id;byId('discard-copy').textContent=RealmModel.definitions[item.type].name+(RealmModel.count(item)>1?' ×'+RealmModel.count(item):'');openRealmDialog('discard-confirm')}
 byId('confirm-discard').onclick=()=>{if(RealmModel.discard(discardId)){window.realmScene.inspected=null;window.realmScene.rebuild();updateRealmControls()}byId('discard-confirm').close()};
 byId('details').onclick=showRealmDetails;byId('discard').onclick=requestRealmDiscard;
-byId('rotate').onclick=()=>{window.realmScene.cancelDrag();if(!RealmModel.rotate(RealmModel.selected))realmNotice('Rotation blocked · make room before rotating.');window.realmScene.rebuild();updateRealmControls()};
+function requestRealmRotate(id=null){const scene=window.realmScene;if(!scene||!RealmModel.canEdit)return;if(scene.dragging){scene.rotateDrag();return}const target=id??scene.hovered??RealmModel.selected;if(!RealmModel.item(target))return;if(!RealmModel.rotate(target)){realmNotice('No room to rotate here · drag to open space and press R.');return}scene.inspected=target;scene.rebuild();updateRealmControls()}
+byId('rotate').onclick=()=>requestRealmRotate(RealmModel.selected);
 function stashRealmItem(id){if(!RealmModel.canEdit||window.realmScene.dragging)return;if(!RealmModel.stash(id))realmNotice('Stash full · nine slots maximum.');else RealmGuide.complete('stash');window.realmScene.rebuild();updateRealmControls()}
 byId('stash-item').onclick=()=>stashRealmItem(RealmModel.selected);
 byId('fight').onclick=()=>{if(RealmModel.start())realmNotice('Battle · items activate automatically');updateRealmControls()};
@@ -53,7 +54,7 @@ byId('import-file').onchange=async()=>{const file=byId('import-file').files[0];i
 document.addEventListener('keydown',e=>{
  if(e.defaultPrevented||e.repeat||e.isComposing||e.ctrlKey||e.metaKey||e.altKey||e.target.isContentEditable||e.target.closest?.('input,select,textarea,[role="textbox"]'))return;if(dialogs.some(dialog=>dialog.open))return;
  const key=e.key.toLowerCase();if(!['r','s','f','d','i','e','escape'].includes(key))return;e.preventDefault();
- if(key==='r')byId('rotate').click();if(key==='s'){const hovered=RealmModel.item(window.realmScene.hovered);if(!hovered||s.items.includes(hovered))stashRealmItem(hovered?.id||RealmModel.selected);}if(key==='f')showRealmDetails();if(key==='d')requestRealmDiscard();if(key==='i')openCatalogue();if(key==='e')openBestiary();if(key==='escape'){if(window.realmScene.dragging||RealmModel.selected){window.realmScene.cancelDrag();selected=null;window.realmScene.paintSelection();updateRealmControls()}else openRealmDialog('settings')}
+ if(key==='r')requestRealmRotate();if(key==='s'){const hovered=RealmModel.item(window.realmScene.hovered);if(!hovered||s.items.includes(hovered))stashRealmItem(hovered?.id||RealmModel.selected);}if(key==='f')showRealmDetails();if(key==='d')requestRealmDiscard();if(key==='i')openCatalogue();if(key==='e')openBestiary();if(key==='escape'){if(window.realmScene.dragging||RealmModel.selected){window.realmScene.cancelDrag();selected=null;window.realmScene.paintSelection();updateRealmControls()}else openRealmDialog('settings')}
 });
 let showInitialClasses=false;
 window.addEventListener('realm-ready',()=>{applyRealmText();updateRealmControls();if(showInitialClasses)chooseClass(false);else RealmModel.resume();realmNotice(RealmModel.mode==='campaign'?'Choose connected routes · health persists between rooms':'Drag to arrange · R rotate · S stash · F details')});

@@ -1,4 +1,4 @@
-# RealmPack · Phaser 0.4.0
+# RealmPack · Phaser 0.4.1
 
 The Phaser branch now supports complete dungeon runs, using the same items, combat rules and balance as RealmPack 0.53.3. The live `main` game remains separate.
 
@@ -55,7 +55,7 @@ Browser storage is specific to the browser and origin, including the local port.
 | Select / deselect | Click an item again |
 | Inspect / full details | Hover or select, then **F** / Full details |
 | Move / stack | Drag to a free backpack space, matching stack or stash |
-| Rotate selected gear | **R** / Rotate |
+| Rotate gear | **R** on hovered/selected gear or while dragging; right-click, tile ↻ or Rotate button |
 | Stash backpack gear | **S** uses hovered gear first, then the selection; Stash uses the selection |
 | Discard selected gear | **D** / Discard; confirmation required |
 | Item catalogue / bestiary | **I** / **E** |
@@ -65,6 +65,10 @@ Browser storage is specific to the browser and origin, including the local port.
 On narrow screens, use Backpack/Stash tabs and the action buttons. Full decision/inspection views can scroll internally on small displays; the combat/inventory playfield stays within the viewport. Gameplay hints point to the relevant control with an arrow and highlight. They do not pause battles. Use **Menu → Settings → Gameplay hints** to hide them or **Settings → Show hints again** to replay them. Hint preferences are saved separately from your run.
 
 S only moves gear from backpack to stash. Hovering stash gear will not move another selected item, and a full stash preserves your selection. Shortcuts stay inactive while typing; S also ignores an active drag.
+
+R uses the item under your pointer first, then the selection. Rotation keeps the item selected and nudges it into nearby free cells when needed. You can also right-click or tap the selected tile’s ↻ control. During a drag, R rotates the preview; releasing over a valid space commits it, and Escape or an invalid drop restores the original placement. Dragging from stash shows the full equipment footprint.
+
+Active connections have coloured arrows above the tiles on desktop and mobile. Arrows point from the source to the item receiving the effect. Hover/select an item to highlight its connections; Full details explains each effect. Stash gear has no active connections.
 
 ## Architecture
 
@@ -93,6 +97,6 @@ npm run build
 
 Model tests cover all class loadouts and dungeon choices, inventory rules, exact seeded combat parity at 1×/2×/4×, scripted progression through all five dungeons, supplies/blessings, paid-roll recovery, merchant transactions and production-save isolation. Scripted victories exercise progression; they are not a new balance benchmark.
 
-Browser tests exercise actual mouse/touch dragging, discard cancellation, save/reload, purchases and refresh, route choices/maps, event offers, special services, paid enchanting, searchable references, sound controls and responsive views. Additional hint checks cover 140 context/viewport combinations, larger text, uninterrupted combat, remembered preferences, keyboard guards and returning from lab to campaign. Branch-only CI checks development and built output and publishes the downloadable preview artifact; it does not deploy over the live game.
+Browser tests exercise actual mouse/touch dragging, discard cancellation, save/reload, purchases and refresh, route choices/maps, event offers, special services, paid enchanting, searchable references, sound controls and responsive views. Additional hint checks cover 140 context/viewport combinations, larger text, uninterrupted combat, remembered preferences, keyboard guards and returning from lab to campaign. Rotation/link checks cover real rotated drags, atomic commit/cancel, blocked drops, hover/right-click/touch controls, stash footprints and directional markers across six sizes. Branch-only CI checks development and built output and publishes the downloadable preview artifact; it does not deploy over the live game.
 
 Realm of the Mad God artwork attribution remains in the shared catalogue. Private fan game.

@@ -1,7 +1,7 @@
 'use strict';
 // One simulation, two presentations. Campaign saves never use the production slot.
 const RealmModel={
- version:'0.4.0',mode:'lab',speed:1,paused:false,revision:0,accumulator:0,presentation:null,
+ version:'0.4.1',mode:'lab',speed:1,paused:false,revision:0,accumulator:0,presentation:null,
  saveKey:'realmpack-phaser-v1',restoring:false,inventoryMutation:false,
  classes:()=>Object.values(classes),dungeons:()=>Object.values(dungeonDefs),
  get state(){return s},get room(){return ROOMS[s.room]},get definitions(){return defs},
@@ -27,8 +27,8 @@ const RealmModel={
  },
  canPlace(id,x,y,rot=null){const i=this.item(id);if(!i||!this.canEdit)return false;const candidate={...i,rot:rot??i.rot},stack=stackAtCell(candidate,x,y);return !!(stack&&stackCount(stack)<STACK_LIMIT)||fits(candidate,x,y,candidate.rot)},
  move(id,x,y,rot=null){const i=this.item(id);if(!i)return false;return this.edit(()=>{inventoryPick(i);const ok=inventoryCommit(i,{x,y,rot:rot??i.rot});selected=ok?null:id;return ok})},
- stash(id){const i=this.item(id);if(!i||!s.items.includes(i))return false;return this.edit(()=>{const prior=selected;selected=id;const before=s.items.length;stashSelected();const moved=s.items.length<before;selected=moved?null:prior;return moved})},
- rotate(id){const i=this.item(id);if(!i||!this.canEdit)return false;const rot=!i.rot;if(s.stash.includes(i))return this.edit(()=>{i.rot=rot;return true});return this.move(id,i.x,i.y,rot)},
+ stash(id,rot=null){const i=this.item(id);if(!i||!s.items.includes(i))return false;return this.edit(()=>{const prior=selected;selected=id;const before=s.items.length;stashSelected();const moved=s.items.length<before;if(moved&&rot!==null)i.rot=!!rot;selected=moved?null:prior;return moved})},
+ rotate(id){const i=this.item(id);if(!i||!this.canEdit)return false;const rot=!i.rot;if(s.stash.includes(i))return this.edit(()=>{i.rot=rot;selected=id;return true});const [w,h]=dims({...i,rot}),anchor={x:Math.min(i.x,6-w),y:Math.min(i.y,5-h)},candidates=[];for(let y=0;y<=5-h;y++)for(let x=0;x<=6-w;x++){const distance=Math.abs(x-anchor.x)+Math.abs(y-anchor.y);if(distance<=2&&fits(i,x,y,rot))candidates.push({x,y,distance})}candidates.sort((a,b)=>a.distance-b.distance||a.y-b.y||a.x-b.x);if(!candidates.length)return false;return this.edit(()=>{const ok=inventoryCommit(i,{x:candidates[0].x,y:candidates[0].y,rot});selected=id;return ok})},
  discard(id){if(!this.item(id))return false;return this.edit(()=>{removeItem(id);return true})},
  start(){if(s.phase!=='prep'){if(this.mode==='campaign')restorePhaseModal();return false}this.persist();startFight();clearInterval(timer);timer=null;this.accumulator=0;this.revision++;return s.phase==='fight'},
  step(seconds){if(this.paused||s.phase!=='fight'||!Number.isFinite(seconds)||seconds<=0)return;this.accumulator+=Math.min(.25,seconds);while(this.accumulator>=.05&&s.phase==='fight'){this.accumulator-=.05;tick(.05*this.speed)}},
