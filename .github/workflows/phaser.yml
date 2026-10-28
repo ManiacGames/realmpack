@@ -6,9 +6,18 @@ on:
     paths: ['phaser/**', '.github/workflows/phaser.yml']
 permissions:
   contents: read
+concurrency:
+  group: phaser-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   prototype:
+    name: Check ${{ matrix.target }}
     runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [source, packaged]
     defaults:
       run:
         working-directory: phaser
@@ -22,14 +31,16 @@ jobs:
       - run: npm ci
       - run: npm run check
       - run: npm test
+      - run: npm run build
+        if: matrix.target == 'packaged'
+      - run: npm run test:launch
+        if: matrix.target == 'packaged'
       - run: npx playwright install --with-deps chromium
       - run: npm run test:browser
-      - run: npm run build
-      - run: npm run test:launch
-      - run: npm run test:browser
         env:
-          REALMPACK_BUILT: 1
+          REALMPACK_BUILT: ${{ matrix.target == 'packaged' && '1' || '' }}
       - uses: actions/upload-artifact@v4
+        if: matrix.target == 'packaged'
         with:
           name: realmpack-phaser-preview
           path: phaser/dist

@@ -1,4 +1,4 @@
-# RealmPack · Phaser 0.4.1
+# RealmPack · Phaser 0.5.0
 
 The Phaser branch now supports complete dungeon runs, using the same items, combat rules and balance as RealmPack 0.53.3. The live `main` game remains separate.
 
@@ -32,13 +32,14 @@ Open **http://127.0.0.1:4173/phaser/**. `npm run build` creates the portable pre
 - A desktop adventurer/run panel, artwork-led item inspection, rarity-tinted inventory tiles and matching shop/reward/event cards.
 - Specialist shops with class-weighted stock, one free refresh, purchases and healing. Loot and post-battle supplies remain explicit choices.
 - Noncombat encounters, item sales, sacrifices, supply restocking and enchanting, including locked modifiers and paid-roll Keep/Replace decisions.
-- Searchable item catalogue and bestiary with availability filters and full item/encounter information; a parchment route map and combat journal.
+- Searchable item catalogue and bestiary with availability filters and full item/encounter information; an ink-and-parchment route map with clear connections, a room-name readout, map key and landscape orientation.
+- Themed event dioramas, compact offer/trade layouts and a fixed action footer. Continue stays prominent; Inventory is a secondary utility.
 - Optional contextual hints with arrows/highlights, remembered dismissals and a Menu option to replay them.
 - Adventure, Settings and Save & backup menu tabs, keyboard tab navigation and desktop Map/Items/Bestiary shortcuts.
 - Sound effects with saved master/interface/combat volume and mute, effects-quality settings and larger text.
 - Independent campaign autosaves plus JSON export/import backups. Combat lab remains available in Menu for isolated single-encounter tests.
 
-**Manage backpack** closes a decision view without skipping it. You can arrange gear, then press the main Continue button to return to that reward, shop or event. Pending paid enchantment rolls must be kept or replaced before inventory editing is allowed.
+**Inventory** closes a decision view without skipping it. You can arrange gear, then press the main Continue button to return to that reward, shop or event. Pending paid enchantment rolls must be kept or replaced before inventory editing is allowed.
 
 ## Saves and recovery
 
@@ -97,6 +98,6 @@ npm run build
 
 Model tests cover all class loadouts and dungeon choices, inventory rules, exact seeded combat parity at 1×/2×/4×, scripted progression through all five dungeons, supplies/blessings, paid-roll recovery, merchant transactions and production-save isolation. Scripted victories exercise progression; they are not a new balance benchmark.
 
-Browser tests exercise actual mouse/touch dragging, discard cancellation, save/reload, purchases and refresh, route choices/maps, event offers, special services, paid enchanting, searchable references, sound controls and responsive views. Additional hint checks cover 140 context/viewport combinations, larger text, uninterrupted combat, remembered preferences, keyboard guards and returning from lab to campaign. Rotation/link checks cover real rotated drags, atomic commit/cancel, blocked drops, hover/right-click/touch controls, stash footprints and directional markers across six sizes. Branch-only CI checks development and built output and publishes the downloadable preview artifact; it does not deploy over the live game.
+Browser tests exercise actual mouse/touch dragging, discard cancellation, save/reload, purchases and refresh, route choices/maps, event offers, special services, paid enchanting, searchable references, sound controls and responsive views. Additional hint checks cover 140 context/viewport combinations, larger text, uninterrupted combat, remembered preferences, keyboard guards and returning from lab to campaign. Rotation/link checks cover real rotated drags, atomic commit/cancel, blocked drops, hover/right-click/touch controls, stash footprints and directional markers across six sizes. Branch-only CI checks development and built output in separate parallel jobs and publishes the downloadable preview artifact; it does not deploy over the live game.
 
 Realm of the Mad God artwork attribution remains in the shared catalogue. Private fan game.

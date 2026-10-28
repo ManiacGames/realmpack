@@ -1,5 +1,13 @@
 # Phaser changelog
 
+## 0.5.0 — 2026-10-29
+
+- Reworked the run map as aged parchment with ink trails, faint terrain, a compass, clearer markers and larger labels. Highlighted connections stay distinct without hiding the rest of the map.
+- Added a full room-name readout and a compact map key. Short landscape layouts run eastward; other layouts ascend north. Route choices and reachability are unchanged.
+- Made Continue and other progression actions prominent in a fixed footer. Inventory is a smaller secondary control; resolved encounters show one clear Continue action.
+- Restored the existing themed event dioramas and improved offer cards, selectors, trade previews and paid-enchantment action placement.
+- Checked map geometry, non-overlapping labels, live route choices, event actions, larger text and desktop/phone layouts alongside the campaign, inventory and save checks.
+
 ## 0.4.1 — 2026-10-28
 
 - Fixed item links being hidden behind tiles and absent on compact layouts. Active connections now use coloured directional arrows above the items; hover or selection highlights connected gear. Inspection distinguishes active links from possible bonuses.
