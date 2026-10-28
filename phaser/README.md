@@ -1,10 +1,18 @@
-# RealmPack · Phaser prototype 0.1.0
+# RealmPack · Phaser 0.2.0
 
-This is the first playable migration slice on the **phaser** branch, based on RealmPack 0.53.3. The original `game/` release and production GitHub Pages deployment remain separate.
+The Phaser branch now supports complete dungeon runs, using the same items, combat rules and balance as RealmPack 0.53.3. The live `main` game remains separate.
 
-## Run it
+## Easiest way to play
 
-Install Node.js 24, download or clone the **phaser** branch, then run these commands from the repository root:
+Download **realmpack-phaser-preview** from the latest successful **Check Phaser prototype** run in GitHub Actions. Extract the entire ZIP, then on Windows double-click **START-REALMPACK.bat**. The launcher starts a local server in the correct directory and opens the game in your browser. Keep that window open while playing; Ctrl+C stops it.
+
+The launcher needs **Python 3 or Node.js**. On other systems, run `python3 launch.py` or `node launch.cjs` from the extracted folder. Close an older preview server first if you want to keep using the same browser save origin. The launcher selects another free port if necessary.
+
+Do not double-click `phaser/index.html`: the game loads textures over HTTP. Keep the extracted `game` and `phaser` directories together. The ZIP includes everything required by the game; it does not use a Phaser CDN.
+
+## Develop from source
+
+Install Node.js 24, download or clone the **phaser** branch, then run from the repository root:
 
 ```sh
 cd phaser
@@ -12,53 +20,60 @@ npm ci
 npm run dev
 ```
 
-Open **http://127.0.0.1:4173/phaser/**. Keep the terminal running. Opening the HTML file directly is unsupported because Phaser loads textures over HTTP.
+Open **http://127.0.0.1:4173/phaser/**. `npm run build` creates the portable preview in `phaser/dist`, including the launchers and engine license.
 
-For a portable static build, run `npm run build`. Serve the resulting `phaser/dist` folder using any static HTTP server. It contains the engine, shared simulation files, sprites and font; no CDN is required. Keep the `game` and `phaser` folders together inside that output.
+## Playable features
 
-Every push to this branch runs **Check Phaser prototype** in GitHub Actions. A successful run includes a downloadable **realmpack-phaser-preview** artifact containing that static build. It does not publish over the live game.
+- All 19 classes, the existing difficulty settings, normal dungeon runs and Sandbox equipment/encounter tools.
+- Five dungeons with eight rooms each, connected route choices, dungeon portals, bosses, permanent blessings, victory/defeat and endless continuation.
+- The 6×5 backpack, nine-slot stash, consumable stacks, drag placement/stacking, rotation, inspection, upgrade targeting, confirmed discard and a drag-to-discard area in the stash.
+- Automatic combat at 1×, 2× and 4× with the original UT/ST, enchantment, adjacency, consumable and class rules.
+- Dungeon-themed battle floors, health/mana/block readouts, enemy/player effect indicators and restrained hit feedback.
+- Specialist shops with class-weighted stock, one free refresh, purchases and healing. Loot and post-battle supplies remain explicit choices.
+- Noncombat encounters, item sales, sacrifices, supply restocking and enchanting, including locked modifiers and paid-roll Keep/Replace decisions.
+- Searchable item catalogue and bestiary with availability filters and full item/encounter information; a parchment route map and combat journal.
+- Sound effects with saved master/interface/combat volume and mute, effects-quality settings and larger text.
+- Independent campaign autosaves plus JSON export/import backups. Combat lab remains available in Menu for isolated single-encounter tests.
 
-## What is playable
+**Manage backpack** closes a decision view without skipping it. You can arrange gear, then press the main Continue button to return to that reward, shop or event. Pending paid enchantment rolls must be kept or replaced before inventory editing is allowed.
 
-- Original pixel artwork, font and green/gold visual palette, rendered using Phaser 3.90.0.
-- All 19 class loadouts and 35 dungeon choices, using a real generated opening combat encounter.
-- The 6×5 backpack, nine-slot stash, shared placement rules, rotation, matching consumable stacks, selection and confirmed discard.
-- Mouse/touch dragging, a placement preview, return on an invalid drop, item inspection and full details. Narrow screens use Backpack/Stash tabs and action buttons.
-- Automatic battles at 1×, 2× and 4×, health/mana/block information, item cooldown bars, hit flashes and victory/defeat screens.
-- One real item reward after victory, followed by another bout against the same encounter. Retry restores health and resets combat effects so this can serve as an inventory/combat test lab.
+## Saves and recovery
 
-**This is a combat lab, not the full campaign.** Routes, portals between dungeons, shops, events, catalogue/bestiary screens, sound controls and campaign save migration are not implemented in the Phaser interface yet. Generated combat supply rewards and normal room advancement are not offered by this first prototype. The original simulation still applies item effects and class passives; some effects do not yet have dedicated visual indicators.
+Dungeon runs use **`realmpack-phaser-v1`**, separate from the live game's `realmpack-v4` slot. They autosave between actions, including route choices, shop stock, pending supplies and paid enchantment rolls. An interrupted battle restarts from the last saved preparation state; this is not an exact mid-frame combat resume.
 
-This version deliberately does not load or save runs. It never reads or writes the production `realmpack-v4` slot. Shared visual-quality preferences may be read by the legacy modules.
+Use **Menu → Export run** to keep a portable JSON backup. Import asks before replacing the current Phaser run. Existing version-4 RealmPack run JSON objects are also accepted when they pass the save validation; this is an explicit import, not an automatic read of the production slot.
+
+Browser storage is specific to the browser and origin, including the local port. Export/import lets you move a run between browsers, machines or ports. Combat lab sessions do not overwrite a saved campaign.
 
 ## Controls
 
 | Action | Control |
 | --- | --- |
 | Select / deselect | Click an item again |
-| Inspect | Hover or select; Full details button / **F** |
-| Move / stack | Drag to the backpack or stash |
-| Rotate selected item | **R** / Rotate button |
-| Move selected backpack item to stash | **S** / Stash button |
-| Discard selected item | **D**, then confirm |
-| Cancel selection / open menu | **Esc** |
-| Pause battle | Open Menu or item details |
+| Inspect / full details | Hover or select, then **F** / Full details |
+| Move / stack | Drag to a free backpack space, matching stack or stash |
+| Rotate selected gear | **R** / Rotate |
+| Stash selected backpack gear | **S** / Stash |
+| Discard selected gear | **D** / Discard; confirmation required |
+| Item catalogue / bestiary | **I** / **E** |
+| Cancel selection / menu / close view | **Esc** |
+| Pause battle | Open Menu, inspection or a reference view |
 
-Menu lets you choose a class and dungeon for a fresh test. Starting a new test is disabled during combat. After winning or losing, prepare another bout first. Letter shortcuts ignore typing fields and modifier keys.
+On narrow screens, use Backpack/Stash tabs and the action buttons. Full decision/inspection views can scroll internally on small displays; the combat/inventory playfield stays within the viewport. The earlier guided arrow tutorial is not migrated; How to play and contextual inspection remain available.
 
-## Structure and migration boundary
+## Architecture
 
-`core-files.json` lists the existing simulation modules. The prototype loads them in their established dependency order with `window.__TEST__ = true`. That existing headless mode suppresses the legacy DOM renderer, boot and modal system. `src/model.js` disables the old save function, exposes a small adapter and immediately clears the original combat interval after a fight starts. Phaser then advances combat in fixed 50ms steps using the original `tick` implementation. No second copy of damage, cooldown, item, class or adjacency formulas is maintained.
+`core-files.json` lists the original simulation modules in dependency order. Their existing headless mode suppresses the old DOM renderer, boot and timer-driven presentation. `src/model.js` provides an adapter, captures decision views and owns the independent save slot. Phaser advances the original `tick` implementation in fixed 50ms steps; no second damage/cooldown/balance system is maintained.
 
-- `src/model.js`: simulation adapter and inventory commands.
-- `src/scene.js`: sprite atlas frames, canvas inventory, pointer handling, stable HUD nodes and restrained visual feedback.
-- `src/app.js`: launch, accessible HTML toolbar/dialogs, shortcuts, results and pause behavior.
-- `scripts/serve.cjs`: local development/static-build server.
-- `scripts/build.cjs`: reproducible self-contained static output, including Phaser's license.
+- `src/scene.js`: Phaser arena, sprite frames, themed floors, effects, inventory input, cooldown bars and item inspection.
+- `src/model.js`: campaign/lab lifecycle, inventory commands, save validation and simulation/view adapter.
+- `src/campaign-ui.js`: accessible native dialogs for the existing campaign choices and reference templates.
+- `src/app.js`: launch, settings, shortcuts, pause behavior, audio and import/export.
+- `scripts/`: local server and portable build; `launch/`: preview launchers.
 
-The headless flag is a temporary migration bridge. A later step should extract a proper renderer-independent simulation module and replace this flag with an explicit presentation interface. Native HTML controls/dialogs are intentionally retained for accessible keyboard controls; the arena and inventory are actual Phaser game objects.
+The arena and inventories are Phaser game objects. Decision screens deliberately reuse the original templates inside accessible HTML dialogs. Further migration can replace those templates or extract the headless simulation boundary without changing balance. This release does not claim that every interface has been rewritten as a canvas scene or that busy late-run performance is already benchmarked.
 
-## Checks
+## Verification
 
 ```sh
 npm run check
@@ -68,15 +83,10 @@ npm run test:browser
 npm run build
 ```
 
-Use `REALMPACK_CHROME=/path/to/chrome` to select an existing Chromium executable. `REALMPACK_BUILT=1` makes the browser check serve the built output instead of development files. Browser tests start and stop their own local server.
+`REALMPACK_CHROME=/path/to/chrome` selects an existing Chromium executable. `REALMPACK_BUILT=1` runs browser tests against the packaged output. Tests start and stop their own local servers.
 
-Model checks cover every class and dungeon, collision/stack rules, stash capacity, battle locks, rewards and retries, exact seeded state parity with the original simulation at all three speeds, and production save isolation. Browser checks exercise real Phaser pointer drags in both directions, stable hover nodes, inspection and cancellation, combat pause/results, desktop/phone/landscape bounds and class/dungeon selection. Passing these checks does not establish that Phaser is faster; profiling busy late-run loadouts is a later milestone.
+Model tests cover all class loadouts and dungeon choices, inventory rules, exact seeded combat parity at 1×/2×/4×, scripted progression through all five dungeons, supplies/blessings, paid-roll recovery, merchant transactions and production-save isolation. Scripted victories exercise progression; they are not a new balance benchmark.
 
-## Next migration steps
+Browser tests exercise actual mouse/touch dragging, discard cancellation, save/reload, purchases and refresh, route choices/maps, event offers, special services, paid enchanting, searchable references, sound controls and responsive views. Branch-only CI checks development and built output and publishes the downloadable preview artifact; it does not deploy over the live game.
 
-1. Add saved-state fixtures with busy UT/ST loadouts and compare frame times with the original renderer.
-2. Extract the simulation boundary, preserving seeded parity and original save compatibility.
-3. Port route choice, rewards/supplies, shops, events and the item/bestiary reference views.
-4. Add independent prototype saves, save migration, sound and the remaining combat indicators.
-
-Realm of the Mad God artwork attribution remains in the shared catalogue. This is a private fan prototype.
+Realm of the Mad God artwork attribution remains in the shared catalogue. Private fan game.
