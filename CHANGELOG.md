@@ -1,5 +1,10 @@
 # RealmPack changelog
 
+## 0.53.3 — 2026-10-28
+
+- Removed Dev notes from the top bar and run menu, along with its unused panel and assets.
+- Checked JavaScript, core game regressions and responsive menu layouts.
+
 ## 0.53.2 — 2026-10-28
 
 - Added distinct pixel-style sound effects for inventory placement, stacking, loot, purchases and sales, enchanting, travel, combat hits, blocking, healing, mana gains, victory and defeat. Buttons have a soft click; hovering stays silent.

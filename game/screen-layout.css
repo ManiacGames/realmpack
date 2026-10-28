@@ -69,3 +69,6 @@ body .arena .player-inspect-trigger:focus-visible{outline:2px solid #c6cfae;outl
 /* One class section at a time, on desktop as well as touch screens. */
 .class-preview-tabs{display:flex;gap:6px;float:right}
 .class-preview[data-section=overview] .class-passive,.class-preview[data-section=passive] .class-overview{display:none}
+
+@media(max-width:1100px){.topright>button{display:none!important}.topright>button[onclick="showRunMap()"],.topright>.screen-menu-button{display:block!important}}
+@media(max-width:550px){.topright>button[onclick="showRunMap()"]{display:none!important}}
