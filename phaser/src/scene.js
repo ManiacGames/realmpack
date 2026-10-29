@@ -71,8 +71,8 @@ class RealmScene extends Phaser.Scene{
    node.statMarkers=RealmStatMarkers.values(d).map(stat=>{const icon=this.add.image(0,0,'stat-'+stat.kind).setOrigin(0),number=this.add.text(0,0,stat.text,{fontFamily:'ChronoType',fontSize:14,color:'#fff6df',stroke:'#161c20',strokeThickness:3}).setOrigin(.5);node.add([icon,number]);return {...stat,icon,number}});
    node.cooldown=this.add.rectangle(1,height-4,width-2,3,0xa4c4c9).setOrigin(0).setVisible(!stashed);node.add(node.cooldown);
    node.setSize(width,height).setInteractive(new Phaser.Geom.Rectangle(width/2,height/2,width,height),Phaser.Geom.Rectangle.Contains);this.input.setDraggable(node,RealmModel.canEdit);
-   node.on('pointerover',()=>{if(this.dragging||document.querySelector('dialog[open]'))return;this.hovered=item.id;const stats=RealmStatMarkers.summary(d);if(stats)window.realmNotice(stats);this.inspect(item.id);this.paintSelection()});
-   node.on('pointerout',()=>{if(this.hovered===item.id){this.hovered=null;this.paintSelection()}});
+   node.on('pointerover',()=>{if(this.dragging||document.querySelector('dialog[open]'))return;this.hovered=item.id;const stats=RealmStatMarkers.summary(d);if(stats)window.realmNotice(stats);this.inspect(item.id);this.paintSelection();window.RealmGuide?.refresh()});
+   node.on('pointerout',()=>{if(this.hovered===item.id){this.hovered=null;this.paintSelection();window.RealmGuide?.refresh()}});
    node.on('pointerup',pointer=>{if(pointer.rightButtonReleased()){requestRealmRotate(item.id);return}if(this.ignoreClick||this.dragging)return;RealmModel.select(item.id);this.inspect(item.id);this.paintSelection();window.updateRealmControls()});
    this.sizeItemNode(node,width,height);this.itemNodes.set(item.id,node);
   }
