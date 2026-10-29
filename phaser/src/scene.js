@@ -49,7 +49,7 @@ class RealmScene extends Phaser.Scene{
   this.text(bx,cy-35,c.name,18,'#eee1c3',bw);this.phpBack=this.rect(bx,barY,bw,24,0x11191b,0x768476);this.php=this.rect(bx+1,barY+1,bw-2,22,0x7eae45,0);this.phpLabel=this.text(bx+4,barY+1,'',18,'#fff3db');
   this.mpBack=this.rect(bx,cy+18,bw,12,0x11191b,0x506b82);this.mp=this.rect(bx+1,cy+19,bw-2,10,0x5e9acb,0);this.blockBar=this.rect(bx,cy+32,bw,3,0xd7b464,0);
   const ebx=this.landscape?bx:ex+portrait/2+12,eby=this.landscape?cy+90:cy,ebw=Math.max(24,this.landscape?bw:a.x+a.w-ebx-16);
-  this.enemyLabel=this.text(ebx,eby-35,room.enemy,17,'#eee1c3',ebw);this.enemyLabel.setMaxLines(1);this.ehpBack=this.rect(ebx,eby-13,ebw,24,0x11191b,0x987267);this.ehp=this.rect(ebx+1,eby-12,ebw-2,22,0xb2584e,0);this.ehpLabel=this.text(ebx+4,eby-12,'',18,'#fff3db');this.ehpBack.setVisible(this.isCombatRoom);this.ehp.setVisible(this.isCombatRoom);
+  this.enemyLabel=this.text(ebx,eby-(this.landscape?26:35),room.enemy,this.landscape?15:17,'#eee1c3',ebw);this.enemyLabel.setMaxLines(1);if(this.landscape)this.enemyLabel.setFontSize(15);this.ehpBack=this.rect(ebx,eby-13,ebw,24,0x11191b,0x987267);this.ehp=this.rect(ebx+1,eby-12,ebw-2,22,0xb2584e,0);this.ehpLabel=this.text(ebx+4,eby-12,'',18,'#fff3db');this.ehpBack.setVisible(this.isCombatRoom);this.ehp.setVisible(this.isCombatRoom);
   this.drawStatusIcons(this.landscape?a.x+12:a.x+12,this.landscape?a.x+12:a.x+a.w/2+8,this.landscape?cy+40:a.y+126,this.landscape?a.w-24:(a.w-24)/2);
   this.resources=this.text(a.x+12,a.y+a.h-20,'',16,'#d7cfac',a.w-24);
  }
