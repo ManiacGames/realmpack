@@ -1,5 +1,12 @@
 # Phaser changelog
 
+## 0.5.3 — 2026-10-29
+
+- Rebuilt the campaign death screen with a black field, red frame, large red title, centred portrait and orange depth record inspired by RotMG. Run statistics remain visible; an expandable final loadout adds item context.
+- Added dungeon and final-battle duration details, with a centred new-adventurer action.
+- Bundled the RotMG death cue with existing master/combat volume and mute controls; synthesized fallback remains available if decoding fails.
+- Checked six desktop/phone/landscape layouts, expanded loadouts, restart flow, audio decoding, mute controls, shared combat parity and portable launchers.
+
 ## 0.5.2 — 2026-10-29
 
 - Enlarged backpack and stash grids to use available desktop space. Item artwork, labels and numbered stat icons scale with the larger tiles; the stash still holds nine stacks.

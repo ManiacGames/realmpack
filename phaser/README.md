@@ -1,4 +1,4 @@
-# RealmPack · Phaser 0.5.2
+# RealmPack · Phaser 0.5.3
 
 The Phaser branch now supports complete dungeon runs, using the same items, combat rules and balance as RealmPack 0.53.3. The live `main` game remains separate.
 

@@ -10,6 +10,7 @@ window.onRealmPresentation=function(view){
  campaignContent.innerHTML=view.body;
  const actions=document.getElementById('campaign-actions');actions.replaceChildren();
  const footer=campaignContent.querySelector('.shop-footer,.loot-footer,.loot-inspect-footer,.reference-pagination,.event-footer,.enchant-footer,.class-selection-footer,.catalogue-item-footer');if(footer)actions.append(footer);
+ if(view.kind==='defeat'){const next=campaignContent.querySelector('.defeat-continue');if(next){next.classList.add('realm-primary');actions.append(next)}const extra=document.createElement('details');extra.className='death-extra';extra.innerHTML='<summary>Final loadout · '+s.items.length+' items</summary><div class=death-loadout>'+s.items.map(i=>'<div>'+spriteMarkup(defs[i.type].sprite,defs[i.type].name)+'<span>'+esc(defs[i.type].name)+'</span></div>').join('')+'</div>';campaignContent.append(extra);const facts=document.createElement('p');facts.className='death-location';facts.textContent=(ROOMS[s.room].dungeonName||dungeonDefs[ROOMS[s.room].dungeonId]?.name||ROOMS[s.room].name)+' · Final battle '+s.time.toFixed(1)+'s';campaignContent.querySelector('.defeat-progress')?.after(facts)}
  normalizeRealmActions(view.kind,actions);if(view.kind==='runmap')window.RealmAtlas?.decorate();
  campaignDialog.dataset.mapEmpty=String(view.kind==='runmap'&&!campaignContent.querySelector('.map-canvas'));
  campaignDialog.dataset.choiceCount=campaignContent.querySelectorAll('.event-choice').length;
