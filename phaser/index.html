@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RealmPack · Phaser edition</title><link rel="icon" href="../game/assets/vault-chest-unlocker.png"><link rel="stylesheet" href="../game/event-art.css?v=0.5.4"><link rel="stylesheet" href="style.css?v=0.5.4"><link rel="stylesheet" href="campaign.css?v=0.5.4"><link rel="stylesheet" href="map.css?v=0.5.4"></head>
+<body>
+<header><div class="brand"><img src="../game/assets/vault-chest-unlocker.png" alt="">RealmPack <small>PHASER 0.5.4 ⚡⚡</small></div><nav class="quick-links" aria-label="Reference shortcuts"><button id="quick-map" title="Run map">Map</button><button id="quick-items" title="Item catalogue · I">Items <kbd>I</kbd></button><button id="quick-enemies" title="Encounter bestiary · E">Bestiary <kbd>E</kbd></button></nav><nav aria-label="Run controls"><button id="speed">1×</button><button id="menu">Menu</button></nav></header>
+<main id="game" aria-label="RealmPack combat and inventory canvas"></main>
+<footer><span id="notice" role="status">Your descent awaits.</span><span id="run-progress"></span><span class="desktop-hints">Drag · R / right-click rotate · S stash · F details</span></footer>
+<div class="mobile-tabs" role="tablist" aria-label="Inventory view"><button data-view="pack" role="tab" aria-selected="true">Backpack</button><button data-view="stash" role="tab" aria-selected="false">Stash</button></div>
+<section class="run-actions" aria-label="Inventory and progression controls"><div class="item-actions" aria-label="Selected item actions"><button id="rotate" title="Rotate selected item; R also rotates hovered gear or the drag preview">Rotate · R</button><button id="stash-item">Stash · S</button><button id="details">Full details · F</button><button id="discard">Discard · D</button></div><button id="fight">Begin battle</button></section>
+<dialog id="settings" aria-labelledby="settings-title"><p class="menu-eyebrow">REALMPACK · THE SHATTERED VAULT</p><h1 id="settings-title">Run menu</h1>
+<div class="menu-tabs" role="tablist" aria-label="Menu section"><button id="tab-run" role="tab" data-menu-tab="run" aria-controls="menu-run" aria-selected="true">Adventure</button><button id="tab-options" role="tab" data-menu-tab="options" aria-controls="menu-options" aria-selected="false" tabindex="-1">Settings</button><button id="tab-saves" role="tab" data-menu-tab="saves" aria-controls="menu-saves" aria-selected="false" tabindex="-1">Save &amp; backup</button></div>
+<section id="menu-run" role="tabpanel" aria-labelledby="tab-run"><div class="realm-menu-links"><button id="map-button">Run map</button><button id="catalogue-button">Item catalogue · I</button><button id="bestiary-button">Encounter bestiary · E</button><button id="info-button">Class &amp; encounter</button><button id="journal-button">Combat journal</button><button id="help-button">How to play</button></div><div class="menu-inset"><label>Game mode<select id="game-mode"><option value="campaign">Dungeon run</option><option value="lab">Combat lab</option></select></label><div id="lab-settings"><label>Class<select id="class-choice"></select></label><label>Dungeon<select id="dungeon-choice"></select></label></div><div class="dialog-actions"><button id="resume-run" hidden>Resume saved dungeon run</button><button id="new-run">Choose adventurer</button></div></div></section>
+<section id="menu-options" role="tabpanel" aria-labelledby="tab-options" hidden><div class="realm-menu-links"><button id="sound-button">Sound effects &amp; volume</button><button id="text-button">Larger text</button><button id="hints-button" aria-pressed="true">Gameplay hints: On</button><button id="hints-reset">Show hints again</button></div><label>Effects quality<select id="quality-choice"></select></label></section>
+<section id="menu-saves" role="tabpanel" aria-labelledby="tab-saves" hidden><p id="save-status"></p><div class="menu-inset"><p>Keep a backup or move your run to another browser.</p><div class="dialog-actions"><button id="export-run">Export run</button><button id="import-run">Import run</button><input type="file" id="import-file" accept="application/json,.json" hidden></div></div></section>
+<div class="dialog-actions menu-return"><button data-close>Return to game · Esc</button></div></dialog>
+<dialog id="campaign-dialog" aria-labelledby="campaign-title"><div class="campaign-heading"><div><h1 id="campaign-title"></h1><p id="campaign-description"></p><span id="campaign-wallet"></span></div><button id="campaign-close" aria-label="Close this view">✕</button></div><div id="campaign-content"></div><div class="campaign-footer"><button id="campaign-pack" title="Arrange your gear without advancing this encounter">Inventory</button><div id="campaign-actions"></div></div></dialog>
+<dialog id="item-details" aria-labelledby="item-title"><h1 id="item-title">Item details</h1><div id="item-copy"></div><button data-close>Close</button></dialog>
+<dialog id="discard-confirm" aria-labelledby="discard-title"><h1 id="discard-title">Discard this item?</h1><p id="discard-copy"></p><div class="dialog-actions"><button data-close>Keep item</button><button id="confirm-discard">Discard</button></div></dialog>
+<dialog id="result" aria-labelledby="result-title"><h1 id="result-title"></h1><p id="result-copy"></p><div id="loot"></div><button id="retry">Prepare another bout</button></dialog>
+<div id="load-error" role="alert" hidden></div>
+<script>window.__TEST__=true;</script>
+<script src="../game/sprites.js"></script>
+<script src="../game/sprites-runtime.js"></script>
+<script src="../game/catalogue.js"></script>
+<script src="../game/item-balance.js"></script>
+<script src="../game/realm-specials.js"></script>
+<script src="../game/dagger-update.js"></script>
+<script src="../game/sword-update.js"></script>
+<script src="../game/staff-update.js"></script>
+<script src="../game/wand-update.js"></script>
+<script src="../game/katana-update.js"></script>
+<script src="../game/ring-update.js"></script>
+<script src="../game/armor-update.js"></script>
+<script src="../game/ability-update.js"></script>
+<script src="../game/encounters.js"></script>
+<script src="../game/mechanics-runtime.js"></script>
+<script src="../game/enchantments-runtime.js"></script>
+<script src="../game/events-runtime.js"></script>
+<script src="../game/map-runtime.js"></script>
+<script src="../game/inventory-controls.js"></script>
+<script src="../game/item-effects.js"></script>
+<script src="../game/adjacency-runtime.js"></script>
+<script src="../game/stacks-runtime.js"></script>
+<script src="../game/consumables-runtime.js"></script>
+<script src="../game/event-art.js"></script>
+<script src="../game/event-trades.js"></script>
+<script src="../game/dungeon-difficulty.js"></script>
+<script src="../game/battle-floors.js"></script>
+<script src="../game/class-runtime.js"></script>
+<script src="../game/shop-specialists.js"></script>
+<script src="../game/game.js"></script>
+<script src="../game/enemy-status.js"></script><script src="../game/sound-effects.js"></script><script src="src/death-audio.js?v=0.5.4"></script><script src="src/model.js?v=0.5.4"></script><script src="vendor/phaser.min.js"></script><script src="src/stat-markers.js?v=0.5.4"></script><script src="src/scene.js?v=0.5.4"></script><script src="src/campaign-ui.js?v=0.5.4"></script><script src="src/map-ui.js?v=0.5.4"></script><script src="src/guides.js?v=0.5.4"></script><script src="src/app.js?v=0.5.4"></script>
+</body></html>

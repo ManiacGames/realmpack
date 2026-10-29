@@ -12,7 +12,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -23,19 +24,37 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+          cache: npm
+          cache-dependency-path: phaser/package-lock.json
       - name: Check release notes
         env:
           GITHUB_EVENT_BEFORE: ${{ github.event.before }}
         run: node scripts/check-changelog.cjs
-      - name: Check JavaScript and game behavior
+      - name: Check shared simulation
         run: |
           for file in game/*.js; do node --check "$file"; done
           for test in game/tests/test-*.cjs; do node "$test"; done
+      - name: Install Phaser dependencies
+        run: npm ci --prefix phaser
+      - name: Check and build Phaser
+        run: |
+          npm run check --prefix phaser
+          npm test --prefix phaser
+          npm run build --prefix phaser
+          npm run test:launch --prefix phaser
+      - name: Install browser
+        run: cd phaser && npx playwright install --with-deps chromium
+      - name: Verify packaged game and Pages paths
+        env:
+          REALMPACK_BUILT: '1'
+        run: |
+          npm run test:browser --prefix phaser
+          node phaser/tests/pages-browser.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages-${{ github.run_attempt }}
-          path: game
+          path: phaser/dist
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4

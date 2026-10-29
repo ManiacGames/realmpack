@@ -1,0 +1,5 @@
+'use strict';
+const http=require('node:http'),fs=require('node:fs'),path=require('node:path');
+const built=process.argv.includes('--built'),root=path.resolve(__dirname,built?'../dist':'../..'),arg=process.argv.find(a=>a.startsWith('--port=')),port=Number(arg?.split('=')[1]||4173);
+const types={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.otf':'font/otf'};
+http.createServer((req,res)=>{let file;try{const route=decodeURIComponent(new URL(req.url,'http://localhost').pathname);file=!built&&route==='/phaser/vendor/phaser.min.js'?path.join(root,'phaser/node_modules/phaser/dist/phaser.min.js'):path.resolve(root,'.'+(route==='/'?'/phaser/index.html':route.endsWith('/')?route+'index.html':route));if(!file.startsWith(root+path.sep))throw Error();const data=fs.readFileSync(file);res.writeHead(200,{'Content-Type':types[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(data)}catch{res.writeHead(404);res.end('Not found')}}).listen(port,'127.0.0.1',()=>console.log(`RealmPack Phaser: http://127.0.0.1:${port}/phaser/`));

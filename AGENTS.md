@@ -2,10 +2,18 @@
 
 Repository: ManiacGames/realmpack. Production is GitHub Pages at https://maniacgames.github.io/realmpack/.
 
+## Production presentation
+
+GitHub Pages now serves the Phaser edition. Edit presentation in `phaser/`; the Pages workflow builds and publishes `phaser/dist`. The shared simulation and classic renderer remain in `game/`, and the classic game is available at `/realmpack/game/`. Keep Phaser and classic save slots separate.
+
+For Phaser UI/gameplay releases, increment the version in `phaser/package.json`, lockfile, model, HTML cache keys and launcher test; update `phaser/CHANGELOG.md` in the same commit. Run Phaser syntax/model/campaign checks, the relevant browser regressions, the build and launcher checks. Production deployment must run the packaged browser suite and `phaser/tests/pages-browser.cjs`. Preserve `.github/workflows/pages.yml` when promoting changes from the Phaser development branch. Update the root changelog for deployment changes or shared simulation changes.
+
+The detailed game/ requirements below apply when changing shared simulation or classic files.
+
 ## Every game update
 
 - Before taking baselines in a resumed session, verify the local source matches the current GitHub main build. Sync stale restored checkouts first, preserving intentional local work; do not build a new release on an older snapshot.
-- Edit the individual source files in `game/`; the root ZIP is a legacy backup and is not deployed.
+- Edit the individual shared/classic source files in `game/` when changing those systems; Phaser presentation belongs in `phaser/`. The root ZIP is a legacy backup and is not deployed.
 - In the same commit as every change to `game/`, update root `CHANGELOG.md` with the release version, Europe/Helsinki date, and concise user-facing changes. Keep the newest release first. Record validation and material limitations accurately. Do not claim browser verification if only automated checks ran. Omit routine browser-layout verification disclaimers from the changelog; describe the checks actually performed.
 - Increment the experimental build version and script/style cache query strings in `game/index.html`. Keep `game/CHANGELOG.txt` consistent with the current release notes.
 - Run JavaScript syntax checks and `node game/tests/test-stacks-adjacency.cjs`. For artwork, events, or encounter changes, also run `node game/tests/test-event-art.cjs`.

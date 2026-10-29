@@ -1,5 +1,12 @@
 # RealmPack changelog
 
+## Phaser 0.5.4 web launch — 2026-10-29
+
+- Made the tested Phaser edition the default game at https://maniacgames.github.io/realmpack/.
+- Pages now builds and validates the complete Phaser package before deployment, including the engine, shared assets and a check of project-relative URLs.
+- Preserved classic 0.53.3 at /realmpack/game/ and on branch classic-0.53.3-before-phaser. Phaser and classic saves remain separate; local Phaser runs can be moved with Menu → Save & backup → Export/Import.
+- Phaser gameplay changes are recorded in phaser/CHANGELOG.md.
+
 ## 0.53.3 — 2026-10-28
 
 - Removed Dev notes from the top bar and run menu, along with its unused panel and assets.

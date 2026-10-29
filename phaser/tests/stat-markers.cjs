@@ -1,0 +1,17 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
+const ctx={window:{}};vm.createContext(ctx);vm.runInContext(fs.readFileSync(path.join(__dirname,'../src/stat-markers.js'),'utf8'),ctx);const markers=ctx.window.RealmStatMarkers;
+const values=d=>JSON.parse(JSON.stringify(markers.values(d)));
+assert.equal(values({effect:'block',amount:14})[0].text,'14');
+assert.equal(values({effect:'support',ringAttribute:'defense',amount:13})[0].text,'+13%');
+assert.equal(values({effect:'support',ringAttribute:'health',amount:12})[0].text,'+12');
+assert.equal(values({effect:'haste',amount:.8})[0].text,'0.8s');
+assert.deepEqual(values({effect:'damage',amount:12,affix:'heal',affixAmount:3}).map(v=>v.kind),['damage','heal']);
+assert.equal(values({effect:'damage',amount:20,affix:'block',affixAmount:9,mechanic:{keepAffix:false}}).length,1,'Suppressed recipe affixes stay hidden');
+assert.equal(values({effect:'damage',amount:20,mechanic:{shots:3}})[0].value,20,'Shared projectile budgets must not be multiplied');
+assert.equal(values({effect:'consumable',amount:1,consumableRework:true,consumable:{mode:'upgrade'}}).length,0,'Upgrade potions must not appear to heal or deal damage');
+assert.equal(values({effect:'heal',amount:25,consumableRework:true,consumable:{mode:'supply'}})[0].value,25);
+assert.equal(values({effect:'support',amount:10}).length,0,'Unknown passive mechanics must not invent a stat');
+assert.equal(values({effect:'damage',amount:NaN}).length,0);
+const recipe={effect:'damage',amount:9,affix:'poison',affixAmount:2},before=JSON.stringify(recipe);markers.values(recipe);assert.equal(JSON.stringify(recipe),before);
+console.log('PASS: base stat units, support percentages, fractional seconds, affix gating, projectile budgets, consumable semantics and pure reads');
