@@ -1,5 +1,12 @@
 # Phaser changelog
 
+## 0.5.1 — 2026-10-29
+
+- Added numbered, colour-coded icons to backpack and stash items: crossed swords for damage, grey shields for block, hearts for healing, blue crystals for mana and distinct shapes for status effects.
+- Markers show base recipe amounts. Support rings use percentages or maximum-resource bonuses, and timed effects show seconds. Suppressed affixes and noncombat consumables do not display misleading combat values.
+- Markers move and rotate with items, retain stack counts and adjacency arrows, and reuse cached objects during combat. Added a short icon explanation to How to play and a base-value readout on hover.
+- Checked stat semantics, desktop/phone layouts, rotation, stable HUD objects, shared combat parity and portable launchers.
+
 ## 0.5.0 — 2026-10-29
 
 - Reworked the run map as aged parchment with ink trails, faint terrain, a compass, clearer markers and larger labels. Highlighted connections stay distinct without hiding the rest of the map.

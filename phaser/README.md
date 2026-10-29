@@ -1,4 +1,4 @@
-# RealmPack · Phaser 0.5.0
+# RealmPack · Phaser 0.5.1
 
 The Phaser branch now supports complete dungeon runs, using the same items, combat rules and balance as RealmPack 0.53.3. The live `main` game remains separate.
 
@@ -23,6 +23,8 @@ npm run dev
 Open **http://127.0.0.1:4173/phaser/**. `npm run build` creates the portable preview in `phaser/dist`, including the launchers and engine license.
 
 ## Playable features
+
+Item tiles show numbered base-stat icons: crossed swords for damage, grey shields for block, hearts for healing and blue crystals for mana. Status icons use their own colours and shapes; percentages and seconds are marked explicitly. Hover for the base-value readout; F opens special effects and modifiers.
 
 - All 19 classes, the existing difficulty settings, normal dungeon runs and Sandbox equipment/encounter tools.
 - Five dungeons with eight rooms each, connected route choices, dungeon portals, bosses, permanent blessings, victory/defeat and endless continuation.
