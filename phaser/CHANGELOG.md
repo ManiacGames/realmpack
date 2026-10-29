@@ -5,6 +5,8 @@
 - Enlarged the combat panel and health numbers. Desktop now has a readable mana bar and separate block readout; gold and battle time sit in the encounter header.
 - Added larger effect icons with readable counts, seconds, names on desktop and contrasting backgrounds. Active effects pack into rows without overlapping the health/resource displays.
 - Improved compact health bars and status icons, including long-number fitting and larger-text layouts. The backpack continues to fit the available height without page scrolling.
+- Scaled the rotation handle on small tiles so it cannot cover the central drag area; very small tiles retain toolbar and keyboard rotation.
+- Restored inventory input immediately when native dialogs close, so quick follow-up drags are accepted.
 - Checked crowded effect rows, resource accuracy, responsive and larger-text layouts, cached HUD updates and shared simulation behavior.
 
 ## 0.5.4 — 2026-10-29
