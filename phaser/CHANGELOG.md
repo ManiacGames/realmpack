@@ -1,5 +1,11 @@
 # Phaser changelog
 
+## 0.5.2 — 2026-10-29
+
+- Enlarged backpack and stash grids to use available desktop space. Item artwork, labels and numbered stat icons scale with the larger tiles; the stash still holds nine stacks.
+- Moved Begin battle, Visit shop and other progression actions to a prominent fixed bottom bar beside the inventory controls. Phones use a full-width action below the item controls.
+- Checked nine viewport sizes, inventory bounds, stash access, real shop progression, combat locking, rotation, dragging, adjacency links and portable builds.
+
 ## 0.5.1 — 2026-10-29
 
 - Added numbered, colour-coded icons to backpack and stash items: crossed swords for damage, grey shields for block, hearts for healing, blue crystals for mana and distinct shapes for status effects.

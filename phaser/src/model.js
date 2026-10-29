@@ -1,7 +1,7 @@
 'use strict';
 // One simulation, two presentations. Campaign saves never use the production slot.
 const RealmModel={
- version:'0.5.1',mode:'lab',speed:1,paused:false,revision:0,accumulator:0,presentation:null,
+ version:'0.5.2',mode:'lab',speed:1,paused:false,revision:0,accumulator:0,presentation:null,
  saveKey:'realmpack-phaser-v1',restoring:false,inventoryMutation:false,
  classes:()=>Object.values(classes),dungeons:()=>Object.values(dungeonDefs),
  get state(){return s},get room(){return ROOMS[s.room]},get definitions(){return defs},
