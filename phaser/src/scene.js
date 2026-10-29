@@ -33,7 +33,7 @@ class RealmScene extends Phaser.Scene{
   if(!this.compact){const x=this.stash.x-17;this.rect(x,this.pack.y-30,1,this.pack.cell*5+30,0x6c755a,0);this.drawSidebar();this.drawRunCard()}
   else if(!this.landscape)this.drawCompactInspection();
   this.drawTrash();this.buildItems();this.layoutLinks=RealmModel.links();this.rotateHandle=this.add.text(0,0,'↻',{fontFamily:'Arial',fontSize:22,color:'#ffe4a0',backgroundColor:'#273c45',padding:{x:4,y:0}}).setVisible(false).setInteractive({useHandCursor:true});this.hudLayer.add(this.rotateHandle);this.rotateHandle.on('pointerup',(pointer,x,y,event)=>{event.stopPropagation();requestRealmRotate(RealmModel.selected)});this.preview=this.rect(0,0,1,1,0xb7ce86,0xb7ce86,this.hudLayer).setAlpha(0).setDepth(10);
-  this.lastRevision=RealmModel.revision;this.lastPhase=RealmModel.state.phase;this.paintHud();this.paintSelection();this.paintInspection();window.RealmGuide?.refresh();
+  this.lastRevision=RealmModel.revision;this.lastPhase=RealmModel.state.phase;this.paintHud();this.paintSelection();this.paintInspection();window.placeRealmAdvance?.();window.RealmGuide?.refresh();
  }
  drawBoard(board,title,cols,rows){const {x,y,cell}=board;this.panel(x-7,y-33,cols*cell+14,rows*cell+40,title,0x2a2823);for(let row=0;row<rows;row++)for(let col=0;col<cols;col++){const px=x+col*cell+2,py=y+row*cell+2;this.rect(px,py,cell-4,cell-4,0x171e20,0x3d4341);this.rect(px+2,py+2,3,3,0x616052,0)}}
  drawArena(){

@@ -1,6 +1,6 @@
 {
   "name": "realmpack-phaser",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "private": true,
   "description": "Isolated Phaser migration prototype for RealmPack",
   "scripts": {

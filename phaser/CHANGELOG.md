@@ -1,5 +1,12 @@
 # Phaser changelog
 
+## 0.5.4 — 2026-10-29
+
+- Moved Finish rewards to the encounter-supplies footer beside Inventory, with the progression action aligned to the bottom right.
+- Placed the main progression button beneath the stash when there is enough desktop space. Smaller layouts retain the bottom action bar.
+- Prevented clicks on native controls and open dialogs from activating the canvas behind them.
+- Checked responsive placement, supplies with and without pending items, live reward completion and shop/combat actions.
+
 ## 0.5.3 — 2026-10-29
 
 - Rebuilt the campaign death screen with a black field, red frame, large red title, centred portrait and orange depth record inspired by RotMG. Run statistics remain visible; an expandable final loadout adds item context.

@@ -27,8 +27,8 @@ window.onRealmPresentation=function(view){
 };
 window.onRealmDismiss=function(){if(campaignDialog.open)campaignDialog.close();window.syncRealmPause?.();window.updateRealmControls?.()};
 function normalizeRealmActions(kind,actions){
- const plainAdvance=/^(continueEvent|leaveShop|leaveSupplies|closeRunMap|continueRun|retryRun)\(/;
- for(const button of [...campaignContent.querySelectorAll(':scope>button')]){const code=button.getAttribute('onclick')||'';if(plainAdvance.test(code))actions.append(button)}
+ const plainAdvance=/^(continueEvent|continueRewardSupplies|leaveShop|leaveSupplies|closeRunMap|continueRun|retryRun)\(/;
+ for(const button of [...campaignContent.querySelectorAll(':scope>button')]){const code=button.getAttribute('onclick')||'';if(plainAdvance.test(code)||kind==='supplies'&&code==='showRewards()')actions.append(button)}
  for(const button of actions.querySelectorAll('button')){const code=button.getAttribute('onclick')||'',advance=plainAdvance.test(code)||code.startsWith('takeLoot(null)')||code.startsWith('commitRuneforge(')||code.startsWith('decideEnchant(true')||kind==='trade'&&s.activeEvent?.id==='merchant'&&code.startsWith("resolveEvent('leave')");button.classList.toggle('realm-primary',advance);if(code.startsWith("resolveEvent('leave')")&&!advance)button.classList.add('realm-decline')}
  if(kind==='enchanter'&&s.activeEvent?.enchantLockedItem&&!s.activeEvent.pendingEnchant){const leave=actions.querySelector('button[onclick="resolveEvent(\'leave\')"]');if(leave){leave.textContent='Continue ↗';leave.classList.add('realm-primary')}}
  for(const card of campaignContent.querySelectorAll('.event-choice')){const choice=card.querySelector('.event-choice-actions .gold');if(choice)choice.classList.add('realm-primary')}

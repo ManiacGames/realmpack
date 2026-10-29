@@ -1,4 +1,4 @@
-# RealmPack · Phaser 0.5.3
+# RealmPack · Phaser 0.5.4
 
 The Phaser branch now supports complete dungeon runs, using the same items, combat rules and balance as RealmPack 0.53.3. The live `main` game remains separate.
 
@@ -24,7 +24,7 @@ Open **http://127.0.0.1:4173/phaser/**. `npm run build` creates the portable pre
 
 ## Playable features
 
-Backpack and stash grids grow with desktop space. The main progression button is in the bottom action bar, with a full-width action on phones.
+Backpack and stash grids grow with desktop space. The main progression button sits below the stash when desktop space permits, and stays in the bottom action bar on smaller screens.
 
 Item tiles show numbered base-stat icons: crossed swords for damage, grey shields for block, hearts for healing and blue crystals for mana. Status icons use their own colours and shapes; percentages and seconds are marked explicitly. Hover for the base-value readout; F opens special effects and modifiers.
 
