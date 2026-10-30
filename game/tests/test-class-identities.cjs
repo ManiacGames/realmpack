@@ -1,6 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict'),crypto=require('node:crypto'),{ctx,vm}=require('./load-game.cjs');
-assert.equal(crypto.createHash('sha256').update(vm.runInContext('JSON.stringify(DATA.items)',ctx)).digest('hex'),'86024c6d274b86f418d53c1ccefbfb9d89cde514be5dd4da132a5fdedcdfad7e','Item definitions changed');
+assert.equal(crypto.createHash('sha256').update(vm.runInContext('JSON.stringify(DATA.items)',ctx)).digest('hex'),'3a4975b141c25b784b885767394702242cb7af9572486e69e6136a8a6c0eb57e','Item definitions changed');
 console.log(vm.runInContext(`(()=>{
  const check=(v,m)=>{if(!v)throw Error(m)},near=(a,b)=>Math.abs(a-b)<1e-7;
  log=()=>{};enemyProfiles=()=>[];

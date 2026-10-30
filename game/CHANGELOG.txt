@@ -4,7 +4,7 @@
 
 - Scepter of Fulmination and Storm Caller now apply 3 seconds of chill alongside their damage, matching their RotMG slow identity.
 - Scepter of Rust now applies 4 seconds of weaken. Shiny variants inherit the same conditions; repeated casts refresh duration instead of stacking seconds.
-- Preserved damage, mana costs, cooldowns and equipment stats. Updated item descriptions and researched identity notes.
+- Preserved damage, mana costs, cooldowns and equipment stats. Updated item descriptions and researched identity notes; verified that only the five intended normal/Shiny definitions changed.
 - Checked real casts and Shiny variants, duration refresh/decay, attack slowing and weaken damage, all ability identities, a 24-fight seeded comparison, and Phaser effect/details presentation.
 
 ## 0.53.4 — 2026-10-30
