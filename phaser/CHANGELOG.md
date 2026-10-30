@@ -1,5 +1,10 @@
 # Phaser changelog
 
+## 0.5.7 — 2026-10-30
+
+- Added enemy attack damage, attack interval and base DPS beneath the enemy health bar, including compact layouts. Values follow the current enemy and boss phase.
+- Base DPS describes the regular attack before modifiers; special attacks, ailments and defenses can change actual damage taken.
+
 ## 0.5.6 — 2026-10-30
 
 - Increased the shiny upgrade chance to 1/10 (10%) for eligible normal, elite and boss rewards.
