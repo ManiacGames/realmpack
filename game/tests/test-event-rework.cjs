@@ -1,7 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict'),crypto=require('node:crypto'),{ctx,vm}=require('./load-game.cjs');
 ctx.document={addEventListener(){}};
-assert.equal(crypto.createHash('sha256').update(vm.runInContext('JSON.stringify(DATA.items)',ctx)).digest('hex'),'3a4975b141c25b784b885767394702242cb7af9572486e69e6136a8a6c0eb57e','Item definitions changed');
+assert.equal(crypto.createHash('sha256').update(vm.runInContext('JSON.stringify(DATA.items)',ctx)).digest('hex'),'95d316cee3a377efbfd1633fe40da65b2b9626981315069a2f5d923ac356d81d','Item definitions changed');
 console.log(vm.runInContext(`(()=>{
 const check=(v,m)=>{if(!v)throw Error(m)};log=()=>{};
 function setup(id,act=0,mode='normal',classId='wizard'){

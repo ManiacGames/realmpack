@@ -1,5 +1,13 @@
 # RealmPack changelog
 
+## 0.53.6 — 2026-10-30
+
+- Mirror Cloak now grants dodge and a non-attacking decoy, with a brief penalty to your weapon damage. Grotesque Scepter's powerful lightning briefly slows your own recharge instead of chilling the enemy.
+- NSFWakizashi now exposes both sides and has no direct-damage primary.
+- Daybreak Chakram gains a brief Armored window before its throw. Star of Enlightenment grants haste only to adjacent weapons before its heavier throw. Both use paid automatic wind-ups; matching reskins and the shiny star inherit the reworks.
+- Added player drawback icons/timers and clear item descriptions. Duplicate effects refresh rather than multiply, and throws cancel when their source leaves the pack or the wave ends.
+- Checked real casts, self-targeting, costs, expiry, duplicate caps, interrupted throws, 1×/2×/4× timing, responsive item details and crowded effect rows. All 1,995 native tiered-build results remain unchanged.
+
 ## 0.53.5 — 2026-10-30
 
 - Scepter of Fulmination and Storm Caller now apply 3 seconds of chill alongside their damage, matching their RotMG slow identity.

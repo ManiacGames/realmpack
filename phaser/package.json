@@ -1,6 +1,6 @@
 {
   "name": "realmpack-phaser",
-  "version": "0.5.8",
+  "version": "0.5.9",
   "private": true,
   "description": "Isolated Phaser migration prototype for RealmPack",
   "scripts": {
@@ -9,7 +9,7 @@
     "check": "node --check src/death-audio.js && node --check src/stat-markers.js && node --check src/model.js && node --check src/scene.js && node --check src/app.js && node --check src/campaign-ui.js && node --check src/guides.js && node --check src/map-ui.js",
     "test": "node tests/stat-markers.cjs && node tests/model.cjs && node tests/campaign.cjs",
     "test:launch": "node tests/launch.cjs",
-    "test:browser": "node tests/combat-hud-browser.cjs && node tests/death-browser.cjs && node tests/inventory-layout-browser.cjs && node tests/browser.cjs && node tests/campaign-browser.cjs && node tests/guides-browser.cjs && node tests/ui-browser.cjs && node tests/stat-markers-browser.cjs && node tests/rotation-links-browser.cjs && node tests/map-events-browser.cjs"
+    "test:browser": "node tests/ability-tradeoffs-browser.cjs && node tests/combat-hud-browser.cjs && node tests/death-browser.cjs && node tests/inventory-layout-browser.cjs && node tests/browser.cjs && node tests/campaign-browser.cjs && node tests/guides-browser.cjs && node tests/ui-browser.cjs && node tests/stat-markers-browser.cjs && node tests/rotation-links-browser.cjs && node tests/map-events-browser.cjs"
   },
   "dependencies": {"phaser": "3.90.0"},
   "devDependencies": {"playwright": "1.56.1"}

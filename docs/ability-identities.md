@@ -10,6 +10,24 @@ Sources rechecked: [Fulmination](https://realm.wiki/item?id=3120), [Storm Caller
 
 Validation: the targeted `test-scepter-conditions.cjs` checks real casts, mana failure, damage, Shiny inheritance, nonstacking refresh, timer decay, enemy attack pacing, weaken mitigation and encounter reset. The existing all-ability test preserves all 176 tiered abilities and other item definitions. In the existing seeded `benchmark-abilities.cjs` fixture (four bosses × two gear levels × three scepters), wins changed from 7/24 to 11/24: Fulmination 2→3/8, Storm Caller 2→3/8, Rust 3→5/8. This small fixed comparison measures restored utility, not player win probabilities; damage/cooldown/mana budgets were retained.
 
+## Five ability identity reworks — 30 October 2026
+
+These replace the earlier profiles for the items below. Source behavior is recorded in the linked raw-data pages and `ability-source-facts.json`; the numbers below are RealmPack translations.
+
+| Item | RealmPack behavior |
+| --- | --- |
+| [Mirror Cloak](https://realm.wiki/item?id=23335) | 1 dodge, non-attacking 3s decoy and up to 0.35s enemy delay; your weapons deal 10% less damage for 3s. 2 mana / 8.07s. One decoy per family, shared 3s distraction lock and existing delay/summon caps. |
+| [Grotesque Scepter](https://realm.wiki/item?id=3005) | 36 lightning damage; your packed items recharge 20% slower for 1s. 2 mana / 3.58s. No enemy chill or Hex from its self-inflicted conditions. |
+| [NSFWakizashi](https://realm.wiki/item?id=23357) | 3s exposure on the enemy; you take 10% more direct damage for 3s. No direct-damage primary. 1 mana / 4.81s. Existing class/enchantment triggers remain. |
+| [Daybreak Chakram](https://realm.wiki/item?id=7768) / Enchanted Chisel | Armored for 1.5s (20% reduction), then a 30-damage throw after 0.75s. 2 mana / 4.5s. |
+| [Star of Enlightenment](https://realm.wiki/item?id=1421) / Eternal Star | Adjacent weapons gain 2s haste (+25% recharge), then a 36-damage throw after 0.75s. 3 mana / 5.2s. Shiny: 38 damage / 4.94s, same mana and support. |
+
+**Self-effect safeguards:** player penalties have an explicit self target, a source item, expiry and family. Weak affects all your packed weapons, not only neighbors. Grotesque's penalty affects your packed item recharge. Effects refresh to the greater remaining duration; the strongest active penalty applies, never duplicate sums. Self exposure shares the 15% equipment direct-damage risk cap. Removing the source clears eligibility immediately; battle setup clears records. Expired records are pruned. A defensive decoy never deals companion damage, even with enchantments, class bonuses or adjacency.
+
+**Wind-ups:** these are automatic cast-and-release cycles, not held-key controls. Mana is paid once at cast start, support starts immediately, and the throw lands 0.75s later. Each source has at most one pending throw. Impact does not fire a second ability activation/class proc. Removing/stashing a source or ending its wave cancels the pending throw; battle reset clears packed and stashed pending records. Source attack/mana scaling is translated to the existing bounded pack budgets, not continuous RotMG mana drain.
+
+**Haste:** edge-adjacent weapons only; no self, ability, diagonal or stash recipients. It uses the existing nonstacking 25% item-haste channel and expiry. The visible link arrows use the same recipient rule.
+
 ## Balance and translation
 
 These are RealmPack adaptations, not a simulation of RotMG movement, targeting, aim, player statistics or multiple enemies. T7 is the family reference. Source damage/healing ratios are bounded before conversion; secondary effects and equipment stats reduce the primary budget or lengthen cooldowns. Mana rises for expensive source casts and utility-heavy kits. A UT/ST is a different build choice, not a guaranteed upgrade over the tiered ability.
@@ -55,7 +73,7 @@ The primary below is the actual game recipe, including retained custom recipes. 
 | cloak | [Hydroflow Cloak / wiki_54896](https://realm.wiki/item?id=54896) | 1 dodge | 6.6s | 1 | ; conditional weapon |
 | cloak | [Legacy Ghastly Drape / wiki_8610](https://realm.wiki/item?id=8610) | 1 dodge | 8.07s | 1 | buff speed |
 | cloak | [Legion Elite Cloak / wiki_41824](https://realm.wiki/item?id=41824) | 1 dodge | 6.6s | 1 | ; conditional weapon |
-| cloak | [Mirror Cloak / wiki_23335](https://realm.wiki/item?id=23335) | 1 dodge | 8.07s | 1 | status weaken; pet ; conditional weapon |
+| cloak | [Mirror Cloak / wiki_23335](https://realm.wiki/item?id=23335) | 1 dodge | 8.07s | 2 | Gain 1 dodge and a 3s decoy. Your weapons deal 10% less damage for 3s. |
 | cloak | [Spectre Cloak / wiki_5359](https://realm.wiki/item?id=5359) | 1 dodge | 6.6s | 1 | ; conditional hit |
 | cloak | [Vampiric Cape / wiki_17881](https://realm.wiki/item?id=17881) | 1 dodge | 8s | 2 | Existing custom signature retained |
 | quiver | [Archerang / wiki_23337](https://realm.wiki/item?id=23337) | 11 damage | 3.72s | 0 | status chill |
@@ -312,7 +330,7 @@ The primary below is the actual game recipe, including retained custom recipes. 
 | scepter | [+Tezutsu Hanabi / wiki_19322](https://realm.wiki/item?id=19322) | 17 damage | 4.18s | 2 | ; conditional ability |
 | scepter | [Cnidaria Rod / wiki_2556](https://realm.wiki/item?id=2556) | 17 damage | 4.18s | 2 |  |
 | scepter | [Eggsponential Scepter / wiki_41739](https://realm.wiki/item?id=41739) | 17 damage | 4.18s | 2 |  |
-| scepter | [Grotesque Scepter / wiki_3005](https://realm.wiki/item?id=3005) | 36 damage | 3.58s | 2 | hex ; status chill |
+| scepter | [Grotesque Scepter / wiki_3005](https://realm.wiki/item?id=3005) | 36 damage | 3.58s | 2 | Deal 36 damage. Your items recharge 20% slower for 1s. |
 | scepter | [Honey Scepter / wiki_310](https://realm.wiki/item?id=310) | 18 damage | 4.18s | 2 |  |
 | scepter | [Honey Scepter Supreme / wiki_23354](https://realm.wiki/item?id=23354) | 18 damage | 4.18s | 2 |  |
 | scepter | [Hydroflow Scepter / wiki_54910](https://realm.wiki/item?id=54910) | 29 damage | 4.18s | 2 |  |
@@ -334,9 +352,9 @@ The primary below is the actual game recipe, including retained custom recipes. 
 | shuriken | [Clover Star / wiki_29718](https://realm.wiki/item?id=29718) | 13 damage | 3.26s | 0 |  |
 | shuriken | [Combcutter Kunai / wiki_55414](https://realm.wiki/item?id=55414) | 13 damage | 3.26s | 0 | ; conditional weapon |
 | shuriken | [Crystalline Kunai / wiki_19262](https://realm.wiki/item?id=19262) | 19 damage | 3.26s | 0 | ; conditional hurt |
-| shuriken | [Daybreak Chakram / wiki_7768](https://realm.wiki/item?id=7768) | 22 damage | 3.26s | 0 |  |
-| shuriken | [Enchanted Chisel / wiki_52040](https://realm.wiki/item?id=52040) | 22 damage | 3.26s | 0 |  |
-| shuriken | [Eternal Star / wiki_34336](https://realm.wiki/item?id=34336) | 24 damage | 3.26s | 0 |  |
+| shuriken | [Daybreak Chakram / wiki_7768](https://realm.wiki/item?id=7768) | 30 damage | 4.5s | 2 | Release 30 damage after 0.75s. Gain Armored for 1.5s (20% less incoming damage). |
+| shuriken | [Enchanted Chisel / wiki_52040](https://realm.wiki/item?id=52040) | 30 damage | 4.5s | 2 | Release 30 damage after 0.75s. Gain Armored for 1.5s (20% less incoming damage). |
+| shuriken | [Eternal Star / wiki_34336](https://realm.wiki/item?id=34336) | 36 damage | 5.2s | 3 | Release 36 damage after 0.75s. Haste adjacent weapons for 2s (+25% recharge). |
 | shuriken | [Hanagasaku / wiki_19354](https://realm.wiki/item?id=19354) | 22 damage | 3.26s | 1 |  |
 | shuriken | [Hydroflow Star / wiki_54911](https://realm.wiki/item?id=54911) | 19 damage | 3.26s | 0 |  |
 | shuriken | [Igneous Starblossom / wiki_55409](https://realm.wiki/item?id=55409) | 22 damage | 3.26s | 1 |  |
@@ -349,7 +367,7 @@ The primary below is the actual game recipe, including retained custom recipes. 
 | shuriken | [Overwhelming Axehead / wiki_23915](https://realm.wiki/item?id=23915) | 26 damage | 3.37s | 1 | mana heal; conditional weapon |
 | shuriken | [Rage Claws / wiki_19291](https://realm.wiki/item?id=19291) | 23 damage | 3.26s | 1 | ; conditional ability |
 | shuriken | [Spider Shuriken / wiki_14149](https://realm.wiki/item?id=14149) | 13 damage | 3.26s | 0 | status chill |
-| shuriken | [Star of Enlightenment / wiki_1421](https://realm.wiki/item?id=1421) | 24 damage | 3.26s | 0 |  |
+| shuriken | [Star of Enlightenment / wiki_1421](https://realm.wiki/item?id=1421) | 36 damage | 5.2s | 3 | Release 36 damage after 0.75s. Haste adjacent weapons for 2s (+25% recharge). |
 | shuriken | [Storied Blades / wiki_26277](https://realm.wiki/item?id=26277) | 13 damage | 3.26s | 0 | ; conditional weapon |
 | shuriken | [Testiken / wiki_39338](https://realm.wiki/item?id=39338) | 25 damage | 3.26s | 0 |  |
 | shuriken | [Testiken ATT / wiki_39339](https://realm.wiki/item?id=39339) | 29 damage | 3.26s | 0 |  |
@@ -365,7 +383,7 @@ The primary below is the actual game recipe, including retained custom recipes. 
 | wakizashi | [Hydroflow Wakizashi / wiki_54913](https://realm.wiki/item?id=54913) | 21 damage | 4.65s | 1 | status vulnerable |
 | wakizashi | [Kogbold Multitool / wiki_50307](https://realm.wiki/item?id=50307) | 28 damage | 4.81s | 1 | buff dexterity; status vulnerable |
 | wakizashi | [Legion Elite Wakizashi / wiki_41841](https://realm.wiki/item?id=41841) | 21 damage | 4.65s | 1 | status vulnerable |
-| wakizashi | [NSFWakizashi / wiki_23357](https://realm.wiki/item?id=23357) | 22 damage | 4.81s | 1 | status vulnerable |
+| wakizashi | [NSFWakizashi / wiki_23357](https://realm.wiki/item?id=23357) | 3 vulnerable | 4.81s | 1 | Expose enemy for 3s; you take 10% more direct damage for 3s. No direct damage. |
 | wakizashi | [Peppermint Wakizashi / wiki_613](https://realm.wiki/item?id=613) | 21 damage | 4.65s | 1 | status vulnerable |
 | wakizashi | [Ronin's Wakizashi / wiki_1407](https://realm.wiki/item?id=1407) | 22 damage | 4.65s | 1 | status chill |
 | wakizashi | [Ryu's Blade / wiki_3900](https://realm.wiki/item?id=3900) | 22 damage | 4.65s | 1 | status vulnerable |

@@ -1,5 +1,5 @@
 'use strict';
-function grantsItemHaste(d){return d.mechanic?.key==='realmvampire'&&realmPackedSlot('vampire',0)||d.effect==='haste'||!!d.mechanic?.localHaste||d.affix==='haste'&&(!d.mechanic||d.mechanic.keepAffix)}
+function grantsItemHaste(d){return d.mechanic?.abilityProfile?.actions?.some(a=>a.kind==='weaponHaste')||d.mechanic?.key==='realmvampire'&&realmPackedSlot('vampire',0)||d.effect==='haste'||!!d.mechanic?.localHaste||d.affix==='haste'&&(!d.mechanic||d.mechanic.keepAffix)}
 function itemHasHaste(i){return s.haste>0||(i.hasteRemaining||0)>0}
 function grantItemHaste(source,duration){if(!source||!s.items.includes(source)||s.phase!=='fight')return;const seconds=Math.max(0,Math.min(15,Number(duration)||0));if(!seconds)return;for(const target of nearbyItems(source)){target.hasteRemaining=Math.max(target.hasteRemaining||0,seconds);itemFxPulse(target,'cooldown','↑')}}
 

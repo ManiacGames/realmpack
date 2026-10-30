@@ -80,3 +80,9 @@ Each battle now resets mana to 10 plus 1 per 5 capacity above 50, capped at 10 a
 0.48.0 adds separate RealmPack novelty utilities after successful activations; base recipes and modifier budgets remain unchanged. See vanity-quirks.md for scope and validation.
 
 0.49.0: new runs spread reward/dust stages across five eight-room dungeons (0/0/1/1/2); old saved runs retain historical progression. Every dungeon keeps an Enchanter before its boss. Paid previews and modifier values are unchanged. See dungeon-balance.md.
+
+### Ability wind-ups and trade-offs (0.53.6)
+
+Ninja wind-up throws pay mana and execute activation enchantments once at cast start. Their delayed impact does not trigger a second ability activation. NSFWakizashi has an exposure primary rather than direct damage; separately equipped activation enchantments and class hooks still operate. Player penalties remain source-owned and expire; the same shared output/risk caps apply.
+
+Validation: the preserved seeded enchantment fixture has 2,280 identical before/after rows across 1×/2×/4×. New ability tests separately cover delayed releases, one-time payment, player penalties and speed equivalence.

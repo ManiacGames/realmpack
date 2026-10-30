@@ -65,3 +65,9 @@ Guard fractions, companion fractions and primary carry reset at battle start, no
 ## Validation
 
 See [adjacency balance](adjacency-balance.md) and `adjacency-benchmark.json`. Tests protect the full item-definition hash and cover all twelve obtainable thematic pairs, geometry and stacks, fractional output, mana and guard budgets, owned companions and shared caps, DEX/Wisdom recipient restrictions, active passive-ring cycles, inspection, resets and saved state. Browser checks cover responsive details/catalogue layouts, live capped summaries, stationary hover and combat presentation parity.
+
+### Enlightenment weapon haste (0.53.6)
+
+Star of Enlightenment, its Shiny copy and Eternal Star grant the existing +25% item haste for 2s to edge-adjacent weapons only. No self, ability, diagonal or stash recipients. Effects refresh rather than adding speed or duration. Link arrows filter to the same recipients. Player trade-off penalties from Mirror/Grotesque/NSF affect the wearer as stated; they are not adjacency auras.
+
+Validation: the preserved seeded adjacency fixture has 516 identical before/after rows across 1×/2×/4×. Focused tests verify Enlightenment's edge-only weapon recipients and matching link arrows, excluding abilities, diagonals and stash.

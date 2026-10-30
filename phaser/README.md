@@ -1,4 +1,4 @@
-# RealmPack · Phaser 0.5.8
+# RealmPack · Phaser 0.5.9
 
 The Phaser edition is the live game at https://maniacgames.github.io/realmpack/, using the same shared item and combat simulation as classic RealmPack 0.53.3. Production is built from `main`; `phaser` remains the development branch.
 

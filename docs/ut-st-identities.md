@@ -185,3 +185,7 @@ The [adjacency rework](adjacency.md) adds thematic pairings and source-owned sum
 ### Scepter condition correction — 0.53.5 / Phaser 0.5.8
 
 Fulmination and Storm Caller retain their lightning damage and add 3s chill; Rust adds 4s weaken. Shiny variants inherit these effects. See [ability identities](ability-identities.md#scepter-condition-correction--30-october-2026) for sources and refresh rules.
+
+### Player trade-offs and ninja throws — 0.53.6 / Phaser 0.5.9
+
+Mirror Cloak, Grotesque Scepter and NSFWakizashi now retain their self-inflicted drawbacks. Daybreak/Chisel and Enlightenment/Eternal Star use paid automatic wind-ups with source-specific defensive or adjacent-weapon support. See [ability identities](ability-identities.md#five-ability-identity-reworks--30-october-2026) for exact numbers, source links and safeguards. These supersede the previous ability entries.

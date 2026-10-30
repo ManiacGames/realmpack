@@ -35,3 +35,21 @@ Do not rank kinds against each other from this table: they use different native 
 Validation also includes all 559 variants in combat/inspection tests; 31 regression suites; syntax checks; 2,248 desktop/phone views covering all ability details/catalogue entries and offer layouts; and live 4× mixed ability combat with charge, counters, healing, companion limits and no page scroll. Small follow-up penalty fixes were re-run on the affected six item profiles (48 fights) and merged into the final comparison.
 
 Full per-item totals: `ability-benchmark-results.json`. Reproduce with `node scripts/benchmark-abilities.cjs --output /path/to/results.json`; use `--root` for the previous checkout and `--ids` for a comma-separated list of changed item IDs. The class fixture remains `node scripts/benchmark-balance.cjs`.
+
+## Five identity corrections — 0.53.6 / Phaser 0.5.9
+
+Compared against commit a4011c795baf6e6d6c18756d5a5583b47e0cd65c with the existing seeded benchmark assumptions preserved. The all-class native tiered fixture (`benchmark-balance.cjs`, 19 classes × 35 bosses × 3 variants) has **1,995 identical result rows** after the rework.
+
+The targeted `benchmark-abilities.cjs` comparison uses four bosses × two native gear levels per item, with no optimized partners or enchantments:
+
+| Item | Wins before → after (8 fights each) |
+| --- | --- |
+| Mirror Cloak | 4 → 4 |
+| Grotesque Scepter | 6 → 4 |
+| NSFWakizashi | 6 → 4 |
+| Daybreak Chakram | 6 → 6 |
+| Star of Enlightenment | 6 → 6 |
+
+Total 28/40 → 24/40. This is a small comparative fixture, not player win probabilities. Grotesque and NSF intentionally lose benefits produced by incorrectly targeted self-effects; neither received a compensating generic damage buff. The two ninja throws retain their fixture outcomes while gaining paid utility and wind-up delivery.
+
+The seeded enchantment and adjacency comparisons were also run before/after at 1×/2×/4×: all 2,280 enchantment rows and all 516 adjacency rows are identical. A focused test verifies speed-equivalent combat results for each reworked ability, including the new penalties and wind-ups. Source and packaged Phaser browser checks cover 25 item-details layouts, 14 crowded-effect/text-size layouts and nine inventory/progression layouts.

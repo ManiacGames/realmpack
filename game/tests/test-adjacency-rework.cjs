@@ -1,6 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict'),crypto=require('node:crypto'),{ctx,vm}=require('./load-game.cjs');
-assert.equal(crypto.createHash('sha256').update(vm.runInContext('JSON.stringify(DATA.items)',ctx)).digest('hex'),'3a4975b141c25b784b885767394702242cb7af9572486e69e6136a8a6c0eb57e','All item definitions must remain unchanged');
+assert.equal(crypto.createHash('sha256').update(vm.runInContext('JSON.stringify(DATA.items)',ctx)).digest('hex'),'95d316cee3a377efbfd1633fe40da65b2b9626981315069a2f5d923ac356d81d','All item definitions must remain unchanged');
 console.log(vm.runInContext(`(()=>{const check=(v,m)=>{if(!v)throw Error(m)},near=(a,b)=>Math.abs(a-b)<1e-7;log=()=>{};passive=()=>{};classActivation=()=>{};enemyProfiles=()=>[];
 function fresh(){freshRun('knight',true);s.seed=123456;s.portalChoices=[ENCOUNTERS.dungeons[0].id];selectPortal(s.portalChoices[0]);s.items=[];s.stash=[];s.phase='fight';s.max=10000;s.hp=100;s.mana=0;s.enemy.hp=s.enemy.max=100000;s.enemy.ward=s.enemy.veil=0;s.enemy.cd=10000}
 function def(id,extra={}){defs[id]={id,name:id,kind:'sword',group:'weapon',effect:'damage',amount:100,cd:4,mana:0,w:1,h:1,classes:['knight'],condition:'none',...extra};return id}

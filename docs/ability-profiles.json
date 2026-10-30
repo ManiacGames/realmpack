@@ -1074,51 +1074,35 @@
     "flat": {},
     "actions": [
       {
-        "kind": "status",
-        "effect": "weaken",
-        "amount": 3
+        "kind": "selfPenalty",
+        "target": "self",
+        "effect": "weak",
+        "amount": 10,
+        "duration": 3
       },
       {
-        "kind": "pet",
-        "power": 2,
-        "heal": 0,
-        "duration": 8,
-        "poison": 0,
-        "chill": 0,
-        "pierce": 0,
-        "expose": 0
+        "kind": "decoy",
+        "duration": 3,
+        "delay": 0.35
       }
     ],
-    "procs": [
-      {
-        "event": "weapon",
-        "chance": 1,
-        "cooldown": 1,
-        "conditions": {
-          "RequiredConditions": "Invisible"
-        },
-        "actions": [
-          {
-            "kind": "status",
-            "effect": "weaken",
-            "amount": 1.0
-          }
-        ]
-      }
-    ],
+    "procs": [],
     "switch": [],
-    "notes": [],
+    "notes": [
+      "Mirror Clone is non-attacking: one decoy per family, sharing the existing enemy-delay budget. Weak affects your weapons, not the enemy."
+    ],
     "helper": false,
     "curated": false,
     "effect": "dodge",
     "amount": 1,
     "cd": 8.07,
-    "mana": 1,
+    "mana": 2,
     "pierce": 0,
     "threshold": 0,
     "meterCost": 0,
     "meterMax": 0,
-    "family": "4eda20e9098f"
+    "family": "4eda20e9098f",
+    "shortSummary": "Gain 1 dodge and a 3s decoy. Your weapons deal 10% less damage for 3s."
   },
   "wiki_5359": {
     "name": "Spectre Cloak",
@@ -12667,19 +12651,17 @@
     },
     "actions": [
       {
-        "kind": "hex",
-        "amount": 1
-      },
-      {
-        "kind": "status",
-        "effect": "chill",
-        "amount": 1.0
+        "kind": "selfPenalty",
+        "target": "self",
+        "effect": "recharge",
+        "amount": 20,
+        "duration": 1
       }
     ],
     "procs": [],
     "switch": [],
     "notes": [
-      "Chain lightning is compressed into one enemy damage budget."
+      "Heavy lightning retains its damage budget. Source Hexed/Dazed becomes a brief player recharge penalty, not enemy Hex or chill."
     ],
     "helper": false,
     "curated": false,
@@ -12691,7 +12673,8 @@
     "threshold": 0,
     "meterCost": 0,
     "meterMax": 0,
-    "family": "d4bf39aac570"
+    "family": "d4bf39aac570",
+    "shortSummary": "Deal {amount} damage. Your items recharge 20% slower for 1s."
   },
   "wiki_310": {
     "name": "Honey Scepter",
@@ -13377,42 +13360,60 @@
     "kind": "shuriken",
     "source": "https://realm.wiki/item?id=7768",
     "flat": {},
-    "actions": [],
+    "actions": [
+      {
+        "kind": "armored",
+        "duration": 1.5
+      }
+    ],
     "procs": [],
     "switch": [],
-    "notes": [],
+    "notes": [
+      "Automatic channel-and-release: pay the complete mana cost once, gain the support effect immediately, then throw after 0.75s. No held key or continuous mana drain. The pending throw cancels if its source leaves the pack or its wave ends."
+    ],
     "helper": false,
     "curated": false,
     "effect": "damage",
-    "amount": 22,
-    "cd": 3.26,
-    "mana": 0,
+    "amount": 30,
+    "cd": 4.5,
+    "mana": 2,
     "pierce": 0,
     "threshold": 0,
     "meterCost": 0,
     "meterMax": 0,
-    "family": "df2f30a3f08f"
+    "family": "df2f30a3f08f",
+    "windup": 0.75,
+    "shortSummary": "Release {amount} damage after 0.75s. Gain Armored for 1.5s (20% less incoming damage)."
   },
   "wiki_52040": {
     "name": "Enchanted Chisel",
     "kind": "shuriken",
     "source": "https://realm.wiki/item?id=52040",
     "flat": {},
-    "actions": [],
+    "actions": [
+      {
+        "kind": "armored",
+        "duration": 1.5
+      }
+    ],
     "procs": [],
     "switch": [],
-    "notes": [],
+    "notes": [
+      "Automatic channel-and-release: pay the complete mana cost once, gain the support effect immediately, then throw after 0.75s. No held key or continuous mana drain. The pending throw cancels if its source leaves the pack or its wave ends."
+    ],
     "helper": false,
     "curated": false,
     "effect": "damage",
-    "amount": 22,
-    "cd": 3.26,
-    "mana": 0,
+    "amount": 30,
+    "cd": 4.5,
+    "mana": 2,
     "pierce": 0,
     "threshold": 0,
     "meterCost": 0,
     "meterMax": 0,
-    "family": "df2f30a3f08f"
+    "family": "df2f30a3f08f",
+    "windup": 0.75,
+    "shortSummary": "Release {amount} damage after 0.75s. Gain Armored for 1.5s (20% less incoming damage)."
   },
   "wiki_34336": {
     "name": "Eternal Star",
@@ -13422,21 +13423,30 @@
       "DEX": 5.0,
       "SPD": -10.0
     },
-    "actions": [],
+    "actions": [
+      {
+        "kind": "weaponHaste",
+        "duration": 2
+      }
+    ],
     "procs": [],
     "switch": [],
-    "notes": [],
+    "notes": [
+      "Automatic channel-and-release: pay the complete mana cost once, gain the support effect immediately, then throw after 0.75s. No held key or continuous mana drain. The pending throw cancels if its source leaves the pack or its wave ends."
+    ],
     "helper": false,
     "curated": false,
     "effect": "damage",
-    "amount": 24,
-    "cd": 3.26,
-    "mana": 0,
+    "amount": 36,
+    "cd": 5.2,
+    "mana": 3,
     "pierce": 0,
     "threshold": 0,
     "meterCost": 0,
     "meterMax": 0,
-    "family": "68696711988d"
+    "family": "68696711988d",
+    "windup": 0.75,
+    "shortSummary": "Release {amount} damage after 0.75s. Haste adjacent weapons for 2s (+25% recharge)."
   },
   "wiki_12146": {
     "name": "Eye of the Spider",
@@ -14049,21 +14059,30 @@
       "DEX": 5.0,
       "SPD": -10.0
     },
-    "actions": [],
+    "actions": [
+      {
+        "kind": "weaponHaste",
+        "duration": 2
+      }
+    ],
     "procs": [],
     "switch": [],
-    "notes": [],
+    "notes": [
+      "Automatic channel-and-release: pay the complete mana cost once, gain the support effect immediately, then throw after 0.75s. No held key or continuous mana drain. The pending throw cancels if its source leaves the pack or its wave ends."
+    ],
     "helper": false,
     "curated": false,
     "effect": "damage",
-    "amount": 24,
-    "cd": 3.26,
-    "mana": 0,
+    "amount": 36,
+    "cd": 5.2,
+    "mana": 3,
     "pierce": 0,
     "threshold": 0,
     "meterCost": 0,
     "meterMax": 0,
-    "family": "68696711988d"
+    "family": "68696711988d",
+    "windup": 0.75,
+    "shortSummary": "Release {amount} damage after 0.75s. Haste adjacent weapons for 2s (+25% recharge)."
   },
   "wiki_26277": {
     "name": "Storied Blades",
@@ -14488,32 +14507,31 @@
     "flat": {},
     "actions": [
       {
-        "kind": "status",
-        "effect": "vulnerable",
-        "amount": 3
-      },
-      {
-        "kind": "status",
-        "effect": "vulnerable",
-        "amount": 3
+        "kind": "selfPenalty",
+        "target": "self",
+        "effect": "exposed",
+        "amount": 10,
+        "duration": 3
       }
     ],
     "procs": [],
     "switch": [],
     "notes": [
-      "The charged combat form changes combat bonuses; character artwork and movement are unchanged."
+      "No direct damage. Exposes the enemy while you take more direct damage. Exposure refreshes instead of adding duration. Existing class/enchantment triggers still occur once per paid cast."
     ],
     "helper": false,
     "curated": false,
-    "effect": "damage",
-    "amount": 22,
+    "effect": "vulnerable",
+    "amount": 3,
     "cd": 4.81,
     "mana": 1,
     "pierce": 0,
     "threshold": 0,
     "meterCost": 0,
     "meterMax": 0,
-    "family": "37e30f6aa180"
+    "family": "37e30f6aa180",
+    "primaryRefresh": true,
+    "shortSummary": "Expose enemy for {amount}s; you take 10% more direct damage for 3s. No direct damage."
   },
   "wiki_613": {
     "name": "Peppermint Wakizashi",
