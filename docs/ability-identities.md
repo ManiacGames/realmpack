@@ -2,6 +2,14 @@
 
 Source audit: 25 October 2026. **559 variants across all 19 ability kinds: 410 normal/historical actual items, 123 Shiny variants, and 26 internal effect helpers.** Every item is mapped below. The 176 tiered ability definitions and every weapon, armor, ring and consumable definition remain byte-for-byte equivalent in the definition regression test. IDs, names, sources, artwork, footprints, prices, class restrictions, base links and ST membership are preserved.
 
+## Scepter condition correction — 30 October 2026
+
+Fulmination and Storm Caller now apply **3s chill** with their damage; Scepter of Rust applies **4s weaken**. Their source Lightning payloads specify `CondEffect`/`CondDuration`, which were omitted from the original profiles. Shiny Fulmination/Rust inherit the same duration. Repeated applications refresh to the greater remaining duration rather than adding seconds. Damage, mana, cooldown, equipment stats and other ability profiles are unchanged. Honey Scepter's current source has no slow condition, so it is not given chill based on older versions.
+
+Sources rechecked: [Fulmination](https://realm.wiki/item?id=3120), [Storm Caller](https://realm.wiki/item?id=14265), [Rust](https://realm.wiki/item?id=49693), [Honey Scepter](https://realm.wiki/item?id=310). Existing raw source facts already contain these fields.
+
+Validation: the targeted `test-scepter-conditions.cjs` checks real casts, mana failure, damage, Shiny inheritance, nonstacking refresh, timer decay, enemy attack pacing, weaken mitigation and encounter reset. The existing all-ability test preserves all 176 tiered abilities and other item definitions. In the existing seeded `benchmark-abilities.cjs` fixture (four bosses × two gear levels × three scepters), wins changed from 7/24 to 11/24: Fulmination 2→3/8, Storm Caller 2→3/8, Rust 3→5/8. This small fixed comparison measures restored utility, not player win probabilities; damage/cooldown/mana budgets were retained.
+
 ## Balance and translation
 
 These are RealmPack adaptations, not a simulation of RotMG movement, targeting, aim, player statistics or multiple enemies. T7 is the family reference. Source damage/healing ratios are bounded before conversion; secondary effects and equipment stats reduce the primary budget or lengthen cooldowns. Mana rises for expensive source casts and utility-heavy kits. A UT/ST is a different build choice, not a guaranteed upgrade over the tiered ability.
@@ -313,12 +321,12 @@ The primary below is the actual game recipe, including retained custom recipes. 
 | scepter | [Lovesick Scepter / wiki_1221](https://realm.wiki/item?id=1221) | 20 damage | 4.33s | 2 | buff wisdom; conditional ability |
 | scepter | [Parrot Skeleton Scepter / wiki_3301](https://realm.wiki/item?id=3301) | 29 damage | 4.18s | 2 |  |
 | scepter | [Scepter of Devastation / wiki_1977](https://realm.wiki/item?id=1977) | 20 damage | 4.18s | 2 |  |
-| scepter | [Scepter of Fulmination / wiki_3120](https://realm.wiki/item?id=3120) | 17 damage | 4.18s | 2 |  |
-| scepter | [Scepter of Rust / wiki_49693](https://realm.wiki/item?id=49693) | 30 damage | 4.18s | 2 |  |
+| scepter | [Scepter of Fulmination / wiki_3120](https://realm.wiki/item?id=3120) | 17 damage | 4.18s | 2 | Apply 3s chill; refreshes |
+| scepter | [Scepter of Rust / wiki_49693](https://realm.wiki/item?id=49693) | 30 damage | 4.18s | 2 | Apply 4s weaken; refreshes |
 | scepter | [Scepter of Sainthood / wiki_8346](https://realm.wiki/item?id=8346) | 29 damage | 4.18s | 2 |  |
 | scepter | [Scepter of the Transgressor / wiki_42289](https://realm.wiki/item?id=42289) | 20 damage | 4.18s | 2 |  |
 | scepter | [Siege Scepter / wiki_19298](https://realm.wiki/item?id=19298) | 40 damage | 4.18s | 2 | ; conditional ability |
-| scepter | [Storm Caller / wiki_14265](https://realm.wiki/item?id=14265) | 17 damage | 4.18s | 2 |  |
+| scepter | [Storm Caller / wiki_14265](https://realm.wiki/item?id=14265) | 17 damage | 4.18s | 2 | Apply 3s chill; refreshes |
 | scepter | [Tezutsu Hanabi / wiki_20466](https://realm.wiki/item?id=20466) | 17 damage | 4.18s | 2 | ; conditional ability |
 | scepter | [Totem Scepter / wiki_65288](https://realm.wiki/item?id=65288) | 33 damage | 4.18s | 3 |  |
 | scepter | [Wrathful Conduit / wiki_48139](https://realm.wiki/item?id=48139) | 40 damage | 4.18s | 2 |  |

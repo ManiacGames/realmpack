@@ -4,7 +4,7 @@ A Realm-inspired inventory auto-battler with 19 classes, five-dungeon runs, bran
 
 ## Play
 
-**[Play RealmPack](https://maniacgames.github.io/realmpack/)** — Phaser 0.5.7 is the default edition. The entry URL redirects to the packaged Phaser game.
+**[Play RealmPack](https://maniacgames.github.io/realmpack/)** — Phaser 0.5.8 is the default edition. The entry URL redirects to the packaged Phaser game.
 
 The [classic 0.53.3 edition](https://maniacgames.github.io/realmpack/game/) remains available. Its exact pre-launch source is preserved on branch `classic-0.53.3-before-phaser`.
 

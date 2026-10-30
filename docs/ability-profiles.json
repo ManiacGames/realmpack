@@ -12951,11 +12951,18 @@
       "ATT": 2.0,
       "WIS": 2.0
     },
-    "actions": [],
+    "actions": [
+      {
+        "kind": "status",
+        "effect": "chill",
+        "amount": 3
+      }
+    ],
     "procs": [],
     "switch": [],
     "notes": [
-      "Chain lightning is compressed into one enemy damage budget."
+      "Chain lightning is compressed into one enemy damage budget.",
+      "Lightning applies 3s chill (Slowed adaptation). Refreshes duration; duplicate and Shiny copies do not add durations."
     ],
     "helper": false,
     "curated": false,
@@ -12976,11 +12983,18 @@
     "flat": {
       "WIS": 7.0
     },
-    "actions": [],
+    "actions": [
+      {
+        "kind": "status",
+        "effect": "weaken",
+        "amount": 4
+      }
+    ],
     "procs": [],
     "switch": [],
     "notes": [
-      "Chain lightning is compressed into one enemy damage budget."
+      "Chain lightning is compressed into one enemy damage budget.",
+      "Lightning applies 4s weaken (Weak adaptation). Refreshes duration; duplicate and Shiny copies do not add durations."
     ],
     "helper": false,
     "curated": false,
@@ -13096,11 +13110,18 @@
       "ATT": 2.0,
       "WIS": 2.0
     },
-    "actions": [],
+    "actions": [
+      {
+        "kind": "status",
+        "effect": "chill",
+        "amount": 3
+      }
+    ],
     "procs": [],
     "switch": [],
     "notes": [
-      "Chain lightning is compressed into one enemy damage budget."
+      "Chain lightning is compressed into one enemy damage budget.",
+      "Lightning applies 3s chill (Slowed adaptation). Refreshes duration; duplicate and Shiny copies do not add durations."
     ],
     "helper": false,
     "curated": false,

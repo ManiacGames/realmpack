@@ -181,3 +181,7 @@ The [enchantment rework](enchantments.md) adds role-specific primary bonuses and
 The [adjacency rework](adjacency.md) adds thematic pairings and source-owned summon support, fixes temporary stat recipients, and reports capped support. Existing UT/ST item recipes and set memberships are unchanged. Companion damage is modified at delivery, within the shared support cap; healing meters still count actual healing only.
 
 0.48.0 adds separate RealmPack novelty utilities after successful activations; base recipes and modifier budgets remain unchanged. See vanity-quirks.md for scope and validation.
+
+### Scepter condition correction — 0.53.5 / Phaser 0.5.8
+
+Fulmination and Storm Caller retain their lightning damage and add 3s chill; Rust adds 4s weaken. Shiny variants inherit these effects. See [ability identities](ability-identities.md#scepter-condition-correction--30-october-2026) for sources and refresh rules.
