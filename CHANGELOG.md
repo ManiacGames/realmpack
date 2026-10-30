@@ -1,5 +1,10 @@
 # RealmPack changelog
 
+## 0.53.4 — 2026-10-30
+
+- Eligible normal, elite and boss reward items now have a 1/10 (10%) chance to upgrade to a shiny variant. Items without shiny variants and shop availability are unchanged.
+- Updated the displayed odds and checked exact roll boundaries, variant selection and reward regressions.
+
 ## Phaser 0.5.4 web launch — 2026-10-29
 
 - Made the tested Phaser edition the default game at https://maniacgames.github.io/realmpack/.

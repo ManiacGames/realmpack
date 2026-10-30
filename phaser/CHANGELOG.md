@@ -1,5 +1,10 @@
 # Phaser changelog
 
+## 0.5.6 — 2026-10-30
+
+- Increased the shiny upgrade chance to 1/10 (10%) for eligible normal, elite and boss rewards.
+- Updated the shared item details to show the new odds.
+
 ## 0.5.5 — 2026-10-29
 
 - Enlarged the combat panel and health numbers. Desktop now has a readable mana bar and separate block readout; gold and battle time sit in the encounter header.
