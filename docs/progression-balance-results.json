@@ -1,0 +1,474 @@
+{
+  "date": "2026-11-03",
+  "baselineCommit": "b62f297d581d28597cac8dd70863df23da1580a0",
+  "release": "Phaser 0.5.10 / shared 0.53.7",
+  "mode": "Adventurer",
+  "seed": 123456,
+  "dt": 0.05,
+  "openingFingerprint": "deb9765eb78d59b21d9d7f7cce0f0f32d4adcd122bba766463924370a7a6eb16",
+  "nativeBefore": {
+    "runMode": "normal",
+    "depth": 20,
+    "dungeons": 35,
+    "variants": 3,
+    "fights": 1995,
+    "results": [
+      {
+        "classId": "rogue",
+        "wins": 83,
+        "fights": 105,
+        "variants": [
+          26,
+          28,
+          29
+        ]
+      },
+      {
+        "classId": "archer",
+        "wins": 99,
+        "fights": 105,
+        "variants": [
+          33,
+          33,
+          33
+        ]
+      },
+      {
+        "classId": "wizard",
+        "wins": 83,
+        "fights": 105,
+        "variants": [
+          27,
+          28,
+          28
+        ]
+      },
+      {
+        "classId": "priest",
+        "wins": 96,
+        "fights": 105,
+        "variants": [
+          31,
+          33,
+          32
+        ]
+      },
+      {
+        "classId": "warrior",
+        "wins": 88,
+        "fights": 105,
+        "variants": [
+          29,
+          29,
+          30
+        ]
+      },
+      {
+        "classId": "knight",
+        "wins": 100,
+        "fights": 105,
+        "variants": [
+          32,
+          34,
+          34
+        ]
+      },
+      {
+        "classId": "paladin",
+        "wins": 93,
+        "fights": 105,
+        "variants": [
+          29,
+          32,
+          32
+        ]
+      },
+      {
+        "classId": "assassin",
+        "wins": 83,
+        "fights": 105,
+        "variants": [
+          27,
+          28,
+          28
+        ]
+      },
+      {
+        "classId": "necromancer",
+        "wins": 87,
+        "fights": 105,
+        "variants": [
+          28,
+          29,
+          30
+        ]
+      },
+      {
+        "classId": "huntress",
+        "wins": 98,
+        "fights": 105,
+        "variants": [
+          32,
+          33,
+          33
+        ]
+      },
+      {
+        "classId": "mystic",
+        "wins": 86,
+        "fights": 105,
+        "variants": [
+          28,
+          28,
+          30
+        ]
+      },
+      {
+        "classId": "trickster",
+        "wins": 81,
+        "fights": 105,
+        "variants": [
+          26,
+          27,
+          28
+        ]
+      },
+      {
+        "classId": "sorcerer",
+        "wins": 78,
+        "fights": 105,
+        "variants": [
+          24,
+          27,
+          27
+        ]
+      },
+      {
+        "classId": "ninja",
+        "wins": 88,
+        "fights": 105,
+        "variants": [
+          29,
+          29,
+          30
+        ]
+      },
+      {
+        "classId": "samurai",
+        "wins": 91,
+        "fights": 105,
+        "variants": [
+          29,
+          31,
+          31
+        ]
+      },
+      {
+        "classId": "bard",
+        "wins": 88,
+        "fights": 105,
+        "variants": [
+          28,
+          30,
+          30
+        ]
+      },
+      {
+        "classId": "summoner",
+        "wins": 80,
+        "fights": 105,
+        "variants": [
+          26,
+          27,
+          27
+        ]
+      },
+      {
+        "classId": "kensei",
+        "wins": 96,
+        "fights": 105,
+        "variants": [
+          32,
+          32,
+          32
+        ]
+      },
+      {
+        "classId": "druid",
+        "wins": 92,
+        "fights": 105,
+        "variants": [
+          30,
+          30,
+          32
+        ]
+      }
+    ],
+    "classes": 19
+  },
+  "nativeAfter": {
+    "runMode": "normal",
+    "depth": 20,
+    "dungeons": 35,
+    "variants": 3,
+    "fights": 1995,
+    "results": [
+      {
+        "classId": "rogue",
+        "wins": 93,
+        "fights": 105,
+        "variants": [
+          31,
+          30,
+          32
+        ]
+      },
+      {
+        "classId": "archer",
+        "wins": 105,
+        "fights": 105,
+        "variants": [
+          35,
+          35,
+          35
+        ]
+      },
+      {
+        "classId": "wizard",
+        "wins": 95,
+        "fights": 105,
+        "variants": [
+          29,
+          32,
+          34
+        ]
+      },
+      {
+        "classId": "priest",
+        "wins": 105,
+        "fights": 105,
+        "variants": [
+          35,
+          35,
+          35
+        ]
+      },
+      {
+        "classId": "warrior",
+        "wins": 102,
+        "fights": 105,
+        "variants": [
+          32,
+          35,
+          35
+        ]
+      },
+      {
+        "classId": "knight",
+        "wins": 105,
+        "fights": 105,
+        "variants": [
+          35,
+          35,
+          35
+        ]
+      },
+      {
+        "classId": "paladin",
+        "wins": 105,
+        "fights": 105,
+        "variants": [
+          35,
+          35,
+          35
+        ]
+      },
+      {
+        "classId": "assassin",
+        "wins": 97,
+        "fights": 105,
+        "variants": [
+          29,
+          34,
+          34
+        ]
+      },
+      {
+        "classId": "necromancer",
+        "wins": 102,
+        "fights": 105,
+        "variants": [
+          32,
+          35,
+          35
+        ]
+      },
+      {
+        "classId": "huntress",
+        "wins": 105,
+        "fights": 105,
+        "variants": [
+          35,
+          35,
+          35
+        ]
+      },
+      {
+        "classId": "mystic",
+        "wins": 99,
+        "fights": 105,
+        "variants": [
+          31,
+          33,
+          35
+        ]
+      },
+      {
+        "classId": "trickster",
+        "wins": 93,
+        "fights": 105,
+        "variants": [
+          31,
+          30,
+          32
+        ]
+      },
+      {
+        "classId": "sorcerer",
+        "wins": 86,
+        "fights": 105,
+        "variants": [
+          29,
+          28,
+          29
+        ]
+      },
+      {
+        "classId": "ninja",
+        "wins": 103,
+        "fights": 105,
+        "variants": [
+          33,
+          35,
+          35
+        ]
+      },
+      {
+        "classId": "samurai",
+        "wins": 105,
+        "fights": 105,
+        "variants": [
+          35,
+          35,
+          35
+        ]
+      },
+      {
+        "classId": "bard",
+        "wins": 101,
+        "fights": 105,
+        "variants": [
+          31,
+          35,
+          35
+        ]
+      },
+      {
+        "classId": "summoner",
+        "wins": 98,
+        "fights": 105,
+        "variants": [
+          30,
+          34,
+          34
+        ]
+      },
+      {
+        "classId": "kensei",
+        "wins": 105,
+        "fights": 105,
+        "variants": [
+          35,
+          35,
+          35
+        ]
+      },
+      {
+        "classId": "druid",
+        "wins": 102,
+        "fights": 105,
+        "variants": [
+          33,
+          34,
+          35
+        ]
+      }
+    ],
+    "classes": 19
+  },
+  "lateBefore": [
+    {
+      "tier": 4,
+      "wins": 22,
+      "fights": 399
+    },
+    {
+      "tier": 5,
+      "wins": 0,
+      "fights": 114
+    }
+  ],
+  "lateAfter": [
+    {
+      "tier": 4,
+      "wins": 188,
+      "fights": 399
+    },
+    {
+      "tier": 5,
+      "wins": 28,
+      "fights": 114
+    }
+  ],
+  "withoutTomeBefore": [
+    {
+      "tier": 4,
+      "wins": 6,
+      "fights": 133
+    },
+    {
+      "tier": 5,
+      "wins": 0,
+      "fights": 38
+    }
+  ],
+  "withoutTomeAfter": [
+    {
+      "tier": 4,
+      "wins": 54,
+      "fights": 133
+    },
+    {
+      "tier": 5,
+      "wins": 9,
+      "fights": 38
+    }
+  ],
+  "matchedDepth40": [
+    {
+      "tier": 4,
+      "wins": 42,
+      "fights": 133
+    },
+    {
+      "tier": 5,
+      "wins": 11,
+      "fights": 38
+    }
+  ],
+  "limits": [
+    "Fresh individual battles, not player win rates or full-run completion rates.",
+    "Fixed legal tiered builds, not optimized UT/ST or shiny builds.",
+    "Reward opportunity improvements tested separately; benchmark equipment is fixed."
+  ]
+}

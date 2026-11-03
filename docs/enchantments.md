@@ -86,3 +86,7 @@ Each battle now resets mana to 10 plus 1 per 5 capacity above 50, capped at 10 a
 Ninja wind-up throws pay mana and execute activation enchantments once at cast start. Their delayed impact does not trigger a second ability activation. NSFWakizashi has an exposure primary rather than direct damage; separately equipped activation enchantments and class hooks still operate. Player penalties remain source-owned and expire; the same shared output/risk caps apply.
 
 Validation: the preserved seeded enchantment fixture has 2,280 identical before/after rows across 1×/2×/4×. New ability tests separately cover delayed releases, one-time payment, player penalties and speed equivalence.
+
+### Late progression tuning — 0.53.7
+
+The seeded enchantment comparison was repeated before/after at 1×/2×/4×: 2,280 battles per engine, with no speed-normalized mismatches in either. Results change with the revised enemy pressure and two class wards; enchantment values, eligibility, caps, categories, costs and proc timing remain. See [progression balance](progression-balance.md).

@@ -65,3 +65,7 @@ Historical clears: **1611 → 1578 /1,995**. Native enabled clears: **94 → 95 
 - The last three scripts accept `--root /path/to/baseline`; keep gear/layout assumptions unchanged.
 
 `test-class-identities.cjs` protects item definitions, all twelve loops, unrelated-item rejection, source ownership, shared rate caps, one-charge limits, expiry, local geometry, actual healing, fractional Pact budgets and battle resets. The full34 regression suites cover existing item signatures, save/upgrades, paid enchantments, progression, local haste, healing, inventory and encounters. Browser checks cover class selection, all class tooltips, item hovering, combat presentation and responsive dialogs. Aggregated evidence is in `class-identity-balance.json`; raw results can be regenerated with the commands above.
+
+## Late native wards — 0.53.7
+
+After the first dungeon, successful Sorcerer scepter activations grant 12 block and Summoner mace activations grant 8 block, each on a shared 3s class gate across all copies. These supplement the existing lightning-surge and Pact loops. No block is granted for failed mana payment, stashed sources, unrelated item kinds or out-of-combat actions. The first dungeon is unchanged. Block uses the existing cap and decay.

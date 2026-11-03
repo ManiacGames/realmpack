@@ -1,9 +1,11 @@
 /* RealmPack's five tiers adapt RotMG dungeon progression, not DECA's /10 rating. */
 'use strict';
-const DUNGEON_BALANCE_VERSION=4;
+const DUNGEON_BALANCE_VERSION=5;
 function describeHexerTiming(){ENCOUNTERS.profiles.hexer.description='Every third attack, at most once per 7 seconds: remove 3 mana and apply 3 seconds of silence.'}
 // Encounter-specific pressure adjustments, kept separate from dungeon tiers.
 const ENCOUNTER_TUNING={
+ enc_32_9:{warning:'Apex encounter · Double strikes and silence'},
+ enc_33_9:{warning:'Apex encounter · Berserker and arcane pulses'},
  enc_9_9:{damage:.90,warning:'Burst damage · Berserker and arcane pulses'},
  enc_20_9:{silenceSeconds:2,warning:'Control combo · Frost and silence'},
  enc_22_9:{damage:.85,heavyStrike:1.30,warning:'Burst damage · Berserker and heavy strikes'},
@@ -52,3 +54,5 @@ function portalLootItems(id){const owned=new Set([...s.items,...s.stash].map(i=>
 function portalLootPreview(id){const items=portalLootItems(id);return items.length?'Drops: '+items[0].name+(items.length>1?' · +'+(items.length-1)+' more':''):'Explore for loot and supplies.'}
 function pickDungeonPortals(){const modern=s.runFormat===2,stage=actIndex()%(modern?5:3),bands=modern?[[[1],[1],[2]],[[1,2],[2],[3]],[[2,3],[3],[4]],[[3],[4],[4,5]],[[4],[4,5],[5]]][stage]:stage===0?[[1],[1],[2]]:stage===1?[[2],[3],[3]]:[[3],[4],[5]],visited=new Set(modern?s.dungeons.slice(Math.floor(actIndex()/5)*5):[]),chosen=[];for(const band of bands){let pool=ENCOUNTERS.dungeons.filter(d=>band.includes(dungeonRating(d.id).level)&&!chosen.includes(d.id)&&!visited.has(d.id));if(!pool.length){const remaining=ENCOUNTERS.dungeons.filter(d=>!chosen.includes(d.id)&&!visited.has(d.id)),distance=d=>Math.min(...band.map(n=>Math.abs(n-dungeonRating(d.id).level))),best=Math.min(...remaining.map(distance));pool=remaining.filter(d=>distance(d)===best)}if(pool.length){if(!modern){chosen.push(pick(pool).id);continue}const weight=d=>portalLootItems(d.id).length?2:1;let roll=rng()*pool.reduce((n,d)=>n+weight(d),0),picked=pool[pool.length-1];for(const d of pool){roll-=weight(d);if(roll<0){picked=d;break}}chosen.push(picked.id)}}return chosen}
 function migrateDungeonBalance(){const update=room=>{if(room?.encounterId&&room.balanceVersion!==DUNGEON_BALANCE_VERSION)Object.assign(room,scaledRoom(room.encounterId,room.depth||s.room+1,room.risk,room.type));return room};for(let i=s.room;i<ROOMS.length;i++)update(ROOMS[i]);s.pathChoices=(s.pathChoices||[]).map(update);for(const [depth,options] of Object.entries(s.mapBranches||{}))if(Number(depth)>=s.room)options.forEach(update);s.route=ROOMS}
+
+function lateBossScale(tier,role,depth){if(role!=='boss'||depth<=8)return {hp:1,damage:1};return tier===4?{hp:.88,damage:.89}:tier===5?{hp:.65,damage:.57}:{hp:1,damage:1}}

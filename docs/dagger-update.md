@@ -147,3 +147,7 @@ The implemented 0.22.2 ceiling was rechecked with 20 seeded output trials per va
 0.46.0: verified dungeon sources now weight matching obtainable UT/ST daggers 10× in combat loot, with one possible featured local reward (35% normal, 60% elite, 90% boss). Item recipes and exclusion flags are unchanged. See dungeon-loot-sources.json for provenance.
 
 0.48.0 adds separate RealmPack novelty utilities after successful activations; base recipes and modifier budgets remain unchanged. See vanity-quirks.md for scope and validation.
+
+## Shared progression offers — 0.53.7
+
+The shared late-run foundation slot can offer higher-tier native daggers, like other native families. It excludes unavailable/Legacy/Shiny entries and does not change UT/ST dagger signatures, source spotlight behavior or the conditional 1/10 shiny roll. Existing dagger benchmark loadouts and assumptions remain unchanged. See [dungeon balance](dungeon-balance.md).

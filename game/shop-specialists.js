@@ -19,6 +19,7 @@ function rollSpecialistStock(n,kind){const eligible=specialistItems(kind),chosen
  const add=d=>{if(!d)return;const identity=d.name+'|'+d.tier;if(used.has(identity))return;chosen.push(d.id);used.add(identity)};
  // Reliable basic supplies plus opportunities to reinforce an owned consumable.
  if(kind==='consumable')for(const name of ['Health Potion','Magic Potion'])if(chosen.length<n)add(eligible.find(d=>d.name===name));
+ if(chosen.length<n&&(nativeShopKinds().has(kind)||kind==='ring')){const foundation=foundationOffer(kind,new Set(chosen));if(foundation)add(defs[foundation])}
  const owned=new Set([...s.items,...s.stash].filter(i=>defs[i.type].once&&stackCount(i)<STACK_LIMIT).map(i=>i.type));
  while(chosen.length<n){const available=eligible.filter(d=>!used.has(d.name+'|'+d.tier));if(!available.length)break;let roll=rng(),quality=3;for(let q=0;q<weights.length;q++){roll-=weights[q];if(roll<0){quality=q;break}}
   const distance=Math.min(...available.map(d=>Math.abs(d.quality-quality))),pool=available.filter(d=>Math.abs(d.quality-quality)===distance),weight=d=>(kind==='consumable'&&owned.has(d.id)?5:1)*(d.classes.includes(s.classId)?3:1);let target=rng()*pool.reduce((sum,d)=>sum+weight(d),0),picked=pool[pool.length-1];for(const d of pool){target-=weight(d);if(target<0){picked=d;break}}add(picked);

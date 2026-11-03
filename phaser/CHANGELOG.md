@@ -1,5 +1,13 @@
 # Phaser changelog
 
+## 0.5.10 — 2026-11-03
+
+- Smoothed late-run enemy health and attack growth while preserving Beginner/Standard opening stats. Late Exaltation and Apex bosses have lower pressure; dungeon tiers, attack patterns and run-mode choices remain.
+- From dungeon two onward, boss rewards reserve a choice for a useful native tiered item or Health/Vitality/Defense ring when an eligible upgrade exists. Later native and ring specialists also offer a matching upgrade. Dungeon-themed drops keep their first reward slot.
+- After dungeon one, Sorcerer scepter casts grant 12 block and Summoner mace casts grant 8 block, each on a shared 3-second cooldown. Their existing class loops and opening behavior remain.
+- Updated class descriptions and balance documentation. Saved routes migrate uncompleted encounters without rerolling paths or rewriting completed history.
+- Verified unchanged opening stats, legal tiered-build comparisons, 1×/2×/4× timing, upgrade eligibility, resource guards, save migration and responsive reward/shop interactions. Comparative combat rates and limits are recorded in the balance notes.
+
 ## 0.5.9 — 2026-10-30
 
 - Mirror Cloak now grants dodge and a non-attacking decoy, with a brief penalty to your weapon damage. Grotesque Scepter's powerful lightning briefly slows your own recharge instead of chilling the enemy.

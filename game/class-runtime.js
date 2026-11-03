@@ -51,8 +51,9 @@ function classIdentityActivation(i,primary){
   if(d.kind==='seal'&&classGate('oath',3)){k.oath={sourceId:i.id,until:s.time+4};gainBlock(4);classNotice('Sacred Oath: nearby weapons gain 10% primary damage for 4s.')}
   break;
  case 'necromancer':if(d.kind==='skull')passive('skull',1);break;
- case 'sorcerer':if(d.kind==='scepter')passive('scepter',1);break;
+ case 'sorcerer':if(d.kind==='scepter'){if(classLateGuardReady()&&classGate('stormguard',3))gainBlock(12,i);passive('scepter',1)}break;
  case 'summoner':
+  if(d.kind==='mace'&&classLateGuardReady()&&classGate('pactguard',3))gainBlock(8,i);
   if(d.kind==='mace'){if(s.time>=(k.pactUntil||0))k.pact=0;if(classGate('pact',2)){k.pact=Math.min(3,k.pact+1);k.pactUntil=s.time+10;passive('mace',1)}}
   break;
  case 'kensei':
@@ -96,3 +97,6 @@ function classIdentityState(){
 }
 
 function classProgressText(c,stateText=classStateText()){const counter=['mystic','huntress','trickster','kensei'].includes(s.classId)?'':' · '+Math.floor(s.progress)+' / '+c.threshold;return c.title+counter+(stateText?' · '+stateText:'')}
+
+function classLateGuardReady(){return (ROOMS[s.room]?.depth||s.room+1)>(s.runFormat===2?8:10)}
+for(const c of window.REALM_DATA.classes){if(c.id==='sorcerer')c.rule+=' After dungeon 1, scepter casts grant 12 block (shared 3s cooldown).';if(c.id==='summoner')c.rule+=' After dungeon 1, mace casts grant 8 block (shared 3s cooldown).'}

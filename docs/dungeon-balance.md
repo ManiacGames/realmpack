@@ -1,4 +1,17 @@
-# Dungeon balance — 0.30.11
+# Dungeon balance
+
+## Current progression — 0.53.7 / Phaser 0.5.10
+
+First-dungeon Beginner/Standard encounter HP, attack damage, cadence, waves and gold are unchanged. The five tier assignments and table below remain the same. The late curve now grows health by 7% per effective depth through 18, then 2.5% through 30; optional endless progression resumes 7% growth afterward. Base attack damage gains 0.65 per effective depth through 18, 0.20 through 30, then 0.65 again. The existing five-dungeon effective-depth mapping, attack cooldowns, waves, mechanics and run-mode multipliers remain.
+
+For bosses beyond depth 8, Exaltation applies ×0.88 HP / ×0.89 attack damage; Apex applies ×0.65 HP / ×0.57 attack damage. These are boss-specific pressure adjustments, not tier-label or ordinary-enemy reclassification. Existing encounter-specific adjustments still apply. `DUNGEON_BALANCE_VERSION=5` migrates current/future route and branch rooms without consuming RNG or changing completed rooms, route choices, encounter IDs or owned items.
+
+From the second dungeon onward, one boss reward choice and a later native/ring specialist stock slot can offer a stage-appropriate tiered upgrade. Native weapon/ability/armor and Health/Vitality/Defense rings compete by role rather than catalogue size. Tier floors are 45%, 60%, 75%, 90% of the role's maximum over dungeons 2–5; candidate ceilings are 75%, 85%, 95%, 100%, rounded upward. Only improvements over the highest owned tier in that role qualify. If none fit the stage band, normal random loot/stock remains. These are offers, not free auto-equips; loot remains one item and shops charge normal prices. The original dungeon-specific spotlight keeps its first slot. Supplies, nine-slot stash and unavailable/Legacy filters remain.
+
+Sorcerer and Summoner gain source-specific, shared-rate-capped block on successful native ability casts after their first dungeon. The new class descriptions show exact values; this does not add generic healing or a mandatory Healing Tome.
+
+See [progression validation](progression-balance.md) for before/after fixtures and limits.
+
 
 The skull marker is a **custom RealmPack /5 tier**, not a claim to reproduce DECA's official /10 ratings. These are standard dungeons; Advanced Nest, Advanced Steamworks and Hard Mode Shatters are not implemented.
 
@@ -16,7 +29,7 @@ Within a tier, dungeon-specific tuning adds up to 8% HP/damage and 3% attack rat
 
 Beginner bosses retain their base mechanic and phase-II damage increase but gain no unrelated second profile. Exalt secondaries are curated: Nest/Fungal venom, Crystal arcanist, Cult vampire, Halls berserker, Void bulwark, Steamworks duelist, Shatters suppressor and Sanctuary arcanist. Hexer's mana-drain/silence proc is limited to one proc per seven seconds so high attack speed cannot maintain a continuous silence chain.
 
-Portal bands: Act 1 offers two Beginner choices and one Standard; Act 2 offers one Standard and two Advanced; Act 3 offers Advanced, Exaltation and Apex. The same sequence repeats in endless acts. Lower-risk routes remain available.
+Current five-dungeon portal bands: 1: Beginner / Beginner / Standard; 2: Beginner–Standard / Standard / Advanced; 3: Standard–Advanced / Advanced / Exaltation; 4: Advanced / Exaltation / Exaltation–Apex; 5: Exaltation / Exaltation–Apex / Apex. The cycle repeats in endless mode without revisiting a dungeon within the same cycle. Legacy three-dungeon saves retain their original bands.
 
 Saved routes migrate only current/future encounter stats and future branch previews. Encounter IDs, room types, selected branches, item upgrades and player resources remain. Completed encounters are not rebalanced. No RNG is consumed by migration or difficulty markers.
 
